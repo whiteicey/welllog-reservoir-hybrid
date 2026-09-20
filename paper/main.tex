@@ -1,0 +1,463 @@
+%% Manuscript for Geodata and AI (Elsevier), elsarticle class, numbered references.
+%% Compile: latexmk -pdf main.tex   (elsarticle.cls from texlive-publishers or CTAN)
+%% Add the class option `doubleblind` for the anonymised review copy.
+\documentclass[preprint,12pt]{elsarticle}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{booktabs}
+\usepackage{url}
+\usepackage{lineno}
+
+\journal{Geodata and AI}
+
+\begin{document}
+
+\begin{frontmatter}
+
+\title{Where the log ends: identifiability limits and a metric-aligned tree--sequence hybrid for reservoir-property prediction from wireline logs}
+
+%% Author block: fill in before submission. Use the `doubleblind` class option for the review copy.
+\author[a]{First Author\corref{cor1}}
+\ead{first.author@example.org}
+\author[a]{Second Author}
+\author[b]{Third Author}
+\cortext[cor1]{Corresponding author.}
+\affiliation[a]{organization={Department, University},
+            addressline={Street},
+            city={City},
+            postcode={000000},
+            country={China}}
+\affiliation[b]{organization={Organization},
+            city={City},
+            country={Country}}
+
+\begin{abstract}
+Predicting porosity (POR), permeability (PERM) and water saturation (SW) at every depth sample from conventional wireline logs is a long-standing task that is increasingly evaluated with tolerance-based accuracy scores rather than squared error. Using a 90-well benchmark (80 training wells, 730,268 samples; 10 blind wells) scored by a relative-tolerance metric, we first quantify how much of the interpreted labels is recoverable from the logs at all. Half-well hold-out within a single well, interleaved-block hold-out, leave-well-out with nearest-well training, and a differencing analysis show that only 36--42\,\% of the sample-to-sample label variation is explained by lagged log variation and that the labels carry information (zonation, core calibration) absent from the thirteen input curves. This sets a ceiling that no model of the logs alone can exceed. We then show that gains within this ceiling come from three structural changes rather than from tuning: (i) decoding quantile-binned predictive distributions with the Bayes action of the official tolerance kernel instead of the argmax or the mean; (ii) modelling the four physically consistent reservoir states jointly instead of three independent default-value gates; and (iii) a whole-well dilated convolutional network whose segmentation head reduces gate error by up to 40\,\% while its regression head remains inferior to gradient-boosted trees, motivating a division of labour rather than a replacement. A nested, low-dimensional fusion of the two model families raises the official score from 80.88 (previous target-specific system; 79.41 for the original two-stage system) to 81.63 under well-grouped cross-validation, with paired well-level bootstrap intervals excluding zero for all three properties, and from 82.27 to 83.26 on the five blind leaderboard wells, where ablation submissions show the segmentation and regression gains to be exactly additive (+0.72 and +0.27). Type-well selection and dynamic-time-warping alignment, which won the SPWLA PDDA 2021 contest, are shown not to help on this 80-well benchmark, and a transfer experiment on the public Volve data identifies the number of wells and the metric as the conditions under which each technique pays off.
+\end{abstract}
+
+\begin{highlights}
+\item Interpreted POR/PERM/SW labels contain information absent from the input logs.
+\item Bayes-action decoding of binned distributions matches tolerance-based metrics.
+\item Whole-well dilated CNN segments reservoir states better than pointwise trees.
+\item Trees regress, networks segment: nested fusion gains +0.75 official points.
+\item Type-well selection and DTW alignment do not help with 80 wells from one basin.
+\end{highlights}
+
+\begin{keyword}
+well logs \sep petrophysics \sep gradient boosting \sep sequence model \sep decision theory \sep benchmarking \sep reservoir characterisation
+\end{keyword}
+
+\end{frontmatter}
+
+\linenumbers
+
+%% =====================================================================
+\section{Introduction}
+\label{sec:intro}
+
+Reservoir parameters -- porosity, permeability and water saturation -- are the quantities that petrophysicists derive from wireline logs to evaluate hydrocarbon reserves and plan development. Their conventional computation relies on rock-physics relations (density--porosity transforms, Archie-type saturation equations, porosity--permeability regressions) whose coefficients are adjusted zone by zone and well by well by an interpreter \cite{archie1942}. Data-driven alternatives promise to remove this manual calibration and generalise across wells, and gradient-boosted decision trees (GBDT) and one-dimensional neural sequence models have both been reported to predict these properties from logs; the two SPWLA PDDA machine-learning contests summarise the state of practice \cite{yu2021sonic,fu2024contest}.
+
+Two aspects of the practical problem are rarely addressed in this literature. First, the labels used to train and score such models are not measurements but \emph{interpretations}: they inherit zonation decisions, default values outside the reservoir and core-calibrated coefficients that the logs do not contain. How much of a label is therefore recoverable from the logs in principle is unknown, yet it bounds every model. Second, benchmark and industrial acceptance criteria increasingly use tolerance-based accuracy (a prediction counts fully if it lies within $\pm 8\,\%$ of the true porosity, $\pm 5\,\%$ of the true saturation, or within one decade of the true permeability), which is a bounded, non-convex utility, whereas models are trained and selected with squared or absolute error. The point estimate that maximises expected utility under such a kernel is neither the conditional mean nor the conditional mode of the bin distribution \cite{berger1985}.
+
+This paper addresses both aspects on a 90-well benchmark from a single basin, released as a data-science challenge with the metric above. Our contributions are:
+\begin{enumerate}
+\item An \emph{identifiability audit} that quantifies, with well-grouped and within-well experiments, the share of label variation that is explainable from the logs and the corresponding attainable ceiling of any log-only model (Section~\ref{sec:audit}).
+\item A \emph{metric-aligned decision layer}: quantile-binned predictive distributions are decoded with the Bayes action of the official tolerance kernel; we show that the optimum lies on the support or a dense action grid and that this changes the answer materially for the log-ratio permeability metric (Section~\ref{sec:decision}).
+\item A \emph{joint reservoir-state model} replacing three independent default-value classifiers with a single four-state posterior that enforces the physical consistency observed in 99.98\,\% of the labels (Section~\ref{sec:states}).
+\item A \emph{tree--sequence division of labour}: a whole-well dilated convolutional network is shown, under identical folds, to be a weaker regressor but a substantially stronger segmenter than GBDT; a nested low-dimensional fusion combines the strengths of both (Sections~\ref{sec:net}--\ref{sec:fusion}).
+\item A \emph{systematic test of well-adaptation techniques} (type-well selection by four similarity criteria, DTW alignment features) that won the SPWLA PDDA 2021 contest, and a transfer experiment on that contest's public Volve data, which together delimit when these techniques help (Sections~\ref{sec:typewell} and \ref{sec:transfer}).
+\end{enumerate}
+All comparisons share one well-grouped five-fold split; fusion weights and thresholds are selected on inner folds only; uncertainty is reported by paired well-level bootstrap.
+
+%% =====================================================================
+\section{Data and evaluation}
+\label{sec:data}
+
+\subsection{Well-log benchmark}
+
+The dataset contains 80 training wells (730,268 samples at 0.1\,m spacing, 723,556 with all three labels valid) and 10 blind test wells (95,948 samples). Thirteen input curves are available in every well (GR, SP, AC, DEN, CNL, PE, RXO, RT, CAL, BIT, DEVI, AZIM, CASE; CASE is missing in all but one well and is discarded). Labels are POR (\%), PERM (mD) and SW (\%). Outside the reservoir intervals the interpreter assigned default values (POR = 0.1, PERM = 0.01, SW = 99.9); these defaults cover 67.4\,\%, 68.4\,\% and 71.6\,\% of the labelled samples respectively. Cross-tabulating the three default flags yields four states that account for 99.98\,\% of samples: non-reservoir (all defaults, 67.4\,\%), hydrocarbon-bearing reservoir (no defaults, 28.1\,\%), water-bearing reservoir (POR/PERM valid, SW = 99.9, 4.3\,\%) and tight reservoir (POR valid, PERM = 0.01, 0.3\,\%). Table~\ref{tab:data} summarises the data.
+
+\begin{table}[t]
+\centering
+\caption{Benchmark summary (training wells; blind wells have the same curves and sampling).}
+\label{tab:data}
+\small
+\begin{tabular}{p{0.34\textwidth} p{0.6\textwidth}}
+\toprule
+Item & Value \\
+\midrule
+Wells / samples (training) & 80 / 730,268 (723,556 with all three labels) \\
+Wells / samples (blind) & 10 / 95,948 (5 wells scored on the public leaderboard) \\
+Sampling; logged interval & 0.1\,m; 447--1,308\,m per well, 869--3,075\,m depth range \\
+Input curves used & GR, SP, AC, DEN, CNL, PE, RXO, RT, CAL, BIT, DEVI, AZIM (CASE discarded) \\
+Missing values & $-99999$ sentinel; per-well missing rate $\le 4.4\,\%$ (DEN), interpolated within the well \\
+Default (non-reservoir) share & POR 67.4\,\%, PERM 68.4\,\%, SW 71.6\,\% of labelled samples; per-well POR default share 38--83\,\% \\
+Reservoir states (samples) & 487,557 non-reservoir / 203,289 hydrocarbon-bearing / 30,804 water-bearing / 1,906 tight \\
+Non-default label range (P5 / median / P95) & POR 4.9 / 11.6 / 20.0\,\%; PERM 0.03 / 0.97 / 26\,mD; SW 45.9 / 80.3 / 97.3\,\% \\
+Non-default bed thickness & median 15 samples (1.5\,m); 5\,\% of beds $\le 3$ samples \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Official metric}
+\label{sec:metric}
+
+For a property with truth $y$ and prediction $\hat y$ the per-sample accuracy is
+\begin{align}
+\mathrm{Acc}_{\mathrm{POR}} &= \max\!\left(0,\,1-\frac{|\hat y-y|}{0.08\,(|y|+\varepsilon)}\right), &
+\mathrm{Acc}_{\mathrm{SW}} &= \max\!\left(0,\,1-\frac{|\hat y-y|}{0.05\,(|y|+\varepsilon)}\right), \\
+\mathrm{Acc}_{\mathrm{PERM}} &= \max\!\left(0,\,1-\left|\log_{10}\max\!\left(\hat y/y,\varepsilon\right)\right|\right), &
+\mathrm{Total} &= 100\,(0.30\,\mathrm{Acc}_{\mathrm{POR}}+0.35\,\mathrm{Acc}_{\mathrm{PERM}}+0.35\,\mathrm{Acc}_{\mathrm{SW}}),
+\end{align}
+with $\varepsilon=10^{-5}$ and averages taken over samples. The kernels are triangular in relative (POR, SW) or logarithmic (PERM) error and vanish outside the tolerance. Consequences: a default-value sample predicted as reservoir (or vice versa) scores exactly zero; inside the reservoir a relative error of 8\,\% (POR) or 5\,\% (SW) already scores zero, so an unbiased Gaussian relative error with standard deviation 10\,\% attains an expected accuracy of only 0.30 (POR) and 0.20 (SW).
+
+\subsection{Validation protocol}
+\label{sec:protocol}
+
+All models are evaluated with the same five-fold well-grouped split. We report the sample-weighted (micro) score, the well-averaged (macro) score, the mean of the five worst wells, the five fold scores, and the score on default and non-default samples separately. Differences to the baseline are accompanied by 95\,\% intervals from a paired bootstrap over wells (2,000 resamples). Any threshold or fusion weight is selected on the four inner folds and applied to the fifth (nested); the configuration used for the blind wells is selected on all five folds and reported separately as an optimistic value.
+
+%% =====================================================================
+\section{Methods}
+\label{sec:methods}
+
+\subsection{Baselines: the first-round entry (v1) and the target-specific system (v2)}
+\label{sec:baselines}
+
+The work builds on two earlier entries to the same benchmark, both retained here as baselines under the common protocol.
+
+\paragraph{v1 -- unified two-stage CatBoost} For every property one CatBoost \cite{prokhorenkova2018catboost} classifier separates default from non-default samples and one CatBoost MAE regressor predicts the transformed value ($\log(1+\mathrm{POR})$, $\log_{10}\mathrm{PERM}$, raw SW) on non-default samples, using 113 hand-crafted features (raw curves, logarithms and ratios, per-well medians, standard deviations and ranks, 9/51/201-sample rolling means and standard deviations, differences and trends). Threshold, scale and offset were chosen on a 3-fold out-of-fold grid; the final models were trained for a fixed 500 iterations, whereas the cross-validation models had used early stopping (about 85--150 iterations), an estimator mismatch that cost about 0.3 points. v1 scored 81.01 on the blind leaderboard (rank 237); reproduced under the 5-fold protocol used here with the submitted fixed-iteration estimator it scores 79.41 (79.79 with the early-stopped cross-validation estimator that was never submitted), see Table~\ref{tab:fusion}.
+
+\paragraph{v2 -- target-specific models} v2 keeps the gates but treats each property differently: an 80-bin multiclass model on $\log(1+\mathrm{POR})$ decoded by the argmax bin median, an MAE regressor on $\log_{10}\mathrm{PERM}$, and an RMSE regressor on SW with 237 features (adding per-well quantile normalisation, local residuals, slopes and rock-physics proxies such as density and sonic porosity, a GR shale index, an Archie-type proxy and the invasion contrast), two seeds per model, and thresholds/affine calibrations selected on out-of-fold predictions. v2 scored 82.27 on the blind leaderboard and 80.88 in our cross-validation; the POR binning alone accounted for about 0.8 of the 1.1-point CV gain over v1, i.e.\ discretising the target already moved the point estimate away from the conditional mean and towards the tolerance kernel's optimum -- the observation that motivates the decision layer of Section~\ref{sec:decision}.
+
+\subsection{Additional lag and zone features}
+\label{sec:features}
+
+We add 181 features computed only from the input curves of the same well: $\pm1$--3 sample lag differences, 3/5-sample medians and residuals, first and second differences of eight curves, the density--neutron separation and its lags, and 60\,m / 150\,m rolling median, standard deviation, residual and P10/P90 of seven curves, plus distance to the top and bottom of the logged interval. The long windows act as a label-free proxy of the formation the sample belongs to.
+
+\subsection{Distribution models and Bayes-action decoding}
+\label{sec:decision}
+
+For each property we train a CatBoost multiclass model on the non-default samples with $K$ quantile bins of the transformed label ($K=80$ for $\log(1+\mathrm{POR})$, 60 for $\log_{10}\mathrm{PERM}$, 60 for SW). Given bin probabilities $p_j$ and bin representatives $y_j$, the decision layer returns
+\begin{equation}
+a^{*}=\arg\max_{a}\sum_{j} p_j\,\mathrm{Acc}(a,y_j),
+\label{eq:bayes}
+\end{equation}
+where $\mathrm{Acc}$ is the official kernel of that property. Because $\mathrm{Acc}(\cdot,y_j)$ is piecewise linear in $a$ with its only maximum at $y_j$, $\sum_j p_j\,\mathrm{Acc}(a,y_j)$ is piecewise linear and its maximum is attained at some $y_j$; we nevertheless evaluate the expected utility on an 800-point dense action grid (uniform in SW, log-uniform in POR/PERM) to remove bin-centre quantisation and to allow mixtures of distributions with different supports. A joint variant appends the default value with mass $p_{\mathrm{default}}$ to the support and removes the threshold altogether. Under a squared-error metric the same distribution is decoded by its mean; the decoder, not the model, follows the metric.
+
+\subsection{Joint reservoir-state model}
+\label{sec:states}
+
+A single CatBoost multiclass model predicts the four states of Section~\ref{sec:data} from the 113 + 181 features. The per-property default probability is the marginal (state 0 for POR; states 0 + 3 for PERM; states 0 + 2 for SW). This shares evidence across properties and forbids inconsistent combinations that the independent gates produce in 2.4\,\% of samples.
+
+\subsection{Whole-well dilated convolutional network}
+\label{sec:net}
+
+Input channels per well: ten curves, each as a globally robust-scaled and a within-well robust-scaled channel, ten missing-value masks, relative and absolute depth (32 channels); an optional variant appends the 113 baseline features as channels. The network is a stack of twelve residual blocks of dilated 1-D convolutions \cite{bai2018tcn} (kernel 5, dilations 1--32 repeated twice, GroupNorm, squeeze--excitation), followed by concatenation with a global context vector (mean-pooled over the whole well) and three heads, one per property, each emitting a gate logit and $K$ bin logits. Training uses random 3,072-sample crops ($\approx 300$\,m), per-curve gain/offset jitter to simulate calibration drift, AdamW with a one-cycle schedule, bf16, and masked cross-entropy losses (gate weight 1, bin weight 0.3 or 1.0). Inference processes each well in one pass. The network is trained under the same five well folds and written to the same out-of-fold format as the trees.
+
+\subsection{Nested fusion}
+\label{sec:fusion}
+
+For each property the continuous decision is the Bayes action of a convex mixture of the available predictive distributions (tree bins, network bins) and the gate is a convex mixture of the available default probabilities (tree gate, state marginal, network gates), thresholded once. Mixture weights lie on a simplex grid with step 0.25 and the threshold on a grid of 89 values; the exact score of every threshold is computed by sorting. Selection is nested as described in Section~\ref{sec:protocol}.
+
+\subsection{Well similarity and DTW alignment features}
+\label{sec:alignment_methods}
+
+To test the type-well strategy of the SPWLA PDDA 2021 winner \cite{fu2024contest} we compute four label-free well-to-well similarities over the 90 wells: the Euclidean distance between per-well median and range vectors of the twelve curves; the symmetrised P\'erez-Cruz $k$-nearest-neighbour Kullback--Leibler divergence between the five-curve distributions (GR, DEN, CNL, $\log$RT, AC; 3,000 samples per well); dynamic time warping (DTW) of the within-well-scaled, smoothed GR curve on a 0.5\,m grid with relaxed ends (150\,m); and DTW of a four-curve composite. For every well the eight GR-DTW-nearest wells are aligned along the warping path and their interpreted labels are read at the mapped depth, giving 17 alignment features per sample: default-value rates and state fractions of the neighbours, mean and standard deviation of neighbour POR, SW and $\log_{10}$PERM, the fraction of neighbours labelled at that position, the DTW distances, and the depth mapped into a reference (medoid) well. The neighbour pool of every well is restricted to the training wells of the current fold and excludes the well itself, so the features are cross-fitted.
+
+%% =====================================================================
+\section{Identifiability audit}
+\label{sec:audit}
+
+Table~\ref{tab:audit} and Fig.~\ref{fig:audit} report how much of the non-default labels a LightGBM \cite{ke2017lightgbm} model on the 13 curves and depth can recover under different splits.
+
+\begin{table}[t]
+\centering
+\caption{Identifiability audit: official accuracy on non-default samples (LightGBM on 13 curves + depth) under different splits, and label-structure statistics.}
+\label{tab:audit}
+\small
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{l ccc}
+\toprule
+Experiment & POR & PERM & SW \\
+\midrule
+Same well, upper half $\to$ lower half & 0.181 & 0.517 & 0.106 \\
+Same well, interleaved 50-sample blocks & 0.553 & 0.885 & 0.286 \\
+Cross-well, 64 $\to$ 16 wells & 0.309 & 0.776 & 0.143 \\
+Leave-one-well-out, 12 / 30 / 79 nearest wells & 0.245 / 0.302 / 0.322 & -- & 0.132 / 0.135 / 0.134 \\
+Share of $\Delta$-label variance explained by lagged $\Delta$-curves (linear) & 0.36 & 0.42 & 0.42 \\
+5-sample rolling-median oracle of the label itself & 0.905 & 0.981 & 0.860 \\
+\bottomrule
+\end{tabular}}
+\end{table}
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\textwidth]{figures/fig1_identifiability.pdf}
+\caption{Identifiability audit: official accuracy of a LightGBM model on non-default samples under five data splits (same well upper$\to$lower half; same well interleaved 50-sample blocks; cross-well 64$\to$16; leave-well-out with the 12 nearest wells; leave-well-out with all 79 wells). Labels transfer better from other wells than from the other half of the same well, and nearest-well training does not help. PERM bars are omitted where the experiment was not run.}
+\label{fig:audit}
+\end{figure}
+
+Three observations. (a) Training on the upper half of a well does not transfer to its lower half; the mapping from logs to labels is formation-specific, and 79 other wells transfer better than the well itself. (b) Even with neighbouring labelled samples five metres away (interleaved blocks), SW reaches only 0.29 under the 5\,\% tolerance. (c) The labels are smooth at the 0.5\,m scale (rolling-median oracle $>0.86$) but their variation is only weakly coupled to the curves' variation; the remainder must originate in the interpretation workflow. The attainable ceiling of any log-only model is therefore far below the metric's nominal maximum, and cross-well generalisation is not the limiting factor.
+
+Gate anatomy (Fig.~\ref{fig:gate}): the baseline gate errs on 8.3\,\% (POR), 7.1\,\% (PERM) and 13.3\,\% (SW) of samples; 27--47\,\% of the errors lie within two samples of a true boundary; the recall of non-default beds thinner than 1\,m is 0.29 (POR) and 0.20 (SW). Repairing only the errors farther than two samples from a boundary would add 0.030, 0.029 and 0.017 to the three accuracies -- the largest reachable reserve in the data.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\textwidth]{figures/fig2_gate_anatomy.pdf}
+\caption{Anatomy of the baseline (v2) gate errors. (a) Gate error rate versus distance to the nearest true default/non-default boundary; (b) recall of non-default samples by true bed thickness. About half of the errors lie within five samples of a boundary, and beds thinner than 1\,m are recalled at only 20--35\,\%.}
+\label{fig:gate}
+\end{figure}
+
+%% =====================================================================
+\section{Results}
+\label{sec:results}
+
+\subsection{Decision layer alone (no retraining)}
+
+Bayes-action decoding of the baseline POR distribution raises non-default accuracy from 0.438 (argmax) to 0.443, and the full score from 0.7796 to 0.7802 (95\,\% CI of the paired difference $[-0.0002,+0.0016]$); the joint default-mass variant reaches 0.7810 ($[+0.0003,+0.0012]$). Median or HMM \cite{rabiner1989hmm} smoothing of gate probabilities, isotonic or temperature calibration of the gates, and a four-state HMM over the state posterior change the score by less than 0.001 or reduce it. Nested re-selection of thresholds reproduces the baseline's thresholds, i.e.\ the baseline was not optimistically calibrated.
+
+\subsection{Distribution models with metric-aligned decoding}
+
+\begin{table}[t]
+\centering
+\caption{Distribution models decoded with the official kernel, evaluated with the baseline gates (5-fold CV).}
+\label{tab:dist}
+\small
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{l ccc}
+\toprule
+Model & Non-default acc.\ (v2 $\to$ new) & Full score (v2 $\to$ new) & Paired CI, wells improved \\
+\midrule
+PERM: 60-bin distribution + log-ratio Bayes action & 0.792 $\to$ 0.805 & 0.8944 $\to$ 0.8969 & $[+0.0023,+0.0053]$, 61/80 \\
+POR: 80-bin distribution + lag/zone features & 0.438 $\to$ 0.453 & 0.7796 $\to$ 0.7836 & $[+0.0023,+0.0079]$, 54/80 \\
+SW: 60-bin distribution & 0.177 $\to$ 0.177 & 0.7484 $\to$ 0.7475 & $[-0.0025,+0.0004]$, 30/80 \\
+\bottomrule
+\end{tabular}}
+\end{table}
+
+For permeability (Table~\ref{tab:dist}) the decoded action differs systematically from the MAE regression output because the log-ratio kernel is asymmetric in the original scale; for saturation the distribution model brings no information the regressor lacked, consistent with Section~\ref{sec:audit}.
+
+\subsection{Joint state model}
+
+State accuracy is 0.905. Using its marginals as gates with nested thresholds gives POR 0.7819, PERM 0.8961 (averaged with the baseline gate), SW 0.7493; all three paired intervals exclude zero. Smoothing the posterior with the empirical transition matrix reduces all three scores, because short states (water-bearing streaks of 1--4 samples) are genuine in the labels.
+
+\subsection{Sequence network}
+
+\begin{table}[t]
+\centering
+\caption{Trees versus sequence networks under identical folds.}
+\label{tab:net}
+\small
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{l ccc}
+\toprule
+Run & Non-default acc.\ POR / PERM / SW & Gate accuracy POR / PERM / SW & Total alone \\
+\midrule
+Baseline trees (v2) & 0.438 / 0.792 / 0.177 & 0.917 / 0.929 / 0.867 & 80.88 \\
+Network, curves only (3 seeds) & 0.208 / 0.736 / 0.173 & 0.934 / 0.935 / 0.923 & 77.65 \\
+Network + 113 feature channels (2 seeds) & 0.299 / 0.777 / 0.179 & 0.931 / 0.934 / 0.922 & 78.87 \\
+\bottomrule
+\end{tabular}}
+\end{table}
+
+The network halves the SW gate error (13.3\,\% $\to$ 7.7\,\%) and reduces the POR gate error by 20\,\%, but its regression heads are clearly inferior to the trees for POR and PERM (Table~\ref{tab:net}, Fig.~\ref{fig:division}). Used alone it loses 2--3 points; used as a gate source it is the single largest contributor to the final gain.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\textwidth]{figures/fig3_division_of_labour.pdf}
+\caption{Trees versus sequence networks under identical well folds. (a) Accuracy on true non-default samples (regression task); (b) default/non-default gate accuracy at threshold 0.5 (segmentation task). Gradient-boosted trees regress better; whole-well networks segment better, most visibly for water saturation.}
+\label{fig:division}
+\end{figure}
+
+\subsection{Nested fusion}
+\label{sec:fusionresults}
+
+\begin{table}[t]
+\centering
+\caption{Nested 5-fold cross-validation of the three generations and of each fusion step of v3.}
+\label{tab:fusion}
+\small
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{l cccc}
+\toprule
+Configuration & POR & PERM & SW & Total \\
+\midrule
+v1 first-round entry (two-stage CatBoost, submitted estimator) & 0.7412 & 0.8925 & 0.7411 & 79.41 \\
+v2 baseline (target-specific) & 0.7796 & 0.8944 & 0.7484 & 80.88 \\
++ distribution models, state-model gate & 0.7830 & 0.8993 & 0.7485 & 81.16 \\
++ network (gates and distributions) & 0.7855 & 0.9022 & 0.7506 & 81.41 \\
++ POR lag/zone features & 0.7891 & 0.9022 & 0.7506 & 81.52 \\
++ second network with feature channels (v3, final) & \textbf{0.7893} & \textbf{0.9034} & \textbf{0.7524} & \textbf{81.63} \\
+\bottomrule
+\end{tabular}}
+\end{table}
+
+The nested selection picks the same configuration in all five outer folds: tree distributions for POR, a 0.75/0.25 tree/network mixture for PERM, a 0.5/0.25/0.25 mixture for SW, and gates dominated by the state model and the networks with the baseline gate receiving zero weight for POR and SW. Paired intervals versus the baseline: POR $[+0.0070,+0.0123]$ (66/80 wells), PERM $[+0.0061,+0.0096]$ (70/80), SW $[+0.0005,+0.0042]$ (49/80). v3 beats v2 on 68 of the 80 wells (median well gain +0.65 points, range $-1.6$ to $+3.7$) and in every fold. The worst five wells also improve for all three properties. Optimistic (non-nested) selection gives 81.65, i.e.\ the nesting cost is 0.02 points. Fig.~\ref{fig:progression} shows the progression across the three generations and the fusion steps; Fig.~\ref{fig:pertarget} breaks the three generations down by property.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\textwidth]{figures/fig4_progression.pdf}
+\caption{Nested cross-validation total score of the three generations (v1, v2) and of each fusion step of v3 (line), with the blind leaderboard scores of v1, v2 and v3 (points). The leaderboard exceeds the cross-validation score by a nearly constant 1.4--1.6 points in every generation.}
+\label{fig:progression}
+\end{figure}
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\textwidth]{figures/fig7_generations_per_target.pdf}
+\caption{Per-property cross-validation accuracy of v1, v2 and v3 on all samples (left) and on non-default samples only (right). POR gained most from v1 to v2 (target discretisation); SW and PERM gained most from v2 to v3 (segmentation and metric-aligned decoding).}
+\label{fig:pertarget}
+\end{figure}
+
+\paragraph{Saturation} Adding further sources to the fusion -- a four-seed POR distribution model, a 100-bin PERM model with stacked features, a four-seed SW model with the POR-distribution summaries as inputs, a third network with a wider kernel, a level-2 CatBoost state model trained on all first-level outputs (state accuracy 0.905 $\to$ 0.908), and the alignment-feature models of Section~\ref{sec:typewell} -- changes the nested total by at most +0.010 (81.632 $\to$ 81.642). The linear mixture with a single threshold already extracts what the sources agree on; the remaining errors are shared by all models and, per Section~\ref{sec:audit}, are largely not a function of the logs. Fig.~\ref{fig:well} illustrates the behaviour of the three generations on a held-out well.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\textwidth]{figures/fig6_example_well.pdf}
+\caption{Held-out well 5c3cda77, 1557--1677\,m: interpreted labels (black) versus out-of-fold predictions of v1 (yellow), v2 (grey) and v3 (green) for POR, $\log_{10}$PERM and SW. v3 removes spurious reservoir flags in shale (e.g.\ 1648\,m, 1674\,m) and follows thin-bed boundaries more closely; the residual SW error inside the reservoirs is shared by all three generations.}
+\label{fig:well}
+\end{figure}
+
+\subsection{Blind wells}
+\label{sec:blind}
+
+\begin{table}[t]
+\centering
+\caption{Official leaderboard scores on the five blind wells: three generations and the four same-day ablation submissions of v3.}
+\label{tab:blind}
+\small
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{l ccc}
+\toprule
+Submission & Blind score & $\Delta$ vs v2 & CV $\Delta$ (nested) \\
+\midrule
+v1 first-round entry (two-stage CatBoost; rank 237 at the time) & 81.0052 & $-1.2666$ & $-1.48$ \\
+v2 baseline (target-specific) & 82.2718 & -- & -- \\
+Final system (v3) & \textbf{83.2579} & \textbf{+0.9861} & +0.749 \\
+Final gates, v2 continuous values & 82.9916 & +0.7198 & -- \\
+v2 gates, final continuous values & 82.5381 & +0.2663 & -- \\
+Final system without the sequence networks & 82.8034 & +0.5316 & +0.348 \\
+\bottomrule
+\end{tabular}}
+\end{table}
+
+Table~\ref{tab:blind} reports the official leaderboard score on the five blind wells (95,948 samples in ten wells are predicted; five are scored). Across the three generations the blind score rose by 2.25 points (81.01 $\to$ 82.27 $\to$ 83.26) while the 5-fold CV rose by 2.22 (79.41 $\to$ 80.88 $\to$ 81.63); the blind-well score exceeds the CV score by a nearly constant 1.4--1.6 points for all three generations, so the well-grouped protocol ranks candidates correctly and predicts the size of the gains. The gate contribution (+0.72) and the continuous-value contribution (+0.27) of v3 sum exactly to the full gain (+0.99): the two improvements are additive on unseen wells, as the metric's structure predicts (a gate error scores zero regardless of the continuous value). Removing the sequence networks costs 0.45 points on the blind wells (0.40 in CV); the tree-side changes alone are worth 0.53 (0.35 in CV) (Fig.~\ref{fig:blind}).
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=0.85\textwidth]{figures/fig5_leaderboard_ablation.pdf}
+\caption{Blind leaderboard scores of the three generations and of the four v3 ablation submissions (differences relative to v2 in parentheses). The gate-only (+0.72) and value-only (+0.27) gains add up to the full v3 gain (+0.99).}
+\label{fig:blind}
+\end{figure}
+
+%% =====================================================================
+\section{Type-well selection and DTW alignment on the 80-well benchmark}
+\label{sec:typewell}
+
+The 2021 SPWLA PDDA contest on Volve data was won by ``type-well'' adaptation: each test well is paired with the training wells that are statistically closest to it (KL divergence, DTW), and simple models are fitted on those wells only \cite{fu2024contest}. We tested this family on our benchmark with the four similarity criteria of Section~\ref{sec:alignment_methods}.
+
+\paragraph{Selection criteria disagree} The eight nearest wells chosen by the four criteria overlap only weakly (mean top-8 overlap 0.13 between GR-DTW and median-curve distance, 0.16 between GR-DTW and KL, 0.29 between KL and median-curve distance, 0.33 between the two DTW variants), so ``the similar wells'' is not a well-defined set on this data.
+
+\paragraph{No criterion beats pooling} Table~\ref{tab:typewell} and Fig.~\ref{fig:typewell} give leave-well-out accuracies (LightGBM, 16 evaluation wells) when training on the 12 or 30 nearest wells, on all 79 wells with similarity weights $\exp(-d/\mathrm{median}\,d)$, and on all 79 wells unweighted. KL divergence is the best criterion (POR 0.302 with 12 wells against 0.242 for median-curve distance), confirming the winning team's choice of statistic, but every restricted or weighted training set is at best equal to unweighted pooling (POR 0.315--0.326 vs 0.322; SW 0.126--0.137 vs 0.134).
+
+\begin{table}[t]
+\centering
+\caption{Type-well selection on the 80-well benchmark: leave-well-out official accuracy on non-default samples (LightGBM on 13 curves + depth, 16 evaluation wells) by similarity criterion and training-set rule.}
+\label{tab:typewell}
+\small
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{l l ccc c}
+\toprule
+Target & Criterion & 12 nearest & 30 nearest & All 79, similarity-weighted & All 79, unweighted \\
+\midrule
+POR & median-curve distance & 0.242 & 0.293 & 0.315 & 0.322 \\
+POR & KL divergence & 0.302 & 0.307 & 0.323 & 0.322 \\
+POR & GR DTW & 0.271 & 0.299 & 0.326 & 0.322 \\
+POR & composite DTW & 0.287 & 0.306 & 0.317 & 0.322 \\
+SW & median-curve distance & 0.132 & 0.137 & 0.134 & 0.134 \\
+SW & KL divergence & 0.127 & 0.133 & 0.135 & 0.134 \\
+SW & GR DTW & 0.128 & 0.134 & 0.130 & 0.134 \\
+SW & composite DTW & 0.132 & 0.126 & 0.136 & 0.134 \\
+\bottomrule
+\end{tabular}}
+\end{table}
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\textwidth]{figures/fig8_typewell.pdf}
+\caption{Type-well selection on the 80-well benchmark (leave-well-out, non-default samples). Four similarity criteria, training on the 12 or 30 nearest wells or on all wells with similarity weights, against training on all 79 wells (dashed line). No criterion or rule beats pooling.}
+\label{fig:typewell}
+\end{figure}
+
+\paragraph{Alignment features carry structure, not values} Copying the interpreted labels of the eight DTW-aligned neighbour wells directly as a prediction identifies reservoir versus non-reservoir samples with 80--81\,\% accuracy but scores only 0.055 (POR) and 0.074 (SW) on non-default samples; the transferred information is where reservoirs are, which the models already know (gate accuracy 0.92--0.93). Accordingly, adding the 17 alignment features to the distribution models, the gates and the state model changes every score by at most 0.001 (POR joint-decoded 0.7845 $\to$ 0.7847, SW 0.7494 $\to$ 0.7493, PERM 0.8982 $\to$ 0.8979, state accuracy 0.9053 $\to$ 0.9060), and the fusion that includes them scores 81.642 against 81.632 without them.
+
+%% =====================================================================
+\section{Transfer to the SPWLA PDDA 2021 Volve benchmark}
+\label{sec:transfer}
+
+To test whether the conclusions depend on one basin and one metric, the pipeline was re-run without modification of its logic on the public SPWLA PDDA 2021 contest data \cite{pddasig2021,fu2024contest}, derived from the Equinor Volve field \cite{volve2018}: nine training wells (318,967 samples, 42,309 of them with the three interpreted targets porosity PHIF, water saturation SW and shale volume VSH, all in $[0,1]$), four blind wells with released truth (11,275 samples), and a root-mean-square-error (RMSE) metric over the three targets. The Volve curves were mapped onto the competition curve names with unit conversions (depth ft$\to$m, DTC $\mu$s/ft$\to\mu$s/m, calliper and bit size inch$\to$cm, neutron fraction$\to$\%); SP, deviation and azimuth do not exist there and enter as constant features. Water saturation has a mass point at SW = 1 (41\,\% of the labelled training samples, 52\,\% of the blind samples) that plays the role of the default value; PHIF and VSH have none.
+
+\begin{table}[t]
+\centering
+\caption{Volve transfer experiment. Left: leave-well-out cross-validation over the nine training wells (labelled samples only). Right: the four blind wells with released truth. RMSE is the contest metric over the three targets; ``tol.'' is the tolerance accuracy of Section~\ref{sec:metric} applied to PHIF (8\,\%).}
+\label{tab:volve}
+\small
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{l cc cc cc}
+\toprule
+ & \multicolumn{2}{c}{Leave-well-out CV} & \multicolumn{2}{c}{+ SW = 1 gate (CV)} & \multicolumn{2}{c}{Blind wells} \\
+Model & RMSE & tol.\ PHIF & CatBoost gate & network gate & RMSE & tol.\ PHIF \\
+\midrule
+Tutorial Random Forest (five logs) & -- & -- & -- & -- & 0.1108 & -- \\
+CatBoost RMSE regression, 294 features & 0.0661 & 0.424 & \textbf{0.0581} & 0.0596 & 0.1079 & 0.409 \\
+\quad + CatBoost SW = 1 gate, threshold 0.5 & & & & & \textbf{0.1061} & \\
+60-bin distributions, mean decoding & 0.0907 & 0.396 & 0.0624 & 0.0709 & 0.1185 & 0.487 \\
+60-bin distributions, Bayes-action decoding & 0.0807 & \textbf{0.474} & 0.0687 & 0.0737 & 0.1148 & \textbf{0.516} \\
+Sequence network alone (42k labelled samples) & 0.2326 & 0.061 & 0.1987 & 0.2312 & 0.1532 & 0.111 \\
+\midrule
+Contest leaderboard: 1st / 2nd / 3rd & & & & & 0.0525 / 0.0602 / 0.0634 & \\
+\bottomrule
+\end{tabular}}
+\end{table}
+
+Table~\ref{tab:volve} summarises the outcome. (i) \emph{Decoding follows the metric.} Under RMSE the mean-decoded distribution model beats the Bayes-action decoding (0.0907 vs 0.0807 is reversed in favour of the mean once the gate is added: 0.0624 vs 0.0687), whereas under the tolerance metric the Bayes action is best (0.474 vs 0.396 vs 0.424 for regression) -- the same model serves both metrics if the decoder is chosen accordingly. (ii) \emph{Pooling beats nearest-well training also on Volve.} In the Volve identifiability audit the same-well half split gives RMSE 0.141 for SW against 0.088 for cross-well training and 0.165 for the two nearest wells; for VSH 0.074 / 0.078 / 0.096; porosity is essentially density porosity everywhere (0.020 / 0.021 / 0.020). (iii) \emph{The network's segmentation advantage does not transfer with 42k labelled samples}: its SW = 1 gate accuracy is 0.68 against 0.90 for CatBoost, and it hurts every fusion. (iv) \emph{Blind wells expose a distribution shift the pooled model cannot absorb.} The best configuration scores 0.106, at the level of the tutorial baseline and twice the winning 0.0525, although three of the four wells score 0.051--0.125 (well 15/9-F-15: 0.051, at the winners' level). Well 15/9-F-11T2 is 97.6\,\% water (SW = 1) while no training well exceeds 92\,\%, its gate accuracy is 0.65, and it alone lifts the total RMSE to 0.144; the third-placed team set this whole well to SW = 1 by a well-level resistivity rule and the winner reached a similar effect through type-well adaptation \cite{fu2024contest}. With nine training wells, strong inter-well calibration drift and blind wells outside the training range, well-level adaptation is worth more than model capacity; with 80 wells from one basin the opposite holds (Section~\ref{sec:typewell}).
+
+%% =====================================================================
+\section{Discussion}
+\label{sec:discussion}
+
+\paragraph{What the ceiling means for practice} The audit shows that roughly 60\,\% of the sample-to-sample variability of interpreted porosity is not a function of the logs at the same or neighbouring depths, and that an interpreter's zonation transfers better across wells than across the halves of one well. For operators this argues for releasing zone tops and calibration coefficients alongside labels when building training sets, and for evaluating models against interpretable ceilings rather than against the metric's nominal maximum.
+
+\paragraph{Why trees regress and networks segment} GBDT with per-well and rolling statistics captures the pointwise conditional distribution well; the sequence network, with a receptive field of hundreds of metres and a global context vector, captures where beds start and end and suppresses the fragmentation (365 vs 250 state changes per 10,000 samples) that pointwise gates produce. Both observations are stable across seeds and folds; the fusion assigns the network zero weight for POR regression and the baseline gate zero weight for POR and SW segmentation. The advantage requires enough labelled sequence: on Volve, with 42k labelled samples in nine wells, the same architecture segments worse than the trees.
+
+\paragraph{Metric alignment} Decoding with the Bayes action is cheap and always safe when the distribution is well calibrated; its value depends on the kernel: negligible for the narrow POR kernel where argmax and Bayes action coincide in most bins, substantial for the log-ratio PERM kernel, and reversed under RMSE where the mean is optimal (Section~\ref{sec:transfer}).
+
+\paragraph{Which techniques pay off depends on the number of wells and on the metric} The 2021 contest report notes that a CatBoost classifier for SW = 1 did not improve RMSE; under a tolerance metric, where a wrong gate scores zero, the same gate is the single largest lever (Table~\ref{tab:blind}). Type-well adaptation won on nine Volve wells and is neutral to harmful on 80 wells from one basin (Table~\ref{tab:typewell}). Neither observation is about the models: it is the evaluation kernel and the density of wells that decide.
+
+\paragraph{Negative results worth recording} (i) Smoothing gate probabilities along depth (median filters, two-state or four-state hidden Markov smoothing with the empirical transition matrix) never helped and often hurt, because genuine one-to-four-sample states (water streaks, tight streaks) exist in the labels. (ii) Calibrating the gate probabilities (isotonic, temperature) before a joint Bayes decision changed the score by less than 0.001. (iii) A level-2 CatBoost state model stacked on all first-level outputs raised state accuracy from 0.905 to 0.908 but added nothing after the linear fusion. (iv) Transductive self-training of the sequence networks with hard pseudo-labels on the held-out wells (simulated within the folds) raised their stand-alone scores from 77.6 to 81.3 (curves-only network) and from 78.9 to 81.5 (network with feature channels) -- they learned to imitate the ensemble -- but lowered their SW gate accuracy from 0.923 to 0.886 and from 0.922 to 0.892, because the pseudo-labels carry the fused decision's threshold bias; the fusions that include the transduced networks scored 81.61--81.64 against 81.63 without them, i.e.\ within fold noise. Soft-probability distillation rather than hard decisions would be the correct form of transduction, which we leave to future work. (v) Type-well selection and DTW alignment features (Section~\ref{sec:typewell}).
+
+\paragraph{Limitations} One basin and one metric for the main study, with a second basin and metric only in the transfer experiment; only tolerance kernels of this form were studied; the sequence network was not tuned beyond three architectures; the blind-well evaluation contains five scored wells and is therefore noisy (one well shifts the score by up to 0.7 points), although the four ablation submissions are mutually consistent to within 0.01 points.
+
+%% =====================================================================
+\section{Conclusions}
+\label{sec:conclusions}
+
+(1) Interpreted reservoir labels are only partly identifiable from conventional logs; the audit procedure proposed here gives a practical ceiling. (2) Aligning the decision layer with the evaluation kernel is a free improvement: the Bayes action for tolerance metrics, the mean for RMSE, from the same distribution model. (3) Whole-well sequence networks and gradient-boosted trees have complementary strengths -- segmentation versus regression -- and a nested fusion of the two is the most robust path to gains when enough labelled sequence is available, whereas replacing one by the other loses points. (4) Type-well selection and DTW alignment, decisive on a nine-well benchmark, do not help on 80 wells from one basin. (5) On the benchmark the official score improves over three generations from 79.41 (v1) to 80.88 (v2) to 81.63 (v3) in well-grouped cross-validation and from 81.01 to 82.27 to 83.26 on the blind leaderboard wells, with the segmentation and regression contributions of the final generation verified to be additive by ablation submissions.
+
+%% =====================================================================
+\section*{Declaration of generative AI and AI-assisted technologies in the manuscript preparation process}
+During the preparation of this work the authors used an AI coding assistant (Claude, Anthropic) to draft analysis code, run experiments under the authors' specification, and produce a first draft of the text. After using this tool the authors reviewed and edited the content as needed and take full responsibility for the content of the published article.
+
+\section*{Declaration of competing interest}
+The authors declare that they have no known competing financial interests or personal relationships that could have appeared to influence the work reported in this paper.
+
+\section*{Data availability}
+The benchmark data are the property of the competition organiser; access conditions are described at [URL]. The Volve-based SPWLA PDDA 2021 data are public \cite{pddasig2021}. Code for all experiments (feature construction, CatBoost and network training, decision layer, nested fusion, diagnostics, transfer experiment), the out-of-fold experiment registry, the per-well scores and the well-similarity matrices are provided as supplementary material and will be deposited at [Mendeley Data / repository DOI].
+
+\section*{Funding}
+This research did not receive any specific grant from funding agencies in the public, commercial, or not-for-profit sectors.
+
+\bibliographystyle{elsarticle-num}
+\bibliography{refs}
+
+\end{document}

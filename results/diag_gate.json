@@ -1,0 +1,255 @@
+{
+ "POR": {
+  "gate_error_rate": 0.08313800175798418,
+  "by_distance_to_true_boundary": {
+   "(0,1]": {
+    "rows": 20308,
+    "err_rows": 9144,
+    "err_rate": 0.4502659050620445,
+    "share_of_all_errors": 0.1520073144377026
+   },
+   "(1,2]": {
+    "rows": 20253,
+    "err_rows": 7266,
+    "err_rate": 0.3587616649385276,
+    "share_of_all_errors": 0.1207879644252348
+   },
+   "(2,3]": {
+    "rows": 19959,
+    "err_rows": 5660,
+    "err_rate": 0.2835813417505887,
+    "share_of_all_errors": 0.09409026681073893
+   },
+   "(3,5]": {
+    "rows": 38273,
+    "err_rows": 8128,
+    "err_rate": 0.21236903299976484,
+    "share_of_all_errors": 0.13511761283351342
+   },
+   "(5,10]": {
+    "rows": 79742,
+    "err_rows": 10656,
+    "err_rate": 0.13363095984550175,
+    "share_of_all_errors": 0.17714238217936995
+   },
+   "(10,20]": {
+    "rows": 109880,
+    "err_rows": 9518,
+    "err_rate": 0.08662176920276665,
+    "share_of_all_errors": 0.15822458648491397
+   },
+   "(20,50]": {
+    "rows": 179186,
+    "err_rows": 5866,
+    "err_rate": 0.03273693257285725,
+    "share_of_all_errors": 0.0975147535533206
+   },
+   "(50,10000000]": {
+    "rows": 255955,
+    "err_rows": 3917,
+    "err_rate": 0.015303471313316793,
+    "share_of_all_errors": 0.06511511927520572
+   }
+  },
+  "thin_nondefault_bed_recall": {
+   ">=20": {
+    "rows": 211227,
+    "recalled_rows": 174128,
+    "recall": 0.82436430948695
+   },
+   "<20": {
+    "rows": 23622,
+    "recalled_rows": 11213,
+    "recall": 0.47468461603589873
+   },
+   "<10": {
+    "rows": 1150,
+    "recalled_rows": 335,
+    "recall": 0.29130434782608694
+   }
+  },
+  "per_well_error_rate": {
+   "q10": 0.055671145062038616,
+   "q50": 0.07388735811664299,
+   "q90": 0.11562465690948664,
+   "max": 0.16965983519966193
+  },
+  "false_default_share_within_2_of_boundary": 0.26685610953242056,
+  "missed_default_share_within_2_of_boundary": 0.30319365337672904,
+  "score_v2": 0.7795528331493998,
+  "score_if_nonboundary_errors_fixed": 0.8092009203908732,
+  "score_if_errors_beyond5_fixed": 0.8008473728861526
+ },
+ "PERM": {
+  "gate_error_rate": 0.07143469199343244,
+  "by_distance_to_true_boundary": {
+   "(0,1]": {
+    "rows": 21696,
+    "err_rows": 9530,
+    "err_rate": 0.43925147492625366,
+    "share_of_all_errors": 0.18437905082515912
+   },
+   "(1,2]": {
+    "rows": 21111,
+    "err_rows": 6923,
+    "err_rate": 0.32793330491213113,
+    "share_of_all_errors": 0.13394083618704897
+   },
+   "(2,3]": {
+    "rows": 20310,
+    "err_rows": 4931,
+    "err_rate": 0.2427868045297883,
+    "share_of_all_errors": 0.09540116470292337
+   },
+   "(3,5]": {
+    "rows": 37849,
+    "err_rows": 6350,
+    "err_rate": 0.16777193585035272,
+    "share_of_all_errors": 0.12285487646797066
+   },
+   "(5,10]": {
+    "rows": 77420,
+    "err_rows": 8071,
+    "err_rate": 0.10424954792043399,
+    "share_of_all_errors": 0.1561514500744868
+   },
+   "(10,20]": {
+    "rows": 107449,
+    "err_rows": 7297,
+    "err_rate": 0.06791128814600415,
+    "share_of_all_errors": 0.14117669820264284
+   },
+   "(20,50]": {
+    "rows": 178110,
+    "err_rows": 4792,
+    "err_rate": 0.02690472180113413,
+    "share_of_all_errors": 0.09271190047787645
+   },
+   "(50,10000000]": {
+    "rows": 259611,
+    "err_rows": 3793,
+    "err_rate": 0.014610320826159139,
+    "share_of_all_errors": 0.07338402306189178
+   }
+  },
+  "thin_nondefault_bed_recall": {
+   ">=20": {
+    "rows": 201756,
+    "recalled_rows": 176040,
+    "recall": 0.8725391066436686
+   },
+   "<20": {
+    "rows": 23417,
+    "recalled_rows": 13548,
+    "recall": 0.5785540419353461
+   },
+   "<10": {
+    "rows": 3006,
+    "recalled_rows": 1049,
+    "recall": 0.3489687292082502
+   },
+   "<5": {
+    "rows": 780,
+    "recalled_rows": 125,
+    "recall": 0.16025641025641027
+   }
+  },
+  "per_well_error_rate": {
+   "q10": 0.04691374109811694,
+   "q50": 0.06688851314313554,
+   "q90": 0.1033582078692914,
+   "max": 0.16205366575110924
+  },
+  "false_default_share_within_2_of_boundary": 0.319422991334398,
+  "missed_default_share_within_2_of_boundary": 0.31519644180874723,
+  "score_v2": 0.8944210586735556,
+  "score_if_nonboundary_errors_fixed": 0.9230379798192845,
+  "score_if_errors_beyond5_fixed": 0.9142885110768539
+ },
+ "SW": {
+  "gate_error_rate": 0.13307746739713305,
+  "by_distance_to_true_boundary": {
+   "(0,1]": {
+    "rows": 29864,
+    "err_rows": 14319,
+    "err_rate": 0.47947361371551034,
+    "share_of_all_errors": 0.1487085752266614
+   },
+   "(1,2]": {
+    "rows": 27725,
+    "err_rows": 11988,
+    "err_rate": 0.43238954012623987,
+    "share_of_all_errors": 0.12450020251534444
+   },
+   "(2,3]": {
+    "rows": 24975,
+    "err_rows": 9608,
+    "err_rate": 0.3847047047047047,
+    "share_of_all_errors": 0.09978294509237816
+   },
+   "(3,5]": {
+    "rows": 43151,
+    "err_rows": 13780,
+    "err_rate": 0.31934370003012674,
+    "share_of_all_errors": 0.14311084339851904
+   },
+   "(5,10]": {
+    "rows": 80573,
+    "err_rows": 18014,
+    "err_rate": 0.22357365370533552,
+    "share_of_all_errors": 0.18708263664593047
+   },
+   "(10,20]": {
+    "rows": 105582,
+    "err_rows": 14024,
+    "err_rate": 0.13282567104241252,
+    "share_of_all_errors": 0.14564488155448702
+   },
+   "(20,50]": {
+    "rows": 169980,
+    "err_rows": 10044,
+    "err_rate": 0.05908930462407342,
+    "share_of_all_errors": 0.10431098048582912
+   },
+   "(50,10000000]": {
+    "rows": 241706,
+    "err_rows": 4512,
+    "err_rate": 0.0186673065625181,
+    "share_of_all_errors": 0.04685893508085036
+   }
+  },
+  "thin_nondefault_bed_recall": {
+   ">=20": {
+    "rows": 161986,
+    "recalled_rows": 102254,
+    "recall": 0.63125208351339
+   },
+   "<10": {
+    "rows": 10243,
+    "recalled_rows": 2067,
+    "recall": 0.2017963487259592
+   },
+   "<5": {
+    "rows": 2504,
+    "recalled_rows": 314,
+    "recall": 0.1253993610223642
+   },
+   "<20": {
+    "rows": 30569,
+    "recalled_rows": 9142,
+    "recall": 0.29906114037096404
+   }
+  },
+  "per_well_error_rate": {
+   "q10": 0.09167150179611559,
+   "q50": 0.13275930554630783,
+   "q90": 0.16348552406725886,
+   "max": 0.319247834354532
+  },
+  "false_default_share_within_2_of_boundary": 0.26294455066921607,
+  "missed_default_share_within_2_of_boundary": 0.4704030226700252,
+  "score_v2": 0.7483547687820349,
+  "score_if_nonboundary_errors_fixed": 0.7657210132783412,
+  "score_if_errors_beyond5_fixed": 0.75993117464268
+ }
+}

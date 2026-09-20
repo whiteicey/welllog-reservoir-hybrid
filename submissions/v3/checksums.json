@@ -1,0 +1,10 @@
+{
+ "note": "result.zip is the file submitted to the A-board (83.2579). submission_code.zip is the structured package (competition template layout); it reproduces result.json byte-for-byte from test/ data only (verified on the H20 server, 2026-09-20 12:24 CST).",
+ "result.json": {"bytes": 11382824, "sha256": "afcaad7612fac1cea0413d2a594532c3103b9af06d5f960d77c26c479f9e8358"},
+ "result.zip (submitted)": {"bytes": 520195, "sha256": "6694a7a65408b8078937ecd707ddca6931daba55a22431d184ae14e1ee13c791"},
+ "submission_code.zip (structured layout)": {"bytes": 404006890, "sha256": "47f4ada44b29c99f6b4420ade01ce41bd9bcb969bfb13a26763883ff28857a5d"},
+ "submission_code.zip (previous flat layout, kept on server outputs/submission_v3/)": {"bytes": 404014836, "sha256": "645fc8da659deacd7e6b99c0682870eb647c1256f2d7f2985ff7da016fa36b68"},
+ "reproduced_result.json_from_structured_zip": {"bytes": 11382824, "sha256": "afcaad7612fac1cea0413d2a594532c3103b9af06d5f960d77c26c479f9e8358"},
+ "model_weights_identical_to_submitted_package": true,
+ "model_meta_identical_to_submitted_package": true
+}

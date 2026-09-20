@@ -1,0 +1,11 @@
+{
+  "wells": 10,
+  "rows": 95948,
+  "v2_resultData_exact_match": true,
+  "utility_changed_rows": {
+    "POR": 9106,
+    "PERM": 0,
+    "SW": 0
+  },
+  "utility_scope": "Same v2 checkpoints and historical gate; only POR action changed. No labeled test score."
+}

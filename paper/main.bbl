@@ -1,0 +1,66 @@
+\begin{thebibliography}{10}
+\expandafter\ifx\csname url\endcsname\relax
+  \def\url#1{\texttt{#1}}\fi
+\expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi
+\expandafter\ifx\csname href\endcsname\relax
+  \def\href#1#2{#2} \def\path#1{#1}\fi
+
+\bibitem{archie1942}
+G.~E. Archie, The electrical resistivity log as an aid in determining some
+  reservoir characteristics, Transactions of the AIME 146~(01) (1942) 54--62.
+\newblock \href {https://doi.org/10.2118/942054-G}
+  {\path{doi:10.2118/942054-G}}.
+
+\bibitem{yu2021sonic}
+Y.~Yu, C.~Xu, S.~Misra, W.~Li, M.~Ashby, W.~Pan, T.~Deng, H.~Jo, J.~E. Santos,
+  L.~Fu, et~al., Synthetic sonic log generation with machine learning: a
+  contest summary from five methods, Petrophysics 62~(4) (2021) 393--406.
+\newblock \href {https://doi.org/10.30632/PJV62N4-2021a4}
+  {\path{doi:10.30632/PJV62N4-2021a4}}.
+
+\bibitem{fu2024contest}
+L.~Fu, Y.~Yu, C.~Xu, M.~Ashby, A.~McDonald, W.~Pan, T.~Deng, I.~Szab{\'o},
+  P.~P. Hanzelik, C.~Kalm{\'a}r, S.~Alatwah, J.~Lee, Well-log-based reservoir
+  property estimation with machine learning: a contest summary, Petrophysics
+  65~(01) (2024) 108--127.
+\newblock \href {https://doi.org/10.30632/PJV65N1-2024a6}
+  {\path{doi:10.30632/PJV65N1-2024a6}}.
+
+\bibitem{berger1985}
+J.~O. Berger, Statistical Decision Theory and Bayesian Analysis, 2nd Edition,
+  Springer, New York, 1985.
+\newblock \href {https://doi.org/10.1007/978-1-4757-4286-2}
+  {\path{doi:10.1007/978-1-4757-4286-2}}.
+
+\bibitem{prokhorenkova2018catboost}
+L.~Prokhorenkova, G.~Gusev, A.~Vorobev, A.~V. Dorogush, A.~Gulin, {CatBoost}:
+  unbiased boosting with categorical features, Advances in Neural Information
+  Processing Systems 31 (2018) 6638--6648, arXiv:1706.09516.
+
+\bibitem{bai2018tcn}
+S.~Bai, J.~Z. Kolter, V.~Koltun, An empirical evaluation of generic
+  convolutional and recurrent networks for sequence modeling, arXiv
+  preprintArXiv:1803.01271 (2018).
+
+\bibitem{ke2017lightgbm}
+G.~Ke, Q.~Meng, T.~Finley, T.~Wang, W.~Chen, W.~Ma, Q.~Ye, T.-Y. Liu,
+  {LightGBM}: a highly efficient gradient boosting decision tree, Advances in
+  Neural Information Processing Systems 30 (2017) 3146--3154.
+
+\bibitem{rabiner1989hmm}
+L.~R. Rabiner, A tutorial on hidden {Markov} models and selected applications
+  in speech recognition, Proceedings of the IEEE 77~(2) (1989) 257--286.
+\newblock \href {https://doi.org/10.1109/5.18626} {\path{doi:10.1109/5.18626}}.
+
+\bibitem{pddasig2021}
+{SPWLA PDDA SIG}, 2021 {SPWLA PDDA} machine learning competition: well-log
+  based reservoir property estimation,
+  \url{https://github.com/pddasig/Machine-Learning-Competition-2021}, accessed
+  2026-09-20 (2021).
+
+\bibitem{volve2018}
+{Equinor}, Volve field data set,
+  \url{https://www.equinor.com/energy/volve-data-sharing}, creative Commons
+  Attribution-NonCommercial-ShareAlike licence; accessed 2026-09-20 (2018).
+
+\end{thebibliography}

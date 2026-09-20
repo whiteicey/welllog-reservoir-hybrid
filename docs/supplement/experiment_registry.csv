@@ -1,0 +1,39 @@
+experiment,kind,target,features,model,bins,seeds,key_metric,value,vs_v2,ci95,gpu_seconds
+assembly_A,assembly,,,,,,nested total / optimistic,81.412 / 81.445,+0.528,,
+assembly_B,assembly,,,,,,nested total / optimistic,81.163 / 81.180,+0.279,,
+assembly_C,assembly,,,,,,nested total / optimistic,81.520 / 81.548,+0.636,,
+assembly_D,assembly,,,,,,nested total / optimistic,81.632 / 81.655,+0.749,,
+assembly_E,assembly,,,,,,nested total / optimistic,81.232 / 81.248,+0.348,,
+assembly_F,assembly,,,,,,nested total / optimistic,81.639 / 81.670,+0.756,,
+assembly_F0,assembly,,,,,,nested total / optimistic,81.636 / 81.667,+0.752,,
+assembly_G,assembly,,,,,,nested total / optimistic,81.630 / 81.659,+0.746,,
+assembly_H,assembly,,,,,,nested total / optimistic,81.640 / 81.671,+0.756,,
+assembly_H0,assembly,,,,,,nested total / optimistic,81.610 / 81.645,+0.726,,
+assembly_I,assembly,,,,,,nested total / optimistic,81.642 / 81.686,+0.759,,
+cv_v1,generation CV,,,,,,total,79.407,,,
+gate_perm_base_extra_stack,gate variant,PERM,base+extra+stack,gate,80,"42,2026",gate acc@0.5 (v2 -> new),0.9286 -> 0.9314,,,102
+gate_por_base_extra,gate variant,POR,base+extra,gate,80,"42,2026",gate acc@0.5 (v2 -> new),0.9169 -> 0.9310,,,347
+gate_por_base_extra_aln,gate variant,POR,base+extra+aln,gate,80,"42,2026",gate acc@0.5 (v2 -> new),0.9169 -> 0.9317,,,71
+gate_sw_enh_extra_aln,gate variant,SW,enh+extra+aln,gate,80,"42,2026",gate acc@0.5 (v2 -> new),0.8669 -> 0.9255,,,149
+gate_sw_enh_extra_stack,gate variant,SW,enh+extra+stack,gate,80,"42,2026",gate acc@0.5 (v2 -> new),0.8669 -> 0.9242,,,687
+nn_base_c,sequence net,,curves+113 base,,,"1,2","total alone / gate acc POR,PERM,SW","78.874 / 0.931,0.934,0.922",,,5150
+nn_base_c_pl,sequence net,,curves+113 base,,,"1,2","total alone / gate acc POR,PERM,SW","81.472 / 0.929,0.937,0.892",,,3795
+nn_gate_b,sequence net,,curves,,,"1,2,3","total alone / gate acc POR,PERM,SW","77.649 / 0.934,0.935,0.923",,,6763
+nn_gate_b_pl,sequence net,,curves,,,"1,2,3","total alone / gate acc POR,PERM,SW","81.303 / 0.929,0.938,0.886",,,5216
+nn_gate_d,sequence net,,curves,,,"11,12,13","total alone / gate acc POR,PERM,SW","77.375 / 0.933,0.934,0.922",,,10541
+nn_seq_a,sequence net,,curves,,,"1,2","total alone / gate acc POR,PERM,SW","77.575 / 0.932,0.932,0.922",,,0
+perm_bins100_base_extra_stack,catboost variant,PERM,base+extra+stack,bins,100,"42,2026",full score (v2 gate) / joint,0.89583 / 0.89723,+0.00141,"[0.00101, 0.00462]",2684
+perm_bins60_base,catboost variant,PERM,base,bins,60,"42,2026",full score (v2 gate) / joint,0.89689 / 0.89816,+0.00247,"[0.00232, 0.0053]",3546
+perm_bins60_base_aln,catboost variant,PERM,base+aln,bins,60,"42,2026",full score (v2 gate) / joint,0.89663 / 0.89794,+0.00221,"[0.00212, 0.0051]",826
+perm_bins60_base_extra_stack,catboost variant,PERM,base+extra+stack,bins,60,"42,2026",full score (v2 gate) / joint,0.89601 / 0.89738,+0.00159,"[0.00111, 0.00482]",1582
+por_bins80_base_4seeds,catboost variant,POR,base,bins,80,"42,2026,7,99",full score (v2 gate) / joint,0.78028 / 0.78106,+0.00072,"[0.00042, 0.00261]",12429
+por_bins80_base_extra,catboost variant,POR,base+extra,bins,80,"42,2026",full score (v2 gate) / joint,0.78362 / 0.78449,+0.00407,"[0.00227, 0.00791]",5331
+por_bins80_base_extra_aln,catboost variant,POR,base+extra+aln,bins,80,"42,2026",full score (v2 gate) / joint,0.78381 / 0.78474,+0.00426,"[0.00216, 0.00852]",2013
+stack_states,level-2 stack,,,,,"42,2026",state acc,0.9085,,,
+states_base_extra,4-state model,,base+extra,,,"42,2026","state acc / POR,PERM,SW nested","0.9053 / 0.7819,0.8953,0.7492",,,
+states_base_extra_aln,4-state model,,base+extra+aln,,,"42,2026","state acc / POR,PERM,SW nested","0.9060 / 0.7823,0.8957,0.7492",,,
+sw_bins60_enh,catboost variant,SW,enh,bins,60,"42,2026",full score (v2 gate) / joint,0.74752 / 0.74729,-0.00084,"[-0.00246, 0.00038]",1890
+sw_bins60_enh_extra_aln,catboost variant,SW,enh+extra+aln,bins,60,"42,2026",full score (v2 gate) / joint,0.74919 / 0.74928,+0.00084,"[-0.00063, 0.00259]",2076
+sw_bins60_enh_extra_stack,catboost variant,SW,enh+extra+stack,bins,60,"42,2026",full score (v2 gate) / joint,0.74924 / 0.74939,+0.00089,"[-0.00054, 0.00281]",2068
+sw_bins60_enh_extra_stack_4seeds,catboost variant,SW,enh+extra+stack,bins,60,"42,2026,7,99",full score (v2 gate) / joint,0.74925 / 0.74950,+0.00090,"[-0.00043, 0.00294]",4157
+transfer_pdda2021,transfer (Volve),,,,,,blind RMSE E1 / winner,0.1079 / 0.0525,,,

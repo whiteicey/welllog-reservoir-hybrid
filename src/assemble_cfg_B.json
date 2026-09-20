@@ -1,0 +1,26 @@
+{
+ "POR": {
+  "dist_sources": [{"name": "cv_v2", "oof": "outputs/cv_v2/oof.npz", "test": "outputs/cv_v2/test.npz", "prob_key": "por_prob", "centers_key": "por_centers"}],
+  "gate_sources": [
+   {"name": "cv_v2", "oof": "outputs/cv_v2/oof.npz", "test": "outputs/cv_v2/test.npz", "key": "por_gate"},
+   {"name": "states", "oof": "outputs/states_base_extra/oof.npz", "test": "outputs/states_base_extra/test.npz", "key": "post"}
+  ],
+  "hmm_stay": [null, 0.98]
+ },
+ "PERM": {
+  "dist_sources": [{"name": "perm_bins60_base", "oof": "outputs/perm_bins60_base/oof.npz", "test": "outputs/perm_bins60_base/test.npz"}],
+  "gate_sources": [
+   {"name": "cv_v2", "oof": "outputs/cv_v2/oof.npz", "test": "outputs/cv_v2/test.npz", "key": "perm_gate"},
+   {"name": "states", "oof": "outputs/states_base_extra/oof.npz", "test": "outputs/states_base_extra/test.npz", "key": "post"}
+  ],
+  "hmm_stay": [null, 0.98]
+ },
+ "SW": {
+  "dist_sources": [{"name": "sw_bins60_enh", "oof": "outputs/sw_bins60_enh/oof.npz", "test": "outputs/sw_bins60_enh/test.npz"}],
+  "gate_sources": [
+   {"name": "cv_v2", "oof": "outputs/cv_v2/oof.npz", "test": "outputs/cv_v2/test.npz", "key": "sw_gate"},
+   {"name": "states", "oof": "outputs/states_base_extra/oof.npz", "test": "outputs/states_base_extra/test.npz", "key": "post"}
+  ],
+  "hmm_stay": [null, 0.98]
+ }
+}

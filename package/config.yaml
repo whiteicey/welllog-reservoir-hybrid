@@ -1,0 +1,4 @@
+# 模型与路径配置（可选；命令行参数优先于本文件）
+model_dir: models                     # CatBoost .cbm 与序列网络 .pt 权重所在目录（相对 predict.py）
+metadata: models/model_meta.json      # 特征名、分箱中心、训练中位数、网络统计量与决策配置
+device: auto                          # auto | cuda | cpu ；序列网络推理设备（无 GPU 时自动用 CPU）

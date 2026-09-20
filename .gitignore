@@ -1,0 +1,30 @@
+# competition data (property of the organiser) and external datasets
+data/
+external/**/data/
+external/**/*.csv
+external/**/*.zip
+
+# model weights, caches and experiment outputs (kept on the server; weights ship as a GitHub Release asset)
+*.cbm
+*.pt
+*.npz
+cache/
+outputs/
+submission_code*.zip
+.venv/
+
+# python / latex build artefacts
+__pycache__/
+*.pyc
+*.aux
+*.log
+*.out
+*.fls
+*.fdb_latexmk
+*.blg
+*.toc
+*.synctex.gz
+
+# local
+.remember/
+.playwright-mcp/

@@ -1,0 +1,125 @@
+{
+ "train_labels": {
+  "0": {
+   "runs": 5155,
+   "q05": 6.0,
+   "q50": 49.0,
+   "runs_lt5": 126,
+   "runs_lt10": 739,
+   "rows_in_runs_lt10": 4805,
+   "rows": 487557
+  },
+  "1": {
+   "runs": 7528,
+   "q05": 3.0,
+   "q50": 15.0,
+   "runs_lt5": 922,
+   "runs_lt10": 2401,
+   "rows_in_runs_lt10": 12944,
+   "rows": 203289
+  },
+  "2": {
+   "runs": 4894,
+   "q05": 1.0,
+   "q50": 4.0,
+   "runs_lt5": 2731,
+   "runs_lt10": 4017,
+   "rows_in_runs_lt10": 14902,
+   "rows": 30804
+  },
+  "3": {
+   "runs": 498,
+   "q05": 1.0,
+   "q50": 3.0,
+   "runs_lt5": 358,
+   "runs_lt10": 461,
+   "rows_in_runs_lt10": 1404,
+   "rows": 1906
+  },
+  "runs_per_10k_rows": 249.80789323839483
+ },
+ "v2_oof_pred": {
+  "0": {
+   "runs": 6276,
+   "q05": 2.0,
+   "q50": 34.0,
+   "runs_lt5": 744,
+   "runs_lt10": 1576,
+   "rows_in_runs_lt10": 7551,
+   "rows": 528048
+  },
+  "1": {
+   "runs": 7324,
+   "q05": 1.0,
+   "q50": 9.0,
+   "runs_lt5": 2074,
+   "runs_lt10": 3860,
+   "rows_in_runs_lt10": 16861,
+   "rows": 118282
+  },
+  "2": {
+   "runs": 12820,
+   "q05": 1.0,
+   "q50": 4.0,
+   "runs_lt5": 7029,
+   "runs_lt10": 10542,
+   "rows_in_runs_lt10": 39060,
+   "rows": 77208
+  },
+  "3": {
+   "runs": 10,
+   "q05": 1.0,
+   "q50": 1.5,
+   "runs_lt5": 9,
+   "runs_lt10": 10,
+   "rows_in_runs_lt10": 18,
+   "rows": 18
+  },
+  "runs_per_10k_rows": 365.2792596564744
+ },
+ "train_transition_probs": [
+  [
+   0.98959,
+   0.00766,
+   0.00262,
+   0.00013
+  ],
+  [
+   0.01895,
+   0.96297,
+   0.01693,
+   0.00115
+  ],
+  [
+   0.03711,
+   0.11521,
+   0.84112,
+   0.00656
+  ],
+  [
+   0.04512,
+   0.12487,
+   0.09129,
+   0.73872
+  ]
+ ],
+ "train_state_fractions": [
+  487557,
+  203289,
+  30804,
+  1906
+ ],
+ "cross_target_default_agreement": {
+  "POR_def_and_PERM_def": 0.6736313429782905,
+  "POR_def": 0.6738345062441607,
+  "PERM_def": 0.6835642299974017,
+  "SW_def": 0.7162596951721774,
+  "POR_nondef_and_SW_def": 0.04257306967256163,
+  "POR_def_and_SW_nondef": 0.00014788074454499722
+ },
+ "v2_oof_gate_inconsistency": {
+  "pred_POR_def_but_PERM_nondef": 0.018064945906052884,
+  "pred_POR_nondef_but_PERM_def": 0.005981568807390167,
+  "pred_POR_def_but_SW_nondef": 0.0003330771909845264
+ }
+}

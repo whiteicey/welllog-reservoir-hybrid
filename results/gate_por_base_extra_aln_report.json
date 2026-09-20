@@ -1,0 +1,44 @@
+{
+ "folds": [
+  {
+   "fold": 0,
+   "seconds": 14.5477294921875
+  },
+  {
+   "fold": 1,
+   "seconds": 14.16923713684082
+  },
+  {
+   "fold": 2,
+   "seconds": 14.242368698120117
+  },
+  {
+   "fold": 3,
+   "seconds": 14.296978950500488
+  },
+  {
+   "fold": 4,
+   "seconds": 14.117671012878418
+  }
+ ],
+ "gate": {
+  "v2_gate_acc_at_v2th": 0.9168619982420159,
+  "new_gate_acc_at_0.5": 0.931654218885615,
+  "new_gate_acc_at_v2th": 0.9222465158190934,
+  "v2_logloss": 0.17727639381916682,
+  "new_logloss": 0.16522338751165694
+ },
+ "args": {
+  "name": "gate_por_base_extra_aln",
+  "target": "POR",
+  "model": "gate",
+  "features": "base+extra+aln",
+  "bins": 80,
+  "iterations": 500,
+  "depth": 8,
+  "lr": 0.04,
+  "seeds": "42,2026",
+  "cv_dir": "outputs/cv_v2",
+  "l2": 3.0
+ }
+}

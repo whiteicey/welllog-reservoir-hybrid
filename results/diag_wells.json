@@ -1,0 +1,15 @@
+{
+ "within_well_halfsplit_POR": 0.18089963295250877,
+ "within_well_halfsplit_PERM": 0.5170390879655429,
+ "within_well_halfsplit_SW": 0.10622969923046663,
+ "lwo_POR_K79": 0.3216507582531329,
+ "lwo_POR_K30": 0.3021143980271347,
+ "lwo_POR_K12": 0.2451250418126686,
+ "lwo_SW_K79": 0.133884691677035,
+ "lwo_SW_K30": 0.13537652449660625,
+ "lwo_SW_K12": 0.13191335332401755,
+ "lwo_POR_plain": 0.2971594306724674,
+ "lwo_POR_oracle_scale": 0.34031454621076324,
+ "lwo_SW_plain": 0.13321315913700998,
+ "lwo_SW_oracle_scale": 0.17287079362339647
+}
