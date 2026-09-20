@@ -1,0 +1,53 @@
+{
+ "POR": {
+  "nondefault_weighted_score": {
+   "base": 0.4384236822209079,
+   "oracle_scale": 0.4411421240905473,
+   "loo_predicted_scale": 0.4366388557694936,
+   "loo_predicted_scale_half": 0.4379064282305398
+  },
+  "best_scale_quantiles": [
+   0.995,
+   0.995,
+   1.0,
+   1.0,
+   1.0005
+  ],
+  "corr_pred_vs_best_logscale": -0.09882524440466701,
+  "wells_improved_by_loo_scale": 35
+ },
+ "SW": {
+  "nondefault_weighted_score": {
+   "base": 0.17720596862978655,
+   "oracle_scale": 0.2010215520826657,
+   "loo_predicted_scale": 0.17684195618312176,
+   "loo_predicted_scale_half": 0.17702655191948963
+  },
+  "best_scale_quantiles": [
+   0.9440000000000001,
+   0.97375,
+   1.0,
+   1.0325,
+   1.066
+  ],
+  "corr_pred_vs_best_logscale": -0.7639875154889367,
+  "wells_improved_by_loo_scale": 35
+ },
+ "PERM": {
+  "nondefault_weighted_score": {
+   "base": 0.7917547353418497,
+   "oracle_scale": 0.8043696269791301,
+   "loo_predicted_scale": 0.7917303220798395,
+   "loo_predicted_scale_half": 0.791760437157804
+  },
+  "best_scale_quantiles": [
+   0.8195000000000001,
+   0.915,
+   1.0074999999999998,
+   1.1312499999999999,
+   1.25
+  ],
+  "corr_pred_vs_best_logscale": -0.8968361705083473,
+  "wells_improved_by_loo_scale": 41
+ }
+}

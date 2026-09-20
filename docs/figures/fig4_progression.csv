@@ -1,0 +1,7 @@
+step,cv_total,leaderboard
+v1 (two-stage CatBoost),79.40690521940827,81.0052
+v2 (target-specific),80.884,82.2718
++ distribution models + state gate,81.163,
++ sequence net,81.412,
++ POR lag/zone features,81.52,
++ 2nd network (v3 final),81.632,83.2579

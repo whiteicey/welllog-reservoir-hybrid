@@ -1,0 +1,12 @@
+# Server venv (Python 3.10.12, CUDA 12.6) used for every experiment in this repository
+catboost==1.2.10
+numpy==2.2.6
+pandas==2.3.3
+scikit-learn==1.7.2
+scipy==1.15.3
+lightgbm==4.7.0
+torch==2.14.0
+dtaidistance>=2.3
+pyarrow>=25
+matplotlib>=3.10
+tabulate>=0.9

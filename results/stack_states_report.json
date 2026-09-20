@@ -1,0 +1,27 @@
+{
+ "state_accuracy": 0.908475639756978,
+ "first_level_state_accuracy": 0.9053038050959428,
+ "n_features": 343,
+ "nn_order": [
+  "nn_gate_b",
+  "nn_base_c"
+ ],
+ "args": {
+  "name": "stack_states",
+  "iterations": 800,
+  "seeds": "42,2026",
+  "nn_sources": "nn_gate_b,nn_base_c"
+ },
+ "POR_gate_acc_0.5": {
+  "level2": 0.9362025883276485,
+  "level1_states": 0.930714416023086
+ },
+ "PERM_gate_acc_0.5": {
+  "level2": 0.9359773120532481,
+  "level1_states": 0.9307448214098148
+ },
+ "SW_gate_acc_0.5": {
+  "level2": 0.9258219128858028,
+  "level1_states": 0.9237294694536429
+ }
+}

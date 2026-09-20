@@ -1,0 +1,33 @@
+{
+  "validation_date": "2026-09-19",
+  "protocol": "GroupKFold by well, 5 folds, official competition metric",
+  "baseline": {
+    "POR": 0.7528014438465395,
+    "PERM": 0.8931826730045587,
+    "SW": 0.7411383767497361,
+    "TOTAL": 79.7852800567965
+  },
+  "v2": {
+    "POR": 0.7797171035997102,
+    "PERM": 0.8943498644068142,
+    "SW": 0.748244061677274,
+    "TOTAL": 80.88230052093431
+  },
+  "delta": {
+    "POR": 0.0269156597531707,
+    "PERM": 0.0011671914022555,
+    "SW": 0.0071056849275379,
+    "TOTAL": 1.09702046413781
+  },
+  "rejected_or_low_value_directions": [
+    "plain TCN replacement",
+    "depth-only priors",
+    "row-level KNN",
+    "well-level default-rate calibration",
+    "MAPE loss",
+    "isotonic calibration",
+    "local-neighbor-only models",
+    "target label smoothing",
+    "XGBoost or LightGBM as a standalone replacement"
+  ]
+}

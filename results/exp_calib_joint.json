@@ -1,0 +1,96 @@
+{
+ "POR": {
+  "logloss": {
+   "raw": 0.17727639381916682,
+   "isotonic": 0.17830529981847068,
+   "temperature": 0.17761349529661685
+  },
+  "threshold_rule_v2th": 0.7802048936918426,
+  "joint_raw": {
+   "score": 0.780966135168029,
+   "paired_vs_v2rule": {
+    "delta_micro": 0.0007612414761869937,
+    "ci95": [
+     0.000259963171892607,
+     0.0012399024371172024
+    ],
+    "well_wins": 54,
+    "wells": 80
+   },
+   "expected_score_gate": 0.780966135168029
+  },
+  "joint_isotonic": {
+   "score": 0.7809355042544114,
+   "paired_vs_v2rule": {
+    "delta_micro": 0.000730610562569227,
+    "ci95": [
+     0.00031155259730867706,
+     0.0011310115357522773
+    ],
+    "well_wins": 54,
+    "wells": 80
+   },
+   "expected_score_gate": 0.7809355042544114
+  },
+  "joint_temperature": {
+   "score": 0.780893632603141,
+   "paired_vs_v2rule": {
+    "delta_micro": 0.0006887389112985438,
+    "ci95": [
+     0.0001830364318927806,
+     0.0011782186469205516
+    ],
+    "well_wins": 52,
+    "wells": 80
+   },
+   "expected_score_gate": 0.780893632603141
+  }
+ },
+ "SW": {
+  "logloss": {
+   "raw": 0.1842732817940565,
+   "isotonic": 0.18428524241362698,
+   "temperature": 0.18476141096029647
+  },
+  "threshold_rule_v2th": 0.7475176695361904,
+  "joint_raw": {
+   "score": 0.7472898208120534,
+   "paired_vs_v2rule": {
+    "delta_micro": -0.00022784872413663903,
+    "ci95": [
+     -0.0007499692002330178,
+     0.00031058851097189505
+    ],
+    "well_wins": 38,
+    "wells": 80
+   },
+   "expected_score_gate": 0.7457364567659198
+  },
+  "joint_isotonic": {
+   "score": 0.7475281925067165,
+   "paired_vs_v2rule": {
+    "delta_micro": 1.0522970526089384e-05,
+    "ci95": [
+     -0.000359550270416458,
+     0.0003987870223644865
+    ],
+    "well_wins": 44,
+    "wells": 80
+   },
+   "expected_score_gate": 0.746237773103203
+  },
+  "joint_temperature": {
+   "score": 0.7474492770987838,
+   "paired_vs_v2rule": {
+    "delta_micro": -6.83924374062727e-05,
+    "ci95": [
+     -0.0004815806689622324,
+     0.00037190291511464527
+    ],
+    "well_wins": 40,
+    "wells": 80
+   },
+   "expected_score_gate": 0.7460799525779288
+  }
+ }
+}

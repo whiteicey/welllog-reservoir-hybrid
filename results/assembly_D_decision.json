@@ -1,0 +1,83 @@
+{
+ "POR": {
+  "cont_w": [
+   1.0,
+   0.0,
+   0.0
+  ],
+  "gate_w": [
+   0.0,
+   0.5,
+   0.25,
+   0.25
+  ],
+  "hmm_stay": null,
+  "threshold": 0.27,
+  "oof_score_selected": 0.7896030568659466,
+  "dist_sources": [
+   "por_bins80_base_extra",
+   "nn_base_c",
+   "nn_gate_b"
+  ],
+  "gate_sources": [
+   "cv_v2",
+   "states",
+   "nn_gate_b",
+   "nn_base_c"
+  ]
+ },
+ "PERM": {
+  "cont_w": [
+   0.75,
+   0.25,
+   0.0
+  ],
+  "gate_w": [
+   0.25,
+   0.25,
+   0.25,
+   0.25
+  ],
+  "hmm_stay": null,
+  "threshold": 0.44,
+  "oof_score_selected": 0.9036124161661065,
+  "dist_sources": [
+   "perm_bins60_base",
+   "nn_base_c",
+   "nn_gate_b"
+  ],
+  "gate_sources": [
+   "cv_v2",
+   "states",
+   "nn_gate_b",
+   "nn_base_c"
+  ]
+ },
+ "SW": {
+  "cont_w": [
+   0.5,
+   0.25,
+   0.25
+  ],
+  "gate_w": [
+   0.0,
+   0.5,
+   0.25,
+   0.25
+  ],
+  "hmm_stay": null,
+  "threshold": 0.07,
+  "oof_score_selected": 0.7525835032050071,
+  "dist_sources": [
+   "sw_bins60_enh",
+   "nn_base_c",
+   "nn_gate_b"
+  ],
+  "gate_sources": [
+   "cv_v2",
+   "states",
+   "nn_gate_b",
+   "nn_base_c"
+  ]
+ }
+}

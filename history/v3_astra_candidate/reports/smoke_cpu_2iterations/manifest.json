@@ -1,0 +1,96 @@
+{
+  "args": {
+    "data_dir": "/private/tmp/welllog-v3-smoke-data",
+    "output_dir": "/private/tmp/welllog-v3-smoke-cv",
+    "seeds": "42",
+    "folds": 2,
+    "cpu": true,
+    "binary_iterations": 2,
+    "ordinal_iterations": 2
+  },
+  "gate": 0.5,
+  "scale": 1.0,
+  "offset": 0.0,
+  "splits": [
+    {
+      "fold": 0,
+      "train_wells": [
+        "0473ffd021f94d17a9091d6a3b5ac567",
+        "04cdd32926f24c49a83acc14b3606671",
+        "061c44ab95a74e8f9a7468f09ce2df1d"
+      ],
+      "validation_wells": [
+        "0883ddb781d24d6085e522ce293b6965",
+        "08a0902d79e44aa480f3798a384a0729"
+      ],
+      "seconds": 2.0568658746778965,
+      "medians": {
+        "DEPTH": 2240.95,
+        "GR": 94.15899999999999,
+        "PE": 2.813,
+        "SP": 71.3265,
+        "CAL": 21.8875,
+        "AC": 236.4035,
+        "DEN": 2.469,
+        "CNL": 19.6265,
+        "RXO": 18.8295,
+        "RT": 18.810000000000002,
+        "DEVI": 1.4495,
+        "AZIM": 130.923,
+        "BIT": 21.59
+      }
+    },
+    {
+      "fold": 1,
+      "train_wells": [
+        "0883ddb781d24d6085e522ce293b6965",
+        "08a0902d79e44aa480f3798a384a0729"
+      ],
+      "validation_wells": [
+        "0473ffd021f94d17a9091d6a3b5ac567",
+        "04cdd32926f24c49a83acc14b3606671",
+        "061c44ab95a74e8f9a7468f09ce2df1d"
+      ],
+      "seconds": 1.5120222494006157,
+      "medians": {
+        "DEPTH": 2061.7,
+        "GR": 97.535,
+        "PE": 2.823,
+        "SP": 60.237,
+        "CAL": 23.482,
+        "AC": 230.8535,
+        "DEN": 2.537,
+        "CNL": 21.1205,
+        "RXO": 18.286,
+        "RT": 16.838,
+        "DEVI": 0.9135,
+        "AZIM": 210.1865,
+        "BIT": 22.2
+      }
+    }
+  ],
+  "note": "Fresh fixed-gate POR comparison, NOT reproduction of historical tuned v2 score.",
+  "source_sha256": {
+    "/Users/vead/Desktop/\u672a\u547d\u540d\u6587\u4ef6\u5939/\u57fa\u4e8e\u6d4b\u4e95\u66f2\u7ebf\u7684\u50a8\u5c42\u53c2\u6570\u9884\u6d4b/solution_v3/audit_data.py": "82af6e36a2caa0f5149c130727b62d68e428abb66bcd593cd01a581f6e89c53c",
+    "/Users/vead/Desktop/\u672a\u547d\u540d\u6587\u4ef6\u5939/\u57fa\u4e8e\u6d4b\u4e95\u66f2\u7ebf\u7684\u50a8\u5c42\u53c2\u6570\u9884\u6d4b/solution_v3/package_submission.py": "6369d06fa0a49afde8d770a0ed07c0a7bdd9b799fbce5cfe71ea58afbe262c45",
+    "/Users/vead/Desktop/\u672a\u547d\u540d\u6587\u4ef6\u5939/\u57fa\u4e8e\u6d4b\u4e95\u66f2\u7ebf\u7684\u50a8\u5c42\u53c2\u6570\u9884\u6d4b/solution_v3/predict.py": "9fe922bd741faeeb4bfae11f2b4e47f7c54d89ab6c2c4b7276b96c96df665d16",
+    "/Users/vead/Desktop/\u672a\u547d\u540d\u6587\u4ef6\u5939/\u57fa\u4e8e\u6d4b\u4e95\u66f2\u7ebf\u7684\u50a8\u5c42\u53c2\u6570\u9884\u6d4b/solution_v3/src/__init__.py": "5a7c75db479656fabe475b5b6ef20fda82ccb9cbc4c60522cbc55168a1d8524f",
+    "/Users/vead/Desktop/\u672a\u547d\u540d\u6587\u4ef6\u5939/\u57fa\u4e8e\u6d4b\u4e95\u66f2\u7ebf\u7684\u50a8\u5c42\u53c2\u6570\u9884\u6d4b/solution_v3/src/data.py": "aea7367d9ade66e230074ebd131a39f4a8399c3d05134a677fd4e2890ebce974",
+    "/Users/vead/Desktop/\u672a\u547d\u540d\u6587\u4ef6\u5939/\u57fa\u4e8e\u6d4b\u4e95\u66f2\u7ebf\u7684\u50a8\u5c42\u53c2\u6570\u9884\u6d4b/solution_v3/src/decision.py": "31f7176a9057a6e27fd6eec2b21587e184805c57ba4a7e35bfa1c92b12b7442f",
+    "/Users/vead/Desktop/\u672a\u547d\u540d\u6587\u4ef6\u5939/\u57fa\u4e8e\u6d4b\u4e95\u66f2\u7ebf\u7684\u50a8\u5c42\u53c2\u6570\u9884\u6d4b/solution_v3/src/features.py": "6aef28dad1a6cc6449d3c014c6a691763472c876e461858cfeeeb1e779c3403d",
+    "/Users/vead/Desktop/\u672a\u547d\u540d\u6587\u4ef6\u5939/\u57fa\u4e8e\u6d4b\u4e95\u66f2\u7ebf\u7684\u50a8\u5c42\u53c2\u6570\u9884\u6d4b/solution_v3/src/metrics.py": "9fc158b47d06504397e56cdd02ce24f192ee9c79eddedf0f1eb5d808151dea66",
+    "/Users/vead/Desktop/\u672a\u547d\u540d\u6587\u4ef6\u5939/\u57fa\u4e8e\u6d4b\u4e95\u66f2\u7ebf\u7684\u50a8\u5c42\u53c2\u6570\u9884\u6d4b/solution_v3/tests/test_decision.py": "39d833503955f0b769f747a9a0e103af96a61d878b23574883bf5ed524c34d8b",
+    "/Users/vead/Desktop/\u672a\u547d\u540d\u6587\u4ef6\u5939/\u57fa\u4e8e\u6d4b\u4e95\u66f2\u7ebf\u7684\u50a8\u5c42\u53c2\u6570\u9884\u6d4b/solution_v3/tests/test_features.py": "7aeef5fbc551514248d37a72fd226d94a62f416689f056ec71b737063d6539b8",
+    "/Users/vead/Desktop/\u672a\u547d\u540d\u6587\u4ef6\u5939/\u57fa\u4e8e\u6d4b\u4e95\u66f2\u7ebf\u7684\u50a8\u5c42\u53c2\u6570\u9884\u6d4b/solution_v3/tests/test_validation.py": "cde9e185a6d25bc971aa2a20d7df107d9411b714d11c847285aa3ab55ee15622",
+    "/Users/vead/Desktop/\u672a\u547d\u540d\u6587\u4ef6\u5939/\u57fa\u4e8e\u6d4b\u4e95\u66f2\u7ebf\u7684\u50a8\u5c42\u53c2\u6570\u9884\u6d4b/solution_v3/train.py": "9de2b589d63a468e67b83ad83ccccef346d11017d7c18feefbc02f379c8628f6",
+    "/Users/vead/Desktop/\u672a\u547d\u540d\u6587\u4ef6\u5939/\u57fa\u4e8e\u6d4b\u4e95\u66f2\u7ebf\u7684\u50a8\u5c42\u53c2\u6570\u9884\u6d4b/solution_v3/validate_por.py": "bf94794a583389be9b581b9f0d942e6512c73cb73b2a42f40b0a59a003860b14",
+    "/Users/vead/Desktop/\u672a\u547d\u540d\u6587\u4ef6\u5939/\u57fa\u4e8e\u6d4b\u4e95\u66f2\u7ebf\u7684\u50a8\u5c42\u53c2\u6570\u9884\u6d4b/solution_v3/validate_result.py": "69229b02ae997742a883db9aec06d732213569371e7a0eeaba1ca3374e8abace"
+  },
+  "data_sha256": {
+    "0473ffd021f94d17a9091d6a3b5ac567.txt": "5900b9284dbea63433617e247f79930fc524849089ee20c3d589d6191ff6d1d9",
+    "04cdd32926f24c49a83acc14b3606671.txt": "e2b6c0a795dd0574de0753854963bc8d6e4ca125761e64ea90bf90160cd3d1ef",
+    "061c44ab95a74e8f9a7468f09ce2df1d.txt": "1e87c2ac6c028b9ea3d8af9e446fa2aba65a45bfbc19a1988ac224455a58b938",
+    "0883ddb781d24d6085e522ce293b6965.txt": "468be9fe1fff98590eaf61d4f4bfdf8628330d31885e0fe4056b1560ea678a45",
+    "08a0902d79e44aa480f3798a384a0729.txt": "872dc378299a673e0f56410d61a415d7673ba948e83b9bba7cfa3ab5ba3cbecf"
+  }
+}

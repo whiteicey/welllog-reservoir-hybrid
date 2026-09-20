@@ -1,0 +1,160 @@
+{
+ "cb_seeds": [
+  42,
+  2026
+ ],
+ "gates": {
+  "POR": {
+   "features": "base",
+   "iterations": 500
+  },
+  "PERM": {
+   "features": "base",
+   "iterations": 800,
+   "seed_offset": 200
+  },
+  "SW": {
+   "features": "enh",
+   "iterations": 950,
+   "seed_offset": 400
+  }
+ },
+ "bins": {
+  "POR": {
+   "features": "base+extra",
+   "bins": 80,
+   "iterations": 1200
+  },
+  "PERM": {
+   "features": "base",
+   "bins": 60,
+   "iterations": 1200
+  },
+  "SW": {
+   "features": "enh",
+   "bins": 60,
+   "iterations": 1200
+  }
+ },
+ "states": {
+  "features": "base+extra",
+  "iterations": 900
+ },
+ "decision": {
+  "POR": {
+   "cont_w": [
+    1.0
+   ],
+   "gate_w": [
+    0.0,
+    0.5,
+    0.25,
+    0.25
+   ],
+   "hmm_stay": null,
+   "threshold": 0.27,
+   "dist_sources": [
+    "por_bins80_base_extra"
+   ],
+   "gate_sources": [
+    "cv_v2",
+    "states",
+    "nn_gate_b",
+    "nn_base_c"
+   ]
+  },
+  "PERM": {
+   "cont_w": [
+    0.75,
+    0.25
+   ],
+   "gate_w": [
+    0.25,
+    0.25,
+    0.25,
+    0.25
+   ],
+   "hmm_stay": null,
+   "threshold": 0.44,
+   "dist_sources": [
+    "perm_bins60_base",
+    "nn_base_c"
+   ],
+   "gate_sources": [
+    "cv_v2",
+    "states",
+    "nn_gate_b",
+    "nn_base_c"
+   ]
+  },
+  "SW": {
+   "cont_w": [
+    0.5,
+    0.25,
+    0.25
+   ],
+   "gate_w": [
+    0.0,
+    0.5,
+    0.25,
+    0.25
+   ],
+   "hmm_stay": null,
+   "threshold": 0.07,
+   "dist_sources": [
+    "sw_bins60_enh",
+    "nn_base_c",
+    "nn_gate_b"
+   ],
+   "gate_sources": [
+    "cv_v2",
+    "states",
+    "nn_gate_b",
+    "nn_base_c"
+   ]
+  }
+ },
+ "nns": [
+  {
+   "name": "nn_gate_b",
+   "seeds": [
+    1,
+    2,
+    3
+   ],
+   "use_base": 0,
+   "train_args": {
+    "epochs": 60,
+    "steps_per_epoch": 100,
+    "batch": 16,
+    "crop": 3072,
+    "channels": 160,
+    "dropout": 0.1,
+    "lr": 0.002,
+    "bin_weight": 0.3,
+    "augment": 1,
+    "kernel": 5
+   }
+  },
+  {
+   "name": "nn_base_c",
+   "seeds": [
+    1,
+    2
+   ],
+   "use_base": 1,
+   "train_args": {
+    "epochs": 60,
+    "steps_per_epoch": 100,
+    "batch": 16,
+    "crop": 3072,
+    "channels": 160,
+    "dropout": 0.1,
+    "lr": 0.002,
+    "bin_weight": 1.0,
+    "augment": 1,
+    "kernel": 5
+   }
+  }
+ ]
+}

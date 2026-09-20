@@ -1,0 +1,59 @@
+{
+ "POR": {
+  "cont_w": [
+   1.0
+  ],
+  "gate_w": [
+   0.25,
+   0.75
+  ],
+  "hmm_stay": null,
+  "threshold": 0.27,
+  "oof_score_selected": 0.7861834070508557,
+  "dist_sources": [
+   "por_bins80_base_extra"
+  ],
+  "gate_sources": [
+   "cv_v2",
+   "states"
+  ]
+ },
+ "PERM": {
+  "cont_w": [
+   1.0
+  ],
+  "gate_w": [
+   0.5,
+   0.5
+  ],
+  "hmm_stay": null,
+  "threshold": 0.4,
+  "oof_score_selected": 0.8986997770436784,
+  "dist_sources": [
+   "perm_bins60_base"
+  ],
+  "gate_sources": [
+   "cv_v2",
+   "states"
+  ]
+ },
+ "SW": {
+  "cont_w": [
+   1.0
+  ],
+  "gate_w": [
+   0.25,
+   0.75
+  ],
+  "hmm_stay": null,
+  "threshold": 0.09,
+  "oof_score_selected": 0.7487907685479595,
+  "dist_sources": [
+   "sw_bins60_enh"
+  ],
+  "gate_sources": [
+   "cv_v2",
+   "states"
+  ]
+ }
+}
