@@ -28,3 +28,15 @@ __pycache__/
 # local
 .remember/
 .playwright-mcp/
+
+# Pure-DL local artifacts: source and compact summaries only on deep_learning.
+*.pth
+*.ckpt
+*.npy
+*.err
+*.tmp
+*.zip
+cleanup_negative_*.json
+delivery_*_pending.json
+EXPLORATIONS.md
+package_dl/models/fold_*.pt

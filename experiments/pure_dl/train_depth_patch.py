@@ -1,0 +1,481 @@
+"""Fixed domain-proxy pruning + fold-local PLE residual neural MDN.
+
+--benchmark runs synthetic GPU updates only and never reads real data. Full
+training is a separate explicit invocation. PLE knots use training inputs only;
+labels never enter the numeric encoding. No tree/test/v3 artifacts are used.
+"""
+from pathlib import Path
+import argparse
+import gc
+import hashlib
+import json
+import random
+import sys
+import time
+
+import numpy as np
+import pandas as pd
+import torch
+from torch import nn
+from torch.nn import functional as F
+from sklearn.model_selection import GroupKFold
+
+ROOT = Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(ROOT/'package'))
+from src.data import load_split, INPUT_COLUMNS, VALID_RANGES
+from src.feature import FeatureBuilder, BASE_COLUMNS
+from src.utils import BOUNDS, DEFAULTS, kernel_matrix
+from train import metric, write, dmask, TS
+
+FULL_FEATURES = 237
+FEATURES = 206
+SEGMENTS = 16
+MIX = 8
+DENSITY_BINS = 256
+TRANSFORM = [np.log1p, np.log10, np.log]
+INVERSE = [np.expm1, lambda z: 10**z, np.exp]
+SIGMA_FLOOR = .025
+LOGICAL_ENCODED = FEATURES*(SEGMENTS+1)
+PADDED_ENCODED = ((LOGICAL_ENCODED+7)//8)*8
+
+
+def exclusion_reason(name):
+    """A fixed semantic rule, declared before data fitting or fold scoring."""
+    if name in ('DEPTH', 'DEPTH_MISSING'):
+        return 'Absolute depth or its acquisition missingness; retain DEPTH_REL.'
+    if name.endswith('_WELL_MEDIAN') or name.endswith('_WELL_STD'):
+        return 'Explicit full-well constant context statistic.'
+    if any(token in {'AZIM', 'DEVI', 'BIT'} for token in name.split('_')):
+        return 'Trajectory/drill-size value, normalization, missingness, or derived interaction.'
+    return None
+
+
+def select_features(names):
+    assert len(names) == FULL_FEATURES
+    indices = [i for i, name in enumerate(names) if exclusion_reason(name) is None]
+    assert len(indices) == FEATURES, (len(indices), [n for n in names if exclusion_reason(n)])
+    assert 'DEPTH_REL' in [names[i] for i in indices]
+    return np.asarray(indices, np.int64)
+
+
+def feature_contract():
+    """Freeze the complete whitelist and test the rule on synthetic inputs only."""
+    n = 512; t = np.linspace(0, 6, n)
+    frame = pd.DataFrame({
+        'DEPTH': 1500+np.arange(n)*.5, 'GR': 60+20*np.sin(t), 'PE': 3+.3*np.cos(t),
+        'SP': -30+10*np.sin(t), 'CAL': 22+.5*np.cos(t), 'AC': 230+20*np.sin(t),
+        'DEN': 2.45+.1*np.cos(t), 'CNL': 18+4*np.sin(t), 'RXO': 15+3*np.cos(t),
+        'RT': 60+20*np.sin(t), 'DEVI': 5+np.sin(t), 'AZIM': 120+20*np.sin(t),
+        'BIT': np.full(n,21.59), 'CASE': np.full(n,np.nan)})
+    builder = FeatureBuilder().fit([frame])
+    names = builder.enhanced_feature_names_; indices = select_features(names)
+    altered = frame.copy()
+    altered['DEPTH'] += 500
+    altered['AZIM'] = (altered['AZIM']+90) % 360
+    altered['DEVI'] = 2*altered['DEVI']+3
+    altered['BIT'] = altered['BIT']*.75
+    original = builder.transform(frame).enhanced[:,indices]
+    changed = builder.transform(altered).enhanced[:,indices]
+    assert np.array_equal(original,changed), float(np.max(abs(original-changed)))
+    return {'full_feature_count': FULL_FEATURES, 'selected_feature_count': FEATURES,
+            'full_schema': names, 'selected_indices': indices.tolist(),
+            'whitelist': [names[i] for i in indices],
+            'excluded': [{'name': name, 'reason': exclusion_reason(name)} for name in names if exclusion_reason(name)],
+            'retained_reason': 'Physical curve values and interactions, relative depth, curve within-well rank/normalization, and local context. No feature/threshold chosen from validation labels.',
+            'synthetic_invariance_check': {'passed':True,'real_data_read':False,
+                'perturbations':['absolute depth +500','AZIM +90 degrees','DEVI affine change','BIT x0.75'],
+                'retained_features_exactly_equal':True},
+            'scope_limit': 'Input pruning tests one domain-generalization hypothesis; physical curves can still reveal well context, so learned representations are not guaranteed invariant.'}
+
+
+class NumericEncoding(nn.Module):
+    def __init__(self, edges):
+        super().__init__()
+        edges = torch.as_tensor(edges, dtype=torch.float32)
+        assert edges.shape == (FEATURES, SEGMENTS+1)
+        width = edges[:, 1:] - edges[:, :-1]
+        self.register_buffer('left', edges[:, :-1])
+        self.register_buffer('inverse_width', width.clamp_min(1e-6).reciprocal())
+        self.register_buffer('valid_segment', (width > 1e-6).float())
+
+    def forward(self, x):
+        raw = x.float()
+        encoded = ((raw[:, :, None]-self.left)*self.inverse_width).clamp(0, 1)
+        encoded = encoded*self.valid_segment
+        combined = torch.cat([raw, encoded.flatten(1)], 1)
+        return F.pad(combined, (0, PADDED_ENCODED-LOGICAL_ENCODED))
+
+
+class ResidualBlock(nn.Module):
+    def __init__(self):
+        super().__init__()
+        self.norm = nn.LayerNorm(256)
+        self.net = nn.Sequential(nn.Linear(256, 256), nn.GELU(), nn.Dropout(.05), nn.Linear(256, 256))
+        self.scale = nn.Parameter(torch.full((256,), .1))
+
+    def forward(self, x):
+        return x + self.scale*self.net(self.norm(x))
+
+
+from depth_patch_network import Network, bind_real, bind_synthetic, self_test as depth_test
+
+def mixture_params(raw):
+    raw = raw.float()
+    return raw[:, :, 0].log_softmax(-1), raw[:, :, 1], F.softplus(raw[:, :, 2])+SIGMA_FLOOR
+
+
+def training_step(model, opt, x, gates, targets, training_indices, batch_points):
+    rows = training_indices[torch.randint(len(training_indices), (batch_points,), device='cuda')]
+    target_gate = gates[rows]
+    target_z = targets[rows]
+    opt.zero_grad(set_to_none=True)
+    with torch.autocast('cuda', dtype=torch.bfloat16):
+        gate_logits, raw = model(rows)
+    logw, mu, sd = mixture_params(raw)
+    logp = logw-.5*((target_z[:, :, None]-mu)/sd).square()-sd.log()-.5*np.log(2*np.pi)
+    nll = -torch.logsumexp(logp, -1)
+    gate_loss = F.binary_cross_entropy_with_logits(gate_logits.float(), target_gate)
+    density_loss = sum(nll[:, j][target_gate[:, j] < .5].mean() for j in range(3))/3
+    loss = gate_loss+density_loss
+    assert torch.isfinite(loss)
+    loss.backward(); nn.utils.clip_grad_norm_(model.parameters(), 2)
+    opt.step()
+    return float(loss.detach()), float(gate_loss.detach()), float(density_loss.detach())
+
+
+def benchmark(args):
+    """Real forward/backward/optimizer updates with synthetic data, no train/test reads."""
+    contract = feature_contract()
+    args.out.mkdir(parents=True, exist_ok=True)
+    write(args.out/'feature_contract.json', contract)
+    torch.manual_seed(args.seed)
+    model = Network(initial_means=np.tile(np.linspace(-2, 2, MIX), (3, 1))).cuda()
+    opt = torch.optim.AdamW(model.parameters(), lr=.001, weight_decay=.01)
+    x = torch.randn((723556, FEATURES), device='cuda', dtype=torch.float16).clamp(-8, 8)
+    bind_synthetic(model, x)
+    gates = (torch.rand((723556, 3), device='cuda') < .7).float()
+    targets = torch.randn((723556, 3), device='cuda')
+    rows = torch.arange(578000, device='cuda')
+    torch.cuda.reset_peak_memory_stats()
+    for _ in range(8):
+        training_step(model, opt, x, gates, targets, rows, args.batch_points)
+    torch.cuda.synchronize()
+    started = time.perf_counter()
+    for _ in range(40):
+        training_step(model, opt, x, gates, targets, rows, args.batch_points)
+    torch.cuda.synchronize()
+    seconds = time.perf_counter()-started
+    step_seconds = seconds/40
+    gpu_projection = step_seconds*args.epochs*args.steps*5
+    result = {'benchmark_only': True, 'real_data_read': False, 'synthetic_updates': 48,
+              'timed_updates': 40, 'batch_points': args.batch_points,
+              'features': FEATURES, 'excluded_features': FULL_FEATURES-FEATURES, 'segments': SEGMENTS,
+              'synthetic_feature_invariance_passed': contract['synthetic_invariance_check']['passed'],
+              'encoded_dimensions_with_raw': FEATURES*(SEGMENTS+1),
+              'matrix_dimensions_including_zero_padding': PADDED_ENCODED,
+              'parameters': sum(p.numel() for p in model.parameters()),
+              'device': torch.cuda.get_device_name(0), 'torch': torch.__version__,
+              'mean_step_ms': step_seconds*1000, 'timed_seconds': seconds,
+              'peak_gpu_allocated_mib': torch.cuda.max_memory_allocated()/2**20,
+              'peak_gpu_reserved_mib': torch.cuda.max_memory_reserved()/2**20,
+              'planned_epochs': args.epochs, 'planned_steps': args.steps,
+              'projected_five_fold_update_seconds': gpu_projection,
+              'projected_total_seconds_range': [gpu_projection+145, gpu_projection+220],
+              'projection_note': 'Measured updates plus estimated 20-35 seconds/fold for input preprocessing and 45 seconds total inference/artifact I/O. Other processes may share GPU/CPU; this is not a completed training runtime.'}
+    args.out.mkdir(parents=True, exist_ok=True)
+    write(args.out/'benchmark.json', result)
+    print(json.dumps(result, indent=2), flush=True)
+
+
+def prepare_features(rec, train_wells, valid, row_ids):
+    assert len(train_wells) == 64 and len(set(train_wells)) == 64
+    builder = FeatureBuilder().fit([rec[i][1] for i in train_wells])
+    indices = select_features(builder.enhanced_feature_names_)
+    features = [builder.transform(frame).enhanced[:,indices] for _, frame in rec]
+    fm = np.empty(FEATURES, np.float32); fs = np.empty(FEATURES, np.float32)
+    edges = np.empty((FEATURES, SEGMENTS+1), np.float32)
+    for c in range(FEATURES):
+        values = np.concatenate([features[i][:, c] for i in train_wells])
+        assert len(values) == sum(len(rec[i][1]) for i in train_wells)
+        quantiles = np.quantile(values, np.linspace(0, 1, SEGMENTS+1))
+        fm[c] = quantiles[SEGMENTS//2]
+        fs[c] = max(quantiles[3*SEGMENTS//4]-quantiles[SEGMENTS//4], 1e-3)
+        edges[c] = np.clip((quantiles-fm[c])/fs[c], -8, 8)
+    n = sum(len(rows) for rows in row_ids)
+    x = torch.empty((n, FEATURES), dtype=torch.float16, device='cuda')
+    for i, feature in enumerate(features):
+        xx = np.clip((feature[valid[i]]-fm)/fs, -8, 8).astype(np.float16)
+        assert xx.shape == (len(row_ids[i]), FEATURES) and np.isfinite(xx).all()
+        lo, hi = int(row_ids[i][0]), int(row_ids[i][-1])+1
+        assert hi-lo == len(row_ids[i])
+        x[lo:hi] = torch.from_numpy(xx).cuda()
+    del features, values, feature, xx
+    gc.collect()
+    return x, builder, fm, fs, edges
+
+
+@torch.no_grad()
+def conditional_probability(weight, mean, std, edges):
+    z = (edges[None, :, None]-mean[:, None, :])/std[:, None, :]
+    cdf = .5*(1+torch.erf(z/np.sqrt(2)))
+    prob = ((cdf[:, 1:]-cdf[:, :-1]).clamp_min(0)*weight[:, None, :]).sum(-1)
+    return prob/prob.sum(1, keepdim=True).clamp_min(1e-12)
+
+
+def dependency_hashes():
+    paths = ['experiments/pure_dl/train_depth_patch.py', 'experiments/pure_dl/depth_patch_network.py',
+             'experiments/pure_dl/train_invariant.py', 'experiments/pure_dl/train.py',
+             'package/src/feature.py', 'package/src/data.py', 'package/src/utils.py', 'package/src/model.py']
+    return {name: hashlib.sha256((ROOT/name).read_bytes()).hexdigest() for name in paths}
+
+
+def train(args):
+    started = time.perf_counter()
+    args.out.mkdir(parents=True, exist_ok=True)
+    contract = feature_contract()
+    contract_path = args.out/'feature_contract.json'
+    if contract_path.exists():
+        assert json.loads(contract_path.read_text()) == contract
+    else:
+        write(contract_path, contract)
+    rec = load_split(ROOT.parent/'data', 'train')
+    assert len(rec) == 80
+    ys = [frame[TS].to_numpy(np.float64) for _, frame in rec]
+    valid = [np.isfinite(v).all(1) for v in ys]
+    y = np.concatenate([v[mask] for v, mask in zip(ys, valid)])
+    well = np.concatenate([np.full(mask.sum(), i, np.int32) for i, mask in enumerate(valid)])
+    assert y.shape == (723556, 3)
+    fold = np.full(len(y), -1, np.int8)
+    for f, (_, ix) in enumerate(GroupKFold(5).split(y, groups=well)):
+        fold[ix] = f
+    row_ids = [np.flatnonzero(well == i) for i in range(80)]
+    well_fold = {i: int(fold[row_ids[i][0]]) for i in range(80)}
+    config = {**vars(args), 'out': str(args.out), 'dependency_sha256': dependency_hashes(),
+              'source_sha256': hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
+              'depth_module_sha256': hashlib.sha256((ROOT/'experiments/pure_dl/depth_patch_network.py').read_bytes()).hexdigest(),
+              'parameters': sum(p.numel() for p in Network().parameters()),
+              'architecture': '206-feature PLE point MLP + same-well 64-row raw9-curve depth window; patch4 into16 tokens, point query token, width64 2-layer 4-head Transformer FF128; gate and8-Gaussian heads',
+              'hypothesis': 'Input-only depth context; no target histories. All original input rows in windows, including rows with missing targets; padding never crosses wells; actual relative depth supplied, no periodicity assumed.',
+              'feature_whitelist': contract['whitelist'],
+              'excluded_features': contract['excluded'],
+              'feature_contract_sha256': hashlib.sha256(contract_path.read_bytes()).hexdigest(),
+              'feature_builder_source_sha256': hashlib.sha256((ROOT/'package/src/feature.py').read_bytes()).hexdigest(),
+              'encoding_fit': 'FeatureBuilder fallback medians, robust scales and all 17 PLE knots use outer-training inputs only; no labels in encoding',
+              'target_transforms': ['log1p', 'log10', 'log'],
+              'target_statistics_fit': 'outer-training nondefault labels only',
+              'loss': 'mean independent gate BCE + mean target nondefault Gaussian-mixture NLL',
+              'decode': 'fixed 256 transformed support centers and 800 actions/target, expected official utility with default atom',
+              'selection': 'one predeclared configuration; fixed final epoch; no outer-validation hyperparameter, threshold, decoder or checkpoint selection',
+              'test_access': False, 'valid_rows': len(y),
+              'device': torch.cuda.get_device_name(0), 'torch': torch.__version__,
+              'outer_wells': {str(f): [rec[i][0] for i in range(80) if well_fold[i] == f] for f in range(5)}}
+    config_path = args.out/'config.json'
+    if config_path.exists():
+        old = json.loads(config_path.read_text())
+        for key in ['dependency_sha256', 'source_sha256', 'depth_module_sha256', 'feature_builder_source_sha256', 'epochs', 'steps', 'batch_points', 'seed']:
+            assert old[key] == config[key], f'Incompatible cached configuration: {key}'
+    write(config_path, config)
+    print('CONFIG', json.dumps({k: v for k, v in config.items() if k not in ['outer_wells','feature_whitelist','excluded_features']}), flush=True)
+    pred = np.full_like(y, np.nan); reports = []; default = dmask(y)
+    for f in range(5):
+        fold_started = time.perf_counter()
+        seed = args.seed+f; random.seed(seed); np.random.seed(seed); torch.manual_seed(seed); torch.cuda.manual_seed_all(seed)
+        cache = args.out/f'fold_{f+1}_pred.npy'
+        if cache.exists():
+            for required in [f'fold_{f+1}_report.json', f'fold_{f+1}_distributions.npz', f'fold_{f+1}.pt']:
+                assert (args.out/required).exists(), required
+            pred[fold == f] = np.load(cache)
+            reports.append(json.loads((args.out/f'fold_{f+1}_report.json').read_text()))
+            continue
+        train_wells = [i for i in range(80) if well_fold[i] != f]
+        assert len(train_wells)==64 and not any(well_fold[i]==f for i in train_wells)
+        print(f'FOLD {f+1} fitting input-only PLE and train-only target statistics', flush=True)
+        x, builder, fm, fs, ple_edges = prepare_features(rec, train_wells, valid, row_ids)
+        med = []; scale = []; init = []; centers = []; density_edges = []; z = []
+        for j in range(3):
+            transformed = TRANSFORM[j](y[:, j])
+            training = transformed[(fold != f) & ~default[:, j]]
+            q25, q50, q75 = np.percentile(training, [25, 50, 75])
+            sc = max(float(q75-q25), .1)
+            med.append(q50); scale.append(sc); z.append((transformed-q50)/sc)
+            init.append(np.quantile((training-q50)/sc, np.linspace(.05, .95, MIX)))
+            ct = np.linspace(training.min(), training.max(), DENSITY_BINS)
+            centers.append(INVERSE[j](ct))
+            density_edges.append((np.r_[-np.inf, (ct[:-1]+ct[1:])/2, np.inf]-q50)/sc)
+        med = np.array(med); scale = np.array(scale)
+        targets = torch.tensor(np.column_stack(z), dtype=torch.float32, device='cuda')
+        gates = torch.tensor(default, dtype=torch.float32, device='cuda')
+        training_indices = torch.tensor(np.flatnonzero(fold != f), device='cuda', dtype=torch.long)
+        preprocessing_audit = {'fold':f+1,'training_wells':[rec[i][0] for i in train_wells],
+            'validation_wells':config['outer_wells'][str(f)],
+            'training_well_count':len(train_wells),'disjoint_well_sets':True,
+            'training_rows':int(np.sum(fold!=f)),
+            'input_statistics_rows_including_unlabeled':sum(len(rec[i][1]) for i in train_wells),
+            'target_statistics_rows_per_nondefault_target':[int(np.sum((fold!=f)&~default[:,j])) for j in range(3)],
+            'selected_feature_names':[builder.enhanced_feature_names_[i] for i in select_features(builder.enhanced_feature_names_)],
+            'input_statistics_fit_scope':'only64 outer-training input wells',
+            'target_statistics_fit_scope':'only outer-training nondefault labels',
+            'training_index_scope':'fold != current_outer_fold'}
+        assert preprocessing_audit['selected_feature_names']==contract['whitelist']
+        assert not set(preprocessing_audit['training_wells']) & set(preprocessing_audit['validation_wells'])
+        write(args.out/f'fold_{f+1}_preprocessing.json', preprocessing_audit)
+        model = Network(ple_edges, np.stack(init)).cuda()
+        bind_real(model, x, rec, valid, builder, fm, fs, contract['whitelist'])
+        opt = torch.optim.AdamW(model.parameters(), lr=.001, weight_decay=.01)
+        scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(opt, args.epochs*args.steps, eta_min=.00001)
+        history = []; torch.cuda.reset_peak_memory_stats()
+        for epoch in range(args.epochs):
+            model.train(); losses = np.zeros(3)
+            for step in range(args.steps):
+                losses += training_step(model, opt, x, gates, targets, training_indices, args.batch_points)
+                scheduler.step()
+            history.append((losses/args.steps).tolist())
+            if epoch == 0 or (epoch+1) % 5 == 0:
+                print(f'fold={f+1} epoch={epoch+1}/{args.epochs} loss={history[-1][0]:.4f} gate={history[-1][1]:.4f} nll={history[-1][2]:.4f} seconds={time.perf_counter()-fold_started:.1f}', flush=True)
+        model.eval(); actions = []; kernels = []
+        for j, target in enumerate(TS):
+            support = centers[j]
+            action = np.linspace(support[0], support[-1], 800) if j == 2 else np.geomspace(max(support[0]*.9, .001), support[-1]*1.1, 800)
+            action = np.unique(np.r_[DEFAULTS[target], np.clip(action, *BOUNDS[target])])
+            actions.append(action)
+            kernels.append(torch.tensor(kernel_matrix(action, np.r_[DEFAULTS[target], support], target).T, dtype=torch.float32, device='cuda'))
+        validation_rows = np.flatnonzero(fold == f)
+        saved_gate = []; saved_prob = [[], [], []]; saved_weight = []; saved_mu = []; saved_sd = []
+        with torch.no_grad():
+            for start in range(0, len(validation_rows), 1024):
+                rows = validation_rows[start:start+1024]
+                with torch.autocast('cuda', dtype=torch.bfloat16):
+                    go, raw = model(torch.tensor(rows, device='cuda'))
+                gate = go.float().sigmoid(); logw, mu, sd = mixture_params(raw); weight = logw.exp()
+                for j in range(3):
+                    edge = torch.tensor(density_edges[j], device='cuda', dtype=torch.float32)
+                    cp = conditional_probability(weight[:, j], mu[:, j], sd[:, j], edge)
+                    prob = torch.cat([gate[:, j, None], (1-gate[:, j, None])*cp], 1)
+                    pred[rows, j] = actions[j][(prob@kernels[j]).argmax(1).cpu().numpy()]
+                    saved_prob[j].append(cp.cpu().numpy().astype(np.float16))
+                saved_gate.append(gate.cpu().numpy()); saved_weight.append(weight.cpu().numpy())
+                saved_mu.append(mu.cpu().numpy()); saved_sd.append(sd.cpu().numpy())
+        pack = {'indices': validation_rows, 'gate': np.concatenate(saved_gate),
+                'mixture_weight': np.concatenate(saved_weight), 'mixture_mu': np.concatenate(saved_mu),
+                'mixture_std': np.concatenate(saved_sd), 'regression_median': med, 'regression_scale': scale,
+                'regression_transforms': np.array(['log1p', 'log10', 'log']), 'pred': pred[validation_rows]}
+        for j, target in enumerate(TS):
+            pack[target+'_prob'] = np.concatenate(saved_prob[j]); pack[target+'_centers'] = centers[j]
+        np.savez_compressed(args.out/f'fold_{f+1}_distributions.npz', **pack)
+        fr = {'fold': f+1, 'scores': metric(y[validation_rows], pred[validation_rows]),
+              'seconds': time.perf_counter()-fold_started, 'loss': history,
+              'peak_gpu_allocated_mib': torch.cuda.max_memory_allocated()/2**20,
+              'peak_gpu_reserved_mib': torch.cuda.max_memory_reserved()/2**20}
+        reports.append(fr); write(args.out/f'fold_{f+1}_report.json', fr); np.save(cache, pred[validation_rows])
+        torch.save({'state_dict': model.cpu().state_dict(), 'config': config, 'feature_median': fm.tolist(),
+                    'feature_scale': fs.tolist(), 'ple_edges_normalized': ple_edges.tolist(),
+                    'medians': builder.medians_, 'enhanced_feature_names': builder.enhanced_feature_names_,
+                    'selected_feature_names': contract['whitelist'], 'selected_feature_indices': contract['selected_indices'],
+                    'regression_median': med.tolist(), 'regression_scale': scale.tolist(),
+                    'centers': [ct.tolist() for ct in centers], 'density_edges': [ed.tolist() for ed in density_edges]}, args.out/f'fold_{f+1}.pt')
+        np.savez_compressed(args.out/'oof.npz', truth=y, pred=pred, fold=fold, well=well)
+        print('FOLD_RESULT', json.dumps({k: v for k, v in fr.items() if k != 'loss'}), flush=True)
+        del model, opt, scheduler, x, gates, targets, training_indices, kernels, pack, saved_prob, saved_weight, saved_mu, saved_sd
+        gc.collect(); torch.cuda.empty_cache()
+    assert np.isfinite(pred).all()
+    assert dependency_hashes() == config['dependency_sha256']
+    assert hashlib.sha256(Path(__file__).read_bytes()).hexdigest()==config['source_sha256']
+    assert hashlib.sha256(contract_path.read_bytes()).hexdigest()==config['feature_contract_sha256']
+    report = {'config': config, 'oof_scores': metric(y, pred), 'folds': reports,
+              'seconds': time.perf_counter()-started,
+              'per_well': {rec[i][0]: metric(y[well == i], pred[well == i]) for i in range(80)}}
+    write(args.out/'report.json', report)
+    print('FINAL', json.dumps({k: report[k] for k in ['oof_scores', 'seconds']}), flush=True)
+
+
+def audit_preprocessing(out):
+    """Independent checkpoint checks: all-fold train medians and three raw PLE columns.
+
+    Reads raw INPUT columns only. Target checks use the unchanged OOF truth after
+    training, always selecting the corresponding outer TRAINING rows.
+    """
+    config=json.loads((out/'config.json').read_text())
+    contract=json.loads((out/'feature_contract.json').read_text())
+    paths=sorted((ROOT.parent/'data/train').glob('*.txt'))
+    assert len(paths)==80
+    frames=[]
+    for path in paths:
+        frame=pd.read_csv(path,skiprows=[1],usecols=lambda c:c in BASE_COLUMNS)
+        assert not set(TS)&set(frame.columns)
+        frame=frame.replace(-99999.0,np.nan)
+        for c in BASE_COLUMNS:
+            frame[c]=pd.to_numeric(frame[c],errors='coerce')
+            lo,hi=VALID_RANGES[c];frame.loc[(frame[c]<lo)|(frame[c]>hi),c]=np.nan
+        frames.append(frame)
+    artifact=np.load(out/'oof.npz')
+    truth=artifact['truth'];fold=artifact['fold'];well=artifact['well'];defaults=dmask(truth)
+    checked=[]
+    for f in range(5):
+        held=set(config['outer_wells'][str(f)])
+        train_wells=[i for i,p in enumerate(paths) if p.stem not in held]
+        assert len(train_wells)==64 and len(held)==16
+        assert all(not np.any(fold[well==i]==f) for i in train_wells)
+        checkpoint=torch.load(out/f'fold_{f+1}.pt',map_location='cpu',weights_only=False)
+        assert checkpoint['selected_feature_names']==contract['whitelist']
+        assert checkpoint['selected_feature_indices']==contract['selected_indices']
+        assert checkpoint['config']['source_sha256']==config['source_sha256']
+        meds={}
+        for c in BASE_COLUMNS:
+            vv=np.concatenate([frames[i][c].dropna().to_numpy() for i in train_wells])
+            meds[c]=float(np.median(vv))
+            assert np.isclose(meds[c],checkpoint['medians'][c],rtol=1e-10,atol=1e-10,equal_nan=True), (f,c,'median')
+        for c in ['GR','DEN','AC']:
+            pos=contract['whitelist'].index(c)
+            vv=np.concatenate([frames[i][c].interpolate(limit_direction='both').fillna(meds[c]).to_numpy(dtype=np.float32) for i in train_wells])
+            q=np.quantile(vv,np.linspace(0,1,SEGMENTS+1))
+            fm=np.float32(q[SEGMENTS//2]);fs=np.float32(max(q[3*SEGMENTS//4]-q[SEGMENTS//4],1e-3))
+            ed=np.clip((q-fm)/fs,-8,8).astype(np.float32)
+            assert np.isclose(fm,checkpoint['feature_median'][pos],atol=1e-6)
+            assert np.isclose(fs,checkpoint['feature_scale'][pos],atol=1e-6)
+            assert np.allclose(ed,checkpoint['ple_edges_normalized'][pos],atol=1e-6,rtol=1e-6),(f,c,'PLE edges')
+        for j in range(3):
+            v=TRANSFORM[j](truth[(fold!=f)&~defaults[:,j],j])
+            q25,q50,q75=np.percentile(v,[25,50,75]);scale=max(float(q75-q25),.1)
+            centers=INVERSE[j](np.linspace(v.min(),v.max(),DENSITY_BINS))
+            assert np.isclose(q50,checkpoint['regression_median'][j],atol=1e-10)
+            assert np.isclose(scale,checkpoint['regression_scale'][j],atol=1e-10)
+            assert np.allclose(centers,checkpoint['centers'][j],atol=1e-8)
+        checked.append({'fold':f+1,'training_wells':64,'heldout_wells':16,
+                        'all13_training_input_medians_recomputed':True,
+                        'PLE_columns_recomputed':['GR','DEN','AC'],
+                        'all3_training_target_medians_scales_supports_recomputed':True,
+                        'whitelist_and_saved_indices_match':True})
+        del checkpoint
+    result={'passed':True,'folds':checked,'raw_target_columns_read':False,
+            'source_sha256_unchanged':hashlib.sha256(Path(__file__).read_bytes()).hexdigest()==config['source_sha256'],
+            'scope':'Independent input-only recomputation of13 medians and3 raw-feature17-knot encodings in every fold, plus train-partition target-statistic checks; no new fit/selection/inference.'}
+    assert result['source_sha256_unchanged']
+    write(out/'preprocessing_verification.json',result)
+    print(json.dumps(result,indent=2),flush=True)
+
+
+def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--out', type=Path, default=ROOT/'outputs/pure_dl_depth_patch')
+    parser.add_argument('--epochs', type=int, default=40)
+    parser.add_argument('--steps', type=int, default=64)
+    parser.add_argument('--batch-points', type=int, default=1024)
+    parser.add_argument('--seed', type=int, default=20261003)
+    parser.add_argument('--benchmark', action='store_true')
+    parser.add_argument('--audit-preprocessing', action='store_true')
+    args = parser.parse_args()
+    torch.set_num_threads(3); torch.backends.cudnn.benchmark = False
+    if args.audit_preprocessing:
+        audit_preprocessing(args.out)
+        return
+    assert torch.cuda.is_available()
+    assert torch.cuda.mem_get_info()[0] > 3*1024**3, 'Need at least3GiB free GPU memory before starting'
+    print("DEPTH_SELF_TEST", depth_test(), flush=True)
+    if args.benchmark:
+        benchmark(args)
+    else:
+        train(args)
+
+
+if __name__ == '__main__':
+    main()

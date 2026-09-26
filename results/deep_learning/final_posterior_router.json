@@ -1,0 +1,27 @@
+{
+  "fold": 5,
+  "scores": {
+    "POR": 77.2904355563676,
+    "PERM": 89.36766804409764,
+    "SW": 73.67165512135652,
+    "TOTAL": 80.25089377481923
+  },
+  "best_epoch": 52,
+  "stopped_epoch": 70,
+  "seconds": 1076.9396276999905,
+  "best_checkpoint_predictions_reproduced": true,
+  "experiment": "pure_dl_paired_posterior_router80_sequence",
+  "maximum_epochs": 80,
+  "patience": 18,
+  "current_screening_threshold": 80.4,
+  "qualifies": false,
+  "full_cv": false,
+  "delta_vs_input_router": {
+    "POR": 0.08729748824541161,
+    "PERM": 0.04626139536264873,
+    "SW": 0.1066027143222783,
+    "TOTAL": 0.07969168486334866
+  },
+  "training_status": "finished; no continuation by user request",
+  "validation_scope": "trainer best checkpoint prediction reproduction; below-gate trial not independently full-audited"
+}

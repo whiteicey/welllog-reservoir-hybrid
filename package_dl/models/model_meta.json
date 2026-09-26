@@ -1,0 +1,28 @@
+{
+  "rows": 723556,
+  "wells": 80,
+  "official_oof_scores": {
+    "POR": 0.7921545763606436,
+    "PERM": 0.9048504674630155,
+    "SW": 0.7508237009361697,
+    "TOTAL": 81.71323318479078
+  },
+  "training_budget": 75,
+  "patience": 18,
+  "best_epochs": {
+    "1": 55,
+    "2": 61,
+    "3": 67,
+    "4": 58,
+    "5": 52
+  },
+  "test_accuracy": "unknown: test labels unavailable",
+  "checkpoint_sha256": {
+    "fold_1.pt": "078e08566b00de1e17071a9d57fbc69d4e44c9adcf9c1db3f23701ef12005cf9",
+    "fold_2.pt": "8a33c39bd403439956bd69e2d5f9004be06bced76f9047c9a9eb384adb219d39",
+    "fold_3.pt": "6922306af47acd7ab150fdb7aa36a0a171aeb5451427d35b22e5fb89cf20dd12",
+    "fold_4.pt": "a81da90fc164a9ea58c9bf69d11059d7b55226b57932a9598f32af3eb2bbafd6",
+    "fold_5.pt": "87498de2c614b9ea7a391a104c4c06bfaa2eed56936cab5cdcbdd9903208b213"
+  },
+  "weights_in_git": false
+}

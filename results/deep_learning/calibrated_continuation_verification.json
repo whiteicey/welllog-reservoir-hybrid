@@ -1,0 +1,77 @@
+{
+  "passed": true,
+  "original75_configuration_unchanged": true,
+  "fifth_artifacts_sha256_unchanged": {
+    "config.json": "53f2db27da3b977db07d27e491eb4ea163a4966a42c1e5c838bd29d4e633fc37",
+    "fold_5.pt": "87498de2c614b9ea7a391a104c4c06bfaa2eed56936cab5cdcbdd9903208b213",
+    "fold_5_best_checkpoint.pt": "c9df765fc578cafa6daea91a4b080a529c61dbe9f7756f850dc3eb30594a1071",
+    "fold_5_pred.npy": "d513b1a76eb411353216188f8e036de10ad2dcf732cbb8beb166a21a797a4bd1",
+    "fold_5_distributions.npz": "077d03ebe867be8566f320a94b24b030180f89deb5313f0d859014944af6c7e0",
+    "fold_5_report.json": "8fcbcc18a888af235c913121e9c5bcd46de39ce4c0278ca96dd321a203ba517f",
+    "fold_5_validation_history.json": "4ed52519d8675475cb20612d303e83566da73614e4a9b02a10926c74cd9926c2"
+  },
+  "original_oof_scores": {
+    "POR": 0.7921545763606436,
+    "PERM": 0.9048504674630155,
+    "SW": 0.7508237009361697,
+    "TOTAL": 81.71323318479078
+  },
+  "goal_over82": false,
+  "tables": [
+    {
+      "passed": true,
+      "fold": 1,
+      "training_points": 578935,
+      "evaluated_points": 578935,
+      "unobserved_points": 0,
+      "final_downweighted_points": 2017,
+      "minimum_point_weight": 0.10000000149011612,
+      "channel_policy_replay_passed": true,
+      "scope": "Exact final table replay; final observation may occur after last optimizer step. Table is diagnostic training state, not inference input."
+    },
+    {
+      "passed": true,
+      "fold": 2,
+      "training_points": 578889,
+      "evaluated_points": 578889,
+      "unobserved_points": 0,
+      "final_downweighted_points": 2054,
+      "minimum_point_weight": 0.10000000149011612,
+      "channel_policy_replay_passed": true,
+      "scope": "Exact final table replay; final observation may occur after last optimizer step. Table is diagnostic training state, not inference input."
+    },
+    {
+      "passed": true,
+      "fold": 3,
+      "training_points": 578466,
+      "evaluated_points": 578466,
+      "unobserved_points": 0,
+      "final_downweighted_points": 2335,
+      "minimum_point_weight": 0.10000000149011612,
+      "channel_policy_replay_passed": true,
+      "scope": "Exact final table replay; final observation may occur after last optimizer step. Table is diagnostic training state, not inference input."
+    },
+    {
+      "passed": true,
+      "fold": 4,
+      "training_points": 579043,
+      "evaluated_points": 579043,
+      "unobserved_points": 0,
+      "final_downweighted_points": 2460,
+      "minimum_point_weight": 0.10000000149011612,
+      "channel_policy_replay_passed": true,
+      "scope": "Exact final table replay; final observation may occur after last optimizer step. Table is diagnostic training state, not inference input."
+    },
+    {
+      "passed": true,
+      "fold": 5,
+      "training_points": 578891,
+      "evaluated_points": 578891,
+      "unobserved_points": 0,
+      "final_downweighted_points": 2394,
+      "minimum_point_weight": 0.10000000149011612,
+      "channel_policy_replay_passed": true,
+      "scope": "Exact final table replay; final observation may occur after last optimizer step. Table is diagnostic training state, not inference input."
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "code_files": 63,
+  "checkpoints": [
+    "models/fold_1.pt",
+    "models/fold_2.pt",
+    "models/fold_3.pt",
+    "models/fold_4.pt",
+    "models/fold_5.pt"
+  ],
+  "manifest_all_hashes_match": true,
+  "source_checkpoint_hashes_match": true,
+  "retained_original_oof_scores": {
+    "POR": 0.7921545763606436,
+    "PERM": 0.9048504674630155,
+    "SW": 0.7508237009361697,
+    "TOTAL": 81.71323318479078
+  },
+  "passed": true,
+  "wells": 10,
+  "rows": 95948,
+  "exact_result_schema": true,
+  "source_well_row_depth_order_match": true,
+  "result_zip_json_bytes_match": true,
+  "result_sha256": "d065923481cba07d87535ad841aa54bad939fdb5922443f2b3ed6c39421af9bf",
+  "code_zip_sha256": "8b1b71b736ec0efbd5db6238ed25d2804b9b20232d4f0aabd32763a60f5ea76b",
+  "result_zip_sha256": "91a6a610069b7395276e6aad2204e1febd1af55bb00995c4f722bb53e0e577be",
+  "scope": "Final package hashes, supplied saved verification evidence, exact output schema/population/ranges only. Does not execute inference or establish prediction accuracy; fresh extracted CLI execution is evidenced separately by parent logs.",
+  "inference_executed_by_validator": false,
+  "test_accuracy": "unknown; test labels unavailable"
+}

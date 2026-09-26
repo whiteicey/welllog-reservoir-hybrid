@@ -1,69 +1,69 @@
-# 基于测井曲线的储层参数预测 · Tree–Sequence Hybrid (v1 → v2 → v3)
+# 测井储层参数预测：纯深度学习
 
-> 昆仑大模型比赛「基于测井曲线的储层参数预测」赛题的完整工作仓库：三代方案的代码、按井 5 折实验数据、A 榜提交产物、
-> 实验报告与论文初稿。当前最终版本 **v3**：A 榜 **83.2579**（v2 82.2718，v1 81.0052）。
->
-> 仓库现为 private；比赛结束、论文接收后开源。**赛事数据不在仓库内**（属主办方），模型权重（404 MB）以 Release 附件提供。
+`deep_learning` 分支记录仅使用神经网络预测逐深度 **POR、PERM、SW** 的方法、复现入口和实验路径。历史树–序列混合方案见 [README.hybrid.md](README.hybrid.md)，其中的 A 榜成绩不属于本分支纯 DL 方法。
 
-## 一句话方法
+**当前最佳完整五折 OOF：81.713233**，此前为 81.502720；目标 82 尚未达成。最后的后验路由第五折为 **80.250894**，未过新门槛 80.4。按用户要求，训练已结束，不再自动探索。测试井无标签，不把提交预测视为精度验证。
 
-树模型负责逐点条件分布（CatBoost 分位数分箱），整井一维扩张卷积网络负责储层/非储层判层（门控），
-4 状态联合储层状态模型统一三个目标的默认值判断，决策层按官方容差核取 Bayes 最优动作，
-按井嵌套交叉验证做低自由度融合。三代结果：
+## 从这里开始
 
-| 代际 | 方法 | 同折 5 折 CV | A 榜（5 口盲井） |
-| --- | --- | ---: | ---: |
-| v1 | 统一两阶段 CatBoost（默认值分类 + MAE 回归） | 79.407 | 81.0052（第 237 名） |
-| v2 | 目标专用：POR 80 档分箱、PERM log MAE、SW 237 维 RMSE | 80.884 | 82.2718 |
-| **v3** | 树-序列混合 + 指标对齐解码 + 4 状态门控 + 嵌套融合 | **81.632** | **83.2579** |
+| 内容 | 入口 |
+|---|---|
+| 方法、公式、特征、损失与解码 | [METHOD.md](docs/deep_learning/METHOD.md) |
+| 有效路径、负结果和最后一项实验 | [EXPERIMENTS.md](docs/deep_learning/EXPERIMENTS.md) |
+| 配置数据路径并复现固定第五折 | [训练入口](tools/deep_learning/README.md) |
+| 独立推理源码与权重放置方式 | [package_dl](package_dl/README.md) |
+| 五折结果、哈希与精简实验索引 | [results/deep_learning](results/deep_learning/README.md) |
+| 已完成事项及当前运行状态 | [PROJECTS.md](PROJECTS.md) |
 
-A 榜消融（同日提交）：只换门控 +0.720、只换连续值 +0.266（两者之和 = 完整版 +0.986，严格可加）；去掉序列网络 −0.455。
+## 方法概览
 
-## 仓库结构
+从 GR、PE、SP、CAL、AC、DEN、CNL、RXO、RT 九条曲线构造固定 206 维特征。两个多尺度一维 U-Net 分别读取完整特征和 68 维精简特征；精简分支使用井内相对特征，对 31 条数值特征进行逐点尺度与偏移校正。
 
-```text
-.
-├── README.md            本文件
-├── ROADMAP.md           队友必读：已验证有效 / 已验证无效 / 值得尝试 / 不必再试
-├── CHANGELOG.md         三代方案时间线与分数
-├── requirements.txt     服务器 venv 的精确版本
-├── src/                 v3 实验代码（诊断、CV、变体、序列网络、融合、最终训练/推理/打包）+ src/README.md
-├── package/             提交代码包源码（官方目录模板；模型权重见 Release）
-├── history/             v1、v2 的训练/推理源码（只含代码）
-├── submissions/         三代 result.zip、model_meta.json、校验和、v3 消融提交文件
-├── results/             全部实验结果 JSON（56 个）、井间相似度矩阵、汇总表 + results/README.md 数据字典
-├── docs/
-│   ├── report_v3_optimization.md   完整实验报告（中文，20 节，含每个实验的数字与结论）
-│   ├── supplement/                 自动生成的补充材料：实验登记表、逐井/逐折得分、特征清单、算力预算
-│   ├── figures/                    论文图 1–8（PNG 300 dpi + PDF + 底层 CSV）
-│   ├── paper_draft.md              论文 Markdown 草稿
-│   ├── competition/                赛题信息整理稿、第二轮审计任务书
-│   └── history/                    前两轮的审计报告
-├── paper/               Elsevier elsarticle LaTeX 稿（main.tex、refs.bib、figures/）与已编译的 main.pdf
-└── external/pdda2021/   SPWLA PDDA 2021（Volve）迁移验证的适配与实验脚本（数据从上游仓库获取）
+骨干结合局部点注意力和全局 patch 余弦注意力。每个输入窗口 256 个深度点，监督与输出中心 128 点。每个目标预测默认状态概率与连续混合分布，最后按官方容差评分的期望收益选取预测值。五折推理等权融合完整后验，不能先解码再平均数值。
+
+训练使用默认状态 BCE 与非默认连续 NLL，辅助监督逐步退场。覆盖所有训练点的全局表对持续冲突的疑似坏样本降低最终损失权重，保留恢复机制；单凭损失大不把困难样本判为异常。方法不使用树预测、预训练权重、伪标签、测试标签或事后拟合的 OOF 融合。
+
+## 结果与口径
+
+| 固定折 | 最佳轮次 | 验证分数 |
+|---:|---:|---:|
+| 1 | 55 | 82.599332 |
+| 2 | 61 | 81.295686 |
+| 3 | 67 | 82.782849 |
+| 4 | 58 | 81.685044 |
+| 5 | 52 | 80.200358 |
+| 完整 OOF | 各折最佳 checkpoint | **81.713233** |
+
+80 口训练井采用固定 GroupKFold 五折，共 723,556 个三目标有效行。OOF 总分由完整预测按原评分器计算，不以某一折代替。验证集参与最佳 epoch 选择，反复使用第五折也存在选择偏差，不能视为未参与开发的测试成绩。
+
+最佳交付对应冻结的 75 轮、patience=18 实验；之后的探索为上限 80 轮、patience=18。第五折晋级门槛后来提高到严格大于 80.4，不能用历史 80.2 的晋级记录宣称达到新门槛。原始复现脚本保留历史配置，不静默改写已记录实验。
+
+路由机制的同预算对照：单侧校准 80.095785 → 输入路由 80.171202；在输入路由上分别尝试局部上下文（80.221861）或后验描述量（80.250894），两者没有叠加。后验路由读取默认概率、分量权重熵、条件均值和总标准差，不直接把自信视为正确。这条路线有小幅收益，但尚未过新门槛，也不是多随机种子的稳定增益证明。更多结果见实验路径文档。
+
+## 推理
+
+本分支**不上传原始数据、模型权重、逐行标签/预测或提交 ZIP**。先把另行取得的五个 `fold_1.pt` 至 `fold_5.pt` 放入 `package_dl/models/`，再执行：
+
+```bash
+python -m pip install -r package_dl/requirements.txt
+python package_dl/predict.py --data_dir /path/to/data --output /path/to/result.json --device cuda
 ```
 
-## 复现路径（服务器 H20，`/home/ubuntu/kunlun_welllog_v3_20260919`）
+输入可以是包含 `test/` 的数据根目录，或直接包含井 TXT 的目录。输出为严格的 `resultData → logId/predictions → DEPTH/POR/PERM/SW` JSON，并生成只含根目录 `result.json` 的 `result.zip`。没有模型文件时不能仅凭 Git 克隆执行推理。
 
-1. 准备 `data/train`、`data/test`（赛事原始数据，两行表头，`-99999` 缺失）。
-2. `python src/cv_v2.py` 复现 v2 的 5 折 OOF（所有后续实验的共同基准，≈45 min）。
-3. 按 `src/README.md` 的顺序运行诊断（`diag_*.py`）、变体（`exp_variant.py`）、序列网络（`nn_seq.py`）、状态模型（`exp_states.py`）。
-4. `python src/assemble.py --config src/assemble_cfg_D.json --out outputs/assembly_D` 得到嵌套融合与最终决策配置。
-5. `python src/train_final.py --config src/final_cfg_v3.json --out-dir outputs/final_v3` 全量训练；`python src/build_submission_v3.py` 打包并从 zip 独立复现校验。
-6. 推理只需 `package/`：`python predict.py --data_dir ./data --output ./result.json`（不读训练数据）。
+已交付版本在 Windows、normal 环境的 GPU PyTorch 上从新解压目录运行两次：10 口井、95,948 行，JSON 字节完全一致，峰值显存约 401 MiB。仅核验运行、结构与数值范围，不说明测试精度；Linux 与本版本 CPU 推理未实测。
 
-已验证：从提交代码包独立解压重新推理，`result.json` 与 A 榜提交文件逐字节一致（SHA256 `afcaad76…`）。
+## 仓库布局
 
-## 最重要的三条结论（详见 docs/report_v3_optimization.md §3、§4）
+```text
+docs/deep_learning/       方法和精简实验路径
+tools/deep_learning/      可配置数据路径的训练入口
+package_dl/              独立纯 DL 推理源码（不附权重）
+results/deep_learning/   精简分数、权重哈希与核验证据
+experiments/pure_dl/     冻结的历史实验源码；由入口和文档定位
+experiments/simple_cnn/  早期神经网络基线源码
+src/, package/, history/ 历史混合方案，参见 README.hybrid.md
+outputs/                本地实验产物，Git 忽略
+```
 
-1. **标签不是曲线的确定函数**：同井上半段训练、下半段测试，POR 只有 0.18、SW 0.11（跨井 0.32 / 0.13）；逐点变化只有 36～42% 能被曲线解释。任何只用这 13 条曲线的模型都到不了连续段上限。
-2. **树回归、网络判层**：序列网络单独用只有 77.6，但门控准确率 SW 0.867→0.923、POR 0.917→0.934；作为门控源融合后是最大增益来源（A 榜 +0.72 来自门控）。
-3. **决策层要跟指标走**：容差核用 Bayes 动作（PERM +0.35 分），RMSE 用均值（Volve 迁移实验复现）。
-
-## 论文
-
-目标期刊 Geodata and AI（Elsevier）。`paper/main.pdf` 为当前编译稿（23 页，preprint 单栏）；作者信息、数据可用性链接、参考文献 DOI 需在投稿前补齐（`paper/main.tex` 中已标注）。
-
-## 许可
-
-开源时间待定；开源前请勿外传。开源时建议 MIT（代码）+ CC BY 4.0（文档/图表）。
+本地数据、模型、历史记录及各版本交付目录保留在原位置；新版交付单独建目录，不覆盖既有版本。用户已要求最后一次训练结束后停止，不应根据本 README 自动启动实验或续训。
