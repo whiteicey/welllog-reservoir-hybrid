@@ -7,7 +7,8 @@ Best verified pure-DL complete grouped5fold OOF81.71323318479078 (previous81.502
 - Fivefold best-model delivery in separate immutable submission_calibrated_pair; repeated freshZIP CUDA inference identical across95948testrows; old delivery preserved.
 - Method/experiment docs, compactreports, source-only inference package and portable fifth-fold training launcher.
 -945 Python AST checks, training/inference help checks;24 inference modules match verified delivery (one trailing-blank cleanup; AST unchanged). No new training for verification.
-- Git branch deep_learning prepared for publication, source/docs/compactresults only. Data,weights,rawpredictions,ZIPs stay local.
+- Git branch deep_learning published with source/docs/compactresults only. Data,weights,rawpredictions,ZIPs stay local.
+- README now explicitly documents fifth-fold-first screening, same-configuration remaining-fold training, OOF versus submission provenance, and the final posterior-router mechanism/result. Documentation update only; training remains stopped.
 
 ## Publication and remaining work
 Publication branch: origin/deep_learning. Final push is checked against the remote Git reference; use git status/log for commit identity. No more development or training is scheduled. No scientific result is pending; goal82 was not met.
