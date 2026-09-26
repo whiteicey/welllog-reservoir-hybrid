@@ -4,6 +4,7 @@
 Best verified pure-DL complete grouped5fold OOF81.71323318479078 (previous81.5027197525581). Target82 remains unmet. Last posterior-router fifth80.25089377481923, best52/naturalstop70 of80, below strict80.4. All training exited; no new jobs or continuation authorized.
 
 ## Completed
+- User-reported A-leaderboard score83.6915 added for the delivered calibrated-pair five-fold ensemble; provenance explicitly user feedback, not independently fetched. OOF81.713233 and final fifth-fold80.250894 remain unchanged. Delivered ZIPs remain immutable.
 - Fivefold best-model delivery in separate immutable submission_calibrated_pair; repeated freshZIP CUDA inference identical across95948testrows; old delivery preserved.
 - Method/experiment docs, compactreports, source-only inference package and portable fifth-fold training launcher.
 -945 Python AST checks, training/inference help checks;24 inference modules match verified delivery (one trailing-blank cleanup; AST unchanged). No new training for verification.
