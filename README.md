@@ -19,7 +19,7 @@
 
 ## 方法概览
 
-![已交付纯 DL 网络结构：双骨干、逐点特征校正、完整后验融合和五折效用解码](docs/deep_learning/figures/calibrated_dual_backbone.png)
+![已交付纯 DL 网络结构：双骨干、逐点特征校正、完整后验融合和五折效用解码](docs/deep_learning/figures/calibrated_dual_backbone_zh.png)
 
 图示对应完整五折 OOF **81.713233**、用户反馈 A 榜 **83.6915** 的已交付方案。每折两个骨干，精简分支保留 68 个有效特征，但输入张量仍为 206 列；单折融合连续部分为 16 个分量。下方为骨干结构与仅训练时使用的损失机制。图由 imagegen 生成并核对，未包含后续探索的可学习路由器；精确公式与实现见 [方法说明](docs/deep_learning/METHOD.md)。
 

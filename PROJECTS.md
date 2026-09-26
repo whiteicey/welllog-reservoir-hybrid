@@ -17,3 +17,5 @@ Publication branch: origin/deep_learning. Final push is checked against the remo
 
 ## Future, only if explicitly requested
 Explore useful routing mechanisms under fixedfifth strict80.4/max80/18/max2GPU. New deliveries in newdirectories; never overwrite existingversions.
+
+- Localized the architecture illustration to Simplified Chinese using imagegen; README and METHOD now reference calibrated_dual_backbone_zh.png. Original English image retained. Visual text/layout/formulas checked; no model, training or delivered-archive changes.
