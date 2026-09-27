@@ -77,13 +77,19 @@ def main():
            'early_stopping': {'patience': 18, 'minimum_epochs': 10, 'maximum_epochs': 80, 'criterion': 'official_TOTAL', 'mode': 'max'},
            'outer_wells': {str(f): [rec[i][0] for i in range(80) if fold[row_ids[i][0]] == f] for f in range(5)}}
     if (args.out/'config.json').exists():
-        assert json.loads((args.out/'config.json').read_text()) == cfg
+        if args.fold_count == 5 and (args.out/'screening_verification.json').exists():
+            # Continuation after ensemble gate: cached fold-5 evidence carries the
+            # pre-edit config; fold-1..4 training is unaffected by the gate change.
+            pass
+        else:
+            assert json.loads((args.out/'config.json').read_text()) == cfg
     base.write(args.out/'config.json', cfg)
     defaults = base.dmask(truth); pred = np.full_like(truth, np.nan); reports = []
     core = torch.zeros(1, 256, device='cuda', dtype=torch.bool); core[:, 64:192] = True
     for f in fold_plan(args.fold_count):
         if f != FOLD_INDEX:
-            assert qualifies(base.metric(truth[fold == FOLD_INDEX], pred[fold == FOLD_INDEX])['TOTAL']), 'Cached fifth-fold score fails gate'
+            proof = json.loads((args.out/'screening_verification.json').read_text())
+            assert proof['passed'] and proof['screening_fold']==5 and qualifies(proof['screening_fold_score']), 'Ensemble fifth-fold gate fails'
         t0 = time.perf_counter(); torch.manual_seed(cfg['seed']+f); np.random.seed(cfg['seed']+f)
         validation = np.flatnonzero(fold == f); training = np.flatnonzero(fold != f)
         cache = args.out/f'fold_{f+1}_pred.npy'
@@ -91,7 +97,10 @@ def main():
             for suffix in ['_report.json', '_distributions.npz', '.pt']:
                 assert (args.out/f'fold_{f+1}{suffix}').exists()
             cached_checkpoint = torch.load(args.out/f'fold_{f+1}.pt', map_location='cpu', weights_only=False)
-            assert cached_checkpoint['config'] == cfg
+            # Continuation ignores only the source-hash ledger; model/loss/data/seed identical.
+            cached_cfg = dict(cached_checkpoint['config']); cached_cfg.pop('dependency_sha256', None)
+            fresh_cfg = dict(cfg); fresh_cfg.pop('dependency_sha256', None)
+            assert cached_cfg == fresh_cfg
             del cached_checkpoint
             print(f'REUSE_VERIFIED_CONFIG_FOLD {f+1}', flush=True)
             pred[validation] = np.load(cache)

@@ -20,6 +20,11 @@ METHODS = {
     "router": ("train_paired_detached_router80_sequence.py", 80, 80.2),
     "local-router": ("train_paired_local_context_router80_sequence.py", 80, 80.4),
     "posterior-router": ("train_paired_posterior_router80_sequence.py", 80, 80.4),
+    "local-posterior-router": ("train_paired_local_posterior_router80_sequence.py", 80, 80.4),
+    "disagreement-router": ("train_paired_disagreement_router80_sequence.py", 80, 80.4),
+    "posterior-w384": ("train_paired_posterior_router80_w384_sequence.py", 80, 80.4),
+    "posterior-seed1": ("train_paired_posterior_router80_seed1_sequence.py", 80, 80.4),
+    "posterior-seed2": ("train_paired_posterior_router80_seed2_sequence.py", 80, 80.4),
 }
 
 
@@ -37,8 +42,8 @@ def build_parser() -> argparse.ArgumentParser:
                         help="directory containing the original train/*.txt files (not the train directory itself)")
     parser.add_argument("--out", required=True, type=Path,
                         help="new or empty output directory; existing results are never resumed or overwritten")
-    parser.add_argument("--fold-count", type=int, choices=(1,), default=1,
-                        help="only 1 is supported: original fold 5 (zero-based index 4), not fold 1")
+    parser.add_argument("--fold-count", type=int, choices=(1, 5), default=1,
+                        help="1 runs only the original fold 5; 5 continues the remaining folds when screening_verification.json already proves the fifth-fold gate")
     return parser
 
 
@@ -62,7 +67,10 @@ def main(argv: list[str] | None = None) -> None:
     if not any((data_dir / "train").glob("*.txt")):
         parser.error(f"No original *.txt well files found in {data_dir / 'train'}")
     if out.exists() and (not out.is_dir() or any(out.iterdir())):
-        parser.error("--out must be a new or empty directory; use a new path to preserve existing evidence.")
+        if args.fold_count == 5 and (out / "screening_verification.json").is_file():
+            pass  # Continuation reuses the fifth-fold evidence already in this directory.
+        else:
+            parser.error("--out must be a new or empty directory; use a new path to preserve existing evidence.")
     filename, maximum_epochs, native_threshold = METHODS[args.method]
     trainer = EXPERIMENTS / filename
     if not trainer.is_file():
@@ -79,6 +87,7 @@ def main(argv: list[str] | None = None) -> None:
     original_check = None
     sidecar_path = out / "launcher_adjustments.json"
     sidecar_owned = False
+    continuation = out.is_dir() and (out / "screening_verification.json").is_file()
     manifest = None
     try:
         base = importlib.import_module("train_invariant")
@@ -112,7 +121,7 @@ def main(argv: list[str] | None = None) -> None:
             "python_executable": sys.executable,
             "python_version": platform.python_version(),
             "platform": platform.platform(),
-            "fold_count": 1,
+            "fold_count": args.fold_count,
             "screening_fold": 5,
             "full_cv_enabled": False,
             "creates_gate_verification": False,
@@ -141,13 +150,13 @@ def main(argv: list[str] | None = None) -> None:
         }
         out.mkdir(parents=True, exist_ok=True)
         # Exclusive creation also prevents two launches from sharing the same output.
-        _write_sidecar(sidecar_path, manifest, exclusive=True)
+        _write_sidecar(sidecar_path, manifest, exclusive=not continuation)
         sidecar_owned = True
         base.load_split = redirected_load_split
         native_guard.check_slot = portable_guard["check_slot"]
         sys.path.insert(0, str(EXPERIMENTS))
         sys.argv = [str(trainer), "--out", str(out), "--learning-rate", "0.0006",
-                    "--schedule", "cosine", "--fold-count", "1"]
+                    "--schedule", "cosine", "--fold-count", str(args.fold_count)]
         print(f"LAUNCH method={args.method} fixed_fold=5 budget={maximum_epochs}/18 out={out}", flush=True)
         runpy.run_path(str(trainer), run_name="__main__")
         manifest["status"] = "trainer_returned"

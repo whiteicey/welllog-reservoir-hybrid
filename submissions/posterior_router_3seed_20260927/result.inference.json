@@ -1,0 +1,23 @@
+{
+  "wells": 10,
+  "rows": 95948,
+  "seconds": 95.5072622,
+  "device": "cuda",
+  "folds": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "seeds": [
+    "seed0",
+    "seed1",
+    "seed2"
+  ],
+  "deterministic_algorithms": true,
+  "cublas_workspace_config": ":4096:8",
+  "aggregation": "equal full posterior within each seed-fold; equal across five folds and three seeds before action selection",
+  "test_accuracy": "unknown: test labels unavailable",
+  "peak_gpu_allocated_mib": 522.326171875
+}
