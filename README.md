@@ -9,6 +9,7 @@
 
 - [v3.5 源码与复现边界](experiments/v3.5/README.md) · [原提交包与 SHA256](submissions/v3.5/README.md) · [本地审计结果](results/v3.5/README.md)
 - [v3.5 与 deep_learning 综合评估](docs/report_v35_and_deep_learning.md) · [队友分支证据快照](results/comparison/README.md)
+- **[后续优化执行计划](docs/optimization_plan_v36.md)**：先对齐已有 OOF、拆分连续/门控融合实验，并行准备 v3.6 正确性修复；含阶段依赖、验收、晋级与算力边界，尚未实施新实验。
 - **优先处理**：v3.5 源码会接受 128 行异常负标签，NN 训练/推理存在分箱支持错配；归档保留原源码不改，修复版需独立实验。
 - **借鉴方向**：队友的逐点条件输入校准、完整后验融合；不要把其第五折 router 分数混为完整五折或 83.6915 的提交方案。
 
@@ -45,6 +46,7 @@ v3.5 比 v3 的 A 榜高 0.0381，队友方案比 v3.5 高 0.3955。**线下记�
 ├── submissions/         v1–v3.5 提交文件、校验和、v3 消融；v3.5 原代码 ZIP
 ├── results/             v3 历史实验、v3.5 本地审计、队友分支证据快照与数据字典
 ├── docs/
+│   ├── optimization_plan_v36.md   后续优化执行计划、产物契约、实验矩阵与验收规则
 │   ├── report_v35_and_deep_learning.md  新版本归档、代码风险与队友方案评估
 │   ├── report_v3_optimization.md   原 v3 历史实验报告（冻结，不回写新版本结果）
 │   ├── supplement/                 自动生成的补充材料：实验登记表、逐井/逐折得分、特征清单、算力预算
