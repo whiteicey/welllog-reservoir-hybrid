@@ -1,6 +1,8 @@
 # src · v3 实验代码说明
 
-所有脚本在服务器项目根目录运行（`data/` 为赛事数据软链接，`cache/` 为特征缓存，`outputs/` 为实验产物）。
+本目录继续保留原 v3 实验实现，不被新版本覆盖。v3.5 源码与已知问题见 [experiments/v3.5/](../experiments/v3.5/README.md)，队友方案对比见[综合报告](../docs/report_v35_and_deep_learning.md)。本次未运行以下服务器流程；仅执行 [tools/audit_v35.py](../tools/audit_v35.py) 的本地审计。
+
+以下历史脚本在服务器项目根目录运行（`data/` 为赛事数据软链接，`cache/` 为特征缓存，`outputs/` 为实验产物）。
 共同约定：`harness.py` 提供数据/特征缓存、按井 5 折切分（固定）、官方指标、三角核效用矩阵、Bayes 动作、配对井 bootstrap。
 每个实验写 `outputs/<name>/{oof.npz,test.npz,report.json}`；`test.npz` 保存每折模型对 10 口测试井的输出，供融合时平均。
 
@@ -28,7 +30,9 @@
 ## 融合配置文件
 
 `assemble_cfg_{A..I}.json`：每个目标的分布来源（`dist_sources`）与门控来源（`gate_sources`）。D 为提交配置；
-E 为去网络消融；F/G/H/H0/I 为饱和检验。`final_cfg_v3.json` 把 D 的决策块与全量训练超参数绑定。
+E 为去网络消融；F/G/H/H0/I 为当时的扩展检验。`final_cfg_v3.json` 把 D 的决策块与全量训练超参数绑定。
+
+这里的“嵌套融合”是固定按井 OOF 上的权重/阈值交叉拟合；不是每个外层内重新训练全部内层基础模型的严格 nested CV。应结合模型/特征/epoch 的选择流程解读分数，详见新报告 §4.4。
 
 ## 依赖
 

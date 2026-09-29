@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "complete_five_folds": true,
+  "rows": 723556,
+  "wells": 80,
+  "original_official_scores": {
+    "POR": 0.7921545763606436,
+    "PERM": 0.9048504674630155,
+    "SW": 0.7508237009361697,
+    "TOTAL": 81.71323318479078
+  },
+  "goal_over82": false
+}

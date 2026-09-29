@@ -1,0 +1,736 @@
+{
+  "schema_version": 1,
+  "scope": "Local static/data audit only; no training, inference, test scoring, SSH, or platform verification",
+  "inputs": {
+    "data.zip": {
+      "bytes": 30790831,
+      "sha256": "1e2b90620572fa6ec7b4412566a93dffe885f9845ba740f658830bdd494506cb"
+    },
+    "submissions/v3/result.zip": {
+      "bytes": 520195,
+      "sha256": "6694a7a65408b8078937ecd707ddca6931daba55a22431d184ae14e1ee13c791"
+    },
+    "submissions/v3.5/result.zip": {
+      "bytes": 487994,
+      "sha256": "719577259ca317a2dac32f2479eae01e7afb82e2f346d3d1e670329e8b41f27d"
+    },
+    "submissions/v3.5/solution.original.zip": {
+      "bytes": 83378,
+      "sha256": "4e267c6eff30569b4d87553ad4d285d3f974b17e6db36438abdaaeb49887b37f"
+    }
+  },
+  "result_json": {
+    "v3": {
+      "bytes": 11382824,
+      "sha256": "afcaad7612fac1cea0413d2a594532c3103b9af06d5f960d77c26c479f9e8358"
+    },
+    "v3.5": {
+      "bytes": 5665377,
+      "sha256": "4a8d263c7677bcc497c6299b8c1f9640d057acdb825feba244f85cf1b42bd924",
+      "metadata": {
+        "modelId": "",
+        "modelName": "tree-seq-hybrid-v3",
+        "version": "3.0"
+      }
+    }
+  },
+  "source_integrity": {
+    "passed": true,
+    "preserved_files": 13,
+    "excluded_bytecode_files": 11,
+    "python_syntax_checked": true,
+    "files": {
+      "assemble.py": {
+        "bytes": 8125,
+        "sha256": "012e5a849d27e1510d251fb31c27008ac502cb4ee8bc47abbe862317bc127a0d"
+      },
+      "predict.py": {
+        "bytes": 8435,
+        "sha256": "1a4d5260b1d9f8307974828bb6697e1c5867f7135299a940d5db8609874c92d8"
+      },
+      "README.md": {
+        "bytes": 2996,
+        "sha256": "5cbdf453dc51f44d657edfffff3dd0bb79f9ab472ff945f5b2c3ba1e7ec9d726"
+      },
+      "requirements.txt": {
+        "bytes": 67,
+        "sha256": "13e077739b96affacf22e91dc46f61adbc01cdf99fc8342c6c2b69186783fff7"
+      },
+      "src/config.py": {
+        "bytes": 3000,
+        "sha256": "15a29dcde3d0f41c1606d015b7a84540f1deda3b556ec0f15d69b4fb63d89d5b"
+      },
+      "src/data.py": {
+        "bytes": 2962,
+        "sha256": "b77f5363dcc2725945a896f1b3fa6ab9a1c6e82c7afbfc5ed9fbb3dcba0b1cdf"
+      },
+      "src/features.py": {
+        "bytes": 8161,
+        "sha256": "3dfa10cb5417c2efefdf237fb1c225e5c5579d5d0cbe46d4100d7c228f479d98"
+      },
+      "src/nn_input.py": {
+        "bytes": 2420,
+        "sha256": "3f801eab3486f5ff20355ce26f9800fff8319ef2083c2c980523a32b643f1816"
+      },
+      "src/scoring.py": {
+        "bytes": 4605,
+        "sha256": "f81b9888b529eac23bd874b9e1e828d6e414bd8c42b2f952b09a2378527b2cad"
+      },
+      "src/wellnet.py": {
+        "bytes": 1992,
+        "sha256": "6413b06207701864175d3ac232ad5f27985197f35019cf8bb9e3dec2ab790253"
+      },
+      "src/__init__.py": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "train_nn.py": {
+        "bytes": 13260,
+        "sha256": "edb4070b1632ccbae3879810810bed844ce2aef27d8ccac4d23a164255cc8ffb"
+      },
+      "train_trees.py": {
+        "bytes": 7967,
+        "sha256": "b6ac1b2ddca819e0f154e955d192bd8329ea0d073b26d083c38ff14217aa361b"
+      }
+    }
+  },
+  "submission_validation": {
+    "v3": {
+      "passed": true,
+      "wells": 10,
+      "rows": 95948,
+      "targets": {
+        "POR": {
+          "min": 0.1,
+          "max": 23.182215,
+          "mean": 3.489792049787385,
+          "default_count": 69044,
+          "default_fraction": 0.7195981156459749
+        },
+        "PERM": {
+          "min": 0.01,
+          "max": 59.698838,
+          "mean": 1.3013860860049193,
+          "default_count": 67007,
+          "default_fraction": 0.6983678659273773
+        },
+        "SW": {
+          "min": 29.6025,
+          "max": 99.9,
+          "mean": 95.50941375379372,
+          "default_count": 79200,
+          "default_fraction": 0.8254471171884771
+        }
+      }
+    },
+    "v3.5": {
+      "passed": true,
+      "wells": 10,
+      "rows": 95948,
+      "targets": {
+        "POR": {
+          "min": 0.1,
+          "max": 23.1675,
+          "mean": 3.444443407887606,
+          "default_count": 69695,
+          "default_fraction": 0.7263830408137741
+        },
+        "PERM": {
+          "min": 0.01,
+          "max": 60.533,
+          "mean": 1.2980748030183016,
+          "default_count": 67283,
+          "default_fraction": 0.7012444240630341
+        },
+        "SW": {
+          "min": 28.6837,
+          "max": 99.9,
+          "mean": 95.79176327698337,
+          "default_count": 80354,
+          "default_fraction": 0.83747446533539
+        }
+      }
+    }
+  },
+  "prediction_comparison": {
+    "left": "v3",
+    "right": "v3.5",
+    "targets": {
+      "POR": {
+        "rows": 95948,
+        "changed_count": 27428,
+        "default_disagreement_count": 1699,
+        "left_default_count": 69044,
+        "right_default_count": 69695,
+        "left_default_right_continuous_count": 524,
+        "left_continuous_right_default_count": 1175,
+        "changed_fraction": 0.28586317588693877,
+        "default_disagreement_fraction": 0.01770750823362655,
+        "left_default_fraction": 0.7195981156459749,
+        "right_default_fraction": 0.7263830408137741,
+        "mean_absolute_prediction_difference": 0.2046734438550048
+      },
+      "PERM": {
+        "rows": 95948,
+        "changed_count": 29583,
+        "default_disagreement_count": 1560,
+        "left_default_count": 67007,
+        "right_default_count": 67283,
+        "left_default_right_continuous_count": 642,
+        "left_continuous_right_default_count": 918,
+        "changed_fraction": 0.3083232584316505,
+        "default_disagreement_fraction": 0.016258806853712428,
+        "left_default_fraction": 0.6983678659273773,
+        "right_default_fraction": 0.7012444240630341,
+        "mean_absolute_prediction_difference": 0.10314672858214867
+      },
+      "SW": {
+        "rows": 95948,
+        "changed_count": 17166,
+        "default_disagreement_count": 1990,
+        "left_default_count": 79200,
+        "right_default_count": 80354,
+        "left_default_right_continuous_count": 418,
+        "left_continuous_right_default_count": 1572,
+        "changed_fraction": 0.17890940926335097,
+        "default_disagreement_fraction": 0.020740401050569058,
+        "left_default_fraction": 0.8254471171884771,
+        "right_default_fraction": 0.83747446533539,
+        "mean_absolute_prediction_difference": 0.8837619345166133
+      }
+    },
+    "accuracy_or_complementarity_inferred": false
+  },
+  "training_label_audit": {
+    "scope": "Source-policy comparison, not model training or CV recomputation",
+    "train_wells": 80,
+    "train_rows": 730268,
+    "baseline_complete_target_rows": 723556,
+    "v35_has_all_target_rows": 723684,
+    "v35_accepts_invalid_complete_rows": 128,
+    "target_labels": {
+      "POR": {
+        "baseline_valid": 723567,
+        "v35_has": 723695,
+        "v35_accepted_out_of_range": 128,
+        "accepted_invalid_values": {
+          "-2001.673": 1,
+          "-9999.0": 126,
+          "-6000.336": 1
+        }
+      },
+      "PERM": {
+        "baseline_valid": 723557,
+        "v35_has": 723685,
+        "v35_accepted_out_of_range": 128,
+        "accepted_invalid_values": {
+          "-2001.745": 1,
+          "-9999.0": 126,
+          "-6000.373": 1
+        }
+      },
+      "SW": {
+        "baseline_valid": 723557,
+        "v35_has": 723685,
+        "v35_accepted_out_of_range": 128,
+        "accepted_invalid_values": {
+          "-1921.853": 1,
+          "-9999.0": 126,
+          "-5960.427": 1
+        }
+      }
+    },
+    "well_rows": [
+      {
+        "well_id": "0473ffd021f94d17a9091d6a3b5ac567",
+        "all_rows": 5690,
+        "baseline_complete_rows": 5590,
+        "v35_has_all_rows": 5590
+      },
+      {
+        "well_id": "04cdd32926f24c49a83acc14b3606671",
+        "all_rows": 11311,
+        "baseline_complete_rows": 11209,
+        "v35_has_all_rows": 11209
+      },
+      {
+        "well_id": "061c44ab95a74e8f9a7468f09ce2df1d",
+        "all_rows": 5286,
+        "baseline_complete_rows": 5159,
+        "v35_has_all_rows": 5159
+      },
+      {
+        "well_id": "0883ddb781d24d6085e522ce293b6965",
+        "all_rows": 11289,
+        "baseline_complete_rows": 11139,
+        "v35_has_all_rows": 11139
+      },
+      {
+        "well_id": "08a0902d79e44aa480f3798a384a0729",
+        "all_rows": 4502,
+        "baseline_complete_rows": 4493,
+        "v35_has_all_rows": 4493
+      },
+      {
+        "well_id": "0e740e7688674e06af782d0f12bb7eab",
+        "all_rows": 9989,
+        "baseline_complete_rows": 9898,
+        "v35_has_all_rows": 9898
+      },
+      {
+        "well_id": "102a1f36dcff46cc95add82b5e7ae602",
+        "all_rows": 9206,
+        "baseline_complete_rows": 9122,
+        "v35_has_all_rows": 9122
+      },
+      {
+        "well_id": "176b62dc20b24cd2bd26cc5c6a74d9f4",
+        "all_rows": 10277,
+        "baseline_complete_rows": 10219,
+        "v35_has_all_rows": 10219
+      },
+      {
+        "well_id": "1dfb96c3a41e4f658228a1a55026cfcb",
+        "all_rows": 9011,
+        "baseline_complete_rows": 9011,
+        "v35_has_all_rows": 9011
+      },
+      {
+        "well_id": "1f796b25f0964478a21472b02a47d98c",
+        "all_rows": 10639,
+        "baseline_complete_rows": 10520,
+        "v35_has_all_rows": 10520
+      },
+      {
+        "well_id": "238ee99c7f6543e4b24124f317f69c99",
+        "all_rows": 4473,
+        "baseline_complete_rows": 4379,
+        "v35_has_all_rows": 4379
+      },
+      {
+        "well_id": "2541619c6f9a4800967989c0926755af",
+        "all_rows": 11063,
+        "baseline_complete_rows": 11014,
+        "v35_has_all_rows": 11014
+      },
+      {
+        "well_id": "26117f3bf59a4090982c593982e10547",
+        "all_rows": 10153,
+        "baseline_complete_rows": 10071,
+        "v35_has_all_rows": 10071
+      },
+      {
+        "well_id": "2a5f9d95841b4aecb419a83b7d800686",
+        "all_rows": 6717,
+        "baseline_complete_rows": 6616,
+        "v35_has_all_rows": 6616
+      },
+      {
+        "well_id": "2c71c40428224af9913937dfdd6ffb94",
+        "all_rows": 12157,
+        "baseline_complete_rows": 12078,
+        "v35_has_all_rows": 12078
+      },
+      {
+        "well_id": "2e12280221ab46bc93e92e0dc01471c8",
+        "all_rows": 8243,
+        "baseline_complete_rows": 8177,
+        "v35_has_all_rows": 8177
+      },
+      {
+        "well_id": "3320f770c2f2431b812751ed5c6e23ec",
+        "all_rows": 8229,
+        "baseline_complete_rows": 8149,
+        "v35_has_all_rows": 8149
+      },
+      {
+        "well_id": "34e532ba60884c05a1ffe8ed7989d808",
+        "all_rows": 9504,
+        "baseline_complete_rows": 9397,
+        "v35_has_all_rows": 9397
+      },
+      {
+        "well_id": "387c63885dd343a08cc51b8750b8a1fd",
+        "all_rows": 11338,
+        "baseline_complete_rows": 11336,
+        "v35_has_all_rows": 11336
+      },
+      {
+        "well_id": "3934b24a70014630bd88465a8541dd47",
+        "all_rows": 6393,
+        "baseline_complete_rows": 6249,
+        "v35_has_all_rows": 6293
+      },
+      {
+        "well_id": "396fffa37dad41af97e2865f941ecbd4",
+        "all_rows": 8257,
+        "baseline_complete_rows": 8109,
+        "v35_has_all_rows": 8109
+      },
+      {
+        "well_id": "3c94470885ed44cdbfec4478090d75bc",
+        "all_rows": 9749,
+        "baseline_complete_rows": 9709,
+        "v35_has_all_rows": 9709
+      },
+      {
+        "well_id": "3d6380abdaf4476e86e0a16642844198",
+        "all_rows": 9041,
+        "baseline_complete_rows": 8899,
+        "v35_has_all_rows": 8899
+      },
+      {
+        "well_id": "406ee310bfda4e109fd5e3902755daa1",
+        "all_rows": 9263,
+        "baseline_complete_rows": 9217,
+        "v35_has_all_rows": 9217
+      },
+      {
+        "well_id": "41a1ef1c4b424e1da731f570521a23d5",
+        "all_rows": 12236,
+        "baseline_complete_rows": 12210,
+        "v35_has_all_rows": 12220
+      },
+      {
+        "well_id": "42f2870b6ea743518d4ff77acca0462a",
+        "all_rows": 7879,
+        "baseline_complete_rows": 7739,
+        "v35_has_all_rows": 7739
+      },
+      {
+        "well_id": "48cca185c45245819119155a58c34d4e",
+        "all_rows": 8450,
+        "baseline_complete_rows": 8360,
+        "v35_has_all_rows": 8360
+      },
+      {
+        "well_id": "4f8ef54ffb9443b3933577d559cf7d3d",
+        "all_rows": 11304,
+        "baseline_complete_rows": 11256,
+        "v35_has_all_rows": 11256
+      },
+      {
+        "well_id": "56337e0070214a769217ef7c0d65d333",
+        "all_rows": 7493,
+        "baseline_complete_rows": 7441,
+        "v35_has_all_rows": 7441
+      },
+      {
+        "well_id": "568d27ac399c44d19117da9c3b938a88",
+        "all_rows": 8021,
+        "baseline_complete_rows": 8021,
+        "v35_has_all_rows": 8021
+      },
+      {
+        "well_id": "57803b201c974a51a1b8a46a46dd4b7d",
+        "all_rows": 10792,
+        "baseline_complete_rows": 10640,
+        "v35_has_all_rows": 10640
+      },
+      {
+        "well_id": "58af150e7fc640acb627b5832dcd02f5",
+        "all_rows": 8138,
+        "baseline_complete_rows": 8058,
+        "v35_has_all_rows": 8058
+      },
+      {
+        "well_id": "5c3cda77ca9c4f808ac591a8539f8fea",
+        "all_rows": 12431,
+        "baseline_complete_rows": 12319,
+        "v35_has_all_rows": 12319
+      },
+      {
+        "well_id": "5fc3a4e7c541400694c1beb40b6d11a2",
+        "all_rows": 9776,
+        "baseline_complete_rows": 9704,
+        "v35_has_all_rows": 9704
+      },
+      {
+        "well_id": "62e6e664bac94776bb983a391af07ed8",
+        "all_rows": 11050,
+        "baseline_complete_rows": 10913,
+        "v35_has_all_rows": 10913
+      },
+      {
+        "well_id": "6449aecd7379409cb1e87d5897c8a00c",
+        "all_rows": 8404,
+        "baseline_complete_rows": 8348,
+        "v35_has_all_rows": 8348
+      },
+      {
+        "well_id": "65ca1f9e0ee74f8bb296dd7b7d9e9b39",
+        "all_rows": 12206,
+        "baseline_complete_rows": 12146,
+        "v35_has_all_rows": 12146
+      },
+      {
+        "well_id": "66972f7c9a474d65897a4ea902a94216",
+        "all_rows": 10045,
+        "baseline_complete_rows": 9939,
+        "v35_has_all_rows": 9939
+      },
+      {
+        "well_id": "68b8800278c244dcaa0f97eca18f8e23",
+        "all_rows": 9652,
+        "baseline_complete_rows": 9499,
+        "v35_has_all_rows": 9499
+      },
+      {
+        "well_id": "72c0d9e594f8431aac49b812089136c1",
+        "all_rows": 9857,
+        "baseline_complete_rows": 9820,
+        "v35_has_all_rows": 9820
+      },
+      {
+        "well_id": "7850187c7b1c4879b8c51ed484d706b3",
+        "all_rows": 6502,
+        "baseline_complete_rows": 6399,
+        "v35_has_all_rows": 6399
+      },
+      {
+        "well_id": "7a968d7cc94041769a03d55e44d72b78",
+        "all_rows": 10870,
+        "baseline_complete_rows": 10870,
+        "v35_has_all_rows": 10870
+      },
+      {
+        "well_id": "7d3eda8b7a28408487048e56fe875f54",
+        "all_rows": 4786,
+        "baseline_complete_rows": 4733,
+        "v35_has_all_rows": 4733
+      },
+      {
+        "well_id": "7f64d1acf2d44f08a71fe726ba3b1300",
+        "all_rows": 6139,
+        "baseline_complete_rows": 6057,
+        "v35_has_all_rows": 6057
+      },
+      {
+        "well_id": "829f521bca05451daa5bb0ba1473afba",
+        "all_rows": 8905,
+        "baseline_complete_rows": 8905,
+        "v35_has_all_rows": 8905
+      },
+      {
+        "well_id": "86b45e55b2a348909ed9301318e87ca2",
+        "all_rows": 9734,
+        "baseline_complete_rows": 9617,
+        "v35_has_all_rows": 9617
+      },
+      {
+        "well_id": "8ad1ae6069324e3aa31dd2a2bfd19b18",
+        "all_rows": 10009,
+        "baseline_complete_rows": 9949,
+        "v35_has_all_rows": 9949
+      },
+      {
+        "well_id": "8d6ce77d1d2446a09d9849a0df8cd122",
+        "all_rows": 9562,
+        "baseline_complete_rows": 9419,
+        "v35_has_all_rows": 9419
+      },
+      {
+        "well_id": "8da071021d4b4b838dc313bff43286a5",
+        "all_rows": 11779,
+        "baseline_complete_rows": 11602,
+        "v35_has_all_rows": 11602
+      },
+      {
+        "well_id": "8e6911ad927c4f17ba8be26949b17071",
+        "all_rows": 8951,
+        "baseline_complete_rows": 8877,
+        "v35_has_all_rows": 8951
+      },
+      {
+        "well_id": "8ec2c96adde14112ad849c9aeb1ec88a",
+        "all_rows": 11910,
+        "baseline_complete_rows": 11874,
+        "v35_has_all_rows": 11874
+      },
+      {
+        "well_id": "8eed0e6b9d984f51aea8083fd4333105",
+        "all_rows": 10815,
+        "baseline_complete_rows": 10719,
+        "v35_has_all_rows": 10719
+      },
+      {
+        "well_id": "9131a012732345cea0e1fb4cbd5cdf40",
+        "all_rows": 7064,
+        "baseline_complete_rows": 7064,
+        "v35_has_all_rows": 7064
+      },
+      {
+        "well_id": "95083630bd8d44c4b4914a9054789d34",
+        "all_rows": 8562,
+        "baseline_complete_rows": 8490,
+        "v35_has_all_rows": 8490
+      },
+      {
+        "well_id": "96241c6883c24b74b68b847d2e93b26e",
+        "all_rows": 9700,
+        "baseline_complete_rows": 9630,
+        "v35_has_all_rows": 9630
+      },
+      {
+        "well_id": "98ccc1f80a374b5eae28a3875de626ad",
+        "all_rows": 10701,
+        "baseline_complete_rows": 10645,
+        "v35_has_all_rows": 10645
+      },
+      {
+        "well_id": "99d60367ab7849749dac14f42bb07690",
+        "all_rows": 13078,
+        "baseline_complete_rows": 13017,
+        "v35_has_all_rows": 13017
+      },
+      {
+        "well_id": "9c61af182e7f4d32ac9a1fa69e918ad8",
+        "all_rows": 5643,
+        "baseline_complete_rows": 5454,
+        "v35_has_all_rows": 5454
+      },
+      {
+        "well_id": "9ca08bf20c9844628fa21d10d60fb4e6",
+        "all_rows": 9186,
+        "baseline_complete_rows": 9147,
+        "v35_has_all_rows": 9147
+      },
+      {
+        "well_id": "9cc43776921242109d605cab3460e085",
+        "all_rows": 9652,
+        "baseline_complete_rows": 9519,
+        "v35_has_all_rows": 9519
+      },
+      {
+        "well_id": "9dcde19c9044491db5d9869e850eea78",
+        "all_rows": 8323,
+        "baseline_complete_rows": 8323,
+        "v35_has_all_rows": 8323
+      },
+      {
+        "well_id": "9fb71635ff18425db37a7601f0fe07b2",
+        "all_rows": 9837,
+        "baseline_complete_rows": 9673,
+        "v35_has_all_rows": 9673
+      },
+      {
+        "well_id": "a14d1f22ba464b069265b58b444c4d2e",
+        "all_rows": 11290,
+        "baseline_complete_rows": 11209,
+        "v35_has_all_rows": 11209
+      },
+      {
+        "well_id": "a329a900e6ed45fd9fa54cdc7bec28ed",
+        "all_rows": 5723,
+        "baseline_complete_rows": 5639,
+        "v35_has_all_rows": 5639
+      },
+      {
+        "well_id": "a4611b72fde24feeb6e086626434fe23",
+        "all_rows": 8125,
+        "baseline_complete_rows": 8045,
+        "v35_has_all_rows": 8045
+      },
+      {
+        "well_id": "aa4089fdc11241faae383bf29650b34e",
+        "all_rows": 10590,
+        "baseline_complete_rows": 10432,
+        "v35_has_all_rows": 10432
+      },
+      {
+        "well_id": "ac8635abdd12492c8f9ebcafb7859874",
+        "all_rows": 8283,
+        "baseline_complete_rows": 8211,
+        "v35_has_all_rows": 8211
+      },
+      {
+        "well_id": "accd5fa9187c45a388e43b4cb8a6a6d6",
+        "all_rows": 10626,
+        "baseline_complete_rows": 10499,
+        "v35_has_all_rows": 10499
+      },
+      {
+        "well_id": "afb54670e12949e28831a8e945f53e50",
+        "all_rows": 8066,
+        "baseline_complete_rows": 7949,
+        "v35_has_all_rows": 7949
+      },
+      {
+        "well_id": "b27423f7e5eb4e4aa2d86341931cb194",
+        "all_rows": 9228,
+        "baseline_complete_rows": 9120,
+        "v35_has_all_rows": 9120
+      },
+      {
+        "well_id": "b7eb1274305446c499a7b03848fb5bd3",
+        "all_rows": 9547,
+        "baseline_complete_rows": 9499,
+        "v35_has_all_rows": 9499
+      },
+      {
+        "well_id": "b91eacf81dc046298d302720c183e7b5",
+        "all_rows": 4789,
+        "baseline_complete_rows": 4709,
+        "v35_has_all_rows": 4709
+      },
+      {
+        "well_id": "b9890df913b64db88ff0b53aa03d0c88",
+        "all_rows": 9657,
+        "baseline_complete_rows": 9559,
+        "v35_has_all_rows": 9559
+      },
+      {
+        "well_id": "bcc9d7c1493e407089de94103d6e2d16",
+        "all_rows": 10527,
+        "baseline_complete_rows": 10478,
+        "v35_has_all_rows": 10478
+      },
+      {
+        "well_id": "c5f373a3cc4d467d993f8a9e7dd46373",
+        "all_rows": 9211,
+        "baseline_complete_rows": 9077,
+        "v35_has_all_rows": 9077
+      },
+      {
+        "well_id": "c7611b0148bb4b878c00bc6d1367a136",
+        "all_rows": 9654,
+        "baseline_complete_rows": 9597,
+        "v35_has_all_rows": 9597
+      },
+      {
+        "well_id": "c8fa4ddf03bf45ad8fbcfba6e69027e4",
+        "all_rows": 7169,
+        "baseline_complete_rows": 7109,
+        "v35_has_all_rows": 7109
+      },
+      {
+        "well_id": "c9296e9ad35543069fb3a920c0a7aefe",
+        "all_rows": 7570,
+        "baseline_complete_rows": 7420,
+        "v35_has_all_rows": 7420
+      },
+      {
+        "well_id": "ca64394e5d0841c78bd13d77d4f6d799",
+        "all_rows": 8362,
+        "baseline_complete_rows": 8219,
+        "v35_has_all_rows": 8219
+      },
+      {
+        "well_id": "d8cd8c57da9a45da9361d81b8f204d5e",
+        "all_rows": 10629,
+        "baseline_complete_rows": 10629,
+        "v35_has_all_rows": 10629
+      }
+    ]
+  },
+  "generated_files": {
+    "prediction_diff_by_well.csv": {
+      "bytes": 2832,
+      "sha256": "fab8870c3510bdc56f6e175818a650ce834a1f39787fa69cbc855ca00e5d6346"
+    }
+  },
+  "independent_model_inference": {
+    "performed": false,
+    "reason": "Matching v3.5 weights and decision artifacts were not supplied"
+  }
+}

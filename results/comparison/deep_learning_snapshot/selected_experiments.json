@@ -1,0 +1,162 @@
+{
+  "scope": "Verbatim selected entries; not the complete branch registry and not a new independent score audit",
+  "source_commit": "f07a7d7d3be341477d9ef7624510e73eb0168d0e",
+  "source_path": "results/deep_learning/experiment_index.json",
+  "source_scope": "Compact reported historical results without labels/predictions/weights; last trial finished.",
+  "experiments": [
+    {
+      "experiment": "pure_dl_global_cosine_sequence",
+      "completed_fold_reports": [
+        {
+          "fold": 1,
+          "scores": {
+            "POR": 79.8161750609425,
+            "PERM": 90.74338075335979,
+            "SW": 76.15868678496398,
+            "TOTAL": 82.36057615669606
+          },
+          "best_epoch": 55,
+          "stopped_epoch": 73,
+          "seconds": 816.4047232000157,
+          "best_checkpoint_predictions_reproduced": true
+        },
+        {
+          "fold": 2,
+          "scores": {
+            "POR": 78.80097110317251,
+            "PERM": 89.71736997362004,
+            "SW": 74.30340705247761,
+            "TOTAL": 81.04756329008593
+          },
+          "best_epoch": 61,
+          "stopped_epoch": 75,
+          "seconds": 816.0727906000102,
+          "best_checkpoint_predictions_reproduced": true
+        },
+        {
+          "fold": 3,
+          "scores": {
+            "POR": 80.16379467545265,
+            "PERM": 90.14116477028956,
+            "SW": 76.84916619600438,
+            "TOTAL": 82.49575424083866
+          },
+          "best_epoch": 59,
+          "stopped_epoch": 75,
+          "seconds": 778.9416728999931,
+          "best_checkpoint_predictions_reproduced": true
+        },
+        {
+          "fold": 4,
+          "scores": {
+            "POR": 79.22913705672264,
+            "PERM": 91.12482871759087,
+            "SW": 74.1567919536636,
+            "TOTAL": 81.61730835195586
+          },
+          "best_epoch": 64,
+          "stopped_epoch": 75,
+          "seconds": 844.2452881000063,
+          "best_checkpoint_predictions_reproduced": true
+        },
+        {
+          "fold": 5,
+          "scores": {
+            "POR": 77.15699310942257,
+            "PERM": 89.2004233786177,
+            "SW": 73.20748816708276,
+            "TOTAL": 79.98986697382193
+          },
+          "best_epoch": 52,
+          "stopped_epoch": 70,
+          "seconds": 680.9938893000071,
+          "best_checkpoint_predictions_reproduced": true
+        }
+      ],
+      "reported_oof_scores": {
+        "POR": 79.03398880140041,
+        "PERM": 90.18517495116029,
+        "SW": 74.93631965495211,
+        "TOTAL": 81.50271975255946
+      },
+      "interpretation": "Reported historical results; screening folds/budgets vary. Report presence is not an independent audit."
+    },
+    {
+      "experiment": "pure_dl_paired_calibrated_view_sequence",
+      "completed_fold_reports": [
+        {
+          "fold": 1,
+          "scores": {
+            "POR": 80.09881032375539,
+            "PERM": 90.93972297898048,
+            "SW": 76.40224529335782,
+            "TOTAL": 82.59933199244502
+          },
+          "best_epoch": 55,
+          "stopped_epoch": 73,
+          "seconds": 1358.5891730999865,
+          "best_checkpoint_predictions_reproduced": true
+        },
+        {
+          "fold": 2,
+          "scores": {
+            "POR": 79.0992227773744,
+            "PERM": 90.30007183287059,
+            "SW": 74.17398240414676,
+            "TOTAL": 81.29568581616839
+          },
+          "best_epoch": 61,
+          "stopped_epoch": 75,
+          "seconds": 1399.3094860999845,
+          "best_checkpoint_predictions_reproduced": true
+        },
+        {
+          "fold": 3,
+          "scores": {
+            "POR": 80.48148839395563,
+            "PERM": 90.50519215411676,
+            "SW": 77.03310156142862,
+            "TOTAL": 82.78284931862757
+          },
+          "best_epoch": 67,
+          "stopped_epoch": 75,
+          "seconds": 1400.1103500000027,
+          "best_checkpoint_predictions_reproduced": true
+        },
+        {
+          "fold": 4,
+          "scores": {
+            "POR": 79.26975709750296,
+            "PERM": 91.22121351481857,
+            "SW": 74.21912109116921,
+            "TOTAL": 81.6850442413466
+          },
+          "best_epoch": 58,
+          "stopped_epoch": 75,
+          "seconds": 1313.1672231999983,
+          "best_checkpoint_predictions_reproduced": true
+        },
+        {
+          "fold": 5,
+          "scores": {
+            "POR": 77.12461754704648,
+            "PERM": 89.4598884074914,
+            "SW": 73.57717619762676,
+            "TOTAL": 80.2003578759053
+          },
+          "best_epoch": 52,
+          "stopped_epoch": 70,
+          "seconds": 1348.9327666000172,
+          "best_checkpoint_predictions_reproduced": true
+        }
+      ],
+      "reported_oof_scores": {
+        "POR": 79.21545763606473,
+        "PERM": 90.48504674630179,
+        "SW": 75.08237009361764,
+        "TOTAL": 81.71323318479122
+      },
+      "interpretation": "Reported historical results; screening folds/budgets vary. Report presence is not an independent audit."
+    }
+  ]
+}

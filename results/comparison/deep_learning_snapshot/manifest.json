@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "captured_on": "2026-09-29",
+  "repository": "https://github.com/whiteicey/welllog-reservoir-hybrid",
+  "branch": "deep_learning",
+  "commit": "f07a7d7d3be341477d9ef7624510e73eb0168d0e",
+  "scope": "Snapshot of branch evidence; not re-executed here. No weights, dataset, original predictions, or training copied.",
+  "verbatim_files": [
+    {
+      "source_path": "results/deep_learning/full_oof_original_verification.json",
+      "snapshot_path": "results/comparison/deep_learning_snapshot/full_oof_original_verification.json",
+      "bytes": 269,
+      "sha256": "92a1783a7e82dd16b505725e1da7ad7672ba3ceb85e4801fbc64861237c5541e"
+    },
+    {
+      "source_path": "results/deep_learning/leaderboard_result.json",
+      "snapshot_path": "results/comparison/deep_learning_snapshot/leaderboard_result.json",
+      "bytes": 594,
+      "sha256": "5bbf6ea1b6ec36e7581bb175671308ebdf147a7b61b22b074be762c5fefbd56f"
+    },
+    {
+      "source_path": "results/deep_learning/delivery_validation.json",
+      "snapshot_path": "results/comparison/deep_learning_snapshot/delivery_validation.json",
+      "bytes": 1189,
+      "sha256": "64fa89dba5a709c1674b14de5cae833a0df5e2bf3e7a073433addb90756bfba9"
+    },
+    {
+      "source_path": "results/deep_learning/standalone_execution_verification.json",
+      "snapshot_path": "results/comparison/deep_learning_snapshot/standalone_execution_verification.json",
+      "bytes": 1678,
+      "sha256": "fd4b6b01d0d6aaeed3dd4fc23f55b5b1b5507faf624706ba5b5dc983f453c07d"
+    },
+    {
+      "source_path": "results/deep_learning/final_posterior_router.json",
+      "snapshot_path": "results/comparison/deep_learning_snapshot/final_posterior_router.json",
+      "bytes": 815,
+      "sha256": "80f6ad3127d8e681656dc0da8de9c7ca56561e137f36c7e9f6e90d2ce17d58b9"
+    }
+  ],
+  "selected_registry_excerpt": {
+    "source_path": "results/deep_learning/experiment_index.json",
+    "snapshot_path": "results/comparison/deep_learning_snapshot/selected_experiments.json",
+    "sha256": "7759d2a580843129322accb246b62e8037c85f78bb40f935679ec6eee3873fff",
+    "bytes": 5078
+  },
+  "local_availability": {
+    "matching_result_zip": false,
+    "matching_model_weights": false,
+    "oof_arrays": false
+  },
+  "comparison_limits": [
+    "A-board result is user-reported, not platform-verified",
+    "Full OOF uses held-out wells but per-fold best epoch selection and repeated fifth-fold architecture screening",
+    "Later posterior router is fifth-fold only and did not generate the reported A-board result",
+    "No prediction complementarity or fused score estimated without aligned predictions and labels"
+  ]
+}

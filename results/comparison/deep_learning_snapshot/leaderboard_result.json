@@ -1,0 +1,10 @@
+{
+  "leaderboard": "A",
+  "score": 83.6915,
+  "source": "user_reported_after_submission",
+  "independently_verified_on_platform": false,
+  "experiment": "pure_dl_paired_calibrated_view_sequence",
+  "submission_method": "Calibrated paired backbones; equal full-posterior aggregation within each fold and equal expected-utility aggregation across five best fold models",
+  "related_complete_oof_score": 81.71323318479078,
+  "scope": "Leaderboard feedback for the delivered five-fold ensemble; not the later posterior-router fifth-fold experiment. Does not alter local OOF or screening scores."
+}

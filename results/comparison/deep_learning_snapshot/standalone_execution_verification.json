@@ -1,0 +1,48 @@
+{
+  "passed": true,
+  "fresh_final_zip_cli_completed": true,
+  "second_run_matches_first_byte_for_byte": true,
+  "result_sha256": "d065923481cba07d87535ad841aa54bad939fdb5922443f2b3ed6c39421af9bf",
+  "code_zip_sha256": "8b1b71b736ec0efbd5db6238ed25d2804b9b20232d4f0aabd32763a60f5ea76b",
+  "first_inference": {
+    "wells": 10,
+    "rows": 95948,
+    "seconds": 32.932945099979406,
+    "device": "cuda",
+    "folds": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "deterministic_algorithms": true,
+    "cublas_workspace_config": ":4096:8",
+    "aggregation": "equal two-member full posterior within each fold, equal five-fold expected utilities before action selection",
+    "test_accuracy": "unknown: test labels unavailable",
+    "peak_gpu_allocated_mib": 400.62841796875
+  },
+  "second_inference": {
+    "wells": 10,
+    "rows": 95948,
+    "seconds": 34.16563030000543,
+    "device": "cuda",
+    "folds": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "deterministic_algorithms": true,
+    "cublas_workspace_config": ":4096:8",
+    "aggregation": "equal two-member full posterior within each fold, equal five-fold expected utilities before action selection",
+    "test_accuracy": "unknown: test labels unavailable",
+    "peak_gpu_allocated_mib": 400.62841796875
+  },
+  "old_submission_ready_hashes_unchanged": {
+    "submission_code.zip": "03e6ab00be5d63f308c9ad2ab66bb368c39ead33e0a91b9a30d443de84e3e417",
+    "result.zip": "b0f19ff85bb972224caa4de360cc783e2c182892c2426a129f10064b0d359450"
+  },
+  "scope": "two real standalone CUDA CLI executions using extracted packages; final code ZIP tested; CPU not tested for this version; no test accuracy claim"
+}

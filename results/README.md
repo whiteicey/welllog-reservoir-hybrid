@@ -1,7 +1,15 @@
 # results · 数据字典
 
-全部文件由服务器实验直接生成，未手工修改。每个实验的完整 OOF/测试输出（`oof.npz`、`test.npz`，共 13 GB）保存在服务器 `outputs/`，
-这里只放报告级 JSON 与小型矩阵。
+本目录根层的原 v3 文件由历史服务器实验生成，保持不变。对应完整 OOF/测试输出（`oof.npz`、`test.npz`，约 13 GB）按历史记录保存在服务器 `outputs/`，这里只放报告级 JSON 与小型矩阵。
+
+## 新增归档与来源边界
+
+| 目录 | 来源 / 含义 |
+| --- | --- |
+| [v3.5/](v3.5/README.md) | 本地标准库审计：原源码哈希、提交格式/深度、预测差异、异常标签计数；**不是训练结果/CV** |
+| [comparison/](comparison/README.md) | 固定 `deep_learning` commit 的紧凑证据快照；**没有在本次重跑 OOF 或推理** |
+
+v3.5 的 CV 未提供，队友完整 OOF 81.7132 与后验 router 的第五折 80.2509 需分开。新材料不回填旧 v3 生成脚本的 registry 或论文数据表，避免混合样本、验证协议与来源。完整解释见 [综合报告](../docs/report_v35_and_deep_learning.md)。
 
 ## 基准与生成
 
