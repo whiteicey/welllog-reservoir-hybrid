@@ -12,6 +12,7 @@
 |---|---|
 | 方法、公式、特征、损失与解码 | [METHOD.md](docs/deep_learning/METHOD.md) |
 | 有效路径、负结果和最后一项实验 | [EXPERIMENTS.md](docs/deep_learning/EXPERIMENTS.md) |
+| 对手 v97 方案的四个维度审计（负结果） | [V97_ABLATION.md](docs/deep_learning/V97_ABLATION.md) |
 | 配置数据路径并复现固定第五折 | [训练入口](tools/deep_learning/README.md) |
 | 独立推理源码与权重放置方式 | [package_dl](package_dl/README.md) |
 | 五折结果、哈希与精简实验索引 | [results/deep_learning](results/deep_learning/README.md) |
