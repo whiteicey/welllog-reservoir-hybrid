@@ -6751,3 +6751,10 @@ V370 completed paired fold4: 144513 rows; original 81.84683474229898, seed13 82.
 Base-only??????81.937732???81.989553?-0.051821???????????????OOF???????A?????????submission_pure_dl_v370_base_ablation_20261002?????15base??????POR??t3/Cauchy?????10?95948?????/ZIP?????????results/deep_learning/base_only_interface_ablation_20261003/README.md?A???????
 
 2026-10-07 GitHub交付：更新README、七版逐折成绩及A榜反例、六版推理源码镜像；保留远程审计，排除权重、逐行数据及可重建图谱。待完成：合并/提交/推送/远程核验。中文输出已显式UTF-8。
+
+
+## 合并远程已有进展（df40119，原文保留）
+
+- Audited the teammate v97 submission (self-reported five-fold OOF TOTAL 81.891019) for improvement headroom across four axes, all on a rented GTX 1080 Ti. Result: every axis lands at TOTAL +0.02 to +0.03, far below the roughly ±0.7 noise of a 10-well A leaderboard line, so none is submittable. Evidence and reproduction parameters recorded in docs/deep_learning/V97_ABLATION.md. Diagnostic only: the blends use OOF-fitted weights and are explicitly recorded as not for submission, in line with the existing rule. No training continuation, no change to delivered archives. Also documents one unresolved 0.0828 baseline reconstruction gap so later readers are not misled by absolute deltas.
+
+2026-10-07 发布验证通过：5172文件约31MiB，中文/链接/逐折数据、全部Python语法、六版冻结镜像及敏感凭据模式扫描通过。原始数据、模型、逐行预测、图谱大快照均不提交。远程旧v97审计已合并保留；待推送及远程HEAD核验。
