@@ -6,5 +6,11 @@
   "all_staged_python_parse": true,
   "no_weights_or_row_data": true,
   "secrets_pattern_scan": true,
-  "scope": "Documentation/source publication; no retraining or unchanged inference rerun"
+  "scope": "Documentation/source publication; no retraining or unchanged inference rerun",
+  "published_branch": "deep_learning",
+  "remote": "https://github.com/whiteicey/welllog-reservoir-hybrid",
+  "first_published_commit": "2582b8afb9d5a24be4c24718b7baca20d9dbbb09",
+  "remote_existing_audit_preserved": true,
+  "historical_whitespace_warnings": "Retained unchanged to preserve source hashes; no syntax errors",
+  "models_retrained": false
 }

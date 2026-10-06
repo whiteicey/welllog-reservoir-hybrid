@@ -6758,3 +6758,5 @@ Base-only??????81.937732???81.989553?-0.051821???????????????OOF???????A????????
 - Audited the teammate v97 submission (self-reported five-fold OOF TOTAL 81.891019) for improvement headroom across four axes, all on a rented GTX 1080 Ti. Result: every axis lands at TOTAL +0.02 to +0.03, far below the roughly ±0.7 noise of a 10-well A leaderboard line, so none is submittable. Evidence and reproduction parameters recorded in docs/deep_learning/V97_ABLATION.md. Diagnostic only: the blends use OOF-fitted weights and are explicitly recorded as not for submission, in line with the existing rule. No training continuation, no change to delivered archives. Also documents one unresolved 0.0828 baseline reconstruction gap so later readers are not misled by absolute deltas.
 
 2026-10-07 发布验证通过：5172文件约31MiB，中文/链接/逐折数据、全部Python语法、六版冻结镜像及敏感凭据模式扫描通过。原始数据、模型、逐行预测、图谱大快照均不提交。远程旧v97审计已合并保留；待推送及远程HEAD核验。
+
+2026-10-07 已完成GitHub推送至deep_learning，发布提交2582b8a，远程旧df40119审计保留。README现有思路/未来设想/逐折成绩、七版JSON和六版冻结交付源码一致性核验通过。未上传数据/权重/逐行预测；本批无训练。后续为可选的泛化定位，不自动启动。
