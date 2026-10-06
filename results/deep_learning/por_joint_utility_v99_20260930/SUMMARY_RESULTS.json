@@ -1,0 +1,10 @@
+{
+  "project": "por_joint_utility_v99_20260930",
+  "scope": "obsolete-study",
+  "weights_retained": false,
+  "cleanup": "Obsolete artifacts removed by explicit user request. These are historical scores, not newly verified training.",
+  "results": [],
+  "cleanup_completed": true,
+  "deleted_files": 5,
+  "deleted_bytes": 16228
+}

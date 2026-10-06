@@ -1,0 +1,12 @@
+{
+  "best_pair": "original__seed_20261013",
+  "delta_vs_original": 0.15732783414348717,
+  "continuous_delta_vs_original": {
+    "POR": -0.24855361780640095,
+    "PERM": 0.16866504989154407,
+    "SW": -0.4801182824764929
+  },
+  "equal_weight_TOTAL": 80.84035160508077,
+  "common_weight_TOTAL": 80.84516653271609,
+  "note": "POR/SW whole-head gains coexist with lower CONT scores. Whole-head selection only; no CONT-specific weights. PERM CONT improves. These are diagnostics, not an independent causal attribution."
+}

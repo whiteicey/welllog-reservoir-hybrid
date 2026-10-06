@@ -1,0 +1,144 @@
+"""Whole-well contextual modulation, with a matched fixed-reference control."""
+import os
+os.environ.setdefault('CUBLAS_WORKSPACE_CONFIG',':4096:8')
+from pathlib import Path
+from datetime import datetime
+import argparse,hashlib,json,random,signal,time,traceback
+import numpy as np
+import torch
+from well_memory_v47 import ROOT,STUDY,PREVIOUS,MODES,Network,Evaluator,load_data,reference_prediction
+from train_scaling_v21 import channel_objective
+from train_dual8222_heads80 import atomic_json,atomic_torch,atomic_array,cpu_copy
+from multiscale_sequence import window_indices
+from gpu_job_guard_v2 import check_slot
+
+STOP=False
+OWNED=None
+def stop_request(*_):
+    global STOP
+    STOP=True
+
+def main():
+    global OWNED
+    ap=argparse.ArgumentParser();ap.add_argument('--mode',choices=MODES,required=True)
+    ap.add_argument('--out',type=Path,required=True);ap.add_argument('--resume',action='store_true');a=ap.parse_args()
+    out=a.out.resolve();mode=a.mode;spec=MODES[mode];c=spec['c'];target=spec['target'];length=spec['length']
+    if (out/'fold_5_report.json').exists():raise RuntimeError('Completed run is immutable')
+    if (out/'config.json').exists() and not a.resume:raise RuntimeError('Explicit resume required')
+    out.mkdir(parents=True,exist_ok=True);OWNED=out
+    torch.set_num_threads(3);print('ADMISSION',check_slot(min_free_gib=3.5),flush=True)
+    atomic_json(out/'runtime_status.json',dict(status='running',pid=os.getpid(),mode=mode,target=target,atlas_current_trial=True))
+    signal.signal(signal.SIGINT,stop_request);signal.signal(signal.SIGTERM,stop_request)
+    start=time.perf_counter();random.seed(20261010);np.random.seed(20261010);torch.manual_seed(20261010)
+    torch.use_deterministic_algorithms(True,warn_only=True);torch.backends.cudnn.benchmark=False
+    data,metadata=load_data();reference=reference_prediction();refs=json.loads((PREVIOUS/'CURRENT_RECIPE.json').read_text(encoding='utf-8'))['scores']
+    model=Network(mode,metadata).cuda();prior=model.initialize_priors(data)
+    evaluator=Evaluator(data,metadata,c,reference)
+    atomic_json(out/'input_context_manifest.json',metadata['bank_manifest'])
+    initial_body=cpu_copy(model.body.state_dict())
+    initial_hash=hashlib.sha256(b''.join(v.detach().cpu().numpy().tobytes() for v in model.state_dict().values())).hexdigest()
+    sources=[Path(__file__)]+[Path(__file__).with_name(n) for n in ('well_memory_v47.py','well_conditioned_v46.py','divergent_models_v45.py','train_scaling_v21.py','independent_sw_scratch_v10.py','por_t3_patch_loss.py','multiscale_sequence.py')]
+    cfg=dict(mode=mode,target=target,screening_fold=5,model_module='well_memory_v47',
+        trainable_parameters=sum(p.numel() for p in model.parameters()),random_network_initialization=False,
+        loaded_network_weights=True,old_predictions_as_input=False,only_own_target_labels=True,
+        input_features=206,input_variant='original206 plus input-only whole-well128 bank; no well ID feature',
+        window_length=length,central_supervised_points=128,validation_stride=128,validation_batch=16,
+        quality=data['qinfo'],decoder='original physical256 support/800 actions+default; own Student3 POR or Gaussian SW density',
+        density_components=8,initialization=prior,initial_state_sha256=initial_hash,reference_scores=refs,
+        epochs=80,patience=18,minimum_epochs=10,batch_size=64,steps_per_epoch=64,seed=20261010,
+        lr=1e-4,eta_min=1e-5,weight_decay=.01,clip_norm=2.,
+        reconstruction=dict(weight=.1 if mode=='curve_axial' else 0.,mask_probability=.25 if mode=='curve_axial' else 0.,patch_points=8,
+            train_input_only=True,joint_training_not_pretrain=True,masked_alias_bypass=False),
+        source_hashes={p.name:hashlib.sha256(p.read_bytes()).hexdigest() for p in sources},
+        training_rows=len(data['train_raw']),validation_rows=len(data['validation']),preprocessing_fit='original64trainingwells',
+        training_data_cache='results/deep_learning/champion_scaling_v21_20260928/prepared_data.pt',
+        base_preprocessing_metadata_only=True,matched_context_comparison=True,query_comparison="section token versus same-section pooled token; same current-well memory",task_specific_memory=True,unmatched_architecture_and_target_comparison=False,bank_manifest=metadata['bank_manifest'],conditioning_bound=.5,all_backbone_and_head_trainable=True,
+        deterministic_mode='warn_only; no bitwise retraining claim',remaining_folds_started=False,complete_five_folds=False)
+    if a.resume:assert json.loads((out/'config.json').read_text(encoding='utf-8'))==cfg
+    else:atomic_json(out/'config.json',cfg)
+    optimizer=torch.optim.AdamW(model.parameters(),lr=1e-4,weight_decay=.01)
+    scheduler=torch.optim.lr_scheduler.CosineAnnealingLR(optimizer,80*64,eta_min=1e-5)
+    windows=torch.Generator(device='cuda').manual_seed(20261010)
+    masks=torch.Generator(device='cuda').manual_seed(20261145)
+    epoch=0;elapsed=0.;history=[];timings=[];proof=None;bad=0
+    if a.resume:
+        state=torch.load(out/'last_state.pt',map_location='cpu',weights_only=False);assert state['config']==cfg
+        model.load_state_dict(state['current']);optimizer.load_state_dict(state['optimizer']);scheduler.load_state_dict(state['scheduler'])
+        epoch=state['epoch'];elapsed=state['seconds'];history=state['history'];timings=state['timings'];proof=state['proof']
+        best=state['best'];best_epoch=state['best_epoch'];best_state=state['best_state'];best_pred=state['best_pred'];bad=state['bad']
+        torch.set_rng_state(state['rng']['torch']);torch.cuda.set_rng_state_all(state['rng']['cuda']);windows.set_state(state['rng']['windows']);masks.set_state(state['rng']['masks'])
+        np.random.set_state(state['rng']['numpy']);random.setstate(state['rng']['python'])
+    else:
+        pred,score,scores=evaluator(model)
+        assert np.array_equal(pred,reference[:,c]) and abs(score-refs[target])<1e-9
+        best=score;best_epoch=0;best_state=cpu_copy(model.state_dict());best_pred=pred.copy()
+        atomic_json(out/'initial.json',dict(target_score=score,reference_replacement_scores=scores,initialization=prior,all144665_parent_exact=True))
+        print('INITIAL',json.dumps(dict(target=target,score=score,parameters=cfg['trainable_parameters'],length=length)),flush=True)
+    def persist():
+        atomic_torch(out/'model_best.pt',dict(state_dict=best_state,config=cfg,best_epoch=best_epoch,target_score=best))
+        atomic_array(out/'channel_pred.npy',best_pred);atomic_json(out/'validation_history.json',history)
+        atomic_torch(out/'last_state.pt',dict(config=cfg,current=cpu_copy(model.state_dict()),optimizer=cpu_copy(optimizer.state_dict()),scheduler=scheduler.state_dict(),
+            epoch=epoch,seconds=elapsed+time.perf_counter()-start,history=history,timings=timings,proof=proof,
+            best=best,best_epoch=best_epoch,best_state=best_state,best_pred=best_pred,bad=bad,
+            rng=dict(torch=torch.get_rng_state(),cuda=torch.cuda.get_rng_state_all(),windows=windows.get_state(),masks=masks.get_state(),numpy=np.random.get_state(),python=random.getstate())))
+    persist();torch.cuda.reset_peak_memory_stats();core=torch.zeros((1,length),device='cuda',dtype=torch.bool);core[:,length//2-64:length//2+64]=True
+    reason=None;maskinfo=None
+    for ep in range(epoch+1,81):
+        if STOP:break
+        # Explicit evidence-based cancellation at an atomic completed-epoch boundary.
+        if epoch>=10 and (out/'stop_requested.json').exists():
+            request=json.loads((out/'stop_requested.json').read_text(encoding='utf-8-sig'));reason='evidence_stop: '+request['reason'];break
+        tick=time.perf_counter();model.train();losses=nlls=auxs=0.
+        for step in range(64):
+            anchors=data['train_raw'][torch.randint(len(data['train_raw']),(64,),device='cuda',generator=windows)]
+            ix,valid=window_indices(anchors,data['lower'],data['upper'],length=length)
+            relative=torch.tanh((data['depth'][ix]-data['depth'][anchors,None])/10);mask=valid&core&data['labeled'][ix]
+            optimizer.zero_grad(set_to_none=True)
+            with torch.autocast('cuda',dtype=torch.bfloat16):
+                output,aux,maskinfo=model(data['x'][ix],relative,valid,return_aux=True,well_inputs=data['well_bank'][data['row_well'][anchors]])
+            nll,_,_=channel_objective(output,data['labels'][ix],data['default'][ix],mask,data['quality'][ix],c)
+            loss=nll+cfg['reconstruction']['weight']*aux
+            if not bool(torch.isfinite(loss)):raise FloatingPointError('Nonfinite own-target loss')
+            loss.backward()
+            if proof is None and step==1:
+                grads={}
+                for group in ('body.','output.','condition.','memory.'):
+                    values=[p.grad.detach().float().square().sum() for n,p in model.named_parameters() if n.startswith(group) and p.grad is not None]
+                    grads[group]=float(torch.stack(values).sum().sqrt())
+                assert all(np.isfinite(v) and v>0 for v in grads.values())
+                proof=dict(gradient_norms=grads,own_target=target,first_actual_second_step=True,maskinfo=maskinfo,train_raw_anchors_only=True)
+                atomic_json(out/'gradient_scope.json',proof)
+            torch.nn.utils.clip_grad_norm_(model.parameters(),2.,error_if_nonfinite=True);optimizer.step();scheduler.step()
+            losses+=float(loss.detach());nlls+=float(nll.detach());auxs+=float(aux.detach())
+        epoch=ep;pred,score,scores=evaluator(model)
+        if score>best:best=score;best_epoch=ep;best_state=cpu_copy(model.state_dict());best_pred=pred.copy();bad=0
+        else:bad+=1
+        history.append(dict(epoch=ep,target_score=score,reference_replacement_total=scores['TOTAL'],best=best,best_epoch=best_epoch,bad=bad,
+            loss=losses/64,own_nll=nlls/64,reconstruction=auxs/64,lr=optimizer.param_groups[0]['lr'],last_maskinfo=maskinfo))
+        timings.append(dict(epoch=ep,seconds=time.perf_counter()-tick));persist()
+        atomic_json(out/'runtime_status.json',dict(status='running',pid=os.getpid(),mode=mode,target=target,last_completed_epoch=ep,best=best,best_epoch=best_epoch,bad=bad,
+            peak_allocated_MiB=torch.cuda.max_memory_allocated()/2**20,atlas_current_trial=True))
+        print('EPOCH',json.dumps(history[-1]|dict(seconds=timings[-1]['seconds'],peak_allocated_MiB=torch.cuda.max_memory_allocated()/2**20)),flush=True)
+        if ep>=10 and bad>=18:reason='patience18';break
+        if ep==80:reason='budget80'
+    if STOP:
+        atomic_json(out/'runtime_status.json',dict(status='stopped_by_user',pid=os.getpid(),explicit_resume_required=True));return
+    assert reason is not None
+    model.load_state_dict(best_state);pred,score,scores=evaluator(model)
+    assert np.array_equal(pred,best_pred) and abs(score-best)<1e-9
+    change=float(sum((v.detach().cpu().double()-initial_body[n].double()).square().sum() for n,v in model.body.state_dict().items() if v.is_floating_point()).sqrt())
+    report=dict(target=target,mode=mode,screening_fold=5,target_score=score,reference_replacement_scores=scores,delta_reference_target=score-refs[target],
+        best_epoch=best_epoch,stopped_epoch=epoch,stop_reason=reason,trainable_parameters=cfg['trainable_parameters'],all144665_selected_predictions_restored_exactly=True,
+        selected_body_parameter_change_L2=change,conditioning_output_norm=float(model.condition.output.weight.detach().float().norm()),memory_projection_norms=[float(p.weight.detach().float().norm()) for p in model.memory.projections],gradient_scope=proof,checkpoint=str((out/'model_best.pt').relative_to(ROOT)),reference_scores=refs,
+        seconds=elapsed+time.perf_counter()-start,peak_allocated_MiB=torch.cuda.max_memory_allocated()/2**20,epoch_timing=timings,
+        random_network_initialization=False,complete_five_folds=False,remaining_folds_started=False,finished_at=datetime.now().astimezone().isoformat())
+    atomic_json(out/'fold_5_report.json',report);atomic_json(out/'runtime_status.json',dict(status='complete',pid=os.getpid(),mode=mode,best=best,best_epoch=best_epoch,atlas_current_trial=False))
+    print('FINAL',json.dumps({k:v for k,v in report.items() if k!='epoch_timing'}),flush=True)
+
+if __name__=='__main__':
+    try:main()
+    except BaseException as exc:
+        if OWNED is not None:
+            event=dict(status='failed',pid=os.getpid(),error=repr(exc),traceback=traceback.format_exc(),automatic_resume=False,atlas_current_trial=False)
+            atomic_json(OWNED/'failure.json',event);atomic_json(OWNED/'runtime_status.json',event)
+        raise

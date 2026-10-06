@@ -1,0 +1,32 @@
+{
+  "diagnostic_only": true,
+  "not_row_selection": true,
+  "default_rows": 100786,
+  "continuous_rows": 43879,
+  "scores": {
+    "SW104": {
+      "default": 98.71563225845625,
+      "continuous": 17.631889060480088,
+      "overall": 74.12175282815869,
+      "continuous_zero_fraction": 0.6661728845233483
+    },
+    "SW252": {
+      "default": 98.64493054166374,
+      "continuous": 17.884868139910104,
+      "overall": 74.14922820781278,
+      "continuous_zero_fraction": 0.6639166799608013
+    },
+    "ordinary": {
+      "default": 98.65618782716787,
+      "continuous": 17.770924133590587,
+      "overall": 74.12251011928777,
+      "continuous_zero_fraction": 0.6643952688074022
+    },
+    "balanced": {
+      "default": 98.7661680040883,
+      "continuous": 17.586257646102915,
+      "overall": 74.14311967451279,
+      "continuous_zero_fraction": 0.6669021627657877
+    }
+  }
+}

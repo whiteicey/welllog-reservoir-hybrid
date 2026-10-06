@@ -1,0 +1,1 @@
+Maintain PROJECTS/README/EXPLORATIONS/atlas. Only calibration/features arms, ownPOR loss and unchanged splits/scoring/train-only fitting. normal/max2GPU,80/18,5 total training phases incl source/parent. Frozen coefficient tensors may change functions via updated features; report honestly. Atomic states explicit resume, no otherfolds/old-source/delivery edits.

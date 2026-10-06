@@ -1,0 +1,401 @@
+{
+  "fold": 5,
+  "rows": 144665,
+  "source_scores": {
+    "POR": 77.44891570750882,
+    "PERM": 89.3475027344081,
+    "SW": 73.62238476712884,
+    "TOTAL": 80.27413533779057
+  },
+  "candidates": [
+    {
+      "mode": "base1",
+      "parameters": 1290490,
+      "added_parameters": 0,
+      "location_hidden_width": 32,
+      "scores": {
+        "POR": 77.44891570750882,
+        "PERM": 89.3475027344081,
+        "SW": 73.62238476712884,
+        "TOTAL": 80.27413533779057
+      },
+      "delta_champion_TOTAL": 0.0,
+      "best_epoch": 0,
+      "stopped_epoch": 18,
+      "best_after_update_epoch": 1,
+      "best_after_update_POR": 77.1881799562864,
+      "best_after_update_TOTAL": 80.19591461242383,
+      "after_update_delta_champion": -0.07822072536673375,
+      "per_epoch_seconds_median": 10.332237000000532,
+      "run_seconds": 197.70473519999996,
+      "peak_allocated_MiB": 779.4150390625,
+      "last_backbone_change_L2": 0.7969816342901899,
+      "selected_backbone_change_L2": 0.0,
+      "checkpoint_bytes": 5305254,
+      "initial_predictions_exact": true,
+      "restored_predictions_exact": true,
+      "PERM_SW_arrays_exactly_unchanged": true,
+      "fresh_final_disk_inference": false,
+      "checkpoint_load_confirmed": true,
+      "checkpoint": "outputs/pure_dl_champion_scaling_v21_base1_fold5/model_best.pt",
+      "per_well": [
+        {
+          "well": 7,
+          "rows": 10219,
+          "delta_TOTAL": 0.0
+        },
+        {
+          "well": 8,
+          "rows": 9011,
+          "delta_TOTAL": 0.0
+        },
+        {
+          "well": 14,
+          "rows": 12078,
+          "delta_TOTAL": 0.0
+        },
+        {
+          "well": 16,
+          "rows": 8149,
+          "delta_TOTAL": 0.0
+        },
+        {
+          "well": 25,
+          "rows": 7739,
+          "delta_TOTAL": 0.0
+        },
+        {
+          "well": 34,
+          "rows": 10913,
+          "delta_TOTAL": 0.0
+        },
+        {
+          "well": 35,
+          "rows": 8348,
+          "delta_TOTAL": 0.0
+        },
+        {
+          "well": 37,
+          "rows": 9939,
+          "delta_TOTAL": 0.0
+        },
+        {
+          "well": 50,
+          "rows": 11874,
+          "delta_TOTAL": 0.0
+        },
+        {
+          "well": 54,
+          "rows": 9630,
+          "delta_TOTAL": 0.0
+        },
+        {
+          "well": 63,
+          "rows": 5639,
+          "delta_TOTAL": 0.0
+        },
+        {
+          "well": 69,
+          "rows": 9120,
+          "delta_TOTAL": 0.0
+        },
+        {
+          "well": 71,
+          "rows": 4709,
+          "delta_TOTAL": 0.0
+        },
+        {
+          "well": 72,
+          "rows": 9559,
+          "delta_TOTAL": 0.0
+        },
+        {
+          "well": 76,
+          "rows": 7109,
+          "delta_TOTAL": 0.0
+        },
+        {
+          "well": 79,
+          "rows": 10629,
+          "delta_TOTAL": 0.0
+        }
+      ]
+    },
+    {
+      "mode": "ffn2",
+      "parameters": 1981498,
+      "added_parameters": 691008,
+      "location_hidden_width": 64,
+      "scores": {
+        "POR": 77.44891570750882,
+        "PERM": 89.3475027344081,
+        "SW": 73.62238476712884,
+        "TOTAL": 80.27413533779057
+      },
+      "delta_champion_TOTAL": 0.0,
+      "best_epoch": 0,
+      "stopped_epoch": 18,
+      "best_after_update_epoch": 1,
+      "best_after_update_POR": 77.18555674437513,
+      "best_after_update_TOTAL": 80.19512764885046,
+      "after_update_delta_champion": -0.07900768894010923,
+      "per_epoch_seconds_median": 11.895594099999926,
+      "run_seconds": 222.36412139999993,
+      "peak_allocated_MiB": 837.630859375,
+      "last_backbone_change_L2": 1.0244457195790992,
+      "selected_backbone_change_L2": 0.0,
+      "checkpoint_bytes": 8088598,
+      "initial_predictions_exact": true,
+      "restored_predictions_exact": true,
+      "PERM_SW_arrays_exactly_unchanged": true,
+      "fresh_final_disk_inference": false,
+      "checkpoint_load_confirmed": true,
+      "checkpoint": "outputs/pure_dl_champion_scaling_v21_ffn2_fold5/model_best.pt",
+      "per_well": [
+        {
+          "well": 7,
+          "rows": 10219,
+          "delta_TOTAL": 0.0
+        },
+        {
+          "well": 8,
+          "rows": 9011,
+          "delta_TOTAL": 0.0
+        },
+        {
+          "well": 14,
+          "rows": 12078,
+          "delta_TOTAL": 0.0
+        },
+        {
+          "well": 16,
+          "rows": 8149,
+          "delta_TOTAL": 0.0
+        },
+        {
+          "well": 25,
+          "rows": 7739,
+          "delta_TOTAL": 0.0
+        },
+        {
+          "well": 34,
+          "rows": 10913,
+          "delta_TOTAL": 0.0
+        },
+        {
+          "well": 35,
+          "rows": 8348,
+          "delta_TOTAL": 0.0
+        },
+        {
+          "well": 37,
+          "rows": 9939,
+          "delta_TOTAL": 0.0
+        },
+        {
+          "well": 50,
+          "rows": 11874,
+          "delta_TOTAL": 0.0
+        },
+        {
+          "well": 54,
+          "rows": 9630,
+          "delta_TOTAL": 0.0
+        },
+        {
+          "well": 63,
+          "rows": 5639,
+          "delta_TOTAL": 0.0
+        },
+        {
+          "well": 69,
+          "rows": 9120,
+          "delta_TOTAL": 0.0
+        },
+        {
+          "well": 71,
+          "rows": 4709,
+          "delta_TOTAL": 0.0
+        },
+        {
+          "well": 72,
+          "rows": 9559,
+          "delta_TOTAL": 0.0
+        },
+        {
+          "well": 76,
+          "rows": 7109,
+          "delta_TOTAL": 0.0
+        },
+        {
+          "well": 79,
+          "rows": 10629,
+          "delta_TOTAL": 0.0
+        }
+      ]
+    },
+    {
+      "mode": "ffn4",
+      "parameters": 3363514,
+      "added_parameters": 2073024,
+      "location_hidden_width": 128,
+      "scores": {
+        "POR": 77.44891570750882,
+        "PERM": 89.3475027344081,
+        "SW": 73.62238476712884,
+        "TOTAL": 80.27413533779057
+      },
+      "delta_champion_TOTAL": 0.0,
+      "best_epoch": 0,
+      "stopped_epoch": 18,
+      "best_after_update_epoch": 1,
+      "best_after_update_POR": 77.16566764721934,
+      "best_after_update_TOTAL": 80.18916091970372,
+      "after_update_delta_champion": -0.08497441808684414,
+      "per_epoch_seconds_median": 9.262921049999932,
+      "run_seconds": 179.0264141000007,
+      "peak_allocated_MiB": 963.3349609375,
+      "last_backbone_change_L2": 1.3624523638844739,
+      "selected_backbone_change_L2": 0.0,
+      "checkpoint_bytes": 13616790,
+      "initial_predictions_exact": true,
+      "restored_predictions_exact": true,
+      "PERM_SW_arrays_exactly_unchanged": true,
+      "fresh_final_disk_inference": false,
+      "checkpoint_load_confirmed": true,
+      "checkpoint": "outputs/pure_dl_champion_scaling_v21_ffn4_fold5/model_best.pt",
+      "per_well": [
+        {
+          "well": 7,
+          "rows": 10219,
+          "delta_TOTAL": 0.0
+        },
+        {
+          "well": 8,
+          "rows": 9011,
+          "delta_TOTAL": 0.0
+        },
+        {
+          "well": 14,
+          "rows": 12078,
+          "delta_TOTAL": 0.0
+        },
+        {
+          "well": 16,
+          "rows": 8149,
+          "delta_TOTAL": 0.0
+        },
+        {
+          "well": 25,
+          "rows": 7739,
+          "delta_TOTAL": 0.0
+        },
+        {
+          "well": 34,
+          "rows": 10913,
+          "delta_TOTAL": 0.0
+        },
+        {
+          "well": 35,
+          "rows": 8348,
+          "delta_TOTAL": 0.0
+        },
+        {
+          "well": 37,
+          "rows": 9939,
+          "delta_TOTAL": 0.0
+        },
+        {
+          "well": 50,
+          "rows": 11874,
+          "delta_TOTAL": 0.0
+        },
+        {
+          "well": 54,
+          "rows": 9630,
+          "delta_TOTAL": 0.0
+        },
+        {
+          "well": 63,
+          "rows": 5639,
+          "delta_TOTAL": 0.0
+        },
+        {
+          "well": 69,
+          "rows": 9120,
+          "delta_TOTAL": 0.0
+        },
+        {
+          "well": 71,
+          "rows": 4709,
+          "delta_TOTAL": 0.0
+        },
+        {
+          "well": 72,
+          "rows": 9559,
+          "delta_TOTAL": 0.0
+        },
+        {
+          "well": 76,
+          "rows": 7109,
+          "delta_TOTAL": 0.0
+        },
+        {
+          "well": 79,
+          "rows": 10629,
+          "delta_TOTAL": 0.0
+        }
+      ]
+    }
+  ],
+  "comparisons": [
+    {
+      "mode": "base1",
+      "parameter_ratio": 1.0,
+      "selected_TOTAL_delta_vs_control": 0.0,
+      "after_update_TOTAL_delta_vs_control": 0.0
+    },
+    {
+      "mode": "ffn2",
+      "parameter_ratio": 1.5354617238413315,
+      "selected_TOTAL_delta_vs_control": 0.0,
+      "after_update_TOTAL_delta_vs_control": -0.0007869635733754876
+    },
+    {
+      "mode": "ffn4",
+      "parameter_ratio": 2.606385171523995,
+      "selected_TOTAL_delta_vs_control": 0.0,
+      "after_update_TOTAL_delta_vs_control": -0.0067536927201103936
+    }
+  ],
+  "selected_scores": {
+    "POR": 77.44891570750882,
+    "PERM": 89.3475027344081,
+    "SW": 73.62238476712884,
+    "TOTAL": 80.27413533779057
+  },
+  "selected_new_POR": false,
+  "fixed_other_predictions_reused": true,
+  "all_trainers_replayed_selected_predictions": true,
+  "trained_sources_unchanged": true,
+  "no_other_folds": true,
+  "complete_five_folds": false,
+  "timing": {
+    "execution": "first two concurrent; third explicitly launched when slot available",
+    "maximum_jobs": 2,
+    "first_launch_to_last_finish_seconds": 452.510357,
+    "per_run_seconds": {
+      "base1": 197.70473519999996,
+      "ffn2": 222.36412139999993,
+      "ffn4": 179.0264141000007
+    },
+    "epoch_seconds_median": {
+      "base1": 10.332237000000532,
+      "ffn2": 11.895594099999926,
+      "ffn4": 9.262921049999932
+    },
+    "preparation_seconds": 46.750898000000234,
+    "caution": "Epoch times include64updates,validation,checkpoint I/O; workloads overlap differently, not controlled throughput benchmarking. Wall includes explicit launch gaps, excludes code and prior data preparation."
+  },
+  "finished_at": "2026-09-28T21:18:10.255720+08:00"
+}

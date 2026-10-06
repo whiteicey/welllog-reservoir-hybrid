@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "prelaunch_no_GPU_trainers": true,
+  "explicit_user_approved": true,
+  "both_recovery_readbacks_exact": true,
+  "exact_last_states_preserved": true,
+  "prepared_controller_sha_exact": true,
+  "maximum_GPU_jobs": 1,
+  "fullOOF_verified": false
+}

@@ -1,0 +1,738 @@
+{
+  "project": "sw_dropout_heads_v78_20260930",
+  "scope": "obsolete-study",
+  "weights_retained": false,
+  "cleanup": "Obsolete artifacts removed by explicit user request. These are historical scores, not newly verified training.",
+  "results": [
+    {
+      "source": "assembled_report.json",
+      "result": {
+        "reference_scores": {
+          "POR": 77.551936801885,
+          "PERM": 89.39672404936582,
+          "SW": 73.74042332286353,
+          "TOTAL": 80.36358262084578
+        },
+        "selected_scores": {
+          "POR": 77.551936801885,
+          "PERM": 89.39672404936582,
+          "SW": 73.74042332286353,
+          "TOTAL": 80.36358262084578
+        },
+        "delta_reference_TOTAL": 0.0,
+        "candidates": [
+          {
+            "mode": "shared",
+            "report": {
+              "target": "SW",
+              "mode": "shared",
+              "screening_fold": 5,
+              "target_score": 73.74042332286353,
+              "reference_replacement_scores": {
+                "POR": 77.551936801885,
+                "PERM": 89.39672404936582,
+                "SW": 73.74042332286353,
+                "TOTAL": 80.36358262084578
+              },
+              "delta_reference_target": 0.0,
+              "best_epoch": 0,
+              "stopped_epoch": 18,
+              "stop_reason": "patience18",
+              "trainable_parameters": 839481,
+              "all144665_selected_predictions_restored_exactly": true,
+              "selected_body_parameter_change_L2": 0.0,
+              "conditioning_output_norm": 5.628549098968506,
+              "checkpoint": "outputs\\pure_dl_sw_dropout_heads_v78_SW_shared_fold5\\model_best.pt",
+              "reference_scores": {
+                "POR": 77.551936801885,
+                "PERM": 89.39672404936582,
+                "SW": 73.74042332286353,
+                "TOTAL": 80.36358262084578
+              },
+              "seconds": 150.51196319999872,
+              "peak_allocated_MiB": 1267.0146484375,
+              "epoch_timing": [
+                {
+                  "epoch": 1,
+                  "seconds": 5.858831499994267
+                },
+                {
+                  "epoch": 2,
+                  "seconds": 5.349075299978722
+                },
+                {
+                  "epoch": 3,
+                  "seconds": 5.153275500022573
+                },
+                {
+                  "epoch": 4,
+                  "seconds": 5.025733499991475
+                },
+                {
+                  "epoch": 5,
+                  "seconds": 5.119804100017063
+                },
+                {
+                  "epoch": 6,
+                  "seconds": 5.780861000006553
+                },
+                {
+                  "epoch": 7,
+                  "seconds": 8.876442000007955
+                },
+                {
+                  "epoch": 8,
+                  "seconds": 8.665248100005556
+                },
+                {
+                  "epoch": 9,
+                  "seconds": 8.715315699984785
+                },
+                {
+                  "epoch": 10,
+                  "seconds": 8.489097500016214
+                },
+                {
+                  "epoch": 11,
+                  "seconds": 8.49490479999804
+                },
+                {
+                  "epoch": 12,
+                  "seconds": 8.441602999984752
+                },
+                {
+                  "epoch": 13,
+                  "seconds": 8.585870400012936
+                },
+                {
+                  "epoch": 14,
+                  "seconds": 9.021247600001516
+                },
+                {
+                  "epoch": 15,
+                  "seconds": 9.20350140001392
+                },
+                {
+                  "epoch": 16,
+                  "seconds": 9.212315700016916
+                },
+                {
+                  "epoch": 17,
+                  "seconds": 8.91243610001402
+                },
+                {
+                  "epoch": 18,
+                  "seconds": 8.65592230000766
+                }
+              ],
+              "random_network_initialization": false,
+              "complete_five_folds": false,
+              "remaining_folds_started": false,
+              "finished_at": "2026-09-30T09:25:54.443496+08:00"
+            },
+            "initial": {
+              "target_score": 73.74042332286353,
+              "reference_replacement_scores": {
+                "POR": 77.551936801885,
+                "PERM": 89.39672404936582,
+                "SW": 73.74042332286353,
+                "TOTAL": 80.36358262084578
+              },
+              "initialization": {
+                "checkpoint": "outputs\\pure_dl_sw_dropout_extend_v77_SW_p40_fold5\\model_best.pt",
+                "best_epoch": 25,
+                "target_score": 73.74042332286353,
+                "initialization": "complete v77 p40 SW function, no prior reset",
+                "optimizer_reset": true,
+                "all_network_trainable": true,
+                "added_parameters": 0,
+                "training_key_drop_probability": 0.4,
+                "key_mask_sharing": "shared",
+                "all_dropped_fallback": "per head original valid keys",
+                "evaluation_key_drop_probability": 0.0,
+                "new_learning_rate": 3e-05
+              },
+              "all144665_parent_exact": true,
+              "initial_head_prior_only": false
+            },
+            "diagnostics": {
+              "scores": {
+                "POR": 77.551936801885,
+                "PERM": 89.39672404936582,
+                "SW": 73.74042332286353,
+                "TOTAL": 80.36358262084578
+              },
+              "channel_delta": 0.0,
+              "TOTAL_delta": 0.0,
+              "populations": {
+                "default": {
+                  "n": 100786,
+                  "reference": 97.3660809760672,
+                  "candidate": 97.3660809760672,
+                  "channel_delta": 0.0,
+                  "TOTAL_contribution": 0.0
+                },
+                "numeric": {
+                  "n": 43879,
+                  "reference": 19.474475324146077,
+                  "candidate": 19.474475324146077,
+                  "channel_delta": 0.0,
+                  "TOTAL_contribution": 0.0
+                }
+              },
+              "well_wins": 0,
+              "well_losses": 0,
+              "per_well": [
+                {
+                  "well": 7,
+                  "n": 10219,
+                  "channel_delta": 0.0
+                },
+                {
+                  "well": 8,
+                  "n": 9011,
+                  "channel_delta": 0.0
+                },
+                {
+                  "well": 14,
+                  "n": 12078,
+                  "channel_delta": 0.0
+                },
+                {
+                  "well": 16,
+                  "n": 8149,
+                  "channel_delta": 0.0
+                },
+                {
+                  "well": 25,
+                  "n": 7739,
+                  "channel_delta": 0.0
+                },
+                {
+                  "well": 34,
+                  "n": 10913,
+                  "channel_delta": 0.0
+                },
+                {
+                  "well": 35,
+                  "n": 8348,
+                  "channel_delta": 0.0
+                },
+                {
+                  "well": 37,
+                  "n": 9939,
+                  "channel_delta": 0.0
+                },
+                {
+                  "well": 50,
+                  "n": 11874,
+                  "channel_delta": 0.0
+                },
+                {
+                  "well": 54,
+                  "n": 9630,
+                  "channel_delta": 0.0
+                },
+                {
+                  "well": 63,
+                  "n": 5639,
+                  "channel_delta": 0.0
+                },
+                {
+                  "well": 69,
+                  "n": 9120,
+                  "channel_delta": 0.0
+                },
+                {
+                  "well": 71,
+                  "n": 4709,
+                  "channel_delta": 0.0
+                },
+                {
+                  "well": 72,
+                  "n": 9559,
+                  "channel_delta": 0.0
+                },
+                {
+                  "well": 76,
+                  "n": 7109,
+                  "channel_delta": 0.0
+                },
+                {
+                  "well": 79,
+                  "n": 10629,
+                  "channel_delta": 0.0
+                }
+              ],
+              "exploratory_selection_unadjusted_TOTAL_95": [
+                0.0,
+                0.0
+              ]
+            },
+            "best_after_update": {
+              "epoch": 2,
+              "target_score": 73.38031756136019,
+              "reference_replacement_total": 80.23754560431959,
+              "best": 73.74042332286353,
+              "best_epoch": 0,
+              "bad": 2,
+              "own_nll": 0.01183772815784323,
+              "reconstruction": 0.0,
+              "lr": 2.99691733373315e-05
+            }
+          },
+          {
+            "mode": "per_head",
+            "report": {
+              "target": "SW",
+              "mode": "per_head",
+              "screening_fold": 5,
+              "target_score": 73.74042332286353,
+              "reference_replacement_scores": {
+                "POR": 77.551936801885,
+                "PERM": 89.39672404936582,
+                "SW": 73.74042332286353,
+                "TOTAL": 80.36358262084578
+              },
+              "delta_reference_target": 0.0,
+              "best_epoch": 0,
+              "stopped_epoch": 18,
+              "stop_reason": "patience18",
+              "trainable_parameters": 839481,
+              "all144665_selected_predictions_restored_exactly": true,
+              "selected_body_parameter_change_L2": 0.0,
+              "conditioning_output_norm": 5.628549098968506,
+              "checkpoint": "outputs\\pure_dl_sw_dropout_heads_v78_SW_per_head_fold5\\model_best.pt",
+              "reference_scores": {
+                "POR": 77.551936801885,
+                "PERM": 89.39672404936582,
+                "SW": 73.74042332286353,
+                "TOTAL": 80.36358262084578
+              },
+              "seconds": 137.72319759998936,
+              "peak_allocated_MiB": 1267.0146484375,
+              "epoch_timing": [
+                {
+                  "epoch": 1,
+                  "seconds": 8.596460700005991
+                },
+                {
+                  "epoch": 2,
+                  "seconds": 8.22740010000416
+                },
+                {
+                  "epoch": 3,
+                  "seconds": 8.075982100010151
+                },
+                {
+                  "epoch": 4,
+                  "seconds": 7.798328200005926
+                },
+                {
+                  "epoch": 5,
+                  "seconds": 7.910009700019145
+                },
+                {
+                  "epoch": 6,
+                  "seconds": 7.944485700019868
+                },
+                {
+                  "epoch": 7,
+                  "seconds": 7.983057200006442
+                },
+                {
+                  "epoch": 8,
+                  "seconds": 8.025352199998451
+                },
+                {
+                  "epoch": 9,
+                  "seconds": 8.7089866999886
+                },
+                {
+                  "epoch": 10,
+                  "seconds": 8.54223429999547
+                },
+                {
+                  "epoch": 11,
+                  "seconds": 8.897920399991563
+                },
+                {
+                  "epoch": 12,
+                  "seconds": 8.637580100010382
+                },
+                {
+                  "epoch": 13,
+                  "seconds": 7.674800899985712
+                },
+                {
+                  "epoch": 14,
+                  "seconds": 4.637931699980982
+                },
+                {
+                  "epoch": 15,
+                  "seconds": 4.352412199979881
+                },
+                {
+                  "epoch": 16,
+                  "seconds": 4.007513899996411
+                },
+                {
+                  "epoch": 17,
+                  "seconds": 4.1957309000135865
+                },
+                {
+                  "epoch": 18,
+                  "seconds": 4.065364300011424
+                }
+              ],
+              "random_network_initialization": false,
+              "complete_five_folds": false,
+              "remaining_folds_started": false,
+              "finished_at": "2026-09-30T09:26:15.972220+08:00"
+            },
+            "initial": {
+              "target_score": 73.74042332286353,
+              "reference_replacement_scores": {
+                "POR": 77.551936801885,
+                "PERM": 89.39672404936582,
+                "SW": 73.74042332286353,
+                "TOTAL": 80.36358262084578
+              },
+              "initialization": {
+                "checkpoint": "outputs\\pure_dl_sw_dropout_extend_v77_SW_p40_fold5\\model_best.pt",
+                "best_epoch": 25,
+                "target_score": 73.74042332286353,
+                "initialization": "complete v77 p40 SW function, no prior reset",
+                "optimizer_reset": true,
+                "all_network_trainable": true,
+                "added_parameters": 0,
+                "training_key_drop_probability": 0.4,
+                "key_mask_sharing": "per_head",
+                "all_dropped_fallback": "per head original valid keys",
+                "evaluation_key_drop_probability": 0.0,
+                "new_learning_rate": 3e-05
+              },
+              "all144665_parent_exact": true,
+              "initial_head_prior_only": false
+            },
+            "diagnostics": {
+              "scores": {
+                "POR": 77.551936801885,
+                "PERM": 89.39672404936582,
+                "SW": 73.74042332286353,
+                "TOTAL": 80.36358262084578
+              },
+              "channel_delta": 0.0,
+              "TOTAL_delta": 0.0,
+              "populations": {
+                "default": {
+                  "n": 100786,
+                  "reference": 97.3660809760672,
+                  "candidate": 97.3660809760672,
+                  "channel_delta": 0.0,
+                  "TOTAL_contribution": 0.0
+                },
+                "numeric": {
+                  "n": 43879,
+                  "reference": 19.474475324146077,
+                  "candidate": 19.474475324146077,
+                  "channel_delta": 0.0,
+                  "TOTAL_contribution": 0.0
+                }
+              },
+              "well_wins": 0,
+              "well_losses": 0,
+              "per_well": [
+                {
+                  "well": 7,
+                  "n": 10219,
+                  "channel_delta": 0.0
+                },
+                {
+                  "well": 8,
+                  "n": 9011,
+                  "channel_delta": 0.0
+                },
+                {
+                  "well": 14,
+                  "n": 12078,
+                  "channel_delta": 0.0
+                },
+                {
+                  "well": 16,
+                  "n": 8149,
+                  "channel_delta": 0.0
+                },
+                {
+                  "well": 25,
+                  "n": 7739,
+                  "channel_delta": 0.0
+                },
+                {
+                  "well": 34,
+                  "n": 10913,
+                  "channel_delta": 0.0
+                },
+                {
+                  "well": 35,
+                  "n": 8348,
+                  "channel_delta": 0.0
+                },
+                {
+                  "well": 37,
+                  "n": 9939,
+                  "channel_delta": 0.0
+                },
+                {
+                  "well": 50,
+                  "n": 11874,
+                  "channel_delta": 0.0
+                },
+                {
+                  "well": 54,
+                  "n": 9630,
+                  "channel_delta": 0.0
+                },
+                {
+                  "well": 63,
+                  "n": 5639,
+                  "channel_delta": 0.0
+                },
+                {
+                  "well": 69,
+                  "n": 9120,
+                  "channel_delta": 0.0
+                },
+                {
+                  "well": 71,
+                  "n": 4709,
+                  "channel_delta": 0.0
+                },
+                {
+                  "well": 72,
+                  "n": 9559,
+                  "channel_delta": 0.0
+                },
+                {
+                  "well": 76,
+                  "n": 7109,
+                  "channel_delta": 0.0
+                },
+                {
+                  "well": 79,
+                  "n": 10629,
+                  "channel_delta": 0.0
+                }
+              ],
+              "exploratory_selection_unadjusted_TOTAL_95": [
+                0.0,
+                0.0
+              ]
+            },
+            "best_after_update": {
+              "epoch": 7,
+              "target_score": 73.35604608284422,
+              "reference_replacement_total": 80.22905058683901,
+              "best": 73.74042332286353,
+              "best_epoch": 0,
+              "bad": 7,
+              "own_nll": 0.00624775581582071,
+              "reconstruction": 0.0,
+              "lr": 2.9624552364537207e-05
+            }
+          }
+        ],
+        "per_head_minus_shared": {
+          "scores": {
+            "POR": 77.551936801885,
+            "PERM": 89.39672404936582,
+            "SW": 73.74042332286353,
+            "TOTAL": 80.36358262084578
+          },
+          "channel_delta": 0.0,
+          "TOTAL_delta": 0.0,
+          "populations": {
+            "default": {
+              "n": 100786,
+              "reference": 97.3660809760672,
+              "candidate": 97.3660809760672,
+              "channel_delta": 0.0,
+              "TOTAL_contribution": 0.0
+            },
+            "numeric": {
+              "n": 43879,
+              "reference": 19.474475324146077,
+              "candidate": 19.474475324146077,
+              "channel_delta": 0.0,
+              "TOTAL_contribution": 0.0
+            }
+          },
+          "well_wins": 0,
+          "well_losses": 0,
+          "per_well": [
+            {
+              "well": 7,
+              "n": 10219,
+              "channel_delta": 0.0
+            },
+            {
+              "well": 8,
+              "n": 9011,
+              "channel_delta": 0.0
+            },
+            {
+              "well": 14,
+              "n": 12078,
+              "channel_delta": 0.0
+            },
+            {
+              "well": 16,
+              "n": 8149,
+              "channel_delta": 0.0
+            },
+            {
+              "well": 25,
+              "n": 7739,
+              "channel_delta": 0.0
+            },
+            {
+              "well": 34,
+              "n": 10913,
+              "channel_delta": 0.0
+            },
+            {
+              "well": 35,
+              "n": 8348,
+              "channel_delta": 0.0
+            },
+            {
+              "well": 37,
+              "n": 9939,
+              "channel_delta": 0.0
+            },
+            {
+              "well": 50,
+              "n": 11874,
+              "channel_delta": 0.0
+            },
+            {
+              "well": 54,
+              "n": 9630,
+              "channel_delta": 0.0
+            },
+            {
+              "well": 63,
+              "n": 5639,
+              "channel_delta": 0.0
+            },
+            {
+              "well": 69,
+              "n": 9120,
+              "channel_delta": 0.0
+            },
+            {
+              "well": 71,
+              "n": 4709,
+              "channel_delta": 0.0
+            },
+            {
+              "well": 72,
+              "n": 9559,
+              "channel_delta": 0.0
+            },
+            {
+              "well": 76,
+              "n": 7109,
+              "channel_delta": 0.0
+            },
+            {
+              "well": 79,
+              "n": 10629,
+              "channel_delta": 0.0
+            }
+          ],
+          "exploratory_selection_unadjusted_TOTAL_95": [
+            0.0,
+            0.0
+          ]
+        },
+        "post_update_per_head_minus_shared": -0.024271478515970557,
+        "adopted": false,
+        "retained": [],
+        "verification": [],
+        "initial_state_and_prediction_equal": true,
+        "actual_fixed_three_column_scoring": true,
+        "screening_fold": 5,
+        "rows": 144665,
+        "strict805_qualified": false,
+        "complete_five_folds": false,
+        "remaining_folds_started": false,
+        "finished_at": "2026-09-30T09:27:40.274561+08:00"
+      }
+    },
+    {
+      "source": "CURRENT_RECIPE.json",
+      "result": {
+        "scores": {
+          "POR": 77.551936801885,
+          "PERM": 89.39672404936582,
+          "SW": 73.74042332286353,
+          "TOTAL": 80.36358262084578
+        },
+        "choices": [
+          {
+            "target": "POR",
+            "key": "v31_POR_anchored",
+            "architecture": "same_bound_reparameterized_routes",
+            "target_score": 77.551936801885,
+            "best_epoch": 7,
+            "checkpoint": "outputs\\pure_dl_mechanism_v31_POR_fold5\\anchored\\model_best.pt",
+            "model_module": "por_reparam_v31",
+            "builder": "Network(target,master,modes=(mode,)); heads[mode].load_state_dict(checkpoint[delta_state]); SW master[v31_knots] from checkpoint config metadata",
+            "mode": "anchored",
+            "factor": "route_parameterization",
+            "parent_recipe": "results\\deep_learning\\champion_coadapt_v30_20260929\\CURRENT_RECIPE.json",
+            "retained_v28_checkpoint": "outputs\\pure_dl_champion_route_v28_POR_fold5\\conditional\\model_best.pt",
+            "retained_v29_checkpoint": "outputs\\pure_dl_split_route_v29_POR_fold5\\split\\model_best.pt"
+          },
+          {
+            "target": "PERM",
+            "key": "v29_PERM_coupled",
+            "architecture": "coupled_or_split_residual_routes",
+            "target_score": 89.39672404936582,
+            "best_epoch": 2,
+            "checkpoint": "outputs\\pure_dl_split_route_v29_PERM_fold5\\coupled\\model_best.pt",
+            "factor": "atom_conditional_routing",
+            "source_checkpoint": "outputs\\pure_dl_independent_v8_PERM_dual80_fold5\\model_best.pt",
+            "model_module": "champion_split_route_v29",
+            "builder": "Network(target,master,modes=(mode,)); heads[mode].load_state_dict(checkpoint[delta_state])",
+            "mode": "coupled",
+            "parent_recipe": "results\\deep_learning\\champion_route_v28_20260929\\CURRENT_RECIPE.json",
+            "retained_v28_checkpoint": "outputs\\pure_dl_champion_route_v28_PERM_fold5\\joint\\model_best.pt"
+          },
+          {
+            "target": "SW",
+            "mode": "p40",
+            "key": "v77_SW_p40",
+            "model_module": "sw_dropout_extend_v77",
+            "checkpoint": "outputs\\pure_dl_sw_dropout_extend_v77_SW_p40_fold5\\model_best.pt",
+            "target_score": 73.74042332286353,
+            "best_epoch": 25,
+            "builder": "load_data; Network(mode,metadata); saved state_dict; Evaluator c=2; unchanged Gaussian decoding",
+            "parent_recipe": "results\\deep_learning\\sw_dropout_rate_v76_20260930\\CURRENT_RECIPE.json"
+          }
+        ],
+        "source_preprocessing": "results/deep_learning/champion_scaling_v21_20260928/data_manifest.json",
+        "amplitude_metadata": "results/deep_learning/feature_structure_v20_20260928/feature_manifest.json",
+        "reference_recipe": "results\\deep_learning\\sw_dropout_extend_v77_20260930\\CURRENT_RECIPE.json",
+        "original_fifth_development_selection": true,
+        "complete_five_folds": false,
+        "remaining_folds_started": false,
+        "old_delivery_unchanged": true
+      }
+    }
+  ],
+  "cleanup_completed": true,
+  "deleted_files": 5,
+  "deleted_bytes": 3495198
+}

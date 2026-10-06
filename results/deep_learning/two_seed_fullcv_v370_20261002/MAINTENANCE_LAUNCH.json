@@ -1,0 +1,9 @@
+{
+  "pid": 6196,
+  "started_epoch": 1790927499.3683298,
+  "finite_sources": 8,
+  "interval_seconds": 30,
+  "GPU_work": false,
+  "launch_training": false,
+  "old_checkpoints_deleted": false
+}

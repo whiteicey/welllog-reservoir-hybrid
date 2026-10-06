@@ -1,0 +1,203 @@
+{
+  "observed_at": "2026-09-28T23:11:42.227579+08:00",
+  "rows": [
+    {
+      "mode": "amplitude",
+      "id": "pure_dl_champion_shape_v25_amplitude_fold5",
+      "status": {
+        "status": "complete",
+        "mode": "amplitude",
+        "pid": 24608,
+        "atlas_current_trial": false
+      },
+      "initial": {
+        "POR": 77.44891570750882,
+        "TOTAL": 80.27413533779057,
+        "all144665_initial_predictions_exact": true
+      },
+      "final": {
+        "fold": 5,
+        "screening_fold": 5,
+        "target": "POR",
+        "mode": "amplitude",
+        "scores": {
+          "POR": 77.52040144246696
+        },
+        "target_score": 77.52040144246696,
+        "reference_replacement_total": 80.295581058278,
+        "delta_reference_TOTAL": 0.021445720487434983,
+        "best_epoch": 36,
+        "stopped_epoch": 54,
+        "best_after_update": {
+          "epoch": 36,
+          "target_score": 77.52040144246696,
+          "reference_replacement_total": 80.295581058278
+        },
+        "initial": {
+          "POR": 77.44891570750882,
+          "TOTAL": 80.27413533779057,
+          "all144665_initial_predictions_exact": true
+        },
+        "trainable_parameters": 12816,
+        "total_parameters": 1303306,
+        "all_old_state_unchanged_before_and_after_restore": true,
+        "all144665_selected_predictions_restored_exactly": true,
+        "gradient_scope": {
+          "delta_input_gradient_norm": 0.0023427007254213095,
+          "delta_output_gradient_norm": 0.29977792501449585,
+          "all_old_parameter_gradients_none": true,
+          "POR_only_supervision": true,
+          "second_actual_step": true
+        },
+        "factor_identity": {
+          "training_windows": 2,
+          "gate_logits_exactly_unchanged": true,
+          "mixture_logits_exactly_unchanged": true,
+          "raw_scales_exactly_unchanged": true,
+          "selected_location_mean_absolute_change": 0.010772756300866604,
+          "selected_location_max_absolute_change": 0.12063214182853699,
+          "scope": "inference factor identity, no extra scoring candidate"
+        },
+        "last_new_parameter_change_L2": 3.5047873130537646,
+        "seconds": 274.87947839999833,
+        "peak_allocated_MiB": 714.36474609375,
+        "complete_five_folds": false,
+        "remaining_folds_started": false,
+        "finished_at": "2026-09-28T23:10:30.608080+08:00"
+      },
+      "latest": {
+        "epoch": 54,
+        "target_score": 77.50173442761647,
+        "reference_replacement_total": 80.28998095382286,
+        "best_target_score": 77.52040144246696,
+        "best_epoch": 36,
+        "bad_epochs": 18,
+        "training_loss": -0.09167447089566849,
+        "learning_rate": 7.238646457496591e-05,
+        "seconds": 4.257896500001152
+      },
+      "best_after_update": {
+        "epoch": 36,
+        "target_score": 77.52040144246696,
+        "reference_replacement_total": 80.295581058278,
+        "best_target_score": 77.52040144246696,
+        "best_epoch": 36,
+        "bad_epochs": 0,
+        "training_loss": -0.09741913975449279,
+        "learning_rate": 0.00017388695252351484,
+        "seconds": 4.462787100001151
+      },
+      "gradient_scope": {
+        "delta_input_gradient_norm": 0.0023427007254213095,
+        "delta_output_gradient_norm": 0.29977792501449585,
+        "all_old_parameter_gradients_none": true,
+        "POR_only_supervision": true,
+        "second_actual_step": true
+      },
+      "failure": null
+    },
+    {
+      "mode": "shape",
+      "id": "pure_dl_champion_shape_v25_shape_fold5",
+      "status": {
+        "status": "complete",
+        "mode": "shape",
+        "pid": 16476,
+        "atlas_current_trial": false
+      },
+      "initial": {
+        "POR": 77.44891570750882,
+        "TOTAL": 80.27413533779057,
+        "all144665_initial_predictions_exact": true
+      },
+      "final": {
+        "fold": 5,
+        "screening_fold": 5,
+        "target": "POR",
+        "mode": "shape",
+        "scores": {
+          "POR": 77.44891570750882
+        },
+        "target_score": 77.44891570750882,
+        "reference_replacement_total": 80.27413533779057,
+        "delta_reference_TOTAL": 0.0,
+        "best_epoch": 0,
+        "stopped_epoch": 18,
+        "best_after_update": {
+          "epoch": 3,
+          "target_score": 77.44079366036655,
+          "reference_replacement_total": 80.27169872364789
+        },
+        "initial": {
+          "POR": 77.44891570750882,
+          "TOTAL": 80.27413533779057,
+          "all144665_initial_predictions_exact": true
+        },
+        "trainable_parameters": 12816,
+        "total_parameters": 1303306,
+        "all_old_state_unchanged_before_and_after_restore": true,
+        "all144665_selected_predictions_restored_exactly": true,
+        "gradient_scope": {
+          "delta_input_gradient_norm": 0.0019495469750836492,
+          "delta_output_gradient_norm": 0.2802369296550751,
+          "all_old_parameter_gradients_none": true,
+          "POR_only_supervision": true,
+          "second_actual_step": true
+        },
+        "factor_identity": {
+          "training_windows": 2,
+          "gate_logits_exactly_unchanged": true,
+          "mixture_logits_exactly_unchanged": true,
+          "raw_scales_exactly_unchanged": true,
+          "selected_location_mean_absolute_change": 0.0,
+          "selected_location_max_absolute_change": 0.0,
+          "scope": "inference factor identity, no extra scoring candidate"
+        },
+        "last_new_parameter_change_L2": 2.308205755061432,
+        "seconds": 114.67497820000062,
+        "peak_allocated_MiB": 714.36474609375,
+        "complete_five_folds": false,
+        "remaining_folds_started": false,
+        "finished_at": "2026-09-28T23:07:50.373987+08:00"
+      },
+      "latest": {
+        "epoch": 18,
+        "target_score": 77.4223821407584,
+        "reference_replacement_total": 80.26617526776543,
+        "best_target_score": 77.44891570750882,
+        "best_epoch": 0,
+        "bad_epochs": 18,
+        "training_loss": -0.09373700023570564,
+        "learning_rate": 0.0002641806918572047,
+        "seconds": 5.760449100000187
+      },
+      "best_after_update": {
+        "epoch": 3,
+        "target_score": 77.44079366036655,
+        "reference_replacement_total": 80.27169872364789,
+        "best_target_score": 77.44891570750882,
+        "best_epoch": 0,
+        "bad_epochs": 3,
+        "training_loss": -0.09486267797183245,
+        "learning_rate": 0.00029896373431476125,
+        "seconds": 5.919596099998671
+      },
+      "gradient_scope": {
+        "delta_input_gradient_norm": 0.0019495469750836492,
+        "delta_output_gradient_norm": 0.2802369296550751,
+        "all_old_parameter_gradients_none": true,
+        "POR_only_supervision": true,
+        "second_actual_step": true
+      },
+      "failure": null
+    }
+  ],
+  "all_complete": true,
+  "complete_five_folds": false,
+  "remaining_folds_started": false,
+  "config_differences": [
+    "input_view",
+    "mode"
+  ],
+  "same_initial_state_and_trainable_parameters": true
+}

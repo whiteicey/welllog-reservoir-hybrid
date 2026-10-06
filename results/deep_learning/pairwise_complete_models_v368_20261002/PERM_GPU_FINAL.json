@@ -1,0 +1,119 @@
+{
+  "target": "PERM",
+  "pairs": [
+    {
+      "id": "original__seed_20261011",
+      "A": "original",
+      "B": "seed_20261011"
+    },
+    {
+      "id": "original__seed_20261012",
+      "A": "original",
+      "B": "seed_20261012"
+    },
+    {
+      "id": "seed_20261010__seed_20261011",
+      "A": "seed_20261010",
+      "B": "seed_20261011"
+    },
+    {
+      "id": "seed_20261010__seed_20261012",
+      "A": "seed_20261010",
+      "B": "seed_20261012"
+    },
+    {
+      "id": "seed_20261011__seed_20261012",
+      "A": "seed_20261011",
+      "B": "seed_20261012"
+    }
+  ],
+  "models": [
+    "original",
+    "seed_20261010",
+    "seed_20261011",
+    "seed_20261012"
+  ],
+  "rows": 144665,
+  "coverage_exactly_once": true,
+  "native_disk_replay_exact": true,
+  "endpoints_exact": true,
+  "actual_seed_loads": {
+    "original": [],
+    "seed_20261010": [
+      {
+        "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261010\\SOURCE\\prepared_data.pt",
+        "sha256": "07bf3356b59a2473fb1384e7b3a68e2bf5c081c476c42cfd3b0eebd2f2590165"
+      },
+      {
+        "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261010\\SOURCE\\fold_5.pt",
+        "sha256": "7ce54c5a19dcdd61ef89ce21b2aaac621ee171e51ad7250059addc95f6230556"
+      },
+      {
+        "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261010\\PERM154\\model_best.pt",
+        "sha256": "7799ea3f7ee5ec5099d07bae9c76081440dc88218d0cd679355b9304c2030715"
+      },
+      {
+        "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261010\\PERM336\\model_best.pt",
+        "sha256": "ad99e9846f046fa7e4add6f8643bd495fac1fc85793244ef91533d72671cdfee"
+      }
+    ],
+    "seed_20261011": [
+      {
+        "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261011\\SOURCE\\prepared_data.pt",
+        "sha256": "b0dc567d307905ae405db841b73f1772ac00ed1860a4c03b3a70edd4f109ae0f"
+      },
+      {
+        "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261011\\SOURCE\\fold_5.pt",
+        "sha256": "6f13e1ced8e0ee6b50eb9248e07f9ee2a72f9aec35b221c97a782e65b3e81471"
+      },
+      {
+        "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261011\\PERM154\\model_best.pt",
+        "sha256": "03536ce420e0c33fb6fa37a86454b2906a2c5fa42945f0e2d5ed8c9b46e8865f"
+      },
+      {
+        "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261011\\PERM336\\model_best.pt",
+        "sha256": "1d927662b78027bc55f8f5caa9a5af0b60406838f31266d45d75af7159a506bf"
+      }
+    ],
+    "seed_20261012": [
+      {
+        "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261012\\SOURCE\\prepared_data.pt",
+        "sha256": "65ec323ddb976309d2753fa8ac186660f1811be39e41d9ffac6a46911efc1189"
+      },
+      {
+        "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261012\\SOURCE\\fold_5.pt",
+        "sha256": "315f490ab3d9233420d15d9b29deb644d0a5f419e69a34567cdc8eb5de41f525"
+      },
+      {
+        "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261012\\PERM154\\model_best.pt",
+        "sha256": "cc80a537fc7d1489540af4807516ba51daa2317263fcf301673a8ab2091d5d17"
+      },
+      {
+        "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261012\\PERM336\\model_best.pt",
+        "sha256": "4da7e778c7b60d686127f8601d647d4f1fd7993a22fb52e23de2db7740caba0d"
+      }
+    ]
+  },
+  "seconds": 44.543286599975545,
+  "load_preparation_seconds": 19.96556069998769,
+  "peak_MiB": 2052.1630859375,
+  "admission": {
+    "maximum_concurrent_jobs": 2,
+    "other_jobs": [
+      {
+        "pid": 90804,
+        "script": "train_complete_seed_stage_v362r1.py"
+      }
+    ],
+    "free_gib": 10.8037109375,
+    "total_gib": 11.99365234375
+  },
+  "other_GPU_pids": [
+    90804
+  ],
+  "concurrent_training_continues": true,
+  "includes": "load/preparation/warmup/shared four-model forward/all grids/output writing",
+  "extra_training_stages": 0,
+  "screening_fold": 5,
+  "complete_five_folds": false
+}

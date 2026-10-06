@@ -1,0 +1,17 @@
+{
+  "failed_stage": "seed20261010/SW351",
+  "failed_pid": 28792,
+  "failed_epoch": 0,
+  "failed_reason": "DecisionObjective.forward() missing required model argument",
+  "fixed_scope": "SW351 loss call receives model exactly as historical trainer; other losses/architecture/budget unchanged",
+  "failed_files_preserved": true,
+  "previous_seven_stages_preserved": true,
+  "replacement_stage_directory": "SW351_fixed",
+  "additional_training_phase": false,
+  "continuation": "Manually corrected entrypoint after verified terminal failure; no automatic retry or user-stop resumption. Finite remaining 1+4x8 stages only.",
+  "source_sha256": {
+    "complete_seed_models_v362r1.py": "da159cfadcac2733c7bdf9d5222303d60792bdb10265fb6a37ad616afa4b2b1f",
+    "train_complete_seed_stage_v362r1.py": "8526d895cdc52d3e9745368acf227bb9d7eb7a3538948de5a29a11ffe4a68eff",
+    "run_complete_seeds_v362r1.py": "3a03c70c98b5880657b3bb4ea52fe80a5a9a03de0768af0c5c5a16e0bbdfb744"
+  }
+}

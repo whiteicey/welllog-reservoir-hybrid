@@ -1,0 +1,71 @@
+{
+  "observed_epoch": 1790952015.5962536,
+  "inspection": "Direct source inspection plus actual checkpoint/load-trace audits; CPU only, no training or new selection",
+  "files": [
+    {
+      "path": "experiments/pure_dl/train_pair_fullcv_source_v370.py",
+      "sha256": "1ba2d19886236ade143b71dbcf12dd56a50d2cd909ef9823a681abefffde3376",
+      "finding": "SOURCE constructs Network from initialization; fits input/target/depth statistics only on outer training wells; CUDA label tables contain only training rows; both expert and router parameters train."
+    },
+    {
+      "path": "experiments/pure_dl/train_invariant.py",
+      "sha256": "70c3326f4d1aa19319835dba3019936e92426d4b972926a719b5985c2f42783e",
+      "finding": "FeatureBuilder fits 64 training wells; feature medians/scales derive from training inputs; synthetic whitelist excludes DEVI/AZIM/BIT/CASE and derivatives."
+    },
+    {
+      "path": "package/src/feature.py",
+      "sha256": "afb8c59a6072a8378c488246c43233412ae7f7c484d562de47b275d98866327b",
+      "finding": "FeatureBuilder uses declared input columns and per-well curve transforms, not output labels."
+    },
+    {
+      "path": "experiments/pure_dl/fullcv_pair_context_v370.py",
+      "sha256": "5a23f06df142ac5fb68f4eb21dedd3f6018771607ced307f6d43707e20d1675e",
+      "finding": "Shared cache has no learned weights or shared Q; 63 amplitude view statistics use training wells/rows; each model descriptor restores private source Q."
+    },
+    {
+      "path": "experiments/pure_dl/fullcv_context_v97.py",
+      "sha256": "ffb2d60948997d304f8c7a0c18107fc3c8c9e10c8209ec36f1e20a2683cec225",
+      "finding": "Canonical grouped population and disjoint 64/16 wells; Q trace restricted to training raw rows and observation strictly before own source best; reference input bank averages training wells only."
+    },
+    {
+      "path": "experiments/pure_dl/pair_fullcv_models_v370.py",
+      "sha256": "ddd91ab1a25b1326be0b11c9b8d79b9c1cbfd8f1edfe106fe4fd790937e6cd5b",
+      "finding": "Historical checkpoint paths redirect to own fold/seed parents; guarded actual loads forbid other seed/historical learned checkpoints; stage chain is SOURCE plus seven explicit stages."
+    },
+    {
+      "path": "experiments/pure_dl/train_pair_fullcv_stage_v370.py",
+      "sha256": "59be56d43ca9c35d5d2e56ede1bd805842d50607f8281cf33d1858e5e6418c27",
+      "finding": "Loss receives only labeled training windows and own channel; forward receives input curves/depth/well inputs; fresh late branch optimizers include raw-feature backbone parameters; max80/pat10->14 preserved."
+    },
+    {
+      "path": "experiments/pure_dl/por_conditional_rps_v339.py",
+      "sha256": "11dbf0fdd5b3dabc9134daec6a6db79020ec62c9c4b40766dac709cc2f4ef952",
+      "finding": "POR conditional RPS/CE uses only supplied masked POR training labels, alongside learned residual representation."
+    },
+    {
+      "path": "experiments/pure_dl/sw_direct_component_v275.py",
+      "sha256": "b670df24fee065d3474ed944416104cc5812de22c31fb764b3825544d2a4dab5",
+      "finding": "SW state prior uses train_raw; categorical auxiliary targets use masked SW training labels; additional encoder/readout jointly train."
+    },
+    {
+      "path": "experiments/pure_dl/sw_head_utility_v80r1.py",
+      "sha256": "9498f6a78436876e0ca218408ce8be8ac484a4389bfa8bc022c851de3dffe6ee",
+      "finding": "Action utility constructor uses fixed action/edge tables and train-fit metadata; forward receives masked training labels, not evaluator validation truth."
+    },
+    {
+      "path": "experiments/pure_dl/evaluate_pair_fullcv_v370.py",
+      "sha256": "4997767ec88a6e5b3d6c7c93b5c4de1be754e788753836b277200835f6c13373",
+      "finding": "Native prediction forward uses no labels; computes both joint distributions and fixed candidate weights uniformly for every row. Truth is not used in model forward or grid construction."
+    },
+    {
+      "path": "experiments/pure_dl/record_pair_fullcv_v370.py",
+      "sha256": "90c7fb93b81e70da90cf927103a5a06faa7c2df07c08177a4e11762c03290d90",
+      "finding": "Fixed weights are read from predeclared plan, never reselected on folds1-4. Per-fold argmax ratios are saved in a separately labeled diagnostic. OOF scores use all723556 rows, not mean fold scores."
+    }
+  ],
+  "fifth_source_and_head_evidence": "FINAL_CANONICAL_OOF_AUDIT.json",
+  "remaining_fold_actual_evidence": "FINAL_REMAINING_TRAINING_AUDIT.json",
+  "selection_boundary": "The pair and fixed ratios were selected on fold5. Fold5 is screening/tuning data, not untouched validation. Foldwise optimal OOF additionally tunes each fold and is diagnostic only.",
+  "stage_boundary": "Each selected model has8 actual stages. User-authorized two-model ensemble has16 historical stages; no claim of8 total ensemble stages.",
+  "speed_boundary": "Batch elapsed wall includes four folds for both models, CPU work, overlap/serial operation and approval waiting; it is not one-model training time or a controlled concurrency speed benchmark."
+}

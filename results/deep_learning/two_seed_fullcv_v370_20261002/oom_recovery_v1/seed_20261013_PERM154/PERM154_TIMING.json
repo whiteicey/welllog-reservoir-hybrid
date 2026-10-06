@@ -1,0 +1,12 @@
+{
+  "identity": "seed_20261013",
+  "fold": 1,
+  "stage": "PERM154",
+  "pid": 49708,
+  "terminal": true,
+  "exit_code": 1,
+  "process_wall_seconds": 106.74777746200562,
+  "concurrency": "overlapped",
+  "includes": "load/preprocess/warmup/training or scan/restore/write",
+  "attached_without_training_restart": false
+}

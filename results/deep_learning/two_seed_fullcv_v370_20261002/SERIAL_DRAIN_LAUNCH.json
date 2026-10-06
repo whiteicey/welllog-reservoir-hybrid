@@ -1,0 +1,66 @@
+{
+  "controller_pid": 68704,
+  "started_epoch": 1790936081.7944539,
+  "whole_batch_started_epoch": 1790927178.5526347,
+  "preserved_jobs": [
+    {
+      "fold": 2,
+      "identity": "seed_20261013",
+      "stage": "SOURCE",
+      "role": "SOURCE",
+      "dest": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_two_seed_fullcv_v370\\fold_2\\seed_20261013\\SOURCE",
+      "expected": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_two_seed_fullcv_v370\\fold_2\\seed_20261013\\SOURCE\\fold_2_report.json",
+      "command": [
+        "C:\\Users\\z5364\\.conda\\envs\\normal\\python.exe",
+        "-u",
+        "experiments/pure_dl/train_pair_fullcv_source_v370.py",
+        "--out",
+        "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_two_seed_fullcv_v370\\fold_2\\seed_20261013\\SOURCE",
+        "--learning-rate",
+        ".0006",
+        "--schedule",
+        "cosine",
+        "--fold",
+        "2",
+        "--seed",
+        "20261010"
+      ],
+      "pid": 75188,
+      "create_time": 1790934993.989125,
+      "started_epoch": 1790934993.9843771,
+      "attached": false,
+      "overlap_observed": true,
+      "other_GPU_pids_at_launch": [
+        74592
+      ]
+    },
+    {
+      "fold": 2,
+      "identity": "original",
+      "stage": "POR341",
+      "role": "head",
+      "dest": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_two_seed_fullcv_v370\\fold_2\\original\\POR341",
+      "expected": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_two_seed_fullcv_v370\\fold_2\\original\\POR341\\report.json",
+      "command": [
+        "C:\\Users\\z5364\\.conda\\envs\\normal\\python.exe",
+        "-u",
+        "experiments/pure_dl/train_pair_fullcv_stage_v370.py",
+        "--stage",
+        "POR341"
+      ],
+      "pid": 56476,
+      "create_time": 1790935913.3471491,
+      "started_epoch": 1790935913.3436244,
+      "attached": false,
+      "overlap_observed": true,
+      "other_GPU_pids_at_launch": [
+        75188
+      ]
+    }
+  ],
+  "maximum_new_GPU_jobs": 1,
+  "maximum_existing_GPU_jobs": 2,
+  "no_model_training_changes": true,
+  "no_retry": true,
+  "concurrency": "Existing workers finish, thereafter serial; no new overlap"
+}

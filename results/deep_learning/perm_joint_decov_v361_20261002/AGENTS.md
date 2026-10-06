@@ -1,0 +1,1 @@
+Goal: finite PERM covariance auxiliary pair. Preserve original154 prior/fresh336 positive mechanisms, jointly train encoder/readout in one phase, no trained repair weights. Original fold5/Q50/score/max80/min10/pat10->14/max2 GPU; no extra folds/queue. Maintain PROJECTS.md, README four-field evidence, EXPLORATIONS and DL atlas. Sources immutable after launch. No unrelated edits.

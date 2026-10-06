@@ -1,0 +1,227 @@
+{
+  "fold": 5,
+  "rows": 144665,
+  "report": {
+    "fold": 5,
+    "rows": 144665,
+    "fixed_weights": {
+      "POR": 0.56,
+      "PERM": 0.44,
+      "SW": 0.68
+    },
+    "fixed_scores": {
+      "POR": 78.23303953551347,
+      "PERM": 89.74367648664987,
+      "SW": 74.23788264685729,
+      "TOTAL": 80.86345755738155
+    },
+    "diagnostic_scores": {
+      "POR": 78.23303953551347,
+      "PERM": 89.74367648664987,
+      "SW": 74.23788264685729,
+      "TOTAL": 80.86345755738155
+    },
+    "per_head_best_weights": {
+      "POR": {
+        "weight_original": 0.56,
+        "weight_seed13": 0.43999999999999995,
+        "score": 78.23303953551347,
+        "fixed_weight_score": 78.23303953551347
+      },
+      "PERM": {
+        "weight_original": 0.44,
+        "weight_seed13": 0.56,
+        "score": 89.74367648664987,
+        "fixed_weight_score": 89.74367648664987
+      },
+      "SW": {
+        "weight_original": 0.68,
+        "weight_seed13": 0.31999999999999995,
+        "score": 74.23788264685729,
+        "fixed_weight_score": 74.23788264685729
+      }
+    },
+    "standalone_scores": {
+      "original": {
+        "POR": 78.04643071793232,
+        "PERM": 89.51838939879066,
+        "SW": 74.17361205223327,
+        "TOTAL": 80.70612972323806
+      },
+      "seed13": {
+        "POR": 77.38833330639497,
+        "PERM": 89.52127968635101,
+        "SW": 73.63533098562274,
+        "TOTAL": 80.3213137271093
+      }
+    },
+    "native_replay_exact": true,
+    "prediction_disk_readback_exact": true,
+    "diagnostic_scope": "This fold labels selected each head weight; tuning diagnostic, not independent validation",
+    "fixed_scope": "Fifth-selected fixed ratios applied unchanged; fifth itself remains selection-contaminated"
+  },
+  "strata": {
+    "original": {
+      "POR": {
+        "DEFAULT": {
+          "rows": 94357,
+          "score": 97.40559788886887
+        },
+        "CONT": {
+          "rows": 50308,
+          "score": 41.736640291995144
+        }
+      },
+      "PERM": {
+        "DEFAULT": {
+          "rows": 95533,
+          "score": 97.49443975594247
+        },
+        "CONT": {
+          "rows": 49132,
+          "score": 74.00963708319706
+        }
+      },
+      "SW": {
+        "DEFAULT": {
+          "rows": 100786,
+          "score": 98.63877455431792
+        },
+        "CONT": {
+          "rows": 43879,
+          "score": 17.979399150046632
+        }
+      }
+    },
+    "seed13": {
+      "POR": {
+        "DEFAULT": {
+          "rows": 94357,
+          "score": 97.85071589813157
+        },
+        "CONT": {
+          "rows": 50308,
+          "score": 39.00936705433838
+        }
+      },
+      "PERM": {
+        "DEFAULT": {
+          "rows": 95533,
+          "score": 97.61256100043289
+        },
+        "CONT": {
+          "rows": 49132,
+          "score": 73.78847056443072
+        }
+      },
+      "SW": {
+        "DEFAULT": {
+          "rows": 100786,
+          "score": 99.07798628905687
+        },
+        "CONT": {
+          "rows": 43879,
+          "score": 15.195907630216185
+        }
+      }
+    },
+    "fixed": {
+      "POR": {
+        "DEFAULT": {
+          "rows": 94357,
+          "score": 97.82422077853259
+        },
+        "CONT": {
+          "rows": 50308,
+          "score": 41.48808667418874
+        }
+      },
+      "PERM": {
+        "DEFAULT": {
+          "rows": 95533,
+          "score": 97.7488471893305
+        },
+        "CONT": {
+          "rows": 49132,
+          "score": 74.17830213308861
+        }
+      },
+      "SW": {
+        "DEFAULT": {
+          "rows": 100786,
+          "score": 98.9400546496492
+        },
+        "CONT": {
+          "rows": 43879,
+          "score": 17.49928086757014
+        }
+      }
+    },
+    "diagnostic": {
+      "POR": {
+        "DEFAULT": {
+          "rows": 94357,
+          "score": 97.82422077853259
+        },
+        "CONT": {
+          "rows": 50308,
+          "score": 41.48808667418874
+        }
+      },
+      "PERM": {
+        "DEFAULT": {
+          "rows": 95533,
+          "score": 97.7488471893305
+        },
+        "CONT": {
+          "rows": 49132,
+          "score": 74.17830213308861
+        }
+      },
+      "SW": {
+        "DEFAULT": {
+          "rows": 100786,
+          "score": 98.9400546496492
+        },
+        "CONT": {
+          "rows": 43879,
+          "score": 17.49928086757014
+        }
+      }
+    }
+  },
+  "gains_against_original": {
+    "fixed": {
+      "POR": {
+        "DEFAULT": 0.4186228896637232,
+        "CONT": -0.24855361780640095
+      },
+      "PERM": {
+        "DEFAULT": 0.25440743338803884,
+        "CONT": 0.16866504989154407
+      },
+      "SW": {
+        "DEFAULT": 0.3012800953312791,
+        "CONT": -0.4801182824764929
+      }
+    },
+    "diagnostic": {
+      "POR": {
+        "DEFAULT": 0.4186228896637232,
+        "CONT": -0.24855361780640095
+      },
+      "PERM": {
+        "DEFAULT": 0.25440743338803884,
+        "CONT": 0.16866504989154407
+      },
+      "SW": {
+        "DEFAULT": 0.3012800953312791,
+        "CONT": -0.4801182824764929
+      }
+    }
+  },
+  "labels_used_for_analysis_only": true,
+  "rowwise_model_choice": false,
+  "weights_changed": false,
+  "scope": "fifth-selected fixed ratios; foldwise best is tuning diagnostic, not independent fullOOF"
+}

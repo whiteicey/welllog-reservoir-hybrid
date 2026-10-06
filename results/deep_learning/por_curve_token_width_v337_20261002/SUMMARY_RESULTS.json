@@ -1,0 +1,62 @@
+{
+  "project": "por_curve_token_width_v337_20261002",
+  "scope": "obsolete-study",
+  "weights_retained": false,
+  "cleanup": "Obsolete artifacts removed by explicit user request. These are historical scores, not newly verified training.",
+  "results": [
+    {
+      "source": "FINAL.json",
+      "result": {
+        "report": {
+          "stage": "wide",
+          "target": "POR",
+          "target_score": 78.03117414071191,
+          "initial_score": 77.92638076072386,
+          "against_initial": 0.10479337998805249,
+          "against_v97_target": 0.47923733882690556,
+          "best_epoch": 10,
+          "stopped_epoch": 24,
+          "validation_rows": 144665,
+          "predictions_reproduced_exactly": true,
+          "frozen_parameters_exact": true,
+          "seconds": 394.3027046000352,
+          "peak_MiB": 2599.44921875,
+          "complete_five_folds": false,
+          "early_terminated": false
+        },
+        "strata": {
+          "default": 97.41831554627638,
+          "continuous": 41.66891562109656
+        },
+        "bridge_zero_initialized_parameter_norms": {
+          "curve_interaction.bridge.weight": 0.7778823971748352,
+          "curve_interaction.bridge.bias": 0.07037199288606644
+        },
+        "whole_vs335": -0.011038494290147582,
+        "CONT_vs335": -0.055595209041676696,
+        "stopped_before42": true,
+        "full_best_after42_not_equalwork": false,
+        "adopted": false,
+        "screening_fold": 5,
+        "complete_five_folds": false,
+        "remaining_folds_started": false,
+        "independent_disk_reload": false,
+        "comparison_limits": "Historical128336/70768token64 vs330128/272560token128, initialization/weightshapes/compute differ; notcapacitymatchedcausal orrobustscalinggain",
+        "timing": {
+          "concurrency": "single at launch; actual overlap to be recorded",
+          "data_processing_and_warmup_included": true,
+          "pid": 55704,
+          "terminal": true,
+          "global_GPU_jobs_before": 0,
+          "started_epoch": 1790898663.068,
+          "individual_seconds": 394.3027046000352,
+          "peak_MiB": 2599.44921875,
+          "process_creation_to_terminal_seconds": 399.1008605957031
+        }
+      }
+    }
+  ],
+  "cleanup_completed": true,
+  "deleted_files": 8,
+  "deleted_bytes": 3490522
+}

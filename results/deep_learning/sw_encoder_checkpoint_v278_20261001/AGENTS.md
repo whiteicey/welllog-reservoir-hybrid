@@ -1,0 +1,1 @@
+Originalfold5 only; original9curves/Q/scoring/80-14/min10/b64/64steps/normalGPU/max2. One addedSWphase from original104, no275/252repair weights. Maintain PROJECTS/README/EXPLORATIONS/atlas. Atomic complete state. No automatic otherfolds.

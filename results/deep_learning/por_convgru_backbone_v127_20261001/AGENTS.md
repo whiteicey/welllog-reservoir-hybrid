@@ -1,0 +1,1 @@
+Dedicated backbone route: one random privatePOR ConvGRU candidate, max2 across both routes, no oldnetworkweights, original input/split/Q/ownlabels/decoder;4 recipe phases inclsource. Maintain PROJECTS/README/atlas, atomic state/explicitresume, no delivery edits or otherfolds below80.8+gain.

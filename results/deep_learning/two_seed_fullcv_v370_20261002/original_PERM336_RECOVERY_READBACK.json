@@ -1,0 +1,25 @@
+{
+  "identity": "original",
+  "stage": "PERM336",
+  "fold": 1,
+  "last_completed_epoch": 9,
+  "best_epoch": 0,
+  "best_score": 90.98904518265655,
+  "rows": 144621,
+  "best_prediction_exact": true,
+  "current_frozen_state_exact": true,
+  "GPU_tasks": 1,
+  "training_steps": 0,
+  "original_validation_batch": 32,
+  "peak_allocated_MiB": 736.39501953125,
+  "peak_reserved_MiB": 812.0,
+  "seconds": 3.623496900021564,
+  "admission": {
+    "maximum_concurrent_jobs": 2,
+    "other_jobs": [],
+    "free_gib": 10.8037109375,
+    "total_gib": 11.99365234375
+  },
+  "checkpoint_written": false,
+  "scope": "read-only sequential best checkpoint replay; not resumed training or a guarantee against future external GPU memory changes"
+}

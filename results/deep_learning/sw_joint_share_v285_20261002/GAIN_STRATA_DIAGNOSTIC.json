@@ -1,0 +1,24 @@
+{
+  "diagnostic_only": true,
+  "not_oracle_selection": true,
+  "scores": {
+    "SW104": {
+      "default": 98.71563225845625,
+      "continuous": 17.631889060480088,
+      "overall": 74.12175282815869,
+      "continuous_zero_fraction": 0.6661728845233483
+    },
+    "SW252": {
+      "default": 98.64493054166374,
+      "continuous": 17.884868139910104,
+      "overall": 74.14922820781278,
+      "continuous_zero_fraction": 0.6639166799608013
+    },
+    "SW285": {
+      "default": 98.72446679129324,
+      "continuous": 17.712561177589066,
+      "overall": 74.15237674585221,
+      "continuous_zero_fraction": 0.6657626655119762
+    }
+  }
+}

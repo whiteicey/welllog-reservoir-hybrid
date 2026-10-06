@@ -1,0 +1,28 @@
+{
+  "mix": {
+    "state": {
+      "status": "running",
+      "pid": 45516,
+      "stage": "mix",
+      "epoch": 13,
+      "best": 74.13358756476698,
+      "best_epoch": 4,
+      "bad": 9,
+      "peak_MiB": 1242.0146484375
+    },
+    "process_verified": true
+  },
+  "tilt": {
+    "state": {
+      "status": "running",
+      "pid": 55248,
+      "stage": "tilt",
+      "epoch": 6,
+      "best": 74.12175268976877,
+      "best_epoch": 0,
+      "bad": 6,
+      "peak_MiB": 1241.76513671875
+    },
+    "process_verified": true
+  }
+}

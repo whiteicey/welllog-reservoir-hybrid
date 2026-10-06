@@ -1,0 +1,125 @@
+{
+  "project": "sw_mass_cdf_v252_20261001",
+  "scope": "obsolete-study",
+  "weights_retained": false,
+  "cleanup": "Obsolete artifacts removed by explicit user request. These are historical scores, not newly verified training.",
+  "results": [
+    {
+      "source": "MICRO_GAIN_SEVEN_STAGE_RECIPE.json",
+      "result": {
+        "scores": {
+          "POR": 77.92638076072386,
+          "PERM": 89.41346559538779,
+          "SW": 74.14922820781207,
+          "TOTAL": 80.6248570593371
+        },
+        "screening_fold": 5,
+        "validation_rows": 144665,
+        "strict_808_qualified": false,
+        "complete_five_folds": false,
+        "remaining_folds_started": false,
+        "total_training_stages": 7,
+        "stages": [
+          "SOURCE",
+          "POR113",
+          "POR151",
+          "PERM154",
+          "SW104",
+          "PERM248",
+          "SW252conditional"
+        ],
+        "added_head_stages": {
+          "POR": 0,
+          "PERM": 1,
+          "SW": 1
+        },
+        "heads": {
+          "POR": {
+            "checkpoint": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_por_ranked_probability_v151_fold5\\joint_rps\\model_best.pt"
+          },
+          "PERM": {
+            "checkpoint": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_perm_uniform_background_v248_fold5\\mass\\model_best.pt"
+          },
+          "SW": {
+            "checkpoint": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_sw_mass_cdf_v252_fold5\\conditional\\model_best.pt"
+          }
+        },
+        "gain_vs_previous_optional7": 2.9033812467105236e-05,
+        "not_material_improvement": true,
+        "default_five_stage_unchanged": true,
+        "verification": "RestoredRAM-best frozen/actual144665 composition; no independent disk reload"
+      }
+    },
+    {
+      "source": "PAIRED_FINAL.json",
+      "result": {
+        "reports": {
+          "joint": {
+            "stage": "joint",
+            "target": "SW",
+            "target_score": 74.14858047770223,
+            "initial_score": 74.12170158067455,
+            "against_initial": 0.026878897027671655,
+            "against_v97_target": 0.0064005730355205515,
+            "best_epoch": 7,
+            "stopped_epoch": 14,
+            "validation_rows": 144665,
+            "predictions_reproduced_exactly": true,
+            "frozen_parameters_exact": true,
+            "seconds": 373.9413560999674,
+            "peak_MiB": 1101.0,
+            "complete_five_folds": false,
+            "early_terminated": true
+          },
+          "conditional": {
+            "stage": "conditional",
+            "target": "SW",
+            "target_score": 74.14922820781207,
+            "initial_score": 74.12170158067455,
+            "against_initial": 0.027526627137518744,
+            "against_v97_target": 0.00704830314536764,
+            "best_epoch": 7,
+            "stopped_epoch": 14,
+            "validation_rows": 144665,
+            "predictions_reproduced_exactly": true,
+            "frozen_parameters_exact": true,
+            "seconds": 373.5962182000512,
+            "peak_MiB": 1101.0,
+            "complete_five_folds": false,
+            "early_terminated": true
+          }
+        },
+        "timing": {
+          "excludes_code_preparation": true,
+          "arms": {
+            "conditional": {
+              "process_creation_utc_seconds": 1790862661.815,
+              "pid": 24456
+            },
+            "joint": {
+              "process_creation_utc_seconds": 1790862661.804,
+              "pid": 27552
+            }
+          },
+          "pair_wallclock_pending": false,
+          "maximum_GPU_jobs": 2,
+          "concurrent": true,
+          "includes_startup_model_data_initial_eval": true,
+          "pair_wallclock_seconds": 380.19396901130676,
+          "individual_seconds": {
+            "joint": 373.9413560999674,
+            "conditional": 373.5962182000512
+          },
+          "serial_speedup_measured": false
+        },
+        "conditional_minus_joint": 0.0006477301098470889,
+        "conditional_minus246": 8.29537499100752e-05,
+        "bounded_equal_epochs": 14,
+        "no_convergence_claim": true
+      }
+    }
+  ],
+  "cleanup_completed": true,
+  "deleted_files": 15,
+  "deleted_bytes": 10431575
+}

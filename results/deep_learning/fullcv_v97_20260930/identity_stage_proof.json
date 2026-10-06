@@ -1,0 +1,19 @@
+{
+  "proof": [
+    {
+      "target": "POR",
+      "best_epoch": 0,
+      "all_state_tensors_exact": true,
+      "checkpoint": "outputs\\pure_dl_independent_v8_POR_dual80_fold5\\model_best.pt",
+      "sha256": "c53019347f4482b1ac8ce41b8ebe14d3ba2bb2915daa8110a929be5012ff17d1"
+    },
+    {
+      "target": "PERM",
+      "best_epoch": 0,
+      "all_state_tensors_exact": true,
+      "checkpoint": "outputs\\pure_dl_independent_v8_PERM_dual80_fold5\\model_best.pt",
+      "sha256": "ad9a6a9fd419a4c550b39b3a9e962add5392f476a6ecc7df7a6117cb96d2f79c"
+    }
+  ],
+  "protocol": "v8 selected initial private extraction is a fixed identity stage for all remaining folds; no new v8 finetuning search"
+}

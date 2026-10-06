@@ -1,0 +1,96 @@
+{
+  "observed_epoch": 1790927713.4991343,
+  "batch": {
+    "status": "running",
+    "controller_pid": 30132,
+    "active_pid": 27184,
+    "identity": "original",
+    "fold": 1,
+    "stage": "SOURCE",
+    "started_epoch": 1790927179.8455744,
+    "batch_started_epoch": 1790927178.5526347,
+    "concurrency": "serial",
+    "maximum_GPU_jobs": 2
+  },
+  "actual_pid": 27184,
+  "actual_create_time": 1790927179.8475451,
+  "actual_cmdline": [
+    "C:\\Users\\z5364\\.conda\\envs\\normal\\python.exe",
+    "-u",
+    "experiments/pure_dl/train_pair_fullcv_source_v370.py",
+    "--out",
+    "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_two_seed_fullcv_v370\\fold_1\\original\\SOURCE",
+    "--learning-rate",
+    ".0006",
+    "--schedule",
+    "cosine",
+    "--fold",
+    "1",
+    "--seed",
+    "20261006"
+  ],
+  "latest": {
+    "epoch": 28,
+    "first_lr": 0.0004491432662415999,
+    "last_lr": 0.00043908845305456795,
+    "next_lr": 0.0004389271974231646,
+    "expert_train_loss": 0.05159621760685695,
+    "router_train_loss": 0.021076475572954223,
+    "router_next_lr": 0.0004389271974231646,
+    "official_total": 81.49668544174165,
+    "official_scores": {
+      "POR": 77.13531589444253,
+      "PERM": 90.5325050661409,
+      "SW": 76.19918257217022,
+      "TOTAL": 81.49668544174165
+    },
+    "best_epoch": 27,
+    "best_score": 81.65335969521709,
+    "bad_epochs": 1,
+    "effective_patience": 14,
+    "SOTA_broken": true
+  },
+  "maintenance_actual_pid": 6196,
+  "maintenance_state": {
+    "status": "waiting_for_completed_sources",
+    "pid": 6196,
+    "pending": [
+      [
+        "original",
+        1
+      ],
+      [
+        "original",
+        2
+      ],
+      [
+        "original",
+        3
+      ],
+      [
+        "original",
+        4
+      ],
+      [
+        "seed_20261013",
+        1
+      ],
+      [
+        "seed_20261013",
+        2
+      ],
+      [
+        "seed_20261013",
+        3
+      ],
+      [
+        "seed_20261013",
+        4
+      ]
+    ],
+    "observed_epoch": 1790927709.4339511,
+    "GPU_work": false
+  },
+  "disk_free_bytes": 4518776832,
+  "new_fullOOF_score": null
+}

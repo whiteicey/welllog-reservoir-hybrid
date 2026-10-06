@@ -1,0 +1,23 @@
+{
+  "passed": true,
+  "wells": 10,
+  "rows": 95948,
+  "packaged_oof_verified": true,
+  "packaged_oof_scores": {
+    "POR": 79.8783404937237,
+    "PERM": 90.7642668738331,
+    "SW": 75.61044541308326,
+    "TOTAL": 82.19465144853783
+  },
+  "independent_extracted_CLI_test_result_bytes_exact": true,
+  "original_workspace_and_training_reads_blocked": true,
+  "final_code_zip_CRC_and_manifest_passed": true,
+  "final_runtime_exact_to_executed_candidate": true,
+  "result_zip_json_bytes_exact": true,
+  "result_sha256": "ffcf319bbbec961a4da8330d8d461a818b1f71fb634c4e1ac658b8cbd2c3aefc",
+  "code_zip_sha256": "2787ae839401316b887eb2005824abf7f2d8715dab289d451619ac6910b84099",
+  "code_zip_bytes": 161184658,
+  "result_zip_sha256": "18575ca3d5f070b1182d9966610bb9383009e62c6de8ab236bf941e79d309542",
+  "score_scope": "Foldwise per-head ratio tuning diagnostic, not unbiased validation",
+  "test_accuracy": "unknown"
+}

@@ -1,0 +1,18 @@
+{
+  "excludes_code_preparation_CPUassembly": true,
+  "arms": {
+    "balanced": {
+      "process_creation_utc_seconds": 1790872395.17,
+      "pid": 40616
+    }
+  },
+  "includes_startup_data_initial_final_eval": true,
+  "overlap_other_study": true,
+  "maximum_GPU_jobs": 2,
+  "terminal": true,
+  "individual_training_seconds": 577.0999061000184,
+  "peak_MiB": 1241.642578125,
+  "concurrent": true,
+  "not_isolated_speed_comparison": true,
+  "includes": "prep/initial evaluation/train/final best restoration; excludes codeprep/CPU composition"
+}

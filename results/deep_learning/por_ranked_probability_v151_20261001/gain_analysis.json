@@ -1,0 +1,107 @@
+{
+  "screening_fold": 5,
+  "complete_five_folds": false,
+  "rows": 144665,
+  "same_capacity_and_initialization": true,
+  "scope": "Descriptive frozen paired predictions only; no fit, threshold tuning or row/well model choice",
+  "evidence": {
+    "likelihood": {
+      "POR": 77.9121028885816,
+      "best_epoch": 30,
+      "source": "outputs\\pure_dl_por_joint_density_width_v140_fold5\\wide256\\channel_pred.npy"
+    },
+    "joint_rps": {
+      "POR": 77.92638076072386,
+      "best_epoch": 30,
+      "source": "outputs\\pure_dl_por_ranked_probability_v151_fold5\\joint_rps\\channel_pred.npy"
+    }
+  },
+  "delta": 0.014277872142290017,
+  "default_delta": 0.008478438271670358,
+  "nondefault_delta": 0.025155211367265343,
+  "default_rows": 94357,
+  "nondefault_rows": 50308,
+  "positive_wells": 10,
+  "per_well": [
+    {
+      "well": 7,
+      "rows": 10219,
+      "delta": 0.028766900787388
+    },
+    {
+      "well": 8,
+      "rows": 9011,
+      "delta": -0.0028446324275601077
+    },
+    {
+      "well": 14,
+      "rows": 12078,
+      "delta": 0.03731016339188257
+    },
+    {
+      "well": 16,
+      "rows": 8149,
+      "delta": 0.008043252566501081
+    },
+    {
+      "well": 25,
+      "rows": 7739,
+      "delta": 0.021345143239593765
+    },
+    {
+      "well": 34,
+      "rows": 10913,
+      "delta": 0.02696798411141427
+    },
+    {
+      "well": 35,
+      "rows": 8348,
+      "delta": 0.007937996216992678
+    },
+    {
+      "well": 37,
+      "rows": 9939,
+      "delta": 0.06943847489298575
+    },
+    {
+      "well": 50,
+      "rows": 11874,
+      "delta": -0.022279997308482805
+    },
+    {
+      "well": 54,
+      "rows": 9630,
+      "delta": 0.046472538697916406
+    },
+    {
+      "well": 63,
+      "rows": 5639,
+      "delta": -0.025121226165561658
+    },
+    {
+      "well": 69,
+      "rows": 9120,
+      "delta": 0.05320461722273754
+    },
+    {
+      "well": 71,
+      "rows": 4709,
+      "delta": -0.11400938172762903
+    },
+    {
+      "well": 72,
+      "rows": 9559,
+      "delta": -0.012460926914068077
+    },
+    {
+      "well": 76,
+      "rows": 7109,
+      "delta": 0.031887355488865225
+    },
+    {
+      "well": 79,
+      "rows": 10629,
+      "delta": -0.0030256558091842963
+    }
+  ]
+}

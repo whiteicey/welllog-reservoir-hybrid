@@ -1,0 +1,56 @@
+{
+  "project": "compact_perm_mean_v111_20261001",
+  "scope": "obsolete-study",
+  "weights_retained": false,
+  "cleanup": "Obsolete artifacts removed by explicit user request. These are historical scores, not newly verified training.",
+  "results": [
+    {
+      "source": "ablation_report.json",
+      "result": {
+        "original_fold": 5,
+        "control": {
+          "stage": "gate_route",
+          "target": "PERM",
+          "target_score": 89.37839421114361,
+          "initial_score": 89.37839421114361,
+          "against_initial": 0.0,
+          "against_v97_target": -0.01832983822220058,
+          "best_epoch": 0,
+          "stopped_epoch": 18,
+          "validation_rows": 144665,
+          "predictions_reproduced_exactly": true,
+          "frozen_parameters_exact": true,
+          "seconds": 95.21638070000336,
+          "peak_MiB": 786.46533203125,
+          "complete_five_folds": false
+        },
+        "candidate": {
+          "stage": "mean_coadapt",
+          "target": "PERM",
+          "target_score": 89.37839421114361,
+          "initial_score": 89.37839421114361,
+          "against_initial": 0.0,
+          "against_v97_target": -0.01832983822220058,
+          "best_epoch": 0,
+          "stopped_epoch": 18,
+          "validation_rows": 144665,
+          "predictions_reproduced_exactly": true,
+          "frozen_parameters_exact": true,
+          "seconds": 97.18659080000361,
+          "peak_MiB": 786.46533203125,
+          "complete_five_folds": false
+        },
+        "predefined_mean_minus_gate_route_PERM": 0.0,
+        "update_scope_ablation": true,
+        "equal_trainable_capacity": false,
+        "additional_active_mean_elements": 2064,
+        "same_initial_function_score": true,
+        "complete_five_folds": false,
+        "remaining_folds_started": false
+      }
+    }
+  ],
+  "cleanup_completed": true,
+  "deleted_files": 15,
+  "deleted_bytes": 6964076
+}

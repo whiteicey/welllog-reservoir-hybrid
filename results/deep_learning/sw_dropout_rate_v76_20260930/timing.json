@@ -1,0 +1,26 @@
+{
+  "candidates": [
+    {
+      "mode": "p05",
+      "start": "2026-09-30T00:11:36.261465+08:00",
+      "end": "2026-09-30T00:15:27.352702+08:00",
+      "seconds": 226.8775905000075,
+      "peak_allocated_MiB": 1266.9208984375
+    },
+    {
+      "mode": "p20",
+      "start": "2026-09-30T00:12:44.325140+08:00",
+      "end": "2026-09-30T00:18:41.530310+08:00",
+      "seconds": 351.83311449999746,
+      "peak_allocated_MiB": 1266.9208984375
+    }
+  ],
+  "first_launch_to_last_completion_seconds": 425.268845,
+  "peak_process_concurrency": 2,
+  "finalization_seconds": 4.6958076000155415,
+  "scope": "loading/preprocessing/warmup/training/evaluation/launch gap included; authoring and finalization separate",
+  "verified_result_at": "2026-09-30T08:51:24.290038+08:00",
+  "first_launch_to_verified_result_wall_clock_seconds": 31188.028573,
+  "last_training_to_verified_result_gap_seconds": 30762.759728,
+  "wall_clock_gap_note": "Training completed00:18; result verification recorded08:51. System log contains sleep/low-power recovery and clock adjustments. Do not call this gap GPU training time or attribute all of it to sleep."
+}

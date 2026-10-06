@@ -1,0 +1,1 @@
+MaintainPROJECTS/README. Fixedoriginalfold5/ninecurves/Q/score normalGPUmax2. OnejointPERMbranch+readoutstage from154only/no repairedweights. Positive/source/deliveriesimmutable; no below808otherfolds.

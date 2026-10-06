@@ -1,0 +1,1 @@
+Goal: test whether PERM late backbone jointly adapting retained154 readout exceeds native head-only. Preserve original9/206/Q/splits/score; original prior/gate frozen; one new PERM phase, total<=8, max2GPU,80/pat14. No teacher/new labels/voting/otherfolds. Immutable active sources; atomic last-state/explicit resume. Maintain PROJECTS/README/EXPLORATIONS/atlas.

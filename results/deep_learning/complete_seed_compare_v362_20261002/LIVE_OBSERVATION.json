@@ -1,0 +1,54 @@
+{
+  "observed_epoch": 1790926224.465052,
+  "classification": "verified_wait",
+  "batch_snapshot": {
+    "status": "running",
+    "controller_pid": 74228,
+    "active_pid": 91072,
+    "seed": 20261014,
+    "stage": "SW104",
+    "started_epoch": 1790925543.0799336,
+    "batch_started_epoch": 1790916379.5213826,
+    "concurrency": "serial",
+    "maximum_GPU_jobs": 2,
+    "completed_models": 4
+  },
+  "confirmed_actual_processes": {
+    "controller_pid": {
+      "pid": 74228,
+      "create_time": 1790916374.9836526,
+      "status": "running",
+      "cmdline": [
+        "C:\\Users\\z5364\\.conda\\envs\\normal\\python.exe",
+        "-u",
+        "experiments/pure_dl/run_complete_seeds_v362r1.py"
+      ]
+    },
+    "active_pid": {
+      "pid": 91072,
+      "create_time": 1790925543.0844288,
+      "status": "running",
+      "cmdline": [
+        "C:\\Users\\z5364\\.conda\\envs\\normal\\python.exe",
+        "-u",
+        "experiments/pure_dl/train_complete_seed_stage_v362r1.py",
+        "--stage",
+        "SW104"
+      ]
+    }
+  },
+  "current_stage_runtime": {
+    "status": "running",
+    "pid": 91072,
+    "stage": "SW104",
+    "epoch": 50,
+    "best": 73.79497059371414,
+    "best_epoch": 42,
+    "bad": 8,
+    "effective_patience": 10,
+    "SOTA_broken": false,
+    "peak_MiB": 1722.197265625
+  },
+  "scope": "Stage snapshot only, not complete model or OOF",
+  "no_restart_or_new_training": true
+}

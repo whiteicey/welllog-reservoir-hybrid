@@ -1,0 +1,90 @@
+{
+  "before": {
+    "POR": 78.04643071793232,
+    "PERM": 89.51838939879066,
+    "SW": 74.17361205223327,
+    "TOTAL": 80.70612972323806
+  },
+  "after": {
+    "POR": 78.04793494837638,
+    "PERM": 89.5499386183918,
+    "SW": 74.19438259436203,
+    "TOTAL": 80.72489290897676
+  },
+  "TOTAL_delta": 0.018763185738691845,
+  "channels": {
+    "POR": {
+      "before": 78.04643071793232,
+      "after": 78.04793494837638,
+      "delta": 0.0015042304440555654,
+      "contribution_to_TOTAL": 0.0004512691332166696,
+      "strata": {
+        "DEFAULT": {
+          "rows": 94357,
+          "before": 97.40559788886887,
+          "after": 97.45434890893098,
+          "delta": 0.04875102006211307,
+          "contribution_to_TOTAL": 0.009539280406457962
+        },
+        "CONT": {
+          "rows": 50308,
+          "before": 41.736640291995144,
+          "after": 41.64952908696266,
+          "delta": -0.08711120503248537,
+          "contribution_to_TOTAL": -0.009088011273164083
+        }
+      }
+    },
+    "PERM": {
+      "before": 89.51838939879066,
+      "after": 89.5499386183918,
+      "delta": 0.031549219601146206,
+      "contribution_to_TOTAL": 0.011042226860401171,
+      "strata": {
+        "DEFAULT": {
+          "rows": 95533,
+          "before": 97.49443975594247,
+          "after": 97.53693096479097,
+          "delta": 0.04249120884850299,
+          "contribution_to_TOTAL": 0.009821030859042703
+        },
+        "CONT": {
+          "rows": 49132,
+          "before": 74.00963708319706,
+          "after": 74.01991053428122,
+          "delta": 0.010273451084160001,
+          "contribution_to_TOTAL": 0.0012211960013371044
+        }
+      }
+    },
+    "SW": {
+      "before": 74.17361205223327,
+      "after": 74.19438259436203,
+      "delta": 0.020770542128758507,
+      "contribution_to_TOTAL": 0.0072696897450654765,
+      "strata": {
+        "DEFAULT": {
+          "rows": 100786,
+          "before": 98.63877455431792,
+          "after": 98.72755598981885,
+          "delta": 0.08878143550093398,
+          "contribution_to_TOTAL": 0.021648456886178384
+        },
+        "CONT": {
+          "rows": 43879,
+          "before": 17.979399150046632,
+          "after": 17.84395496760571,
+          "delta": -0.1354441824409207,
+          "contribution_to_TOTAL": -0.01437876714107632
+        }
+      }
+    }
+  },
+  "interpretation": "Observed complete predictions on fixed fifth, not independent generalization or a matched-capacity causal ablation.",
+  "original_weight": 0.81,
+  "new_seed_weight": 0.19,
+  "same_fifth_validation_tuned": true,
+  "no_new_training": true,
+  "complete_five_folds": false,
+  "remaining_folds_started": false
+}

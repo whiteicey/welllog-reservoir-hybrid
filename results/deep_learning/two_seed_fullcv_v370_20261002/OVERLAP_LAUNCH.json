@@ -1,0 +1,40 @@
+{
+  "controller_pid": 86104,
+  "started_epoch": 1790928226.9669116,
+  "whole_batch_started_epoch": 1790927178.5526347,
+  "attached_child": {
+    "fold": 1,
+    "identity": "original",
+    "stage": "SOURCE",
+    "role": "SOURCE",
+    "dest": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_two_seed_fullcv_v370\\fold_1\\original\\SOURCE",
+    "expected": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_two_seed_fullcv_v370\\fold_1\\original\\SOURCE\\fold_1_report.json",
+    "command": [
+      "C:\\Users\\z5364\\.conda\\envs\\normal\\python.exe",
+      "-u",
+      "experiments/pure_dl/train_pair_fullcv_source_v370.py",
+      "--out",
+      "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_two_seed_fullcv_v370\\fold_1\\original\\SOURCE",
+      "--learning-rate",
+      ".0006",
+      "--schedule",
+      "cosine",
+      "--fold",
+      "1",
+      "--seed",
+      "20261006"
+    ],
+    "pid": 27184,
+    "create_time": 1790927179.8475451,
+    "started_epoch": 1790927179.8455744,
+    "attached": true,
+    "overlap_observed": false
+  },
+  "maximum_GPU_jobs": 2,
+  "maximum_SOURCE_jobs": 1,
+  "maximum_SW_jobs": 1,
+  "maximum_scan_jobs": 1,
+  "no_model_training_changes": true,
+  "no_retry": true,
+  "concurrency": "one SOURCE plus one downstream when ready"
+}

@@ -1,0 +1,15 @@
+{
+  "validation": "All native predictions/endpoints exact; all 10 actual three-head assemblies scored and disk-readback exact; scoped offline atlas6nodes/5rightwardedges; gain interpretation present in rebuilt snapshot.",
+  "artifacts_sha256": {
+    "experiments\\pure_dl\\evaluate_pairwise_native_v368.py": "44b9c32006d2e465fd2063ef36aa577ec23e09841bc1fdd9988a2bd68490b942",
+    "results\\deep_learning\\pairwise_complete_models_v368_20261002\\finalize.py": "22abd2f3a7d89eafbcb6d3d577b94871ae47b7572aaf575a35727ddde498acd6",
+    "results\\deep_learning\\pairwise_complete_models_v368_20261002\\PLAN.json": "97f6f6e49a5edbf171d6aeea84c29c2402a82af42c767f750175bccf790c6d81",
+    "results\\deep_learning\\pairwise_complete_models_v368_20261002\\AUGMENT_PLAN.json": "ca177369d92ab89c3b7d095b77317cbc96d86b735898eb5cbfbfba9a0c97f46e",
+    "results\\deep_learning\\pairwise_complete_models_v368_20261002\\FINAL.json": "4b93b3a999cd8b003c7d288df3bab4015ff8441aee56090573160dabcee2b608"
+  },
+  "source_hash_scope": "Final reproducible evaluator version; earlier guard/timing-text edits did not change numerical fusion logic.",
+  "training_continues_actual_pid": 39412,
+  "completed_new_models": 4,
+  "pending_new_models": 1,
+  "complete_five_folds": false
+}

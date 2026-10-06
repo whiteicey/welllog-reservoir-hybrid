@@ -1,0 +1,140 @@
+{
+  "project": "sw_bank_kernel_v316_20261002",
+  "scope": "obsolete-study",
+  "weights_retained": false,
+  "cleanup": "Obsolete artifacts removed by explicit user request. These are historical scores, not newly verified training.",
+  "results": [
+    {
+      "source": "PAIRED_FINAL.json",
+      "result": {
+        "reports": {
+          "actual": {
+            "stage": "actual",
+            "target": "SW",
+            "target_score": 74.15415795130484,
+            "initial_score": 74.12175268976877,
+            "against_initial": 0.03240526153606993,
+            "against_v97_target": 0.011978046638134288,
+            "best_epoch": 17,
+            "stopped_epoch": 31,
+            "validation_rows": 144665,
+            "predictions_reproduced_exactly": true,
+            "frozen_parameters_exact": true,
+            "seconds": 497.60162580001634,
+            "peak_MiB": 1284.44970703125,
+            "complete_five_folds": false,
+            "early_terminated": false
+          },
+          "reference": {
+            "stage": "reference",
+            "target": "SW",
+            "target_score": 74.15413935754133,
+            "initial_score": 74.12175268976877,
+            "against_initial": 0.032386667772556166,
+            "against_v97_target": 0.011959452874620524,
+            "best_epoch": 17,
+            "stopped_epoch": 31,
+            "validation_rows": 144665,
+            "predictions_reproduced_exactly": true,
+            "frozen_parameters_exact": true,
+            "seconds": 424.50988709996454,
+            "peak_MiB": 1284.44970703125,
+            "complete_five_folds": false,
+            "early_terminated": false
+          }
+        },
+        "strata": {
+          "actual": {
+            "default": 98.83134555555758,
+            "continuous": 17.47294302201801
+          },
+          "reference": {
+            "default": 98.83062660776832,
+            "continuous": 17.47453307660211
+          }
+        },
+        "actual_minus_reference": 1.8593763513763406e-05,
+        "actual_minus_reference_CONT": -0.0015900545840992208,
+        "gain_vs_retained297": {
+          "actual": -0.005872271714906674,
+          "reference": -0.005890865478420437
+        },
+        "CONT_vs_retained297": {
+          "actual": -0.029809745329171022,
+          "reference": -0.0282196907450718
+        },
+        "CONT_vs_strong252": {
+          "actual": -0.41192511789216013,
+          "reference": -0.4103350633080609
+        },
+        "timing": {
+          "started_epoch": 1790885542.242,
+          "started_UTC": "2026-10-01T20:12:22.2569498+00:00",
+          "maximum_parallelism": 2,
+          "status": "complete",
+          "jobs": [
+            {
+              "stage": "actual",
+              "pid": 16564,
+              "start_epoch": 1790885542.242
+            },
+            {
+              "stage": "reference",
+              "pid": 37364,
+              "start_epoch": 1790885769.382
+            }
+          ],
+          "overlap": "actual first overlaps315scalar, then actual/reference overlap; variable gap, not isolated speed comparison",
+          "terminal": true,
+          "same_work_pair_wall_seconds": 656.9258141517639,
+          "individual_seconds": {
+            "actual": 497.60162580001634,
+            "reference": 424.50988709996454
+          },
+          "peak_MiB": {
+            "actual": 1284.44970703125,
+            "reference": 1284.44970703125
+          },
+          "interpretation": "Staggered launches with partial overlap; wall includes gap/data/initial/train/best restore, excludes work beforefirstlaunch and CPUfinalization after. Not isolatedspeedranking."
+        },
+        "screening_fold": 5,
+        "complete_five_folds": false,
+        "remaining_folds_started": false,
+        "independent_disk_reload": false,
+        "automatic_adoption": false,
+        "best_kernel_delta_norms": {
+          "actual": {
+            "kernels.0.u": 2.1550116539001465,
+            "kernels.0.v": 2.1862692832946777,
+            "kernels.1.u": 2.0941407680511475,
+            "kernels.1.v": 2.1264827251434326,
+            "kernels.2.u": 1.995525598526001,
+            "kernels.2.v": 2.110368251800537,
+            "kernel_router.0.weight": 2.166553020477295,
+            "kernel_router.0.bias": 0.18658095598220825,
+            "kernel_router.2.weight": 0.4189753532409668,
+            "kernel_router.2.bias": 0.08709397912025452
+          },
+          "reference": {
+            "kernels.0.u": 2.911059856414795,
+            "kernels.0.v": 2.906501054763794,
+            "kernels.1.u": 2.806563377380371,
+            "kernels.1.v": 2.8294882774353027,
+            "kernels.2.u": 2.7875900268554688,
+            "kernels.2.v": 2.7959399223327637,
+            "kernel_router.0.weight": 2.321791410446167,
+            "kernel_router.0.bias": 0.27967116236686707,
+            "kernel_router.2.weight": 0.5672463774681091,
+            "kernel_router.2.bias": 0.12541109323501587
+          }
+        },
+        "adopted": false,
+        "closure": "Actual-reference whole+.00001859376 butCONT-.00159005458. Both whole andCONTbelow297/252. Close this four-rank8bank-conditioned feature-matrix placement; no expert/rank/routertemperaturegrid, not all conditional kernels ineffective.",
+        "reference_early_request_effect": "Naturalpatience14 completed31 before request could change training; both final reports early_terminatedfalse, same best17/stop31."
+      }
+    }
+  ],
+  "cleanup_completed": true,
+  "deleted_files": 9,
+  "deleted_bytes": 6956104
+}

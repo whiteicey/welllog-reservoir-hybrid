@@ -1,0 +1,1 @@
+Maintain PROJECTS/README/EXPLORATIONS/atlas. Original154only/fresh336positivecode+1776pathresidual39162joint/onePERMphase/whole<=8/no trainedrepairchain. Fixedfold5/original9/206+side/Q50/ownloss/max80min10/pat10untilstrictSOTAthen14/max2. Explicitlaunch/noqueue/otherfolds onlystrict808+gain. Originalsources/deliveries retained.

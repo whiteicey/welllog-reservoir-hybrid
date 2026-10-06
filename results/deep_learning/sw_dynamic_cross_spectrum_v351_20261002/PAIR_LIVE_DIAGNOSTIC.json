@@ -1,0 +1,13 @@
+{
+  "control_epoch_snapshot": 19,
+  "control_best_epoch": 13,
+  "control_whole": 74.16893619710333,
+  "control_strata": {
+    "default": 98.64276361053174,
+    "continuous": 17.95482079589234
+  },
+  "aligned_minus_control_whole": 0.004675855129931961,
+  "aligned_minus_control_CONT": 0.024578354154293436,
+  "control_not_terminal": true,
+  "gain_attribution_not_final": true
+}

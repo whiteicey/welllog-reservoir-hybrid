@@ -1,0 +1,1 @@
+Maintain PROJECTS, independent README, EXPLORATIONS and atlas. Only two scoped arms; count source and initial POR for5 total stages. Preserve original split/data isolation/scoring, normal/max2GPU and80/18. Atomic full last states, explicit resume, no other folds or old-source/delivery edits.

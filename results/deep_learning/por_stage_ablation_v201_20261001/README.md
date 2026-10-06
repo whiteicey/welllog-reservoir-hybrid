@@ -1,0 +1,22 @@
+# v201 Simple POR training-stage ablation
+
+## Focus
+User asks whether removing one or more POR stages improves score; avoid unnecessary stages. Compare originalSOURCE alone (POR1), SOURCE+113 (POR2), SOURCE+113+151 (POR3), and retrained SOURCE->samefinal151-style head without113 training (POR2). Fixed PERM154/SW104 for fairactualTOTAL; unique total stages3/4/5/4 respectively, sharedSOURCEcountedonce. No newPORaugmentation or implicitfreewarmstart.
+
+## Explored and validation
+Prepared. Reuse verified113/151 all144665 savedchannelpredictions/checkpointSHA instead of repeating unchanged GPUreplay. OriginalSOURCE direct network reevaluated once with originalT3 decoder/population, not mixedfamily reinterpretation or fakeotherheadlabels. Source-only score and actual3headTOTAL must be recorded. To delete intermediate113, newdirecthead starts originalSOURCE, same mixed8T3/8Cauchy fixed family convention/context319to256/effectivepoint depth33sum/32output/230944trainable/NLL+BCE+jointRPS1 as151. All originalSOURCE/local/location/route/side modules frozen at Sourcefunction, no113 or151 weights loaded. Same seed20261010/lr3e-4/AdamW/80max/pat14/min10/b64/64steps/Q50/9curves206+63amp/fold5/actions/decoder. Familyreinterpretation differs from allT3Source and is declared. Newown optimizer, atomicfullstate, ownofficialbest/all144665 exactreload/frozen and actualPERM154/SW104 assembly final. Historical113/151 trainedpat18; do not silently call histories a matched14 freshtrain. Where historical15114 truncation selects same existingbest, show evidence; otherwise disclose stopping-rulelimit.
+Dropping113 but using learned151 weights would retain113 training, so is not deletion. RemovingSOURCE entirely would require a different coldtrained encoder/preprocessing/Q and is outside this simplecontrolledablation.
+
+## Gains
+Known prefix scores113POR77.540454326739, full15177.926380760724: droppingfinal151 loses0.385926433985POR, actualTOTAL difference-0.115777930196. Sourceonly and skipmiddle not evaluated/trained yet; no claim removingmiddle succeeds. Main default remains verifiedfive-stage80.612475417994; optional198sixstage80.612568631546 onlytiny+0.000093213552, not treated as necessaryaddedstage. Preservepositives/deliveries. Strict80.8+clear gain beforeotherfolds, fullOOF>82unmet.
+
+## Not worth continuing
+No conclusion on middle/source yet. No broadstage-search/exhaustivepermutation; currentprefix and one necessary directskip sufficient. Do not trainnewPORscale200 or addstages for their own sake. Actualtraining/peak/totalablationwall/data/eval/concurrency/warmup disclosed; source-only evaluation distinct from training and historicalstagecost.
+
+Read-only prefix ablation, fixed PERM154/SW104: [{"name": "source_only", "POR_training_stages": 1, "total_training_stages": 3, "scores": {"POR": 77.27786784460355, "PERM": 89.40556485691894, "SW": 74.12175282815758, "TOTAL": 80.41792154315785}, "delta_vs_full_POR": -0.6485129161203105, "delta_vs_full_TOTAL": -0.19455387483608888}, {"name": "source_113", "POR_training_stages": 2, "total_training_stages": 4, "scores": {"POR": 77.54045432673898, "PERM": 89.40556485691894, "SW": 74.12175282815758, "TOTAL": 80.49669748779847}, "delta_vs_full_POR": -0.3859264339848778, "delta_vs_full_TOTAL": -0.11577793019546334}, {"name": "source_113_151", "POR_training_stages": 3, "total_training_stages": 5, "scores": {"POR": 77.92638076072386, "PERM": 89.40556485691894, "SW": 74.12175282815758, "TOTAL": 80.61247541799393}, "delta_vs_full_POR": 0.0, "delta_vs_full_TOTAL": 0.0}]
+Original SOURCE uses original T3 family; later stages use mixed T3/Cauchy. These are actual prefix recipes, not a pure family-matched mechanism ablation. Direct skip-middle training is separate.
+
+V201 final POR77.415345964852, gain-0.511034795872, actualTOTAL80.459164979232; fourphases inclsource/two POR stages, strict808=False; all144665replay/frozenexact, best/stop1/15, trainingseconds155.154987/peakMiB924.547363. No otherfolds.
+
+V201 direct skip-middle completed best1/stop15 POR77.415345964852; lower than11377.540454 and15177.926381. All prefix recipes verified, keep three POR phases. V202 lower LR3e-5 scale-only4656patch explicitly launched PID53300; same154 parent, no198 weights; one optional PERM stage replaces198, not stacks. No GPU job stopped; peak concurrent two, one now live. 197/199/201 negative checkpoints removed with SHA manifests after full144665 replay/assembly. Goal fullOOF>82 still unmet; no remainingfolds.
+

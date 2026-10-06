@@ -1,0 +1,1 @@
+维护PROJECTS、README、EXPLORATIONS、图谱。固定第五折/原9曲线206+相对深度/Q50/ownPERM/80-14/max2GPU。新PERM完全随机网络，初始化统计仅64训练井；不加载教师/旧预测器；其他目标固定。原子last、不自动恢复补折、旧交付不改。

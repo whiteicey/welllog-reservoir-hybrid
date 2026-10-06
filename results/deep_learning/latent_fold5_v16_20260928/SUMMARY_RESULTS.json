@@ -1,0 +1,142 @@
+{
+  "project": "latent_fold5_v16_20260928",
+  "scope": "obsolete-study",
+  "weights_retained": false,
+  "cleanup": "Obsolete artifacts removed by explicit user request. These are historical scores, not newly verified training.",
+  "results": [
+    {
+      "source": "assembled_report.json",
+      "result": {
+        "fold": 5,
+        "rows": 144665,
+        "reference_scores": {
+          "POR": 77.44891570750882,
+          "PERM": 89.3475027344081,
+          "SW": 73.62238476712884,
+          "TOTAL": 80.27413533779057
+        },
+        "candidates": [
+          {
+            "mode": "tcn",
+            "scores": {
+              "POR": 77.44891570750882,
+              "PERM": 89.3475027344081,
+              "SW": 73.10202378182376,
+              "TOTAL": 80.09200899293378
+            },
+            "delta_v5_TOTAL": -0.18212634485678336,
+            "delta_old_SW": -0.520360985305075,
+            "three_models_loaded_from_disk": true,
+            "no_shared_parameter_storage": true,
+            "POR_PERM_exactly_unchanged": true,
+            "all144665SW_predictions_exact": true,
+            "private_backbone_branches": 5,
+            "checkpoint": "outputs/pure_dl_latent_v16_tcn_fold5/model_best.pt"
+          },
+          {
+            "mode": "latent",
+            "scores": {
+              "POR": 77.44891570750882,
+              "PERM": 89.3475027344081,
+              "SW": 73.47651480325466,
+              "TOTAL": 80.22308085043461
+            },
+            "delta_v5_TOTAL": -0.0510544873559553,
+            "delta_old_SW": -0.14586996387417628,
+            "three_models_loaded_from_disk": true,
+            "no_shared_parameter_storage": true,
+            "POR_PERM_exactly_unchanged": true,
+            "all144665SW_predictions_exact": true,
+            "private_backbone_branches": 5,
+            "checkpoint": "outputs/pure_dl_latent_v16_latent_fold5/model_best.pt"
+          }
+        ],
+        "selected_scores": {
+          "POR": 77.44891570750882,
+          "PERM": 89.3475027344081,
+          "SW": 73.62238476712884,
+          "TOTAL": 80.27413533779057
+        },
+        "selected_new_SW": false,
+        "reference_best_v5_total": 80.27413533779057,
+        "all_original_row_order_verified": true,
+        "all_new_models_and_fixed_POR_PERM_reloaded": true,
+        "timing": [
+          {
+            "target": "SW",
+            "mode": "tcn",
+            "replay_seconds": 0.6394292999757454,
+            "all144665rows_exact": true
+          },
+          {
+            "target": "SW",
+            "mode": "latent",
+            "replay_seconds": 0.5674958999734372,
+            "all144665rows_exact": true
+          },
+          {
+            "target": "POR",
+            "replay_seconds": 2.853080700035207,
+            "all144665rows_exact": true
+          },
+          {
+            "target": "PERM",
+            "replay_seconds": 1.460092400026042,
+            "all144665rows_exact": true
+          }
+        ],
+        "total_setup_and_replay_seconds": 52.242363500001375,
+        "complete_five_folds": false,
+        "remaining_folds_started": false,
+        "finished_at": "2026-09-28T18:09:02.796489+08:00"
+      }
+    },
+    {
+      "source": "CURRENT_RECIPE.json",
+      "result": {
+        "scores": {
+          "POR": 77.44891570750882,
+          "PERM": 89.3475027344081,
+          "SW": 73.62238476712884,
+          "TOTAL": 80.27413533779057
+        },
+        "choices": [
+          {
+            "target": "POR",
+            "key": "POR_dual",
+            "architecture": "dual",
+            "target_score": 77.44891570750882,
+            "best_epoch": 0,
+            "checkpoint": "outputs/pure_dl_independent_v8_POR_dual80_fold5/model_best.pt"
+          },
+          {
+            "target": "PERM",
+            "key": "PERM_dual",
+            "architecture": "dual",
+            "target_score": 89.3475027344081,
+            "best_epoch": 0,
+            "checkpoint": "outputs/pure_dl_independent_v8_PERM_dual80_fold5/model_best.pt"
+          },
+          {
+            "target": "SW",
+            "key": "SW_dual",
+            "architecture": "dual",
+            "target_score": 73.62238476712884,
+            "best_epoch": 0,
+            "checkpoint": "outputs/pure_dl_independent_v8_SW_dual80_fold5/model_best.pt"
+          }
+        ],
+        "selected_new_SW": false,
+        "best_new_candidate": "latent",
+        "remaining_folds_started": false,
+        "complete_five_folds": false,
+        "development_selected_fold5": true,
+        "old_delivery_unchanged": true,
+        "current_model_policy": "Keep v5/v8 when no completed new candidate exceeds it"
+      }
+    }
+  ],
+  "cleanup_completed": true,
+  "deleted_files": 7,
+  "deleted_bytes": 353140382
+}

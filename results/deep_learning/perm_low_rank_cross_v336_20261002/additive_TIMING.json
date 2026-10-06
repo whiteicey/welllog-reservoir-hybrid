@@ -1,0 +1,13 @@
+{
+  "includes": "prep initial training bestrestore",
+  "terminal": true,
+  "concurrent_route": "POR335 if still live",
+  "pid": 16068,
+  "excludes": "implementation CPUfinalization",
+  "concurrent_gpu_tasks_at_launch": 2,
+  "started_epoch": 1790897985.426,
+  "individual_seconds": 203.70632100000512,
+  "peak_MiB": 893.296875,
+  "terminal_epoch": 1790898194.6067991,
+  "process_creation_to_terminal_seconds": 209.18079900741577
+}

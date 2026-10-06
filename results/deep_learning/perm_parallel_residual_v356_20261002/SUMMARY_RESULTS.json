@@ -1,0 +1,62 @@
+{
+  "project": "perm_parallel_residual_v356_20261002",
+  "scope": "obsolete-study",
+  "weights_retained": false,
+  "cleanup": "Obsolete artifacts removed by explicit user request. These are historical scores, not newly verified training.",
+  "results": [
+    {
+      "source": "FINAL.json",
+      "result": {
+        "report": {
+          "stage": "local",
+          "target": "PERM",
+          "target_score": 89.40556485691894,
+          "initial_score": 89.40556485691894,
+          "against_initial": 0.0,
+          "against_v97_target": 0.00884080755312766,
+          "best_epoch": 0,
+          "stopped_epoch": 14,
+          "validation_rows": 144665,
+          "predictions_reproduced_exactly": true,
+          "frozen_parameters_exact": true,
+          "residual_parameter_norms": {
+            "residual_encoder.stem.weight": 3.9845287799835205,
+            "residual_encoder.stem.bias": 0.2519529461860657,
+            "residual_encoder.norm.weight": 6.928203105926514,
+            "residual_encoder.norm.bias": 0.0,
+            "residual_encoder.depth.weight": 4.029961109161377,
+            "residual_encoder.depth.bias": 1.0131064653396606,
+            "residual_encoder.expand.weight": 5.741763114929199,
+            "residual_encoder.expand.bias": 0.8430691957473755,
+            "residual_readout.weight": 0.0,
+            "residual_readout.bias": 0.0
+          },
+          "seconds": 101.61426489998121,
+          "peak_MiB": 786.46533203125,
+          "complete_five_folds": false,
+          "early_terminated": false
+        },
+        "strata": {
+          "default": 97.27870539397452,
+          "continuous": 74.09691194381553
+        },
+        "current_readout_norms": {
+          "residual_readout.weight": 1.040154218673706,
+          "residual_readout.bias": 0.059016741812229156
+        },
+        "whole_vs154": 0.0,
+        "whole_vs336": -0.11282454187171709,
+        "CONT_vs336": 0.08727486061846434,
+        "adopted": false,
+        "point_trained": false,
+        "independent_disk_reload": false,
+        "complete_five_folds": false,
+        "remaining_folds_started": false,
+        "closed_setting": "parallel native319-to48 local17 predictor distribution residual .25; natural14/best0, no parameter grid"
+      }
+    }
+  ],
+  "cleanup_completed": true,
+  "deleted_files": 4,
+  "deleted_bytes": 6715
+}

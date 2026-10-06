@@ -1,0 +1,113 @@
+{
+  "project": "perm_edge_messages_v333_20261002",
+  "scope": "obsolete-study",
+  "weights_retained": false,
+  "cleanup": "Obsolete artifacts removed by explicit user request. These are historical scores, not newly verified training.",
+  "results": [
+    {
+      "source": "PAIRED_FINAL.json",
+      "result": {
+        "arms": {
+          "mean": {
+            "report": {
+              "stage": "mean",
+              "target": "PERM",
+              "target_score": 89.50547029624123,
+              "initial_score": 89.4055666268939,
+              "against_initial": 0.0999036693473272,
+              "against_v97_target": 0.10874624687541257,
+              "best_epoch": 5,
+              "stopped_epoch": 19,
+              "validation_rows": 144665,
+              "predictions_reproduced_exactly": true,
+              "frozen_parameters_exact": true,
+              "seconds": 266.4937040999648,
+              "peak_MiB": 946.9833984375,
+              "complete_five_folds": false,
+              "early_terminated": false
+            },
+            "strata": {
+              "default": 97.47151163120675,
+              "continuous": 74.01617967397496
+            },
+            "zero_initialized_edge_output_norm": {
+              "edge_messages.output.weight": 1.9059232473373413,
+              "edge_messages.output.bias": 0.28330492973327637
+            },
+            "whole_vs312": -0.010334108637607642,
+            "CONT_vs312": 0.013291269962238061,
+            "stopped_before27": true,
+            "timing": {
+              "includes": "prep initial training bestrestore",
+              "terminal": true,
+              "pid": 80892,
+              "excludes": "implementation CPUfinalization",
+              "concurrent_gpu_tasks_at_launch": 2,
+              "started_epoch": 1790896270.482,
+              "individual_seconds": 266.4937040999648,
+              "peak_MiB": 946.9833984375,
+              "terminal_epoch": 1790896542.5552566,
+              "process_creation_to_terminal_seconds": 272.07325649261475
+            },
+            "independent_disk_reload": false
+          },
+          "maximum": {
+            "report": {
+              "stage": "maximum",
+              "target": "PERM",
+              "target_score": 89.49934814043613,
+              "initial_score": 89.4055666268939,
+              "against_initial": 0.09378151354222553,
+              "against_v97_target": 0.1026240910703109,
+              "best_epoch": 5,
+              "stopped_epoch": 19,
+              "validation_rows": 144665,
+              "predictions_reproduced_exactly": true,
+              "frozen_parameters_exact": true,
+              "seconds": 268.50393070001155,
+              "peak_MiB": 964.0927734375,
+              "complete_five_folds": false,
+              "early_terminated": false
+            },
+            "strata": {
+              "default": 97.467056693441,
+              "continuous": 74.00681575433087
+            },
+            "zero_initialized_edge_output_norm": {
+              "edge_messages.output.weight": 1.6316267251968384,
+              "edge_messages.output.bias": 0.1870943009853363
+            },
+            "whole_vs312": -0.016456264442709312,
+            "CONT_vs312": 0.003927350318150502,
+            "stopped_before27": true,
+            "timing": {
+              "includes": "prep initial training bestrestore",
+              "terminal": true,
+              "pid": 59720,
+              "excludes": "implementation CPUfinalization",
+              "concurrent_gpu_tasks_at_launch": 1,
+              "started_epoch": 1790896269.363,
+              "individual_seconds": 268.50393070001155,
+              "peak_MiB": 964.0927734375,
+              "terminal_epoch": 1790896543.3936825,
+              "process_creation_to_terminal_seconds": 274.03068256378174
+            },
+            "independent_disk_reload": false
+          }
+        },
+        "maximum_minus_mean_whole": -0.00612215580510167,
+        "maximum_minus_mean_CONT": -0.00936391964408756,
+        "comparison_limits": "Same40098 parameters/message initialization with max versus mean aggregation families/gradient sparsity differ. Fixedvaliddepth7 rows before firstselector, original154only. Historical312 not concurrent repeat. Inheritednull27fields notapplicable, actualwork recorded.",
+        "pair_wall_seconds": 274.03068256378174,
+        "stagger_seconds": 1.1190001964569092,
+        "adopted": false,
+        "screening_fold": 5,
+        "complete_five_folds": false,
+        "remaining_folds_started": false
+      }
+    }
+  ],
+  "cleanup_completed": true,
+  "deleted_files": 15,
+  "deleted_bytes": 6981562
+}

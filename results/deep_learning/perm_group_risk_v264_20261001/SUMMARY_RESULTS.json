@@ -1,0 +1,168 @@
+{
+  "project": "perm_group_risk_v264_20261001",
+  "scope": "obsolete-study",
+  "weights_retained": false,
+  "cleanup": "Obsolete artifacts removed by explicit user request. These are historical scores, not newly verified training.",
+  "results": [
+    {
+      "source": "MICRO_GAIN_SEVEN_STAGE_RECIPE.json",
+      "result": {
+        "scores": {
+          "POR": 77.92638076072386,
+          "PERM": 89.41539748368076,
+          "SW": 74.14922820781207,
+          "TOTAL": 80.62553322023965
+        },
+        "screening_fold": 5,
+        "validation_rows": 144665,
+        "strict_808_qualified": false,
+        "complete_five_folds": false,
+        "remaining_folds_started": false,
+        "total_training_stages": 7,
+        "stages": [
+          "SOURCE",
+          "POR113",
+          "POR151",
+          "PERM154",
+          "SW104",
+          "PERM264well_mean",
+          "SW252conditional"
+        ],
+        "added_head_stages": {
+          "POR": 0,
+          "PERM": 1,
+          "SW": 1
+        },
+        "heads": {
+          "POR": {
+            "checkpoint": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_por_ranked_probability_v151_fold5\\joint_rps\\model_best.pt"
+          },
+          "PERM": {
+            "checkpoint": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_perm_group_risk_v264_fold5\\well_mean\\model_best.pt"
+          },
+          "SW": {
+            "checkpoint": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_sw_mass_cdf_v252_fold5\\conditional\\model_best.pt"
+          }
+        },
+        "gain_vs_previous_optional7": 0.0006761609025431881,
+        "not_material_improvement": true,
+        "default_five_stage_unchanged": true,
+        "verification": "RestoredRAM-best frozen/actual144665 composition; no independent disk reload"
+      }
+    },
+    {
+      "source": "PAIRED_FINAL.json",
+      "result": {
+        "arms": {
+          "well_mean": {
+            "scores": {
+              "POR": 77.92638076072386,
+              "PERM": 89.41539748368076,
+              "SW": 74.12175282815758,
+              "TOTAL": 80.61591683736057
+            },
+            "screening_fold": 5,
+            "validation_rows": 144665,
+            "complete_five_folds": false,
+            "strict_808_passed": false,
+            "remaining_folds_started": false,
+            "total_training_stages": 6,
+            "stage_upper_bound": 8,
+            "added_head_stages": {
+              "POR": 0,
+              "PERM": 1,
+              "SW": 0
+            },
+            "source_stage_counted": true,
+            "gain_vs_original_PERM": 0.009832626761820507,
+            "gain_vs_original_TOTAL": 0.003441419366637888,
+            "report": {
+              "stage": "well_mean",
+              "target": "PERM",
+              "target_score": 89.41539748368076,
+              "initial_score": 89.4043983346458,
+              "against_initial": 0.010999149034958577,
+              "against_v97_target": 0.018673434314948167,
+              "best_epoch": 8,
+              "stopped_epoch": 22,
+              "validation_rows": 144665,
+              "predictions_reproduced_exactly": true,
+              "frozen_parameters_exact": true,
+              "seconds": 222.60064379998948,
+              "peak_MiB": 789.90380859375,
+              "complete_five_folds": false,
+              "early_terminated": false
+            }
+          },
+          "robust": {
+            "scores": {
+              "POR": 77.92638076072386,
+              "PERM": 89.41481107083546,
+              "SW": 74.12175282815758,
+              "TOTAL": 80.61571159286471
+            },
+            "screening_fold": 5,
+            "validation_rows": 144665,
+            "complete_five_folds": false,
+            "strict_808_passed": false,
+            "remaining_folds_started": false,
+            "total_training_stages": 6,
+            "stage_upper_bound": 8,
+            "added_head_stages": {
+              "POR": 0,
+              "PERM": 1,
+              "SW": 0
+            },
+            "source_stage_counted": true,
+            "gain_vs_original_PERM": 0.009246213916512147,
+            "gain_vs_original_TOTAL": 0.003236174870778541,
+            "report": {
+              "stage": "robust",
+              "target": "PERM",
+              "target_score": 89.41481107083546,
+              "initial_score": 89.4043983346458,
+              "against_initial": 0.010412736189650218,
+              "against_v97_target": 0.018087021469639808,
+              "best_epoch": 10,
+              "stopped_epoch": 24,
+              "validation_rows": 144665,
+              "predictions_reproduced_exactly": true,
+              "frozen_parameters_exact": true,
+              "seconds": 219.9094779000152,
+              "peak_MiB": 789.90380859375,
+              "complete_five_folds": false,
+              "early_terminated": false
+            }
+          }
+        },
+        "robust_minus_well_mean": -0.0005864128453083595,
+        "well_mean_vs_retained248": 0.0019318882929724168,
+        "timing": {
+          "excludes_code_preparation": true,
+          "arms": {
+            "robust": {
+              "process_creation_utc_seconds": 1790865978.053,
+              "pid": 62424
+            },
+            "well_mean": {
+              "process_creation_utc_seconds": 1790865978.035,
+              "pid": 47772
+            }
+          },
+          "pair_wallclock_pending": false,
+          "maximum_GPU_jobs": 2,
+          "concurrent": true,
+          "includes_startup_model_data_initial_eval": true,
+          "pair_wallclock_seconds": 228.64345741271973,
+          "includes_final_restore_and_report": true
+        },
+        "independent_disk_reload": false,
+        "remaining_folds_started": false,
+        "conclusion": "Equalwell-control tinyabsolute gain; entropicrobust negativepairedgain. Preserve groupmean and robustcomparison checkpoints; no meaningfulscreen qualification."
+      }
+    }
+  ],
+  "cleanup_completed": true,
+  "deleted_files": 13,
+  "deleted_bytes": 10429018
+}

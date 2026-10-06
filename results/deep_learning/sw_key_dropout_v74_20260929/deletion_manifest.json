@@ -1,0 +1,19 @@
+{
+  "deleted": [
+    {
+      "path": "outputs\\pure_dl_sw_key_dropout_v74_SW_control_fold5\\model_best.pt",
+      "bytes": 3448619,
+      "sha256": "f6ac052aae1db0669896efe5f558861223ae0934fc33bcc4c3e6a4cc7319ce08"
+    },
+    {
+      "path": "outputs\\pure_dl_sw_key_dropout_v74_SW_control_fold5\\last_state.pt",
+      "bytes": 15609243,
+      "sha256": "8cd79f544e6dd0990610d010e28f4d5a125903908329f9ee1da63cf7e1306438"
+    }
+  ],
+  "bytes": 19057862,
+  "status": "complete",
+  "retained": [
+    "dropkey"
+  ]
+}

@@ -1,0 +1,50 @@
+﻿{
+    "scores":  {
+                   "POR":  77.92638076072386,
+                   "PERM":  89.40683321224739,
+                   "SW":  74.12175282815758,
+                   "TOTAL":  80.6129193423589
+               },
+    "total_training_stages":  6,
+    "source_stage_counted":  true,
+    "dependencies":  [
+                         "original source",
+                         "v113 mixed POR",
+                         "v151 POR jointRPS",
+                         "v154 PERM jointRPS",
+                         "v104 SW",
+                         "v202 frozen154 scale-only lowerLR patch"
+                     ],
+    "POR":  {
+                "checkpoint":  "outputs/pure_dl_por_ranked_probability_v151_fold5/joint_rps/model_best.pt",
+                "sha256":  "39f2255b8fe61fa74607af027ece1dd352e5e2d0729b9bce95d1424c1b227603",
+                "module":  "por_ranked_probability_v151",
+                "stage":  "joint_rps"
+            },
+    "PERM":  {
+                 "checkpoint":  "outputs/pure_dl_perm_frozen_scale_slow_v202_fold5/scale/model_best.pt",
+                 "sha256":  "061cf2853a50964272df2eb66ac64ab01e93b3650fe20b1ff14ec2b9aa753035",
+                 "module":  "perm_frozen_scale_slow_v202",
+                 "stage":  "scale",
+                 "parent_checkpoint":  "outputs/pure_dl_perm_ranked_probability_v154_fold5/perm_conditional/model_best.pt",
+                 "parent_sha256":  "2b355bb8c3736990b05e2726373a4343c574a93ab6ab1a3eda0ef796ac70cf11"
+             },
+    "SW":  {
+               "checkpoint":  "outputs/pure_dl_compact_frequency_v104_fold5/local/model_best.pt"
+           },
+    "screening_fold":  5,
+    "complete_five_folds":  false,
+    "strict_808_passed":  false,
+    "strict_channel_gain_025":  true,
+    "previous_recipe_path":  "results/deep_learning/perm_frozen_scale_patch_v198_20261001/CURRENT_RECIPE.json",
+    "gain_vs_previous_TOTAL":  0.0003507108131,
+    "remaining_folds_started":  false,
+    "total_stage_upper_bound":  8,
+    "added_head_stages":  {
+                              "POR":  0,
+                              "PERM":  1,
+                              "SW":  0
+                          },
+    "gain_vs_verified_five_stage_TOTAL":  0.0004439243650,
+    "optional_not_default":  true
+}

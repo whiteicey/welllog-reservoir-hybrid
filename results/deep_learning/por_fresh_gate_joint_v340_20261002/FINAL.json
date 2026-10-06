@@ -1,0 +1,69 @@
+{
+  "report": {
+    "stage": "gate",
+    "target": "POR",
+    "target_score": 77.99299534204216,
+    "initial_score": 77.92638076072386,
+    "against_initial": 0.066614581318305,
+    "against_v97_target": 0.44105854015715806,
+    "best_epoch": 29,
+    "stopped_epoch": 43,
+    "validation_rows": 144665,
+    "predictions_reproduced_exactly": true,
+    "frozen_parameters_exact": true,
+    "gradient_groups": {
+      "POR_new_raw_feature_backbone": 0.06617928296327591,
+      "POR_direct_categorical_readout": 0.04905827343463898,
+      "POR_curve_interaction_backbone": 0.06912990659475327,
+      "POR_fresh_joint_gate": 0.002952835289761424
+    },
+    "seconds": 523.0741088000359,
+    "peak_MiB": 2074.65185546875,
+    "complete_five_folds": false,
+    "early_terminated": false
+  },
+  "strata": {
+    "default": 97.22755068516379,
+    "continuous": 41.91692516412055
+  },
+  "bridge_zero_initialized_parameter_norms": {
+    "curve_interaction.bridge.weight": 0.848689079284668,
+    "curve_interaction.bridge.bias": 0.09522432833909988,
+    "gate_residual.weight": 0.06742142885923386,
+    "gate_residual.bias": 0.010989813134074211
+  },
+  "whole_vs335": -0.049217292959895076,
+  "CONT_vs335": 0.19241433398231322,
+  "CONT_vs_original151": -0.03703589078351399,
+  "predefined42": {
+    "through_epoch": 42,
+    "best_epoch": 29,
+    "target_score": 77.99299534204216,
+    "control_actual_epochs": 42,
+    "nominal_budget": 80,
+    "comparison": "Predefined bestthrough42 vs historical335width64 natural42; capacity differs/laterbest not equalwork evidence",
+    "strata": {
+      "default": 97.22755068516379,
+      "continuous": 41.91692516412055
+    }
+  },
+  "stopped_before42": false,
+  "full_best_after42_not_equalwork": false,
+  "adopted": false,
+  "screening_fold": 5,
+  "complete_five_folds": false,
+  "remaining_folds_started": false,
+  "independent_disk_reload": false,
+  "comparison_limits": "Historical335128336 fixedgate vs340128385freshjointgate; 49extra parameters/notcapacitymatched, sameencoder/init. BCE previouslyconstant now trainsfreshbody; not isolatedgate-onlyreadout. Historical not concurrent repeat; no robustness proof.",
+  "timing": {
+    "includes": "preprocessing warmup training best restoration",
+    "concurrency": "solo after339terminal",
+    "pid": 25556,
+    "terminal": true,
+    "global_GPU_jobs_before": 0,
+    "started_epoch": 1790900933.511,
+    "individual_seconds": 523.0741088000359,
+    "peak_MiB": 2074.65185546875,
+    "process_creation_to_terminal_seconds": 527.8607594966888
+  }
+}

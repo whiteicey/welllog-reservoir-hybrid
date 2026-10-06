@@ -1,0 +1,59 @@
+{
+  "project": "perm_numeric_ple_v276_20261001",
+  "scope": "obsolete-study",
+  "weights_retained": false,
+  "cleanup": "Obsolete artifacts removed by explicit user request. These are historical scores, not newly verified training.",
+  "results": [
+    {
+      "source": "PAIRED_FINAL.json",
+      "result": {
+        "status": "complete",
+        "reports": {
+          "scalar_repeat": {
+            "stage": "scalar_repeat",
+            "target": "PERM",
+            "target_score": 89.47207425593905,
+            "initial_score": 89.4055666268939,
+            "against_initial": 0.06650762904514806,
+            "against_v97_target": 0.07535020657323344,
+            "best_epoch": 8,
+            "stopped_epoch": 22,
+            "validation_rows": 144665,
+            "predictions_reproduced_exactly": true,
+            "frozen_parameters_exact": true,
+            "seconds": 239.6976386999595,
+            "peak_MiB": 787.984375,
+            "complete_five_folds": false,
+            "early_terminated": false
+          },
+          "ple": {
+            "stage": "ple",
+            "target": "PERM",
+            "target_score": 89.4827459401514,
+            "initial_score": 89.4055666268939,
+            "against_initial": 0.07717931325750271,
+            "against_v97_target": 0.08602189078558808,
+            "best_epoch": 8,
+            "stopped_epoch": 22,
+            "validation_rows": 144665,
+            "predictions_reproduced_exactly": true,
+            "frozen_parameters_exact": true,
+            "seconds": 243.96572749997722,
+            "peak_MiB": 787.984375,
+            "complete_five_folds": false,
+            "early_terminated": false
+          }
+        },
+        "paired_delta": 0.010671684212354648,
+        "ple_minus_retained274": -1.25368755305999e-05,
+        "adopted": false,
+        "reason": "Fair encoding gain but does not exceed retained274; keep positive mechanism and matched control.",
+        "independent_disk_reload": false,
+        "remaining_folds_started": false
+      }
+    }
+  ],
+  "cleanup_completed": true,
+  "deleted_files": 10,
+  "deleted_bytes": 6953179
+}

@@ -1,0 +1,420 @@
+{
+  "observed_at": "2026-09-28T21:18:09.962201+08:00",
+  "rows": [
+    {
+      "mode": "base1",
+      "id": "pure_dl_champion_scaling_v21_base1_fold5",
+      "status": {
+        "status": "complete",
+        "pid": 38952,
+        "target": "POR",
+        "architecture": "dual",
+        "atlas_current_trial": false
+      },
+      "pid_alive": false,
+      "parameters": 1290490,
+      "added_parameters": 0,
+      "location_hidden_width": 32,
+      "initial": {
+        "target_score": 77.44891570750882,
+        "reference_replacement_total": 80.27413533779057,
+        "different_target_elements_vs_shared_reference": 0,
+        "comparison": "dual is a private copy of the prior target function; single is a different one-expert initial function"
+      },
+      "gradient_scope": {
+        "private_backbone_gradient_norm": 0.8069955110549927,
+        "body_tensors_with_grad": 233,
+        "target": "POR",
+        "output_target_axis": 1,
+        "private_process_pid": 38952,
+        "other_target_losses_computed": false,
+        "extra_output_gradient_norm": 0.0
+      },
+      "best_after_update": {
+        "epoch": 1,
+        "target_score": 77.1881799562864,
+        "best_target_score": 77.44891570750882,
+        "best_epoch": 0,
+        "bad_epochs": 1,
+        "reference_replacement_total": 80.19591461242383,
+        "score_scope": "TOTAL is single-target replacement diagnostic, not a3modelresult",
+        "training_loss": -0.09010897483676672,
+        "training_bce": 0.09768256603274494,
+        "training_nll": -0.3680094873998314,
+        "learning_rates": [
+          9.996530663083258e-06,
+          2.9988821025490495e-05
+        ],
+        "seconds": 10.329187000000275
+      },
+      "last": {
+        "epoch": 18,
+        "target_score": 76.96192532138474,
+        "best_target_score": 77.44891570750882,
+        "best_epoch": 0,
+        "bad_epochs": 18,
+        "reference_replacement_total": 80.12803822195335,
+        "score_scope": "TOTAL is single-target replacement diagnostic, not a3modelresult",
+        "training_loss": -0.10455023983377032,
+        "training_bce": 0.0932674381765537,
+        "training_nll": -0.40691814525052905,
+        "learning_rates": [
+          8.921826845200108e-06,
+          2.6525886501200425e-05
+        ],
+        "seconds": 11.448122400000102
+      },
+      "final": {
+        "fold": 5,
+        "screening_fold": 5,
+        "target": "POR",
+        "architecture": "dual",
+        "scores": {
+          "POR": 77.44891570750882
+        },
+        "target_score": 77.44891570750882,
+        "mode": "base1",
+        "scaling": {
+          "mode": "base1",
+          "internal_width_factor": 1,
+          "stage_widths_unchanged": true,
+          "attention_unchanged": true,
+          "location_hidden_width": 32,
+          "base_parameters": 1290490,
+          "parameters": 1290490,
+          "extra_parameters": 0
+        },
+        "best_after_update": {
+          "epoch": 1,
+          "target_score": 77.1881799562864,
+          "best_target_score": 77.44891570750882,
+          "best_epoch": 0,
+          "bad_epochs": 1,
+          "reference_replacement_total": 80.19591461242383,
+          "score_scope": "TOTAL is single-target replacement diagnostic, not a3modelresult",
+          "training_loss": -0.09010897483676672,
+          "training_bce": 0.09768256603274494,
+          "training_nll": -0.3680094873998314,
+          "learning_rates": [
+            9.996530663083258e-06,
+            2.9988821025490495e-05
+          ],
+          "seconds": 10.329187000000275
+        },
+        "initial_target_score": 77.44891570750882,
+        "source_channel_score": 77.44891570750882,
+        "delta_initial": 0.0,
+        "delta_shared_reference": 0.0,
+        "reference_replacement_total": 80.27413533779057,
+        "TOTAL_scope": "diagnostic only; actual combined score requires3independentmodels",
+        "best_epoch": 0,
+        "stopped_epoch": 18,
+        "private_backbone_branches": 2,
+        "trainable_parameters": 1290490,
+        "private_backbone_gradient_verified": true,
+        "last_backbone_parameter_change_L2": 0.7969816342901899,
+        "selected_backbone_parameter_change_L2": 0.0,
+        "all144665target_predictions_restored_exactly": true,
+        "frozen_packed_rows_unchanged": true,
+        "independent_checkpoint": true,
+        "complete_five_folds": false,
+        "remaining_folds_started": false,
+        "seconds": 197.70473519999996,
+        "peak_gpu_allocated_mib": 779.4150390625,
+        "finished_at": "2026-09-28T21:13:41.780453+08:00"
+      },
+      "failure": null,
+      "iteration_seconds_median": 10.332237000000532
+    },
+    {
+      "mode": "ffn2",
+      "id": "pure_dl_champion_scaling_v21_ffn2_fold5",
+      "status": {
+        "status": "complete",
+        "pid": 42584,
+        "target": "POR",
+        "architecture": "dual",
+        "atlas_current_trial": false
+      },
+      "pid_alive": false,
+      "parameters": 1981498,
+      "added_parameters": 691008,
+      "location_hidden_width": 64,
+      "initial": {
+        "target_score": 77.44891570750882,
+        "reference_replacement_total": 80.27413533779057,
+        "different_target_elements_vs_shared_reference": 0,
+        "comparison": "dual is a private copy of the prior target function; single is a different one-expert initial function"
+      },
+      "gradient_scope": {
+        "private_backbone_gradient_norm": 0.807075023651123,
+        "body_tensors_with_grad": 287,
+        "target": "POR",
+        "output_target_axis": 1,
+        "private_process_pid": 42584,
+        "other_target_losses_computed": false,
+        "extra_output_gradient_norm": 0.3027825951576233
+      },
+      "best_after_update": {
+        "epoch": 1,
+        "target_score": 77.18555674437513,
+        "best_target_score": 77.44891570750882,
+        "best_epoch": 0,
+        "bad_epochs": 1,
+        "reference_replacement_total": 80.19512764885046,
+        "score_scope": "TOTAL is single-target replacement diagnostic, not a3modelresult",
+        "training_loss": -0.09008915408048779,
+        "training_bce": 0.09768262505531311,
+        "training_nll": -0.367950082058087,
+        "learning_rates": [
+          9.996530663083258e-06,
+          2.9988821025490495e-05
+        ],
+        "seconds": 11.897942200000216
+      },
+      "last": {
+        "epoch": 18,
+        "target_score": 76.95996663555992,
+        "best_target_score": 77.44891570750882,
+        "best_epoch": 0,
+        "bad_epochs": 18,
+        "reference_replacement_total": 80.12745061620589,
+        "score_scope": "TOTAL is single-target replacement diagnostic, not a3modelresult",
+        "training_loss": -0.10461364945513196,
+        "training_bce": 0.09324846504023299,
+        "training_nll": -0.4070894012693316,
+        "learning_rates": [
+          8.921826845200108e-06,
+          2.6525886501200425e-05
+        ],
+        "seconds": 9.594413400000121
+      },
+      "final": {
+        "fold": 5,
+        "screening_fold": 5,
+        "target": "POR",
+        "architecture": "dual",
+        "scores": {
+          "POR": 77.44891570750882
+        },
+        "target_score": 77.44891570750882,
+        "mode": "ffn2",
+        "scaling": {
+          "mode": "ffn2",
+          "internal_width_factor": 2,
+          "stage_widths_unchanged": true,
+          "attention_unchanged": true,
+          "location_hidden_width": 64,
+          "base_parameters": 1290490,
+          "parameters": 1981498,
+          "extra_parameters": 691008
+        },
+        "best_after_update": {
+          "epoch": 1,
+          "target_score": 77.18555674437513,
+          "best_target_score": 77.44891570750882,
+          "best_epoch": 0,
+          "bad_epochs": 1,
+          "reference_replacement_total": 80.19512764885046,
+          "score_scope": "TOTAL is single-target replacement diagnostic, not a3modelresult",
+          "training_loss": -0.09008915408048779,
+          "training_bce": 0.09768262505531311,
+          "training_nll": -0.367950082058087,
+          "learning_rates": [
+            9.996530663083258e-06,
+            2.9988821025490495e-05
+          ],
+          "seconds": 11.897942200000216
+        },
+        "initial_target_score": 77.44891570750882,
+        "source_channel_score": 77.44891570750882,
+        "delta_initial": 0.0,
+        "delta_shared_reference": 0.0,
+        "reference_replacement_total": 80.27413533779057,
+        "TOTAL_scope": "diagnostic only; actual combined score requires3independentmodels",
+        "best_epoch": 0,
+        "stopped_epoch": 18,
+        "private_backbone_branches": 2,
+        "trainable_parameters": 1981498,
+        "private_backbone_gradient_verified": true,
+        "last_backbone_parameter_change_L2": 1.0244457195790992,
+        "selected_backbone_parameter_change_L2": 0.0,
+        "all144665target_predictions_restored_exactly": true,
+        "frozen_packed_rows_unchanged": true,
+        "independent_checkpoint": true,
+        "complete_five_folds": false,
+        "remaining_folds_started": false,
+        "seconds": 222.36412139999993,
+        "peak_gpu_allocated_mib": 837.630859375,
+        "finished_at": "2026-09-28T21:14:06.447116+08:00"
+      },
+      "failure": null,
+      "iteration_seconds_median": 11.895594099999926
+    },
+    {
+      "mode": "ffn4",
+      "id": "pure_dl_champion_scaling_v21_ffn4_fold5",
+      "status": {
+        "status": "complete",
+        "pid": 50684,
+        "target": "POR",
+        "architecture": "dual",
+        "atlas_current_trial": false
+      },
+      "pid_alive": false,
+      "parameters": 3363514,
+      "added_parameters": 2073024,
+      "location_hidden_width": 128,
+      "initial": {
+        "target_score": 77.44891570750882,
+        "reference_replacement_total": 80.27413533779057,
+        "different_target_elements_vs_shared_reference": 0,
+        "comparison": "dual is a private copy of the prior target function; single is a different one-expert initial function"
+      },
+      "gradient_scope": {
+        "private_backbone_gradient_norm": 0.8072550296783447,
+        "body_tensors_with_grad": 287,
+        "target": "POR",
+        "output_target_axis": 1,
+        "private_process_pid": 50684,
+        "other_target_losses_computed": false,
+        "extra_output_gradient_norm": 0.47629255056381226
+      },
+      "best_after_update": {
+        "epoch": 1,
+        "target_score": 77.16566764721934,
+        "best_target_score": 77.44891570750882,
+        "best_epoch": 0,
+        "bad_epochs": 1,
+        "reference_replacement_total": 80.18916091970372,
+        "score_scope": "TOTAL is single-target replacement diagnostic, not a3modelresult",
+        "training_loss": -0.09006341866916046,
+        "training_bce": 0.09767071506939828,
+        "training_nll": -0.3678609631024301,
+        "learning_rates": [
+          9.996530663083258e-06,
+          2.9988821025490495e-05
+        ],
+        "seconds": 9.832203299999492
+      },
+      "last": {
+        "epoch": 18,
+        "target_score": 76.96824131483815,
+        "best_target_score": 77.44891570750882,
+        "best_epoch": 0,
+        "bad_epochs": 18,
+        "reference_replacement_total": 80.12993301998937,
+        "score_scope": "TOTAL is single-target replacement diagnostic, not a3modelresult",
+        "training_loss": -0.10484835020906758,
+        "training_bce": 0.09319699450861663,
+        "training_nll": -0.4077420379035175,
+        "learning_rates": [
+          8.921826845200108e-06,
+          2.6525886501200425e-05
+        ],
+        "seconds": 9.182043000000704
+      },
+      "final": {
+        "fold": 5,
+        "screening_fold": 5,
+        "target": "POR",
+        "architecture": "dual",
+        "scores": {
+          "POR": 77.44891570750882
+        },
+        "target_score": 77.44891570750882,
+        "mode": "ffn4",
+        "scaling": {
+          "mode": "ffn4",
+          "internal_width_factor": 4,
+          "stage_widths_unchanged": true,
+          "attention_unchanged": true,
+          "location_hidden_width": 128,
+          "base_parameters": 1290490,
+          "parameters": 3363514,
+          "extra_parameters": 2073024
+        },
+        "best_after_update": {
+          "epoch": 1,
+          "target_score": 77.16566764721934,
+          "best_target_score": 77.44891570750882,
+          "best_epoch": 0,
+          "bad_epochs": 1,
+          "reference_replacement_total": 80.18916091970372,
+          "score_scope": "TOTAL is single-target replacement diagnostic, not a3modelresult",
+          "training_loss": -0.09006341866916046,
+          "training_bce": 0.09767071506939828,
+          "training_nll": -0.3678609631024301,
+          "learning_rates": [
+            9.996530663083258e-06,
+            2.9988821025490495e-05
+          ],
+          "seconds": 9.832203299999492
+        },
+        "initial_target_score": 77.44891570750882,
+        "source_channel_score": 77.44891570750882,
+        "delta_initial": 0.0,
+        "delta_shared_reference": 0.0,
+        "reference_replacement_total": 80.27413533779057,
+        "TOTAL_scope": "diagnostic only; actual combined score requires3independentmodels",
+        "best_epoch": 0,
+        "stopped_epoch": 18,
+        "private_backbone_branches": 2,
+        "trainable_parameters": 3363514,
+        "private_backbone_gradient_verified": true,
+        "last_backbone_parameter_change_L2": 1.3624523638844739,
+        "selected_backbone_parameter_change_L2": 0.0,
+        "all144665target_predictions_restored_exactly": true,
+        "frozen_packed_rows_unchanged": true,
+        "independent_checkpoint": true,
+        "complete_five_folds": false,
+        "remaining_folds_started": false,
+        "seconds": 179.0264141000007,
+        "peak_gpu_allocated_mib": 963.3349609375,
+        "finished_at": "2026-09-28T21:17:52.490554+08:00"
+      },
+      "failure": null,
+      "iteration_seconds_median": 9.262921049999932
+    }
+  ],
+  "all_complete": true,
+  "assembly_complete": true,
+  "complete_five_folds": false,
+  "remaining_folds_started": false,
+  "config_differences": {
+    "ffn2": [
+      "mode",
+      "scaling",
+      "trainable_parameters"
+    ],
+    "ffn4": [
+      "mode",
+      "scaling",
+      "trainable_parameters"
+    ]
+  },
+  "same_initial_function_verified": true,
+  "comparisons": [
+    {
+      "mode": "base1",
+      "best_including_epoch0_TOTAL": 80.27413533779057,
+      "delta_control_selected": 0.0,
+      "best_after_update_TOTAL": 80.19591461242383,
+      "delta_control_after_update": 0.0
+    },
+    {
+      "mode": "ffn2",
+      "best_including_epoch0_TOTAL": 80.27413533779057,
+      "delta_control_selected": 0.0,
+      "best_after_update_TOTAL": 80.19512764885046,
+      "delta_control_after_update": -0.0007869635733754876
+    },
+    {
+      "mode": "ffn4",
+      "best_including_epoch0_TOTAL": 80.27413533779057,
+      "delta_control_selected": 0.0,
+      "best_after_update_TOTAL": 80.18916091970372,
+      "delta_control_after_update": -0.0067536927201103936
+    }
+  ]
+}

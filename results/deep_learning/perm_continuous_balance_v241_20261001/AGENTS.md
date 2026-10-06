@@ -1,0 +1,1 @@
+Maintain PROJECTS/README. Preserve frozen positive parent. Fixed originalfold5,Q50,ownloss/score,normalGPU,80/14,max2. One addedheadstage,sixalone,whole<=8; no repaircheckpoint stacking,no otherfolds before strict80.8+gain. Atomic states.

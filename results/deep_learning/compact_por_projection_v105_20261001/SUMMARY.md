@@ -1,0 +1,32 @@
+# Historical summary
+
+Focus and explored conditions: see retained README/FINAL and SUMMARY_RESULTS.json.
+
+Gain: scores and original comparison deltas are retained; incomplete folds remain incomplete.
+
+Not worth extending: original negative conclusions are retained below where available.
+
+Detailed logs, weights and caches were removed by the user request; rerunning requires retraining.
+
+## README.md
+
+# v105 紧凑POR末端特征投影解冻
+
+## 探索重点
+v101 mean_scope相对v100 all_density更新范围POR+0.093104，但其源隐藏特征固定。假设只让最后64→128投影适应own POR损失能保留位置更新收益；其他源骨干/统计/原输出权重保持固定。本项从原始源重新构建readout，与v101同初始函数，不加载v101已训练头，替换阶段2；完整配方仍含源≤5阶段。
+
+## 已探索与验证
+新增16640活动参数，两专家combine[0]分别lr3e-6；原均值行3e-5、point/side/routes3e-4不变。保留源eval，前层无梯度，截获128隐藏特征保留投影梯度，源输入路由无梯度；外部通道不入损失，原Student-t3 POR/网格/800动作/一次128覆盖/Q50/原第五/80-18不变。更新范围消融，活动参数不同，不冒称同容量。解冻投影会改变固定原head在新特征上的有效门控/权重/尺度，不能说只有预测均值函数变化。直接训练，暂无最终成绩。
+
+## 取得收益
+尚未证实。先与v101最终POR77.500368对照，最后实际组合选定PERM/SW验证TOTAL，所有共享依赖计入五阶段。初始原源分数不是增益；未完成五折不称完整收益。
+
+## 不值得继续的点与证据
+v98/v99旧v31共43635有效头热启动再优化均恢复epoch0，不重复该邻域。本项新增投影更新且从原源重新开始，明确不同范围。v102/v103源表征额外输入两次负结果停止。该有界投影范围若无收益，不无限扫LR或解冻更多层；当前SW滤波独立继续，不补折或改交付。
+
+### 最终更新范围消融
+POR=77.477365174678，对固定投影v101=-0.023003212967；best9/stop27，159.577秒，峰值786.5MiB。新增投影实际梯度0.372072，其他源参数冻结且实际最佳预测重现；同初始官方分。负结果，继续采用v101，不扫该3e-6范围或扩大解冻。仅第五折，未验证完整收益。
+
+
+
+

@@ -1,0 +1,13 @@
+{
+  "process_live": true,
+  "state": {
+    "status": "running",
+    "pid": 72020,
+    "stage": "alpha30",
+    "epoch": 2,
+    "best": 89.41754394419156,
+    "best_epoch": 2,
+    "bad": 0,
+    "peak_MiB": 788.2265625
+  }
+}

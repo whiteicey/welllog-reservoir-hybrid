@@ -1,0 +1,2 @@
+One newstudent backbone alignment trial; frozen ownfold teacherhiddenonly on64trainingwells. Original3labels/Q/score, no pseudolabels/teacherinference. Max2sharedslots, standalone2phases inclsource, possibleprivatePORrecipe5. MaintainPROJECTS/README/atlas, atomicstate/explicitresume, no otherfolds below80.8+gain, deliveriesimmutable.
+Native teacher256/student512/common128core; newtrial after firststepfailure, no trainedsource/hash changes.

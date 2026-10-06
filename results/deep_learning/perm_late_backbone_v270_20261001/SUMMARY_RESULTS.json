@@ -1,0 +1,103 @@
+{
+  "project": "perm_late_backbone_v270_20261001",
+  "scope": "obsolete-study",
+  "weights_retained": false,
+  "cleanup": "Obsolete artifacts removed by explicit user request. These are historical scores, not newly verified training.",
+  "results": [
+    {
+      "source": "PAIRED_FINAL.json",
+      "result": {
+        "arms": {
+          "head_only": {
+            "scores": {
+              "POR": 77.92638076072386,
+              "PERM": 89.40556485691894,
+              "SW": 74.12175282815758,
+              "TOTAL": 80.61247541799393
+            },
+            "screening_fold": 5,
+            "validation_rows": 144665,
+            "complete_five_folds": false,
+            "strict_808_passed": false,
+            "remaining_folds_started": false,
+            "total_training_stages": 6,
+            "stage_upper_bound": 8,
+            "added_head_stages": {
+              "POR": 0,
+              "PERM": 1,
+              "SW": 0
+            },
+            "source_stage_counted": true,
+            "gain_vs_original_PERM": 0.0,
+            "gain_vs_original_TOTAL": 0.0,
+            "report": {
+              "stage": "head_only",
+              "target": "PERM",
+              "target_score": 89.40556485691894,
+              "initial_score": 89.40556485691894,
+              "against_initial": 0.0,
+              "against_v97_target": 0.00884080755312766,
+              "best_epoch": 0,
+              "stopped_epoch": 14,
+              "validation_rows": 144665,
+              "predictions_reproduced_exactly": true,
+              "frozen_parameters_exact": true,
+              "seconds": 145.62636769999517,
+              "peak_MiB": 786.46533203125,
+              "complete_five_folds": false,
+              "early_terminated": false
+            }
+          },
+          "late_joint": {
+            "scores": {
+              "POR": 77.92638076072386,
+              "PERM": 89.40556485691894,
+              "SW": 74.12175282815758,
+              "TOTAL": 80.61247541799393
+            },
+            "screening_fold": 5,
+            "validation_rows": 144665,
+            "complete_five_folds": false,
+            "strict_808_passed": false,
+            "remaining_folds_started": false,
+            "total_training_stages": 6,
+            "stage_upper_bound": 8,
+            "added_head_stages": {
+              "POR": 0,
+              "PERM": 1,
+              "SW": 0
+            },
+            "source_stage_counted": true,
+            "gain_vs_original_PERM": 0.0,
+            "gain_vs_original_TOTAL": 0.0,
+            "report": {
+              "stage": "late_joint",
+              "target": "PERM",
+              "target_score": 89.40556485691894,
+              "initial_score": 89.40556485691894,
+              "against_initial": 0.0,
+              "against_v97_target": 0.00884080755312766,
+              "best_epoch": 0,
+              "stopped_epoch": 14,
+              "validation_rows": 144665,
+              "predictions_reproduced_exactly": true,
+              "frozen_parameters_exact": true,
+              "seconds": 147.7257430999889,
+              "peak_MiB": 786.46533203125,
+              "complete_five_folds": false,
+              "early_terminated": false
+            }
+          }
+        },
+        "joint_minus_head": 0.0,
+        "both_best_initial": true,
+        "learned_gain": 0.0,
+        "closed_this_update_scope": true,
+        "no_independent_disk_reload": true
+      }
+    }
+  ],
+  "cleanup_completed": true,
+  "deleted_files": 12,
+  "deleted_bytes": 6956189
+}

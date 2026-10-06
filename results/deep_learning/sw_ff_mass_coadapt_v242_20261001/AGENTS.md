@@ -1,0 +1,1 @@
+Maintain PROJECTS/README; fixedoriginalfold5/Q50/scoring/normalGPU/80-14/max2. Original104 finalFF only may change; allotheroldweights frozen. One SWaddedstage/sixalone,whole<=8. No trainedrepairweights/remainingfolds before808. Atomicstate.

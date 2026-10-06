@@ -1,0 +1,117 @@
+{
+  "project": "sw_mass_likelihood_only_v211_20261001",
+  "scope": "obsolete-study",
+  "weights_retained": false,
+  "cleanup": "Obsolete artifacts removed by explicit user request. These are historical scores, not newly verified training.",
+  "results": [
+    {
+      "source": "CURRENT_RECIPE.json",
+      "result": {
+        "scores": {
+          "POR": 77.92638076072386,
+          "PERM": 89.40556485691894,
+          "SW": 74.14762262262707,
+          "TOTAL": 80.62152984605825
+        },
+        "total_training_stages": 6,
+        "source_stage_counted": true,
+        "dependencies": [
+          "original source",
+          "v113 mixed POR",
+          "v151 POR jointRPS",
+          "v154 PERM jointRPS",
+          "v104 SW",
+          "v211 SW likelihood-only mass patch"
+        ],
+        "POR": {
+          "checkpoint": "outputs/pure_dl_por_ranked_probability_v151_fold5/joint_rps/model_best.pt",
+          "module": "por_ranked_probability_v151",
+          "stage": "joint_rps"
+        },
+        "PERM": {
+          "checkpoint": "outputs/pure_dl_perm_ranked_probability_v154_fold5/perm_conditional/model_best.pt",
+          "module": "perm_ranked_probability_v154",
+          "stage": "perm_conditional"
+        },
+        "SW": {
+          "checkpoint": "outputs\\pure_dl_sw_mass_likelihood_only_v211_fold5\\mass\\model_best.pt",
+          "module": "sw_mass_likelihood_only_v211",
+          "stage": "mass",
+          "parent_checkpoint": "outputs\\pure_dl_compact_frequency_v104_fold5\\local\\model_best.pt"
+        },
+        "screening_fold": 5,
+        "complete_five_folds": false,
+        "strict_808_passed": false,
+        "strict_channel_gain_025": true,
+        "previous_recipe_path": "results/deep_learning/perm_ranked_probability_v154_20261001/CURRENT_RECIPE.json",
+        "gain_vs_previous_TOTAL": 0.009054428064317221,
+        "remaining_folds_started": false,
+        "optional_not_default": true,
+        "total_stage_upper_bound": 8,
+        "added_head_stages": {
+          "POR": 0,
+          "PERM": 0,
+          "SW": 1
+        }
+      }
+    },
+    {
+      "source": "OPTIONAL_SEVEN_STAGE_RECIPE.json",
+      "result": {
+        "scores": {
+          "POR": 77.92638076072386,
+          "PERM": 89.40864904024126,
+          "SW": 74.14762262262707,
+          "TOTAL": 80.62260931022107
+        },
+        "total_training_stages": 7,
+        "source_stage_counted": true,
+        "dependencies": [
+          "original source",
+          "v113 mixed POR",
+          "v151 POR jointRPS",
+          "v154 PERM jointRPS",
+          "v104 SW",
+          "v211 SW likelihood-only mass patch",
+          "v207 PERM context patch"
+        ],
+        "POR": {
+          "checkpoint": "outputs/pure_dl_por_ranked_probability_v151_fold5/joint_rps/model_best.pt",
+          "module": "por_ranked_probability_v151",
+          "stage": "joint_rps"
+        },
+        "PERM": {
+          "checkpoint": "outputs/pure_dl_perm_cross_context_slow_v207_fold5/attention/model_best.pt",
+          "module": "perm_cross_context_slow_v207",
+          "stage": "attention",
+          "parent_checkpoint": "outputs/pure_dl_perm_ranked_probability_v154_fold5/perm_conditional/model_best.pt"
+        },
+        "SW": {
+          "checkpoint": "outputs\\pure_dl_sw_mass_likelihood_only_v211_fold5\\mass\\model_best.pt",
+          "module": "sw_mass_likelihood_only_v211",
+          "stage": "mass",
+          "parent_checkpoint": "outputs\\pure_dl_compact_frequency_v104_fold5\\local\\model_best.pt"
+        },
+        "screening_fold": 5,
+        "complete_five_folds": false,
+        "strict_808_passed": false,
+        "strict_channel_gain_025": true,
+        "previous_recipe_path": "results/deep_learning/perm_ranked_probability_v154_20261001/CURRENT_RECIPE.json",
+        "gain_vs_previous_TOTAL": 0.010133892227131014,
+        "remaining_folds_started": false,
+        "optional_not_default": true,
+        "total_stage_upper_bound": 8,
+        "added_head_stages": {
+          "POR": 0,
+          "PERM": 1,
+          "SW": 1
+        },
+        "validation_rows": 144665,
+        "actual_three_target_combination": true
+      }
+    }
+  ],
+  "cleanup_completed": true,
+  "deleted_files": 12,
+  "deleted_bytes": 6958258
+}

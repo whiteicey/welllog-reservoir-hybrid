@@ -1,0 +1,786 @@
+{
+  "version": "v97",
+  "folds": [
+    {
+      "fold": 1,
+      "file": "models\\fold_1.pt",
+      "sha256": "48da12db994928e5c0cbbd399a29b43e456119721766d27dd28e4df3f68dd8ce",
+      "bytes": 18295105,
+      "root_source": "outputs\\pure_dl_fullcv_v97\\root\\fold_1.pt",
+      "root_sha256": "8fd06dbba9e5cfc4e603ce71d17b2d2f7c8711f47f32b6edb6535117e05f02df",
+      "targets": [
+        {
+          "target": "POR",
+          "checkpoint": "outputs\\pure_dl_fullcv_v97\\fold_1\\por_anchored\\model_best.pt",
+          "sha256": "00d93510ca77f33024dde8a56c37e90c8383914e2d25b3ad8d1fdb027084a500",
+          "best_epoch": 3,
+          "target_score": 80.20654240867086,
+          "construction_trace": [
+            {
+              "requested": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_dual8222_v5_location_point3280_fold5\\readout_checkpoint.pt",
+              "actual": "outputs\\pure_dl_fullcv_v97\\fold_1\\por_point\\model_best.pt",
+              "sha256": "5eca5e0b1ab30c5492d02566dbfbe0f053c5fa4e32b0fadace6b64e8cdb9f40d",
+              "fold": 1
+            },
+            {
+              "requested": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_independent_v8_POR_dual80_fold5\\model_best.pt",
+              "actual": "outputs\\pure_dl_fullcv_v97\\fold_1\\private_POR.pt",
+              "sha256": "860b159d9bb5ce8c2fd23e7a2e6422fe2bf3c8f81d0d4471a2d08a68298f0015",
+              "fold": 1
+            },
+            {
+              "requested": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_champion_shape_v25_amplitude_fold5\\model_best.pt",
+              "actual": "outputs\\pure_dl_fullcv_v97\\fold_1\\por_amplitude\\model_best.pt",
+              "sha256": "f4a3e0eb7263b1456178dd60014d2ecc15697619a57dd4845d89b073aff86fd9",
+              "fold": 1
+            },
+            {
+              "requested": "results\\deep_learning\\champion_split_route_v29_20260929\\CURRENT_RECIPE.json",
+              "fold": 1,
+              "recipe": {
+                "choices": [
+                  {
+                    "target": "POR",
+                    "mode": "split",
+                    "checkpoint": "outputs\\pure_dl_fullcv_v97\\fold_1\\por_split\\model_best.pt",
+                    "retained_v28_checkpoint": "outputs\\pure_dl_fullcv_v97\\fold_1\\por_route\\model_best.pt"
+                  },
+                  {
+                    "target": "PERM",
+                    "mode": "coupled",
+                    "checkpoint": "outputs\\pure_dl_fullcv_v97\\fold_1\\perm_split\\model_best.pt",
+                    "retained_v28_checkpoint": "outputs\\pure_dl_fullcv_v97\\fold_1\\perm_route\\model_best.pt"
+                  }
+                ]
+              }
+            },
+            {
+              "requested": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_fullcv_v97\\fold_1\\por_route\\model_best.pt",
+              "actual": "outputs\\pure_dl_fullcv_v97\\fold_1\\por_route\\model_best.pt",
+              "sha256": "38c9b233da195b3e1a9f25e5f689772a943c845c81c8b8f6a703d381a4434179",
+              "fold": 1
+            },
+            {
+              "requested": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_fullcv_v97\\fold_1\\por_split\\model_best.pt",
+              "actual": "outputs\\pure_dl_fullcv_v97\\fold_1\\por_split\\model_best.pt",
+              "sha256": "8ca4fa392e5631dee5347b6fc542abf9acfec8928ae64b9853f313adaea2d5e2",
+              "fold": 1
+            },
+            {
+              "requested": "results\\deep_learning\\champion_coadapt_v30_20260929\\CURRENT_RECIPE.json",
+              "fold": 1,
+              "recipe": {
+                "choices": [
+                  {
+                    "target": "POR",
+                    "mode": "coadapt",
+                    "checkpoint": "outputs\\pure_dl_fullcv_v97\\fold_1\\por_coadapt\\model_best.pt"
+                  }
+                ]
+              }
+            },
+            {
+              "requested": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_fullcv_v97\\fold_1\\por_coadapt\\model_best.pt",
+              "actual": "outputs\\pure_dl_fullcv_v97\\fold_1\\por_coadapt\\model_best.pt",
+              "sha256": "292d2eed9cfe0f375569e8272fe70f29541355a46bacf43b067ba72a03245411",
+              "fold": 1
+            }
+          ]
+        },
+        {
+          "target": "PERM",
+          "checkpoint": "outputs\\pure_dl_fullcv_v97\\fold_1\\perm_split\\model_best.pt",
+          "sha256": "81b4cdab01103fcec1a384707304fabd29c0cae1398c445aa368e0d8bbcc67ae",
+          "best_epoch": 0,
+          "target_score": 90.90786144125221,
+          "construction_trace": [
+            {
+              "requested": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_dual8222_v5_location_point3280_fold5\\readout_checkpoint.pt",
+              "actual": "outputs\\pure_dl_fullcv_v97\\fold_1\\por_point\\model_best.pt",
+              "sha256": "5eca5e0b1ab30c5492d02566dbfbe0f053c5fa4e32b0fadace6b64e8cdb9f40d",
+              "fold": 1
+            },
+            {
+              "requested": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_independent_v8_PERM_dual80_fold5\\model_best.pt",
+              "actual": "outputs\\pure_dl_fullcv_v97\\fold_1\\private_PERM.pt",
+              "sha256": "6e9f7a3281fdd98727a9eb8e3479c0ec00e0838f8bb6210362de2cfbcf16e91d",
+              "fold": 1
+            },
+            {
+              "requested": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_all_heads_v26_PERM_fold5\\gate\\model_best.pt",
+              "actual": "outputs\\pure_dl_fullcv_v97\\fold_1\\perm_factor\\model_best.pt",
+              "sha256": "a79185a2898f22fbb145cfbc1c3720b5f89a5b868672a8ca2c21873a7d38e28a",
+              "fold": 1
+            },
+            {
+              "requested": "results\\deep_learning\\champion_route_v28_20260929\\CURRENT_RECIPE.json",
+              "fold": 1,
+              "recipe": {
+                "choices": [
+                  {
+                    "target": "POR",
+                    "mode": "conditional",
+                    "checkpoint": "outputs\\pure_dl_fullcv_v97\\fold_1\\por_route\\model_best.pt"
+                  },
+                  {
+                    "target": "PERM",
+                    "mode": "joint",
+                    "checkpoint": "outputs\\pure_dl_fullcv_v97\\fold_1\\perm_route\\model_best.pt"
+                  }
+                ]
+              }
+            },
+            {
+              "requested": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_fullcv_v97\\fold_1\\perm_route\\model_best.pt",
+              "actual": "outputs\\pure_dl_fullcv_v97\\fold_1\\perm_route\\model_best.pt",
+              "sha256": "c7220b8729a6afb4a2db0ca575b482a74f1fcc0a433d8c9c0ccedf9011d0e635",
+              "fold": 1
+            }
+          ]
+        },
+        {
+          "target": "SW",
+          "checkpoint": "outputs\\pure_dl_fullcv_v97\\fold_1\\sw_density\\model_best.pt",
+          "sha256": "4ba5bbf38869c7142d96c0e44458b3b57e93cb77ad7a2e14518c7ce6b69c6368",
+          "best_epoch": 27,
+          "target_score": 76.98103614378238,
+          "construction_trace": [
+            {
+              "requested": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_well_conditioned_v46_SW_well_fold5\\model_best.pt",
+              "actual": "outputs\\pure_dl_fullcv_v97\\fold_1\\sw_well\\model_best.pt",
+              "sha256": "4e31be7130166dcc9d3e0777249988cf1b0e399c848f3d66a8cf8d046375c8ae",
+              "fold": 1
+            },
+            {
+              "requested": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_sw_interaction_v56_SW_additive_fold5\\model_best.pt",
+              "actual": "outputs\\pure_dl_fullcv_v97\\fold_1\\sw_additive\\model_best.pt",
+              "sha256": "f28939ffd0597319c6e8246b169b34b16c55dea26ee285fa69082e2ba8eaf579",
+              "fold": 1
+            },
+            {
+              "requested": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_well_conditioned_v46_SW_well_fold5\\model_best.pt",
+              "actual": "outputs\\pure_dl_fullcv_v97\\fold_1\\sw_well\\model_best.pt",
+              "sha256": "4e31be7130166dcc9d3e0777249988cf1b0e399c848f3d66a8cf8d046375c8ae",
+              "fold": 1
+            },
+            {
+              "requested": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_sw_interaction_v56_SW_additive_fold5\\model_best.pt",
+              "actual": "outputs\\pure_dl_fullcv_v97\\fold_1\\sw_additive\\model_best.pt",
+              "sha256": "f28939ffd0597319c6e8246b169b34b16c55dea26ee285fa69082e2ba8eaf579",
+              "fold": 1
+            },
+            {
+              "requested": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_sw_sam_radius_v94_SW_r100_fold5\\model_best.pt",
+              "actual": "outputs\\pure_dl_fullcv_v97\\fold_1\\sw_sam\\model_best.pt",
+              "sha256": "97501d5659ec7651c47e682e7705e983c2a2db2672c5f87e3afc6245cdcd76e6",
+              "fold": 1
+            },
+            {
+              "requested": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_sw_utility_strength_v82_SW_a100_fold5\\model_best.pt",
+              "actual": "outputs\\pure_dl_fullcv_v97\\fold_1\\sw_utility\\model_best.pt",
+              "sha256": "14ce37362cec28ed3fb5b27741f3395c56fad1d366ff30b84d815f15e4198a98",
+              "fold": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "fold": 2,
+      "file": "models\\fold_2.pt",
+      "sha256": "30db3984551430124317763bd9c6afa6cecab67bdddbb4ecd54f79f2b65aaf28",
+      "bytes": 18295105,
+      "root_source": "outputs\\pure_dl_fullcv_v97\\fold_2\\root\\fold_2.pt",
+      "root_sha256": "c493d8f00eb4a8397f05bb26ff9a4ae07e348c5919fe5f1cfe424fbb0781e1c3",
+      "targets": [
+        {
+          "target": "POR",
+          "checkpoint": "outputs\\pure_dl_fullcv_v97\\fold_2\\por_anchored\\model_best.pt",
+          "sha256": "02f9f407ebf0d3c0b26591ae83d54d87a4288e445df1e01ed6b9c649fefcdf83",
+          "best_epoch": 2,
+          "target_score": 78.94273855832026,
+          "construction_trace": [
+            {
+              "requested": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_dual8222_v5_location_point3280_fold5\\readout_checkpoint.pt",
+              "actual": "outputs\\pure_dl_fullcv_v97\\fold_2\\por_point\\model_best.pt",
+              "sha256": "e5f99874ad42fd8a84cc40f2f6ad4c0b4961ccd98f2d10ba786935f84a682d96",
+              "fold": 2
+            },
+            {
+              "requested": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_independent_v8_POR_dual80_fold5\\model_best.pt",
+              "actual": "outputs\\pure_dl_fullcv_v97\\fold_2\\private_POR.pt",
+              "sha256": "990e4103f5ac1822dbaf539bdb09188889383aa2517469da5006129d715bf550",
+              "fold": 2
+            },
+            {
+              "requested": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_champion_shape_v25_amplitude_fold5\\model_best.pt",
+              "actual": "outputs\\pure_dl_fullcv_v97\\fold_2\\por_amplitude\\model_best.pt",
+              "sha256": "aa9776e8750affe1c3fef80c0fdb3094a789e6a1ee40d1fd974a927f585b6f00",
+              "fold": 2
+            },
+            {
+              "requested": "results\\deep_learning\\champion_split_route_v29_20260929\\CURRENT_RECIPE.json",
+              "fold": 2,
+              "recipe": {
+                "choices": [
+                  {
+                    "target": "POR",
+                    "mode": "split",
+                    "checkpoint": "outputs\\pure_dl_fullcv_v97\\fold_2\\por_split\\model_best.pt",
+                    "retained_v28_checkpoint": "outputs\\pure_dl_fullcv_v97\\fold_2\\por_route\\model_best.pt"
+                  },
+                  {
+                    "target": "PERM",
+                    "mode": "coupled",
+                    "checkpoint": "outputs\\pure_dl_fullcv_v97\\fold_2\\perm_split\\model_best.pt",
+                    "retained_v28_checkpoint": "outputs\\pure_dl_fullcv_v97\\fold_2\\perm_route\\model_best.pt"
+                  }
+                ]
+              }
+            },
+            {
+              "requested": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_fullcv_v97\\fold_2\\por_route\\model_best.pt",
+              "actual": "outputs\\pure_dl_fullcv_v97\\fold_2\\por_route\\model_best.pt",
+              "sha256": "c6e7236cf0d3722ef8e1b0e8dfbf3f4853fdfd889c2286d872e569467456351b",
+              "fold": 2
+            },
+            {
+              "requested": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_fullcv_v97\\fold_2\\por_split\\model_best.pt",
+              "actual": "outputs\\pure_dl_fullcv_v97\\fold_2\\por_split\\model_best.pt",
+              "sha256": "37b6357e0b0269a763d83d006c6c91fc6df5e3199d1434c2f9c109d06fc01f99",
+              "fold": 2
+            },
+            {
+              "requested": "results\\deep_learning\\champion_coadapt_v30_20260929\\CURRENT_RECIPE.json",
+              "fold": 2,
+              "recipe": {
+                "choices": [
+                  {
+                    "target": "POR",
+                    "mode": "coadapt",
+                    "checkpoint": "outputs\\pure_dl_fullcv_v97\\fold_2\\por_coadapt\\model_best.pt"
+                  }
+                ]
+              }
+            },
+            {
+              "requested": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_fullcv_v97\\fold_2\\por_coadapt\\model_best.pt",
+              "actual": "outputs\\pure_dl_fullcv_v97\\fold_2\\por_coadapt\\model_best.pt",
+              "sha256": "c201d34738dbe1bf110c03140c8b1391cf0074b8f4f3ca4e97a5d79b8a6ec623",
+              "fold": 2
+            }
+          ]
+        },
+        {
+          "target": "PERM",
+          "checkpoint": "outputs\\pure_dl_fullcv_v97\\fold_2\\perm_split\\model_best.pt",
+          "sha256": "50a33f80891557985b0bdbfc9c65b51030e75dad564d4443d5f36b9f6a3b4fae",
+          "best_epoch": 14,
+          "target_score": 90.27412581999009,
+          "construction_trace": [
+            {
+              "requested": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_dual8222_v5_location_point3280_fold5\\readout_checkpoint.pt",
+              "actual": "outputs\\pure_dl_fullcv_v97\\fold_2\\por_point\\model_best.pt",
+              "sha256": "e5f99874ad42fd8a84cc40f2f6ad4c0b4961ccd98f2d10ba786935f84a682d96",
+              "fold": 2
+            },
+            {
+              "requested": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_independent_v8_PERM_dual80_fold5\\model_best.pt",
+              "actual": "outputs\\pure_dl_fullcv_v97\\fold_2\\private_PERM.pt",
+              "sha256": "d497f909493e98edd0d3d60c7e70e71f867a5e4516664dddd9040984f2bde5a4",
+              "fold": 2
+            },
+            {
+              "requested": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_all_heads_v26_PERM_fold5\\gate\\model_best.pt",
+              "actual": "outputs\\pure_dl_fullcv_v97\\fold_2\\perm_factor\\model_best.pt",
+              "sha256": "f0869c417203bf9dba619b161a92d63ca9ed7e5368fd92da4d8148642ab2c483",
+              "fold": 2
+            },
+            {
+              "requested": "results\\deep_learning\\champion_route_v28_20260929\\CURRENT_RECIPE.json",
+              "fold": 2,
+              "recipe": {
+                "choices": [
+                  {
+                    "target": "POR",
+                    "mode": "conditional",
+                    "checkpoint": "outputs\\pure_dl_fullcv_v97\\fold_2\\por_route\\model_best.pt"
+                  },
+                  {
+                    "target": "PERM",
+                    "mode": "joint",
+                    "checkpoint": "outputs\\pure_dl_fullcv_v97\\fold_2\\perm_route\\model_best.pt"
+                  }
+                ]
+              }
+            },
+            {
+              "requested": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_fullcv_v97\\fold_2\\perm_route\\model_best.pt",
+              "actual": "outputs\\pure_dl_fullcv_v97\\fold_2\\perm_route\\model_best.pt",
+              "sha256": "9479b1b53942d3d72118fa13841762a2690f13e737eae95d0797522d248c6fb6",
+              "fold": 2
+            }
+          ]
+        },
+        {
+          "target": "SW",
+          "checkpoint": "outputs\\pure_dl_fullcv_v97\\fold_2\\sw_density\\model_best.pt",
+          "sha256": "68adad2ec11ae4863ed1b8f42a7ef0cc6c0bbfa6a366367cfac821188a9f24b3",
+          "best_epoch": 12,
+          "target_score": 75.05257153053017,
+          "construction_trace": [
+            {
+              "requested": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_well_conditioned_v46_SW_well_fold5\\model_best.pt",
+              "actual": "outputs\\pure_dl_fullcv_v97\\fold_2\\sw_well\\model_best.pt",
+              "sha256": "f48de00713f91006d048c4f914583799b982fa35cda750929006f0311a88faf0",
+              "fold": 2
+            },
+            {
+              "requested": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_sw_interaction_v56_SW_additive_fold5\\model_best.pt",
+              "actual": "outputs\\pure_dl_fullcv_v97\\fold_2\\sw_additive\\model_best.pt",
+              "sha256": "b4e95f2e84ad1080658066cc8e5c9d1b033fd333af14e13cdff7d105f993e867",
+              "fold": 2
+            },
+            {
+              "requested": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_well_conditioned_v46_SW_well_fold5\\model_best.pt",
+              "actual": "outputs\\pure_dl_fullcv_v97\\fold_2\\sw_well\\model_best.pt",
+              "sha256": "f48de00713f91006d048c4f914583799b982fa35cda750929006f0311a88faf0",
+              "fold": 2
+            },
+            {
+              "requested": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_sw_interaction_v56_SW_additive_fold5\\model_best.pt",
+              "actual": "outputs\\pure_dl_fullcv_v97\\fold_2\\sw_additive\\model_best.pt",
+              "sha256": "b4e95f2e84ad1080658066cc8e5c9d1b033fd333af14e13cdff7d105f993e867",
+              "fold": 2
+            },
+            {
+              "requested": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_sw_sam_radius_v94_SW_r100_fold5\\model_best.pt",
+              "actual": "outputs\\pure_dl_fullcv_v97\\fold_2\\sw_sam\\model_best.pt",
+              "sha256": "ff9442a919fe29b4e4a365313741b6212238985e4b78a8d642205d5ac10347a0",
+              "fold": 2
+            },
+            {
+              "requested": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_sw_utility_strength_v82_SW_a100_fold5\\model_best.pt",
+              "actual": "outputs\\pure_dl_fullcv_v97\\fold_2\\sw_utility\\model_best.pt",
+              "sha256": "4d30a0b2729224b0e4c908e45951b27b1e1140b66e621887b8b680949d4b7658",
+              "fold": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "fold": 3,
+      "file": "models\\fold_3.pt",
+      "sha256": "8f5e642725c2f028474dc00fbb5f2eb49e782961e02994947de51904ee10d3d5",
+      "bytes": 18295233,
+      "root_source": "outputs\\pure_dl_fullcv_v97\\fold_3\\root\\fold_3.pt",
+      "root_sha256": "d8c68cda3f67493ce549eeaaa06e9fbb641d5f30b4591732a00bdf606d01dc13",
+      "targets": [
+        {
+          "target": "POR",
+          "checkpoint": "outputs\\pure_dl_fullcv_v97\\fold_3\\por_anchored\\model_best.pt",
+          "sha256": "8abe53d5be8d15168218134d0bf944b2a29999bb9e84faff5fd0b24c12a4d86c",
+          "best_epoch": 0,
+          "target_score": 80.45689483494576,
+          "construction_trace": [
+            {
+              "requested": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_dual8222_v5_location_point3280_fold5\\readout_checkpoint.pt",
+              "actual": "outputs\\pure_dl_fullcv_v97\\fold_3\\por_point\\model_best.pt",
+              "sha256": "4a6956df4997638c8e5e7e30c46ccbd6e74688fac75fa1a1399ff530a3590a93",
+              "fold": 3
+            },
+            {
+              "requested": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_independent_v8_POR_dual80_fold5\\model_best.pt",
+              "actual": "outputs\\pure_dl_fullcv_v97\\fold_3\\private_POR.pt",
+              "sha256": "cecdbc736155b5a756868561c32931d65f02b34c4bc11bd404634a4d3e333149",
+              "fold": 3
+            },
+            {
+              "requested": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_champion_shape_v25_amplitude_fold5\\model_best.pt",
+              "actual": "outputs\\pure_dl_fullcv_v97\\fold_3\\por_amplitude\\model_best.pt",
+              "sha256": "b628574f2dedc094abf046c376a9c5d1c8e20e658e15ce4b05c7ef62b4939b9e",
+              "fold": 3
+            },
+            {
+              "requested": "results\\deep_learning\\champion_split_route_v29_20260929\\CURRENT_RECIPE.json",
+              "fold": 3,
+              "recipe": {
+                "choices": [
+                  {
+                    "target": "POR",
+                    "mode": "split",
+                    "checkpoint": "outputs\\pure_dl_fullcv_v97\\fold_3\\por_split\\model_best.pt",
+                    "retained_v28_checkpoint": "outputs\\pure_dl_fullcv_v97\\fold_3\\por_route\\model_best.pt"
+                  },
+                  {
+                    "target": "PERM",
+                    "mode": "coupled",
+                    "checkpoint": "outputs\\pure_dl_fullcv_v97\\fold_3\\perm_split\\model_best.pt",
+                    "retained_v28_checkpoint": "outputs\\pure_dl_fullcv_v97\\fold_3\\perm_route\\model_best.pt"
+                  }
+                ]
+              }
+            },
+            {
+              "requested": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_fullcv_v97\\fold_3\\por_route\\model_best.pt",
+              "actual": "outputs\\pure_dl_fullcv_v97\\fold_3\\por_route\\model_best.pt",
+              "sha256": "504d8fd73dcc3f5a61e646c5c44e17bf1d4674055ffef6cf6c20940fc9294caa",
+              "fold": 3
+            },
+            {
+              "requested": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_fullcv_v97\\fold_3\\por_split\\model_best.pt",
+              "actual": "outputs\\pure_dl_fullcv_v97\\fold_3\\por_split\\model_best.pt",
+              "sha256": "b81c6e9caf89e3347b666397e139e50676a66c64020f43fd902a0fa9021b00bc",
+              "fold": 3
+            },
+            {
+              "requested": "results\\deep_learning\\champion_coadapt_v30_20260929\\CURRENT_RECIPE.json",
+              "fold": 3,
+              "recipe": {
+                "choices": [
+                  {
+                    "target": "POR",
+                    "mode": "coadapt",
+                    "checkpoint": "outputs\\pure_dl_fullcv_v97\\fold_3\\por_coadapt\\model_best.pt"
+                  }
+                ]
+              }
+            },
+            {
+              "requested": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_fullcv_v97\\fold_3\\por_coadapt\\model_best.pt",
+              "actual": "outputs\\pure_dl_fullcv_v97\\fold_3\\por_coadapt\\model_best.pt",
+              "sha256": "438cefd4fea8d239ac9e676744edd2d1d4d498613c1ade0ab839ba7c6f18c011",
+              "fold": 3
+            }
+          ]
+        },
+        {
+          "target": "PERM",
+          "checkpoint": "outputs\\pure_dl_fullcv_v97\\fold_3\\perm_split\\model_best.pt",
+          "sha256": "00099e21ddf350aedb739cec9dea8d09f5c8ccc2bd0b08c890a30674e667356e",
+          "best_epoch": 0,
+          "target_score": 90.40622587781112,
+          "construction_trace": [
+            {
+              "requested": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_dual8222_v5_location_point3280_fold5\\readout_checkpoint.pt",
+              "actual": "outputs\\pure_dl_fullcv_v97\\fold_3\\por_point\\model_best.pt",
+              "sha256": "4a6956df4997638c8e5e7e30c46ccbd6e74688fac75fa1a1399ff530a3590a93",
+              "fold": 3
+            },
+            {
+              "requested": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_independent_v8_PERM_dual80_fold5\\model_best.pt",
+              "actual": "outputs\\pure_dl_fullcv_v97\\fold_3\\private_PERM.pt",
+              "sha256": "f42641cc903176a92277863d31b40da38374b8a9ebf217a947aad0c1437fce6d",
+              "fold": 3
+            },
+            {
+              "requested": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_all_heads_v26_PERM_fold5\\gate\\model_best.pt",
+              "actual": "outputs\\pure_dl_fullcv_v97\\fold_3\\perm_factor\\model_best.pt",
+              "sha256": "38e47757871127e032a689974832d22455312bf7a1c172a6c53f7e4e301d151f",
+              "fold": 3
+            },
+            {
+              "requested": "results\\deep_learning\\champion_route_v28_20260929\\CURRENT_RECIPE.json",
+              "fold": 3,
+              "recipe": {
+                "choices": [
+                  {
+                    "target": "POR",
+                    "mode": "conditional",
+                    "checkpoint": "outputs\\pure_dl_fullcv_v97\\fold_3\\por_route\\model_best.pt"
+                  },
+                  {
+                    "target": "PERM",
+                    "mode": "joint",
+                    "checkpoint": "outputs\\pure_dl_fullcv_v97\\fold_3\\perm_route\\model_best.pt"
+                  }
+                ]
+              }
+            },
+            {
+              "requested": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_fullcv_v97\\fold_3\\perm_route\\model_best.pt",
+              "actual": "outputs\\pure_dl_fullcv_v97\\fold_3\\perm_route\\model_best.pt",
+              "sha256": "917a321081756772912675d35a27ee40ce99a5f88cbc7f6069fe5cc9aec90ef5",
+              "fold": 3
+            }
+          ]
+        },
+        {
+          "target": "SW",
+          "checkpoint": "outputs\\pure_dl_fullcv_v97\\fold_3\\sw_density\\model_best.pt",
+          "sha256": "b805a457c788d46b14780a3ff163a432cdc7f0dcbf442ff400b7795470d6a267",
+          "best_epoch": 19,
+          "target_score": 76.97618209773799,
+          "construction_trace": [
+            {
+              "requested": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_well_conditioned_v46_SW_well_fold5\\model_best.pt",
+              "actual": "outputs\\pure_dl_fullcv_v97\\fold_3\\sw_well\\model_best.pt",
+              "sha256": "89766c8fa6c4ce1ae83d8b7c73996d7abcee75e7844a9b80a7a4afc517b76596",
+              "fold": 3
+            },
+            {
+              "requested": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_sw_interaction_v56_SW_additive_fold5\\model_best.pt",
+              "actual": "outputs\\pure_dl_fullcv_v97\\fold_3\\sw_additive\\model_best.pt",
+              "sha256": "afe090be2a91d15402d0476042abd6c3213c8693b405415c8d750912fbb08257",
+              "fold": 3
+            },
+            {
+              "requested": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_well_conditioned_v46_SW_well_fold5\\model_best.pt",
+              "actual": "outputs\\pure_dl_fullcv_v97\\fold_3\\sw_well\\model_best.pt",
+              "sha256": "89766c8fa6c4ce1ae83d8b7c73996d7abcee75e7844a9b80a7a4afc517b76596",
+              "fold": 3
+            },
+            {
+              "requested": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_sw_interaction_v56_SW_additive_fold5\\model_best.pt",
+              "actual": "outputs\\pure_dl_fullcv_v97\\fold_3\\sw_additive\\model_best.pt",
+              "sha256": "afe090be2a91d15402d0476042abd6c3213c8693b405415c8d750912fbb08257",
+              "fold": 3
+            },
+            {
+              "requested": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_sw_sam_radius_v94_SW_r100_fold5\\model_best.pt",
+              "actual": "outputs\\pure_dl_fullcv_v97\\fold_3\\sw_sam\\model_best.pt",
+              "sha256": "55365a4fa06bbe74374b88f9a5d461f7d1766a74c82b4e141238995228f9297a",
+              "fold": 3
+            },
+            {
+              "requested": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_sw_utility_strength_v82_SW_a100_fold5\\model_best.pt",
+              "actual": "outputs\\pure_dl_fullcv_v97\\fold_3\\sw_utility\\model_best.pt",
+              "sha256": "d7bb8f8cc51edaa74647d843d165209f2870959028c10ad7dcde5b9d3d79518f",
+              "fold": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "fold": 4,
+      "file": "models\\fold_4.pt",
+      "sha256": "98881b67071d3802f8dd0a0bdef5ca1816908b344402e280ecc28cc9054edd3d",
+      "bytes": 18295105,
+      "root_source": "outputs\\pure_dl_fullcv_v97\\fold_4\\root\\fold_4.pt",
+      "root_sha256": "5297d0089b115e2bf35e82e558f6d140f8c32ee410eb17d94fdfe29d061bb8d2",
+      "targets": [
+        {
+          "target": "POR",
+          "checkpoint": "outputs\\pure_dl_fullcv_v97\\fold_4\\por_anchored\\model_best.pt",
+          "sha256": "18683bd2963cef7823a2fb4d2f899017513d19eaa9604df9249e62f8f57f7cc8",
+          "best_epoch": 0,
+          "target_score": 79.49192462461856,
+          "construction_trace": [
+            {
+              "requested": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_dual8222_v5_location_point3280_fold5\\readout_checkpoint.pt",
+              "actual": "outputs\\pure_dl_fullcv_v97\\fold_4\\por_point\\model_best.pt",
+              "sha256": "876fc66fd1c9bced8a95dbc2ab1993b2f038b200727808030d453bc0cf82de81",
+              "fold": 4
+            },
+            {
+              "requested": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_independent_v8_POR_dual80_fold5\\model_best.pt",
+              "actual": "outputs\\pure_dl_fullcv_v97\\fold_4\\private_POR.pt",
+              "sha256": "3aaeb901db9c9dc5e0e012996d3630ad53437616af0335f40cc503acd9b224c2",
+              "fold": 4
+            },
+            {
+              "requested": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_champion_shape_v25_amplitude_fold5\\model_best.pt",
+              "actual": "outputs\\pure_dl_fullcv_v97\\fold_4\\por_amplitude\\model_best.pt",
+              "sha256": "ffddb50b014e32228b0e2915041b8fee3357852378f71ef5102ddb9b6e61c388",
+              "fold": 4
+            },
+            {
+              "requested": "results\\deep_learning\\champion_split_route_v29_20260929\\CURRENT_RECIPE.json",
+              "fold": 4,
+              "recipe": {
+                "choices": [
+                  {
+                    "target": "POR",
+                    "mode": "split",
+                    "checkpoint": "outputs\\pure_dl_fullcv_v97\\fold_4\\por_split\\model_best.pt",
+                    "retained_v28_checkpoint": "outputs\\pure_dl_fullcv_v97\\fold_4\\por_route\\model_best.pt"
+                  },
+                  {
+                    "target": "PERM",
+                    "mode": "coupled",
+                    "checkpoint": "outputs\\pure_dl_fullcv_v97\\fold_4\\perm_split\\model_best.pt",
+                    "retained_v28_checkpoint": "outputs\\pure_dl_fullcv_v97\\fold_4\\perm_route\\model_best.pt"
+                  }
+                ]
+              }
+            },
+            {
+              "requested": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_fullcv_v97\\fold_4\\por_route\\model_best.pt",
+              "actual": "outputs\\pure_dl_fullcv_v97\\fold_4\\por_route\\model_best.pt",
+              "sha256": "872269b19886565d62617d1956e12807e0e7325d5137ea4fd27549eb136ef215",
+              "fold": 4
+            },
+            {
+              "requested": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_fullcv_v97\\fold_4\\por_split\\model_best.pt",
+              "actual": "outputs\\pure_dl_fullcv_v97\\fold_4\\por_split\\model_best.pt",
+              "sha256": "2b0a96618621aba099e7ebae5c7320d6abbbd814419e393abeefd60a1e7b8300",
+              "fold": 4
+            },
+            {
+              "requested": "results\\deep_learning\\champion_coadapt_v30_20260929\\CURRENT_RECIPE.json",
+              "fold": 4,
+              "recipe": {
+                "choices": [
+                  {
+                    "target": "POR",
+                    "mode": "coadapt",
+                    "checkpoint": "outputs\\pure_dl_fullcv_v97\\fold_4\\por_coadapt\\model_best.pt"
+                  }
+                ]
+              }
+            },
+            {
+              "requested": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_fullcv_v97\\fold_4\\por_coadapt\\model_best.pt",
+              "actual": "outputs\\pure_dl_fullcv_v97\\fold_4\\por_coadapt\\model_best.pt",
+              "sha256": "5ce34c78b794481f1ac07f37e745462263ed8f92d8daa65677dc5b0594ed8a55",
+              "fold": 4
+            }
+          ]
+        },
+        {
+          "target": "PERM",
+          "checkpoint": "outputs\\pure_dl_fullcv_v97\\fold_4\\perm_split\\model_best.pt",
+          "sha256": "5a180e1e3fca375d9831731807abd8bf734bf0bd7d8e95b78a037d8c83d8a5a0",
+          "best_epoch": 0,
+          "target_score": 91.22248299986603,
+          "construction_trace": [
+            {
+              "requested": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_dual8222_v5_location_point3280_fold5\\readout_checkpoint.pt",
+              "actual": "outputs\\pure_dl_fullcv_v97\\fold_4\\por_point\\model_best.pt",
+              "sha256": "876fc66fd1c9bced8a95dbc2ab1993b2f038b200727808030d453bc0cf82de81",
+              "fold": 4
+            },
+            {
+              "requested": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_independent_v8_PERM_dual80_fold5\\model_best.pt",
+              "actual": "outputs\\pure_dl_fullcv_v97\\fold_4\\private_PERM.pt",
+              "sha256": "fc6b848a84f1fd848955e8b8ea801ded2d18fc4f0e450746f6244e93c6d536c6",
+              "fold": 4
+            },
+            {
+              "requested": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_all_heads_v26_PERM_fold5\\gate\\model_best.pt",
+              "actual": "outputs\\pure_dl_fullcv_v97\\fold_4\\perm_factor\\model_best.pt",
+              "sha256": "59909341ee372925b231cb8e670c16031fd93f2a64d8ded6cc09f90b40d71eab",
+              "fold": 4
+            },
+            {
+              "requested": "results\\deep_learning\\champion_route_v28_20260929\\CURRENT_RECIPE.json",
+              "fold": 4,
+              "recipe": {
+                "choices": [
+                  {
+                    "target": "POR",
+                    "mode": "conditional",
+                    "checkpoint": "outputs\\pure_dl_fullcv_v97\\fold_4\\por_route\\model_best.pt"
+                  },
+                  {
+                    "target": "PERM",
+                    "mode": "joint",
+                    "checkpoint": "outputs\\pure_dl_fullcv_v97\\fold_4\\perm_route\\model_best.pt"
+                  }
+                ]
+              }
+            },
+            {
+              "requested": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_fullcv_v97\\fold_4\\perm_route\\model_best.pt",
+              "actual": "outputs\\pure_dl_fullcv_v97\\fold_4\\perm_route\\model_best.pt",
+              "sha256": "9b84e35de3d4c6b2c0f4a82f06478a4ccb37f82b02b162123bec091cd870c4a2",
+              "fold": 4
+            }
+          ]
+        },
+        {
+          "target": "SW",
+          "checkpoint": "outputs\\pure_dl_fullcv_v97\\fold_4\\sw_density\\model_best.pt",
+          "sha256": "3a7b9f9348c39f9ec34cff805f81f4fec1ddd81fbe12061884ccfc88e19fd9ec",
+          "best_epoch": 23,
+          "target_score": 74.52032535623749,
+          "construction_trace": [
+            {
+              "requested": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_well_conditioned_v46_SW_well_fold5\\model_best.pt",
+              "actual": "outputs\\pure_dl_fullcv_v97\\fold_4\\sw_well\\model_best.pt",
+              "sha256": "5243403c7eaf4150f0b2c58964ca7947000d2da91c68de2efd7cfbb16a215511",
+              "fold": 4
+            },
+            {
+              "requested": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_sw_interaction_v56_SW_additive_fold5\\model_best.pt",
+              "actual": "outputs\\pure_dl_fullcv_v97\\fold_4\\sw_additive\\model_best.pt",
+              "sha256": "ffa3550e129c47283665c4475ecaaba9262342d2a3066215de59bb9fa1f93e60",
+              "fold": 4
+            },
+            {
+              "requested": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_well_conditioned_v46_SW_well_fold5\\model_best.pt",
+              "actual": "outputs\\pure_dl_fullcv_v97\\fold_4\\sw_well\\model_best.pt",
+              "sha256": "5243403c7eaf4150f0b2c58964ca7947000d2da91c68de2efd7cfbb16a215511",
+              "fold": 4
+            },
+            {
+              "requested": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_sw_interaction_v56_SW_additive_fold5\\model_best.pt",
+              "actual": "outputs\\pure_dl_fullcv_v97\\fold_4\\sw_additive\\model_best.pt",
+              "sha256": "ffa3550e129c47283665c4475ecaaba9262342d2a3066215de59bb9fa1f93e60",
+              "fold": 4
+            },
+            {
+              "requested": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_sw_sam_radius_v94_SW_r100_fold5\\model_best.pt",
+              "actual": "outputs\\pure_dl_fullcv_v97\\fold_4\\sw_sam\\model_best.pt",
+              "sha256": "a999e0f3f46b2f145e752f65cd17b0aebaaa4258abd48b61a3390ae8e0b5ae25",
+              "fold": 4
+            },
+            {
+              "requested": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_sw_utility_strength_v82_SW_a100_fold5\\model_best.pt",
+              "actual": "outputs\\pure_dl_fullcv_v97\\fold_4\\sw_utility\\model_best.pt",
+              "sha256": "88028af15a61f8cdcdd2d9822308f1ec8e11bd8625bc7e9a05ff1ccb814d8f7d",
+              "fold": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "fold": 5,
+      "file": "models\\fold_5.pt",
+      "sha256": "5d65196b4c0982aeefed7a2ef97c5ed4931ad9294049bb1e3957dbc58f509ba1",
+      "bytes": 18290497,
+      "root_source": "outputs\\pure_dl_paired_local_context_router80_sequence\\fold_5.pt",
+      "root_sha256": "45a09476e3126820688420579c100c86e0e4f45df335904380a298cf5f66b9a9",
+      "targets": [
+        {
+          "target": "POR",
+          "checkpoint": "outputs\\pure_dl_mechanism_v31_POR_fold5\\anchored\\model_best.pt",
+          "sha256": "757f85d7cad86f239aad7d61747b328904168e81950aee385f33324a3ecfa1c9",
+          "best_epoch": 7,
+          "target_score": 77.551936801885,
+          "construction_trace": []
+        },
+        {
+          "target": "PERM",
+          "checkpoint": "outputs\\pure_dl_split_route_v29_PERM_fold5\\coupled\\model_best.pt",
+          "sha256": "0e00595cbde8b18643dec5aaf0b09978fcc55f3164eb7f7da0a5442f47f39642",
+          "best_epoch": 2,
+          "target_score": 89.39672404936582,
+          "construction_trace": []
+        },
+        {
+          "target": "SW",
+          "checkpoint": "outputs\\pure_dl_sw_factor_sam_v96_SW_likelihood_fold5\\model_best.pt",
+          "sha256": "6777b229a333818f3bae7a46bac3d780faebb0325a19a150399cad0b7307d83b",
+          "best_epoch": 6,
+          "target_score": 74.1421799046667,
+          "construction_trace": []
+        }
+      ]
+    }
+  ],
+  "official_oof_scores": {
+    "POR": 79.33058096543338,
+    "PERM": 90.44127043721572,
+    "SW": 75.53542958448546,
+    "TOTAL": 81.89101929722543
+  },
+  "complete_five_folds": true,
+  "training_stages": "source pretraining plus 18 downstream stages; no simplification claimed",
+  "source_oof_sha256": "c542dcb7a6fa69e9106f83e9df91ad0a7056e0d735d7c39456a156b70486397b",
+  "aggregation": "equal five-fold expected utilities before action selection",
+  "test_accuracy": "unknown"
+}

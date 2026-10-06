@@ -1,0 +1,1 @@
+Maintain PROJECTS/README/EXPLORATIONS/atlas. Only train-only well-count sampling, original labels/splits/scoring/population/Q/9curve input, normal/max2GPU,80/18,5 stages incl source. Atomic full state/RNG explicit resume. Serial explicit SW launch, no queue/otherfolds/oldsource/delivery edits.

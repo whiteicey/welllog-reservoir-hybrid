@@ -1,0 +1,1 @@
+Maintain PROJECTS, README, EXPLORATIONS and atlas. Only two predeclared dilations, explicitly serial SW launches. Original input/split/train-only fit/scoring,80/18,normal/max2GPU,5 total stages incl source. Complete atomic last states, explicit resume, no auto queues/other folds/old source or delivery edits.

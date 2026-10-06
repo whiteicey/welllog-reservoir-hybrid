@@ -1,0 +1,53 @@
+"""Explicit launch of the predefined direct-value readout candidates."""
+from datetime import datetime
+import argparse,json,subprocess,sys
+from action_value_v38 import ROOT,STUDY
+from run_retrieval_smooth_v36 import jobs,append
+
+TEXT='''# v38 直接动作价值读出
+
+## 目标与假设
+基于已验证原第五折TOTAL80.336513436816，改为直接学习每个候选预测动作的期望官方得分，检验密度似然代理与最终动作决策的差异。
+旧v12在独立TCN密度模型上添加softmax动作效用项，最佳回退SW73.093513；本次保留当前更强的预测器，新增直接动作价值回归头，不沿用该密度损失。推理仍为原动作集合argmax。
+
+## 预定义对照
+POR/SW各point、local5两项，共四项；PERM固定。319输入经32维GELU再输出原全部动作的奖励修正，界限±0.25。两候选同参数/同初始化/同训练窗口，唯一结构差异是32维隐藏读出前是否应用同井5点有效掩码平均池化。新增参数为10240+33×实际动作数，旧预测器全部冻结。初始输出为零，与原密度期望效用一致。
+每个训练点的监督是其真实标签对所有动作的官方kernel得分，不是验证标签、不选最优动作伪标签。均方误差学习条件期望，所有动作和默认动作均包含；平均后除3，无NLL混合。两候选统一等权，承接v37低于基线但相对Q50的小幅匹配收益，不能视为已获当前绝对收益。
+输出是动作奖励估计而非概率；不要求各动作和为1。动作数/动作值/评分公式不改；训练labels逆变换依旧用原训练侧median/scale。
+
+## 已完成与待完成
+已实现新模块和独立训练器；待实际训练、最佳恢复、每目标比较与三列组装评分。收益尚未证实。
+原9曲线、206主特征、63已有幅值侧特征、原64/16井及144665验证点保持；训练权重为全1。80轮上限/patience18/min10/batch64/64步，AdamW3e-4/weight_decay.01，cosine80×64至1e-5，clip2。
+最多2目标GPU进程，每进程2候选独立参数/优化器/早停，共享冻结前向。原子last_state带完整优化/RNG状态；无自动续跑。
+
+## 不延伸与后续
+不继续v35/v36检索扫参及v37全因子NLL头扫参。若本次不同读出仍无收益，记录局部范围结论并换方向；不把一个负实验扩展为直接效用方法普遍无效。
+严格第五>80.5并有明显收益才考虑原其他折；完整OOF>82未完成。无旧任务启动、其他折或交付覆盖。维护PROJECTS.md、README、EXPLORATIONS与图谱，区分未训练/进行中/最终成绩。
+'''
+
+def main():
+    # Original POR objective is invalid. Its immutable evidence is retained;
+    # only the explicit corrected POR launcher may create future POR runs.
+    ap=argparse.ArgumentParser();ap.add_argument('--target',required=True,choices=('SW',));a=ap.parse_args()
+    active=jobs()
+    if len(active)>=2:raise RuntimeError(('max2',active))
+    out=ROOT/f'outputs/pure_dl_action_value_v38_{a.target}_fold5'
+    if out.exists():raise FileExistsError(out)
+    STUDY.mkdir(exist_ok=True)
+    rules='# v38 工作约束\n仅当前基线POR/SW直接动作奖励point/local5四项对照。遵守原分折、数据隔离、max80/pat18/max2；维护PROJECTS.md记录已做/计划/未做/目标及后续。不自动续跑、补折或覆盖交付。\n'
+    for name,txt in [('AGENTS.md',rules),('PROJECTS.md',TEXT),('README.md',TEXT)]:
+        if not (STUDY/name).exists():(STUDY/name).write_text(txt,encoding='utf-8')
+    out.mkdir()
+    for name in ('AGENTS.md','PROJECTS.md','README.md'):(out/name).write_text((STUDY/name).read_text(encoding='utf-8'),encoding='utf-8')
+    cmd=[sys.executable,'-X','utf8','-u',str(ROOT/'experiments/pure_dl/train_action_value_v38.py'),'--target',a.target,'--out',str(out)]
+    with (out/'train.log').open('wb') as log,(out/'train.err').open('wb') as err:
+        p=subprocess.Popen(cmd,cwd=ROOT,stdout=log,stderr=err,stdin=subprocess.DEVNULL,creationflags=subprocess.CREATE_NEW_PROCESS_GROUP|subprocess.DETACHED_PROCESS)
+    launch=dict(pid=p.pid,target=a.target,started_at=datetime.now().astimezone().isoformat(),command=cmd,automatic_queue=False)
+    (out/'launch.json').write_text(json.dumps(launch,indent=2),encoding='utf-8')
+    marker='## v38 '+a.target+' 显式启动'
+    for path in (ROOT.parent/'PROJECTS.md',ROOT/'PROJECTS.md',STUDY/'PROJECTS.md'):append(path,marker,marker+'\n'+json.dumps(launch,ensure_ascii=False))
+    append(ROOT/'EXPLORATIONS.md','action_value_v38_20260929','- [v38 直接动作奖励](results/deep_learning/action_value_v38_20260929/README.md)：固定80.3365，POR/SW逐点/局部同容量奖励回归头，原动作不变。')
+    append(ROOT.parent/'AGENTS.md','## v38直接动作奖励','## v38直接动作奖励\n本批POR/SW各point/local5直接官方奖励回归头，旧模型冻结、原动作及评分保持；两候选同参数同初始化，统一等权，只差5点池化。80/18/max2，无旧任务/其他折/交付覆盖，维护action_value_v38_20260929记录。')
+    print(json.dumps(launch),flush=True)
+
+if __name__=='__main__':main()

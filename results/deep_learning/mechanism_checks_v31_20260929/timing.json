@@ -1,0 +1,21 @@
+{
+  "targets": {
+    "POR": {
+      "seconds": 180.74981259999913,
+      "peak_allocated_MiB": 718.9150390625,
+      "median_epoch_seconds": 6.9095293000063975,
+      "scope": "one target process includes both candidates; fixed backbone computation shared, not independent per-arm wall time"
+    },
+    "SW": {
+      "seconds": 103.3955763000049,
+      "peak_allocated_MiB": 723.6787109375,
+      "median_epoch_seconds": 5.287408599997434,
+      "scope": "one target process includes both candidates; fixed backbone computation shared, not independent per-arm wall time"
+    }
+  },
+  "maximum_allowed_training_jobs": 2,
+  "peak_launch_interval_concurrency": 1,
+  "launch_to_last_completion_seconds": 304.57721,
+  "final_replay_seconds": 3.9043846000058693,
+  "scope": "launch intervals include staged gaps; implementation and final replay separate"
+}

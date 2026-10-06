@@ -1,0 +1,1 @@
+MaintainPROJECTS/README actualevidence. Original104only/freshpositive326encoder/readout/morph joint inoneSWphase/max8. Fixed.5 mixture inbothtrain/inference, no posthocgrid/repairweights. Originalinputs/Q/split/score/80-14/max2GPU, noautomaticqueue/otherfolds. Preservebest/active/deliveries.

@@ -1,0 +1,216 @@
+{
+  "identity": "seed_20261013",
+  "fold": 1,
+  "stage": "POR341",
+  "observed_epoch": 1790933361.1486814,
+  "report": {
+    "stage": "POR341",
+    "target": "POR",
+    "target_score": 80.07054527363273,
+    "initial_score": 80.00977386449392,
+    "against_initial": 0.06077140913880896,
+    "best_epoch": 4,
+    "stopped_epoch": 18,
+    "validation_rows": 144621,
+    "predictions_reproduced_exactly": true,
+    "frozen_parameters_exact": true,
+    "gradient_groups": {
+      "POR_new_raw_feature_backbone": 0.06824060529470444,
+      "POR_direct_categorical_readout": 0.045920517295598984,
+      "POR_curve_interaction_backbone": 0.07004944235086441
+    },
+    "effective_patience": 14,
+    "SOTA_broken": true,
+    "seconds": 230.02260199998273,
+    "peak_MiB": 2212.4833984375,
+    "complete_five_folds": false,
+    "early_terminated": false
+  },
+  "timing": {
+    "identity": "seed_20261013",
+    "fold": 1,
+    "stage": "POR341",
+    "pid": 90788,
+    "terminal": true,
+    "exit_code": 0,
+    "process_wall_seconds": 240.87601447105408,
+    "serial_invocation_seconds": 240.87601447105408,
+    "previous_failed_invocation_seconds": 0.0,
+    "concurrency": "solo",
+    "resumed": false,
+    "includes": "load/preprocess/warmup/training or scan/restore/write; sums invocations, excludes approval waiting; whole batch wall includes waiting"
+  },
+  "rows": 144621,
+  "source_scores": {
+    "POR": 79.9621869163639,
+    "PERM": 90.82341132483818,
+    "SW": 76.27531211748415,
+    "TOTAL": 82.47320927972198
+  },
+  "source_sha256": "42d79d2f3d3d3de6d087921f876cf05bac60387462cd9aec3cda8a3ab5c6993d",
+  "own_source_Q": {
+    "status": "ready",
+    "epoch": 40,
+    "sha256": "b0145d9dcf00fee8e6fec55b08203561b332c4df6502b5f5a31420a08bfbc4dd",
+    "dynamic_updates": false,
+    "rule": "last original training-only source Q observation strictly before this fold best epoch; Q0=1 before first observation",
+    "minimum": 0.10000000149011612,
+    "maximum": 1.0,
+    "downweighted_training_rows": 1170
+  },
+  "completed_prefix": [
+    "SOURCE",
+    "POR113",
+    "POR151",
+    "PERM154",
+    "SW104",
+    "POR341"
+  ],
+  "prefix_scores": {
+    "POR": 80.07054527363273,
+    "PERM": 90.82341132483818,
+    "SW": 76.93384368027814,
+    "TOTAL": 82.73620283388053
+  },
+  "stage_gains": [
+    {
+      "stage": "POR113",
+      "target": "POR",
+      "actual_target_gain": 0.04758694813001796,
+      "actual_TOTAL_contribution": 0.014276084439005387,
+      "previous_target_score": 79.9621869163639,
+      "selected_target_score": 80.00977386449392,
+      "optimizer_gain": 0.04703999594326547,
+      "best_epoch": 13,
+      "stopped_epoch": 27,
+      "strata": {
+        "DEFAULT": {
+          "rows": 99231,
+          "before": 97.88171035261158,
+          "after": 97.87163285666777,
+          "delta": -0.010077495943804138
+        },
+        "CONT": {
+          "rows": 45390,
+          "before": 40.786768760332315,
+          "after": 40.960420930976206,
+          "delta": 0.1736521706438907
+        }
+      },
+      "process_wall_seconds": 297.9886395931244,
+      "concurrency": "overlapped"
+    },
+    {
+      "stage": "POR151",
+      "target": "POR",
+      "actual_target_gain": 0.0,
+      "actual_TOTAL_contribution": 0.0,
+      "previous_target_score": 80.00977386449392,
+      "selected_target_score": 80.00977386449392,
+      "optimizer_gain": 0.0,
+      "best_epoch": 0,
+      "stopped_epoch": 14,
+      "strata": {
+        "DEFAULT": {
+          "rows": 99231,
+          "before": 97.87163285666777,
+          "after": 97.87163285666777,
+          "delta": 0.0
+        },
+        "CONT": {
+          "rows": 45390,
+          "before": 40.960420930976206,
+          "after": 40.960420930976206,
+          "delta": 0.0
+        }
+      },
+      "process_wall_seconds": 233.8358428478241,
+      "concurrency": "overlapped"
+    },
+    {
+      "stage": "PERM154",
+      "target": "PERM",
+      "actual_target_gain": 0.0,
+      "actual_TOTAL_contribution": 0.0,
+      "previous_target_score": 90.82341132483818,
+      "selected_target_score": 90.82341132483818,
+      "optimizer_gain": 0.0,
+      "best_epoch": 0,
+      "stopped_epoch": 14,
+      "strata": {
+        "DEFAULT": {
+          "rows": 100721,
+          "before": 97.64383105110765,
+          "after": 97.64383105110765,
+          "delta": 0.0
+        },
+        "CONT": {
+          "rows": 43900,
+          "before": 75.17513125081628,
+          "after": 75.17513125081628,
+          "delta": 0.0
+        }
+      },
+      "process_wall_seconds": 175.01366305351257,
+      "concurrency": "failed overlap plus explicit serial recovery"
+    },
+    {
+      "stage": "SW104",
+      "target": "SW",
+      "actual_target_gain": 0.6585315627939963,
+      "actual_TOTAL_contribution": 0.23048604697789868,
+      "previous_target_score": 76.27531211748415,
+      "selected_target_score": 76.93384368027814,
+      "optimizer_gain": 2.267787356086785,
+      "best_epoch": 30,
+      "stopped_epoch": 44,
+      "strata": {
+        "DEFAULT": {
+          "rows": 106109,
+          "before": 98.91943874155945,
+          "after": 99.00570567121179,
+          "delta": 0.08626692965233929
+        },
+        "CONT": {
+          "rows": 38512,
+          "before": 13.885780751832733,
+          "after": 16.1210267921395,
+          "delta": 2.235246040306766
+        }
+      },
+      "process_wall_seconds": 600.3016042709351,
+      "concurrency": "solo"
+    },
+    {
+      "stage": "POR341",
+      "target": "POR",
+      "actual_target_gain": 0.06077140913880896,
+      "actual_TOTAL_contribution": 0.01823142274164269,
+      "previous_target_score": 80.00977386449392,
+      "selected_target_score": 80.07054527363273,
+      "optimizer_gain": 0.06077140913880896,
+      "best_epoch": 4,
+      "stopped_epoch": 18,
+      "strata": {
+        "DEFAULT": {
+          "rows": 99231,
+          "before": 97.87163285666777,
+          "after": 98.12760125364049,
+          "delta": 0.2559683969727189
+        },
+        "CONT": {
+          "rows": 45390,
+          "before": 40.960420930976206,
+          "after": 40.59445534298501,
+          "delta": -0.36596558799119805
+        }
+      },
+      "process_wall_seconds": 240.87601447105408,
+      "concurrency": "solo"
+    }
+  ],
+  "checkpoint_sha256": "ee1a68f3f33b1dea0c9be3587c5821b3009a8c756a4d3a0633fba2cfdc24198f",
+  "score_scope": "actually assembled completed-stage prefix; not complete8stage model or fullOOF",
+  "complete8stage_single_fold": false,
+  "CPU_only": true
+}

@@ -1,0 +1,69 @@
+# Historical summary
+
+Focus and explored conditions: see retained README/FINAL and SUMMARY_RESULTS.json.
+
+Gain: scores and original comparison deltas are retained; incomplete folds remain incomplete.
+
+Not worth extending: original negative conclusions are retained below where available.
+
+Detailed logs, weights and caches were removed by the user request; rerunning requires retraining.
+
+## README.md
+
+# v157 在POR正收益读出上增补小幅门控
+
+探索重点：保留有效256位置/权重读出及jointRPS1，增加默认门控log-odds修正，界为±0.125。联合监督已使默认与非默认得分同时小增益，检验条件分布改进后，小幅默认概率修正能否扩大优势。
+
+已经探索与验证：实现完成，尚未训练、无成绩。原256隐层输出32->33，新增257参数，总231201；同初始父v113预测函数，新增出口零初始化，不加载已训练v151头。第一32位置/权重修正和RPS1不变，旧默认门控参数仍冻结，仅增加新有界logit修正。原尺度、分布族、解码区间/动作保持；自身POR的BCE/NLL/jointRPS共同监督。相对正控制有257参数差异，不冒称精确同容量消融。
+
+收益：尚未证实，比较v151POR77.926380760724，最终恢复后用固定PERM154/SW104实际合并。source+POR113+POR157+PERM154+SW104共5阶段；不追加已训练POR151后第六阶段。
+
+不值得继续：历史v133较大默认门控/不同64容量读出负，不忽略该证据；本项在已有RPS1和256读出上仅试小界0.125，不能将旧负结果泛化，亦不展开门控界网格。POR2系数负，专家交互/自由区间/平滑CDF/通信负，不叠加。
+
+约束：原9曲线/206+63/64训练井统计/Q50/原第五折/seed20261010、原Student3+Cauchy/自身POR标签，normal/max2、80/18/min10/b64/64步/lr3e-4/cos80*64、原子完整last/显式恢复/进程级防睡眠；严格第五TOTAL>80.8且收益后补折，完整OOF>82未完成。旧交付/正控制保留。
+
+待完成：SW155按最新优先级收尾后显式启动，观察真实训练；记录单项/并发墙钟/显存/预热，最佳144665重载/冻结完整性/实际合并，最终增益或负证据、SHA清理及PROJECTS/图谱。
+
+
+## 实际启动快照
+
+已核验PID25516正常训练，normal GPU，TEMPORARY_SYSTEM_REQUIRED=True，与PERM158并行。第28轮快照：最佳POR77.731336011420（第17轮），尚低于正控制77.926380760724；训练未结束，不构成最终收益。
+未完成：最佳磁盘重载、实际三通道组合、最终差值及耗时记录。
+
+V157 joint_rps: restored POR=77.763278807566; delta vs v114=+0.215209312673, vs historical=+0.211342005681; actual fifth TOTAL=80.563544832047;5 phases incl source; channel gain>0.25=False; strict808=False; no otherfolds. best/stop=30/48, seconds=599.604, peakMiB=924.223.
+
+
+## 最终收益和关闭
+
+与正RPS控制差值-0.163101953158，最佳/停止30/48；实际TOTAL80.563544832047，144665行恢复和冻结完整性已验证。无新增收益，
+
+# v157 在POR正收益读出上增补小幅门控
+
+探索重点：保留有效256位置/权重读出及jointRPS1，增加默认门控log-odds修正，界为±0.125。联合监督已使默认与非默认得分同时小增益，检验条件分布改进后，小幅默认概率修正能否扩大优势。
+
+已经探索与验证：实现完成，尚未训练、无成绩。原256隐层输出32->33，新增257参数，总231201；同初始父v113预测函数，新增出口零初始化，不加载已训练v151头。第一32位置/权重修正和RPS1不变，旧默认门控参数仍冻结，仅增加新有界logit修正。原尺度、分布族、解码区间/动作保持；自身POR的BCE/NLL/jointRPS共同监督。相对正控制有257参数差异，不冒称精确同容量消融。
+
+收益：尚未证实，比较v151POR77.926380760724，最终恢复后用固定PERM154/SW104实际合并。source+POR113+POR157+PERM154+SW104共5阶段；不追加已训练POR151后第六阶段。
+
+不值得继续：历史v133较大默认门控/不同64容量读出负，不忽略该证据；本项在已有RPS1和256读出上仅试小界0.125，不能将旧负结果泛化，亦不展开门控界网格。POR2系数负，专家交互/自由区间/平滑CDF/通信负，不叠加。
+
+约束：原9曲线/206+63/64训练井统计/Q50/原第五折/seed20261010、原Student3+Cauchy/自身POR标签，normal/max2、80/18/min10/b64/64步/lr3e-4/cos80*64、原子完整last/显式恢复/进程级防睡眠；严格第五TOTAL>80.8且收益后补折，完整OOF>82未完成。旧交付/正控制保留。
+
+待完成：SW155按最新优先级收尾后显式启动，观察真实训练；记录单项/并发墙钟/显存/预热，最佳144665重载/冻结完整性/实际合并，最终增益或负证据、SHA清理及PROJECTS/图谱。
+
+
+## 实际启动快照
+
+已核验PID25516正常训练，normal GPU，TEMPORARY_SYSTEM_REQUIRED=True，与PERM158并行。第28轮快照：最佳POR77.731336011420（第17轮），尚低于正控制77.926380760724；训练未结束，不构成最终收益。
+未完成：最佳磁盘重载、实际三通道组合、最终差值及耗时记录。
+
+V157 joint_rps: restored POR=77.763278807566; delta vs v114=+0.215209312673, vs historical=+0.211342005681; actual fifth TOTAL=80.563544832047;5 phases incl source; channel gain>0.25=False; strict808=False; no otherfolds. best/stop=30/48, seconds=599.604, peakMiB=924.223.
+
+
+## 最终收益和关闭
+
+与正RPS控制差值-0.163101953158，最佳/停止30/48；实际TOTAL80.563544832047，144665行恢复和冻结完整性已验证。无新增收益，不继续扫描本机制；负权重按SHA清单删除，证据保留。训练599.604秒，与其他任务并行；不作独立速度结论。
+
+单项启动到报告总墙钟604.588秒，数据加载/首次预热包括在内；其余正控制/来源阶段复用未重训，不将该时间当成完整五阶段训练耗时或并发总加速证据。
+
+

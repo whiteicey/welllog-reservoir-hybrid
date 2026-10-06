@@ -1,0 +1,162 @@
+{
+  "project": "sw_depth_axis_v310_20261002",
+  "scope": "obsolete-study",
+  "weights_retained": false,
+  "cleanup": "Obsolete artifacts removed by explicit user request. These are historical scores, not newly verified training.",
+  "results": [
+    {
+      "source": "PAIRED_FINAL.json",
+      "result": {
+        "reports": {
+          "depth": {
+            "stage": "depth",
+            "target": "SW",
+            "target_score": 74.16019992304726,
+            "initial_score": 74.12175268976877,
+            "against_initial": 0.038447233278489534,
+            "against_v97_target": 0.018020018380553893,
+            "best_epoch": 17,
+            "stopped_epoch": 31,
+            "validation_rows": 144665,
+            "predictions_reproduced_exactly": true,
+            "frozen_parameters_exact": true,
+            "seconds": 632.6999012999586,
+            "peak_MiB": 1390.0986328125,
+            "complete_five_folds": false,
+            "early_terminated": false
+          },
+          "channel": {
+            "stage": "channel",
+            "target": "SW",
+            "target_score": 74.15562558319847,
+            "initial_score": 74.12175268976877,
+            "against_initial": 0.033872893429702344,
+            "against_v97_target": 0.013445678531766703,
+            "best_epoch": 17,
+            "stopped_epoch": 31,
+            "validation_rows": 144665,
+            "predictions_reproduced_exactly": true,
+            "frozen_parameters_exact": true,
+            "seconds": 644.2474555000081,
+            "peak_MiB": 1714.6171875,
+            "complete_five_folds": false,
+            "early_terminated": false
+          }
+        },
+        "strata": {
+          "depth": {
+            "default": 98.84885176097337,
+            "continuous": 17.452652710549867
+          },
+          "channel": {
+            "default": 98.83626121843403,
+            "continuous": 17.466490846016587
+          }
+        },
+        "best_DW_norms": {
+          "depth": {
+            "branches.0.dw.weight": 0.6564399600028992,
+            "branches.0.dw.bias": 0.3699621856212616,
+            "branches.1.dw.weight": 0.9769412875175476,
+            "branches.1.dw.bias": 0.34697914123535156,
+            "branches.2.dw.weight": 1.1591426134109497,
+            "branches.2.dw.bias": 0.3303142488002777
+          },
+          "channel": {
+            "branches.0.dw.weight": 0.708541750907898,
+            "branches.0.dw.bias": 0.3799072802066803,
+            "branches.1.dw.weight": 1.0485951900482178,
+            "branches.1.dw.bias": 0.35855111479759216,
+            "branches.2.dw.weight": 1.3809478282928467,
+            "branches.2.dw.bias": 0.3177802562713623
+          }
+        },
+        "depth_minus_channel": 0.00457433984878719,
+        "depth_minus_channel_CONT": -0.013838135466720303,
+        "gain_vs_retained297": {
+          "depth": 0.00016970002751293123,
+          "channel": -0.004404639821274259
+        },
+        "CONT_vs_retained297": {
+          "depth": -0.05010005679731577,
+          "channel": -0.03626192133059547
+        },
+        "CONT_vs_strong252": {
+          "depth": -0.4322154293603049,
+          "channel": -0.4183772938935846
+        },
+        "timing": {
+          "parallelism": 2,
+          "started_epoch": 1790881587.797,
+          "excludes": "code preparation,CPU record",
+          "status": "launched",
+          "gain": "unproved",
+          "started_UTC": "2026-10-01T19:06:27.7973331+00:00",
+          "jobs": [
+            {
+              "started_UTC": "2026-10-01T19:06:27.8135715+00:00",
+              "pid": 85880,
+              "stage": "depth"
+            },
+            {
+              "started_UTC": "2026-10-01T19:06:27.8242223+00:00",
+              "pid": 76952,
+              "stage": "channel"
+            }
+          ],
+          "includes": "data,initial evaluation,training,best restore",
+          "terminal": true,
+          "same_work_pair_wall_seconds": 649.3419976234436,
+          "individual_seconds": {
+            "depth": 632.6999012999586,
+            "channel": 644.2474555000081
+          },
+          "peak_MiB": {
+            "depth": 1390.0986328125,
+            "channel": 1714.6171875
+          },
+          "interpretation": "Two concurrently started arms, different stopping times. Includes data/initial/train/best restore; excludes code preparation and CPU record. Not a serial speed ranking."
+        },
+        "screening_fold": 5,
+        "complete_five_folds": false,
+        "remaining_folds_started": false,
+        "independent_disk_reload": false,
+        "automatic_adoption": false,
+        "adopted": false,
+        "closure": "Paired whole+.00457434 but CONT-.01383814; absolute whole+.00016970 but CONT-.05010006 versus297. Preserve micropositive/control evidence, do not adopt or sweep kernels/channels/gates; scope-specific result.",
+        "optional8_diagnostic": {
+          "scores": {
+            "POR": 78.03055279414464,
+            "PERM": 89.5155547932572,
+            "SW": 74.16019992304726,
+            "TOTAL": 80.69567998894995
+          },
+          "screening_fold": 5,
+          "validation_rows": 144665,
+          "complete_five_folds": false,
+          "remaining_folds_started": false,
+          "total_training_stages": 8,
+          "strict_808_qualified": false,
+          "gain_vs_retained8": 5.939500962881539e-05,
+          "adopted": false,
+          "reason": "Micro whole gain consumes continuous SW benefit; keep retained297 recipe, no kernel/grid continuation",
+          "sources": {
+            "POR": {
+              "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_por_curve_scope_v302_fold5\\full\\channel_pred.npy"
+            },
+            "PERM": {
+              "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_perm_sparse_reacquisition_v291_fold5\\point\\channel_pred.npy"
+            },
+            "SW": {
+              "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_sw_depth_axis_v310_fold5\\depth\\channel_pred.npy"
+            }
+          },
+          "independent_disk_reload": false
+        }
+      }
+    }
+  ],
+  "cleanup_completed": true,
+  "deleted_files": 10,
+  "deleted_bytes": 6957244
+}

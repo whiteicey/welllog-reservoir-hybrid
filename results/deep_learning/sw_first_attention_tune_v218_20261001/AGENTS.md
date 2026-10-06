@@ -1,0 +1,1 @@
+Only first original SW104 QKV trainable; all other weights frozen. Original fold5/Q50/score,80epochs/patience14/max2GPU. One extra SW stage, six total; no stacking or remaining folds. Maintain PROJECTS and exploration evidence.

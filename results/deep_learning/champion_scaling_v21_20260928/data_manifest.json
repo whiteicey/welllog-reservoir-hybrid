@@ -1,0 +1,25 @@
+{
+  "created_at": "2026-09-28T21:08:27.541554+08:00",
+  "source": "outputs\\pure_dl_paired_local_context_router80_sequence\\fold_5.pt",
+  "source_sha256": "45a09476e3126820688420579c100c86e0e4f45df335904380a298cf5f66b9a9",
+  "champion_private": "outputs\\pure_dl_independent_v8_POR_dual80_fold5\\model_best.pt",
+  "champion_sha256": "c53019347f4482b1ac8ce41b8ebe14d3ba2bb2915daa8110a929be5012ff17d1",
+  "heads": "outputs\\pure_dl_dual8222_v5_location_point3280_fold5\\readout_checkpoint.pt",
+  "head_sha256": "19b360da997c12df6a3d9be1c825875f09494ea591415704a9ecbaa660dd59f3",
+  "quality": {
+    "epoch": 50,
+    "minimum": 0.10000000149011612,
+    "maximum": 1.0,
+    "downweighted_training_rows": 1755,
+    "dynamic_updates": false,
+    "sha256": "b96d498519c6a13ddd778ceb3ffef5fb03a8580902a903f2042cd3db3c593297"
+  },
+  "fit_points": 578891,
+  "validation_points": 144665,
+  "features": 206,
+  "original_row_order_verified": true,
+  "original_preprocessing_rebuilt_and_verified": true,
+  "validation_not_fitted": true,
+  "preparation_seconds": 46.750898000000234,
+  "cache_bytes": 377384502
+}

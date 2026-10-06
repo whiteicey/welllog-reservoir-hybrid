@@ -1,0 +1,30 @@
+# Historical summary
+
+Focus and explored conditions: see retained README/FINAL and SUMMARY_RESULTS.json.
+
+Gain: scores and original comparison deltas are retained; incomplete folds remain incomplete.
+
+Not worth extending: original negative conclusions are retained below where available.
+
+Detailed logs, weights and caches were removed by the user request; rerunning requires retraining.
+
+## README.md
+
+# v123 same-radius parameter-scale weighted SAM direction
+Focus: standard SAM global gradient direction may distribute perturbation poorly across differently scaled parameter tensors. Define d_p=(RMS(p)+0.01)*grad_p, then perturb delta_p=0.1*d_p/sqrt(sum(||d_p||^2)). This preserves total EuclideanL2 radius0.1, changes only direction; this is our bounded optimizer variant, NOT claimed standardASAM.
+Controls: reuse completed v104 local SW/SAM.1 as same845913-parameter/random-init/model/input/loss/row-sampler/budget historical control. Original Gaussian ownSW NLL+utility1/DropKey.4/lr3e-4/80-18/min10/b64/64steps/cos80. Two passes same batch/RNG, clone exact parameter restoration before AdamW/clip2; no additional data, labels, output model, source-weight loading or decoder modification. Directions are local disposable tensors; full original optimizer/current/best/scheduler/RNG/window/stopping state atomically saved.
+Explored/verified: implementation prepared, not trained/no score. One candidate only, no unbounded rho/LR/ASAM sweep. Historical v93/v94 SAM benefit belongs to different warm backbone; current local model itself remains original positive control, not retrained. Tensor-RMS direction is separate from those closed radius sweeps.
+Gain: not established; historical SAM localSW74.121752828158, compact actualTOTAL80.489472312223. Compare fixed model/initial/budget mechanism del
+
+POR phases. Strict fifth>80.8+gain before otherfolds, original fullOOF>82 unmet. Old source/delivery preserved, no automatic queue.
+Optional: follow demonstrated optimizer gain only within stage/time/memory budget.
+
+Live v123 PID=89660, epoch=6, bestSW=72.970668780473, not final. Original SAM same-epoch historical best=72.268197681554, early best gap=+0.702471098919; not a completed mechanism gain and not OOF. Actual845913 trainable parameters, initialSW71.197115081472 same original prior. Measured~12.4s/epoch, peak1725.434MiB, oneGPU task, loading/warmup/eval counted by driver. Current prior5-stageTOTAL80.489472312223 retained, no remainingfolds. Config preserves same raw Euclidean SAM radius0.1 and clone/RNG two-pass path; only tensor-RMS-weighted perturbation direction changes.
+
+V123 rms_direction: restored SW=73.897188251236; standard SAM delta=-0.224564576922; actual fifth TOTAL=80.410874710301;5 stages including source and2 POR phases; strict808=False; no other folds. best/stop=38/48, seconds=15089.669, peakMiB=1725.434.
+
+Final v123: explicitly EARLY TERMINATED after authoritative checkpoint48 complete epochs, best38SW73.897188251236; original SAM control delta=-0.224564576922, actual3-target fifthTOTAL=80.410874710301.10 rounds without improvement before termination; initial trigger used stale33 snapshot, correction/original preserved in decision files. In-flight work discarded; atomic saved best restored in separate eval-only process, all144665 predictions/frozen tensors exactly match saved best. No trained source/config/checkpoint hash rewritten. Candidate not adopted; close this specificRMS+0.01 same-L2 perturbation direction without floor/radius/LR sweep. Current5-stageTOTAL80.489472312223 retained, no other folds/fullOOF completion.
+Timing: actual launch-to-report wall=15102.457s; median epoch=12.862s but epoch18=14458.560s dominates wall. Kernel-Power507 recorded exit from Modern Standby during this long epoch. Report observed wall honestly; exact entry/cause not fully proved, no4-hour active-compute claim. Added training_awake_guard.py: NEW trainer can use with TrainingAwake(): main(), temporary SYSTEM_REQUIRED while training, releases on exit, no display or permanent power-plan edit. Request acquire/release verified once; existing trained source unchanged. Future manual stop/suspend remains user-controlled.
+Negative best/last removed with manifest after replay; source/current/positive controls/delivery retained. Next training must adopt scoped keep-awake request to reduce accidental idle stalls; do not reopen negative optimizer direction.
+
+

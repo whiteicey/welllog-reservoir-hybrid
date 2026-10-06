@@ -1,0 +1,21 @@
+{
+  "diagnostic_only": true,
+  "not_oracle_selection": true,
+  "scores": {
+    "SW252": {
+      "default": 98.64493054166336,
+      "continuous": 17.88486813991017,
+      "overall": 74.14922820781207
+    },
+    "SW285": {
+      "default": 98.72446679129287,
+      "continuous": 17.71256117758909,
+      "overall": 74.15237674585131
+    },
+    "SW289": {
+      "default": 98.72311025198368,
+      "continuous": 17.72012680313723,
+      "overall": 74.1537264289993
+    }
+  }
+}

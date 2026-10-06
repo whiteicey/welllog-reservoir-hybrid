@@ -1,0 +1,87 @@
+{
+  "SW104_report": {
+    "stage": "SW104",
+    "target": "SW",
+    "target_score": 74.03612875776867,
+    "initial_score": 71.19711508147167,
+    "against_initial": 2.839013676297,
+    "against_v97_target": -0.1060511468980394,
+    "best_epoch": 34,
+    "stopped_epoch": 44,
+    "validation_rows": 144665,
+    "predictions_reproduced_exactly": true,
+    "frozen_parameters_exact": true,
+    "gradient_groups": {
+      "SW104_complete_body": 0.978100061416626
+    },
+    "effective_patience": 10,
+    "SOTA_broken": false,
+    "seconds": 638.196383500006,
+    "peak_MiB": 1722.197265625,
+    "complete_five_folds": false,
+    "early_terminated": false
+  },
+  "SW104_timing": {
+    "seed": 20261010,
+    "stage": "SW104",
+    "pid": 79660,
+    "started_epoch": 1790915111.8169262,
+    "terminal": true,
+    "exit_code": 0,
+    "process_wall_seconds": 646.6014893054962,
+    "concurrency": "solo",
+    "includes": "preprocessing warmup training best restoration"
+  },
+  "SW104_pid_missing": true,
+  "next_actual_live_pid": 14768,
+  "next_stage": "POR341",
+  "joint_parameters": 134752,
+  "actual_checkpoint_loads": [
+    {
+      "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261010\\SOURCE\\prepared_data.pt",
+      "sha256": "07bf3356b59a2473fb1384e7b3a68e2bf5c081c476c42cfd3b0eebd2f2590165"
+    },
+    {
+      "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261010\\SOURCE\\fold_5.pt",
+      "sha256": "7ce54c5a19dcdd61ef89ce21b2aaac621ee171e51ad7250059addc95f6230556"
+    },
+    {
+      "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261010\\POR113\\model_best.pt",
+      "sha256": "58ed13b4f8d60b8d7e1e26a16aaca8c4fac3c09db315a836f61b78aa05b54861"
+    },
+    {
+      "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261010\\POR151\\model_best.pt",
+      "sha256": "f9063efd48b539fea5bbfe54b7bffaef3ea663f475d4931fe14b816734a8163e"
+    }
+  ],
+  "completed_stages": 5,
+  "total_stages": 8,
+  "actual_five_stage_prefix": {
+    "scores": {
+      "POR": 77.42544665121915,
+      "PERM": 89.35243145677488,
+      "SW": 74.03612875776867,
+      "TOTAL": 80.41363007045598
+    },
+    "seed": 20261010,
+    "stages": [
+      "SOURCE",
+      "POR113",
+      "POR151",
+      "PERM154",
+      "SW104"
+    ],
+    "total_training_stages": 5,
+    "screening_fold": 5,
+    "validation_rows": 144665,
+    "delta_vs_historical_default_five": -0.19884534753795435,
+    "complete_eight_stage_model": false,
+    "complete_five_folds": false,
+    "remaining_folds_started": false,
+    "independent_disk_reload": false,
+    "limits": "Actual own-seed prefix only, not final eight-stage seed result. Latest10patience/Qsource differ historical18/14; no seed-only causal comparison to historical model."
+  },
+  "complete_seed_model": false,
+  "complete_five_folds": false,
+  "remaining_folds_started": false
+}

@@ -1,0 +1,109 @@
+{
+  "project": "compact_mean_scope_v101_20261001",
+  "scope": "obsolete-study",
+  "weights_retained": false,
+  "cleanup": "Obsolete artifacts removed by explicit user request. These are historical scores, not newly verified training.",
+  "results": [
+    {
+      "source": "ablation_report.json",
+      "result": {
+        "original_fold": 5,
+        "control_target_score": 77.40726398783815,
+        "candidate_target_score": 77.50036838764457,
+        "predefined_update_scope_delta": 0.09310439980642116,
+        "absolute_vs_v97": -0.051568414240435345,
+        "same_initial_official_score": true,
+        "fixed_source_and_population": true,
+        "update_scope_ablation_not_equal_trainable_parameters": true,
+        "final_restoration_passed": true,
+        "best_epoch": 12,
+        "stopped_epoch": 30,
+        "seconds": 179.34345499999472,
+        "peak_MiB": 786.46533203125
+      }
+    },
+    {
+      "source": "assembled_report.json",
+      "result": {
+        "scores": {
+          "POR": 77.50036838764457,
+          "PERM": 89.37839421114361,
+          "SW": 74.06875025398139,
+          "TOTAL": 80.45661107908712
+        },
+        "original_fold": 5,
+        "complete_five_folds": false,
+        "total_training_stages": 5,
+        "dependency_stage_order": [
+          "original_source_pretrain",
+          "v101_por_mean_scope",
+          "v100_perm",
+          "v100_sw_joint",
+          "v100_sw_density"
+        ],
+        "reused_shared_stages_counted": true,
+        "old_18stage_downstream_weights_loaded": false,
+        "gain_vs_v96": -0.047586345389760254,
+        "strict_808_passed": false,
+        "remaining_folds_started": false,
+        "predefined_POR_scope_delta": 0.09310439980642116,
+        "source_pretrain_seconds": 1289.1515023999964,
+        "sum_dependency_stage_seconds": 2847.7540882999892,
+        "timing_scope": "dependency stage seconds including historical source and reused stages; not parallel wall or speedup proof",
+        "selected_reports": [
+          {
+            "stage": "por",
+            "target": "POR",
+            "target_score": 77.50036838764457,
+            "initial_score": 77.27786784460355,
+            "against_initial": 0.22250054304102207,
+            "against_v97_target": -0.051568414240435345,
+            "best_epoch": 12,
+            "stopped_epoch": 30,
+            "validation_rows": 144665,
+            "predictions_reproduced_exactly": true,
+            "frozen_parameters_exact": true,
+            "seconds": 179.34345499999472,
+            "peak_MiB": 786.46533203125,
+            "complete_five_folds": false
+          },
+          {
+            "stage": "perm",
+            "target": "PERM",
+            "target_score": 89.37839421114361,
+            "initial_score": 89.3447601747529,
+            "against_initial": 0.03363403639070839,
+            "against_v97_target": -0.01832983822220058,
+            "best_epoch": 2,
+            "stopped_epoch": 20,
+            "validation_rows": 144665,
+            "predictions_reproduced_exactly": true,
+            "frozen_parameters_exact": true,
+            "seconds": 147.8027762999991,
+            "peak_MiB": 786.46533203125,
+            "complete_five_folds": false
+          },
+          {
+            "stage": "sw_density",
+            "target": "SW",
+            "target_score": 74.06875025398139,
+            "initial_score": 74.0066149558752,
+            "against_initial": 0.06213529810619889,
+            "against_v97_target": -0.07342965068531271,
+            "best_epoch": 11,
+            "stopped_epoch": 29,
+            "validation_rows": 144665,
+            "predictions_reproduced_exactly": true,
+            "frozen_parameters_exact": true,
+            "seconds": 432.2627019000065,
+            "peak_MiB": 1286.11376953125,
+            "complete_five_folds": false
+          }
+        ]
+      }
+    }
+  ],
+  "cleanup_completed": true,
+  "deleted_files": 5,
+  "deleted_bytes": 3477488
+}

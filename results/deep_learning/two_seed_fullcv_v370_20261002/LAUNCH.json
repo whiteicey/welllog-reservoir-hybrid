@@ -1,0 +1,11 @@
+{
+  "controller_pid": 30132,
+  "started_epoch": 1790927178.5526347,
+  "plan_sha256": "646c51b3535e39c64034d9ec6e3fb947b9cac7323a441e70552cb2f1a3cb160b",
+  "status": "running",
+  "concurrency": "serial",
+  "maximum_GPU_jobs": 2,
+  "finite_model_folds": 8,
+  "retry": false,
+  "implicit_resume": false
+}

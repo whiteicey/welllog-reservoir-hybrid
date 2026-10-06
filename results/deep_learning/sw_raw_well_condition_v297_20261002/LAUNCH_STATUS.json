@@ -1,0 +1,8 @@
+﻿{
+    "well_pid":  73284,
+    "maximum_GPU_jobs":  2,
+    "status":  "well_complete_reference_launched",
+    "reference_status":  "launched_unproved",
+    "launched_utc":  "2026-10-01T17:14:22.8047352Z",
+    "reference_pid":  75804
+}

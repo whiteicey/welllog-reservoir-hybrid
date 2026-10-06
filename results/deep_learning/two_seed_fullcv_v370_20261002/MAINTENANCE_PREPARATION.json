@@ -1,0 +1,14 @@
+{
+  "script_sha256": "55007ba77569bb3338981391e8b89311aa68bd0e3d3fe06dd163474e8d2f3475",
+  "syntax_checked": true,
+  "actual_pid": 6196,
+  "actual_cmdline": [
+    "C:\\Users\\z5364\\.conda\\envs\\normal\\python.exe",
+    "-u",
+    "experiments/pure_dl/compact_source_diagnostics_v370.py"
+  ],
+  "actual_create_time": 1790927496.0536437,
+  "training_process_stopped": false,
+  "old_checkpoint_delete": false,
+  "new_completed_SOURCE_diagnostics_only": true
+}

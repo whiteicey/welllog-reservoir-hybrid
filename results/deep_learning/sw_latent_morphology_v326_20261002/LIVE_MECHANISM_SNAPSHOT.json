@@ -1,0 +1,58 @@
+{
+  "depth": {
+    "epoch": 8,
+    "best_epoch": 4,
+    "whole": 74.12292121849512,
+    "strata": {
+      "default": 98.66292701802124,
+      "continuous": 17.75680019224254
+    },
+    "actual_morphology_delta_norms": {
+      "current": {
+        "dilation": 0.43033504486083984,
+        "erosion": 0.4331167936325073,
+        "norm.weight": 0.46676507592201233,
+        "norm.bias": 0.14421340823173523,
+        "projection.weight": 1.867798924446106,
+        "projection.bias": 0.10232780873775482
+      },
+      "best_state": {
+        "dilation": 0.4104294776916504,
+        "erosion": 0.42354774475097656,
+        "norm.weight": 0.2898981273174286,
+        "norm.bias": 0.15952561795711517,
+        "projection.weight": 1.3254051208496094,
+        "projection.bias": 0.10271216928958893
+      }
+    },
+    "scope": "Live atomic ownbest state, not terminal result or independentdiskreload"
+  },
+  "channel": {
+    "epoch": 5,
+    "best_epoch": 0,
+    "whole": 74.12175268976877,
+    "strata": {
+      "default": 98.71563205981698,
+      "continuous": 17.63188906048012
+    },
+    "actual_morphology_delta_norms": {
+      "current": {
+        "dilation": 0.4449484944343567,
+        "erosion": 0.4714682102203369,
+        "norm.weight": 0.16323333978652954,
+        "norm.bias": 0.2067277878522873,
+        "projection.weight": 0.9347254633903503,
+        "projection.bias": 0.08747214823961258
+      },
+      "best_state": {
+        "dilation": 0.0,
+        "erosion": 0.0,
+        "norm.weight": 0.0,
+        "norm.bias": 0.0,
+        "projection.weight": 0.0,
+        "projection.bias": 0.0
+      }
+    },
+    "scope": "Live atomic ownbest state, not terminal result or independentdiskreload"
+  }
+}

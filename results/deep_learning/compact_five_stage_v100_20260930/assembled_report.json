@@ -1,0 +1,88 @@
+{
+  "scores": {
+    "POR": 77.40726398783815,
+    "PERM": 89.37839421114361,
+    "SW": 74.06875025398139,
+    "TOTAL": 80.4286797591452
+  },
+  "total_training_stages": 5,
+  "source_training_stages": 1,
+  "new_training_stages": 4,
+  "original_fifth": true,
+  "complete_five_folds": false,
+  "remaining_folds_started": false,
+  "gain_vs_v96": -0.07551766533168802,
+  "strict_808_passed": false,
+  "source_pretrain_seconds": 1289.1515023999964,
+  "new_incremental_wall_seconds": 2169.761019,
+  "historical_source_plus_incremental_cost_seconds": 3458.9125213999964,
+  "sum_new_stage_seconds": 1575.0275769,
+  "elapsed_scope": "actual two-head launch to completed compact assembly; IO/eval/explicit host gaps included; historical source reused and separately counted",
+  "original_validation_raw_rows_sha256": "6a009e66614d7ea6948ed8d83cc3dfa19ff9fda1ef730fe2ece5e62ab52a03b9",
+  "selected_stages": [
+    "por",
+    "perm",
+    "sw_density"
+  ],
+  "reports": [
+    {
+      "stage": "por",
+      "target": "POR",
+      "target_score": 77.40726398783815,
+      "initial_score": 77.27786784460355,
+      "against_initial": 0.1293961432346009,
+      "against_v97_target": -0.1446728140468565,
+      "best_epoch": 9,
+      "stopped_epoch": 27,
+      "validation_rows": 144665,
+      "predictions_reproduced_exactly": true,
+      "frozen_parameters_exact": true,
+      "gradient_groups": {
+        "original_target_rows": 1.8941658735275269,
+        "combined_new_heads_routes": 0.47380363941192627
+      },
+      "seconds": 195.76844600000186,
+      "peak_MiB": 786.46533203125,
+      "complete_five_folds": false
+    },
+    {
+      "stage": "perm",
+      "target": "PERM",
+      "target_score": 89.37839421114361,
+      "initial_score": 89.3447601747529,
+      "against_initial": 0.03363403639070839,
+      "against_v97_target": -0.01832983822220058,
+      "best_epoch": 2,
+      "stopped_epoch": 20,
+      "validation_rows": 144665,
+      "predictions_reproduced_exactly": true,
+      "frozen_parameters_exact": true,
+      "gradient_groups": {
+        "original_target_rows": 0.032838210463523865,
+        "combined_new_heads_routes": 0.006363858003169298
+      },
+      "seconds": 147.8027762999991,
+      "peak_MiB": 786.46533203125,
+      "complete_five_folds": false
+    },
+    {
+      "stage": "sw_density",
+      "target": "SW",
+      "target_score": 74.06875025398139,
+      "initial_score": 74.0066149558752,
+      "against_initial": 0.06213529810619889,
+      "against_v97_target": -0.07342965068531271,
+      "best_epoch": 11,
+      "stopped_epoch": 29,
+      "validation_rows": 144665,
+      "predictions_reproduced_exactly": true,
+      "frozen_parameters_exact": true,
+      "gradient_groups": {
+        "private_SW": 0.20950794219970703
+      },
+      "seconds": 432.2627019000065,
+      "peak_MiB": 1286.11376953125,
+      "complete_five_folds": false
+    }
+  ]
+}

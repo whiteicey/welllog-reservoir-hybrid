@@ -1,0 +1,16 @@
+{
+  "status": "launched",
+  "snapshot": {
+    "process_live": true,
+    "state": {
+      "status": "running",
+      "pid": 90284,
+      "stage": "raw",
+      "epoch": 4,
+      "best": 77.94491086237232,
+      "best_epoch": 3,
+      "bad": 1,
+      "peak_MiB": 981.986328125
+    }
+  }
+}

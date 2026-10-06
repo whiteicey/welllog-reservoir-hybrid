@@ -1,0 +1,266 @@
+{
+  "project": "perm_family_v41_20260929",
+  "scope": "obsolete-study",
+  "weights_retained": false,
+  "cleanup": "Obsolete artifacts removed by explicit user request. These are historical scores, not newly verified training.",
+  "results": [
+    {
+      "source": "assembled_report.json",
+      "result": {
+        "finished_at": "2026-09-29T15:48:48.133773+08:00",
+        "reference_scores": {
+          "POR": 77.551936801885,
+          "PERM": 89.39672404936582,
+          "SW": 73.6630827970656,
+          "TOTAL": 80.33651343681649
+        },
+        "selected_scores": {
+          "POR": 77.551936801885,
+          "PERM": 89.39672404936582,
+          "SW": 73.6630827970656,
+          "TOTAL": 80.33651343681649
+        },
+        "delta_reference_TOTAL": 0.0,
+        "candidates": [
+          {
+            "mode": "gaussian",
+            "report": {
+              "mode": "gaussian",
+              "target": "PERM",
+              "screening_fold": 5,
+              "target_score": 89.39672404936582,
+              "selected_is_parent": true,
+              "best_epoch": -1,
+              "initial_candidate_score": 89.39672404936582,
+              "candidate_score": 89.39672404936582,
+              "candidate_epoch": 0,
+              "best_after_update": {
+                "epoch": 16,
+                "target_score": 89.36719481285853,
+                "reference_replacement_total": 80.32617820403894
+              },
+              "stopped_epoch": 18,
+              "stop_reason": "patience18",
+              "trainable_parameters": 11824,
+              "candidate_predictions_restored_exactly": true,
+              "all_frozen_state_unchanged": true,
+              "parameter_changes": {
+                "input": 3.5375679108875304,
+                "output": 1.0264612653195213
+              },
+              "last_train_probe": {
+                "gate_logits_exact": true,
+                "weight_delta": 0.24999332427978516,
+                "location_delta_in_parent_sd": 0.24999991059303284,
+                "rawscale_delta": 0.25,
+                "family": "gaussian",
+                "student_std_convention": "scale=sd/sqrt(3)",
+                "scope": "two training windows; not validation fitting"
+              },
+              "best_candidate_probe": {
+                "gate_logits_exact": true,
+                "weight_delta": 0.0,
+                "location_delta_in_parent_sd": 0.0,
+                "rawscale_delta": 0.0,
+                "family": "gaussian",
+                "student_std_convention": "scale=sd/sqrt(3)",
+                "scope": "two training windows; not validation fitting"
+              },
+              "checkpoint": "outputs\\pure_dl_perm_family_v41_fold5\\gaussian\\model_best.pt",
+              "negative_control": false,
+              "family": "gaussian",
+              "remaining_folds_started": false
+            },
+            "candidate_scores": {
+              "POR": 77.551936801885,
+              "PERM": 89.39672404936582,
+              "SW": 73.6630827970656,
+              "TOTAL": 80.33651343681649
+            },
+            "post_update_scores": {
+              "POR": 77.551936801885,
+              "PERM": 89.36719481285853,
+              "SW": 73.6630827970656,
+              "TOTAL": 80.32617820403894
+            },
+            "initial": {
+              "gaussian_parent_all144665_exact": true,
+              "candidate_PERM": 89.39672404936582,
+              "candidate_TOTAL": 80.33651343681649,
+              "probe": {
+                "gate_logits_exact": true,
+                "weight_delta": 0.0,
+                "location_delta_in_parent_sd": 0.0,
+                "rawscale_delta": 0.0,
+                "family": "gaussian",
+                "student_std_convention": "scale=sd/sqrt(3)",
+                "scope": "two training windows; not validation fitting"
+              },
+              "distribution_intervention": false
+            },
+            "initial_intervention_delta": 0.0,
+            "training_best_minus_initial": -0.029529236507286782,
+            "training_best_minus_parent": -0.029529236507286782
+          },
+          {
+            "mode": "student3",
+            "report": {
+              "mode": "student3",
+              "target": "PERM",
+              "screening_fold": 5,
+              "target_score": 89.39672404936582,
+              "selected_is_parent": true,
+              "best_epoch": -1,
+              "initial_candidate_score": 89.37649758864616,
+              "candidate_score": 89.37649758864616,
+              "candidate_epoch": 0,
+              "best_after_update": {
+                "epoch": 16,
+                "target_score": 89.37273077842282,
+                "reference_replacement_total": 80.32811579198645
+              },
+              "stopped_epoch": 18,
+              "stop_reason": "patience18",
+              "trainable_parameters": 11824,
+              "candidate_predictions_restored_exactly": true,
+              "all_frozen_state_unchanged": true,
+              "parameter_changes": {
+                "input": 3.4778750620130214,
+                "output": 1.0703707885330616
+              },
+              "last_train_probe": {
+                "gate_logits_exact": true,
+                "weight_delta": 0.25,
+                "location_delta_in_parent_sd": 0.2499949187040329,
+                "rawscale_delta": 0.2499992847442627,
+                "family": "student3",
+                "student_std_convention": "scale=sd/sqrt(3)",
+                "scope": "two training windows; not validation fitting"
+              },
+              "best_candidate_probe": {
+                "gate_logits_exact": true,
+                "weight_delta": 0.0,
+                "location_delta_in_parent_sd": 0.0,
+                "rawscale_delta": 0.0,
+                "family": "student3",
+                "student_std_convention": "scale=sd/sqrt(3)",
+                "scope": "two training windows; not validation fitting"
+              },
+              "checkpoint": "outputs\\pure_dl_perm_family_v41_fold5\\student3\\model_best.pt",
+              "negative_control": false,
+              "family": "student3",
+              "remaining_folds_started": false
+            },
+            "candidate_scores": {
+              "POR": 77.551936801885,
+              "PERM": 89.37649758864616,
+              "SW": 73.6630827970656,
+              "TOTAL": 80.32943417556461
+            },
+            "post_update_scores": {
+              "POR": 77.551936801885,
+              "PERM": 89.37273077842282,
+              "SW": 73.6630827970656,
+              "TOTAL": 80.32811579198645
+            },
+            "initial": {
+              "gaussian_parent_all144665_exact": false,
+              "candidate_PERM": 89.37649758864616,
+              "candidate_TOTAL": 80.32943417556461,
+              "probe": {
+                "gate_logits_exact": true,
+                "weight_delta": 0.0,
+                "location_delta_in_parent_sd": 0.0,
+                "rawscale_delta": 0.0,
+                "family": "student3",
+                "student_std_convention": "scale=sd/sqrt(3)",
+                "scope": "two training windows; not validation fitting"
+              },
+              "distribution_intervention": true
+            },
+            "initial_intervention_delta": -0.020226460719655392,
+            "training_best_minus_initial": -0.0037668102233396894,
+            "training_best_minus_parent": -0.023993270942995082
+          }
+        ],
+        "adopted": false,
+        "post_update_student3_minus_gaussian_PERM": 0.0055359655642917005,
+        "all_two_complete": true,
+        "actual_combined_prediction_scored": true,
+        "rows": 144665,
+        "screening_fold": 5,
+        "complete_five_folds": false,
+        "remaining_folds_started": false,
+        "old_delivery_unchanged": true
+      }
+    },
+    {
+      "source": "CURRENT_RECIPE.json",
+      "result": {
+        "scores": {
+          "POR": 77.551936801885,
+          "PERM": 89.39672404936582,
+          "SW": 73.6630827970656,
+          "TOTAL": 80.33651343681649
+        },
+        "choices": [
+          {
+            "target": "POR",
+            "key": "v31_POR_anchored",
+            "architecture": "same_bound_reparameterized_routes",
+            "target_score": 77.551936801885,
+            "best_epoch": 7,
+            "checkpoint": "outputs\\pure_dl_mechanism_v31_POR_fold5\\anchored\\model_best.pt",
+            "model_module": "por_reparam_v31",
+            "builder": "Network(target,master,modes=(mode,)); heads[mode].load_state_dict(checkpoint[delta_state]); SW master[v31_knots] from checkpoint config metadata",
+            "mode": "anchored",
+            "factor": "route_parameterization",
+            "parent_recipe": "results\\deep_learning\\champion_coadapt_v30_20260929\\CURRENT_RECIPE.json",
+            "retained_v28_checkpoint": "outputs\\pure_dl_champion_route_v28_POR_fold5\\conditional\\model_best.pt",
+            "retained_v29_checkpoint": "outputs\\pure_dl_split_route_v29_POR_fold5\\split\\model_best.pt"
+          },
+          {
+            "target": "PERM",
+            "key": "v29_PERM_coupled",
+            "architecture": "coupled_or_split_residual_routes",
+            "target_score": 89.39672404936582,
+            "best_epoch": 2,
+            "checkpoint": "outputs\\pure_dl_split_route_v29_PERM_fold5\\coupled\\model_best.pt",
+            "factor": "atom_conditional_routing",
+            "source_checkpoint": "outputs\\pure_dl_independent_v8_PERM_dual80_fold5\\model_best.pt",
+            "model_module": "champion_split_route_v29",
+            "builder": "Network(target,master,modes=(mode,)); heads[mode].load_state_dict(checkpoint[delta_state])",
+            "mode": "coupled",
+            "parent_recipe": "results\\deep_learning\\champion_route_v28_20260929\\CURRENT_RECIPE.json",
+            "retained_v28_checkpoint": "outputs\\pure_dl_champion_route_v28_PERM_fold5\\joint\\model_best.pt"
+          },
+          {
+            "target": "SW",
+            "key": "v29_SW_coupled",
+            "architecture": "coupled_or_split_residual_routes",
+            "target_score": 73.6630827970656,
+            "best_epoch": 3,
+            "checkpoint": "outputs\\pure_dl_split_route_v29_SW_fold5\\coupled\\model_best.pt",
+            "factor": "atom_conditional_routing",
+            "source_checkpoint": "outputs\\pure_dl_independent_v8_SW_dual80_fold5\\model_best.pt",
+            "model_module": "champion_split_route_v29",
+            "builder": "Network(target,master,modes=(mode,)); heads[mode].load_state_dict(checkpoint[delta_state])",
+            "mode": "coupled",
+            "parent_recipe": "results\\deep_learning\\champion_route_v28_20260929\\CURRENT_RECIPE.json",
+            "retained_v28_checkpoint": "outputs\\pure_dl_champion_route_v28_SW_fold5\\conditional\\model_best.pt"
+          }
+        ],
+        "source_preprocessing": "results/deep_learning/champion_scaling_v21_20260928/data_manifest.json",
+        "amplitude_metadata": "results/deep_learning/feature_structure_v20_20260928/feature_manifest.json",
+        "reference_recipe": "results\\deep_learning\\mechanism_checks_v31_20260929\\CURRENT_RECIPE.json",
+        "original_fifth_development_selection": true,
+        "complete_five_folds": false,
+        "remaining_folds_started": false,
+        "old_delivery_unchanged": true
+      }
+    }
+  ],
+  "cleanup_completed": true,
+  "deleted_files": 4,
+  "deleted_bytes": 3481960
+}

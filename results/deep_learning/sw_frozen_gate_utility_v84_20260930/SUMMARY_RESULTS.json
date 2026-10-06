@@ -1,0 +1,10 @@
+{
+  "project": "sw_frozen_gate_utility_v84_20260930",
+  "scope": "obsolete-study",
+  "weights_retained": false,
+  "cleanup": "Obsolete artifacts removed by explicit user request. These are historical scores, not newly verified training.",
+  "results": [],
+  "cleanup_completed": true,
+  "deleted_files": 1,
+  "deleted_bytes": 3000
+}

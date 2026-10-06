@@ -1,0 +1,49 @@
+{
+  "scores": {
+    "POR": 77.92638076072386,
+    "PERM": 89.40556485691894,
+    "SW": 74.16893619710333,
+    "TOTAL": 80.62898959712496
+  },
+  "screening_fold": 5,
+  "validation_rows": 144665,
+  "complete_five_folds": false,
+  "remaining_folds_started": false,
+  "total_training_stages": 6,
+  "added_head_stages": {
+    "POR": 0,
+    "PERM": 0,
+    "SW": 1
+  },
+  "source_stage_counted": true,
+  "gain_vs104_SW": 0.04718336894575259,
+  "gain_vs211_SW": 0.021313574476266695,
+  "learned_gain_vs_initial": 0.04718350733456589,
+  "checkpoint_sha256": "847080d3aa45c1ebc75705b908a2b1c5650263f7d38f275f660cfd7aa358e751",
+  "report": {
+    "stage": "permuted",
+    "target": "SW",
+    "target_score": 74.16893619710333,
+    "initial_score": 74.12175268976877,
+    "against_initial": 0.04718350733456589,
+    "against_v97_target": 0.026756292436630247,
+    "best_epoch": 13,
+    "stopped_epoch": 27,
+    "validation_rows": 144665,
+    "predictions_reproduced_exactly": true,
+    "frozen_parameters_exact": true,
+    "gradient_groups": {
+      "SW_new_raw_feature_backbone": 0.08829021453857422,
+      "SW_direct_categorical_readout": 0.06897851079702377,
+      "SW_new_state_readout": 0.006067933514714241,
+      "SW_new_raw_well_condition": 0.00599176250398159,
+      "SW_joint_own_latent_early_fusion": 0.007024035323411226,
+      "SW_joint_latent_morphology_backbone": 0.011878637596964836,
+      "SW_dynamic_cross_spectrum_backbone": 0.0040134829469025135
+    },
+    "seconds": 246.76499830000103,
+    "peak_MiB": 1800.099609375,
+    "complete_five_folds": false,
+    "early_terminated": false
+  }
+}

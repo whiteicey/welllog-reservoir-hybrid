@@ -1,0 +1,1 @@
+MaintainPROJECTS/README. Fixedfold5/ninecurves/Q/score/80-14/normalGPUmax2. Original154frozen; onePERMphase newmemoryorMLP+mass jointly. Memorytokens puretrainableparameters, no example/labelretrieval/teacher/pretrained. No repairweights/heldoutfit/otherfolds below808. Keepcurrent264positive/default5/delivery.

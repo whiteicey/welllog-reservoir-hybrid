@@ -1,0 +1,25 @@
+{
+  "staggered_arms": true,
+  "arms": {
+    "mix": {
+      "process_creation_utc_seconds": 1790868836.818,
+      "pid": 45516
+    },
+    "tilt": {
+      "process_creation_utc_seconds": 1790868895.729,
+      "pid": 55248
+    }
+  },
+  "excludes_code_preparation": true,
+  "pair_wallclock_pending": false,
+  "maximum_GPU_jobs": 2,
+  "concurrent": true,
+  "overlap_route": "v274alpha25",
+  "includes_startup_model_data_initial_eval": true,
+  "pair_wallclock_seconds": 461.8264129161835,
+  "individual_seconds": {
+    "mix": 454.2949586000177,
+    "tilt": 214.1242837999598
+  },
+  "serial_equal_work_not_measured": true
+}

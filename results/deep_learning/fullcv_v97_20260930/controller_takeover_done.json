@@ -1,0 +1,30 @@
+{
+  "recorded_at": "2026-09-30T20:32:17.157253+08:00",
+  "old_controller_terminated": true,
+  "training_workers_adopted": [
+    {
+      "fold": 2,
+      "role": "stage",
+      "stage": "sw_utility",
+      "action": null,
+      "label": "fold2_sw_utility",
+      "out": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_fullcv_v97\\fold_2\\sw_utility",
+      "expected": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_fullcv_v97\\fold_2\\sw_utility\\report.json",
+      "command": [
+        "C:\\Users\\z5364\\.conda\\envs\\normal\\python.exe",
+        "-u",
+        "D:\\match_predict\\welllog-reservoir-hybrid\\experiments\\pure_dl\\train_stage_fullcv_v97.py",
+        "--fold",
+        "2",
+        "--stage",
+        "sw_utility"
+      ],
+      "gpu": true,
+      "started_at": null,
+      "pid": 63460,
+      "creation_time": 1790771517.3751576,
+      "adopted": true
+    }
+  ],
+  "training_termination_requested": false
+}

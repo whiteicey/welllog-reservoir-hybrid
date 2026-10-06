@@ -1,0 +1,16 @@
+{
+  "observed_at": "2026-09-29T10:14:04.842215+08:00",
+  "current_training_jobs": [],
+  "training_failures": [],
+  "all_six_complete": true,
+  "new_full_disk_replayed": [
+    "POR",
+    "PERM",
+    "SW"
+  ],
+  "atlas_checked": true,
+  "annotation_entrypoint": "docs/deep_learning/atlas/curate_split_route_v29.py",
+  "original_curate_py_unchanged": true,
+  "old_trainers_and_models_unchanged": true,
+  "note": "One typo in the new, not-yet-executed curation draft was removed before execution; no training error or restart."
+}

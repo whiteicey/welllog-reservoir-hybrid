@@ -1,0 +1,33 @@
+{
+  "created_at": "2026-09-30T23:57:55.843626+08:00",
+  "total_training_stages": 5,
+  "stage_order": [
+    "original_source_pretrain",
+    "combined_por",
+    "combined_perm",
+    "sw_joint_from_random",
+    "sw_density"
+  ],
+  "source_checkpoint": "outputs\\pure_dl_paired_local_context_router80_sequence\\fold_5.pt",
+  "source_sha256": "45a09476e3126820688420579c100c86e0e4f45df335904380a298cf5f66b9a9",
+  "source_best_epoch": 52,
+  "source_training_reused": true,
+  "source_stage_counted": true,
+  "downstream_trained_weight_reuse": false,
+  "original_fold": 5,
+  "seed": 20261010,
+  "epochs": 80,
+  "patience": 18,
+  "minimum_epochs": 10,
+  "batch_size": 64,
+  "steps": 64,
+  "screening_threshold": 80.8,
+  "reference_fold5": 80.50419742447689,
+  "reference_full_oof": 81.89101929722543,
+  "amplitude_manifest_sha256": "718220a387d49566bec4dd309bc2f73bb8ba09b3a81127765859c06f2cef462e",
+  "remaining_folds_started": false,
+  "preparation_seconds": 7.366723099985393,
+  "quality": "unchanged original fold5 training-only Q50",
+  "hypothesis": "jointly train useful readout, side-feature and route corrections; train complete final SW architecture directly without repeated reset/warmup chains",
+  "timing": "record source pretraining cost separately; historical source reuse is not a free training stage or an end-to-end speedup"
+}

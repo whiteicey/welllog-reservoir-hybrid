@@ -1,0 +1,47 @@
+{
+  "live": false,
+  "state": {
+    "status": "complete",
+    "pid": 22664,
+    "stage": "point",
+    "target": "PERM",
+    "target_score": 89.5155547932572,
+    "initial_score": 89.4055666268939,
+    "against_initial": 0.10998816636329423,
+    "against_v97_target": 0.1188307438913796,
+    "best_epoch": 5,
+    "stopped_epoch": 19,
+    "validation_rows": 144665,
+    "predictions_reproduced_exactly": true,
+    "frozen_parameters_exact": true,
+    "gradient_groups": {
+      "PERM_sparse_reacquisition_body": 0.04737602174282074,
+      "PERM_direct_categorical_readout": 0.029844988137483597
+    },
+    "seconds": 231.1089074999909,
+    "peak_MiB": 788.69775390625,
+    "complete_five_folds": false,
+    "early_terminated": false
+  },
+  "report": {
+    "stage": "point",
+    "target": "PERM",
+    "target_score": 89.5155547932572,
+    "initial_score": 89.4055666268939,
+    "against_initial": 0.10998816636329423,
+    "against_v97_target": 0.1188307438913796,
+    "best_epoch": 5,
+    "stopped_epoch": 19,
+    "validation_rows": 144665,
+    "predictions_reproduced_exactly": true,
+    "frozen_parameters_exact": true,
+    "gradient_groups": {
+      "PERM_sparse_reacquisition_body": 0.04737602174282074,
+      "PERM_direct_categorical_readout": 0.029844988137483597
+    },
+    "seconds": 231.1089074999909,
+    "peak_MiB": 788.69775390625,
+    "complete_five_folds": false,
+    "early_terminated": false
+  }
+}

@@ -1,0 +1,1 @@
+维护PROJECTS/README四项/EXPLORATIONS/图谱。固定第五折/9曲线/Q50/ownPERM/80-14/max2GPU，只改采样，同174结构/初始化/loss/SAM，不加载174训练头，不改已交付包，全方法总5阶段，原子last/显式恢复，不启自动队列补折。

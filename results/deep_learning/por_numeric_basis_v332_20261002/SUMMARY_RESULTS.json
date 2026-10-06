@@ -1,0 +1,111 @@
+{
+  "project": "por_numeric_basis_v332_20261002",
+  "scope": "obsolete-study",
+  "weights_retained": false,
+  "cleanup": "Obsolete artifacts removed by explicit user request. These are historical scores, not newly verified training.",
+  "results": [
+    {
+      "source": "PAIRED_FINAL.json",
+      "result": {
+        "arms": {
+          "cumulative": {
+            "report": {
+              "stage": "cumulative",
+              "target": "POR",
+              "target_score": 78.0224639221774,
+              "initial_score": 77.92638076072386,
+              "against_initial": 0.09608316145353513,
+              "against_v97_target": 0.4705271202923882,
+              "best_epoch": 6,
+              "stopped_epoch": 20,
+              "validation_rows": 144665,
+              "predictions_reproduced_exactly": true,
+              "frozen_parameters_exact": true,
+              "seconds": 513.9571823000442,
+              "peak_MiB": 1819.07080078125,
+              "complete_five_folds": false,
+              "early_terminated": false
+            },
+            "strata": {
+              "default": 97.43209300846783,
+              "continuous": 41.618027814697186
+            },
+            "numeric_projection_norm": {
+              "curve_interaction.numeric_basis.projection.weight": 0.7121869325637817
+            },
+            "whole_vs302": -0.008088871967245836,
+            "CONT_vs302": -0.057052092374213714,
+            "stopped_before27": true,
+            "timing": {
+              "includes": "prep inputbasisstats initial training bestrestore",
+              "terminal": true,
+              "pid": 42448,
+              "excludes": "implementation CPUfinalization",
+              "concurrent_gpu_tasks_at_launch": 2,
+              "started_epoch": 1790895695.212,
+              "individual_seconds": 513.9571823000442,
+              "peak_MiB": 1819.07080078125,
+              "terminal_epoch": 1790896214.771597,
+              "process_creation_to_terminal_seconds": 519.5595970153809
+            },
+            "independent_disk_reload": false
+          },
+          "rbf": {
+            "report": {
+              "stage": "rbf",
+              "target": "POR",
+              "target_score": 78.02029960381482,
+              "initial_score": 77.92638076072386,
+              "against_initial": 0.09391884309096099,
+              "against_v97_target": 0.46836280192981405,
+              "best_epoch": 6,
+              "stopped_epoch": 20,
+              "validation_rows": 144665,
+              "predictions_reproduced_exactly": true,
+              "frozen_parameters_exact": true,
+              "seconds": 515.1429760999745,
+              "peak_MiB": 1819.07080078125,
+              "complete_five_folds": false,
+              "early_terminated": false
+            },
+            "strata": {
+              "default": 97.43421261803576,
+              "continuous": 41.60782861942168
+            },
+            "numeric_projection_norm": {
+              "curve_interaction.numeric_basis.projection.weight": 0.7824239134788513
+            },
+            "whole_vs302": -0.010253190329819972,
+            "CONT_vs302": -0.067251287649718,
+            "stopped_before27": true,
+            "timing": {
+              "includes": "prep inputbasisstats initial training bestrestore",
+              "terminal": true,
+              "pid": 76224,
+              "excludes": "implementation CPUfinalization",
+              "concurrent_gpu_tasks_at_launch": 1,
+              "started_epoch": 1790895694.046,
+              "individual_seconds": 515.1429760999745,
+              "peak_MiB": 1819.07080078125,
+              "terminal_epoch": 1790896214.7510204,
+              "process_creation_to_terminal_seconds": 520.7050204277039
+            },
+            "independent_disk_reload": false
+          }
+        },
+        "rbf_minus_cumulative_whole": -0.002164318362574136,
+        "rbf_minus_cumulative_CONT": -0.01019919527550428,
+        "comparison_limits": "Same76848 parameters/zero residual/centers/spacing, Gaussian versus cumulative basis families differ; parent bridge delays numeric gradient. Training-input statistics only, constant protection fixed. Historical302 not concurrent repeat, not causal equal capacity or robustness claim.",
+        "pair_wall_seconds": 520.7255969047546,
+        "stagger_seconds": 1.1659998893737793,
+        "adopted": false,
+        "screening_fold": 5,
+        "complete_five_folds": false,
+        "remaining_folds_started": false
+      }
+    }
+  ],
+  "cleanup_completed": true,
+  "deleted_files": 15,
+  "deleted_bytes": 6977854
+}

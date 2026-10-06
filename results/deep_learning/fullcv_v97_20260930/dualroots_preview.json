@@ -1,0 +1,100 @@
+{
+  "old_controller": {
+    "pid": 79892,
+    "status": "running",
+    "updated_at": "2026-09-30T21:04:41.546958+08:00",
+    "maximum_gpu_jobs": 2,
+    "maximum_SW_stages": 1,
+    "execution": "main stages serial; next-fold root pretraining overlaps",
+    "current": "fold3_root",
+    "active_jobs": [
+      {
+        "fold": 3,
+        "role": "root",
+        "stage": null,
+        "action": null,
+        "label": "fold3_root",
+        "out": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_fullcv_v97\\fold_3\\root",
+        "expected": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_fullcv_v97\\fold_3\\root\\fold_3_report.json",
+        "command": [
+          "C:\\Users\\z5364\\.conda\\envs\\normal\\python.exe",
+          "-u",
+          "D:\\match_predict\\welllog-reservoir-hybrid\\experiments\\pure_dl\\train_root_fullcv_v97.py",
+          "--fold",
+          "3",
+          "--out",
+          "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_fullcv_v97\\fold_3\\root",
+          "--learning-rate",
+          ".0006",
+          "--schedule",
+          "cosine"
+        ],
+        "gpu": true,
+        "started_at": "2026-09-30T20:35:15.588968+08:00",
+        "pid": 67784,
+        "creation_time": 1790771715.5825324,
+        "adopted": false
+      }
+    ],
+    "waiting_reason": "worker still running or conservative GPU admission"
+  },
+  "live_workers": [
+    {
+      "fold": 3,
+      "role": "root",
+      "stage": null,
+      "action": null,
+      "label": "fold3_root",
+      "out": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_fullcv_v97\\fold_3\\root",
+      "expected": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_fullcv_v97\\fold_3\\root\\fold_3_report.json",
+      "command": [
+        "C:\\Users\\z5364\\.conda\\envs\\normal\\python.exe",
+        "-u",
+        "D:\\match_predict\\welllog-reservoir-hybrid\\experiments\\pure_dl\\train_root_fullcv_v97.py",
+        "--fold",
+        "3",
+        "--out",
+        "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_fullcv_v97\\fold_3\\root",
+        "--learning-rate",
+        ".0006",
+        "--schedule",
+        "cosine"
+      ],
+      "gpu": true,
+      "started_at": null,
+      "pid": 67784,
+      "creation_time": 1790771715.5825324,
+      "adopted": true
+    }
+  ],
+  "next_task": {
+    "fold": 3,
+    "role": "root",
+    "stage": null,
+    "action": null,
+    "label": "fold3_root",
+    "out": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_fullcv_v97\\fold_3\\root",
+    "expected": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_fullcv_v97\\fold_3\\root\\fold_3_report.json",
+    "command": [
+      "C:\\Users\\z5364\\.conda\\envs\\normal\\python.exe",
+      "-u",
+      "D:\\match_predict\\welllog-reservoir-hybrid\\experiments\\pure_dl\\train_root_fullcv_v97.py",
+      "--fold",
+      "3",
+      "--out",
+      "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_fullcv_v97\\fold_3\\root",
+      "--learning-rate",
+      ".0006",
+      "--schedule",
+      "cosine"
+    ],
+    "gpu": true,
+    "started_at": null
+  },
+  "free_gpu_gib": 6.076171875,
+  "maximum_gpu_workers": 2,
+  "maximum_SW_stages": 1,
+  "prefetch_root_admission_gib": 6.8,
+  "main_stage_admission_gib": 4.0,
+  "unchanged_training_source_manifest": true
+}

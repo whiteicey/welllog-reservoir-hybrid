@@ -1,0 +1,1 @@
+Originalfold5 only, original9curves/Q/scoring/80-14/b64/64steps normalGPU max2. Newencoder/readout jointtrain fromoriginal154 only; no274weights/noextraPERMchain. Maintain PROJECTS/README/EXPLORATIONS/atlas. Nootherfolds before strict80.8+gain.

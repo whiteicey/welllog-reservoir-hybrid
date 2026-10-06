@@ -1,0 +1,109 @@
+{
+  "scores": {
+    "POR": 77.55181337141987,
+    "PERM": 89.37839421114361,
+    "SW": 74.12175282815758,
+    "TOTAL": 80.49059547518138
+  },
+  "total_training_stages": 5,
+  "source_stage_counted": true,
+  "dependencies": [
+    "original source",
+    "v113 forward",
+    "v125 fixed",
+    "v100 PERM",
+    "v104 SW"
+  ],
+  "POR": {
+    "checkpoint": "outputs\\pure_dl_compact_por_family_gate_v125_fold5\\fixed\\model_best.pt",
+    "sha256": "38a302f3de0f073f605801dbd3a2a21c70e72dda4a02189657d819efdac45272",
+    "module": "compact_por_family_gate_v125",
+    "stage": "fixed"
+  },
+  "PERM": {
+    "checkpoint": "outputs/pure_dl_compact_v100_fold5/perm/model_best.pt"
+  },
+  "SW": {
+    "checkpoint": "outputs/pure_dl_compact_frequency_v104_fold5/local/model_best.pt"
+  },
+  "screening_fold": 5,
+  "complete_five_folds": false,
+  "strict_808_passed": false,
+  "strict_channel_gain_025": false,
+  "previous_recipe": {
+    "format": "compact_independent_target_recipe",
+    "scores": {
+      "POR": 77.54806949489308,
+      "PERM": 89.37839421114361,
+      "SW": 74.12175282815758,
+      "TOTAL": 80.48947231222334
+    },
+    "screening_fold": 5,
+    "complete_five_folds": false,
+    "strict_808_passed": false,
+    "source_pretraining_counted": true,
+    "total_training_stages": 5,
+    "source_checkpoint": "outputs/pure_dl_paired_local_context_router80_sequence/fold_5.pt",
+    "source_sha256": "45a09476e3126820688420579c100c86e0e4f45df335904380a298cf5f66b9a9",
+    "models": {
+      "POR": {
+        "checkpoint": "outputs\\pure_dl_compact_por_scale_v114_fold5\\location_only\\model_best.pt",
+        "module": "compact_por_scale_v114",
+        "mode": "location_only",
+        "density_family": "expert0 first8 Student-t3; expert1 next8 Cauchy; fixed IQR scale conversion",
+        "checkpoint_sha256": "fe0770be4414f6bd0bb98249a04c9858ee91593eb1c11151377a7df614158c62",
+        "best_epoch": 13,
+        "stopped_epoch": 31,
+        "training_seconds": 201.47776360000717,
+        "target_score": 77.54806949489308
+      },
+      "PERM": {
+        "checkpoint": "outputs\\pure_dl_compact_v100_fold5\\perm\\model_best.pt",
+        "module": "compact_five_stage_v100",
+        "density_family": "Gaussian",
+        "checkpoint_sha256": "0fd70bd59b7f6ecec980e716ef46e128d3ce09c607c613b29b06e070d3de13af",
+        "best_epoch": 2,
+        "stopped_epoch": 20,
+        "training_seconds": 147.8027762999991,
+        "target_score": 89.37839421114361
+      },
+      "SW": {
+        "checkpoint": "outputs\\pure_dl_compact_frequency_v104_fold5\\local\\model_best.pt",
+        "module": "compact_frequency_v104",
+        "density_family": "Gaussian",
+        "checkpoint_sha256": "07e0b8df208fe93c8ac07dcf18924459c47afb12ec84b1b7306a0e6017f58670",
+        "best_epoch": 37,
+        "stopped_epoch": 55,
+        "training_seconds": 785.6777900999878,
+        "target_score": 74.12175282815758
+      }
+    },
+    "source_training_seconds": 1289.1515023999964,
+    "dependency_training_seconds_sum": 2947.4977877999772,
+    "timing_scope": "historical source/shared and observed candidate timing sum; candidate partially concurrent, not fresh serial pipeline wall",
+    "gain_vs_previous_compact": 0.0022845504462338795,
+    "gain_vs_old_18_stage": -0.01472511225354367,
+    "validation_rows": 144665,
+    "original_splits_labels_score_and_population": true,
+    "remaining_folds_started": false,
+    "old_delivery_unchanged": true,
+    "parent_POR_training_phase": {
+      "checkpoint": "outputs\\pure_dl_compact_por_mixed_family_v113_fold5\\t3_cauchy\\model_best.pt",
+      "module": "compact_por_mixed_family_v113",
+      "mode": "t3_cauchy",
+      "density_family": "expert0 first8 Student-t3; expert1 next8 Cauchy; fixed IQR scale conversion",
+      "checkpoint_sha256": "94f56aa91b2e56073aa496826f9666f269b35e88545723b9d22d7aba2e12673d",
+      "best_epoch": 69,
+      "stopped_epoch": 80,
+      "training_seconds": 523.3879553999868,
+      "target_score": 77.54045432673898
+    },
+    "dependency_stages": [
+      "original_source",
+      "v113_initial_POR",
+      "v114_refinement_location_only",
+      "v100_PERM",
+      "v104_SW"
+    ]
+  }
+}

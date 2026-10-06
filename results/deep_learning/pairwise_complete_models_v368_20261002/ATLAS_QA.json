@@ -1,0 +1,31 @@
+{
+  "scope": [
+    "per_head_seed_weights_v365_20261002",
+    "pairwise_complete_models_v368_20261002",
+    "pure_dl_complete_seeds_v362_fold5/seed_20261010",
+    "pure_dl_complete_seeds_v362_fold5/seed_20261011",
+    "pure_dl_complete_seeds_v362_fold5/seed_20261012",
+    "pure_dl_complete_seeds_v362_fold5/seed_20261013"
+  ],
+  "nodes": 6,
+  "edges": 5,
+  "finite": true,
+  "backwards": 0,
+  "status": "diagnostic",
+  "primary": {
+    "scope": "第五折 · 配对与权重调参诊断",
+    "value": 80.86345755738155,
+    "scores": {
+      "POR": 78.23303953551347,
+      "PERM": 89.74367648664987,
+      "SW": 74.23788264685729,
+      "TOTAL": 80.86345755738155
+    },
+    "source": "results/deep_learning/pairwise_complete_models_v368_20261002/FINAL.json",
+    "kind": "diagnostic",
+    "fold": 5
+  },
+  "details": "验证调参诊断\n10对模型原生分布融合\npairwise_complete_models_v368_20261002\n第五折 · 配对与权重调参诊断\n80.8635\nPOR 78.2330 · PERM 89.7437 · SW 74.2379\n探索重点\n\n10 native probability-mixture pairs of complete eight-stage models; original plus seeds20261010/11/12, additionally seed20261013 when completed during evaluation. Per-head fixed ratios on 0:0.01:1; one ratio for all rows, ties prefer greater A weight. Reuse original+seed10 verified grid; native forwards shared for fresh pairs. No extra training stages; 16 historical stages per pair. Seed14 incomplete and excluded.\n\n结果怎么理解\n\n10 pairs completed; best original__seed_20261013 TOTAL80.863457557382, strict>80.74=True. Native disk replays/endpoints exact,144665 rows covered once, actual three-head assembly. Same fifth chosen pair/ratios; no independent generalization/fullOOF or automatic adoption. Training continues.\n\n追溯这条路线\n在图中定位\n上游 5 · 下游 0\n← v365 user-authorized per-head fixed probability ratios\ncomparison · Extend the verified fixed per-head distribution-weight grid to all six pairs of four complete models.\n来源：docs/deep_learning/EXPERIMENTS.md\n← v362 full eight-stage seed 20261010 completed\n融合输入 · Completed native eight-stage model supplies predictions, no row-wise selection.\n来源：docs/deep_learning/EXPERIMENTS.md\n← v362 seed 20261011 8of8\n融合输入 · Completed native eight-stage model supplies predictions, no row-wise selection.\n来源：docs/deep_learning/EXPERIMENTS.md\n← v362 seed 20261012 8of8\n融合输入 · Completed native eight-stage model supplies predictions, no row-wise selection.\n来源：docs/deep_learning/EXPERIMENTS.md\n← v362 seed 20261013 8of8\n融合输入 · Completed native eight-stage model supplies predictions, no row-wise selection.\n来源：docs/deep_learning/EXPERIMENTS.md\n来源与记录\n↗ results/deep_learning/pairwise_complete_models_v368_20261002/README.md\n↗ results/deep_learning/pairwise_complete_models_v368_20261002/PLAN.json\n↗ results/deep_learning/pairwise_complete_models_v368_20261002/FINAL.json\n↗ results/deep_learning/pairwise_complete_models_v368_20261002/RESULTS.md\n原始结论摘录\n留存配置（部分旧报告会继承父配置）",
+  "page_errors": [],
+  "scope_limit": "Only the six affected nodes/five edges; no whole legacy-atlas UI claim."
+}

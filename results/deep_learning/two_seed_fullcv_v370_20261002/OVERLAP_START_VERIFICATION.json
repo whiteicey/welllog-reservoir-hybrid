@@ -1,0 +1,47 @@
+{
+  "observed_epoch": 1790928309.0645733,
+  "new_CPU_controller_pid": 86104,
+  "new_CPU_controller_cmdline": [
+    "C:\\Users\\z5364\\.conda\\envs\\normal\\python.exe",
+    "-u",
+    "experiments/pure_dl/run_overlap_pair_fullcv_v370r1.py"
+  ],
+  "old_CPU_controller_missing": true,
+  "GPU_child_pid": 27184,
+  "GPU_child_create_time_unchanged": true,
+  "GPU_child_cmdline_unchanged": true,
+  "current_jobs": [
+    {
+      "fold": 1,
+      "identity": "original",
+      "stage": "SOURCE",
+      "role": "SOURCE",
+      "dest": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_two_seed_fullcv_v370\\fold_1\\original\\SOURCE",
+      "expected": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_two_seed_fullcv_v370\\fold_1\\original\\SOURCE\\fold_1_report.json",
+      "command": [
+        "C:\\Users\\z5364\\.conda\\envs\\normal\\python.exe",
+        "-u",
+        "experiments/pure_dl/train_pair_fullcv_source_v370.py",
+        "--out",
+        "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_two_seed_fullcv_v370\\fold_1\\original\\SOURCE",
+        "--learning-rate",
+        ".0006",
+        "--schedule",
+        "cosine",
+        "--fold",
+        "1",
+        "--seed",
+        "20261006"
+      ],
+      "pid": 27184,
+      "create_time": 1790927179.8475451,
+      "started_epoch": 1790927179.8455744,
+      "attached": true,
+      "overlap_observed": false
+    }
+  ],
+  "model_training_code_changes": false,
+  "workers_restarted": 0,
+  "measured_throughput_gain": null,
+  "scope": "takeover verified; overlap not yet running because first source remains active"
+}

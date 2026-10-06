@@ -1,0 +1,102 @@
+{
+  "observed_epoch": 1790951853.3538613,
+  "fold": 4,
+  "rows": 144513,
+  "native_scans": {
+    "POR": {
+      "replay_exact": true,
+      "coverage_once": true,
+      "endpoints_exact": true,
+      "exit_code": 0,
+      "peak_MiB": 1362.94384765625,
+      "process_wall_seconds": 20.068691968917847
+    },
+    "PERM": {
+      "replay_exact": true,
+      "coverage_once": true,
+      "endpoints_exact": true,
+      "exit_code": 0,
+      "peak_MiB": 1166.9091796875,
+      "process_wall_seconds": 20.09113359451294
+    },
+    "SW": {
+      "replay_exact": true,
+      "coverage_once": true,
+      "endpoints_exact": true,
+      "exit_code": 0,
+      "peak_MiB": 877.146484375,
+      "process_wall_seconds": 20.057716369628906
+    }
+  },
+  "scan_serial_wall_seconds": 60.21754193305969,
+  "extra_training_stages": 0,
+  "two_complete8stage_models": true,
+  "native_standalone_arrays_exact_to_complete_models": true,
+  "fixed_weights_unchanged": true,
+  "scores": {
+    "fixed": {
+      "POR": 79.92732342144706,
+      "PERM": 91.46634043927916,
+      "SW": 74.74588877684619,
+      "TOTAL": 82.15247725207799
+    },
+    "diagnostic": {
+      "POR": 80.07835869745401,
+      "PERM": 91.46634406482754,
+      "SW": 74.81197793427448,
+      "TOTAL": 82.2209203089219
+    },
+    "standalone": {
+      "original": {
+        "POR": 79.49289205568876,
+        "PERM": 91.20591317052484,
+        "SW": 74.50542147402476,
+        "TOTAL": 81.84683474229898
+      },
+      "seed13": {
+        "POR": 79.83274986803075,
+        "PERM": 91.30387108958806,
+        "SW": 74.67464367240689,
+        "TOTAL": 82.04230512710745
+      }
+    }
+  },
+  "per_head_best_weights": {
+    "POR": {
+      "weight_original": 0.32,
+      "weight_seed13": 0.6799999999999999,
+      "score": 80.07835869745401,
+      "fixed_weight_score": 79.92732342144706
+    },
+    "PERM": {
+      "weight_original": 0.42,
+      "weight_seed13": 0.5800000000000001,
+      "score": 91.46634406482754,
+      "fixed_weight_score": 91.46634043927916
+    },
+    "SW": {
+      "weight_original": 0.45,
+      "weight_seed13": 0.55,
+      "score": 74.81197793427448,
+      "fixed_weight_score": 74.74588877684619
+    }
+  },
+  "frozen_code_hash_checks": {
+    "experiments/pure_dl/fullcv_pair_context_v370.py": true,
+    "experiments/pure_dl/pair_fullcv_models_v370.py": true,
+    "experiments/pure_dl/train_pair_fullcv_source_v370.py": true,
+    "experiments/pure_dl/train_pair_fullcv_stage_v370.py": true,
+    "experiments/pure_dl/evaluate_pair_fullcv_v370.py": true,
+    "experiments/pure_dl/record_pair_fullcv_v370.py": true,
+    "experiments/pure_dl/run_pair_fullcv_v370.py": true
+  },
+  "actual_current_jobs": [],
+  "maximum_future_GPU_jobs": 1,
+  "full_OOF_report_present": true,
+  "remaining_paired_folds": [],
+  "overall_scope": "This is one completed paired fold; final OOF requires a separate canonical coverage and score audit",
+  "diagnostic_scope": "Fold labels select per-head ratios; tuning diagnostic only",
+  "fixed_scope": "Fifth-selected pair/ratios applied unchanged; disclose fifth selection",
+  "strata_analysis_source": "D:\\match_predict\\welllog-reservoir-hybrid\\results\\deep_learning\\two_seed_fullcv_v370_20261002\\fold_4\\FUSION_STRATA.json",
+  "CPU_only": true
+}

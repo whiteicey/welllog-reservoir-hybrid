@@ -1,0 +1,126 @@
+{
+  "project": "sw_ordinal_chain_v311_20261002",
+  "scope": "obsolete-study",
+  "weights_retained": false,
+  "cleanup": "Obsolete artifacts removed by explicit user request. These are historical scores, not newly verified training.",
+  "results": [
+    {
+      "source": "PAIRED_FINAL.json",
+      "result": {
+        "reports": {
+          "ordered": {
+            "stage": "ordered",
+            "target": "SW",
+            "target_score": 74.14793432961145,
+            "initial_score": 74.12175268976877,
+            "against_initial": 0.026181639842675963,
+            "against_v97_target": 0.005754424944740322,
+            "best_epoch": 6,
+            "stopped_epoch": 20,
+            "validation_rows": 144665,
+            "predictions_reproduced_exactly": true,
+            "frozen_parameters_exact": true,
+            "seconds": 457.3773797000176,
+            "peak_MiB": 1484.1552734375,
+            "complete_five_folds": false,
+            "early_terminated": false
+          },
+          "shuffled": {
+            "stage": "shuffled",
+            "target": "SW",
+            "target_score": 74.14906352248619,
+            "initial_score": 74.12175268976877,
+            "against_initial": 0.02731083271741852,
+            "against_v97_target": 0.006883617819482879,
+            "best_epoch": 17,
+            "stopped_epoch": 31,
+            "validation_rows": 144665,
+            "predictions_reproduced_exactly": true,
+            "frozen_parameters_exact": true,
+            "seconds": 636.4363944999641,
+            "peak_MiB": 1484.1552734375,
+            "complete_five_folds": false,
+            "early_terminated": false
+          }
+        },
+        "strata": {
+          "ordered": {
+            "default": 98.87157026578004,
+            "continuous": 17.360031882823368
+          },
+          "shuffled": {
+            "default": 98.8355981992487,
+            "continuous": 17.44637923314177
+          }
+        },
+        "best_readout_norms": {
+          "ordered": {
+            "readout.linear.weight": 3.2624106407165527,
+            "readout.linear.bias": 74.44122314453125
+          },
+          "shuffled": {
+            "readout.linear.weight": 4.502972602844238,
+            "readout.linear.bias": 74.1125717163086
+          }
+        },
+        "ordered_minus_shuffled": -0.0011291928747425573,
+        "ordered_minus_shuffled_CONT": -0.0863473503184018,
+        "gain_vs_retained297": {
+          "ordered": -0.01209589340830064,
+          "shuffled": -0.010966700533558082
+        },
+        "CONT_vs_retained297": {
+          "ordered": -0.14272088452381482,
+          "shuffled": -0.05637353420541302
+        },
+        "CONT_vs_strong252": {
+          "ordered": -0.5248362570868039,
+          "shuffled": -0.43848890676840213
+        },
+        "timing": {
+          "maximum_parallelism": 2,
+          "overlap_note": "ordered starts during last2epochs of310channel",
+          "gain": "unproved",
+          "jobs": [
+            {
+              "start_epoch": 1790882244.504,
+              "started_UTC": "2026-10-01T19:17:24.5046882+00:00",
+              "pid": 90368,
+              "stage": "ordered"
+            },
+            {
+              "start_epoch": 1790882292.717,
+              "started_UTC": "2026-10-01T19:18:12.7170976+00:00",
+              "pid": 82616,
+              "stage": "shuffled"
+            }
+          ],
+          "started_UTC": "2026-10-01T19:17:24.5046882+00:00",
+          "status": "pair_launched",
+          "started_epoch": 1790882244.504,
+          "terminal": true,
+          "same_work_pair_wall_seconds": 689.6965124607086,
+          "individual_seconds": {
+            "ordered": 457.3773797000176,
+            "shuffled": 636.4363944999641
+          },
+          "peak_MiB": {
+            "ordered": 1484.1552734375,
+            "shuffled": 1484.1552734375
+          },
+          "interpretation": "Staggered launches48.213seconds apart; overlap against310/312 varies. Wall includes launch gap/environment work throughlastreport, excludes preparation beforefirstlaunch/CPUfinalization after. Not isolatedspeedcomparison."
+        },
+        "screening_fold": 5,
+        "complete_five_folds": false,
+        "remaining_folds_started": false,
+        "independent_disk_reload": false,
+        "automatic_adoption": false,
+        "adopted": false,
+        "closure": "Ordered whole-.00112919/CONT-.08634735 versus shuffled; both below297/252; close this255-chain configuration, no reverse/chain-length/bias/threshold-loss grid."
+      }
+    }
+  ],
+  "cleanup_completed": true,
+  "deleted_files": 8,
+  "deleted_bytes": 6954140
+}

@@ -1,0 +1,1 @@
+Maintain PROJECTS/README fourfields. Original104only, no351trainedrepairs, jointfreshencoder/readout92841,oneSWphase/max8,originalsplit/Q/scoring80pat14/max2. No automaticqueue/otherfolds/no preflight/review. Freeze launched sources.

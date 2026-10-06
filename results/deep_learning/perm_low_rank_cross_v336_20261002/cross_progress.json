@@ -1,0 +1,51 @@
+{
+  "live": false,
+  "state": {
+    "status": "complete",
+    "pid": 80612,
+    "stage": "cross",
+    "target": "PERM",
+    "target_score": 89.51838939879066,
+    "initial_score": 89.4055666268939,
+    "against_initial": 0.11282277189675938,
+    "against_v97_target": 0.12166534942484475,
+    "best_epoch": 5,
+    "stopped_epoch": 19,
+    "validation_rows": 144665,
+    "predictions_reproduced_exactly": true,
+    "frozen_parameters_exact": true,
+    "gradient_groups": {
+      "PERM_sparse_reacquisition_body": 0.047377388924360275,
+      "PERM_direct_categorical_readout": 0.029844604432582855,
+      "PERM_joint_body_readout_shape": 0.0035367682576179504,
+      "PERM_joint_low_rank_feature_adapter": 0.0013840565225109458
+    },
+    "seconds": 335.84209619998,
+    "peak_MiB": 896.34375,
+    "complete_five_folds": false,
+    "early_terminated": false
+  },
+  "report": {
+    "stage": "cross",
+    "target": "PERM",
+    "target_score": 89.51838939879066,
+    "initial_score": 89.4055666268939,
+    "against_initial": 0.11282277189675938,
+    "against_v97_target": 0.12166534942484475,
+    "best_epoch": 5,
+    "stopped_epoch": 19,
+    "validation_rows": 144665,
+    "predictions_reproduced_exactly": true,
+    "frozen_parameters_exact": true,
+    "gradient_groups": {
+      "PERM_sparse_reacquisition_body": 0.047377388924360275,
+      "PERM_direct_categorical_readout": 0.029844604432582855,
+      "PERM_joint_body_readout_shape": 0.0035367682576179504,
+      "PERM_joint_low_rank_feature_adapter": 0.0013840565225109458
+    },
+    "seconds": 335.84209619998,
+    "peak_MiB": 896.34375,
+    "complete_five_folds": false,
+    "early_terminated": false
+  }
+}

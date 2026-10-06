@@ -1,0 +1,11 @@
+{
+  "includes": "prep initial training bestrestore",
+  "terminal": true,
+  "pid": 42384,
+  "excludes": "implementation CPUfinalization",
+  "concurrent_gpu_tasks_at_launch": 1,
+  "started_epoch": 1790897374.031,
+  "individual_seconds": 715.3431125999778,
+  "peak_MiB": 2074.64794921875,
+  "process_creation_to_terminal_seconds": 720.7097055912018
+}

@@ -1,0 +1,147 @@
+{
+  "project": "perm_path_residual_v358_20261002",
+  "scope": "obsolete-study",
+  "weights_retained": false,
+  "cleanup": "Obsolete artifacts removed by explicit user request. These are historical scores, not newly verified training.",
+  "results": [
+    {
+      "source": "PAIRED_FINAL.json",
+      "result": {
+        "arms": {
+          "area": {
+            "report": {
+              "stage": "area",
+              "target": "PERM",
+              "target_score": 89.51746356358993,
+              "initial_score": 89.4055666268939,
+              "against_initial": 0.11189693669602718,
+              "against_v97_target": 0.12073951422411255,
+              "best_epoch": 5,
+              "stopped_epoch": 15,
+              "validation_rows": 144665,
+              "predictions_reproduced_exactly": true,
+              "frozen_parameters_exact": true,
+              "effective_patience": 10,
+              "SOTA_broken": false,
+              "seconds": 120.20548730000155,
+              "peak_MiB": 903.2548828125,
+              "complete_five_folds": false,
+              "early_terminated": false
+            },
+            "strata": {
+              "default": 97.49114454381295,
+              "continuous": 74.01331830014448
+            },
+            "whole_vs336": -0.0009258352007321946,
+            "CONT_vs336": 0.0036812169474131906,
+            "CONT_vs_native154": -0.08359364367105115,
+            "diagnostic_eight_stage_scores": {
+              "POR": 78.04643071793232,
+              "PERM": 89.51746356358993,
+              "SW": 74.17361205223327,
+              "TOTAL": 80.7058056809178
+            },
+            "TOTAL_vs_retained351": -0.00032404232025839974,
+            "path_bridge_norms": {
+              "path_residual.bridge.weight": 0.6480087637901306,
+              "path_residual.bridge.bias": 0.3962525725364685
+            },
+            "timing": {
+              "includes": "preprocessing warmup training best restoration",
+              "terminal": true,
+              "pid": 63544,
+              "concurrency": "solo after357terminal",
+              "global_GPU_jobs_before": 0,
+              "started_epoch": 1790911381.056,
+              "individual_seconds": 120.20548730000155,
+              "peak_MiB": 903.2548828125,
+              "process_creation_to_terminal_seconds": 125.6289131641388
+            },
+            "adopted": false,
+            "screening_fold": 5,
+            "complete_five_folds": false,
+            "remaining_folds_started": false,
+            "independent_disk_reload": false,
+            "strict_808_passed": false,
+            "comparison_limits": "Same39162params/init area/variation but descriptor scales/order/functionclasses differ; historical33637386/pat14 vsnew10untilSOTAthen14/nonconcurrent; single seed whole-best strata/no CONToracle."
+          },
+          "variation": {
+            "report": {
+              "stage": "variation",
+              "target": "PERM",
+              "target_score": 89.51701907785088,
+              "initial_score": 89.4055666268939,
+              "against_initial": 0.11145245095697476,
+              "against_v97_target": 0.12029502848506013,
+              "best_epoch": 5,
+              "stopped_epoch": 15,
+              "validation_rows": 144665,
+              "predictions_reproduced_exactly": true,
+              "frozen_parameters_exact": true,
+              "effective_patience": 10,
+              "SOTA_broken": false,
+              "seconds": 112.8456646000268,
+              "peak_MiB": 903.9736328125,
+              "complete_five_folds": false,
+              "early_terminated": false
+            },
+            "strata": {
+              "default": 97.49121225791816,
+              "continuous": 74.01187788532252
+            },
+            "whole_vs336": -0.0013703209397846194,
+            "CONT_vs336": 0.002240802125456298,
+            "CONT_vs_native154": -0.08503405849300805,
+            "diagnostic_eight_stage_scores": {
+              "POR": 78.04643071793232,
+              "PERM": 89.51701907785088,
+              "SW": 74.17361205223327,
+              "TOTAL": 80.70565011090915
+            },
+            "TOTAL_vs_retained351": -0.00047961232891680083,
+            "path_bridge_norms": {
+              "path_residual.bridge.weight": 1.3488720655441284,
+              "path_residual.bridge.bias": 0.3962099254131317
+            },
+            "timing": {
+              "includes": "preprocessing warmup training best restoration",
+              "terminal": true,
+              "pid": 67172,
+              "concurrency": "solo after358area terminal",
+              "global_GPU_jobs_before": 0,
+              "started_epoch": 1790911584.899,
+              "individual_seconds": 112.8456646000268,
+              "peak_MiB": 903.9736328125,
+              "process_creation_to_terminal_seconds": 118.28027725219727
+            },
+            "adopted": false,
+            "screening_fold": 5,
+            "complete_five_folds": false,
+            "remaining_folds_started": false,
+            "independent_disk_reload": false,
+            "strict_808_passed": false,
+            "comparison_limits": "Same39162params/init area/variation but descriptor scales/order/functionclasses differ; historical33637386/pat14 vsnew10untilSOTAthen14/nonconcurrent; single seed whole-best strata/no CONToracle."
+          }
+        },
+        "area_minus_variation_whole": 0.00044448573905242483,
+        "area_minus_variation_CONT": 0.0014404148219568924,
+        "area_minus_variation_DEFAULT": -6.771410521366761e-05,
+        "adopted": false,
+        "reference_retained_TOTAL": 80.70612972323806,
+        "pair_wall_seconds": 322.1232771873474,
+        "launch_stagger_seconds": 203.84299993515015,
+        "serial": true,
+        "maximum_GPU_jobs": 2,
+        "complete_five_folds": false,
+        "remaining_folds_started": false,
+        "independent_disk_reload": false,
+        "mechanism_positive": true,
+        "status": "finite_local_positive_below_absolute_best",
+        "conclusion": "Both below retained336 whole; noadoption. Same39162params/init/pat10to14, actualbest5/stop15, descriptor scales/functions differ. Single-seed microdelta not robustness; preserve positive code lesson only if both whole/CONT pairedpositive; no window/LR/normalization grid."
+      }
+    }
+  ],
+  "cleanup_completed": true,
+  "deleted_files": 13,
+  "deleted_bytes": 6979605
+}

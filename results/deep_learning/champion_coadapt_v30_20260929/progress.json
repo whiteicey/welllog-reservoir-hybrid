@@ -1,0 +1,895 @@
+{
+  "observed_at": "2026-09-29T10:27:44.446133+08:00",
+  "rows": [
+    {
+      "target": "POR",
+      "id": "pure_dl_coadapt_v30_POR_fold5",
+      "state": {
+        "status": "complete",
+        "target": "POR",
+        "pid": 46016,
+        "modes": {
+          "route_only": {
+            "best": 77.54716852689732,
+            "best_epoch": 0,
+            "bad": 18,
+            "done": true,
+            "last_epoch": 18,
+            "stop_reason": "patience18"
+          },
+          "coadapt": {
+            "best": 77.55093183166899,
+            "best_epoch": 1,
+            "bad": 18,
+            "done": true,
+            "last_epoch": 19,
+            "stop_reason": "patience18"
+          }
+        },
+        "atlas_current_trial": false
+      },
+      "report": {
+        "target": "POR",
+        "factor": "location",
+        "screening_fold": 5,
+        "arms": [
+          {
+            "target": "POR",
+            "mode": "route_only",
+            "factor": "location",
+            "screening_fold": 5,
+            "target_score": 77.54716852689732,
+            "reference_replacement_total": 80.33508295432019,
+            "delta_reference_target": 0.0,
+            "best_epoch": 0,
+            "stopped_epoch": 18,
+            "stop_reason": "patience18",
+            "best_after_update": {
+              "epoch": 5,
+              "target_score": 77.54645051590227,
+              "reference_replacement_total": 80.33486755102167
+            },
+            "trainable_parameters": 30819,
+            "all144665_selected_predictions_restored_exactly": true,
+            "all_frozen_state_unchanged": true,
+            "gradient_scope": {
+              "input_gradient_norm": 0.001958001870661974,
+              "output_gradient_norm": 0.0046017961576581,
+              "frozen_gradients_none": true,
+              "target_only": "POR",
+              "second_step": true,
+              "parameter_group_gradient_norms": {
+                "retained_routes": 0.005001029931008816
+              }
+            },
+            "factor_scope": {
+              "mode": "route_only",
+              "unchanged_expert_factors": {
+                "expert0.gate": true,
+                "expert0.weight": true,
+                "expert0.location": true,
+                "expert0.scale": true,
+                "expert1.gate": true,
+                "expert1.weight": true,
+                "expert1.location": true,
+                "expert1.scale": true
+              },
+              "selected_factor_change_max": {},
+              "scope": "two fixed training windows; compared with retained v26 expert outputs, routes checked in frozen-state assertions"
+            },
+            "last_delta_parameter_change_L2": 0.42835767899091404,
+            "checkpoint": "outputs\\pure_dl_coadapt_v30_POR_fold5\\route_only\\model_best.pt",
+            "complete_five_folds": false,
+            "remaining_folds_started": false
+          },
+          {
+            "target": "POR",
+            "mode": "coadapt",
+            "factor": "location",
+            "screening_fold": 5,
+            "target_score": 77.55093183166899,
+            "reference_replacement_total": 80.33621194575169,
+            "delta_reference_target": 0.0037633047716667534,
+            "best_epoch": 1,
+            "stopped_epoch": 19,
+            "stop_reason": "patience18",
+            "best_after_update": {
+              "epoch": 1,
+              "target_score": 77.55093183166899,
+              "reference_replacement_total": 80.33621194575169
+            },
+            "trainable_parameters": 43635,
+            "all144665_selected_predictions_restored_exactly": true,
+            "all_frozen_state_unchanged": true,
+            "gradient_scope": {
+              "input_gradient_norm": 0.00195573759265244,
+              "output_gradient_norm": 0.0045897518284618855,
+              "frozen_gradients_none": true,
+              "target_only": "POR",
+              "second_step": true,
+              "parameter_group_gradient_norms": {
+                "retained_routes": 0.004989061038941145,
+                "retained_factor": 0.13583923876285553
+              }
+            },
+            "factor_scope": {
+              "mode": "coadapt",
+              "unchanged_expert_factors": {
+                "expert0.gate": true,
+                "expert0.weight": true,
+                "expert0.scale": true,
+                "expert1.gate": true,
+                "expert1.weight": true,
+                "expert1.scale": true
+              },
+              "selected_factor_change_max": {
+                "expert0.location": 0.01803256943821907,
+                "expert1.location": 0.013347506523132324
+              },
+              "scope": "two fixed training windows; compared with retained v26 expert outputs, routes checked in frozen-state assertions"
+            },
+            "last_delta_parameter_change_L2": 0.46830602160724344,
+            "checkpoint": "outputs\\pure_dl_coadapt_v30_POR_fold5\\coadapt\\model_best.pt",
+            "complete_five_folds": false,
+            "remaining_folds_started": false
+          }
+        ],
+        "reference_scores": {
+          "POR": 77.54716852689732,
+          "PERM": 89.39672404936582,
+          "SW": 73.6630827970656,
+          "TOTAL": 80.33508295432019
+        },
+        "seconds": 170.71866459999728,
+        "peak_allocated_MiB": 718.45458984375,
+        "epoch_timing": [
+          {
+            "epoch": 1,
+            "active_modes": [
+              "route_only",
+              "coadapt"
+            ],
+            "seconds": 8.946939399997063
+          },
+          {
+            "epoch": 2,
+            "active_modes": [
+              "route_only",
+              "coadapt"
+            ],
+            "seconds": 8.6866635999977
+          },
+          {
+            "epoch": 3,
+            "active_modes": [
+              "route_only",
+              "coadapt"
+            ],
+            "seconds": 8.790900500003772
+          },
+          {
+            "epoch": 4,
+            "active_modes": [
+              "route_only",
+              "coadapt"
+            ],
+            "seconds": 8.675561100004415
+          },
+          {
+            "epoch": 5,
+            "active_modes": [
+              "route_only",
+              "coadapt"
+            ],
+            "seconds": 8.611813499999698
+          },
+          {
+            "epoch": 6,
+            "active_modes": [
+              "route_only",
+              "coadapt"
+            ],
+            "seconds": 8.587294000004476
+          },
+          {
+            "epoch": 7,
+            "active_modes": [
+              "route_only",
+              "coadapt"
+            ],
+            "seconds": 8.561540200003947
+          },
+          {
+            "epoch": 8,
+            "active_modes": [
+              "route_only",
+              "coadapt"
+            ],
+            "seconds": 8.565780999997514
+          },
+          {
+            "epoch": 9,
+            "active_modes": [
+              "route_only",
+              "coadapt"
+            ],
+            "seconds": 8.62961300000461
+          },
+          {
+            "epoch": 10,
+            "active_modes": [
+              "route_only",
+              "coadapt"
+            ],
+            "seconds": 8.52345719999721
+          },
+          {
+            "epoch": 11,
+            "active_modes": [
+              "route_only",
+              "coadapt"
+            ],
+            "seconds": 8.502017300001171
+          },
+          {
+            "epoch": 12,
+            "active_modes": [
+              "route_only",
+              "coadapt"
+            ],
+            "seconds": 8.530804199996055
+          },
+          {
+            "epoch": 13,
+            "active_modes": [
+              "route_only",
+              "coadapt"
+            ],
+            "seconds": 8.56265600000188
+          },
+          {
+            "epoch": 14,
+            "active_modes": [
+              "route_only",
+              "coadapt"
+            ],
+            "seconds": 8.661651800000982
+          },
+          {
+            "epoch": 15,
+            "active_modes": [
+              "route_only",
+              "coadapt"
+            ],
+            "seconds": 8.51106570000411
+          },
+          {
+            "epoch": 16,
+            "active_modes": [
+              "route_only",
+              "coadapt"
+            ],
+            "seconds": 8.538399600001867
+          },
+          {
+            "epoch": 17,
+            "active_modes": [
+              "route_only",
+              "coadapt"
+            ],
+            "seconds": 8.40845889999764
+          },
+          {
+            "epoch": 18,
+            "active_modes": [
+              "route_only",
+              "coadapt"
+            ],
+            "seconds": 7.328747300001851
+          },
+          {
+            "epoch": 19,
+            "active_modes": [
+              "coadapt"
+            ],
+            "seconds": 5.602340000004915
+          }
+        ],
+        "finished_at": "2026-09-29T10:24:53.689733+08:00",
+        "complete_five_folds": false,
+        "remaining_folds_started": false
+      }
+    },
+    {
+      "target": "PERM",
+      "id": "pure_dl_coadapt_v30_PERM_fold5",
+      "state": {
+        "status": "complete",
+        "target": "PERM",
+        "pid": 15132,
+        "modes": {
+          "route_only": {
+            "best": 89.39672404936582,
+            "best_epoch": 0,
+            "bad": 18,
+            "done": true,
+            "last_epoch": 18,
+            "stop_reason": "patience18"
+          },
+          "coadapt": {
+            "best": 89.39672404936582,
+            "best_epoch": 0,
+            "bad": 18,
+            "done": true,
+            "last_epoch": 18,
+            "stop_reason": "patience18"
+          }
+        },
+        "atlas_current_trial": false
+      },
+      "report": {
+        "target": "PERM",
+        "factor": "gate",
+        "screening_fold": 5,
+        "arms": [
+          {
+            "target": "PERM",
+            "mode": "route_only",
+            "factor": "gate",
+            "screening_fold": 5,
+            "target_score": 89.39672404936582,
+            "reference_replacement_total": 80.33508295432019,
+            "delta_reference_target": 0.0,
+            "best_epoch": 0,
+            "stopped_epoch": 18,
+            "stop_reason": "patience18",
+            "best_after_update": {
+              "epoch": 1,
+              "target_score": 89.39438987835685,
+              "reference_replacement_total": 80.33426599446705
+            },
+            "trainable_parameters": 30819,
+            "all144665_selected_predictions_restored_exactly": true,
+            "all_frozen_state_unchanged": true,
+            "gradient_scope": {
+              "input_gradient_norm": 0.0017714659916236997,
+              "output_gradient_norm": 0.003830206347629428,
+              "frozen_gradients_none": true,
+              "target_only": "PERM",
+              "second_step": true,
+              "parameter_group_gradient_norms": {
+                "retained_routes": 0.004220020491629839
+              }
+            },
+            "factor_scope": {
+              "mode": "route_only",
+              "unchanged_expert_factors": {
+                "expert0.gate": true,
+                "expert0.weight": true,
+                "expert0.location": true,
+                "expert0.scale": true,
+                "expert1.gate": true,
+                "expert1.weight": true,
+                "expert1.location": true,
+                "expert1.scale": true
+              },
+              "selected_factor_change_max": {},
+              "scope": "two fixed training windows; compared with retained v26 expert outputs, routes checked in frozen-state assertions"
+            },
+            "last_delta_parameter_change_L2": 0.5415970430824694,
+            "checkpoint": "outputs\\pure_dl_coadapt_v30_PERM_fold5\\route_only\\model_best.pt",
+            "complete_five_folds": false,
+            "remaining_folds_started": false
+          },
+          {
+            "target": "PERM",
+            "mode": "coadapt",
+            "factor": "gate",
+            "screening_fold": 5,
+            "target_score": 89.39672404936582,
+            "reference_replacement_total": 80.33508295432019,
+            "delta_reference_target": 0.0,
+            "best_epoch": 0,
+            "stopped_epoch": 18,
+            "stop_reason": "patience18",
+            "best_after_update": {
+              "epoch": 1,
+              "target_score": 89.39494033976816,
+              "reference_replacement_total": 80.334458655961
+            },
+            "trainable_parameters": 43173,
+            "all144665_selected_predictions_restored_exactly": true,
+            "all_frozen_state_unchanged": true,
+            "gradient_scope": {
+              "input_gradient_norm": 0.0018052492523565888,
+              "output_gradient_norm": 0.005877038463950157,
+              "frozen_gradients_none": true,
+              "target_only": "PERM",
+              "second_step": true,
+              "parameter_group_gradient_norms": {
+                "retained_routes": 0.004220118280500174,
+                "retained_factor": 0.004470917861908674
+              }
+            },
+            "factor_scope": {
+              "mode": "coadapt",
+              "unchanged_expert_factors": {
+                "expert0.weight": true,
+                "expert0.location": true,
+                "expert0.scale": true,
+                "expert1.weight": true,
+                "expert1.location": true,
+                "expert1.scale": true
+              },
+              "selected_factor_change_max": {
+                "expert0.gate": 0.0,
+                "expert1.gate": 0.0
+              },
+              "scope": "two fixed training windows; compared with retained v26 expert outputs, routes checked in frozen-state assertions"
+            },
+            "last_delta_parameter_change_L2": 0.8318043170136468,
+            "checkpoint": "outputs\\pure_dl_coadapt_v30_PERM_fold5\\coadapt\\model_best.pt",
+            "complete_five_folds": false,
+            "remaining_folds_started": false
+          }
+        ],
+        "reference_scores": {
+          "POR": 77.54716852689732,
+          "PERM": 89.39672404936582,
+          "SW": 73.6630827970656,
+          "TOTAL": 80.33508295432019
+        },
+        "seconds": 153.8507716000022,
+        "peak_allocated_MiB": 717.8115234375,
+        "epoch_timing": [
+          {
+            "epoch": 1,
+            "active_modes": [
+              "route_only",
+              "coadapt"
+            ],
+            "seconds": 8.132864699997299
+          },
+          {
+            "epoch": 2,
+            "active_modes": [
+              "route_only",
+              "coadapt"
+            ],
+            "seconds": 7.985967699998582
+          },
+          {
+            "epoch": 3,
+            "active_modes": [
+              "route_only",
+              "coadapt"
+            ],
+            "seconds": 8.006683100000373
+          },
+          {
+            "epoch": 4,
+            "active_modes": [
+              "route_only",
+              "coadapt"
+            ],
+            "seconds": 7.940586299999268
+          },
+          {
+            "epoch": 5,
+            "active_modes": [
+              "route_only",
+              "coadapt"
+            ],
+            "seconds": 7.934991499998432
+          },
+          {
+            "epoch": 6,
+            "active_modes": [
+              "route_only",
+              "coadapt"
+            ],
+            "seconds": 7.914774400000169
+          },
+          {
+            "epoch": 7,
+            "active_modes": [
+              "route_only",
+              "coadapt"
+            ],
+            "seconds": 7.87691790000099
+          },
+          {
+            "epoch": 8,
+            "active_modes": [
+              "route_only",
+              "coadapt"
+            ],
+            "seconds": 7.938165499996103
+          },
+          {
+            "epoch": 9,
+            "active_modes": [
+              "route_only",
+              "coadapt"
+            ],
+            "seconds": 7.974139099998865
+          },
+          {
+            "epoch": 10,
+            "active_modes": [
+              "route_only",
+              "coadapt"
+            ],
+            "seconds": 7.947464199998649
+          },
+          {
+            "epoch": 11,
+            "active_modes": [
+              "route_only",
+              "coadapt"
+            ],
+            "seconds": 7.950100200003362
+          },
+          {
+            "epoch": 12,
+            "active_modes": [
+              "route_only",
+              "coadapt"
+            ],
+            "seconds": 7.880191999996896
+          },
+          {
+            "epoch": 13,
+            "active_modes": [
+              "route_only",
+              "coadapt"
+            ],
+            "seconds": 7.874243400001433
+          },
+          {
+            "epoch": 14,
+            "active_modes": [
+              "route_only",
+              "coadapt"
+            ],
+            "seconds": 7.912706999995862
+          },
+          {
+            "epoch": 15,
+            "active_modes": [
+              "route_only",
+              "coadapt"
+            ],
+            "seconds": 7.905024100000446
+          },
+          {
+            "epoch": 16,
+            "active_modes": [
+              "route_only",
+              "coadapt"
+            ],
+            "seconds": 7.92358090000198
+          },
+          {
+            "epoch": 17,
+            "active_modes": [
+              "route_only",
+              "coadapt"
+            ],
+            "seconds": 7.89600849999988
+          },
+          {
+            "epoch": 18,
+            "active_modes": [
+              "route_only",
+              "coadapt"
+            ],
+            "seconds": 7.90721289999783
+          }
+        ],
+        "finished_at": "2026-09-29T10:24:36.838040+08:00",
+        "complete_five_folds": false,
+        "remaining_folds_started": false
+      }
+    },
+    {
+      "target": "SW",
+      "id": "pure_dl_coadapt_v30_SW_fold5",
+      "state": {
+        "status": "complete",
+        "target": "SW",
+        "pid": 56556,
+        "modes": {
+          "route_only": {
+            "best": 73.6630827970656,
+            "best_epoch": 0,
+            "bad": 18,
+            "done": true,
+            "last_epoch": 18,
+            "stop_reason": "patience18"
+          },
+          "coadapt": {
+            "best": 73.6630827970656,
+            "best_epoch": 0,
+            "bad": 18,
+            "done": true,
+            "last_epoch": 18,
+            "stop_reason": "patience18"
+          }
+        },
+        "atlas_current_trial": false
+      },
+      "report": {
+        "target": "SW",
+        "factor": "weight",
+        "screening_fold": 5,
+        "arms": [
+          {
+            "target": "SW",
+            "mode": "route_only",
+            "factor": "weight",
+            "screening_fold": 5,
+            "target_score": 73.6630827970656,
+            "reference_replacement_total": 80.33508295432019,
+            "delta_reference_target": 0.0,
+            "best_epoch": 0,
+            "stopped_epoch": 18,
+            "stop_reason": "patience18",
+            "best_after_update": {
+              "epoch": 18,
+              "target_score": 73.66193552512293,
+              "reference_replacement_total": 80.33468140914026
+            },
+            "trainable_parameters": 30819,
+            "all144665_selected_predictions_restored_exactly": true,
+            "all_frozen_state_unchanged": true,
+            "gradient_scope": {
+              "input_gradient_norm": 0.001071496750228107,
+              "output_gradient_norm": 0.003306987462565303,
+              "frozen_gradients_none": true,
+              "target_only": "SW",
+              "second_step": true,
+              "parameter_group_gradient_norms": {
+                "retained_routes": 0.0034762436989694834
+              }
+            },
+            "factor_scope": {
+              "mode": "route_only",
+              "unchanged_expert_factors": {
+                "expert0.gate": true,
+                "expert0.weight": true,
+                "expert0.location": true,
+                "expert0.scale": true,
+                "expert1.gate": true,
+                "expert1.weight": true,
+                "expert1.location": true,
+                "expert1.scale": true
+              },
+              "selected_factor_change_max": {},
+              "scope": "two fixed training windows; compared with retained v26 expert outputs, routes checked in frozen-state assertions"
+            },
+            "last_delta_parameter_change_L2": 0.5909357471729815,
+            "checkpoint": "outputs\\pure_dl_coadapt_v30_SW_fold5\\route_only\\model_best.pt",
+            "complete_five_folds": false,
+            "remaining_folds_started": false
+          },
+          {
+            "target": "SW",
+            "mode": "coadapt",
+            "factor": "weight",
+            "screening_fold": 5,
+            "target_score": 73.6630827970656,
+            "reference_replacement_total": 80.33508295432019,
+            "delta_reference_target": 0.0,
+            "best_epoch": 0,
+            "stopped_epoch": 18,
+            "stop_reason": "patience18",
+            "best_after_update": {
+              "epoch": 1,
+              "target_score": 73.65968481486235,
+              "reference_replacement_total": 80.33389366054905
+            },
+            "trainable_parameters": 43635,
+            "all144665_selected_predictions_restored_exactly": true,
+            "all_frozen_state_unchanged": true,
+            "gradient_scope": {
+              "input_gradient_norm": 0.0038673006929457188,
+              "output_gradient_norm": 0.013718952424824238,
+              "frozen_gradients_none": true,
+              "target_only": "SW",
+              "second_step": true,
+              "parameter_group_gradient_norms": {
+                "retained_routes": 0.00347461667843163,
+                "retained_factor": 0.013823628425598145
+              }
+            },
+            "factor_scope": {
+              "mode": "coadapt",
+              "unchanged_expert_factors": {
+                "expert0.gate": true,
+                "expert0.location": true,
+                "expert0.scale": true,
+                "expert1.gate": true,
+                "expert1.location": true,
+                "expert1.scale": true
+              },
+              "selected_factor_change_max": {
+                "expert0.weight": 0.0,
+                "expert1.weight": 0.0
+              },
+              "scope": "two fixed training windows; compared with retained v26 expert outputs, routes checked in frozen-state assertions"
+            },
+            "last_delta_parameter_change_L2": 0.7097594312752435,
+            "checkpoint": "outputs\\pure_dl_coadapt_v30_SW_fold5\\coadapt\\model_best.pt",
+            "complete_five_folds": false,
+            "remaining_folds_started": false
+          }
+        ],
+        "reference_scores": {
+          "POR": 77.54716852689732,
+          "PERM": 89.39672404936582,
+          "SW": 73.6630827970656,
+          "TOTAL": 80.33508295432019
+        },
+        "seconds": 132.3902218000003,
+        "peak_allocated_MiB": 717.90966796875,
+        "epoch_timing": [
+          {
+            "epoch": 1,
+            "active_modes": [
+              "route_only",
+              "coadapt"
+            ],
+            "seconds": 6.875905699998839
+          },
+          {
+            "epoch": 2,
+            "active_modes": [
+              "route_only",
+              "coadapt"
+            ],
+            "seconds": 6.734713899997587
+          },
+          {
+            "epoch": 3,
+            "active_modes": [
+              "route_only",
+              "coadapt"
+            ],
+            "seconds": 6.79599920000328
+          },
+          {
+            "epoch": 4,
+            "active_modes": [
+              "route_only",
+              "coadapt"
+            ],
+            "seconds": 6.735932099996717
+          },
+          {
+            "epoch": 5,
+            "active_modes": [
+              "route_only",
+              "coadapt"
+            ],
+            "seconds": 6.801104599995597
+          },
+          {
+            "epoch": 6,
+            "active_modes": [
+              "route_only",
+              "coadapt"
+            ],
+            "seconds": 6.770291199994972
+          },
+          {
+            "epoch": 7,
+            "active_modes": [
+              "route_only",
+              "coadapt"
+            ],
+            "seconds": 6.787923700001556
+          },
+          {
+            "epoch": 8,
+            "active_modes": [
+              "route_only",
+              "coadapt"
+            ],
+            "seconds": 6.787377900000138
+          },
+          {
+            "epoch": 9,
+            "active_modes": [
+              "route_only",
+              "coadapt"
+            ],
+            "seconds": 6.804928900004597
+          },
+          {
+            "epoch": 10,
+            "active_modes": [
+              "route_only",
+              "coadapt"
+            ],
+            "seconds": 6.805899700004375
+          },
+          {
+            "epoch": 11,
+            "active_modes": [
+              "route_only",
+              "coadapt"
+            ],
+            "seconds": 7.142038499994669
+          },
+          {
+            "epoch": 12,
+            "active_modes": [
+              "route_only",
+              "coadapt"
+            ],
+            "seconds": 6.703682100000151
+          },
+          {
+            "epoch": 13,
+            "active_modes": [
+              "route_only",
+              "coadapt"
+            ],
+            "seconds": 6.992422999996052
+          },
+          {
+            "epoch": 14,
+            "active_modes": [
+              "route_only",
+              "coadapt"
+            ],
+            "seconds": 6.99405310000293
+          },
+          {
+            "epoch": 15,
+            "active_modes": [
+              "route_only",
+              "coadapt"
+            ],
+            "seconds": 6.969926300000225
+          },
+          {
+            "epoch": 16,
+            "active_modes": [
+              "route_only",
+              "coadapt"
+            ],
+            "seconds": 7.040155399998184
+          },
+          {
+            "epoch": 17,
+            "active_modes": [
+              "route_only",
+              "coadapt"
+            ],
+            "seconds": 6.774612099994556
+          },
+          {
+            "epoch": 18,
+            "active_modes": [
+              "route_only",
+              "coadapt"
+            ],
+            "seconds": 6.649226599998656
+          }
+        ],
+        "finished_at": "2026-09-29T10:27:27.581785+08:00",
+        "complete_five_folds": false,
+        "remaining_folds_started": false
+      }
+    }
+  ],
+  "all_complete": true,
+  "reference_scores": {
+    "POR": 77.54716852689732,
+    "PERM": 89.39672404936582,
+    "SW": 73.6630827970656,
+    "TOTAL": 80.33508295432019
+  }
+}

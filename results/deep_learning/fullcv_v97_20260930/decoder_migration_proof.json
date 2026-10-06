@@ -1,0 +1,25 @@
+{
+  "original_fold": 5,
+  "no_training": true,
+  "no_new_selection": true,
+  "results": [
+    {
+      "target": "POR",
+      "score": 77.551936801885,
+      "rows": 144665,
+      "frozen_fifth_predictions_exact": true
+    },
+    {
+      "target": "PERM",
+      "score": 89.39672404936582,
+      "rows": 144665,
+      "frozen_fifth_predictions_exact": true
+    },
+    {
+      "target": "SW",
+      "score": 74.1421799046667,
+      "rows": 144665,
+      "frozen_fifth_predictions_exact": true
+    }
+  ]
+}

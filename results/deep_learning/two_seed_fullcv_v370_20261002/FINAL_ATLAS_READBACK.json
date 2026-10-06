@@ -1,0 +1,19 @@
+{
+  "builtAt": "2026-10-02T22:40:47+08:00",
+  "node_status": "complete",
+  "fixed_TOTAL": 82.16741757218335,
+  "canonical_scores_exact": true,
+  "selection_scope_preserved": true,
+  "offline_index_contains_final_result": true,
+  "coverage": {
+    "experimentDirectories": 883,
+    "experiments": 1288,
+    "deadEnds": 265,
+    "unresolvedParents": 345,
+    "excluded": {
+      "pure_dl_summary": "汇总目录，结果并入对应实验",
+      "pure_dl_feature_expansion_study": "输入审计和规划，已关联实际特征实验"
+    },
+    "scope": "覆盖当前留存的 pure_dl_* 实验目录、可识别的子配置和三个早期 CNN 基线；已被删除且无留存记录的历史无法自动恢复。无父节点表示证据不足，不以时间相邻冒充血缘。"
+  }
+}

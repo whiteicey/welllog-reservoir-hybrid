@@ -1,0 +1,39 @@
+{
+  "project": "perm_raw_width_v288_20261002",
+  "scope": "obsolete-study",
+  "weights_retained": false,
+  "cleanup": "Obsolete artifacts removed by explicit user request. These are historical scores, not newly verified training.",
+  "results": [
+    {
+      "source": "FINAL.json",
+      "result": {
+        "report": {
+          "stage": "width96",
+          "target": "PERM",
+          "target_score": 89.48247002365251,
+          "initial_score": 89.4055666268939,
+          "against_initial": 0.07690339675860969,
+          "against_v97_target": 0.08574597428669506,
+          "best_epoch": 8,
+          "stopped_epoch": 22,
+          "validation_rows": 144665,
+          "predictions_reproduced_exactly": true,
+          "frozen_parameters_exact": true,
+          "seconds": 201.22330970002804,
+          "peak_MiB": 797.68505859375,
+          "complete_five_folds": false,
+          "early_terminated": false
+        },
+        "adopted": false,
+        "versus_matched283": -0.01084451551712,
+        "versus_best281": -0.01643851535349,
+        "close_width_expansion": true,
+        "independent_disk_reload": false,
+        "remaining_folds_started": false
+      }
+    }
+  ],
+  "cleanup_completed": true,
+  "deleted_files": 6,
+  "deleted_bytes": 3477164
+}

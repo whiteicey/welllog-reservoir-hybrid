@@ -1,0 +1,30 @@
+{
+  "total_training_stages": 6,
+  "source_sha256": "45a09476e3126820688420579c100c86e0e4f45df335904380a298cf5f66b9a9",
+  "parent_sha256": "07e0b8df208fe93c8ac07dcf18924459c47afb12ec84b1b7306a0e6017f58670",
+  "candidates": [
+    "ordinary",
+    "balanced"
+  ],
+  "epochs": 80,
+  "patience": 14,
+  "maximum_GPU_jobs": 2,
+  "new_parameters": 57568,
+  "added_head_stages": {
+    "POR": 0,
+    "PERM": 0,
+    "SW": 1
+  },
+  "remaining_folds_started": false,
+  "primary_control_SW": 74.14922820781207,
+  "prepared_not_launched": true,
+  "trainable_parameters": 57568,
+  "independent_component_CE": 1.0,
+  "new_raw_backbone_jointly_trained": true,
+  "SAM": false,
+  "conditional_RPS_coefficient": 1.0,
+  "fusion_control": "samejointencoder/directCE: probabilitymix versus prior-relative tilt",
+  "hypothesis": "Learn state and density through same new raw feature backbone instead of keeping default gate predictions fixed; ordinary vs train-prior-calibrated balanced BCE.",
+  "new_state_parameters": 49,
+  "training_prior_fitted_only_from_Q_train_default_labels": true
+}

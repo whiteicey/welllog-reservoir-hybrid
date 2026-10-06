@@ -1,0 +1,1 @@
+Maintain PROJECTS/README. Originalfold5/9curves/Q/scoring/80-14/normalGPUmax2. One addedSW stage only; original104 frozen, no trainedrepair checkpoints/teacher/test labels. Own continuous labels only for auxiliary. No inference label or ID inputs. No remainingfolds below strict80.8. Preserve default5/retained7/delivery.

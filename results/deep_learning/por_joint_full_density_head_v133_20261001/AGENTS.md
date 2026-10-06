@@ -1,0 +1,1 @@
+SinglePORnewconditionalgate increment on location/weighthead, frozenv113,5phasesinclsource. OwnPORlabels/originalQ/scorer,max2sharedjobs. MaintainPROJECTS/README/atlas, atomicstate/explicitresume, no trainedv131headloads/queues/deliveryedits/otherfolds below80.8+gain.

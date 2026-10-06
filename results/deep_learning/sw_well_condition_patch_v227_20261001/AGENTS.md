@@ -1,0 +1,1 @@
+Only small whole-well input conditioning residual trains. Preserve original104 weights,ownSW labels only,no wellID/labels in context. Originalfold5/Q50/score/80-14/max2GPU,one extra SWphase/no stacking/otherfolds. Prepared/no queue. MaintainPROJECTS.

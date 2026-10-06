@@ -1,0 +1,8 @@
+{
+  "training_seconds": 624.993935800012,
+  "launch_to_report_wall_seconds": 632.891256,
+  "peak_MiB": 924.54736328125,
+  "concurrency": "overlap v150 initially, brief single, later v152additive",
+  "loading_warmup_in_wall": true,
+  "serial_equal_work_not_measured": true
+}

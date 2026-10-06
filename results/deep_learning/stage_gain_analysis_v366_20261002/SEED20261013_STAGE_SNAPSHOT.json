@@ -1,0 +1,195 @@
+{
+  "seed": 20261013,
+  "observed_epoch": 1790923934.173123,
+  "completed_stages": 8,
+  "planned_stages": 8,
+  "stages": [
+    {
+      "stage": "POR113",
+      "target": "POR",
+      "predecessor": "SOURCE",
+      "actual_target_gain": 0.5821969773343341,
+      "actual_TOTAL_contribution": 0.1746590932003002,
+      "before": 75.9912319074892,
+      "after": 76.57342888482353,
+      "optimizer_gain": 0.5734083660107814,
+      "best_epoch": 2,
+      "stop_epoch": 12,
+      "predictions_identical_to_predecessor": false,
+      "strata": {
+        "DEFAULT": {
+          "before": 97.76699132019881,
+          "after": 97.73943639581589,
+          "delta": -0.02755492438292606
+        },
+        "CONT": {
+          "before": 35.14891396789747,
+          "after": 36.87475331205739,
+          "delta": 1.7258393441599225
+        }
+      }
+    },
+    {
+      "stage": "POR151",
+      "target": "POR",
+      "predecessor": "POR113",
+      "actual_target_gain": 0.7019999142997477,
+      "actual_TOTAL_contribution": 0.2105999742899243,
+      "before": 76.57342888482353,
+      "after": 77.27542879912328,
+      "optimizer_gain": 0.7019999142997477,
+      "best_epoch": 15,
+      "stop_epoch": 25,
+      "predictions_identical_to_predecessor": false,
+      "strata": {
+        "DEFAULT": {
+          "before": 97.73943639581589,
+          "after": 97.53489407251185,
+          "delta": -0.20454232330403954
+        },
+        "CONT": {
+          "before": 36.87475331205739,
+          "after": 39.277051507219,
+          "delta": 2.402298195161606
+        }
+      }
+    },
+    {
+      "stage": "PERM154",
+      "target": "PERM",
+      "predecessor": "SOURCE",
+      "actual_target_gain": 0.008403166484811209,
+      "actual_TOTAL_contribution": 0.0029411082696839228,
+      "before": 89.28218349252357,
+      "after": 89.29058665900838,
+      "optimizer_gain": 0.008403166484811209,
+      "best_epoch": 8,
+      "stop_epoch": 18,
+      "predictions_identical_to_predecessor": false,
+      "strata": {
+        "DEFAULT": {
+          "before": 97.42076529918126,
+          "after": 97.35424095499029,
+          "delta": -0.06652434419096664
+        },
+        "CONT": {
+          "before": 73.4574025811979,
+          "after": 73.61149592673777,
+          "delta": 0.1540933455398772
+        }
+      }
+    },
+    {
+      "stage": "SW104",
+      "target": "SW",
+      "predecessor": "SOURCE",
+      "actual_target_gain": 0.05536767806886189,
+      "actual_TOTAL_contribution": 0.01937868732410166,
+      "before": 73.57996330755388,
+      "after": 73.63533098562274,
+      "optimizer_gain": 2.438215904151079,
+      "best_epoch": 23,
+      "stop_epoch": 33,
+      "predictions_identical_to_predecessor": false,
+      "strata": {
+        "DEFAULT": {
+          "before": 98.58299968914808,
+          "after": 99.07798628905687,
+          "delta": 0.4949865999087848
+        },
+        "CONT": {
+          "before": 16.1503039088594,
+          "after": 15.195907630216185,
+          "delta": -0.9543962786432143
+        }
+      }
+    },
+    {
+      "stage": "POR341",
+      "target": "POR",
+      "predecessor": "POR151",
+      "actual_target_gain": 0.11290450727169343,
+      "actual_TOTAL_contribution": 0.03387135218150803,
+      "before": 77.27542879912328,
+      "after": 77.38833330639497,
+      "optimizer_gain": 0.11290450727169343,
+      "best_epoch": 11,
+      "stop_epoch": 21,
+      "predictions_identical_to_predecessor": false,
+      "strata": {
+        "DEFAULT": {
+          "before": 97.53489407251185,
+          "after": 97.85071589813157,
+          "delta": 0.3158218256197216
+        },
+        "CONT": {
+          "before": 39.277051507219,
+          "after": 39.00936705433838,
+          "delta": -0.2676844528806228
+        }
+      }
+    },
+    {
+      "stage": "PERM336",
+      "target": "PERM",
+      "predecessor": "PERM154",
+      "actual_target_gain": 0.23069302734262465,
+      "actual_TOTAL_contribution": 0.08074255956991862,
+      "before": 89.29058665900838,
+      "after": 89.52127968635101,
+      "optimizer_gain": 0.2307281383021973,
+      "best_epoch": 5,
+      "stop_epoch": 19,
+      "predictions_identical_to_predecessor": false,
+      "strata": {
+        "DEFAULT": {
+          "before": 97.35424095499029,
+          "after": 97.61256100043289,
+          "delta": 0.258320045442602
+        },
+        "CONT": {
+          "before": 73.61149592673777,
+          "after": 73.78847056443072,
+          "delta": 0.1769746376929504
+        }
+      }
+    },
+    {
+      "stage": "SW351",
+      "target": "SW",
+      "predecessor": "SW104",
+      "actual_target_gain": 0.0,
+      "actual_TOTAL_contribution": 0.0,
+      "before": 73.63533098562274,
+      "after": 73.63533098562274,
+      "optimizer_gain": 0.0,
+      "best_epoch": 0,
+      "stop_epoch": 10,
+      "predictions_identical_to_predecessor": false,
+      "strata": {
+        "DEFAULT": {
+          "before": 99.07798628905687,
+          "after": 99.07798628905687,
+          "delta": 0.0
+        },
+        "CONT": {
+          "before": 15.195907630216185,
+          "after": 15.195907630216185,
+          "delta": 0.0
+        }
+      }
+    }
+  ],
+  "prefix_scores": {
+    "POR": 77.38833330639497,
+    "PERM": 89.52127968635101,
+    "SW": 73.63533098562274,
+    "TOTAL": 80.3213137271093
+  },
+  "score_scope": "Complete eight-stage CPU prediction readback, not independent model disk reload",
+  "complete_model": true,
+  "screening_fold": 5,
+  "complete_five_folds": false,
+  "CPU_only": true,
+  "extra_training_stages": 0
+}

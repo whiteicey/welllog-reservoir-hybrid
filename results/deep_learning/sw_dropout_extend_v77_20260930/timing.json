@@ -1,0 +1,26 @@
+{
+  "candidates": [
+    {
+      "mode": "p30",
+      "start": "2026-09-30T08:57:52.136699+08:00",
+      "end": "2026-09-30T09:02:03.533479+08:00",
+      "seconds": 245.16141499998048,
+      "peak_allocated_MiB": 1266.9208984375
+    },
+    {
+      "mode": "p40",
+      "start": "2026-09-30T08:58:56.859144+08:00",
+      "end": "2026-09-30T09:03:59.335686+08:00",
+      "seconds": 295.3484308999905,
+      "peak_allocated_MiB": 1266.9208984375
+    }
+  ],
+  "first_launch_to_last_completion_seconds": 367.198987,
+  "peak_process_concurrency": 2,
+  "finalization_seconds": 4.551392900000792,
+  "scope": "loading/preprocessing/warmup/training/evaluation/launch gap included; authoring and finalization separate",
+  "first_launch_to_verified_wall_seconds": 1110.690353,
+  "last_training_completion_to_verified_wall_seconds": 743.491366,
+  "verification_finished_at": "2026-09-30T09:16:22.827052+08:00",
+  "timing_scope_note": "training batch wall and first launch to final disk verification wall separated; authoring before launch and atlas after verification excluded"
+}

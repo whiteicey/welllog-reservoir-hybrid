@@ -1,0 +1,14 @@
+{
+  "template": "experiments\\pure_dl\\train_champion_route_v28.py",
+  "template_sha256": "952f56b4a2e1b8038bc91625dfe473db1a08229a6e9b677ff3eac4499328b6f6",
+  "new_trainer": "experiments\\pure_dl\\train_champion_split_route_v29.py",
+  "new_trainer_sha256": "b3faac573019ae46974d0010a31cd970da2c8facc937b27c69c16b47c2d6eb25",
+  "historical_source_modified": false,
+  "changes": [
+    "new module and modes",
+    "retain v28 route metadata",
+    "bound .125",
+    "branch seed20261105/6",
+    "gradient isolation checks"
+  ]
+}

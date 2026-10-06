@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "models": 15,
+  "seed_identity": "original",
+  "new_seed_models": 0,
+  "fold_weights": "20% each",
+  "full_OOF_replay_exact": true,
+  "oof": {
+    "POR": 79.54232244907331,
+    "PERM": 90.58546986846994,
+    "SW": 75.49126232696625,
+    "TOTAL": 81.98955300312466
+  },
+  "wells": 10,
+  "test_rows": 95948,
+  "result_sha256": "39956d6acd9ef86e31cd6849713c4f02e4d69ce686376019530cb65d9708d6ab",
+  "code_zip_sha256": "487197ced93002927ee2f2cce29019dc81e1d4ffc9e24625ef7261d9f58ad8ff",
+  "code_zip_crc_and_sha_verified": true,
+  "test_accuracy": "unknown"
+}

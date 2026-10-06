@@ -1,0 +1,31 @@
+# Historical summary
+
+Focus and explored conditions: see retained README/FINAL and SUMMARY_RESULTS.json.
+
+Gain: scores and original comparison deltas are retained; incomplete folds remain incomplete.
+
+Not worth extending: original negative conclusions are retained below where available.
+
+Detailed logs, weights and caches were removed by the user request; rerunning requires retraining.
+
+## README.md
+
+# v131 POR conditional density factor readout
+Focus: deepen measured positive v128 joint-local head on POR route. Same frozenv113 baseline/319input/64width/33depthkernel/GLU, add16 conditional mixture-logweight outputs alongside16 location outputs. Original linear weight opening v126 best0 is a separate update scope; this nonlinear joint-feature head may learn conditional assignment without altering original coefficients.
+Explored/verified: implemented one bounded candidate, zero finaloutput preserves exact initialv113 function. Old predictor entirefrozen; new locations boundedone fixed referencewidth and logweightdelta bounded+/-1, referencewidths/defaultgate/families fixed. Proper logsoftmax/logsumexp mixed Student3/Cauchy NLL and synchronized weighted CDF, originalargmax/grid/Q/splits. AllnewheadLR3e-4/80-18; added1040trainableoutputparameters vs v128, not equalcapacity. No trainedv128/v129headloaded, no externalmodels/votes or labelconditioned inference.
+Gain: untrained/unknown. Compare retainedv128POR77.560504473312 and initial77.540454326739; incremental benefit vs location-only needed. POR historical+0.25 milestone77.801936801885 remains unmet, actualTOTALscreen80.8. Initialsamefunction does not guarantee sametrainingtrajectory.
+Not worth continuing: if conditional weightdelta offers no gain, close this scope, no coefficient/bound grid; oldlinearweight/gate, taillearning
+
+thawingnegatives stayclosed. Point/localv129 comparison remains independent fairrecord.
+Pending: explicit singlePOR launch once pointslotfree, beside newbackbonev130(max2total). Originalinput/ownPORlabels/trainonlystats/Q/scoring/window/seed unchanged; atomicfullstate, best144665replay/frozenintegrity, actual fixedPERMv100/SWv104 assembly. Five totaldependencyphases source/v113/v131/PERM/SW, no extra hiddenrefinement. No remainingfolds belowstrict80.8+gain, originalOOF>82 unmet. Temporarykeepawake/explicitresume/earlystop, realwall/overlap/memory, deliveriesimmutable.
+Optional: retain genuinely positive conditionaldensityhead and continuePOR toward+0.25 while alternatebackboneroute progresses.
+
+Prepared design selected before any launch/config: use pointreadout after finalv129point77.561376 beatslocal77.560504 by0.000871701521; newconditional logweighthead compared to v129point. Earlierlocal-preparation text superseded without changing trainedsource. Frozenv113sameinit, no trainedpointheadwarmstart; still5phases inclsource.
+
+Explicitlaunch verified by actualcommand PID91284; snapshot {"status": "complete", "pid": 91284, "stage": "location_weight", "target": "POR", "target_score": 77.72901411274366, "initial_score": 77.54045432673898, "against_initial": 0.18855978600467438, "against_v97_target": 0.17707731085864964, "best_epoch": 27, "stopped_epoch": 45, "validation_rows": 144665, "predictions_reproduced_exactly": true, "frozen_parameters_exact": true, "gradient_groups": {"new_joint_location_weight_POR_head": 0.16152802109718323}, "seconds": 268.4852590000082, "peak_MiB": 922.1806640625, "complete_five_folds": false, "early_terminated": false}. Trainingonly, no finalgain;max2 acrossroutes. POR historical+0.25 and originalfullOOF>82 unmet, no otherfolds/delivery changes.
+
+V131 location_weight: restored POR=77.729014112744; delta vs v114=+0.180944617851, vs historical=+0.177077310859; actual fifth TOTAL=80.543755697579;5 phases incl source; channel gain>0.25=False; strict808=False; no otherfolds. best/stop=27/45, seconds=268.485, peakMiB=922.181.
+
+V131 positive final best27/stop45 POR77.729014112744, historical gain+0.177077310859, point-only incremental+0.167637937911; actualTOTAL80.543755697579, five recipephases. All144665 bestreplay/frozen exact. Positivebest/last retained; CURRENT_RECIPE updated, historical+0.25 and strictTOTAL80.8 stillfalse. Extra1040params distinguish capacity; no identicalcapacity claim. Realtraining268.485s/peak922.181MiB. New boundedconditionalgate study follows this measuredpositive fromsamefrozenv113, not trainedv131warmstart.
+
+

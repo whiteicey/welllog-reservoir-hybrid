@@ -1,0 +1,1 @@
+Goal: pureDL full expert feature encoders jointdirectdensity training; original154 retained/frozenprior, no teacher/newlabels/oldrepairweights. Original9/206/Q/split/score; 80/pat14/max2GPU/onePERMaddedstage/total<=8. Newuser requires backbone+readout updates, no headonly jobs. Immutablelaunchedsources/atomiclast/explicitresume. Maintain PROJECTS/README/EXPLORATIONS/atlas.

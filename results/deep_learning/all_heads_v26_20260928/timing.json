@@ -1,0 +1,43 @@
+{
+  "maximum_parallel_target_jobs": 2,
+  "first_launch_to_last_finish_seconds": 343.440493,
+  "targets": {
+    "POR": {
+      "group_seconds": 125.78441500000008,
+      "peak_allocated_MiB": 719.837890625,
+      "group_epoch_median_seconds": 6.463499450001109,
+      "per_arm_epochs": {
+        "gate": 18,
+        "weight": 18,
+        "scale": 18
+      },
+      "scope": "target process including shared frozen inference; not separate per-arm wall time"
+    },
+    "PERM": {
+      "group_seconds": 175.35832370000026,
+      "peak_allocated_MiB": 721.37548828125,
+      "group_epoch_median_seconds": 8.706424599999082,
+      "per_arm_epochs": {
+        "gate": 19,
+        "weight": 18,
+        "location": 18,
+        "scale": 18
+      },
+      "scope": "target process including shared frozen inference; not separate per-arm wall time"
+    },
+    "SW": {
+      "group_seconds": 192.36637110000083,
+      "peak_allocated_MiB": 721.37353515625,
+      "group_epoch_median_seconds": 8.674020099999325,
+      "per_arm_epochs": {
+        "gate": 18,
+        "weight": 23,
+        "location": 18,
+        "scale": 18
+      },
+      "scope": "target process including shared frozen inference; not separate per-arm wall time"
+    }
+  },
+  "final_diagnostic_and_replay_seconds": 5.069743199999721,
+  "scope": "target processes share frozen inference between alternatives; wall includes staged-launch gaps, imports, training and restoration, excludes source implementation and final replay"
+}

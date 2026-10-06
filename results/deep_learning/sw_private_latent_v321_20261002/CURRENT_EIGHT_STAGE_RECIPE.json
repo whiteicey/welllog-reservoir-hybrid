@@ -1,0 +1,60 @@
+{
+  "scores": {
+    "POR": 78.03055279414464,
+    "PERM": 89.51580440487884,
+    "SW": 74.16603018049169,
+    "TOTAL": 80.69780794312307
+  },
+  "screening_fold": 5,
+  "validation_rows": 144665,
+  "strict_808_qualified": false,
+  "complete_five_folds": false,
+  "remaining_folds_started": false,
+  "total_training_stages": 8,
+  "stages": [
+    "SOURCE",
+    "POR113",
+    "POR151",
+    "PERM154",
+    "SW104",
+    "POR302full",
+    "PERM312rational",
+    "SW321own"
+  ],
+  "added_head_stages": {
+    "POR": 1,
+    "PERM": 1,
+    "SW": 1
+  },
+  "heads": {
+    "POR": {
+      "checkpoint": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_por_curve_scope_v302_fold5\\full\\model_best.pt",
+      "sha256": "d7f916b56e739ec08434e9a487b8fb31b72aeb10eebb5f87a93f05e4c55fd441"
+    },
+    "PERM": {
+      "checkpoint": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_perm_group_shape_v312_fold5\\rational\\model_best.pt",
+      "sha256": "8db467dcb459d295e0e3aabadd56a7a84e2134e568c8012a58dba2b7ea2ced1c"
+    },
+    "SW": {
+      "checkpoint": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_sw_private_latent_v321_fold5_r1\\own\\model_best.pt",
+      "sha256": "debe271661684eb58ca7dd72da049bfaef1d9bf0034ed76f937313a76dd3fcfe"
+    }
+  },
+  "pred_sha256": "c4ca1fe09af7130cdf531ca48140072a3bf5f45d9e205d34b41046756519eb14",
+  "verification": "Actual144665 fixed-column composition, ownbestRAM replay/frozenexact; not independentdiskreload",
+  "default_five_stage_unchanged": true,
+  "prior_optional8_artifacts_unchanged": true,
+  "gain_vs_previous_optional8": 0.0020999851151799476,
+  "gain_vs_default_five": 0.08533252512913236,
+  "selected_SW_alpha": 0.25,
+  "SW_CONT_vs297": 0.40860266034276194,
+  "SW_CONT_vs252": 0.026487287779772828,
+  "SW_own_vs_cross_CONT": 0.2802247078699942,
+  "SW_own_vs_cross_whole": -0.0005611755438508226,
+  "selection_reason": "Retain ownSWlatent whole+CONTpositive over297; cross wholeextra.000561 costsCONT.280225, no stronger continuousrepresentation",
+  "single_seed_only": true,
+  "single_seed_micro_whole_gain_only": true,
+  "independent_disk_reload": false,
+  "fullOOF_verified": false,
+  "source_donors_computed_but_unused_in_own_output": true
+}

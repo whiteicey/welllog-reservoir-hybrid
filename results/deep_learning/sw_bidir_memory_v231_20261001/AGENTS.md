@@ -1,0 +1,1 @@
+Only14304 new norm/BiGRU/project params train; all original104 frozen. GRU float32/trainingmode for cudnnbackward,originalblocks eval/noDropKey. Originalfold5/Q50/score/80-14/max2GPU,oneSWaddition/no stacking/otherfolds. MaintainPROJECTS/evidence.

@@ -1,0 +1,47 @@
+{
+  "live": false,
+  "state": {
+    "status": "complete",
+    "pid": 40228,
+    "stage": "multiscale",
+    "target": "PERM",
+    "target_score": 89.43875926511502,
+    "initial_score": 89.4055666268939,
+    "against_initial": 0.033192638221123616,
+    "against_v97_target": 0.04203521574920899,
+    "best_epoch": 8,
+    "stopped_epoch": 22,
+    "validation_rows": 144665,
+    "predictions_reproduced_exactly": true,
+    "frozen_parameters_exact": true,
+    "gradient_groups": {
+      "PERM_new_multiscale_representation": 0.0540769100189209,
+      "PERM_direct_categorical_readout": 0.03147346153855324
+    },
+    "seconds": 239.72134829999413,
+    "peak_MiB": 787.9833984375,
+    "complete_five_folds": false,
+    "early_terminated": false
+  },
+  "report": {
+    "stage": "multiscale",
+    "target": "PERM",
+    "target_score": 89.43875926511502,
+    "initial_score": 89.4055666268939,
+    "against_initial": 0.033192638221123616,
+    "against_v97_target": 0.04203521574920899,
+    "best_epoch": 8,
+    "stopped_epoch": 22,
+    "validation_rows": 144665,
+    "predictions_reproduced_exactly": true,
+    "frozen_parameters_exact": true,
+    "gradient_groups": {
+      "PERM_new_multiscale_representation": 0.0540769100189209,
+      "PERM_direct_categorical_readout": 0.03147346153855324
+    },
+    "seconds": 239.72134829999413,
+    "peak_MiB": 787.9833984375,
+    "complete_five_folds": false,
+    "early_terminated": false
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "scores": {
+    "POR": 77.551936801885,
+    "PERM": 89.39672404936582,
+    "SW": 73.66437781036474,
+    "TOTAL": 80.33696669147119
+  },
+  "choices": [
+    {
+      "target": "POR",
+      "key": "v31_POR_anchored",
+      "architecture": "same_bound_reparameterized_routes",
+      "target_score": 77.551936801885,
+      "best_epoch": 7,
+      "checkpoint": "outputs\\pure_dl_mechanism_v31_POR_fold5\\anchored\\model_best.pt",
+      "model_module": "por_reparam_v31",
+      "builder": "Network(target,master,modes=(mode,)); heads[mode].load_state_dict(checkpoint[delta_state]); SW master[v31_knots] from checkpoint config metadata",
+      "mode": "anchored",
+      "factor": "route_parameterization",
+      "parent_recipe": "results\\deep_learning\\champion_coadapt_v30_20260929\\CURRENT_RECIPE.json",
+      "retained_v28_checkpoint": "outputs\\pure_dl_champion_route_v28_POR_fold5\\conditional\\model_best.pt",
+      "retained_v29_checkpoint": "outputs\\pure_dl_split_route_v29_POR_fold5\\split\\model_best.pt"
+    },
+    {
+      "target": "PERM",
+      "key": "v29_PERM_coupled",
+      "architecture": "coupled_or_split_residual_routes",
+      "target_score": 89.39672404936582,
+      "best_epoch": 2,
+      "checkpoint": "outputs\\pure_dl_split_route_v29_PERM_fold5\\coupled\\model_best.pt",
+      "factor": "atom_conditional_routing",
+      "source_checkpoint": "outputs\\pure_dl_independent_v8_PERM_dual80_fold5\\model_best.pt",
+      "model_module": "champion_split_route_v29",
+      "builder": "Network(target,master,modes=(mode,)); heads[mode].load_state_dict(checkpoint[delta_state])",
+      "mode": "coupled",
+      "parent_recipe": "results\\deep_learning\\champion_route_v28_20260929\\CURRENT_RECIPE.json",
+      "retained_v28_checkpoint": "outputs\\pure_dl_champion_route_v28_PERM_fold5\\joint\\model_best.pt"
+    },
+    {
+      "target": "SW",
+      "mode": "long_section",
+      "target_score": 73.66437781036474,
+      "checkpoint": "outputs\\pure_dl_divergent_v45_SW_long_section_fold5\\model_best.pt",
+      "best_epoch": 12,
+      "key": "v45_long_section",
+      "model_module": "divergent_models_v45",
+      "architecture": "random_full_private_long_section",
+      "input_variant": "original206",
+      "window_length": 1024,
+      "preprocessing": "results/deep_learning/champion_scaling_v21_20260928/prepared_data.pt",
+      "builder": "load_data metadata; Network(mode,metadata); load_state_dict(checkpoint[state_dict]); Evaluator with original action grid and model.length"
+    }
+  ],
+  "source_preprocessing": "results/deep_learning/champion_scaling_v21_20260928/data_manifest.json",
+  "amplitude_metadata": "results/deep_learning/feature_structure_v20_20260928/feature_manifest.json",
+  "reference_recipe": "results\\deep_learning\\mechanism_checks_v31_20260929\\CURRENT_RECIPE.json",
+  "original_fifth_development_selection": true,
+  "complete_five_folds": false,
+  "remaining_folds_started": false,
+  "old_delivery_unchanged": true
+}

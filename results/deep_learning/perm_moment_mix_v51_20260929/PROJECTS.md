@@ -1,0 +1,40 @@
+# v51 PERM跨井隐藏矩混合
+
+## 探索重点与假设
+v50迁移PERM89.050807574234较随机+0.239512，但低当前89.396724049366；本批携带迁移表征，检验训练分布增强。plain/interwell同一个v50第21轮完整模型、同836921学习参数/初始化/损失/窗口/预算，无新增学习模块，所有骨干/FiLM/输出继续训练。
+算法参考[MixStyle官方实现](https://github.com/KaiyangZhou/mixstyle-release)。本项目适配为深度有效掩码上的均值/标准差与不同训练井配对；不加载外部模型。位置在stem经过整井FiLM后、第一层局部TCN前；计算每个窗口每个隐藏通道的有效深度均值和标准差，统计量detach。以0.5批次概率，用Beta(.1,.1)系数将本窗口与另一训练井窗口的矩做凸组合，再复原标准化局部形状。
+这是假设井间矩差异有可作为扰动的部分，不把它当已知物理不变量。标签不混合，也不改输入曲线及其206衍生特征。对照plain同样消耗配对/概率随机数但不应用变换；interwell必须不同井，某窗口若批中无异井伙伴则不增强。两组验证/推理都完全关闭增强，网络不使用井编号作为特征。
+
+## 数据与初始化
+所有伙伴来自当步原64训练井锚点；16验证井从不参与增强、梯度、拟合或伙伴统计。分组井ID仅在训练时构建排除同井的布尔关系，不进入任何Linear/Attention/FiLM；输入井库仍只有曲线特征。源迁移模型及其SW前身都仅在原64井训练，沿用开发折选择的局限如实保留。
+初始完整144665点精确复现v50 PERM89.050808；当前全局配方仍PERM89.396724/TOTAL80.342771761689。不能把比低分父模型提高写成超过当前最优。原9曲线206、固定第五/seed20261010、Q50、1024上下文/中心128、原Gaussian8密度/默认门控/官方256支持点和800动作保持。
+
+## 训练、已做与待做
+已实现两项训练变换与计数证据；开始前无新成绩。共同新AdamWlr3e-5/wd.01/clip2、cosine80*64至1e-5，max80/pat18/min10/b64/64步；新调度并非v50优化器轨迹续跑。完整原子last_state含模型计数、优化器、调度、RNG和早停，显式恢复。最多2GPU、无自动队列，若明显失败可基于真实证据提前结束。
+直接实际训练，记录初始与最佳恢复、真实梯度及增强应用数/异井配对数。结束按官方PERM最佳实际三列评分，有保留价值候选磁盘重建；不重复旧密度数值检查。CUDA注意力/插值反向warn_only，不声称重新训练逐位确定。
+待做两项训练、完成后的匹配差/父差/当前最优差、增强非失活核验、负权重清理及PROJECTS/README/EXPLORATIONS/atlas更新。单项与并发总墙钟分开，含加载/输入库/预热/启动间隔，代码/最终重载另计。
+若本批增强没有最终匹配收益，不扫描概率、Beta参数或层位置；结论只限当前配置，不能否定所有跨井增强。原第五严格>80.5且明确收益才考虑其他折；完整OOF>82仍未完成。无其他折/旧任务/交付覆盖，目标达成后的独立新井确认与新目录交付尚未开始。
+
+
+## v51 plain显式启动
+{"pid": 62180, "mode": "plain", "started_at": "2026-09-29T19:12:54.630281+08:00", "command": ["C:\\Users\\z5364\\.conda\\envs\\normal\\python.exe", "-X", "utf8", "-u", "D:\\match_predict\\welllog-reservoir-hybrid\\experiments\\pure_dl\\train_perm_moment_mix_v51.py", "--mode", "plain", "--out", "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_perm_moment_mix_v51_PERM_plain_fold5"], "automatic_queue": false}
+
+
+## v51 interwell显式启动
+{"pid": 16860, "mode": "interwell", "started_at": "2026-09-29T19:13:19.568789+08:00", "command": ["C:\\Users\\z5364\\.conda\\envs\\normal\\python.exe", "-X", "utf8", "-u", "D:\\match_predict\\welllog-reservoir-hybrid\\experiments\\pure_dl\\train_perm_moment_mix_v51.py", "--mode", "interwell", "--out", "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_perm_moment_mix_v51_PERM_interwell_fold5"], "automatic_queue": false}
+
+
+## v51井条件对照完成
+两项完成，实际TOTAL=80.342771761689，采用None，训练后interwell-plain=+0.031618982727。详见perm_moment_mix_v51_20260929/FINAL.md；无其他折或交付修改。
+
+## v51最终结果与实际增强证据
+plain训练后最好第3轮PERM88.890099775317，interwell最好第5轮88.921718758043。训练后增强较对照+0.031618982727，但两者均低于同起点89.050807574234，均第18轮patience18结束并恢复第0轮；按预定义包含起点的最终选择，收益=0，不产生新有效模型。
+增强组真实训练1152批，累计36928窗口应用增强，异井配对数同为36928；对照增强数0。最佳恢复后计数0是回退起点，不是模块失活，实际末态证据保存在report的last_training_augmentation和逐轮历史。验证始终关闭增强，无新增井ID特征/验证统计拟合。
+两组初始参数、输出头和144665点预测哈希一致，初始精确复现v50，结束最佳恢复一致，源哈希及原三列实际评分已完成。当前TOTAL80.342771761689保持；原PERM89.396724、v50迁移候选和v48样条候选都保留。原第五严格>80.5与完整OOF>82未完成，不启动其他折。
+单项146.9093/149.3306秒，总墙钟179.067863秒，max2GPU，各峰值1252.30/1252.41MiB，含加载/输入库/预热/启动间隔，代码与收尾另计。两项全部结束无队列；删除本轮两项best/last四个冗余权重，保留来源和旧交付，哈希/字节见deletion_manifest.json。原CDF/父模型检查未重复运行。
+本轮停止此概率/Beta/层位置扫描，只限当前暖启动PERM与此增强位置。训练后减轻退化的微差不能升级为验证达标或稳定泛化改善；下一批需换机制，尚未启动。独立井确认/完整OOF/新目录交付仍未完成。
+
+
+## 2026-10-02 user-authorized artifact cleanup
+
+Obsolete artifacts have been removed; SUMMARY_RESULTS.json and SUMMARY.md retain historical scores and conclusions. Detailed logs/caches/weights are unavailable for these obsolete trials. Current V370 original + seed20261013, retained-model dependency closure, reusable source, original data and deliveries are preserved. See D:/match_predict/maintenance_cleanup_20261002/VERIFICATION.json.

@@ -1,0 +1,57 @@
+{
+  "scores": {
+    "POR": 78.04221263500206,
+    "PERM": 89.51580440487884,
+    "SW": 74.1695430320749,
+    "TOTAL": 80.70253539343442
+  },
+  "screening_fold": 5,
+  "validation_rows": 144665,
+  "strict_808_qualified": false,
+  "complete_five_folds": false,
+  "remaining_folds_started": false,
+  "fullOOF_verified": false,
+  "total_training_stages": 8,
+  "stages": [
+    "SOURCE",
+    "POR113",
+    "POR151",
+    "PERM154",
+    "SW104",
+    "POR335wide",
+    "PERM312rational",
+    "SW326depth"
+  ],
+  "added_head_stages": {
+    "POR": 1,
+    "PERM": 1,
+    "SW": 1
+  },
+  "heads": {
+    "POR": {
+      "checkpoint": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_por_curve_token_width_v335_fold5\\wide\\model_best.pt",
+      "sha256": "b65769d22990b593d334733be762a153f4ccf6a0a8f6dbbb340300dac1a14ea7"
+    },
+    "PERM": {
+      "checkpoint": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_perm_group_shape_v312_fold5\\rational\\model_best.pt",
+      "sha256": "8db467dcb459d295e0e3aabadd56a7a84e2134e568c8012a58dba2b7ea2ced1c"
+    },
+    "SW": {
+      "checkpoint": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_sw_latent_morphology_v326_fold5\\depth\\model_best.pt",
+      "sha256": "e03aaba7fdd6d95870d293d64d5ebc2bc41ab6671e7698f43dc682339a6c2023"
+    }
+  },
+  "pred_sha256": "d0d6ede7c54eec528f1b6b17621a158ff943049158691603f48cc1c958ca009d",
+  "verification": "Actual144665fixedwhole-target columns, terminalRAMbestreplay/frozenexact; notindependentdiskreload orfullOOF",
+  "independent_disk_reload": false,
+  "default_five_stage_unchanged": true,
+  "prior_optional8_artifacts_unchanged": true,
+  "gain_vs_prior326_recipe": 0.0034979522572200494,
+  "gain_vs_default_five": 0.09005997544048228,
+  "previous_recipe": "D:\\match_predict\\welllog-reservoir-hybrid\\results\\deep_learning\\sw_latent_morphology_v326_20261002\\CURRENT_EIGHT_STAGE_RECIPE.json",
+  "POR_continuous": 41.724510830138236,
+  "PERM_continuous": 74.00288840401272,
+  "SW_continuous": 17.96344208824835,
+  "single_seed_small_gain_not_robustness": true,
+  "selection_reason": "ReplacePORby335whole+CONTpositive, keepPERM312/SW326"
+}

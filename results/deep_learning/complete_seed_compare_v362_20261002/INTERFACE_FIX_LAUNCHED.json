@@ -1,0 +1,12 @@
+{
+  "controller_pid": 74228,
+  "reason": "manual isolated missing-model interface correction, failed attempt zero updates",
+  "previous_batch": {
+    "status": "failed_or_stopped",
+    "seed": 20261010,
+    "stage": "SW351",
+    "exit_code": 1,
+    "explicit_resume_only": true,
+    "no_retry": true
+  }
+}

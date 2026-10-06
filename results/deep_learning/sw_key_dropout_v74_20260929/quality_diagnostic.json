@@ -1,0 +1,22 @@
+{
+  "source": "results/deep_learning/champion_scaling_v21_20260928/prepared_data.pt",
+  "read": "CPU; existing training rows only, no training or validation-label use",
+  "quality_epoch": 50,
+  "quality_dynamic_updates": false,
+  "quality_source_sha256": "b96d498519c6a13ddd778ceb3ffef5fb03a8580902a903f2042cd3db3c593297",
+  "training_rows": 578891,
+  "downweighted_training_rows": 1755,
+  "training_quality_unique_values": 5,
+  "quality_quantiles_0_10_50_90_100": [
+    0.10000000149011612,
+    1.0,
+    1.0,
+    1.0,
+    1.0
+  ],
+  "sw_default_rows": 417468,
+  "sw_numeric_rows": 161423,
+  "sw_default_quality_mean": 0.9999302625656128,
+  "sw_numeric_quality_mean": 0.9913444519042969,
+  "action": "No new quality-weight experiment launched; limited intervention plus historical v37 evidence; Q50 remains unchanged for v74"
+}

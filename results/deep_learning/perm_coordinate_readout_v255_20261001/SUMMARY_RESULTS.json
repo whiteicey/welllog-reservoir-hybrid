@@ -1,0 +1,79 @@
+{
+  "project": "perm_coordinate_readout_v255_20261001",
+  "scope": "obsolete-study",
+  "weights_retained": false,
+  "cleanup": "Obsolete artifacts removed by explicit user request. These are historical scores, not newly verified training.",
+  "results": [
+    {
+      "source": "PAIRED_FINAL.json",
+      "result": {
+        "reports": {
+          "bilinear": {
+            "stage": "bilinear",
+            "target": "PERM",
+            "target_score": 89.40511463252616,
+            "initial_score": 89.4043983346458,
+            "against_initial": 0.0007162978803592068,
+            "against_v97_target": 0.008390583160348797,
+            "best_epoch": 3,
+            "stopped_epoch": 12,
+            "validation_rows": 144665,
+            "predictions_reproduced_exactly": true,
+            "frozen_parameters_exact": true,
+            "seconds": 251.374102199974,
+            "peak_MiB": 790.25244140625,
+            "complete_five_folds": false,
+            "early_terminated": true
+          },
+          "nonlinear": {
+            "stage": "nonlinear",
+            "target": "PERM",
+            "target_score": 89.40563494917319,
+            "initial_score": 89.4043983346458,
+            "against_initial": 0.001236614527385882,
+            "against_v97_target": 0.008910899807375472,
+            "best_epoch": 2,
+            "stopped_epoch": 12,
+            "validation_rows": 144665,
+            "predictions_reproduced_exactly": true,
+            "frozen_parameters_exact": true,
+            "seconds": 250.07436189998407,
+            "peak_MiB": 790.25244140625,
+            "complete_five_folds": false,
+            "early_terminated": true
+          }
+        },
+        "timing": {
+          "excludes_code_preparation": true,
+          "arms": {
+            "bilinear": {
+              "process_creation_utc_seconds": 1790863684.757,
+              "pid": 39824
+            },
+            "nonlinear": {
+              "process_creation_utc_seconds": 1790863684.764,
+              "pid": 69904
+            }
+          },
+          "pair_wallclock_pending": false,
+          "maximum_GPU_jobs": 2,
+          "concurrent": true,
+          "includes_startup_model_data_initial_eval": true,
+          "pair_wallclock_seconds": 257.70889806747437,
+          "individual_seconds": {
+            "bilinear": 251.374102199974,
+            "nonlinear": 250.07436189998407
+          },
+          "serial_speedup_measured": false
+        },
+        "nonlinear_minus_bilinear": 0.0005203166470266751,
+        "equal_bounded_epochs": 12,
+        "absolute_below_retained": true,
+        "complete_five_folds": false
+      }
+    }
+  ],
+  "cleanup_completed": true,
+  "deleted_files": 15,
+  "deleted_bytes": 6960097
+}

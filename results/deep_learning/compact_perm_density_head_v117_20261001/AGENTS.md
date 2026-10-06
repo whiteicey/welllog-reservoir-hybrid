@@ -1,0 +1,1 @@
+Maintain PROJECTS/README/EXPLORATIONS/atlas. Only one joint-density PERM architecture; frozen source density/backbone, proper Gaussian NLL/CDF, original data/score,5 total training stages, normal/max2GPU and80/18. Atomic full last and explicit resume, no auto other folds/old-source/delivery mutation.

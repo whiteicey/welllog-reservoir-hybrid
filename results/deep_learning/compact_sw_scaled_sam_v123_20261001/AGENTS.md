@@ -1,0 +1,1 @@
+Maintain PROJECTS/README/EXPLORATIONS/atlas. Only tensorRMS-direction SAME globalL2radiusSAM.1 candidate, ownSW labels, original inputs/split/scoring/Q/decoder and80/18, normal/max2GPU.5 phases incl source/parent. Atomic complete state, explicit resume, no radius/LR sweep/queue/otherfolds/oldsource/delivery mutation.

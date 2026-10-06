@@ -1,0 +1,19 @@
+﻿{
+    "created_at":  "2026-09-29T17:12:43.3702925+08:00",
+    "deleted":  [
+                    {
+                        "path":  "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_well_conditioned_v46_SW_reference_fold5\\model_best.pt",
+                        "bytes":  3434699,
+                        "sha256":  "83D6379F2D8F578F442568E666CA85DBFF1577F9B4A11915FE9FFFE0779F198B",
+                        "reason":  "Finished reference control: best epoch0, no training improvement; parent v45 and well positive weights preserved"
+                    },
+                    {
+                        "path":  "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_well_conditioned_v46_SW_reference_fold5\\last_state.pt",
+                        "bytes":  15552955,
+                        "sha256":  "ED8C6741940967ED9B7877DFC09AAA605D6947EE3B20CF98CECAA6A1F7510FCF",
+                        "reason":  "Finished reference control: best epoch0, no training improvement; parent v45 and well positive weights preserved"
+                    }
+                ],
+    "bytes":  18987654,
+    "scope":  "Only two explicit finished reference checkpoint files; sources, compact evidence, selected weights, and deliveries preserved"
+}

@@ -1,0 +1,133 @@
+{
+  "project": "sw_rankone_continuous_v296_20261002",
+  "scope": "obsolete-study",
+  "weights_retained": false,
+  "cleanup": "Obsolete artifacts removed by explicit user request. These are historical scores, not newly verified training.",
+  "results": [
+    {
+      "source": "independent_FINAL.json",
+      "result": {
+        "report": {
+          "stage": "independent",
+          "target": "SW",
+          "target_score": 74.15353067655211,
+          "initial_score": 74.12175268976877,
+          "against_initial": 0.03177798678333943,
+          "against_v97_target": 0.011350771885403788,
+          "best_epoch": 17,
+          "stopped_epoch": 31,
+          "validation_rows": 144665,
+          "predictions_reproduced_exactly": true,
+          "frozen_parameters_exact": true,
+          "seconds": 687.0769191000145,
+          "peak_MiB": 2424.8310546875,
+          "complete_five_folds": false,
+          "early_terminated": false
+        },
+        "versus289": -0.00019575244719760576,
+        "strata": {
+          "SW252": {
+            "default": 98.64493054166336,
+            "continuous": 17.88486813991017,
+            "overall": 74.14922820781207
+          },
+          "SW289": {
+            "default": 98.72311025198368,
+            "continuous": 17.72012680313723,
+            "overall": 74.1537264289993
+          },
+          "SW296independent": {
+            "default": 98.83016481677804,
+            "continuous": 17.473587002886575,
+            "overall": 74.15353067655211
+          }
+        },
+        "paired_pooled_final_pending": true,
+        "independent_disk_reload": false,
+        "remaining_folds_started": false
+      }
+    },
+    {
+      "source": "PAIRED_FINAL.json",
+      "result": {
+        "reports": {
+          "independent": {
+            "stage": "independent",
+            "target": "SW",
+            "target_score": 74.15353067655211,
+            "initial_score": 74.12175268976877,
+            "against_initial": 0.03177798678333943,
+            "against_v97_target": 0.011350771885403788,
+            "best_epoch": 17,
+            "stopped_epoch": 31,
+            "validation_rows": 144665,
+            "predictions_reproduced_exactly": true,
+            "frozen_parameters_exact": true,
+            "seconds": 687.0769191000145,
+            "peak_MiB": 2424.8310546875,
+            "complete_five_folds": false,
+            "early_terminated": false
+          },
+          "pooled": {
+            "stage": "pooled",
+            "target": "SW",
+            "target_score": 74.15375037282021,
+            "initial_score": 74.12175268976877,
+            "against_initial": 0.03199768305144346,
+            "against_v97_target": 0.011570468153507818,
+            "best_epoch": 17,
+            "stopped_epoch": 31,
+            "validation_rows": 144665,
+            "predictions_reproduced_exactly": true,
+            "frozen_parameters_exact": true,
+            "seconds": 762.1443607000401,
+            "peak_MiB": 2424.8310546875,
+            "complete_five_folds": false,
+            "early_terminated": false
+          }
+        },
+        "strata": {
+          "independent": {
+            "SW": 74.15353067655211,
+            "default_SW": 98.83016481677804,
+            "continuous_SW": 17.473587002886575
+          },
+          "pooled": {
+            "SW": 74.15375037282021,
+            "default_SW": 98.83240242049845,
+            "continuous_SW": 17.46917175258595
+          }
+        },
+        "independent_minus_pooled": -0.00021969626810403042,
+        "gain_pooled_vs289": 2.3943820906424662e-05,
+        "continuous_reference252": 17.88486813991017,
+        "timing": {
+          "independent_start_epoch": 1790874096.7028792,
+          "concurrency": 2,
+          "terminal": true,
+          "includes_prep_initial_train_final": true,
+          "excludes_codeprep_CPUcomposition": true,
+          "pooled_start_epoch": 1790874861.0836124,
+          "codeprep_CPUassembly_excluded": true,
+          "total_paired_wall_seconds": 1533.245132446289,
+          "individual_seconds": {
+            "independent": 687.0769191000145,
+            "pooled": 762.1443607000401
+          },
+          "peak_MiB": {
+            "independent": 2424.8310546875,
+            "pooled": 2424.8310546875
+          },
+          "measurement_scope": "Data/initial/train/final replay included; staggered partial overlap and gap with other studies, not isolated speed benchmark; CPU record and codeprep excluded"
+        },
+        "adopted": false,
+        "remaining_folds_started": false,
+        "complete_five_folds": false,
+        "conclusion": "Independent member auxiliary CE does not beat pooled CE; tiny overall differences and lower continuous scores do not support continuing this setting. Historical TabM positives are not negated."
+      }
+    }
+  ],
+  "cleanup_completed": true,
+  "deleted_files": 12,
+  "deleted_bytes": 6955634
+}

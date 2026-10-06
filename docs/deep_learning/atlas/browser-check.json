@@ -1,0 +1,51 @@
+{
+  "passed": true,
+  "page_errors": [],
+  "checks": [
+    {
+      "name": "offline_load",
+      "nodes": 325,
+      "edges": 649
+    },
+    {
+      "name": "svg_click_keyboard_and_zoom",
+      "passed": true
+    },
+    {
+      "name": "search_list_detail_lineage_locate",
+      "passed": true
+    },
+    {
+      "name": "all_edges_left_to_right_one_row_per_theme",
+      "edges": 649,
+      "backwards": 0,
+      "splitThemes": [],
+      "reversingPaths": 0,
+      "laneCount": 8
+    },
+    {
+      "name": "all_records_and_empty",
+      "passed": true
+    },
+    {
+      "name": "dead_end_reason_and_scores",
+      "passed": true
+    },
+    {
+      "name": "viewport_1366x768",
+      "horizontal_overflow": false
+    },
+    {
+      "name": "viewport_1920x1080",
+      "horizontal_overflow": false
+    },
+    {
+      "name": "viewport_390x844",
+      "horizontal_overflow": false
+    },
+    {
+      "name": "mobile_search_and_detail",
+      "passed": true
+    }
+  ]
+}

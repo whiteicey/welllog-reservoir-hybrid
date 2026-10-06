@@ -1,0 +1,70 @@
+{
+  "pair": "original__seed_20261014",
+  "screening_fold": 5,
+  "rows": 144665,
+  "standalone_original": {
+    "POR": 78.04643071793232,
+    "PERM": 89.51838939879066,
+    "SW": 74.17361205223327,
+    "TOTAL": 80.70612972323806
+  },
+  "standalone_seed14": {
+    "POR": 77.42032846923811,
+    "PERM": 89.44922714148387,
+    "SW": 73.79607662428037,
+    "TOTAL": 80.36195485878892
+  },
+  "equal_scores": {
+    "POR": 78.20281880714568,
+    "PERM": 89.69976763306504,
+    "SW": 74.21419510529795,
+    "TOTAL": 80.83073260057074
+  },
+  "common_best_weight_original": 0.58,
+  "common_scores": {
+    "POR": 78.18935872580536,
+    "PERM": 89.71347649954551,
+    "SW": 74.24397293418174,
+    "TOTAL": 80.84191491954614
+  },
+  "per_head_scores": {
+    "POR": 78.20564817956807,
+    "PERM": 89.71484414555762,
+    "SW": 74.25055066518057,
+    "TOTAL": 80.84958263762879
+  },
+  "per_head_weights": {
+    "POR": {
+      "weight_original": 0.52,
+      "weight_seed14": 0.48,
+      "score": 78.20564817956807,
+      "index": 52
+    },
+    "PERM": {
+      "weight_original": 0.59,
+      "weight_seed14": 0.41000000000000003,
+      "score": 89.71484414555762,
+      "index": 59
+    },
+    "SW": {
+      "weight_original": 0.6,
+      "weight_seed14": 0.4,
+      "score": 74.25055066518057,
+      "index": 60
+    }
+  },
+  "delta_vs_original": 0.14345291439072128,
+  "delta_vs_original_seed13": -0.01387491975276589,
+  "native_disk_replay_exact": true,
+  "coverage_once": true,
+  "assembled_prediction_disk_readback_exact": true,
+  "scope": "same fifth pair/weight tuning diagnostic, not fullCV",
+  "remaining_fold_pair_unchanged": "original__seed_20261013",
+  "timing": {
+    "CPU_seconds": 4.462391800014302,
+    "GPU_phase_sum_seconds": 35.375065899977926,
+    "concurrency": "three GPU heads serial; CPU preparation may overlap",
+    "includes": "load/warmup/native forward/grid/write and CPU scoring"
+  },
+  "metadata_correction": "Inherited concurrent_training_continues=true in GPU reports is inapplicable: V362 was already complete for all three; no training active during scans."
+}

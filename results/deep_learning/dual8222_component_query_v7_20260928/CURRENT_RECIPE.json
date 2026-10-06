@@ -1,0 +1,22 @@
+{
+  "mode": "point32",
+  "scores": {
+    "POR": 77.44891570750882,
+    "PERM": 89.3475027344081,
+    "SW": 73.62238476712884,
+    "TOTAL": 80.27413533779057
+  },
+  "readout_checkpoint": "outputs\\pure_dl_dual8222_v5_location_point3280_fold5\\readout_checkpoint.pt",
+  "source_backbone": "outputs\\pure_dl_paired_local_context_router80_sequence\\fold_5.pt",
+  "model_module": "dual8222_location_readout_v5",
+  "initialization_manifest_embedded": true,
+  "readout_state_key": "readout.head_state_dict",
+  "runtime_requires_new_readout_module": true,
+  "reloaded_exactly": true,
+  "development_selection": true,
+  "not_submission_replacement": true,
+  "extra_folds": false,
+  "new_v7_model_adopted": false,
+  "decision": "Both completed query heads failed to improve the source; preserve verifiedv5.",
+  "reload_note": "No repeated source reload because no improved candidate exists."
+}

@@ -1,0 +1,23 @@
+{
+  "nodes": {
+    "title": "v112 POR Cauchy位置读出",
+    "summary": "复用v101同容量/原始raw初始化位置读出，固定分量IQR匹配，Cauchy无有限均值/方差；自身POR似然和预测CDF同步更改，初始函数不同，不计作训练收益。原输入/Q50/80-18/动作评分人口不变，含源4阶段。",
+    "highlight": false,
+    "stage": "optimization",
+    "status": "prepared",
+    "evidence": [
+      "results/deep_learning/compact_por_cauchy_v112_20261001/README.md"
+    ],
+    "resultText": "已实现，未训练；无收益",
+    "conclusion": "已实现，未训练；无收益"
+  },
+  "edges": [
+    {
+      "source": "pure_dl_compact_mean_scope_v101_fold5/por",
+      "target": "pure_dl_compact_por_cauchy_v112_fold5/hierarchical",
+      "type": "comparison",
+      "note": "相同网络/raw初始化/预算，历史Student-t3控制复用；密度族同时影响训练和预测，初始函数不同",
+      "evidence": "docs/deep_learning/EXPERIMENTS.md"
+    }
+  ]
+}

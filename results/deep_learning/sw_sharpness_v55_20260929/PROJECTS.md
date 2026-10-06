@@ -1,0 +1,44 @@
+# v55 当前独立SW模型的权重扰动优化
+
+## 探索重点与预定义对照
+v54分层抽样两组均回退，停止比例扫描。本批adamw/sam同836921参数、同v46 SW第9轮完整函数/头/骨干起点，仅改变参数更新方式。原组合TOTAL80.342771761689，SW73.680963725271保持。
+adamw正常一次前反向与AdamW更新；sam每步同一批训练窗口计算g，沿rho*g/(||g||2+1e-12)扰动全部有梯度参数，rho固定0.05；在扰动位置重新计算梯度，精确复制恢复原权重后clip2并作一次AdamW更新。两次前向沿用相同随机状态，不把扰动权重保存为模型。复用已有sam_sequence_step.py，其finally恢复逻辑保持不变，不重复历史解析自检。
+两组每轮64次优化器更新，SAM两遍前反向，非等计算量比较；记录单项和批次总墙钟、显存与实际closure次数。原网络没有BatchNorm运行统计；当前LayerNorm和输入井编码均随全模型训练。扰动所用标签/损失只有原64训练井SW，无验证梯度或测试标签。
+历史pure_dl_sam_sequence曾在旧1000641参数多目标模型跑部分折，结果不能支持本配置收益，也不恢复该旧队列。这里是在当前单目标、长井段/整井条件模型上的独立对照，不声称首次使用SAM，不扫描rho网格。方法来源：[原论文](https://arxiv.org/abs/2010.01412)、[官方项目](https://github.com/google-research/sam)。本地PyTorch实现，不加载官方预训练权重。
+
+## 数据、目标与训练约束
+恢复原批次有效点均值Q50*(SW BCE+Gaussian NLL)/3，不使用v54窗口均值或分层采样。两组均原64井均匀训练锚点、相同seed20261010/采样生成器；原9曲线206、1024上下文/中心128、原第五16井144665点、原256支持点/800动作+默认解码及评分不改。训练侧预处理/质量/网格保持，输入井库只含该井输入，不含标签/井ID特征。源模型来自同开发折选模，不能声称独立新井验证。
+共同新AdamWlr3e-5/wd.01、cosine80*64至1e-5、max80/pat18/min10/b64/64步，最佳官方SW选模且允许恢复第0轮。骨干/FiLM/输出均训练，三目标模型保持独立，其他目标仅固定列用于组合。原子last_state保存当前/最佳网络、优化器/调度器/RNG/早停；显式恢复，最多2GPU，无自动队列/旧任务/其他折/交付覆盖。
+
+## 已完成、待做与不继续边界
+已实现两组训练与复用SAM更新；开始前无成绩。直接真实训练，首个实际第二步记录参数扰动L2、两遍损失和最终梯度，每轮记录实际closure次数，不追加数值预检/独立审查。结束检查初始参数/预测相同、原始权重恢复的已知实现依赖、源码哈希、144665点最佳恢复与三列实际评分。有价值候选磁盘重建；无价值权重清理，源码/配置/成绩及删除清单保留。
+待做实际训练结果、相对同容量对照和当前成绩的差、真实额外计算成本、PROJECTS/README/EXPLORATIONS/atlas更新。若SAM无含起点的选模收益，不扩展rho或优化器组合；仅限本热启动/尺度/数据，不泛化全部锐度优化无效。若训练后两组均差于起点，小差异不算可采用的收益。实际曲线明显无望可提前结束。
+单项和并发总墙钟包括加载/输入库/预热/启动间隔，代码/最终磁盘重建另计。第五严格>80.5且有明确收益后才考虑其余折；完整原五折OOF>82、独立井确认与新目录交付仍未完成。
+
+
+## v55 adamw显式启动
+{"pid": 45724, "mode": "adamw", "started_at": "2026-09-29T20:21:35.941791+08:00", "command": ["C:\\Users\\z5364\\.conda\\envs\\normal\\python.exe", "-X", "utf8", "-u", "D:\\match_predict\\welllog-reservoir-hybrid\\experiments\\pure_dl\\train_sw_sharpness_v55.py", "--mode", "adamw", "--out", "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_sw_sharpness_v55_SW_adamw_fold5"], "automatic_queue": false}
+
+
+## v55 sam显式启动
+{"pid": 53148, "mode": "sam", "started_at": "2026-09-29T20:21:48.663426+08:00", "command": ["C:\\Users\\z5364\\.conda\\envs\\normal\\python.exe", "-X", "utf8", "-u", "D:\\match_predict\\welllog-reservoir-hybrid\\experiments\\pure_dl\\train_sw_sharpness_v55.py", "--mode", "sam", "--out", "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_sw_sharpness_v55_SW_sam_fold5"], "automatic_queue": false}
+
+
+## v55井条件对照完成
+两项完成，实际TOTAL=80.342771761689，采用None，训练后sam-adamw=+0.104051059886。详见sw_sharpness_v55_20260929/FINAL.md；无其他折或交付修改。
+
+
+## v55最终结果与保留边界
+adamw：SW 73.680963725271，最佳第0轮，停止第18轮（patience18）。
+sam：SW 73.680963725271，最佳第0轮，停止第18轮（patience18）。
+SAM-AdamWSW=+0.000000000000；当前SW=73.680963725271，实际组合TOTAL=80.342771761689。新采用=False。
+SAM无最终匹配收益，停止当前rho/优化器组合扫描；不把训练后两个退化成绩间的小差写成有效模型。
+两组同836921参数、同v46SW完整起点/144665点预测；全骨干只用SW标签与Gaussian损失。两组共同原批次点均值风险；SAM同批两遍、固定rho.05、精确恢复扰动权重后更新，原Q保持，非等计算量。训练梯度、来源哈希、最佳恢复和真实三列评分已核验；保留候选磁盘重建=False。不重复未改密度公式检查。
+单项耗时分别[170.059, 246.178]秒；双并发总墙钟263.480秒，包含加载/输入库/预热/启动间隔；每任务峰值MiB=[1249.71, 1256.12]，代码与最终重建另计。
+已删除4个本轮负检查点，共37951500字节；保留源码、配置、曲线、预测与哈希清单，当前模型及既有正候选/交付不变。无训练队列，无其他折。
+第五折严格>80.5和完整原五折OOF>82仍未完成。后续只携带已证实局部收益探索独立机制；新实验尚未启动，不计为收益。目标完成后可做独立井确认及新目录交付。
+
+
+## v55实际更新与未采用原因
+{"adamw": {"epochs": 18, "optimizer_updates": 1152, "training_forward_backward_passes": 1152, "post_update_best_epoch": 1, "post_update_best_score": 73.48902287696937, "initial_recovered": true, "first_actual_perturbation_L2": null, "last_epoch_mean_perturbed_minus_base": 0.0}, "sam": {"epochs": 18, "optimizer_updates": 1152, "training_forward_backward_passes": 2304, "post_update_best_epoch": 17, "post_update_best_score": 73.593073936855, "initial_recovered": true, "first_actual_perturbation_L2": 0.05000000074505806, "last_epoch_mean_perturbed_minus_base": 0.024398546491283923}}
+SAM已实际执行两遍、固定L2扰动；两组优化器更新数相同而训练前反向数不同。训练后较对照减轻退化并不等于超过共同起点；完整选模均恢复第0轮。没有声称得到独立新井收益，也未重复旧SAM解析自检。

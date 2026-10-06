@@ -1,0 +1,24 @@
+{
+  "passed": true,
+  "wells": 10,
+  "rows": 95948,
+  "all723556_oof_predictions_exact": true,
+  "official_oof_scores": {
+    "POR": 79.33058096543338,
+    "PERM": 90.44127043721572,
+    "SW": 75.53542958448546,
+    "TOTAL": 81.89101929722543
+  },
+  "manifest_all_hashes_match": true,
+  "final_zip_crc_passed": true,
+  "final_extracted_runtime_matches_executed_candidate": true,
+  "standalone_cli_all_test_result_bytes_exact": true,
+  "original_workspace_and_train_reads_blocked": true,
+  "result_zip_json_bytes_match": true,
+  "result_sha256": "06e2a5baff6243111718401e9d3043e70e519d80b3ccc60f3377975e4ddb5760",
+  "result_zip_sha256": "b7feacce3664ff4722483d85e4e73dae981c4984ba7be1cfc4a54188594c220e",
+  "code_zip_sha256": "8d6f0fb0d70137dad0220183657d394afb16c58ffda9a41a4d40c4119813bd77",
+  "code_zip_bytes": 85186596,
+  "code_files": 270,
+  "test_accuracy": "unknown; test labels unavailable"
+}

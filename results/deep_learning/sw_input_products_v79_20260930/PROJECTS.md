@@ -1,0 +1,30 @@
+# v79 SW显式曲线输入交互对照
+
+## 探索重点与相同条件
+v78低学习率全网络微调/独立掩码没有收益，两项回到原函数；不继续该分支。本批冻结当前v77 p40 SW完整模型（SW73.740423322864，组合TOTAL80.363582620846），只在207→96 stem的GELU之前加4320参数的45→96无偏置零初始化适配器。原9曲线206维、相对深度和所有旧层不删改。
+两项marginal/cross同参数与完整初始预测：提取原206输入里GR/PE/SP/CAL/AC/DEN/CNL/RXO/RT对应的已按原训练井处理的数值，z=tanh(x/3)；marginal用九曲线各自2~6次幂共45维，cross用含对角的上三角45个z_i*z_j。仅新特征基不同，不新增统计拟合或标签特征；不是v32局部相关统计输出头，也不是v56隐藏FF乘法。假设显式幅值交互能用小参数适应SW；控制检验相同新增容量的单曲线非线性。
+delta=0.25*tanh(Wfeature/0.25)，每个stem激活修正有界；这不是原测井值或SW预测的物理界。旧参数/原FiLM/旧输出全部冻结且eval模式，训练也不再丢旧attention key；只对新输入适配器反传SW自身BCE+8Gaussian NLL，固定POR/PERM。两组原模型、适配器初始张量和窗口RNG一致。新AdamW3e-4/wd.01/clip2、cos80*64至1e-5、max80/pat18/min10/b64/64steps，优化器重置。
+原64训练井/第五16井144665点、Q50、seed20261010、1024上下文中心128、256支持/800动作解码不变。原子完整状态/RNG，只显式恢复；无外部数据/未知标签/其他折。
+
+## 已探索、收益与不继续
+已实现，启动没有新成绩；直接训练。实际训练初始评价须恢复全部原预测，不单独数值预检或代码审查。记录新层梯度、旧层无梯度、原权重逐位冻结、最佳恢复和实际三列评分；正候选磁盘重建。分别报告cross-marginal及各自相对父模型的差、含起点/训练后最佳成绩，开发折反复选择不当独立泛化证据。
+cross若无固定消融收益不继续该乘积基的阶数/组合细扫；两项若都无绝对收益也不继续此stem适配器幅度/容量细扫，不泛化所有特征工程。只保留有效候选，负或重复checkpoint先写清单后删除；完整来源/历史正候选/旧交付保留。最多2GPU，根据实际资源启动第二项，无自动队列；单项和同等工作量总墙钟、并发/显存均记录，加载/预热/训练/评价/保存/启动间隔计入，代码与收尾分开。
+维护PROJECTS/README/EXPLORATIONS/图谱。严格原第五>80.5且明确收益才考虑其余折，完整原五折OOF>82仍未达成；目标后独立井确认和新目录交付。
+
+
+## v79 marginal显式启动
+{"pid": 61164, "mode": "marginal", "started_at": "2026-09-30T09:36:30.565676+08:00", "command": ["C:\\Users\\z5364\\.conda\\envs\\normal\\python.exe", "-X", "utf8", "-u", "D:\\match_predict\\welllog-reservoir-hybrid\\experiments\\pure_dl\\train_sw_input_products_v79.py", "--mode", "marginal", "--out", "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_sw_input_products_v79_SW_marginal_fold5"], "automatic_queue": false}
+
+
+## v79 cross显式启动
+{"pid": 51620, "mode": "cross", "started_at": "2026-09-30T09:37:17.249903+08:00", "command": ["C:\\Users\\z5364\\.conda\\envs\\normal\\python.exe", "-X", "utf8", "-u", "D:\\match_predict\\welllog-reservoir-hybrid\\experiments\\pure_dl\\train_sw_input_products_v79.py", "--mode", "cross", "--out", "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_sw_input_products_v79_SW_cross_fold5"], "automatic_queue": false}
+
+
+## v79最终结果
+两项完成，当前独立通道路线TOTAL=80.363582620846，相对起点+0.000000000000；cross-marginal SW=+0.000000000000，训练后差-0.078260630721。采用=None，保留=[]；负或重复权重清理，原来源/交付保留，无其他折。完整OOF>82未完成。见sw_input_products_v79_20260930/FINAL.md。
+
+
+## v79关闭范围与实际结论
+两项均恢复原v77完整函数，本批最佳轮0，原始所有权重在末状态和恢复后逐位冻结。训练后最高SW：marginal=73.609305838286、cross=73.531045207564，cross-marginal=-0.078260630721；含起点差0，无绝对收益。关闭当前乘积基阶数/组合及这组stem适配器幅度/容量细扫，不泛化全部特征工程。
+旧config保留不可改；其中matched_key_dropout_comparison是模板遗留字段，真实比较为输入基、实际两组训练key失活均0，见metadata_clarification.json。此文字元数据不影响计算；源码哈希保持。四个负/重复checkpoint24,642,364字节按清单删除，完整v77及历史正模型/交付保留。无新正候选，不额外GPU重建；实际初始预测/最佳恢复/原三列评分通过。当前TOTAL80.363582620846保持，严格80.5与完整OOF>82未达成，无其他折/旧队列。
+两个单项108.599860/107.835349秒，峰值1155.106934/1154.857422MiB，实际2并发；启动至最后训练结束160.299055秒（2.67分钟），至结果核验290.191695秒（4.84分钟）。加载预热训练评价保存及启动间隔计入，作者准备与图谱收尾另计。后续优先输出学习机制，不继续这组输入基细扫；未启动新队列。

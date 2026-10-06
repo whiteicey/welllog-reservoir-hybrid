@@ -1,0 +1,128 @@
+{
+  "observed_epoch": 1790951790.3283439,
+  "rows": 723556,
+  "folds": [
+    {
+      "fold": 1,
+      "rows": 144621,
+      "fixed_TOTAL": 82.97665676571843,
+      "uniform_native_grid_columns_exact": true,
+      "train_wells": 64,
+      "heldout_wells": 16
+    },
+    {
+      "fold": 2,
+      "rows": 144667,
+      "fixed_TOTAL": 81.88632645484104,
+      "uniform_native_grid_columns_exact": true,
+      "train_wells": 64,
+      "heldout_wells": 16
+    },
+    {
+      "fold": 3,
+      "rows": 145090,
+      "fixed_TOTAL": 82.95608717921664,
+      "uniform_native_grid_columns_exact": true,
+      "train_wells": 64,
+      "heldout_wells": 16
+    },
+    {
+      "fold": 4,
+      "rows": 144513,
+      "fixed_TOTAL": 82.15247725207799,
+      "uniform_native_grid_columns_exact": true,
+      "train_wells": 64,
+      "heldout_wells": 16
+    },
+    {
+      "fold": 5,
+      "rows": 144665,
+      "fixed_TOTAL": 80.86345755738155,
+      "uniform_native_grid_columns_exact": true,
+      "train_wells": 64,
+      "heldout_wells": 16
+    }
+  ],
+  "scores": {
+    "fixed": {
+      "POR": 79.82902159965268,
+      "PERM": 90.7512176606251,
+      "SW": 75.58795688876792,
+      "TOTAL": 82.16741757218335
+    },
+    "diagnostic": {
+      "POR": 79.8783404937237,
+      "PERM": 90.7642668738331,
+      "SW": 75.61044541308326,
+      "TOTAL": 82.19465144853783
+    },
+    "original": {
+      "POR": 79.54232244907331,
+      "PERM": 90.58546986846994,
+      "SW": 75.49126232696625,
+      "TOTAL": 81.98955300312466
+    },
+    "seed13": {
+      "POR": 79.45870068109176,
+      "PERM": 90.56304127715575,
+      "SW": 75.36791457922408,
+      "TOTAL": 81.91344475406046
+    }
+  },
+  "canonical_population_and_group_split_exact": true,
+  "coverage_once": true,
+  "unchanged_uniform_fixed_weights": {
+    "POR": 0.56,
+    "PERM": 0.44,
+    "SW": 0.68
+  },
+  "OOF_exact_to_fold_files": true,
+  "frozen_code_hashes": {
+    "experiments/pure_dl/fullcv_pair_context_v370.py": true,
+    "experiments/pure_dl/pair_fullcv_models_v370.py": true,
+    "experiments/pure_dl/train_pair_fullcv_source_v370.py": true,
+    "experiments/pure_dl/train_pair_fullcv_stage_v370.py": true,
+    "experiments/pure_dl/evaluate_pair_fullcv_v370.py": true,
+    "experiments/pure_dl/record_pair_fullcv_v370.py": true,
+    "experiments/pure_dl/run_pair_fullcv_v370.py": true
+  },
+  "reused_fifth_head_checkpoint_sha256": {
+    "original": {
+      "POR": "878444dafeb7e8205d44315715ca3ac6870386b28741c7669e965977195d5af2",
+      "PERM": "e61bce6f693b86380c98dbb0ecfdd6bd7d53d281cad92d3fe9295917f22ea0f0",
+      "SW": "48ea1314a9cf9e3d4f30d92b939bc8cf9da3fa1769c15431f53d297566cf4206"
+    },
+    "seed_20261013": {
+      "POR": "4979216f2196ac701da12712ea0632da9d0a2f527708bf38342ad34454677061",
+      "PERM": "3ef4eaf7dea84c889888c37cda1fa0545894340614e357ce1a930a40d99410b4",
+      "SW": "8dfcd82728e8432a26bb495ae354d7a2806e589850312f30cc0052878f8e5caf"
+    }
+  },
+  "reused_fifth_source_row_and_Q_provenance": {
+    "original": {
+      "source_sha256": "45a09476e3126820688420579c100c86e0e4f45df335904380a298cf5f66b9a9",
+      "original_training_validation_rows_exact": true,
+      "best_epoch": 52,
+      "quality_epoch": 50,
+      "trace_sha256": "b96d498519c6a13ddd778ceb3ffef5fb03a8580902a903f2042cd3db3c593297"
+    },
+    "seed_20261013": {
+      "source_sha256": "914ee8d14be5c05f9bea14a3faeedb9dc2a2129ae1ffb4bc0e7cceab07b6cbd5",
+      "original_training_validation_rows_exact": true,
+      "best_epoch": 40,
+      "quality_epoch": 38,
+      "trace_sha256": "7d382888715c911eb4994ce5965a0bbc872f0a388f10a2b2c9a07a2372a80311"
+    }
+  },
+  "artifact_sha256": {
+    "fixed": "fafe2baa4adb31cbf69238d157218aa1cba5384d1e3b8b695d37e9839b9fe5c4",
+    "diagnostic": "590021d1c00fbd21c4955f527ca86231ebd30e4ce3024bf1ed42c3e62304202f",
+    "original": "825b25d715a16b547326ec4a78ac4647de50aa051e267ca1c0a135b0225d0320",
+    "seed13": "fe0b944974b51899dca1545e25a95a9e1f3de993b137a570f137e3ffab4f85b8"
+  },
+  "fixed_strictly_above82": true,
+  "CPU_only": true,
+  "scope": "Canonical OOF assembly and native uniform fusion audit; training provenance is separate",
+  "fixed_scope": "Pair and ratios selected on fifth; selection boundary remains disclosed",
+  "diagnostic_scope": "Each scored fold selects its head ratios; tuning diagnostic, not unbiased accuracy"
+}

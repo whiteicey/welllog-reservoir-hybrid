@@ -1,0 +1,1 @@
+MaintainPROJECTS/README/atlas. Original151 prior/gate frozen only, new sparseencoder/readout jointlytrain, oneaddedPORphase/max8. No290/291weights. Original9/206/splits/Q/scoring/80-14/max2GPU; no autoqueue/otherfolds belowstrict80.8meaningfulgain.

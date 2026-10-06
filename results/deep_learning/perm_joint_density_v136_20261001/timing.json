@@ -1,0 +1,8 @@
+{
+  "training_seconds": 531.0529618000146,
+  "launch_to_report_wall_seconds": 538.496495,
+  "peak_MiB": 786.46533203125,
+  "overlap_other_backbone": true,
+  "data_loading_and_warmup_in_wall": true,
+  "serial_equal_work_not_measured": true
+}

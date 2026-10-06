@@ -1,0 +1,132 @@
+{
+  "project": "sw_curve_interaction_v344_20261002",
+  "scope": "obsolete-study",
+  "weights_retained": false,
+  "cleanup": "Obsolete artifacts removed by explicit user request. These are historical scores, not newly verified training.",
+  "results": [
+    {
+      "source": "PAIRED_FINAL.json",
+      "result": {
+        "arms": {
+          "full": {
+            "report": {
+              "stage": "full",
+              "target": "SW",
+              "target_score": 74.14772933952052,
+              "initial_score": 74.12175268976877,
+              "against_initial": 0.02597664975175462,
+              "against_v97_target": 0.00554943485381898,
+              "best_epoch": 13,
+              "stopped_epoch": 27,
+              "validation_rows": 144665,
+              "predictions_reproduced_exactly": true,
+              "frozen_parameters_exact": true,
+              "seconds": 306.95118960004766,
+              "peak_MiB": 2080.373046875,
+              "complete_five_folds": false,
+              "early_terminated": false
+            },
+            "strata": {
+              "default": 98.63407983694479,
+              "continuous": 17.90484957395344
+            },
+            "whole_vs326": -0.021813692554374597,
+            "CONT_vs326": -0.05859251429490797,
+            "CONT_vs104": 0.2729605134733539,
+            "predefined27": {
+              "through_epoch": 27,
+              "best_epoch": 13,
+              "target_score": 74.14772933952052,
+              "control_actual_epochs": 27,
+              "nominal_budget": 80,
+              "comparison": "Predefined bestthrough27 vs historical326depth natural27; +19024 capacity not causal curve gain, laterbest not equalwork",
+              "strata": {
+                "default": 98.63407983694479,
+                "continuous": 17.90484957395344
+              }
+            },
+            "full_best_after27_not_equalwork": false,
+            "timing": {
+              "includes": "preprocessing warmup training best restoration",
+              "concurrency": "solo after342terminal",
+              "pid": 43324,
+              "started_epoch": 1790903591.653,
+              "global_GPU_jobs_before": 0,
+              "terminal": true,
+              "individual_seconds": 306.95118960004766,
+              "peak_MiB": 2080.373046875,
+              "process_creation_to_terminal_seconds": 312.2225546836853
+            }
+          },
+          "grouped": {
+            "report": {
+              "stage": "grouped",
+              "target": "SW",
+              "target_score": 74.14746052528324,
+              "initial_score": 74.12175268976877,
+              "against_initial": 0.025707835514467092,
+              "against_v97_target": 0.005280620616531451,
+              "best_epoch": 13,
+              "stopped_epoch": 27,
+              "validation_rows": 144665,
+              "predictions_reproduced_exactly": true,
+              "frozen_parameters_exact": true,
+              "seconds": 302.73184059996856,
+              "peak_MiB": 2080.3740234375,
+              "complete_five_folds": false,
+              "early_terminated": false
+            },
+            "strata": {
+              "default": 98.63544650176527,
+              "continuous": 17.90082421575841
+            },
+            "whole_vs326": -0.022082506791662126,
+            "CONT_vs326": -0.0626178724899411,
+            "CONT_vs104": 0.2689351552783208,
+            "predefined27": {
+              "through_epoch": 27,
+              "best_epoch": 13,
+              "target_score": 74.14746052528324,
+              "control_actual_epochs": 27,
+              "nominal_budget": 80,
+              "comparison": "Predefined bestthrough27 vs historical326depth natural27; +19024 capacity not causal curve gain, laterbest not equalwork",
+              "strata": {
+                "default": 98.63544650176527,
+                "continuous": 17.90082421575841
+              }
+            },
+            "full_best_after27_not_equalwork": false,
+            "timing": {
+              "includes": "preprocessing warmup training best restoration",
+              "concurrency": "solo after344fullterminal",
+              "pid": 9332,
+              "started_epoch": 1790903940.865,
+              "global_GPU_jobs_before": 0,
+              "terminal": true,
+              "individual_seconds": 302.73184059996856,
+              "peak_MiB": 2080.3740234375,
+              "process_creation_to_terminal_seconds": 308.0588274002075
+            }
+          }
+        },
+        "full_minus_grouped_whole": 0.00026881423728752907,
+        "full_minus_grouped_CONT": 0.004025358195033135,
+        "comparison_limits": "Same physical111313 parameters/init, different group communication and effective function capacity. Historical32692289 not capacity matched, no causal attribution from that alone. Single seed, no robustness proof.",
+        "adopted": false,
+        "screening_fold": 5,
+        "complete_five_folds": false,
+        "remaining_folds_started": false,
+        "independent_disk_reload": false,
+        "pair_wall_process_seconds": 657.270827293396,
+        "launch_stagger_seconds": 349.2119998931885,
+        "pair_timing_limits": "Process start through last report includes explicit serial launch gaps; individual includes prep/warmup/restoration, not isolated architecture speed ranking",
+        "local_scope_gain_verified": true,
+        "current_intersection_not_adopted": true,
+        "closure": "Full vs grouped tiny whole/CONT positive retains local communication evidence; both below326 whole+CONT, no SW326 replacement or width/LR scan; does not invalidate all curve interaction"
+      }
+    }
+  ],
+  "cleanup_completed": true,
+  "deleted_files": 14,
+  "deleted_bytes": 6985303
+}

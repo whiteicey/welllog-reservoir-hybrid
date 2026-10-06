@@ -1,0 +1,13 @@
+{
+  "recorded_at": "2026-09-30T22:49:57.737890+08:00",
+  "old_controller_pid": 79892,
+  "command": [
+    "C:\\Users\\z5364\\.conda\\envs\\normal\\python.exe",
+    "-u",
+    "experiments/pure_dl/run_overlap_fullcv_v97.py",
+    "--takeover"
+  ],
+  "workers_before": [],
+  "training_sources_unchanged": true,
+  "terminate_training": false
+}

@@ -1,0 +1,768 @@
+{
+  "planned_at": "2026-09-30T22:21:32.843018+08:00",
+  "scope": "completed fullCV stages/root recovery and redundant probes only",
+  "preserved": [
+    "outputs\\pure_dl_fullcv_v97\\root\\fold_1.pt",
+    "outputs\\pure_dl_fullcv_v97\\root\\fold_1_conflict_weights.npz",
+    "outputs\\pure_dl_fullcv_v97\\root\\fold_1_validation_history.json",
+    "outputs\\pure_dl_fullcv_v97\\root\\fold_1_pred.npy",
+    "outputs\\pure_dl_fullcv_v97\\fold_1\\por_density\\model_best.pt",
+    "outputs\\pure_dl_fullcv_v97\\fold_1\\por_density\\channel_pred.npy",
+    "outputs\\pure_dl_fullcv_v97\\fold_1\\por_density\\validation_history.json",
+    "outputs\\pure_dl_fullcv_v97\\fold_1\\por_density\\config.json",
+    "outputs\\pure_dl_fullcv_v97\\fold_1\\perm_gate\\model_best.pt",
+    "outputs\\pure_dl_fullcv_v97\\fold_1\\perm_gate\\channel_pred.npy",
+    "outputs\\pure_dl_fullcv_v97\\fold_1\\perm_gate\\validation_history.json",
+    "outputs\\pure_dl_fullcv_v97\\fold_1\\perm_gate\\config.json",
+    "outputs\\pure_dl_fullcv_v97\\fold_1\\por_mean\\model_best.pt",
+    "outputs\\pure_dl_fullcv_v97\\fold_1\\por_mean\\channel_pred.npy",
+    "outputs\\pure_dl_fullcv_v97\\fold_1\\por_mean\\validation_history.json",
+    "outputs\\pure_dl_fullcv_v97\\fold_1\\por_mean\\config.json",
+    "outputs\\pure_dl_fullcv_v97\\fold_1\\por_point\\model_best.pt",
+    "outputs\\pure_dl_fullcv_v97\\fold_1\\por_point\\channel_pred.npy",
+    "outputs\\pure_dl_fullcv_v97\\fold_1\\por_point\\validation_history.json",
+    "outputs\\pure_dl_fullcv_v97\\fold_1\\por_point\\config.json",
+    "outputs\\pure_dl_fullcv_v97\\fold_1\\por_amplitude\\model_best.pt",
+    "outputs\\pure_dl_fullcv_v97\\fold_1\\por_amplitude\\channel_pred.npy",
+    "outputs\\pure_dl_fullcv_v97\\fold_1\\por_amplitude\\validation_history.json",
+    "outputs\\pure_dl_fullcv_v97\\fold_1\\por_amplitude\\config.json",
+    "outputs\\pure_dl_fullcv_v97\\fold_1\\perm_factor\\model_best.pt",
+    "outputs\\pure_dl_fullcv_v97\\fold_1\\perm_factor\\channel_pred.npy",
+    "outputs\\pure_dl_fullcv_v97\\fold_1\\perm_factor\\validation_history.json",
+    "outputs\\pure_dl_fullcv_v97\\fold_1\\perm_factor\\config.json",
+    "outputs\\pure_dl_fullcv_v97\\fold_1\\por_route\\model_best.pt",
+    "outputs\\pure_dl_fullcv_v97\\fold_1\\por_route\\channel_pred.npy",
+    "outputs\\pure_dl_fullcv_v97\\fold_1\\por_route\\validation_history.json",
+    "outputs\\pure_dl_fullcv_v97\\fold_1\\por_route\\config.json",
+    "outputs\\pure_dl_fullcv_v97\\fold_1\\perm_route\\model_best.pt",
+    "outputs\\pure_dl_fullcv_v97\\fold_1\\perm_route\\channel_pred.npy",
+    "outputs\\pure_dl_fullcv_v97\\fold_1\\perm_route\\validation_history.json",
+    "outputs\\pure_dl_fullcv_v97\\fold_1\\perm_route\\config.json",
+    "outputs\\pure_dl_fullcv_v97\\fold_1\\por_split\\model_best.pt",
+    "outputs\\pure_dl_fullcv_v97\\fold_1\\por_split\\channel_pred.npy",
+    "outputs\\pure_dl_fullcv_v97\\fold_1\\por_split\\validation_history.json",
+    "outputs\\pure_dl_fullcv_v97\\fold_1\\por_split\\config.json",
+    "outputs\\pure_dl_fullcv_v97\\fold_1\\perm_split\\model_best.pt",
+    "outputs\\pure_dl_fullcv_v97\\fold_1\\perm_split\\channel_pred.npy",
+    "outputs\\pure_dl_fullcv_v97\\fold_1\\perm_split\\validation_history.json",
+    "outputs\\pure_dl_fullcv_v97\\fold_1\\perm_split\\config.json",
+    "outputs\\pure_dl_fullcv_v97\\fold_1\\por_coadapt\\model_best.pt",
+    "outputs\\pure_dl_fullcv_v97\\fold_1\\por_coadapt\\channel_pred.npy",
+    "outputs\\pure_dl_fullcv_v97\\fold_1\\por_coadapt\\validation_history.json",
+    "outputs\\pure_dl_fullcv_v97\\fold_1\\por_coadapt\\config.json",
+    "outputs\\pure_dl_fullcv_v97\\fold_1\\por_anchored\\model_best.pt",
+    "outputs\\pure_dl_fullcv_v97\\fold_1\\por_anchored\\channel_pred.npy",
+    "outputs\\pure_dl_fullcv_v97\\fold_1\\por_anchored\\validation_history.json",
+    "outputs\\pure_dl_fullcv_v97\\fold_1\\por_anchored\\config.json",
+    "outputs\\pure_dl_fullcv_v97\\fold_1\\sw_scratch\\model_best.pt",
+    "outputs\\pure_dl_fullcv_v97\\fold_1\\sw_scratch\\channel_pred.npy",
+    "outputs\\pure_dl_fullcv_v97\\fold_1\\sw_scratch\\validation_history.json",
+    "outputs\\pure_dl_fullcv_v97\\fold_1\\sw_scratch\\config.json",
+    "outputs\\pure_dl_fullcv_v97\\fold_1\\sw_well\\model_best.pt",
+    "outputs\\pure_dl_fullcv_v97\\fold_1\\sw_well\\channel_pred.npy",
+    "outputs\\pure_dl_fullcv_v97\\fold_1\\sw_well\\validation_history.json",
+    "outputs\\pure_dl_fullcv_v97\\fold_1\\sw_well\\config.json",
+    "outputs\\pure_dl_fullcv_v97\\fold_1\\sw_additive\\model_best.pt",
+    "outputs\\pure_dl_fullcv_v97\\fold_1\\sw_additive\\channel_pred.npy",
+    "outputs\\pure_dl_fullcv_v97\\fold_1\\sw_additive\\validation_history.json",
+    "outputs\\pure_dl_fullcv_v97\\fold_1\\sw_additive\\config.json",
+    "outputs\\pure_dl_fullcv_v97\\fold_1\\sw_utility\\model_best.pt",
+    "outputs\\pure_dl_fullcv_v97\\fold_1\\sw_utility\\channel_pred.npy",
+    "outputs\\pure_dl_fullcv_v97\\fold_1\\sw_utility\\validation_history.json",
+    "outputs\\pure_dl_fullcv_v97\\fold_1\\sw_utility\\config.json",
+    "outputs\\pure_dl_fullcv_v97\\fold_1\\sw_sam\\model_best.pt",
+    "outputs\\pure_dl_fullcv_v97\\fold_1\\sw_sam\\channel_pred.npy",
+    "outputs\\pure_dl_fullcv_v97\\fold_1\\sw_sam\\validation_history.json",
+    "outputs\\pure_dl_fullcv_v97\\fold_1\\sw_sam\\config.json",
+    "outputs\\pure_dl_fullcv_v97\\fold_1\\sw_density\\model_best.pt",
+    "outputs\\pure_dl_fullcv_v97\\fold_1\\sw_density\\channel_pred.npy",
+    "outputs\\pure_dl_fullcv_v97\\fold_1\\sw_density\\validation_history.json",
+    "outputs\\pure_dl_fullcv_v97\\fold_1\\sw_density\\config.json",
+    "outputs\\pure_dl_fullcv_v97\\fold_2\\root\\fold_2.pt",
+    "outputs\\pure_dl_fullcv_v97\\fold_2\\root\\fold_2_conflict_weights.npz",
+    "outputs\\pure_dl_fullcv_v97\\fold_2\\root\\fold_2_validation_history.json",
+    "outputs\\pure_dl_fullcv_v97\\fold_2\\root\\fold_2_pred.npy",
+    "outputs\\pure_dl_fullcv_v97\\fold_2\\por_density\\model_best.pt",
+    "outputs\\pure_dl_fullcv_v97\\fold_2\\por_density\\channel_pred.npy",
+    "outputs\\pure_dl_fullcv_v97\\fold_2\\por_density\\validation_history.json",
+    "outputs\\pure_dl_fullcv_v97\\fold_2\\por_density\\config.json",
+    "outputs\\pure_dl_fullcv_v97\\fold_2\\perm_gate\\model_best.pt",
+    "outputs\\pure_dl_fullcv_v97\\fold_2\\perm_gate\\channel_pred.npy",
+    "outputs\\pure_dl_fullcv_v97\\fold_2\\perm_gate\\validation_history.json",
+    "outputs\\pure_dl_fullcv_v97\\fold_2\\perm_gate\\config.json",
+    "outputs\\pure_dl_fullcv_v97\\fold_2\\por_mean\\model_best.pt",
+    "outputs\\pure_dl_fullcv_v97\\fold_2\\por_mean\\channel_pred.npy",
+    "outputs\\pure_dl_fullcv_v97\\fold_2\\por_mean\\validation_history.json",
+    "outputs\\pure_dl_fullcv_v97\\fold_2\\por_mean\\config.json",
+    "outputs\\pure_dl_fullcv_v97\\fold_2\\por_point\\model_best.pt",
+    "outputs\\pure_dl_fullcv_v97\\fold_2\\por_point\\channel_pred.npy",
+    "outputs\\pure_dl_fullcv_v97\\fold_2\\por_point\\validation_history.json",
+    "outputs\\pure_dl_fullcv_v97\\fold_2\\por_point\\config.json",
+    "outputs\\pure_dl_fullcv_v97\\fold_2\\por_amplitude\\model_best.pt",
+    "outputs\\pure_dl_fullcv_v97\\fold_2\\por_amplitude\\channel_pred.npy",
+    "outputs\\pure_dl_fullcv_v97\\fold_2\\por_amplitude\\validation_history.json",
+    "outputs\\pure_dl_fullcv_v97\\fold_2\\por_amplitude\\config.json",
+    "outputs\\pure_dl_fullcv_v97\\fold_2\\perm_factor\\model_best.pt",
+    "outputs\\pure_dl_fullcv_v97\\fold_2\\perm_factor\\channel_pred.npy",
+    "outputs\\pure_dl_fullcv_v97\\fold_2\\perm_factor\\validation_history.json",
+    "outputs\\pure_dl_fullcv_v97\\fold_2\\perm_factor\\config.json",
+    "outputs\\pure_dl_fullcv_v97\\fold_2\\por_route\\model_best.pt",
+    "outputs\\pure_dl_fullcv_v97\\fold_2\\por_route\\channel_pred.npy",
+    "outputs\\pure_dl_fullcv_v97\\fold_2\\por_route\\validation_history.json",
+    "outputs\\pure_dl_fullcv_v97\\fold_2\\por_route\\config.json",
+    "outputs\\pure_dl_fullcv_v97\\fold_2\\perm_route\\model_best.pt",
+    "outputs\\pure_dl_fullcv_v97\\fold_2\\perm_route\\channel_pred.npy",
+    "outputs\\pure_dl_fullcv_v97\\fold_2\\perm_route\\validation_history.json",
+    "outputs\\pure_dl_fullcv_v97\\fold_2\\perm_route\\config.json",
+    "outputs\\pure_dl_fullcv_v97\\fold_2\\por_split\\model_best.pt",
+    "outputs\\pure_dl_fullcv_v97\\fold_2\\por_split\\channel_pred.npy",
+    "outputs\\pure_dl_fullcv_v97\\fold_2\\por_split\\validation_history.json",
+    "outputs\\pure_dl_fullcv_v97\\fold_2\\por_split\\config.json",
+    "outputs\\pure_dl_fullcv_v97\\fold_2\\perm_split\\model_best.pt",
+    "outputs\\pure_dl_fullcv_v97\\fold_2\\perm_split\\channel_pred.npy",
+    "outputs\\pure_dl_fullcv_v97\\fold_2\\perm_split\\validation_history.json",
+    "outputs\\pure_dl_fullcv_v97\\fold_2\\perm_split\\config.json",
+    "outputs\\pure_dl_fullcv_v97\\fold_2\\por_coadapt\\model_best.pt",
+    "outputs\\pure_dl_fullcv_v97\\fold_2\\por_coadapt\\channel_pred.npy",
+    "outputs\\pure_dl_fullcv_v97\\fold_2\\por_coadapt\\validation_history.json",
+    "outputs\\pure_dl_fullcv_v97\\fold_2\\por_coadapt\\config.json",
+    "outputs\\pure_dl_fullcv_v97\\fold_2\\por_anchored\\model_best.pt",
+    "outputs\\pure_dl_fullcv_v97\\fold_2\\por_anchored\\channel_pred.npy",
+    "outputs\\pure_dl_fullcv_v97\\fold_2\\por_anchored\\validation_history.json",
+    "outputs\\pure_dl_fullcv_v97\\fold_2\\por_anchored\\config.json",
+    "outputs\\pure_dl_fullcv_v97\\fold_2\\sw_scratch\\model_best.pt",
+    "outputs\\pure_dl_fullcv_v97\\fold_2\\sw_scratch\\channel_pred.npy",
+    "outputs\\pure_dl_fullcv_v97\\fold_2\\sw_scratch\\validation_history.json",
+    "outputs\\pure_dl_fullcv_v97\\fold_2\\sw_scratch\\config.json",
+    "outputs\\pure_dl_fullcv_v97\\fold_2\\sw_well\\model_best.pt",
+    "outputs\\pure_dl_fullcv_v97\\fold_2\\sw_well\\channel_pred.npy",
+    "outputs\\pure_dl_fullcv_v97\\fold_2\\sw_well\\validation_history.json",
+    "outputs\\pure_dl_fullcv_v97\\fold_2\\sw_well\\config.json",
+    "outputs\\pure_dl_fullcv_v97\\fold_2\\sw_additive\\model_best.pt",
+    "outputs\\pure_dl_fullcv_v97\\fold_2\\sw_additive\\channel_pred.npy",
+    "outputs\\pure_dl_fullcv_v97\\fold_2\\sw_additive\\validation_history.json",
+    "outputs\\pure_dl_fullcv_v97\\fold_2\\sw_additive\\config.json",
+    "outputs\\pure_dl_fullcv_v97\\fold_2\\sw_utility\\model_best.pt",
+    "outputs\\pure_dl_fullcv_v97\\fold_2\\sw_utility\\channel_pred.npy",
+    "outputs\\pure_dl_fullcv_v97\\fold_2\\sw_utility\\validation_history.json",
+    "outputs\\pure_dl_fullcv_v97\\fold_2\\sw_utility\\config.json",
+    "outputs\\pure_dl_fullcv_v97\\fold_2\\sw_sam\\model_best.pt",
+    "outputs\\pure_dl_fullcv_v97\\fold_2\\sw_sam\\channel_pred.npy",
+    "outputs\\pure_dl_fullcv_v97\\fold_2\\sw_sam\\validation_history.json",
+    "outputs\\pure_dl_fullcv_v97\\fold_2\\sw_sam\\config.json",
+    "outputs\\pure_dl_fullcv_v97\\fold_2\\sw_density\\model_best.pt",
+    "outputs\\pure_dl_fullcv_v97\\fold_2\\sw_density\\channel_pred.npy",
+    "outputs\\pure_dl_fullcv_v97\\fold_2\\sw_density\\validation_history.json",
+    "outputs\\pure_dl_fullcv_v97\\fold_2\\sw_density\\config.json",
+    "outputs\\pure_dl_fullcv_v97\\fold_3\\root\\fold_3.pt",
+    "outputs\\pure_dl_fullcv_v97\\fold_3\\root\\fold_3_conflict_weights.npz",
+    "outputs\\pure_dl_fullcv_v97\\fold_3\\root\\fold_3_validation_history.json",
+    "outputs\\pure_dl_fullcv_v97\\fold_3\\root\\fold_3_pred.npy",
+    "outputs\\pure_dl_fullcv_v97\\fold_3\\por_density\\model_best.pt",
+    "outputs\\pure_dl_fullcv_v97\\fold_3\\por_density\\channel_pred.npy",
+    "outputs\\pure_dl_fullcv_v97\\fold_3\\por_density\\validation_history.json",
+    "outputs\\pure_dl_fullcv_v97\\fold_3\\por_density\\config.json",
+    "outputs\\pure_dl_fullcv_v97\\fold_3\\perm_gate\\model_best.pt",
+    "outputs\\pure_dl_fullcv_v97\\fold_3\\perm_gate\\channel_pred.npy",
+    "outputs\\pure_dl_fullcv_v97\\fold_3\\perm_gate\\validation_history.json",
+    "outputs\\pure_dl_fullcv_v97\\fold_3\\perm_gate\\config.json",
+    "outputs\\pure_dl_fullcv_v97\\fold_3\\por_mean\\model_best.pt",
+    "outputs\\pure_dl_fullcv_v97\\fold_3\\por_mean\\channel_pred.npy",
+    "outputs\\pure_dl_fullcv_v97\\fold_3\\por_mean\\validation_history.json",
+    "outputs\\pure_dl_fullcv_v97\\fold_3\\por_mean\\config.json",
+    "outputs\\pure_dl_fullcv_v97\\fold_3\\por_point\\model_best.pt",
+    "outputs\\pure_dl_fullcv_v97\\fold_3\\por_point\\channel_pred.npy",
+    "outputs\\pure_dl_fullcv_v97\\fold_3\\por_point\\validation_history.json",
+    "outputs\\pure_dl_fullcv_v97\\fold_3\\por_point\\config.json",
+    "outputs\\pure_dl_fullcv_v97\\fold_3\\por_amplitude\\model_best.pt",
+    "outputs\\pure_dl_fullcv_v97\\fold_3\\por_amplitude\\channel_pred.npy",
+    "outputs\\pure_dl_fullcv_v97\\fold_3\\por_amplitude\\validation_history.json",
+    "outputs\\pure_dl_fullcv_v97\\fold_3\\por_amplitude\\config.json",
+    "outputs\\pure_dl_fullcv_v97\\fold_3\\perm_factor\\model_best.pt",
+    "outputs\\pure_dl_fullcv_v97\\fold_3\\perm_factor\\channel_pred.npy",
+    "outputs\\pure_dl_fullcv_v97\\fold_3\\perm_factor\\validation_history.json",
+    "outputs\\pure_dl_fullcv_v97\\fold_3\\perm_factor\\config.json",
+    "outputs\\pure_dl_fullcv_v97\\fold_3\\por_route\\model_best.pt",
+    "outputs\\pure_dl_fullcv_v97\\fold_3\\por_route\\channel_pred.npy",
+    "outputs\\pure_dl_fullcv_v97\\fold_3\\por_route\\validation_history.json",
+    "outputs\\pure_dl_fullcv_v97\\fold_3\\por_route\\config.json",
+    "outputs\\pure_dl_fullcv_v97\\fold_3\\perm_route\\model_best.pt",
+    "outputs\\pure_dl_fullcv_v97\\fold_3\\perm_route\\channel_pred.npy",
+    "outputs\\pure_dl_fullcv_v97\\fold_3\\perm_route\\validation_history.json",
+    "outputs\\pure_dl_fullcv_v97\\fold_3\\perm_route\\config.json",
+    "outputs\\pure_dl_fullcv_v97\\fold_3\\por_split\\model_best.pt",
+    "outputs\\pure_dl_fullcv_v97\\fold_3\\por_split\\channel_pred.npy",
+    "outputs\\pure_dl_fullcv_v97\\fold_3\\por_split\\validation_history.json",
+    "outputs\\pure_dl_fullcv_v97\\fold_3\\por_split\\config.json",
+    "outputs\\pure_dl_fullcv_v97\\fold_3\\perm_split\\model_best.pt",
+    "outputs\\pure_dl_fullcv_v97\\fold_3\\perm_split\\channel_pred.npy",
+    "outputs\\pure_dl_fullcv_v97\\fold_3\\perm_split\\validation_history.json",
+    "outputs\\pure_dl_fullcv_v97\\fold_3\\perm_split\\config.json",
+    "outputs\\pure_dl_fullcv_v97\\fold_3\\por_coadapt\\model_best.pt",
+    "outputs\\pure_dl_fullcv_v97\\fold_3\\por_coadapt\\channel_pred.npy",
+    "outputs\\pure_dl_fullcv_v97\\fold_3\\por_coadapt\\validation_history.json",
+    "outputs\\pure_dl_fullcv_v97\\fold_3\\por_coadapt\\config.json",
+    "outputs\\pure_dl_fullcv_v97\\fold_3\\por_anchored\\model_best.pt",
+    "outputs\\pure_dl_fullcv_v97\\fold_3\\por_anchored\\channel_pred.npy",
+    "outputs\\pure_dl_fullcv_v97\\fold_3\\por_anchored\\validation_history.json",
+    "outputs\\pure_dl_fullcv_v97\\fold_3\\por_anchored\\config.json",
+    "outputs\\pure_dl_fullcv_v97\\fold_3\\sw_scratch\\model_best.pt",
+    "outputs\\pure_dl_fullcv_v97\\fold_3\\sw_scratch\\channel_pred.npy",
+    "outputs\\pure_dl_fullcv_v97\\fold_3\\sw_scratch\\validation_history.json",
+    "outputs\\pure_dl_fullcv_v97\\fold_3\\sw_scratch\\config.json",
+    "outputs\\pure_dl_fullcv_v97\\fold_3\\sw_well\\model_best.pt",
+    "outputs\\pure_dl_fullcv_v97\\fold_3\\sw_well\\channel_pred.npy",
+    "outputs\\pure_dl_fullcv_v97\\fold_3\\sw_well\\validation_history.json",
+    "outputs\\pure_dl_fullcv_v97\\fold_3\\sw_well\\config.json",
+    "outputs\\pure_dl_fullcv_v97\\fold_3\\sw_additive\\model_best.pt",
+    "outputs\\pure_dl_fullcv_v97\\fold_3\\sw_additive\\channel_pred.npy",
+    "outputs\\pure_dl_fullcv_v97\\fold_3\\sw_additive\\validation_history.json",
+    "outputs\\pure_dl_fullcv_v97\\fold_3\\sw_additive\\config.json",
+    "outputs\\pure_dl_fullcv_v97\\fold_3\\sw_utility\\model_best.pt",
+    "outputs\\pure_dl_fullcv_v97\\fold_3\\sw_utility\\channel_pred.npy",
+    "outputs\\pure_dl_fullcv_v97\\fold_3\\sw_utility\\validation_history.json",
+    "outputs\\pure_dl_fullcv_v97\\fold_3\\sw_utility\\config.json",
+    "outputs\\pure_dl_fullcv_v97\\fold_3\\sw_sam\\model_best.pt",
+    "outputs\\pure_dl_fullcv_v97\\fold_3\\sw_sam\\channel_pred.npy",
+    "outputs\\pure_dl_fullcv_v97\\fold_3\\sw_sam\\validation_history.json",
+    "outputs\\pure_dl_fullcv_v97\\fold_3\\sw_sam\\config.json",
+    "outputs\\pure_dl_fullcv_v97\\fold_3\\sw_density\\model_best.pt",
+    "outputs\\pure_dl_fullcv_v97\\fold_3\\sw_density\\channel_pred.npy",
+    "outputs\\pure_dl_fullcv_v97\\fold_3\\sw_density\\validation_history.json",
+    "outputs\\pure_dl_fullcv_v97\\fold_3\\sw_density\\config.json",
+    "outputs\\pure_dl_fullcv_v97\\fold_4\\root\\fold_4.pt",
+    "outputs\\pure_dl_fullcv_v97\\fold_4\\root\\fold_4_conflict_weights.npz",
+    "outputs\\pure_dl_fullcv_v97\\fold_4\\root\\fold_4_validation_history.json",
+    "outputs\\pure_dl_fullcv_v97\\fold_4\\root\\fold_4_pred.npy",
+    "outputs\\pure_dl_fullcv_v97\\fold_4\\por_density\\model_best.pt",
+    "outputs\\pure_dl_fullcv_v97\\fold_4\\por_density\\channel_pred.npy",
+    "outputs\\pure_dl_fullcv_v97\\fold_4\\por_density\\validation_history.json",
+    "outputs\\pure_dl_fullcv_v97\\fold_4\\por_density\\config.json",
+    "outputs\\pure_dl_fullcv_v97\\fold_4\\perm_gate\\model_best.pt",
+    "outputs\\pure_dl_fullcv_v97\\fold_4\\perm_gate\\channel_pred.npy",
+    "outputs\\pure_dl_fullcv_v97\\fold_4\\perm_gate\\validation_history.json",
+    "outputs\\pure_dl_fullcv_v97\\fold_4\\perm_gate\\config.json",
+    "outputs\\pure_dl_fullcv_v97\\fold_4\\por_mean\\model_best.pt",
+    "outputs\\pure_dl_fullcv_v97\\fold_4\\por_mean\\channel_pred.npy",
+    "outputs\\pure_dl_fullcv_v97\\fold_4\\por_mean\\validation_history.json",
+    "outputs\\pure_dl_fullcv_v97\\fold_4\\por_mean\\config.json"
+  ],
+  "active_outputs": [
+    "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_fullcv_v97\\fold_4\\por_point"
+  ],
+  "entries": [
+    {
+      "path": "outputs\\pure_dl_fullcv_v97\\fold_3\\perm_factor\\last_state.pt",
+      "bytes": 12387143,
+      "sha256": "e25c61fbabae693b3c1540c5be2939c7c476da58dcbc2867208c8db52c07a48b"
+    },
+    {
+      "path": "outputs\\pure_dl_fullcv_v97\\fold_3\\perm_gate\\last_state.pt",
+      "bytes": 12622839,
+      "sha256": "864a603ab816af096e7d1f23faba6d19165bbe62658ca9045ff1ac1419796cd8"
+    },
+    {
+      "path": "outputs\\pure_dl_fullcv_v97\\fold_3\\perm_route\\last_state.pt",
+      "bytes": 12452023,
+      "sha256": "3498be94dfaf005f9133b2cbfbbae60ea25a30d6c9461454254f3bcd7ff21a41"
+    },
+    {
+      "path": "outputs\\pure_dl_fullcv_v97\\fold_3\\perm_split\\last_state.pt",
+      "bytes": 12707815,
+      "sha256": "a32ea52cef57eb102d717e6b94bc2f4c87eb067dec31a108fadffb7875fda5aa"
+    },
+    {
+      "path": "outputs\\pure_dl_fullcv_v97\\fold_3\\por_amplitude\\last_state.pt",
+      "bytes": 12875015,
+      "sha256": "bc3c8b0358d3dfbfe7a3d1ecb22679c7153e83ccd7d7ced775a8c6dd7497e30a"
+    },
+    {
+      "path": "outputs\\pure_dl_fullcv_v97\\fold_3\\por_anchored\\last_state.pt",
+      "bytes": 13889655,
+      "sha256": "28b51a46b90dce2d084a3fb65278c552dc41383b3bc31498054223b9fc56ccb9"
+    },
+    {
+      "path": "outputs\\pure_dl_fullcv_v97\\fold_3\\por_coadapt\\last_state.pt",
+      "bytes": 13743735,
+      "sha256": "3367608484014bdd6e3b6b1ac9d35979e3228bf077b178974ad6ae78aa76e380"
+    },
+    {
+      "path": "outputs\\pure_dl_fullcv_v97\\fold_3\\por_density\\last_state.pt",
+      "bytes": 13078327,
+      "sha256": "956b5084b307c902c56a769122a2c3b2704c012d8c0afc9e43f3ba933439f2ce"
+    },
+    {
+      "path": "outputs\\pure_dl_fullcv_v97\\fold_3\\por_mean\\last_state.pt",
+      "bytes": 13060727,
+      "sha256": "3a11b22a21f5b2a828b08a162bb3062eabebdff7323659bc3589f3c4692913e7"
+    },
+    {
+      "path": "outputs\\pure_dl_fullcv_v97\\fold_3\\por_point\\last_state.pt",
+      "bytes": 13211351,
+      "sha256": "acfb0f1975c9ff4d5203452cf5031b0035e425488589208f9c2f6a681b9ecbcb"
+    },
+    {
+      "path": "outputs\\pure_dl_fullcv_v97\\fold_3\\por_route\\last_state.pt",
+      "bytes": 12939767,
+      "sha256": "3a5a57d5da43befa21a51e5b126273df2372c249253bb1005c498312e75023f4"
+    },
+    {
+      "path": "outputs\\pure_dl_fullcv_v97\\fold_3\\por_split\\last_state.pt",
+      "bytes": 13198439,
+      "sha256": "ec4fb48d562b6649375893d5d74567a9f84ad4fe875e547d686c83df813b429d"
+    },
+    {
+      "path": "outputs\\pure_dl_fullcv_v97\\fold_3\\root\\fold_3_dynamics\\observation_001.npz",
+      "bytes": 15692347,
+      "sha256": "1b23de9bcd7949b88425b2e39b8413ae0fa9b2ccaa6d08cfae5cd3daf0ba5e14"
+    },
+    {
+      "path": "outputs\\pure_dl_fullcv_v97\\fold_3\\root\\fold_3_dynamics\\observation_002.npz",
+      "bytes": 21975908,
+      "sha256": "e5cc98fbcbccd1596df2a20b7d4a5daf7f4f4b927264951c4ed8fc7b2dd19bde"
+    },
+    {
+      "path": "outputs\\pure_dl_fullcv_v97\\fold_3\\root\\fold_3_dynamics\\observation_004.npz",
+      "bytes": 22090339,
+      "sha256": "d90fd7afc6c03ee4a0445140cc9c58d70140f76daa57026af7453a440b3c36b1"
+    },
+    {
+      "path": "outputs\\pure_dl_fullcv_v97\\fold_3\\root\\fold_3_dynamics\\observation_006.npz",
+      "bytes": 21951121,
+      "sha256": "aae356f761de09d16f0e11e895a48b1075da6937e4cfc25185e27946ddc6f58e"
+    },
+    {
+      "path": "outputs\\pure_dl_fullcv_v97\\fold_3\\root\\fold_3_dynamics\\observation_008.npz",
+      "bytes": 21944213,
+      "sha256": "f21c548edccfca35fc9a61ec2d228f2671d81d8eae2d4fb3f7b23a8f53ef9ab1"
+    },
+    {
+      "path": "outputs\\pure_dl_fullcv_v97\\fold_3\\root\\fold_3_dynamics\\observation_010.npz",
+      "bytes": 21968669,
+      "sha256": "65b5042e76e5c85ce5a5b7bea329c8cf6089dbad8566d5cd4b8fd8df0e8d7274"
+    },
+    {
+      "path": "outputs\\pure_dl_fullcv_v97\\fold_3\\root\\fold_3_dynamics\\observation_012.npz",
+      "bytes": 22027234,
+      "sha256": "02aa09a6818e72b0dbbe1eb89447ce17309c7ec61236617349a297e1217122b9"
+    },
+    {
+      "path": "outputs\\pure_dl_fullcv_v97\\fold_3\\root\\fold_3_dynamics\\observation_014.npz",
+      "bytes": 21980182,
+      "sha256": "73a454cf68327e2e6c1643a3fe3558fa24682e787fdc6e39f615d99b4a826f40"
+    },
+    {
+      "path": "outputs\\pure_dl_fullcv_v97\\fold_3\\root\\fold_3_dynamics\\observation_016.npz",
+      "bytes": 21939520,
+      "sha256": "09fd72f585b634dd1ba090840c5fb7ef74b4b2a842132f62123c0d5478fda3ee"
+    },
+    {
+      "path": "outputs\\pure_dl_fullcv_v97\\fold_3\\root\\fold_3_dynamics\\observation_018.npz",
+      "bytes": 21898728,
+      "sha256": "2c53ad58c7bbd37c4aa7ea2721dd8d28e9f98baab028d3d0b9e0d6d8aa435cc5"
+    },
+    {
+      "path": "outputs\\pure_dl_fullcv_v97\\fold_3\\root\\fold_3_dynamics\\observation_020.npz",
+      "bytes": 21966135,
+      "sha256": "d75a11ef35fd7bec46954e9560401808da7cb156845790acf15c79f739d27ed1"
+    },
+    {
+      "path": "outputs\\pure_dl_fullcv_v97\\fold_3\\root\\fold_3_dynamics\\observation_022.npz",
+      "bytes": 21979155,
+      "sha256": "896bad7582fda54ff7e4c3ea399f633065610201ee887b0d7b5759179d2a28d1"
+    },
+    {
+      "path": "outputs\\pure_dl_fullcv_v97\\fold_3\\root\\fold_3_dynamics\\observation_024.npz",
+      "bytes": 21903152,
+      "sha256": "dc1e77a7ca9f5fa31ecfd550554bf5f62584f6b62868a7d2db5f779117d7be6d"
+    },
+    {
+      "path": "outputs\\pure_dl_fullcv_v97\\fold_3\\root\\fold_3_dynamics\\observation_026.npz",
+      "bytes": 21909310,
+      "sha256": "eb0584a702f668312361085144ce70e6c047b9036a9edfbcbed973e3180c2a5c"
+    },
+    {
+      "path": "outputs\\pure_dl_fullcv_v97\\fold_3\\root\\fold_3_dynamics\\observation_028.npz",
+      "bytes": 21833372,
+      "sha256": "89020858d662ec3b34cf41a6e17faebade218f4853a172b719781f25d487c2fb"
+    },
+    {
+      "path": "outputs\\pure_dl_fullcv_v97\\fold_3\\root\\fold_3_dynamics\\observation_030.npz",
+      "bytes": 21913479,
+      "sha256": "36d6ba57c67d8fd85fbd90ff6e93aa3f710939804eb62d46b3c61bfcd2d7a302"
+    },
+    {
+      "path": "outputs\\pure_dl_fullcv_v97\\fold_3\\root\\fold_3_dynamics\\observation_032.npz",
+      "bytes": 21966167,
+      "sha256": "759843451eceae896fe0830efb2480bc88e05af644efa363451193ef5ee4b2bf"
+    },
+    {
+      "path": "outputs\\pure_dl_fullcv_v97\\fold_3\\root\\fold_3_dynamics\\observation_034.npz",
+      "bytes": 21906561,
+      "sha256": "6f997e2fe9bab78d678a3c79baa70f6b74091491b141531ba06b288ab2ef2299"
+    },
+    {
+      "path": "outputs\\pure_dl_fullcv_v97\\fold_3\\root\\fold_3_dynamics\\observation_036.npz",
+      "bytes": 21871441,
+      "sha256": "e455fc6b429c15c574269a6763db2787fdf4966cdbd59835a6652ca09fcf9332"
+    },
+    {
+      "path": "outputs\\pure_dl_fullcv_v97\\fold_3\\root\\fold_3_dynamics\\observation_038.npz",
+      "bytes": 21889379,
+      "sha256": "6f5d5ca75789b681580d6074627774d8a86ec53e4133157969627f7b061b8aee"
+    },
+    {
+      "path": "outputs\\pure_dl_fullcv_v97\\fold_3\\root\\fold_3_dynamics\\observation_040.npz",
+      "bytes": 21781411,
+      "sha256": "15d90ef08207318c7fadda38cfb2c6bc4c6bd6486fa567a1d0d491109e226d03"
+    },
+    {
+      "path": "outputs\\pure_dl_fullcv_v97\\fold_3\\root\\fold_3_dynamics\\observation_042.npz",
+      "bytes": 21860942,
+      "sha256": "1e3ed365952c57b5ee81354b042831171ad6e630c0411e0cb35edc743d1a5426"
+    },
+    {
+      "path": "outputs\\pure_dl_fullcv_v97\\fold_3\\root\\fold_3_dynamics\\observation_044.npz",
+      "bytes": 21957421,
+      "sha256": "3f61ee3e4f190e5c409c2ce50d8d615fe006245e10c53ffe41b2bd3c10b92324"
+    },
+    {
+      "path": "outputs\\pure_dl_fullcv_v97\\fold_3\\root\\fold_3_dynamics\\observation_046.npz",
+      "bytes": 21904982,
+      "sha256": "0fcd8ba7ab0f51ec76f40b336fb63251ed5cbe9f3315a8b51355460667da8ce8"
+    },
+    {
+      "path": "outputs\\pure_dl_fullcv_v97\\fold_3\\root\\fold_3_dynamics\\observation_048.npz",
+      "bytes": 21853255,
+      "sha256": "e1a9fd53a5b4466efe5d296af0ca4edad83024268e2a49b4c6b646aeda636b58"
+    },
+    {
+      "path": "outputs\\pure_dl_fullcv_v97\\fold_3\\root\\fold_3_dynamics\\observation_050.npz",
+      "bytes": 21904657,
+      "sha256": "481b4aa2a5c90e84a9c320c6b8f6bf8339c5b4800f198d3d187315d1ef5d12e7"
+    },
+    {
+      "path": "outputs\\pure_dl_fullcv_v97\\fold_3\\root\\fold_3_dynamics\\observation_052.npz",
+      "bytes": 21800308,
+      "sha256": "18f582191e3be29f15a0627fad404a0e0b6d1d26fe3a471ead596b26a57bc5a2"
+    },
+    {
+      "path": "outputs\\pure_dl_fullcv_v97\\fold_3\\root\\fold_3_dynamics\\observation_054.npz",
+      "bytes": 21894183,
+      "sha256": "fbf1774246ddd1a62d93971b63f14813ea767b6bc64c6b20cc06327c71f9a16b"
+    },
+    {
+      "path": "outputs\\pure_dl_fullcv_v97\\fold_3\\root\\fold_3_dynamics\\observation_056.npz",
+      "bytes": 21735144,
+      "sha256": "550d62414a537a1c43496bd28d399ffcdf856537c60de14df91069f21e134bd1"
+    },
+    {
+      "path": "outputs\\pure_dl_fullcv_v97\\fold_3\\root\\fold_3_dynamics\\observation_058.npz",
+      "bytes": 21763244,
+      "sha256": "aa350a4d000081d110326826a9a357849d59e7235e2ea6024cf908ad4d4b468a"
+    },
+    {
+      "path": "outputs\\pure_dl_fullcv_v97\\fold_3\\root\\fold_3_dynamics\\observation_060.npz",
+      "bytes": 21712849,
+      "sha256": "09a230c99229653414832c3d2c722a32ad1f29fc0aee154c386dc74789050a47"
+    },
+    {
+      "path": "outputs\\pure_dl_fullcv_v97\\fold_3\\root\\fold_3_dynamics\\observation_062.npz",
+      "bytes": 21769165,
+      "sha256": "4019a5cbb47ab364070aafe0b30aed4768be668a7f3d96b0a6f00f99675074f2"
+    },
+    {
+      "path": "outputs\\pure_dl_fullcv_v97\\fold_3\\root\\fold_3_dynamics\\observation_064.npz",
+      "bytes": 21716190,
+      "sha256": "11692ab4958a40776cf85683b8fc409cd48661fa87deb201007f81ea1d2b4092"
+    },
+    {
+      "path": "outputs\\pure_dl_fullcv_v97\\fold_3\\root\\fold_3_dynamics\\observation_066.npz",
+      "bytes": 21806353,
+      "sha256": "c5c7f503bdfce82d1da1d9ec2685957abe3d1c7afa69d079771b559322f23866"
+    },
+    {
+      "path": "outputs\\pure_dl_fullcv_v97\\fold_3\\root\\fold_3_dynamics\\observation_068.npz",
+      "bytes": 21784827,
+      "sha256": "f6aa9f9ad1080fefd4544c0a28b603bda4d3e86b98df1c62df0dcc23856bdd5b"
+    },
+    {
+      "path": "outputs\\pure_dl_fullcv_v97\\fold_3\\root\\fold_3_dynamics\\observation_070.npz",
+      "bytes": 21728556,
+      "sha256": "c11814055157098ac8f0dc6283560a58ff02c33fc5803e00eee1ebb5d4639c4d"
+    },
+    {
+      "path": "outputs\\pure_dl_fullcv_v97\\fold_3\\root\\fold_3_dynamics\\observation_072.npz",
+      "bytes": 21737995,
+      "sha256": "22c0d624bb7212a14cf4a11f33cdf3561cd0d447802906fd332c9326ae5b74af"
+    },
+    {
+      "path": "outputs\\pure_dl_fullcv_v97\\fold_3\\root\\fold_3_dynamics\\observation_074.npz",
+      "bytes": 21746716,
+      "sha256": "33c05134bf485376f52394897f9f571bd4d0d1259c38c504db02c989841ff601"
+    },
+    {
+      "path": "outputs\\pure_dl_fullcv_v97\\fold_3\\root\\fold_3_last_state.pt",
+      "bytes": 81315821,
+      "sha256": "536e236876aa29b2653935d0ffb696f8c014cc3ef277b28c4b6cbeff01eedf4f"
+    },
+    {
+      "path": "outputs\\pure_dl_fullcv_v97\\fold_3\\sw_additive\\last_state.pt",
+      "bytes": 15569687,
+      "sha256": "aa592de3d2510d988af7d626eea595508fe6eae8283390e9485ec04066b5a852"
+    },
+    {
+      "path": "outputs\\pure_dl_fullcv_v97\\fold_3\\sw_density\\last_state.pt",
+      "bytes": 22363431,
+      "sha256": "6ca92d01d28d7020a1d88a3e4d5f6a56539a844a17b2333368a3f33712cd48b1"
+    },
+    {
+      "path": "outputs\\pure_dl_fullcv_v97\\fold_3\\sw_sam\\last_state.pt",
+      "bytes": 15573271,
+      "sha256": "339278cafe65f2d901e2b9a5c5defce21b9e8753202346bec8cc2293d64ded63"
+    },
+    {
+      "path": "outputs\\pure_dl_fullcv_v97\\fold_3\\sw_scratch\\last_state.pt",
+      "bytes": 13044375,
+      "sha256": "0b9212f99a643c6c9d54bdbd853227eac27ac2eeeb73764c74ccfb9378033a34"
+    },
+    {
+      "path": "outputs\\pure_dl_fullcv_v97\\fold_3\\sw_utility\\last_state.pt",
+      "bytes": 15597463,
+      "sha256": "93bd930ffa7560d1eefaf0cf1c6494b06d74e0b53985543d95b55de9e4602e4c"
+    },
+    {
+      "path": "outputs\\pure_dl_fullcv_v97\\fold_3\\sw_well\\last_state.pt",
+      "bytes": 15517815,
+      "sha256": "3c4ac9d3233c5eed8719798cb54f1a33d6287ed820f391289192b85518b0fe00"
+    },
+    {
+      "path": "outputs\\pure_dl_fullcv_v97\\fold_4\\perm_gate\\last_state.pt",
+      "bytes": 12620023,
+      "sha256": "5e40a2ea121f5ba92bd5b9cde33f74a0f97662165525550e44d0b9c65081ba8b"
+    },
+    {
+      "path": "outputs\\pure_dl_fullcv_v97\\fold_4\\por_density\\last_state.pt",
+      "bytes": 13041015,
+      "sha256": "d87ae0b6bd8b09ec132fc7caec90288093f57198825a24d9ec58e94120ee79e6"
+    },
+    {
+      "path": "outputs\\pure_dl_fullcv_v97\\fold_4\\por_mean\\last_state.pt",
+      "bytes": 13021111,
+      "sha256": "90ebd62140cb1a70352fb42ab647be06668fefedf88ca01ae76ad88ece51ee15"
+    },
+    {
+      "path": "outputs\\pure_dl_fullcv_v97\\fold_4\\root\\fold_4_dynamics\\observation_001.npz",
+      "bytes": 15775591,
+      "sha256": "5dc872994e02730ce1aecff01072cd5d849b936405f7269fd6c3b867e0e2fdf7"
+    },
+    {
+      "path": "outputs\\pure_dl_fullcv_v97\\fold_4\\root\\fold_4_dynamics\\observation_002.npz",
+      "bytes": 21945881,
+      "sha256": "9037b1a16ec459d4fbf26e41f137b4463f04bbea86afc0872c5e57e507001b8e"
+    },
+    {
+      "path": "outputs\\pure_dl_fullcv_v97\\fold_4\\root\\fold_4_dynamics\\observation_004.npz",
+      "bytes": 21908435,
+      "sha256": "eb07abf61b602a3dfe6300e3be3e9c344738a44e8d2eb2702ff0e0a50237d223"
+    },
+    {
+      "path": "outputs\\pure_dl_fullcv_v97\\fold_4\\root\\fold_4_dynamics\\observation_006.npz",
+      "bytes": 21874726,
+      "sha256": "e4864a9f71d96f92bb56d60b77d7423df5edb9e27a29082d5f6c583dffbe022d"
+    },
+    {
+      "path": "outputs\\pure_dl_fullcv_v97\\fold_4\\root\\fold_4_dynamics\\observation_008.npz",
+      "bytes": 21865622,
+      "sha256": "05aa53aac0b26ecfd4706dccd7b13502a76e70b1a0661354c433d4cd98292179"
+    },
+    {
+      "path": "outputs\\pure_dl_fullcv_v97\\fold_4\\root\\fold_4_dynamics\\observation_010.npz",
+      "bytes": 21817954,
+      "sha256": "0550682ff54445107f826b226a6110afe1d0021b7991a8c506de24df46cdaf72"
+    },
+    {
+      "path": "outputs\\pure_dl_fullcv_v97\\fold_4\\root\\fold_4_dynamics\\observation_012.npz",
+      "bytes": 21817029,
+      "sha256": "83debddc95e0fac76f17a9e55fe24faf14a31c74ceaafd395cb51326869e6b67"
+    },
+    {
+      "path": "outputs\\pure_dl_fullcv_v97\\fold_4\\root\\fold_4_dynamics\\observation_014.npz",
+      "bytes": 21772923,
+      "sha256": "e58b419d8f81320da9d2858deb42186542e636bcb34699501b3f1200324422c3"
+    },
+    {
+      "path": "outputs\\pure_dl_fullcv_v97\\fold_4\\root\\fold_4_dynamics\\observation_016.npz",
+      "bytes": 21809914,
+      "sha256": "3453040ca56c48c95a8fedc4f76f47072411a14cc7150440a5b8550d6480c9b1"
+    },
+    {
+      "path": "outputs\\pure_dl_fullcv_v97\\fold_4\\root\\fold_4_dynamics\\observation_018.npz",
+      "bytes": 21802814,
+      "sha256": "fee7b169fb89b4942766cbbf41a704311865b6a974cda4427e45ed39f440247d"
+    },
+    {
+      "path": "outputs\\pure_dl_fullcv_v97\\fold_4\\root\\fold_4_dynamics\\observation_020.npz",
+      "bytes": 21776583,
+      "sha256": "bb32cb31aebf6f21d4f3401081ef228c2c4a8a30c80a381d6acfe5a10ea6400d"
+    },
+    {
+      "path": "outputs\\pure_dl_fullcv_v97\\fold_4\\root\\fold_4_dynamics\\observation_022.npz",
+      "bytes": 21762953,
+      "sha256": "3fd99298684a636c4e0cfacec3a4107292e216c802dd69fb4499f41b28c96abc"
+    },
+    {
+      "path": "outputs\\pure_dl_fullcv_v97\\fold_4\\root\\fold_4_dynamics\\observation_024.npz",
+      "bytes": 21817027,
+      "sha256": "9855d2a243899e1d6308f46f55618a8ba6ab452da544fd8869e9e75272350a90"
+    },
+    {
+      "path": "outputs\\pure_dl_fullcv_v97\\fold_4\\root\\fold_4_dynamics\\observation_026.npz",
+      "bytes": 21741680,
+      "sha256": "65bbb1189ae89fe2676e058dc79e9fe65b4f540f010412ba7bda6dafa7fe3bbe"
+    },
+    {
+      "path": "outputs\\pure_dl_fullcv_v97\\fold_4\\root\\fold_4_dynamics\\observation_028.npz",
+      "bytes": 21841105,
+      "sha256": "a3996e392caeb84ac0fabd5a03521ef717ef80d94b189a67a3d730e0a33f60a9"
+    },
+    {
+      "path": "outputs\\pure_dl_fullcv_v97\\fold_4\\root\\fold_4_dynamics\\observation_030.npz",
+      "bytes": 21819769,
+      "sha256": "e2ccd96293d7d79a0dd2be263b0e2d01a7961307f169a329f556c0ebc91e41c4"
+    },
+    {
+      "path": "outputs\\pure_dl_fullcv_v97\\fold_4\\root\\fold_4_dynamics\\observation_032.npz",
+      "bytes": 21695943,
+      "sha256": "8c3d9472dfde0bbd7b444489993386eca54d55f7350d3695963c38b6ff4b882e"
+    },
+    {
+      "path": "outputs\\pure_dl_fullcv_v97\\fold_4\\root\\fold_4_dynamics\\observation_034.npz",
+      "bytes": 21683909,
+      "sha256": "68bf9ce5a3957b23212397a9ce7a01efa7083509823255a8a70ef149ecc62ee8"
+    },
+    {
+      "path": "outputs\\pure_dl_fullcv_v97\\fold_4\\root\\fold_4_dynamics\\observation_036.npz",
+      "bytes": 21761472,
+      "sha256": "df11720684f526c122eccea91cc87b8d1e478f762a8e9e09c20b54963987980f"
+    },
+    {
+      "path": "outputs\\pure_dl_fullcv_v97\\fold_4\\root\\fold_4_dynamics\\observation_038.npz",
+      "bytes": 21707640,
+      "sha256": "7c1f97370b2e5523a1ee18c3775a0fa936ab20e301bac4a716ab878843c59573"
+    },
+    {
+      "path": "outputs\\pure_dl_fullcv_v97\\fold_4\\root\\fold_4_dynamics\\observation_040.npz",
+      "bytes": 21771329,
+      "sha256": "c25e78170a445921a0fe8e550ae49bde60227bd1846e7932ce12254ba671f76a"
+    },
+    {
+      "path": "outputs\\pure_dl_fullcv_v97\\fold_4\\root\\fold_4_dynamics\\observation_042.npz",
+      "bytes": 21621520,
+      "sha256": "8b86a32c771611ad3f7ec62473114360dbc4bf6e4a95af2537413d124f9d3c14"
+    },
+    {
+      "path": "outputs\\pure_dl_fullcv_v97\\fold_4\\root\\fold_4_dynamics\\observation_044.npz",
+      "bytes": 21662064,
+      "sha256": "6fd269bca0a7828d5fcf44d04d958f6418857083f1d42532623562320d274487"
+    },
+    {
+      "path": "outputs\\pure_dl_fullcv_v97\\fold_4\\root\\fold_4_dynamics\\observation_046.npz",
+      "bytes": 21719174,
+      "sha256": "5ffa0f38202aa4a17959ecdd1a02eaacef779ce9885c92f2b7511201b8562f93"
+    },
+    {
+      "path": "outputs\\pure_dl_fullcv_v97\\fold_4\\root\\fold_4_dynamics\\observation_048.npz",
+      "bytes": 21620200,
+      "sha256": "6938054ad4d0063d2d088489ebede9416d317bce1ce24cd9ded903877029eb5d"
+    },
+    {
+      "path": "outputs\\pure_dl_fullcv_v97\\fold_4\\root\\fold_4_dynamics\\observation_050.npz",
+      "bytes": 21669853,
+      "sha256": "e4cf5be5271fed357149e42be81e552c316fdb1f2cde2727d21409add01ae84b"
+    },
+    {
+      "path": "outputs\\pure_dl_fullcv_v97\\fold_4\\root\\fold_4_dynamics\\observation_052.npz",
+      "bytes": 21714407,
+      "sha256": "3648cad3a09e32f6db96339774e0c95fd519b7762c0432ed0708ad1fc102906f"
+    },
+    {
+      "path": "outputs\\pure_dl_fullcv_v97\\fold_4\\root\\fold_4_dynamics\\observation_054.npz",
+      "bytes": 21628048,
+      "sha256": "9d4a8112bf4a7a0607eb4e9c7b0d7318a4b62be20cb0405ed201f5631c4abbc1"
+    },
+    {
+      "path": "outputs\\pure_dl_fullcv_v97\\fold_4\\root\\fold_4_dynamics\\observation_056.npz",
+      "bytes": 21577478,
+      "sha256": "fd30571800dc41c1a3cd8816a66444beacff716d9ad8f72e27d6d139da811d0b"
+    },
+    {
+      "path": "outputs\\pure_dl_fullcv_v97\\fold_4\\root\\fold_4_dynamics\\observation_058.npz",
+      "bytes": 21630071,
+      "sha256": "baa445b4e7bbe8b62f2a4cb89632c37696f30d8cfb372f2f5316027a364703ff"
+    },
+    {
+      "path": "outputs\\pure_dl_fullcv_v97\\fold_4\\root\\fold_4_dynamics\\observation_060.npz",
+      "bytes": 21555223,
+      "sha256": "b48d6239c494524e89c45b0a1c023c0488fa70d898a2bd3dd8366df42289a291"
+    },
+    {
+      "path": "outputs\\pure_dl_fullcv_v97\\fold_4\\root\\fold_4_dynamics\\observation_062.npz",
+      "bytes": 21580166,
+      "sha256": "6ec406de524036db5b26aace8f43fab18dd55f6817f5b0c85b0c3f8ad7c3d808"
+    },
+    {
+      "path": "outputs\\pure_dl_fullcv_v97\\fold_4\\root\\fold_4_dynamics\\observation_064.npz",
+      "bytes": 21587272,
+      "sha256": "d493c6fe43e00324c319013cc62a3c464240fd1a6b4ccf8770fe0019f038dd97"
+    },
+    {
+      "path": "outputs\\pure_dl_fullcv_v97\\fold_4\\root\\fold_4_dynamics\\observation_066.npz",
+      "bytes": 21624219,
+      "sha256": "d4232986bc3afd54beebea25286fdbab4066ed26a28a007e26f107db6e08a3d1"
+    },
+    {
+      "path": "outputs\\pure_dl_fullcv_v97\\fold_4\\root\\fold_4_dynamics\\observation_068.npz",
+      "bytes": 21599655,
+      "sha256": "4ac4b9c2674edc215560d9700d9c528c9822a8b2b0e3398f0e8c90ae956f4ade"
+    },
+    {
+      "path": "outputs\\pure_dl_fullcv_v97\\fold_4\\root\\fold_4_dynamics\\observation_070.npz",
+      "bytes": 21618419,
+      "sha256": "bfd58a8f020079d4a0d98333c8d93e4a1513cc1ef06682af2aa7b814968191a6"
+    },
+    {
+      "path": "outputs\\pure_dl_fullcv_v97\\fold_4\\root\\fold_4_dynamics\\observation_072.npz",
+      "bytes": 21562059,
+      "sha256": "3706c8ede021a0c053fbf765fd66c0c2c983b9cd124c02e00844eb4e2f4717cf"
+    },
+    {
+      "path": "outputs\\pure_dl_fullcv_v97\\fold_4\\root\\fold_4_dynamics\\observation_074.npz",
+      "bytes": 21574417,
+      "sha256": "fbecafbcf2902bea4857ac23f272ec0497a4a8ac9345d019829c5a5e45dee3a0"
+    },
+    {
+      "path": "outputs\\pure_dl_fullcv_v97\\fold_4\\root\\fold_4_dynamics\\observation_076.npz",
+      "bytes": 21576432,
+      "sha256": "38e894e7cf6d398cba44bc666efa4344631f15b02202c36ceb1eae875e543e1a"
+    },
+    {
+      "path": "outputs\\pure_dl_fullcv_v97\\fold_4\\root\\fold_4_dynamics\\observation_078.npz",
+      "bytes": 21575239,
+      "sha256": "905a1cb7bc5f282706baa1546ea36d04f8f902e25668e10f832b1a243fd2767c"
+    },
+    {
+      "path": "outputs\\pure_dl_fullcv_v97\\fold_4\\root\\fold_4_dynamics\\observation_080.npz",
+      "bytes": 21568491,
+      "sha256": "72dce60ad81a0f13ac195a353aaa489f1070b6a7d0c31268b7fd2bedbc721f7e"
+    },
+    {
+      "path": "outputs\\pure_dl_fullcv_v97\\fold_4\\root\\fold_4_last_state.pt",
+      "bytes": 81283053,
+      "sha256": "4e06f0958d8a07435a5dd3d9efa4af43825b8baad50611b1ad348a4985725d3f"
+    }
+  ],
+  "total_bytes": 2164213217,
+  "applied": true,
+  "finished_at": "2026-09-30T22:21:42.760036+08:00"
+}

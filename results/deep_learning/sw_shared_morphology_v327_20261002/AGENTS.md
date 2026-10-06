@@ -1,0 +1,1 @@
+Maintain PROJECTS/README actual evidence. Original104 only/freshpositive code jointencoder/readout sharedmorphology oneaddedSWphase/max8. No repairweights. Preserveoldrecipes/deliveries; originalinput/Q/split/score/80-14/max2GPU, no automaticqueue/otherfolds.

@@ -1,0 +1,72 @@
+{
+  "report": {
+    "stage": "aux",
+    "target": "POR",
+    "target_score": 78.04102722487345,
+    "initial_score": 77.92638076072386,
+    "against_initial": 0.11464646414958679,
+    "against_v97_target": 0.48909042298843985,
+    "best_epoch": 28,
+    "stopped_epoch": 42,
+    "validation_rows": 144665,
+    "predictions_reproduced_exactly": true,
+    "frozen_parameters_exact": true,
+    "gradient_groups": {
+      "POR_new_raw_feature_backbone": 0.06618276238441467,
+      "POR_direct_categorical_readout": 0.049058277159929276,
+      "POR_curve_interaction_backbone": 0.06913339346647263,
+      "POR_fresh_joint_gate": 0.002712758257985115
+    },
+    "seconds": 497.89052499999525,
+    "peak_MiB": 2074.65185546875,
+    "complete_five_folds": false,
+    "early_terminated": false
+  },
+  "strata": {
+    "default": 97.40559788886887,
+    "continuous": 41.721102080908395
+  },
+  "bridge_zero_initialized_parameter_norms": {
+    "curve_interaction.bridge.weight": 0.8462749123573303,
+    "curve_interaction.bridge.bias": 0.093918576836586,
+    "gate_residual.weight": 0.06592713296413422,
+    "gate_residual.bias": 0.0031853835098445415
+  },
+  "whole_vs335": -0.0011854101286132845,
+  "CONT_vs335": -0.003408749229841135,
+  "CONT_vs_original151": -0.23285897399566835,
+  "whole_vs340": 0.04803188283128179,
+  "CONT_vs340": -0.19582308321215436,
+  "predefined42": {
+    "through_epoch": 42,
+    "best_epoch": 28,
+    "target_score": 78.04102722487345,
+    "control_actual_epochs": 42,
+    "nominal_budget": 80,
+    "comparison": "Predefined bestthrough42 vs historical335width64 natural42; capacity differs/laterbest not equalwork evidence",
+    "strata": {
+      "default": 97.40559788886887,
+      "continuous": 41.721102080908395
+    }
+  },
+  "stopped_before42": false,
+  "full_best_after42_not_equalwork": false,
+  "adopted": false,
+  "screening_fold": 5,
+  "complete_five_folds": false,
+  "remaining_folds_started": false,
+  "independent_disk_reload": false,
+  "comparison_limits": "342vs340same128385physicalparams/init, butauxstateonlyBCE/mainRPSandpredictiongateoriginal151 changesroles/gradients, notpurecausal. Vs335extra49/notcapacitymatched. Historical not concurrent repeat/no robustnessproof.",
+  "timing": {
+    "includes": "preprocessing warmup training best restoration",
+    "concurrency": "solo after343terminal",
+    "pid": 50104,
+    "started_epoch": 1790903041.985,
+    "global_GPU_jobs_before": 0,
+    "terminal": true,
+    "individual_seconds": 497.89052499999525,
+    "peak_MiB": 2074.65185546875,
+    "process_creation_to_terminal_seconds": 502.48004841804504
+  },
+  "closed_setting": "auxiliaryDEFAULT classifier with frozen main gate, both whole/CONT below335; no bound/BCE/detach grid"
+}

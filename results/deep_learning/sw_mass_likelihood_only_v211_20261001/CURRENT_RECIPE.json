@@ -1,0 +1,52 @@
+{
+  "scores": {
+    "POR": 77.92638076072386,
+    "PERM": 89.40556485691894,
+    "SW": 74.14762262262707,
+    "TOTAL": 80.62152984605825
+  },
+  "total_training_stages": 6,
+  "source_stage_counted": true,
+  "dependencies": [
+    "original source",
+    "v113 mixed POR",
+    "v151 POR jointRPS",
+    "v154 PERM jointRPS",
+    "v104 SW",
+    "v211 SW likelihood-only mass patch"
+  ],
+  "POR": {
+    "checkpoint": "outputs/pure_dl_por_ranked_probability_v151_fold5/joint_rps/model_best.pt",
+    "sha256": "39f2255b8fe61fa74607af027ece1dd352e5e2d0729b9bce95d1424c1b227603",
+    "module": "por_ranked_probability_v151",
+    "stage": "joint_rps"
+  },
+  "PERM": {
+    "checkpoint": "outputs/pure_dl_perm_ranked_probability_v154_fold5/perm_conditional/model_best.pt",
+    "sha256": "2b355bb8c3736990b05e2726373a4343c574a93ab6ab1a3eda0ef796ac70cf11",
+    "module": "perm_ranked_probability_v154",
+    "stage": "perm_conditional"
+  },
+  "SW": {
+    "checkpoint": "outputs\\pure_dl_sw_mass_likelihood_only_v211_fold5\\mass\\model_best.pt",
+    "sha256": "387c296d466dde29f22ef5db9d4afec625d3f20825a0b0d98d32f3566678aa9b",
+    "module": "sw_mass_likelihood_only_v211",
+    "stage": "mass",
+    "parent_checkpoint": "outputs\\pure_dl_compact_frequency_v104_fold5\\local\\model_best.pt",
+    "parent_sha256": "07e0b8df208fe93c8ac07dcf18924459c47afb12ec84b1b7306a0e6017f58670"
+  },
+  "screening_fold": 5,
+  "complete_five_folds": false,
+  "strict_808_passed": false,
+  "strict_channel_gain_025": true,
+  "previous_recipe_path": "results/deep_learning/perm_ranked_probability_v154_20261001/CURRENT_RECIPE.json",
+  "gain_vs_previous_TOTAL": 0.009054428064317221,
+  "remaining_folds_started": false,
+  "optional_not_default": true,
+  "total_stage_upper_bound": 8,
+  "added_head_stages": {
+    "POR": 0,
+    "PERM": 0,
+    "SW": 1
+  }
+}

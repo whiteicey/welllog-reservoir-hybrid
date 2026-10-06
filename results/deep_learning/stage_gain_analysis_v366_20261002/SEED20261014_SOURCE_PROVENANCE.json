@@ -1,0 +1,45 @@
+{
+  "seed": 20261014,
+  "source_scores": {
+    "POR": 76.85409064868203,
+    "PERM": 89.27383271035303,
+    "SW": 73.33354533853603,
+    "TOTAL": 79.96880951171578
+  },
+  "source_best_epoch": 51,
+  "source_stopped_epoch": 61,
+  "own_source_quality": {
+    "status": "ready",
+    "epoch": 50,
+    "sha256": "c2f528a74db562f1f75e96eadd576082d01d9c78e2f7fec7192d9d235ca45133",
+    "dynamic_updates": false,
+    "rule": "last original training-only source Q observation strictly before this fold best epoch; Q0=1 before first observation",
+    "minimum": 0.10000000149011612,
+    "maximum": 1.0,
+    "downweighted_training_rows": 1761
+  },
+  "actual_POR113_load_trace": [
+    {
+      "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261014\\SOURCE\\prepared_data.pt",
+      "sha256": "6ae1b4bfc1b5172a16548a3792a5a24d73f7562f751fc67f4edcedf15ff7a622"
+    },
+    {
+      "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261014\\SOURCE\\fold_5.pt",
+      "sha256": "fe1417aab3b6959152520554c3923de6335425d37577ed986865bd0fdbe70e47"
+    }
+  ],
+  "source_sha256": "fe1417aab3b6959152520554c3923de6335425d37577ed986865bd0fdbe70e47",
+  "prepared_data_sha256": "6ae1b4bfc1b5172a16548a3792a5a24d73f7562f751fc67f4edcedf15ff7a622",
+  "next_actual_pid": 15260,
+  "next_actual_cmdline": [
+    "C:\\Users\\z5364\\.conda\\envs\\normal\\python.exe",
+    "-u",
+    "experiments/pure_dl/train_complete_seed_stage_v362r1.py",
+    "--stage",
+    "POR113"
+  ],
+  "observed_epoch": 1790925085.2676878,
+  "interpretation": "Own train-only Q50 strictly before best51, 1761 downweighted rows. No Q recomputation or causal ablation. SOURCE is prerequisite only, fifth-model full8stage score still pending. SOURCE timing includes overlap with four read-only V368 GPU passes, not solo.",
+  "complete_five_folds": false,
+  "remaining_folds_started": false
+}

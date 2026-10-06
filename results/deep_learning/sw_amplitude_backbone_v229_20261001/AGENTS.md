@@ -1,0 +1,1 @@
+Train8288-param zeroresidual after104 localfilter; all original104 frozen. Existing63 train-fitted amplitude or repeatedhidden control,old104 only206input. Originalfold5/Q50/score/80-14/max2GPU,oneSWstage/no stacks/queue/otherfolds. Maintain PROJECTS/evidence.

@@ -1,0 +1,119 @@
+{
+  "project": "sw_native_joint_adapter_v319_20261002",
+  "scope": "obsolete-study",
+  "weights_retained": false,
+  "cleanup": "Obsolete artifacts removed by explicit user request. These are historical scores, not newly verified training.",
+  "results": [
+    {
+      "source": "PAIRED_FINAL.json",
+      "result": {
+        "reports": {
+          "control": {
+            "stage": "control",
+            "target": "SW",
+            "target_score": 74.12175282815758,
+            "initial_score": 74.12175282815758,
+            "against_initial": 0.0,
+            "against_v97_target": -0.020427076509122344,
+            "best_epoch": 0,
+            "stopped_epoch": 11,
+            "validation_rows": 144665,
+            "predictions_reproduced_exactly": true,
+            "frozen_parameters_exact": true,
+            "seconds": 363.67822269996395,
+            "peak_MiB": 1722.19287109375,
+            "complete_five_folds": false,
+            "early_terminated": true
+          },
+          "adapter": {
+            "stage": "adapter",
+            "target": "SW",
+            "target_score": 74.12175282815758,
+            "initial_score": 74.12175282815758,
+            "against_initial": 0.0,
+            "against_v97_target": -0.020427076509122344,
+            "best_epoch": 0,
+            "stopped_epoch": 12,
+            "validation_rows": 144665,
+            "predictions_reproduced_exactly": true,
+            "frozen_parameters_exact": true,
+            "seconds": 379.329464200011,
+            "peak_MiB": 1723.05224609375,
+            "complete_five_folds": false,
+            "early_terminated": true
+          }
+        },
+        "strata": {
+          "control": {
+            "default": 98.71563225845586,
+            "continuous": 17.63188906048012
+          },
+          "adapter": {
+            "default": 98.71563225845586,
+            "continuous": 17.63188906048012
+          }
+        },
+        "best_source_parameter_delta_L2": {
+          "control": {
+            "body_norm": 0.0,
+            "state": 0.0,
+            "density": 0.0,
+            "condition": 0.0
+          },
+          "adapter": {
+            "body_norm": 0.0,
+            "state": 0.0,
+            "density": 0.0,
+            "condition": 0.0
+          }
+        },
+        "adapter_minus_control": 0.0,
+        "adapter_minus_control_CONT": 0.0,
+        "gain_vs297": {
+          "control": -0.038277394862163305,
+          "adapter": -0.038277394862163305
+        },
+        "CONT_vs297": {
+          "control": 0.1291362931329374,
+          "adapter": 0.1291362931329374
+        },
+        "CONT_vs252": {
+          "control": -0.2529790794300517,
+          "adapter": -0.2529790794300517
+        },
+        "timing": {
+          "started_epoch": 1790887784.911,
+          "launch_epochs": {
+            "control": 1790887784.911,
+            "adapter": 1790887806.438
+          },
+          "launch_stagger_seconds": 21.527,
+          "start_evidence": "Win32_Process.CreationDate from live PIDs440/76864",
+          "terminal": true,
+          "concurrency": "2 after stagger",
+          "prelaunch_preparation_included": false,
+          "same_work_pair_wall_seconds": 405.4889225959778,
+          "individual_seconds": {
+            "control": 363.67822269996395,
+            "adapter": 379.329464200011
+          },
+          "peak_MiB": {
+            "control": 1722.19287109375,
+            "adapter": 1723.05224609375
+          },
+          "interpretation": "Concurrent pair with21.527s stagger; individual includes preparation/initial/train/finalrestore; pair includes creation-to-last-terminal, excludes CPUfinalization. No isolatedspeed comparison."
+        },
+        "screening_fold": 5,
+        "complete_five_folds": false,
+        "remaining_folds_started": false,
+        "independent_disk_reload": false,
+        "adopted": false,
+        "capacity_matched": false,
+        "closure": "Both best0/learned0; full native104 joint adaptation and fresh FF adapter no gain in this fixed configuration. No layer/rank/LR/SAM sweep. Not proof whole backbone class ineffective."
+      }
+    }
+  ],
+  "cleanup_completed": true,
+  "deleted_files": 15,
+  "deleted_bytes": 6963297
+}

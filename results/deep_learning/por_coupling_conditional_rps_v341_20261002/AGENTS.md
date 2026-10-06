@@ -1,0 +1,2 @@
+# Scope
+One from-original151 fresh338depth encoder/readout jointly with339conditionalRPScode,134752params. Neverload338/339/340trainedrepairweights. OnePORaddedphase/max8, fixedfifth/Q50/score/80pat14/min10/b64/64steps/globalmax2GPU. Preparedonly/noautoqueue;340continuesunchanged, laterexplicit solo. MaintainPROJECTS andREADME actualgain/limits/closure. Nootherfolds beforestrict80.8+gain/fullOOF82unmet, olddeliveryimmutable.

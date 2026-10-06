@@ -1,0 +1,2 @@
+# Scope
+One conditional-onlyRPS candidate, prepared pending historical lookup. Never auto launch/queue; globalmax2GPU. Onlyoriginal151 weights/fresh335 architecture encoder-readout jointly trained; no trainedrepairchain. OnePORaddedphase/max8, originalfold5/Q50/scoring/80pat14/min10/b64/64steps. Maintain PROJECTS and README actualgain/closure. Prior recipes/deliveries immutable. No remainingfolds before strict80.8+gain; fullOOF82 unmet.

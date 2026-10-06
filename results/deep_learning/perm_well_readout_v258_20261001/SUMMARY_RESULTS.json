@@ -1,0 +1,125 @@
+{
+  "project": "perm_well_readout_v258_20261001",
+  "scope": "obsolete-study",
+  "weights_retained": false,
+  "cleanup": "Obsolete artifacts removed by explicit user request. These are historical scores, not newly verified training.",
+  "results": [
+    {
+      "source": "PAIRED_FINAL.json",
+      "result": {
+        "arms": {
+          "reference": {
+            "scores": {
+              "POR": 77.92638076072386,
+              "PERM": 89.41129359479007,
+              "SW": 74.12175282815758,
+              "TOTAL": 80.61448047624883
+            },
+            "screening_fold": 5,
+            "validation_rows": 144665,
+            "complete_five_folds": false,
+            "strict_808_passed": false,
+            "remaining_folds_started": false,
+            "total_training_stages": 6,
+            "stage_upper_bound": 8,
+            "added_head_stages": {
+              "POR": 0,
+              "PERM": 1,
+              "SW": 0
+            },
+            "source_stage_counted": true,
+            "gain_vs_original_PERM": 0.0057287378711237125,
+            "gain_vs_original_TOTAL": 0.0020050582548947204,
+            "report": {
+              "stage": "reference",
+              "target": "PERM",
+              "target_score": 89.41129359479007,
+              "initial_score": 89.4043983346458,
+              "against_initial": 0.006895260144261783,
+              "against_v97_target": 0.014569545424251373,
+              "best_epoch": 5,
+              "stopped_epoch": 19,
+              "validation_rows": 144665,
+              "predictions_reproduced_exactly": true,
+              "frozen_parameters_exact": true,
+              "seconds": 186.96659879997605,
+              "peak_MiB": 790.4765625,
+              "complete_five_folds": false,
+              "early_terminated": false
+            }
+          },
+          "well": {
+            "scores": {
+              "POR": 77.92638076072386,
+              "PERM": 89.41101212435254,
+              "SW": 74.12175282815758,
+              "TOTAL": 80.6143819615957
+            },
+            "screening_fold": 5,
+            "validation_rows": 144665,
+            "complete_five_folds": false,
+            "strict_808_passed": false,
+            "remaining_folds_started": false,
+            "total_training_stages": 6,
+            "stage_upper_bound": 8,
+            "added_head_stages": {
+              "POR": 0,
+              "PERM": 1,
+              "SW": 0
+            },
+            "source_stage_counted": true,
+            "gain_vs_original_PERM": 0.005447267433595471,
+            "gain_vs_original_TOTAL": 0.001906543601762678,
+            "report": {
+              "stage": "well",
+              "target": "PERM",
+              "target_score": 89.41101212435254,
+              "initial_score": 89.4043983346458,
+              "against_initial": 0.006613789706733542,
+              "against_v97_target": 0.014288074986723132,
+              "best_epoch": 5,
+              "stopped_epoch": 19,
+              "validation_rows": 144665,
+              "predictions_reproduced_exactly": true,
+              "frozen_parameters_exact": true,
+              "seconds": 187.18418769998243,
+              "peak_MiB": 790.2958984375,
+              "complete_five_folds": false,
+              "early_terminated": false
+            }
+          }
+        },
+        "well_minus_reference": -0.00028147043752824175,
+        "gain_vs_retained_248": {
+          "reference": -0.0021720005977243773,
+          "well": -0.002453471035252619
+        },
+        "timing": {
+          "excludes_code_preparation": true,
+          "arms": {
+            "reference": {
+              "process_creation_utc_seconds": 1790864440.247,
+              "pid": 66400
+            },
+            "well": {
+              "process_creation_utc_seconds": 1790864440.256,
+              "pid": 41832
+            }
+          },
+          "pair_wallclock_pending": false,
+          "maximum_GPU_jobs": 2,
+          "concurrent": true,
+          "includes_startup_model_data_initial_eval": true,
+          "pair_wallclock_seconds": 193.28652381896973,
+          "includes_final_restore_and_report": true
+        },
+        "conclusion": "Wholewell mean/std conditioning gives no paired gain; both below retained248. Close this configuration, not wholewell context generally.",
+        "independent_disk_reload": false,
+        "remaining_folds_started": false
+      }
+    }
+  ],
+  "cleanup_completed": true,
+  "deleted_files": 14,
+  "deleted_bytes": 6966453
+}

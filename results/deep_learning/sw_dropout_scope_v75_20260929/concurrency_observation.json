@@ -1,0 +1,8 @@
+{
+  "first_run_solo_first3_epoch_median_seconds": 7.73830710000766,
+  "second_run_solo_last4_epoch_median_seconds": 8.522870049993799,
+  "first_run_overlap_epochs12to18_median_seconds": 16.853890599988517,
+  "one_epoch_each_serial_sum_estimate": 16.26117715000146,
+  "scope": "Observational run phases, not a controlled equal-work benchmark. Epoch timers include training/evaluation/best-state selection but exclude initial loading/warmup and the following checkpoint persist. Reported total run seconds include loading, evaluation and checkpoint saves.",
+  "future": "prefer serial for another comparable two-pass pair; maximum2 remains ceiling, not default"
+}

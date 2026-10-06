@@ -1,0 +1,1 @@
+Maintain PROJECTS/README/EXPLORATIONS/atlas. Only matched shared/split final SW residual connectivity, own loss/original data/score/row sampler. normal/max2GPU,serial explicit SW starts,80/18,5 total stages incl source/parent. Atomic full state explicit resume, no autoqueue/otherfolds/old-source/delivery changes.

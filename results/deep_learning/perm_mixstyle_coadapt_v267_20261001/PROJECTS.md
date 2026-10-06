@@ -1,0 +1,16 @@
+Goal fullOOF>82/screen808. Prepared PERM retainedcontext+newmass jointupdate stylecontrol. Wait266actualterminal/max2; gainsunproved/nootherfolds.
+
+V266 FINAL control/vrex POR77.926380760724 both/best0/natural14stop, learnedgain0; actual144665assembly/RAMbest/frozenexact/no diskreload. SoloTOTAL80.612475417994 is olddefault5 function replay, not newgain. Individual246.521914/248.109755s/925.151MiB, concurrentwall253.429s inclstartup/data/initialeval/finalrestore/excludesprep.265632trainable/34688newcopiedlateparams; close thiscoadapt/variance design, no beta/encoderwidthscan. V267 launched ownPERM154context+mass coadapt andsame264wellmean mechanism, p.25/strength.1 training-onlystyle versus matchedcontrol, onePERMaddition/max2/80-14. Gainunproved, currentoptional7 80.625533220240/default5/delivery unchanged/nootherfolds.
+
+V267 liveverified PIDs84480/36084 bothepoch3: control89.370909727960/mixstyle89.368278460947, bestinitial89.404398334646/no learnedgain yet, below retained26489.415397483681. Same95329trainable(82720oldcontext+12609newmass), peak786.465MiB, bothgradgroupsnonzero/finite losses, traininggroupstats31/27, no extraGPU. Continue80-14/max2. Originalsourcefrozen, evalstyleidentity. V266negative best/last deleted afterfull144665assembly/SHAmanifest, original151/current264preserved. Atlas1035experiments/198deadends/220unresolved, incompleteancestryexplicit. Currentoptional7TOTAL80.625533220240/default5/delivery unchanged; no808/nootherfolds.
+
+V267 final PERM89.404398334646, gain-0.001166522273, actualTOTAL80.612067135198; sixphases inclsource/one addedPERMstage, strict808=False; all144665replay/frozenexact, best/stop0/14, trainingseconds241.300178/peakMiB786.465332. No otherfolds.
+
+V267 final PERM89.404398334646, gain-0.001166522273, actualTOTAL80.612067135198; sixphases inclsource/one addedPERMstage, strict808=False; all144665replay/frozenexact, best/stop0/14, trainingseconds237.493554/peakMiB786.465332. No otherfolds.
+
+V267 FINAL control/mixstyle PERM89.404398334646 both/best0/natural14stop/no learnedgain, below26489.415397483681. Full144665assembly/RAMbest/frozenSOURCE checks/no diskreload. Individual241.300178/237.493554s/786.465MiB, pairwall246.882s inclstartup/data/initialeval/finalrestore/excludesprep. Closecontext+mass coadapt and conservativeStyle here, no layer/strength grid. V268 launched frozen154 newrepresentationMLP28157/memory28161 incl12609mass, bound.25/zero feature residual/sameinitial89.404398334646, onePERMphase/equalwell learning/max2/80-14. Memory is purelatent parameters/no sample-labelretrieval. Gainsunproved; current7TOTAL80.625533220240/default5/delivery unchanged/nootherfolds. Research docs/deep_learning/research/perm_learned_memory_readout_20261001.md notesnear-capacity and delayedupstreamgradients.
+
+
+## 2026-10-02 user-authorized artifact cleanup
+
+Obsolete artifacts have been removed; SUMMARY_RESULTS.json and SUMMARY.md retain historical scores and conclusions. Detailed logs/caches/weights are unavailable for these obsolete trials. Current V370 original + seed20261013, retained-model dependency closure, reusable source, original data and deliveries are preserved. See D:/match_predict/maintenance_cleanup_20261002/VERIFICATION.json.

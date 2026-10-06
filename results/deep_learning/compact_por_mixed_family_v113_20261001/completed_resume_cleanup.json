@@ -1,0 +1,16 @@
+{
+  "reason": "completed runs immutable; only redundant optimizer/current resume state removed, both positive best checkpoints and all proof retained",
+  "files": [
+    {
+      "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_compact_por_mixed_family_v113_fold5\\t3_cauchy\\last_state.pt",
+      "bytes": 13906887,
+      "sha256": "8b6867dbfe470cea0b53bc24b368e28b37dfb80115f559c45000d25e2779b99d"
+    },
+    {
+      "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_compact_por_mixed_family_v113_fold5\\cauchy_t3\\last_state.pt",
+      "bytes": 13905351,
+      "sha256": "095b6cb44fbe23bf6791850cc4495a56f61a4f2645bd7dfe75590109bf483679"
+    }
+  ],
+  "deleted_verified": true
+}

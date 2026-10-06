@@ -1,0 +1,56 @@
+{
+  "project": "compact_por_features_v108_20261001",
+  "scope": "obsolete-study",
+  "weights_retained": false,
+  "cleanup": "Obsolete artifacts removed by explicit user request. These are historical scores, not newly verified training.",
+  "results": [
+    {
+      "source": "ablation_report.json",
+      "result": {
+        "original_fold": 5,
+        "control": {
+          "stage": "curve_control",
+          "target": "SW",
+          "target_score": 73.84337699449452,
+          "initial_score": 71.19711508147167,
+          "against_initial": 2.6462619130228546,
+          "against_v97_target": -0.29880291017218497,
+          "best_epoch": 34,
+          "stopped_epoch": 52,
+          "validation_rows": 144665,
+          "predictions_reproduced_exactly": true,
+          "frozen_parameters_exact": true,
+          "seconds": 642.4042727999913,
+          "peak_MiB": 1726.4931640625,
+          "complete_five_folds": false
+        },
+        "candidate": {
+          "stage": "por_posterior",
+          "target": "SW",
+          "target_score": 73.68372726105164,
+          "initial_score": 71.19711508147167,
+          "against_initial": 2.4866121795799785,
+          "against_v97_target": -0.4584526436150611,
+          "best_epoch": 20,
+          "stopped_epoch": 38,
+          "validation_rows": 144665,
+          "predictions_reproduced_exactly": true,
+          "frozen_parameters_exact": true,
+          "seconds": 472.64252909997595,
+          "peak_MiB": 1726.4931640625,
+          "complete_five_folds": false
+        },
+        "predefined_semantic_feature_delta": -0.15964973344287614,
+        "same_trainable_parameters": true,
+        "same_initial_official_score": true,
+        "same_network_initialization": true,
+        "input_feature_semantics_differ": true,
+        "complete_five_folds": false,
+        "remaining_folds_started": false
+      }
+    }
+  ],
+  "cleanup_completed": true,
+  "deleted_files": 17,
+  "deleted_bytes": 6982810
+}

@@ -1,0 +1,19 @@
+{
+  "well_start_epoch": 1790874862.7989817,
+  "terminal": true,
+  "concurrency": 2,
+  "includes_prep_initial_train_final": true,
+  "codeprep_CPUassembly_excluded": true,
+  "reference_start_epoch": 1790875454.441,
+  "well_seconds": 563.8717269999906,
+  "total_paired_wall_seconds": 969.3812670707703,
+  "individual_seconds": {
+    "well": 563.8717269999906,
+    "reference": 366.62952859996585
+  },
+  "peak_MiB": {
+    "well": 1280.80224609375,
+    "reference": 1280.80224609375
+  },
+  "measurement_scope": "Staggered sequential arms with different overlap against296, includes data/initial/train/finalrestore and launch gap, excludes codeprep/CPUassembly; not isolated speed comparison"
+}

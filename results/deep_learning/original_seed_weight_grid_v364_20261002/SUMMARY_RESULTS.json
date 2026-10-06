@@ -1,0 +1,443 @@
+{
+  "project": "original_seed_weight_grid_v364_20261002",
+  "scope": "obsolete-study",
+  "weights_retained": false,
+  "cleanup": "Obsolete artifacts removed by explicit user request. These are historical scores, not newly verified training.",
+  "results": [
+    {
+      "source": "FINAL.json",
+      "result": {
+        "best_common_weight": {
+          "original_weight": 0.81,
+          "new_seed_weight": 0.18999999999999995,
+          "POR": 78.04793494837638,
+          "PERM": 89.5499386183918,
+          "SW": 74.19438259436203,
+          "TOTAL": 80.72489290897676,
+          "delta_vs_original": 0.018763185738691845
+        },
+        "best_coarse_005": {
+          "original_weight": 0.85,
+          "new_seed_weight": 0.15000000000000002,
+          "POR": 78.05372785476085,
+          "PERM": 89.54319470240235,
+          "SW": 74.19196659771367,
+          "TOTAL": 80.72342481146886,
+          "delta_vs_original": 0.01729508823079584
+        },
+        "top_five": [
+          {
+            "original_weight": 0.81,
+            "new_seed_weight": 0.18999999999999995,
+            "POR": 78.04793494837638,
+            "PERM": 89.5499386183918,
+            "SW": 74.19438259436203,
+            "TOTAL": 80.72489290897676,
+            "delta_vs_original": 0.018763185738691845
+          },
+          {
+            "original_weight": 0.82,
+            "new_seed_weight": 0.18000000000000005,
+            "POR": 78.04732553171625,
+            "PERM": 89.54887557350291,
+            "SW": 74.19406754045964,
+            "TOTAL": 80.72422774940176,
+            "delta_vs_original": 0.018098026163698933
+          },
+          {
+            "original_weight": 0.78,
+            "new_seed_weight": 0.21999999999999997,
+            "POR": 78.04452272345777,
+            "PERM": 89.55116377310937,
+            "SW": 74.19372687381143,
+            "TOTAL": 80.72406854345961,
+            "delta_vs_original": 0.017938820221544916
+          },
+          {
+            "original_weight": 0.83,
+            "new_seed_weight": 0.17000000000000004,
+            "POR": 78.04858904452439,
+            "PERM": 89.54871157094,
+            "SW": 74.19201798741993,
+            "TOTAL": 80.72383205878329,
+            "delta_vs_original": 0.01770233554522349
+          },
+          {
+            "original_weight": 0.84,
+            "new_seed_weight": 0.16000000000000003,
+            "POR": 78.0544350402873,
+            "PERM": 89.54538599229413,
+            "SW": 74.18969773722287,
+            "TOTAL": 80.72360981741714,
+            "delta_vs_original": 0.01748009417907781
+          }
+        ],
+        "original_alone": {
+          "original_weight": 1.0,
+          "new_seed_weight": 0.0,
+          "POR": 78.04643071793232,
+          "PERM": 89.51838939879066,
+          "SW": 74.17361205223327,
+          "TOTAL": 80.70612972323806,
+          "delta_vs_original": 0.0
+        },
+        "new_seed_alone": {
+          "original_weight": 0.0,
+          "new_seed_weight": 1.0,
+          "POR": 77.5520561792274,
+          "PERM": 89.49625487509155,
+          "SW": 74.03612889675152,
+          "TOTAL": 80.5019511739133,
+          "delta_vs_original": -0.20417854932476587
+        },
+        "equal_half": {
+          "original_weight": 0.5,
+          "new_seed_weight": 0.5,
+          "POR": 77.93964020763568,
+          "PERM": 89.56537181009944,
+          "SW": 74.17086138314515,
+          "TOTAL": 80.6895736799263,
+          "delta_vs_original": -0.01655604331176619
+        },
+        "scores": {
+          "POR": 78.04793494837638,
+          "PERM": 89.5499386183918,
+          "SW": 74.19438259436203,
+          "TOTAL": 80.72489290897676
+        },
+        "strata": {
+          "POR": {
+            "DEFAULT": {
+              "rows": 94357,
+              "score": 97.45434890893098
+            },
+            "CONT": {
+              "rows": 50308,
+              "score": 41.64952908696266
+            }
+          },
+          "PERM": {
+            "DEFAULT": {
+              "rows": 95533,
+              "score": 97.53693096479097
+            },
+            "CONT": {
+              "rows": 49132,
+              "score": 74.01991053428122
+            }
+          },
+          "SW": {
+            "DEFAULT": {
+              "rows": 100786,
+              "score": 98.72755598981885
+            },
+            "CONT": {
+              "rows": 43879,
+              "score": 17.84395496760571
+            }
+          }
+        },
+        "weight_grid": "0:0.01:1",
+        "tested_common_weights": 101,
+        "common_weight_all_heads": true,
+        "per_target_weight_selection": false,
+        "per_row_choice": false,
+        "comparison": "Maximum only within tested grid; same fifth used for weight selection, not independent generalization/fullOOF.",
+        "screening_fold": 5,
+        "validation_rows": 144665,
+        "independent_disk_reload": true,
+        "endpoints_half_replayed_exactly": true,
+        "extra_training_stages": 0,
+        "models": 2,
+        "stages_per_model": 8,
+        "total_preexisting_training_stages": 16,
+        "sum_channel_evaluation_seconds": 46.255836999975145,
+        "maximum_evaluation_peak_MiB": 1362.8662109375,
+        "total_study_wall_seconds": 121.3815016746521,
+        "timing_scope": "Serial target evaluations concurrent with one existing SOURCE job, load/preparation/warmup/inference/grid included. Study wall includes implementation/gaps/CPU assembly/plot, not a solo inference benchmark.",
+        "strict_808_qualified": false,
+        "complete_five_folds": false,
+        "remaining_folds_started": false,
+        "adopted_as_single_eight_stage_model": false,
+        "reports": {
+          "POR": {
+            "target": "POR",
+            "endpoints_and_half_exact": true,
+            "method": "Common weighted native probability mixture then unchanged official utility argmax; utility weighting linear-equivalent, each native support retained",
+            "actions_identical": true,
+            "supports_identical": true,
+            "validation_rows": 144665,
+            "coverage_exactly_once": true,
+            "old_disk_replay_exact": true,
+            "new_disk_replay_exact": true,
+            "actual_new_checkpoint_loads": [
+              {
+                "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261010\\SOURCE\\prepared_data.pt"
+              },
+              {
+                "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261010\\SOURCE\\fold_5.pt"
+              },
+              {
+                "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261010\\POR113\\model_best.pt"
+              },
+              {
+                "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261010\\POR151\\model_best.pt"
+              },
+              {
+                "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261010\\POR341\\model_best.pt"
+              }
+            ],
+            "seconds": 15.536385499988683,
+            "peak_MiB": 1362.8662109375,
+            "admission": {
+              "maximum_concurrent_jobs": 2,
+              "other_jobs": [
+                {
+                  "pid": 32596,
+                  "script": "train_complete_seed_source_v362.py"
+                }
+              ],
+              "free_gib": 10.8037109375,
+              "total_gib": 11.99365234375
+            },
+            "concurrent_training_continues": true,
+            "extra_training_stages": 0,
+            "screening_fold": 5,
+            "complete_five_folds": false,
+            "remaining_folds_started": false
+          },
+          "PERM": {
+            "target": "PERM",
+            "endpoints_and_half_exact": true,
+            "method": "Common weighted native probability mixture then unchanged official utility argmax; utility weighting linear-equivalent, each native support retained",
+            "actions_identical": true,
+            "supports_identical": true,
+            "validation_rows": 144665,
+            "coverage_exactly_once": true,
+            "old_disk_replay_exact": true,
+            "new_disk_replay_exact": true,
+            "actual_new_checkpoint_loads": [
+              {
+                "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261010\\SOURCE\\prepared_data.pt"
+              },
+              {
+                "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261010\\SOURCE\\fold_5.pt"
+              },
+              {
+                "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261010\\PERM154\\model_best.pt"
+              },
+              {
+                "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261010\\PERM336\\model_best.pt"
+              }
+            ],
+            "seconds": 15.742436000029556,
+            "peak_MiB": 1166.623046875,
+            "admission": {
+              "maximum_concurrent_jobs": 2,
+              "other_jobs": [
+                {
+                  "pid": 32596,
+                  "script": "train_complete_seed_source_v362.py"
+                }
+              ],
+              "free_gib": 10.8037109375,
+              "total_gib": 11.99365234375
+            },
+            "concurrent_training_continues": true,
+            "extra_training_stages": 0,
+            "screening_fold": 5,
+            "complete_five_folds": false,
+            "remaining_folds_started": false
+          },
+          "SW": {
+            "target": "SW",
+            "endpoints_and_half_exact": true,
+            "method": "Common weighted native probability mixture then unchanged official utility argmax; utility weighting linear-equivalent, each native support retained",
+            "actions_identical": true,
+            "supports_identical": true,
+            "validation_rows": 144665,
+            "coverage_exactly_once": true,
+            "old_disk_replay_exact": true,
+            "new_disk_replay_exact": true,
+            "actual_new_checkpoint_loads": [
+              {
+                "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261010\\SOURCE\\prepared_data.pt"
+              },
+              {
+                "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261010\\SOURCE\\fold_5.pt"
+              },
+              {
+                "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261010\\SW104\\model_best.pt"
+              },
+              {
+                "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261010\\SW351_fixed\\model_best.pt"
+              }
+            ],
+            "seconds": 14.977015499956906,
+            "peak_MiB": 877.1455078125,
+            "admission": {
+              "maximum_concurrent_jobs": 2,
+              "other_jobs": [
+                {
+                  "pid": 32596,
+                  "script": "train_complete_seed_source_v362.py"
+                }
+              ],
+              "free_gib": 10.8037109375,
+              "total_gib": 11.99365234375
+            },
+            "concurrent_training_continues": true,
+            "extra_training_stages": 0,
+            "screening_fold": 5,
+            "complete_five_folds": false,
+            "remaining_folds_started": false
+          }
+        }
+      }
+    },
+    {
+      "source": "PERM_RESULT.json",
+      "result": {
+        "target": "PERM",
+        "endpoints_and_half_exact": true,
+        "method": "Common weighted native probability mixture then unchanged official utility argmax; utility weighting linear-equivalent, each native support retained",
+        "actions_identical": true,
+        "supports_identical": true,
+        "validation_rows": 144665,
+        "coverage_exactly_once": true,
+        "old_disk_replay_exact": true,
+        "new_disk_replay_exact": true,
+        "actual_new_checkpoint_loads": [
+          {
+            "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261010\\SOURCE\\prepared_data.pt"
+          },
+          {
+            "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261010\\SOURCE\\fold_5.pt"
+          },
+          {
+            "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261010\\PERM154\\model_best.pt"
+          },
+          {
+            "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261010\\PERM336\\model_best.pt"
+          }
+        ],
+        "seconds": 15.742436000029556,
+        "peak_MiB": 1166.623046875,
+        "admission": {
+          "maximum_concurrent_jobs": 2,
+          "other_jobs": [
+            {
+              "pid": 32596,
+              "script": "train_complete_seed_source_v362.py"
+            }
+          ],
+          "free_gib": 10.8037109375,
+          "total_gib": 11.99365234375
+        },
+        "concurrent_training_continues": true,
+        "extra_training_stages": 0,
+        "screening_fold": 5,
+        "complete_five_folds": false,
+        "remaining_folds_started": false
+      }
+    },
+    {
+      "source": "POR_RESULT.json",
+      "result": {
+        "target": "POR",
+        "endpoints_and_half_exact": true,
+        "method": "Common weighted native probability mixture then unchanged official utility argmax; utility weighting linear-equivalent, each native support retained",
+        "actions_identical": true,
+        "supports_identical": true,
+        "validation_rows": 144665,
+        "coverage_exactly_once": true,
+        "old_disk_replay_exact": true,
+        "new_disk_replay_exact": true,
+        "actual_new_checkpoint_loads": [
+          {
+            "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261010\\SOURCE\\prepared_data.pt"
+          },
+          {
+            "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261010\\SOURCE\\fold_5.pt"
+          },
+          {
+            "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261010\\POR113\\model_best.pt"
+          },
+          {
+            "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261010\\POR151\\model_best.pt"
+          },
+          {
+            "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261010\\POR341\\model_best.pt"
+          }
+        ],
+        "seconds": 15.536385499988683,
+        "peak_MiB": 1362.8662109375,
+        "admission": {
+          "maximum_concurrent_jobs": 2,
+          "other_jobs": [
+            {
+              "pid": 32596,
+              "script": "train_complete_seed_source_v362.py"
+            }
+          ],
+          "free_gib": 10.8037109375,
+          "total_gib": 11.99365234375
+        },
+        "concurrent_training_continues": true,
+        "extra_training_stages": 0,
+        "screening_fold": 5,
+        "complete_five_folds": false,
+        "remaining_folds_started": false
+      }
+    },
+    {
+      "source": "SW_RESULT.json",
+      "result": {
+        "target": "SW",
+        "endpoints_and_half_exact": true,
+        "method": "Common weighted native probability mixture then unchanged official utility argmax; utility weighting linear-equivalent, each native support retained",
+        "actions_identical": true,
+        "supports_identical": true,
+        "validation_rows": 144665,
+        "coverage_exactly_once": true,
+        "old_disk_replay_exact": true,
+        "new_disk_replay_exact": true,
+        "actual_new_checkpoint_loads": [
+          {
+            "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261010\\SOURCE\\prepared_data.pt"
+          },
+          {
+            "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261010\\SOURCE\\fold_5.pt"
+          },
+          {
+            "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261010\\SW104\\model_best.pt"
+          },
+          {
+            "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261010\\SW351_fixed\\model_best.pt"
+          }
+        ],
+        "seconds": 14.977015499956906,
+        "peak_MiB": 877.1455078125,
+        "admission": {
+          "maximum_concurrent_jobs": 2,
+          "other_jobs": [
+            {
+              "pid": 32596,
+              "script": "train_complete_seed_source_v362.py"
+            }
+          ],
+          "free_gib": 10.8037109375,
+          "total_gib": 11.99365234375
+        },
+        "concurrent_training_continues": true,
+        "extra_training_stages": 0,
+        "screening_fold": 5,
+        "complete_five_folds": false,
+        "remaining_folds_started": false
+      }
+    }
+  ],
+  "cleanup_completed": true,
+  "deleted_files": 9,
+  "deleted_bytes": 4785442
+}

@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "wells": 10,
+  "rows": 95948,
+  "original_models_unchanged": true,
+  "per_well_test_inference": true,
+  "exact_to_previous_perwell_diagnostic": true,
+  "result_sha256": "9e6f0a0ae8d13ce948a98f2b5bd55d3af257caef5f6cc74c2c8194d3fafce57a",
+  "code_zip_sha256": "32468bb15bac9af68ef3a741d68b4ceae6d6c20e32fa0ecb04fc1bb2dda45ce0",
+  "code_zip_crc_and_manifest": true,
+  "test_accuracy": "unknown",
+  "oof_scope": "Source OOF only; per-well OOF not recomputed"
+}

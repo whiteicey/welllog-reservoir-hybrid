@@ -1,0 +1,123 @@
+{
+  "project": "sw_proxy_background_v313_20261002",
+  "scope": "obsolete-study",
+  "weights_retained": false,
+  "cleanup": "Obsolete artifacts removed by explicit user request. These are historical scores, not newly verified training.",
+  "results": [
+    {
+      "source": "PAIRED_FINAL.json",
+      "result": {
+        "reports": {
+          "well": {
+            "stage": "well",
+            "target": "SW",
+            "target_score": 74.16020960035114,
+            "initial_score": 74.12175268976877,
+            "against_initial": 0.038456910582368664,
+            "against_v97_target": 0.018029695684433023,
+            "best_epoch": 17,
+            "stopped_epoch": 31,
+            "validation_rows": 144665,
+            "predictions_reproduced_exactly": true,
+            "frozen_parameters_exact": true,
+            "seconds": 400.85437840002123,
+            "peak_MiB": 1280.80322265625,
+            "complete_five_folds": false,
+            "early_terminated": false
+          },
+          "reference": {
+            "stage": "reference",
+            "target": "SW",
+            "target_score": 74.16097322183785,
+            "initial_score": 74.12175268976877,
+            "against_initial": 0.039220532069080605,
+            "against_v97_target": 0.018793317171144963,
+            "best_epoch": 17,
+            "stopped_epoch": 31,
+            "validation_rows": 144665,
+            "predictions_reproduced_exactly": true,
+            "frozen_parameters_exact": true,
+            "seconds": 399.96901249996154,
+            "peak_MiB": 1280.802734375,
+            "complete_five_folds": false,
+            "early_terminated": false
+          }
+        },
+        "strata": {
+          "well": {
+            "default": 98.82888103513555,
+            "continuous": 17.49855552377331
+          },
+          "reference": {
+            "default": 98.8312426199958,
+            "continuous": 17.49564877135523
+          }
+        },
+        "best_added_column_norms": {
+          "well": {
+            "stem.0.weight": 0.3424827456474304
+          },
+          "reference": {
+            "stem.0.weight": 0.32605648040771484
+          }
+        },
+        "well_minus_reference": -0.0007636214867119406,
+        "well_minus_reference_CONT": 0.002906752418077474,
+        "gain_vs_retained297": {
+          "well": 0.00017937733139206102,
+          "reference": 0.0009429988181040017
+        },
+        "CONT_vs_retained297": {
+          "well": -0.004197243573873521,
+          "reference": -0.007103995991950995
+        },
+        "CONT_vs_strong252": {
+          "well": -0.38631261613686263,
+          "reference": -0.3892193685549401
+        },
+        "timing": {
+          "maximum_parallelism": 2,
+          "gain": "unproved",
+          "jobs": [
+            {
+              "start_epoch": 1790883366.887,
+              "started_UTC": "2026-10-01T19:36:06.8875632+00:00",
+              "pid": 86808,
+              "stage": "well"
+            },
+            {
+              "start_epoch": 1790883476.268,
+              "started_UTC": "2026-10-01T19:37:56.2684794+00:00",
+              "pid": 59544,
+              "stage": "reference"
+            }
+          ],
+          "started_UTC": "2026-10-01T19:36:06.8875632+00:00",
+          "status": "pair_launched",
+          "started_epoch": 1790883366.887,
+          "terminal": true,
+          "same_work_pair_wall_seconds": 514.7516872882843,
+          "individual_seconds": {
+            "well": 400.85437840002123,
+            "reference": 399.96901249996154
+          },
+          "peak_MiB": {
+            "well": 1280.80322265625,
+            "reference": 1280.802734375
+          },
+          "interpretation": "Staggered launches with partial overlap; wall includes gap/data/initial/train/best restore, excludes work beforefirstlaunch and CPUfinalization after. Not isolatedspeedranking."
+        },
+        "screening_fold": 5,
+        "complete_five_folds": false,
+        "remaining_folds_started": false,
+        "independent_disk_reload": false,
+        "automatic_adoption": false,
+        "adopted": false,
+        "closure": "Ownwell versusreference CONT+.00290675 but whole-.00076362; bothCONTbelow297/252. Close fixedq20coordinate, do not adopt default-dominated absolutewholemicrogain or sweep percentiles."
+      }
+    }
+  ],
+  "cleanup_completed": true,
+  "deleted_files": 7,
+  "deleted_bytes": 6953341
+}

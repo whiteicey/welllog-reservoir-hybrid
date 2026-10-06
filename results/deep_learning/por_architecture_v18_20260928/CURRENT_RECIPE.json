@@ -1,0 +1,41 @@
+{
+  "scores": {
+    "POR": 77.44891570750882,
+    "PERM": 89.3475027344081,
+    "SW": 73.62238476712884,
+    "TOTAL": 80.27413533779057
+  },
+  "choices": [
+    {
+      "target": "POR",
+      "key": "POR_dual",
+      "architecture": "dual",
+      "target_score": 77.44891570750882,
+      "best_epoch": 0,
+      "checkpoint": "outputs/pure_dl_independent_v8_POR_dual80_fold5/model_best.pt"
+    },
+    {
+      "target": "PERM",
+      "key": "PERM_dual",
+      "architecture": "dual",
+      "target_score": 89.3475027344081,
+      "best_epoch": 0,
+      "checkpoint": "outputs/pure_dl_independent_v8_PERM_dual80_fold5/model_best.pt"
+    },
+    {
+      "target": "SW",
+      "key": "SW_dual",
+      "architecture": "dual",
+      "target_score": 73.62238476712884,
+      "best_epoch": 0,
+      "checkpoint": "outputs/pure_dl_independent_v8_SW_dual80_fold5/model_best.pt"
+    }
+  ],
+  "selected_new_POR": false,
+  "best_new_candidate": "tcn104",
+  "metadata": null,
+  "original_fifth_development_selection": true,
+  "complete_five_folds": false,
+  "remaining_folds_started": false,
+  "old_delivery_unchanged": true
+}

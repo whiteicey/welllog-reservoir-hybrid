@@ -1,0 +1,78 @@
+{
+  "seed": 20261011,
+  "stage": "POR113",
+  "report": {
+    "stage": "POR113",
+    "target": "POR",
+    "target_score": 75.9509669518149,
+    "initial_score": 75.92325344829905,
+    "against_initial": 0.02771350351585511,
+    "against_v97_target": -1.6009698500701006,
+    "best_epoch": 2,
+    "stopped_epoch": 12,
+    "validation_rows": 144665,
+    "predictions_reproduced_exactly": true,
+    "frozen_parameters_exact": true,
+    "gradient_groups": {
+      "original_target_locations": 0.8680536150932312,
+      "combined_new_heads_routes": 0.24952293932437897
+    },
+    "effective_patience": 10,
+    "SOTA_broken": false,
+    "seconds": 77.63791629998013,
+    "peak_MiB": 920.84765625,
+    "complete_five_folds": false,
+    "early_terminated": false
+  },
+  "timing": {
+    "seed": 20261011,
+    "stage": "POR113",
+    "pid": 57348,
+    "started_epoch": 1790917551.236024,
+    "terminal": true,
+    "exit_code": 0,
+    "process_wall_seconds": 86.99263572692871,
+    "concurrency": "solo",
+    "includes": "preprocessing warmup training best restoration"
+  },
+  "terminal_pid_missing": true,
+  "observed_epoch": 1790917697.8347044,
+  "next_batch_snapshot": {
+    "status": "running",
+    "controller_pid": 74228,
+    "active_pid": 83852,
+    "seed": 20261011,
+    "stage": "POR151",
+    "started_epoch": 1790917638.273623,
+    "batch_started_epoch": 1790916379.5213826,
+    "concurrency": "serial",
+    "maximum_GPU_jobs": 2,
+    "completed_models": 1
+  },
+  "next_actual_cmdline": [
+    "C:\\Users\\z5364\\.conda\\envs\\normal\\python.exe",
+    "-u",
+    "experiments/pure_dl/train_complete_seed_stage_v362r1.py",
+    "--stage",
+    "POR151"
+  ],
+  "next_actual_checkpoint_loads": [
+    {
+      "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261011\\SOURCE\\prepared_data.pt",
+      "sha256": "b0dc567d307905ae405db841b73f1772ac00ed1860a4c03b3a70edd4f109ae0f"
+    },
+    {
+      "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261011\\SOURCE\\fold_5.pt",
+      "sha256": "6f13e1ced8e0ee6b50eb9248e07f9ee2a72f9aec35b221c97a782e65b3e81471"
+    },
+    {
+      "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261011\\POR113\\model_best.pt",
+      "sha256": "b7bfcdfdd2014043cdc78c4ab7b570ecb72c9c8381e3adba1991289ef3f77059"
+    }
+  ],
+  "completed_stages": 2,
+  "total_stages": 8,
+  "complete_seed_model": false,
+  "complete_five_folds": false,
+  "remaining_folds_started": false
+}

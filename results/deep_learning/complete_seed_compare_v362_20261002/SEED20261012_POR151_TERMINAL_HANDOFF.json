@@ -1,0 +1,73 @@
+{
+  "seed": 20261012,
+  "stage": "POR151",
+  "report": {
+    "stage": "POR151",
+    "target": "POR",
+    "target_score": 76.59180097270605,
+    "initial_score": 76.53985411899569,
+    "against_initial": 0.051946853710362006,
+    "against_v97_target": -0.9601358291789523,
+    "best_epoch": 6,
+    "stopped_epoch": 16,
+    "validation_rows": 144665,
+    "predictions_reproduced_exactly": true,
+    "frozen_parameters_exact": true,
+    "gradient_groups": {
+      "wide256_joint_location_weight_POR_head": 0.31161242723464966
+    },
+    "effective_patience": 10,
+    "SOTA_broken": false,
+    "seconds": 136.82253770000534,
+    "peak_MiB": 924.54736328125,
+    "complete_five_folds": false,
+    "early_terminated": false
+  },
+  "timing": {
+    "seed": 20261012,
+    "stage": "POR151",
+    "pid": 17960,
+    "started_epoch": 1790920066.5992613,
+    "terminal": true,
+    "exit_code": 0,
+    "process_wall_seconds": 144.16343593597412,
+    "concurrency": "solo",
+    "includes": "preprocessing warmup training best restoration"
+  },
+  "terminal_pid_missing": true,
+  "observed_epoch": 1790920289.9021876,
+  "next_batch_snapshot": {
+    "status": "running",
+    "controller_pid": 74228,
+    "active_pid": 63116,
+    "seed": 20261012,
+    "stage": "PERM154",
+    "started_epoch": 1790920210.8020585,
+    "batch_started_epoch": 1790916379.5213826,
+    "concurrency": "serial",
+    "maximum_GPU_jobs": 2,
+    "completed_models": 2
+  },
+  "next_actual_cmdline": [
+    "C:\\Users\\z5364\\.conda\\envs\\normal\\python.exe",
+    "-u",
+    "experiments/pure_dl/train_complete_seed_stage_v362r1.py",
+    "--stage",
+    "PERM154"
+  ],
+  "next_actual_checkpoint_loads": [
+    {
+      "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261012\\SOURCE\\prepared_data.pt",
+      "sha256": "65ec323ddb976309d2753fa8ac186660f1811be39e41d9ffac6a46911efc1189"
+    },
+    {
+      "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261012\\SOURCE\\fold_5.pt",
+      "sha256": "315f490ab3d9233420d15d9b29deb644d0a5f419e69a34567cdc8eb5de41f525"
+    }
+  ],
+  "completed_stages": 3,
+  "total_stages": 8,
+  "complete_seed_model": false,
+  "complete_five_folds": false,
+  "remaining_folds_started": false
+}

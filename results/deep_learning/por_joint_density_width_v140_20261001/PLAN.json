@@ -1,0 +1,30 @@
+{
+  "total_training_stages": 5,
+  "source_sha256": "45a09476e3126820688420579c100c86e0e4f45df335904380a298cf5f66b9a9",
+  "parent_sha256": "94f56aa91b2e56073aa496826f9666f269b35e88545723b9d22d7aba2e12673d",
+  "candidates": [
+    "wide256"
+  ],
+  "parent_POR": 77.54045432673898,
+  "parent_TOTAL": 80.48718776177711,
+  "stages": [
+    "original source",
+    "v113 mixed POR",
+    "v140 width256 conditional density POR",
+    "v136 PERM",
+    "v104 SW"
+  ],
+  "same_initial_function": true,
+  "update_scope_not_equal_trainable_capacity": true,
+  "remaining_folds_started": false,
+  "historical_location_control": "v129 point",
+  "additional_output_capacity": true,
+  "point_mode": true,
+  "prepared_design_change_based_on_final_v129": true,
+  "historical_location_weight_control": "v134 width128",
+  "new_width": 256,
+  "control_width": 128,
+  "source_weights_not_changed": true,
+  "trained_v131_head_not_loaded": true,
+  "trained_v134_head_not_loaded": true
+}

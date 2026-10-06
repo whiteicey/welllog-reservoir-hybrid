@@ -1,0 +1,10 @@
+{
+    "artifact_finalized_at":  "2026-09-30T10:30:01.6349756+08:00",
+    "first_launch_to_artifact_finalized_wall_seconds":  890.7226936,
+    "score_verified_to_artifact_finalized_wall_seconds":  311.3734206,
+    "score_verified_at":  "2026-09-30T10:24:50.261555+08:00",
+    "atlas_score_readback_exact":  true,
+    "atlas_experiments":  618,
+    "atlas_deadends":  82,
+    "scope":  "includes launch gap, loading/warmup, training, scoring/replay, cleanup, docs/atlas repair and readback; prelaunch implementation excluded"
+}

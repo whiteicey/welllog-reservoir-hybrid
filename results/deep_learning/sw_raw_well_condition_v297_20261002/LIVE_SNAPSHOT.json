@@ -1,0 +1,14 @@
+{
+  "actual_process_verified": true,
+  "state": {
+    "status": "running",
+    "pid": 73284,
+    "stage": "well",
+    "epoch": 3,
+    "best": 74.12210756298634,
+    "best_epoch": 3,
+    "bad": 0,
+    "peak_MiB": 1280.80224609375
+  },
+  "not_final_gain": true
+}

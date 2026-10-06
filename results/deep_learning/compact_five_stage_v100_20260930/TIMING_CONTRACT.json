@@ -1,0 +1,12 @@
+{
+  "source_pretrain_seconds": 1289.1515023999964,
+  "source_best_epoch": 52,
+  "source_stopped_epoch": 70,
+  "source_reused_not_retrained": true,
+  "source_training_stages": 1,
+  "new_training_stages": 4,
+  "total_training_stages": 5,
+  "incremental_wall_includes": "head launches to full compact restoration; IO, eval and data loading included",
+  "end_to_end_estimate": "historical source pretrain seconds plus measured compact incremental wall; not a contemporaneous fresh training speed benchmark",
+  "parallel": "POR/PERM actual dual processes; SW stages serial"
+}

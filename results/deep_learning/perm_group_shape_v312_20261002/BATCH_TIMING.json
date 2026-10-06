@@ -1,0 +1,33 @@
+{
+  "maximum_parallelism": 2,
+  "overlap_note": "rational starts while311shuffled active",
+  "gain": "unproved",
+  "jobs": [
+    {
+      "start_epoch": 1790882777.043,
+      "started_UTC": "2026-10-01T19:26:17.0433994+00:00",
+      "pid": 80048,
+      "stage": "rational"
+    },
+    {
+      "start_epoch": 1790883159.088,
+      "started_UTC": "2026-10-01T19:32:39.0881503+00:00",
+      "pid": 8380,
+      "stage": "polynomial"
+    }
+  ],
+  "started_UTC": "2026-10-01T19:26:17.0433994+00:00",
+  "status": "rational_terminal_polynomial_launched",
+  "started_epoch": 1790882777.043,
+  "terminal": true,
+  "same_work_pair_wall_seconds": 532.0466985702515,
+  "individual_seconds": {
+    "rational": 230.11248739995062,
+    "polynomial": 144.50752689997898
+  },
+  "peak_MiB": {
+    "rational": 881.83349609375,
+    "polynomial": 847.80224609375
+  },
+  "interpretation": "Sequential launches, rational overlaps311shuffled and polynomial mostly runs alone; wall includes launch gap and all environment elapsed work inside interval, excludes preparation beforefirstlaunch and CPUfinalization afterward. Not an isolated serial-versus-parallel speed ranking."
+}

@@ -1,0 +1,72 @@
+{
+  "report": {
+    "stage": "conditional",
+    "target": "POR",
+    "target_score": 78.04249945953873,
+    "initial_score": 77.92638076072386,
+    "against_initial": 0.1161186988148728,
+    "against_v97_target": 0.49056265765372586,
+    "best_epoch": 28,
+    "stopped_epoch": 42,
+    "validation_rows": 144665,
+    "predictions_reproduced_exactly": true,
+    "frozen_parameters_exact": true,
+    "gradient_groups": {
+      "POR_new_raw_feature_backbone": 0.06617749482393265,
+      "POR_direct_categorical_readout": 0.0490582212805748,
+      "POR_curve_interaction_backbone": 0.06913019716739655
+    },
+    "seconds": 506.3543631999637,
+    "peak_MiB": 2074.64794921875,
+    "complete_five_folds": false,
+    "early_terminated": false
+  },
+  "strata": {
+    "default": 97.40559788886887,
+    "continuous": 41.72533561887154
+  },
+  "bridge_zero_initialized_parameter_norms": {
+    "curve_interaction.bridge.weight": 0.8464226126670837,
+    "curve_interaction.bridge.bias": 0.09398160874843597
+  },
+  "whole_vs335": 0.0002868245366727251,
+  "CONT_vs335": 0.0008247887333041604,
+  "CONT_vs_original151": -0.22862543603252306,
+  "predefined42": {
+    "through_epoch": 42,
+    "best_epoch": 28,
+    "target_score": 78.04249945953873,
+    "control_actual_epochs": 42,
+    "nominal_budget": 80,
+    "comparison": "Predefined bestthrough42 vs historical335width64 natural42; capacity differs/laterbest not equalwork evidence",
+    "strata": {
+      "default": 97.40559788886887,
+      "continuous": 41.72533561887154
+    }
+  },
+  "stopped_before42": false,
+  "full_best_after42_not_equalwork": false,
+  "adopted": false,
+  "screening_fold": 5,
+  "complete_five_folds": false,
+  "remaining_folds_started": false,
+  "independent_disk_reload": false,
+  "comparison_limits": "Same128336 architecture/init as historical335, globalrowmean conditionalRPS instead of joint; defaultdensitygradients removed and continuous effectivegradientweight changes via no frozen gate factor. Historical not concurrent replicate, no robustness proof.",
+  "timing": {
+    "includes": "preprocessing warmup training best restoration",
+    "concurrency": "solo at launch after both338terminal",
+    "pid": 36304,
+    "terminal": true,
+    "global_GPU_jobs_before": 0,
+    "started_epoch": 1790900351.48,
+    "individual_seconds": 506.3543631999637,
+    "peak_MiB": 2074.64794921875,
+    "process_creation_to_terminal_seconds": 511.13813638687134
+  },
+  "mechanism_positive_whole_and_CONT_vs335": true,
+  "current338_recipe_not_replaced": true,
+  "whole_vs_retained338": -0.0033225944579697853,
+  "capacity_identical_to335": true,
+  "legacy_snapshot_label_note": "paired42 comparison phrase capacitydiffers inherited generic trainer; actual339/335 both128336, onlyRPSchanged, notconcurrentreplicate",
+  "no_robustness_claim": true
+}

@@ -1,0 +1,49 @@
+{
+  "scores": {
+    "POR": 77.92638076072386,
+    "PERM": 89.40583118135278,
+    "SW": 74.12175282815758,
+    "TOTAL": 80.61256863154578
+  },
+  "total_training_stages": 6,
+  "source_stage_counted": true,
+  "dependencies": [
+    "original source",
+    "v113 mixed POR",
+    "v151 POR jointRPS",
+    "v154 PERM jointRPS",
+    "v104 SW",
+    "v198 frozen154 scale-only patch"
+  ],
+  "POR": {
+    "checkpoint": "outputs/pure_dl_por_ranked_probability_v151_fold5/joint_rps/model_best.pt",
+    "sha256": "39f2255b8fe61fa74607af027ece1dd352e5e2d0729b9bce95d1424c1b227603",
+    "module": "por_ranked_probability_v151",
+    "stage": "joint_rps"
+  },
+  "PERM": {
+    "checkpoint": "outputs/pure_dl_perm_frozen_scale_patch_v198_fold5/scale/model_best.pt",
+    "sha256": "67330688131c9f85d4e19ef347bac14f2a85d8e2c25966d83d70257c810dba6b",
+    "module": "perm_frozen_scale_patch_v198",
+    "stage": "scale",
+    "parent_checkpoint": "outputs/pure_dl_perm_ranked_probability_v154_fold5/perm_conditional/model_best.pt",
+    "parent_sha256": "2b355bb8c3736990b05e2726373a4343c574a93ab6ab1a3eda0ef796ac70cf11"
+  },
+  "SW": {
+    "checkpoint": "outputs/pure_dl_compact_frequency_v104_fold5/local/model_best.pt"
+  },
+  "screening_fold": 5,
+  "complete_five_folds": false,
+  "strict_808_passed": false,
+  "strict_channel_gain_025": true,
+  "previous_recipe_path": "results\\deep_learning\\perm_ranked_probability_v154_20261001\\CURRENT_RECIPE.json",
+  "gain_vs_previous_TOTAL": 9.321355184965796e-05,
+  "remaining_folds_started": false,
+  "total_stage_upper_bound": 8,
+  "added_head_stages": {
+    "POR": 0,
+    "PERM": 1,
+    "SW": 0
+  },
+  "gain_vs_verified_five_stage_TOTAL": 9.321355184965796e-05
+}

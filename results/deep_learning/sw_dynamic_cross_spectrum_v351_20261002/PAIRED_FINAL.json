@@ -1,0 +1,164 @@
+{
+  "arms": {
+    "aligned": {
+      "report": {
+        "stage": "aligned",
+        "target": "SW",
+        "target_score": 74.17361205223327,
+        "initial_score": 74.12175268976877,
+        "against_initial": 0.05185936246449785,
+        "against_v97_target": 0.03143214756656221,
+        "best_epoch": 13,
+        "stopped_epoch": 27,
+        "validation_rows": 144665,
+        "predictions_reproduced_exactly": true,
+        "frozen_parameters_exact": true,
+        "gradient_groups": {
+          "SW_new_raw_feature_backbone": 0.08828891813755035,
+          "SW_direct_categorical_readout": 0.068977490067482,
+          "SW_new_state_readout": 0.006067903246730566,
+          "SW_new_raw_well_condition": 0.005991954356431961,
+          "SW_joint_own_latent_early_fusion": 0.0070236120373010635,
+          "SW_joint_latent_morphology_backbone": 0.01187858171761036,
+          "SW_dynamic_cross_spectrum_backbone": 0.004431997891515493
+        },
+        "seconds": 266.364304799994,
+        "peak_MiB": 1800.099609375,
+        "complete_five_folds": false,
+        "early_terminated": false
+      },
+      "strata": {
+        "default": 98.63877455431792,
+        "continuous": 17.979399150046632
+      },
+      "whole_vs326": 0.00406902015836863,
+      "CONT_vs326": 0.015957061798282268,
+      "CONT_vs_native104": 0.34751008956654417,
+      "diagnostic_eight_stage_scores": {
+        "POR": 78.04643071793232,
+        "PERM": 89.51838939879066,
+        "SW": 74.17361205223327,
+        "TOTAL": 80.70612972323806
+      },
+      "TOTAL_vs_retained341": 0.0014241570554247573,
+      "spectrum_parameter_norms": {
+        "cross_spectrum.mixing": 0.37572458386421204,
+        "cross_spectrum.bridge.weight": 0.5422235727310181,
+        "cross_spectrum.bridge.bias": 0.20166361331939697
+      },
+      "timing": {
+        "includes": "preprocessing warmup training best restoration",
+        "concurrency": "solo",
+        "pid": 72608,
+        "terminal": true,
+        "global_GPU_jobs_before": 0,
+        "started_epoch": 1790908048.677,
+        "individual_seconds": 266.364304799994,
+        "peak_MiB": 1800.099609375,
+        "process_creation_to_terminal_seconds": 270.5273313522339
+      },
+      "predefined27": {
+        "through_epoch": 27,
+        "best_epoch": 13,
+        "target_score": 74.17361205223327,
+        "control_actual_epochs": 27,
+        "nominal_budget": 80,
+        "comparison": "Predefined bestthrough27 vs historical326depth natural27; +552 spectrumcapacity not causal dynamicfilter gain, laterbest not equalwork"
+      },
+      "adopted": false,
+      "screening_fold": 5,
+      "complete_five_folds": false,
+      "remaining_folds_started": false,
+      "independent_disk_reload": false,
+      "strict_808_passed": false,
+      "comparison_limits": "Same92841params/init between aligned/permuted but function class/spectral smoothness differ; historical326capacity92289 differs/nonconcurrent; single seed and whole-selected strata, no CONToracle. Norms not importance proof."
+    },
+    "permuted": {
+      "report": {
+        "stage": "permuted",
+        "target": "SW",
+        "target_score": 74.16893619710333,
+        "initial_score": 74.12175268976877,
+        "against_initial": 0.04718350733456589,
+        "against_v97_target": 0.026756292436630247,
+        "best_epoch": 13,
+        "stopped_epoch": 27,
+        "validation_rows": 144665,
+        "predictions_reproduced_exactly": true,
+        "frozen_parameters_exact": true,
+        "gradient_groups": {
+          "SW_new_raw_feature_backbone": 0.08829021453857422,
+          "SW_direct_categorical_readout": 0.06897851079702377,
+          "SW_new_state_readout": 0.006067933514714241,
+          "SW_new_raw_well_condition": 0.00599176250398159,
+          "SW_joint_own_latent_early_fusion": 0.007024035323411226,
+          "SW_joint_latent_morphology_backbone": 0.011878637596964836,
+          "SW_dynamic_cross_spectrum_backbone": 0.0040134829469025135
+        },
+        "seconds": 246.76499830000103,
+        "peak_MiB": 1800.099609375,
+        "complete_five_folds": false,
+        "early_terminated": false
+      },
+      "strata": {
+        "default": 98.64276361053174,
+        "continuous": 17.95482079589234
+      },
+      "whole_vs326": -0.0006068349715633303,
+      "CONT_vs326": -0.008621292356011168,
+      "CONT_vs_native104": 0.32293173541225073,
+      "diagnostic_eight_stage_scores": {
+        "POR": 78.04643071793232,
+        "PERM": 89.51838939879066,
+        "SW": 74.16893619710333,
+        "TOTAL": 80.7044931739426
+      },
+      "TOTAL_vs_retained341": -0.00021239224004432344,
+      "spectrum_parameter_norms": {
+        "cross_spectrum.mixing": 0.2238987237215042,
+        "cross_spectrum.bridge.weight": 0.508682131767273,
+        "cross_spectrum.bridge.bias": 0.1971345841884613
+      },
+      "timing": {
+        "includes": "preprocessing warmup training best restoration",
+        "concurrency": "solo after aligned terminal",
+        "pid": 74664,
+        "terminal": true,
+        "global_GPU_jobs_before": 0,
+        "started_epoch": 1790908379.628,
+        "individual_seconds": 246.76499830000103,
+        "peak_MiB": 1800.099609375,
+        "process_creation_to_terminal_seconds": 251.06670784950256
+      },
+      "predefined27": {
+        "through_epoch": 27,
+        "best_epoch": 13,
+        "target_score": 74.16893619710333,
+        "control_actual_epochs": 27,
+        "nominal_budget": 80,
+        "comparison": "Predefined bestthrough27 vs historical326depth natural27; +552 spectrumcapacity not causal dynamicfilter gain, laterbest not equalwork"
+      },
+      "adopted": false,
+      "screening_fold": 5,
+      "complete_five_folds": false,
+      "remaining_folds_started": false,
+      "independent_disk_reload": false,
+      "strict_808_passed": false,
+      "comparison_limits": "Same92841params/init between aligned/permuted but function class/spectral smoothness differ; historical326capacity92289 differs/nonconcurrent; single seed and whole-selected strata, no CONToracle. Norms not importance proof."
+    }
+  },
+  "aligned_minus_permuted_whole": 0.004675855129931961,
+  "aligned_minus_permuted_CONT": 0.024578354154293436,
+  "aligned_minus_permuted_DEFAULT": -0.003989056213825393,
+  "screening_fold": 5,
+  "complete_five_folds": false,
+  "remaining_folds_started": false,
+  "independent_disk_reload": false,
+  "comparison_limits": "92841samephysicalparams/init/loss/data, onlyfixed donorfrequency permutation; changes frequency correspondence and smoothness/functionclass, single seed not robustness. Historical326552lower capacity/nonconcurrent. Whole-target selected epoch, noCONToracle.",
+  "mechanism_positive": true,
+  "adopted": true,
+  "pair_wall_process_seconds": 582.017707824707,
+  "launch_stagger_seconds": 330.95099997520447,
+  "pair_timing_limits": "Solo sequential pair includes explicit launch gaps; individual prep/warmup/train/restoration separately recorded, no speed claim from parametercount",
+  "closed_setting": "Positive finite mechanism; eligible for distinct isolated extension using positive code/init only, never trainedrepairchain"
+}

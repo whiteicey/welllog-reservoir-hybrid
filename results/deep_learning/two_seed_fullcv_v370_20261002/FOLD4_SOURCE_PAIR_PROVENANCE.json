@@ -1,0 +1,81 @@
+{
+  "observed_epoch": 1790949100.1242862,
+  "fold": 4,
+  "sources": {
+    "original": {
+      "actual_seed": 20261009,
+      "config_base_seed": 20261006,
+      "source_sha256": "37bb4114fa50285049d71e5833187666c09f1c91fc99390da8cd44b875f17a7e",
+      "Q": {
+        "status": "ready",
+        "epoch": 44,
+        "sha256": "4fea685776c361bace9b7258385bb649bd9a50e45da44960b2fb328397126ba6",
+        "dynamic_updates": false,
+        "rule": "last original training-only source Q observation strictly before this fold best epoch; Q0=1 before first observation",
+        "minimum": 0.10000000149011612,
+        "maximum": 1.0,
+        "downweighted_training_rows": 1577
+      },
+      "scores": {
+        "POR": 79.23922786171148,
+        "PERM": 91.20589315227929,
+        "SW": 74.00334279523662,
+        "TOTAL": 81.595000940144
+      },
+      "best_epoch": 45,
+      "stopped_epoch": 59,
+      "process_wall_seconds": 1038.04656457901,
+      "concurrency": "solo after user requested serial",
+      "validation_rows": 144513,
+      "training_raw_rows": 579043,
+      "training_validation_raw_disjoint": true
+    },
+    "seed_20261013": {
+      "actual_seed": 20261012,
+      "config_base_seed": 20261009,
+      "source_sha256": "88e091662cf604bb0e61bf3d193658fdaa53b1773371035702b3f8a9a9789baf",
+      "Q": {
+        "status": "ready",
+        "epoch": 54,
+        "sha256": "7d7ba2c9f772b3feb02d90ed3945bf20839415f9ba2505b0a2826d4d1d2a7c37",
+        "dynamic_updates": false,
+        "rule": "last original training-only source Q observation strictly before this fold best epoch; Q0=1 before first observation",
+        "minimum": 0.10000000149011612,
+        "maximum": 1.0,
+        "downweighted_training_rows": 1945
+      },
+      "scores": {
+        "POR": 79.78916816460293,
+        "PERM": 91.27156260971567,
+        "SW": 74.04333352827172,
+        "TOTAL": 81.79696409767647
+      },
+      "best_epoch": 56,
+      "stopped_epoch": 70,
+      "process_wall_seconds": 1351.5357224941254,
+      "concurrency": "solo after user requested serial",
+      "validation_rows": 144513,
+      "training_raw_rows": 579043,
+      "training_validation_raw_disjoint": true
+    }
+  },
+  "shared_input_same": true,
+  "shared_input_sha256": "29456959ebd7de634464f7f457182d491fae3741ed041240a914d52120b73c77",
+  "normalization_keys": [
+    "feature_median",
+    "feature_scale",
+    "regression_median",
+    "regression_scale",
+    "absolute_depth_median",
+    "absolute_depth_scale",
+    "selected_feature_names"
+  ],
+  "normalization_exact_between_sources": true,
+  "normalization_sha256": "ed0d6e4a2fdb9e2d91bc39ef5f9a4e52796e7d3d0eae28db415e7188b6444e78",
+  "same_training_validation_rows": true,
+  "different_learned_sources": true,
+  "own_Q_strictly_before_best": true,
+  "score_scope": "SOURCE prerequisites only; not complete8stage model or fullOOF",
+  "CPU_only": true,
+  "solo_benchmark": false
+}

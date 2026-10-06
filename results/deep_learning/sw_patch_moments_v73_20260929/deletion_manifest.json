@@ -1,0 +1,27 @@
+{
+  "deleted": [
+    {
+      "path": "outputs\\pure_dl_sw_patch_moments_v73_SW_permuted_fold5\\model_best.pt",
+      "bytes": 3522415,
+      "sha256": "02209af961ff5d1ac4674d490c9f1c067ee20f544546541e947597c58f552ab2"
+    },
+    {
+      "path": "outputs\\pure_dl_sw_patch_moments_v73_SW_permuted_fold5\\last_state.pt",
+      "bytes": 15904879,
+      "sha256": "de00429acd2ea153333ead7e3b692ab605f09b325b1deb056ba668687d67bd3b"
+    },
+    {
+      "path": "outputs\\pure_dl_sw_patch_moments_v73_SW_ordered_fold5\\model_best.pt",
+      "bytes": 3522415,
+      "sha256": "220a2d62f86582525eb41dd92c9351e2e1297212ceb5d28a72ea4fcc26af5a52"
+    },
+    {
+      "path": "outputs\\pure_dl_sw_patch_moments_v73_SW_ordered_fold5\\last_state.pt",
+      "bytes": 15904879,
+      "sha256": "82d46252f32999fa59ec0b0006f3ff6993b5e0da35405ad415e07e918c035baf"
+    }
+  ],
+  "bytes": 38854588,
+  "status": "complete",
+  "retained": []
+}

@@ -1,0 +1,46 @@
+{
+  "parent": "experiments\\pure_dl\\train_por_architecture_v18.py",
+  "parent_sha256": "296079009a69ae04bfdfd55e1de75f36257beef5213cdc1ad41d6670d3def93a",
+  "changes": [
+    {
+      "old": "Bounded original-fold5 POR architecture training, private networks only.",
+      "new": "v20 input features and fusion location; three private POR candidates."
+    },
+    {
+      "old": "from por_architecture_v18 import Network,MODES",
+      "new": "from feature_structure_v20 import Network,MODES,load_feature_data"
+    },
+    {
+      "old": "from por_data_v18 import ROOT,STUDY,REFERENCE,load_data,Evaluator",
+      "new": "from por_data_v18 import ROOT,STUDY as DATA_STUDY,REFERENCE,Evaluator\nSTUDY=ROOT/\"results/deep_learning/feature_structure_v20_20260928\""
+    },
+    {
+      "old": "d=load_data();meta=torch.load(STUDY/",
+      "new": "d=load_feature_data(args.mode);meta=torch.load(DATA_STUDY/"
+    },
+    {
+      "old": "(STUDY/'data_manifest.json').read_text",
+      "new": "(DATA_STUDY/'data_manifest.json').read_text"
+    },
+    {
+      "old": "(STUDY/'data_manifest.json').read_bytes",
+      "new": "(DATA_STUDY/'data_manifest.json').read_bytes"
+    },
+    {
+      "old": "Path(__file__).with_name('por_architecture_v18.py'),Path(__file__).with_name('por_data_v18.py')",
+      "new": "Path(__file__).with_name('feature_structure_v20.py'),Path(__file__).with_name('prepare_feature_structure_v20.py'),Path(__file__).with_name('por_architecture_v18.py'),Path(__file__).with_name('por_data_v18.py')"
+    },
+    {
+      "old": "network_module='por_architecture_v18'",
+      "new": "network_module='feature_structure_v20'"
+    },
+    {
+      "old": "width=model.width,latent_tokens=16 if args.mode=='latent64' else 0,attention_heads=4 if args.mode=='latent64' else 0,",
+      "new": "width=model.width,side_features=63,side_view='amplitude' if args.mode=='amplitude_early' else 'shape',\n        fusion='late' if args.mode=='shape_late' else 'early',\n        feature_manifest_sha256=hashlib.sha256((STUDY/'feature_manifest.json').read_bytes()).hexdigest(),"
+    },
+    {
+      "old": "parameter_count_approximately_matched=True,",
+      "new": "parameter_matched=True,initial_state_sha256=hashlib.sha256(b''.join(k.encode()+v.detach().cpu().numpy().tobytes() for k,v in model.state_dict().items())).hexdigest(),"
+    }
+  ]
+}

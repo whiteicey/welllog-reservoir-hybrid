@@ -1,0 +1,29 @@
+{
+  "batch": {
+    "status": "running",
+    "controller_pid": 56316,
+    "active_pid": 79660,
+    "seed": 20261010,
+    "stage": "SW104",
+    "started_epoch": 1790915111.8169262,
+    "batch_started_epoch": 1790913400.4120793,
+    "concurrency": "serial",
+    "maximum_GPU_jobs": 2,
+    "completed_models": 0
+  },
+  "actual_live_pid": 79660,
+  "stage_snapshot": {
+    "status": "running",
+    "pid": 79660,
+    "stage": "SW104",
+    "epoch": 20,
+    "best": 73.75538226918793,
+    "best_epoch": 19,
+    "bad": 1,
+    "effective_patience": 10,
+    "SOTA_broken": false,
+    "peak_MiB": 1722.197265625
+  },
+  "completed_seed_models": 0,
+  "limits": "Incomplete stage/seed; no complete-model ranking"
+}

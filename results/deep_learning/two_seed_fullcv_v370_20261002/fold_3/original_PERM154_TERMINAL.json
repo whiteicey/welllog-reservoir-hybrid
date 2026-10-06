@@ -1,0 +1,156 @@
+{
+  "identity": "original",
+  "fold": 3,
+  "stage": "PERM154",
+  "observed_epoch": 1790940530.4310975,
+  "report": {
+    "stage": "PERM154",
+    "target": "PERM",
+    "target_score": 90.62186752824304,
+    "initial_score": 90.62186752824304,
+    "against_initial": 0.0,
+    "best_epoch": 0,
+    "stopped_epoch": 14,
+    "validation_rows": 145090,
+    "predictions_reproduced_exactly": true,
+    "frozen_parameters_exact": true,
+    "gradient_groups": {
+      "private_PERM_joint_location_weight_head": 0.3292713761329651
+    },
+    "effective_patience": 14,
+    "SOTA_broken": true,
+    "seconds": 113.97143530001631,
+    "peak_MiB": 786.4619140625,
+    "complete_five_folds": false,
+    "early_terminated": false
+  },
+  "timing": {
+    "identity": "original",
+    "fold": 3,
+    "stage": "PERM154",
+    "pid": 91112,
+    "terminal": true,
+    "exit_code": 0,
+    "process_wall_seconds": 124.78629231452942,
+    "concurrency": "solo after user requested serial",
+    "includes": "load/preprocess/warmup/training or scan/restore/write",
+    "attached_without_training_restart": false
+  },
+  "rows": 145090,
+  "source_scores": {
+    "POR": 80.42572005691339,
+    "PERM": 90.62186752824304,
+    "SW": 76.60895040981836,
+    "TOTAL": 82.65850229539551
+  },
+  "source_sha256": "253ad2f5058729f331fec392204093986a69a6c17ac6c7eb44f2e432f8fa57ef",
+  "own_source_Q": {
+    "status": "ready",
+    "epoch": 46,
+    "sha256": "66602658642f850d7455fb32c0fcaa2304bfdc19d85777530e2edc511eee36d5",
+    "dynamic_updates": false,
+    "rule": "last original training-only source Q observation strictly before this fold best epoch; Q0=1 before first observation",
+    "minimum": 0.10000000149011612,
+    "maximum": 1.0,
+    "downweighted_training_rows": 1466
+  },
+  "completed_prefix": [
+    "SOURCE",
+    "POR113",
+    "POR151",
+    "PERM154"
+  ],
+  "prefix_scores": {
+    "POR": 80.60605445308767,
+    "PERM": 90.62186752824304,
+    "SW": 76.60895040981836,
+    "TOTAL": 82.71260261424779
+  },
+  "stage_gains": [
+    {
+      "stage": "POR113",
+      "target": "POR",
+      "actual_target_gain": 0.18033439617427405,
+      "actual_TOTAL_contribution": 0.05410031885228221,
+      "previous_target_score": 80.42572005691339,
+      "selected_target_score": 80.60605445308767,
+      "optimizer_gain": 0.1971022732632406,
+      "best_epoch": 12,
+      "stopped_epoch": 26,
+      "strata": {
+        "DEFAULT": {
+          "rows": 101705,
+          "before": 97.73659112138047,
+          "after": 97.75920554545007,
+          "delta": 0.02261442406960157
+        },
+        "CONT": {
+          "rows": 43385,
+          "before": 39.844824779475,
+          "after": 40.39489317963443,
+          "delta": 0.5500684001594323
+        }
+      },
+      "process_wall_seconds": 154.59273648262024,
+      "concurrency": "solo after user requested serial"
+    },
+    {
+      "stage": "POR151",
+      "target": "POR",
+      "actual_target_gain": 0.0,
+      "actual_TOTAL_contribution": 0.0,
+      "previous_target_score": 80.60605445308767,
+      "selected_target_score": 80.60605445308767,
+      "optimizer_gain": 0.0,
+      "best_epoch": 0,
+      "stopped_epoch": 14,
+      "strata": {
+        "DEFAULT": {
+          "rows": 101705,
+          "before": 97.75920554545007,
+          "after": 97.75920554545007,
+          "delta": 0.0
+        },
+        "CONT": {
+          "rows": 43385,
+          "before": 40.39489317963443,
+          "after": 40.39489317963443,
+          "delta": 0.0
+        }
+      },
+      "process_wall_seconds": 140.94432306289673,
+      "concurrency": "solo after user requested serial"
+    },
+    {
+      "stage": "PERM154",
+      "target": "PERM",
+      "actual_target_gain": 0.0,
+      "actual_TOTAL_contribution": 0.0,
+      "previous_target_score": 90.62186752824304,
+      "selected_target_score": 90.62186752824304,
+      "optimizer_gain": 0.0,
+      "best_epoch": 0,
+      "stopped_epoch": 14,
+      "strata": {
+        "DEFAULT": {
+          "rows": 102936,
+          "before": 97.37113352298486,
+          "after": 97.37113352298486,
+          "delta": 0.0
+        },
+        "CONT": {
+          "rows": 42154,
+          "before": 74.14081129551052,
+          "after": 74.14081129551052,
+          "delta": 0.0
+        }
+      },
+      "process_wall_seconds": 124.78629231452942,
+      "concurrency": "solo after user requested serial"
+    }
+  ],
+  "checkpoint_sha256": "82c23843cf918e48a50f51017ffa72509d994213ec4189960fb9f69eb22cd2c8",
+  "score_scope": "actually assembled completed-stage prefix; not complete8stage model or fullOOF",
+  "complete8stage_single_fold": false,
+  "CPU_only": true
+}

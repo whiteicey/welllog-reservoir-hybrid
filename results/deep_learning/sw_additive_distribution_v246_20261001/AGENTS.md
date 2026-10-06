@@ -1,0 +1,1 @@
+Maintain PROJECTS/README. Originalfold5/Q50/normalGPU/80-14/max2. Frozen104, no trainedrepairweights. Pairedalternative notchain, oneSWstage/sixalone/whole<=8. No validationfit/extra labels. Initialmixture changesfunction; report initial vslearned gain. Atomicstates/originalscore/no otherfolds below808.

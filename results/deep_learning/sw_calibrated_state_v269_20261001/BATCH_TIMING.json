@@ -1,0 +1,22 @@
+{
+  "excludes_code_preparation": true,
+  "arms": {
+    "balanced": {
+      "process_creation_utc_seconds": 1790867272.835,
+      "pid": 16472
+    },
+    "control": {
+      "process_creation_utc_seconds": 1790867272.814,
+      "pid": 42300
+    }
+  },
+  "pair_wallclock_pending": false,
+  "maximum_GPU_jobs": 2,
+  "concurrent": true,
+  "includes_startup_model_data_initial_eval": true,
+  "pair_wallclock_seconds": 455.8575575351715,
+  "individual_seconds": {
+    "control": 449.07091000000946,
+    "balanced": 445.47719080001116
+  }
+}

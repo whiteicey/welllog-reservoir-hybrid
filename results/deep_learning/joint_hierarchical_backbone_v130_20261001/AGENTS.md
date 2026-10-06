@@ -1,0 +1,1 @@
+Backbone route: one new random shared3target hierarchicalattention model. Original64trainwells labels/206/Q/splits/scorer; realTOTAL checkpointselection, standalone2dependencyphases (origsourceQ included). Max2 across routes,80-18; maintainPROJECTS/README/atlas, atomiclast/explicitresume, no oldweightloads/deliveryedits/otherfolds below80.8+gain.

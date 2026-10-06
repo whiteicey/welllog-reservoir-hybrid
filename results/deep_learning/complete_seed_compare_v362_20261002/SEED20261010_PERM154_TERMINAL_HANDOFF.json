@@ -1,0 +1,55 @@
+{
+  "PERM154_report": {
+    "stage": "PERM154",
+    "target": "PERM",
+    "target_score": 89.35243145677488,
+    "initial_score": 89.35243145677488,
+    "against_initial": 0.0,
+    "against_v97_target": -0.04429259259093499,
+    "best_epoch": 0,
+    "stopped_epoch": 10,
+    "validation_rows": 144665,
+    "predictions_reproduced_exactly": true,
+    "frozen_parameters_exact": true,
+    "gradient_groups": {
+      "private_PERM_joint_location_weight_head": 0.212783083319664
+    },
+    "effective_patience": 10,
+    "SOTA_broken": false,
+    "seconds": 87.1822965000174,
+    "peak_MiB": 786.46533203125,
+    "complete_five_folds": false,
+    "early_terminated": false
+  },
+  "PERM154_timing": {
+    "seed": 20261010,
+    "stage": "PERM154",
+    "pid": 18924,
+    "started_epoch": 1790915016.3415947,
+    "terminal": true,
+    "exit_code": 0,
+    "process_wall_seconds": 95.41202902793884,
+    "concurrency": "solo",
+    "includes": "preprocessing warmup training best restoration"
+  },
+  "PERM154_pid_missing": true,
+  "next_actual_live_pid": 79660,
+  "next_stage": "SW104",
+  "SW104_random_body_parameters": 845913,
+  "actual_checkpoint_loads": [
+    {
+      "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261010\\SOURCE\\prepared_data.pt",
+      "sha256": "07bf3356b59a2473fb1384e7b3a68e2bf5c081c476c42cfd3b0eebd2f2590165"
+    },
+    {
+      "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261010\\SOURCE\\fold_5.pt",
+      "sha256": "7ce54c5a19dcdd61ef89ce21b2aaac621ee171e51ad7250059addc95f6230556"
+    }
+  ],
+  "completed_stages": 4,
+  "total_stages": 8,
+  "complete_seed_model": false,
+  "complete_five_folds": false,
+  "remaining_folds_started": false,
+  "limits": "Best0 restores native own-source predictor, zero-stage gain not general154negative. SW104 loads source metadata/Q only, not source neural weights."
+}

@@ -1,0 +1,8 @@
+{
+  "epoch": 31,
+  "best_epoch": 28,
+  "whole": 78.04221263500206,
+  "default": 97.40559788886887,
+  "continuous": 41.724510830138236,
+  "scope": "Live whole-target best atomic snapshot, notterminal/independentdiskreload"
+}

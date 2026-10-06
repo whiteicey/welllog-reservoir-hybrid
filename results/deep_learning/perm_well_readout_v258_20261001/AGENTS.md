@@ -1,0 +1,1 @@
+MaintainPROJECTS/README. Originalfold5/ninecurves/Q/score normalGPUmax2. Input-only wholewell statistics allowed; no labels/wellIDs/heldoutfitting. OnePERMaddedphase from154only/no repairs; preservepositive/delivery; no below808otherfolds.

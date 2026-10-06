@@ -1,0 +1,206 @@
+{
+  "observed_at": "2026-09-28T21:08:26.665960+08:00",
+  "source_scores": {
+    "POR": 77.27786784460355,
+    "PERM": 89.3447601747529,
+    "SW": 73.62238476712884,
+    "TOTAL": 80.22186108303967
+  },
+  "champion_scores": {
+    "POR": 77.44891570750882,
+    "PERM": 89.3475027344081,
+    "SW": 73.62238476712884,
+    "TOTAL": 80.27413533779057
+  },
+  "total_gain": 0.05227425475089831,
+  "contributions": [
+    {
+      "target": "POR",
+      "old_score": 77.27786784460355,
+      "new_score": 77.44891570750882,
+      "channel_delta": 0.17104786290526874,
+      "TOTAL_contribution": 0.051314358871580625,
+      "fraction_of_total_gain": 0.9816373110646558,
+      "subsets": {
+        "default": {
+          "rows": 94357,
+          "old_score": 97.29537819133715,
+          "new_score": 97.25510560954672,
+          "channel_delta": -0.04027258179043258,
+          "TOTAL_contribution": -0.007880275118376622
+        },
+        "nondefault": {
+          "rows": 50308,
+          "old_score": 39.73329791960663,
+          "new_score": 40.30069553205813,
+          "channel_delta": 0.5673976124515008,
+          "TOTAL_contribution": 0.05919463398999779
+        }
+      },
+      "changed_predictions": 24706
+    },
+    {
+      "target": "PERM",
+      "old_score": 89.3447601747529,
+      "new_score": 89.3475027344081,
+      "channel_delta": 0.002742559655189325,
+      "TOTAL_contribution": 0.0009598958793162637,
+      "fraction_of_total_gain": 0.018362688935317024,
+      "subsets": {
+        "default": {
+          "rows": 95533,
+          "old_score": 97.3904471069598,
+          "new_score": 97.13564452488569,
+          "channel_delta": -0.254802582074106,
+          "TOTAL_contribution": -0.05889274721356202
+        },
+        "nondefault": {
+          "rows": 49132,
+          "old_score": 73.70060545492707,
+          "new_score": 74.20412266297528,
+          "channel_delta": 0.5035172080482084,
+          "TOTAL_contribution": 0.059852643092929196
+        }
+      },
+      "changed_predictions": 6548
+    },
+    {
+      "target": "SW",
+      "old_score": 73.62238476712884,
+      "new_score": 73.62238476712884,
+      "channel_delta": 0.0,
+      "TOTAL_contribution": 0.0,
+      "fraction_of_total_gain": 0.0,
+      "subsets": {
+        "default": {
+          "rows": 100786,
+          "old_score": 98.31297611667956,
+          "new_score": 98.31297611667956,
+          "channel_delta": 0.0,
+          "TOTAL_contribution": 0.0
+        },
+        "nondefault": {
+          "rows": 43879,
+          "old_score": 16.910382676020124,
+          "new_score": 16.910382676020124,
+          "channel_delta": 0.0,
+          "TOTAL_contribution": 0.0
+        }
+      },
+      "changed_predictions": 0
+    }
+  ],
+  "retained_chain": [
+    {
+      "id": "pure_dl_paired_local_context_router80_sequence",
+      "scores": {
+        "POR": 77.27786784460355,
+        "PERM": 89.3447601747529,
+        "SW": 73.62238476712884,
+        "TOTAL": 80.22186108303967
+      },
+      "delta_previous": null,
+      "evidence": "outputs/pure_dl_paired_local_context_router80_sequence/fold_5_report.json"
+    },
+    {
+      "id": "pure_dl_dual8222_v3_density_only80_fold5",
+      "scores": {
+        "POR": 77.39392666356925,
+        "PERM": 89.3447601747529,
+        "SW": 73.62238476712884,
+        "TOTAL": 80.25667872872937
+      },
+      "delta_previous": 0.03481764568969936,
+      "evidence": "outputs/pure_dl_dual8222_v3_density_only80_fold5/fold_5_report.json"
+    },
+    {
+      "id": "pure_dl_dual8222_selected_round2_fold5",
+      "scores": {
+        "POR": 77.39392666356925,
+        "PERM": 89.3475027344081,
+        "SW": 73.62238476712884,
+        "TOTAL": 80.25763862460869
+      },
+      "delta_previous": 0.0009598958793191059,
+      "evidence": "outputs/pure_dl_dual8222_selected_round2_fold5/fold_5_report.json"
+    },
+    {
+      "id": "pure_dl_dual8222_v4_por_mean_only80_fold5",
+      "scores": {
+        "POR": 77.43091294437887,
+        "PERM": 89.3475027344081,
+        "SW": 73.62238476712884,
+        "TOTAL": 80.26873450885158
+      },
+      "delta_previous": 0.01109588424289143,
+      "evidence": "outputs/pure_dl_dual8222_v4_por_mean_only80_fold5/fold_5_report.json"
+    },
+    {
+      "id": "pure_dl_dual8222_v5_location_linear80_fold5",
+      "scores": {
+        "POR": 77.43957665116243,
+        "PERM": 89.3475027344081,
+        "SW": 73.62238476712884,
+        "TOTAL": 80.27133362088665
+      },
+      "delta_previous": 0.002599112035071016,
+      "evidence": "outputs/pure_dl_dual8222_v5_location_linear80_fold5/fold_5_report.json"
+    },
+    {
+      "id": "pure_dl_dual8222_v5_location_point3280_fold5",
+      "scores": {
+        "POR": 77.44891570750882,
+        "PERM": 89.3475027344081,
+        "SW": 73.62238476712884,
+        "TOTAL": 80.27413533779057
+      },
+      "delta_previous": 0.002801716903917395,
+      "evidence": "outputs/pure_dl_dual8222_v5_location_point3280_fold5/fold_5_report.json"
+    }
+  ],
+  "source_prediction_origin": "outputs\\pure_dl_paired_local_context_router80_sequence\\fold_5_pred.npy",
+  "v5_residual_diagnostic": {
+    "observed_at": "2026-09-28T10:13:44.946386+08:00",
+    "mode": "point32",
+    "scores": {
+      "POR": 77.44891570750882,
+      "PERM": 89.3475027344081,
+      "SW": 73.62238476712884,
+      "TOTAL": 80.27413533779057
+    },
+    "different_elements": 0,
+    "all144665rows_exact": true,
+    "reload_from_serialized_readout": true,
+    "source_sha256_verified": true,
+    "residual_statistics": {
+      "scope": "all valid context positions of validation windows, including repeated context; not only labelled central rows",
+      "n_component_positions": 4648624,
+      "mean_abs_standardized_location_delta": 0.0010946299432934767,
+      "max_abs_standardized_location_delta": 0.025622885674238205,
+      "mean_abs_delta_over_fixed_std": 0.004242315852964845,
+      "max_abs_delta_over_fixed_std": 0.12650048732757568,
+      "fraction_above95percent_of_bound": 0.0,
+      "bound_fraction": 0.25
+    },
+    "zero_residual_intervention": {
+      "scope": "inference-only removal on the trained winner; not a matched retraining ablation or a new selected model",
+      "zero_residual_scores": {
+        "POR": 77.4459798757357,
+        "PERM": 89.3475027344081,
+        "SW": 73.62238476712884,
+        "TOTAL": 80.27325458825862
+      },
+      "normal_minus_zero_TOTAL": 0.0008807495319445025,
+      "changed_POR_predictions": 920
+    },
+    "seconds_setup_plus_replays": 39.28133510000771,
+    "new_training": false,
+    "extra_folds": false
+  },
+  "caveats": [
+    "Chain entries are retained model replacements; not all historical trials are cumulative gains.",
+    "v5 linear is a matched parallel control, not a literal parent of point32.",
+    "Changing to three private model copies in v8 reproduced the same scores and did not itself add accuracy.",
+    "There is no fully matched pretraining/Q/dual-view ablation in this gain decomposition."
+  ]
+}

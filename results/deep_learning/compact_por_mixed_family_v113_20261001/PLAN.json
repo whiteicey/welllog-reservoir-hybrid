@@ -1,0 +1,25 @@
+{
+  "total_training_stages": 5,
+  "selected_dependency_stages": 4,
+  "source_sha256": "45a09476e3126820688420579c100c86e0e4f45df335904380a298cf5f66b9a9",
+  "candidates": [
+    "t3_cauchy",
+    "cauchy_t3"
+  ],
+  "historical_controls": {
+    "t3": 77.50036838764457,
+    "cauchy": 77.52509448033057
+  },
+  "same_trainable_parameters": 54483,
+  "family_assignment": "first8 expert0, next8 expert1; fixed per model, not chosen rowwise",
+  "initial_raw_parameters_identical": true,
+  "initial_functions_differ": true,
+  "stages": [
+    "original source",
+    "new mixed-family POR readout",
+    "v100 PERM",
+    "v104 SW",
+    "optional warranted refinement only"
+  ],
+  "remaining_folds_started": false
+}

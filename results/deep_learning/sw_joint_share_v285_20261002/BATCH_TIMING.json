@@ -1,0 +1,17 @@
+{
+  "overlap_other_study": true,
+  "includes_startup_data_initial_final_eval": true,
+  "arms": {
+    "balanced": {
+      "process_creation_utc_seconds": 1790871531.893,
+      "pid": 24904
+    }
+  },
+  "pair_wallclock_pending": true,
+  "excludes_code_preparation_CPUassembly": true,
+  "maximum_GPU_jobs": 2,
+  "individual_seconds": 487.8969279000303,
+  "wall_to_report": 493.4922332763672,
+  "peak_MiB": 1241.642578125,
+  "endpoint": "lastreportwrite excludesprocess teardown"
+}

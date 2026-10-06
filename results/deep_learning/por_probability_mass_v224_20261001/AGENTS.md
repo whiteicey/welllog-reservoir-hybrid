@@ -1,0 +1,1 @@
+Freeze entire positive151 incl113/SOURCE; only new256->32->256 mass readout trains. Originalfold5/Q50/mixedprior/score/actions/80-14/max2GPU. One extraPORphase,no repairstack. Prepared/noqueue. MaintainPROJECTS.

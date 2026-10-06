@@ -1,0 +1,1 @@
+Maintain PROJECTS/README. Fixed original fold5/nine curves/Q/score; normalGPU max2. One added SW phase, freeze original atom. No repair checkpoints or otherfolds; total<=8. Preserve positive controls and immutable sources.

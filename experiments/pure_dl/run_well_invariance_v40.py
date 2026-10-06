@@ -1,0 +1,48 @@
+"""Launch exactly one of two matched training-only well-invariance candidates."""
+from datetime import datetime
+import argparse,json,subprocess,sys
+from well_invariance_v40 import ROOT,STUDY,MODES
+from run_retrieval_smooth_v36 import jobs,append
+
+TEXT='''# v40 训练井不变性：阻断与反转梯度
+
+## 探索重点与历史区别
+固定80.336513436816基线，针对v39单纯SW归一化微调无收益，检验训练井特征依赖是否妨碍泛化。旧well_adversarial_sequence是多目标从头训练、单128维线性分类器、系数至.01，原第五79.843176；本次是强SW双专家热启动、仅5120个归一化仿射参数更新，配备同一个256→64→64训练井分类器。不是首次尝试井对抗思想，也不重复旧任务。
+
+## 预定义匹配对照
+blocked/reversed两个独立进程，同完整初始化、同NLL/Q50/采样窗口/优化器/参数集合。两组都训练井分类器；blocked井分类梯度不进骨干，reversed在前三轮也阻断，第4至8轮将反转系数从.2升到1，之后固定1。总损失SW原NLL/3 + .1*井分类CE。分类器正常最小化CE，骨干在reversed中收到相反方向的井分类梯度。
+两个专家主读出前128维隐藏特征，各自按有效中心128点平均，拼成256维；训练井ID仅用作分类监督，不作为预测输入。只映射64训练井，16验证井的域标签固定为-1，训练锚点严格检查有效映射。验证不会运行或更新分类器。无验证标签/井参与辅助拟合、无跨井输入窗口。
+原5120个GroupNorm/LayerNorm缩放偏置更新，旧卷积/头/路由固定。新增20608参数仅属于训练井分类器，推理不用其输出；两个候选总可训练参数相同。真实梯度和归一化权重变化记录，避免把分类器单独学会当作骨干有效训练。
+
+## 训练与验证边界
+原9曲线/206输入与63既有幅值侧特征、原第五折144665点评分/动作不改。max80/pat18/min10/b64/64步；norm AdamWlr1e-4/wd0，分类器lr3e-4/wd.01；cosine80*64至1e-5，两个参数组各clip2。两进程并发上限2，无自动队列/恢复。
+初始模型等于原SW73.663082797066；独立按SW选最佳，完成后恢复并和固定POR/PERM实际组装。不做重复预检/独立审查。训练侧分类正确率仅作诊断，需与训练井最大先验类比例比较，不作为预测评分。
+
+## 已完成、未完成与后续
+已实现两候选；训练收益待定。若井分类器不能学习，本次只能说明该训练设置信号不足；若能学习但反转无收益，则不继续该对抗系数扫描。不将训练井可区分性本身当作泛化失败的因果证据。
+完整OOF>82尚未达成，第五严格>80.5并有明显收益才考虑其余折；本批无其他折/旧任务/交付覆盖。每批维护PROJECTS.md、README、EXPLORATIONS和图谱，保留真实失败与负结果，删除无用checkpoint。
+'''
+
+def main():
+    ap=argparse.ArgumentParser();ap.add_argument('--mode',required=True,choices=MODES);a=ap.parse_args()
+    active=jobs()
+    if len(active)>=2:raise RuntimeError(('max2',active))
+    out=ROOT/f'outputs/pure_dl_well_invariance_v40_SW_{a.mode}_fold5'
+    if out.exists():raise FileExistsError(out)
+    STUDY.mkdir(exist_ok=True)
+    for name,txt in [('AGENTS.md','# v40 工作约束\n只运行blocked/reversed两项训练井辅助监督对照；验证井不映射、ID不作输入，原预测/评分/80-18/max2保持。维护PROJECTS.md目标/已完成/计划/未做/后续。无其他折或交付替换。\n'),('README.md',TEXT),('PROJECTS.md',TEXT)]:
+        if not (STUDY/name).exists():(STUDY/name).write_text(txt,encoding='utf-8')
+    out.mkdir()
+    for n in ('AGENTS.md','README.md','PROJECTS.md'):(out/n).write_text((STUDY/n).read_text(encoding='utf-8'),encoding='utf-8')
+    cmd=[sys.executable,'-X','utf8','-u',str(ROOT/'experiments/pure_dl/train_well_invariance_v40.py'),'--mode',a.mode,'--out',str(out)]
+    with (out/'train.log').open('wb') as log,(out/'train.err').open('wb') as err:
+        p=subprocess.Popen(cmd,cwd=ROOT,stdin=subprocess.DEVNULL,stdout=log,stderr=err,creationflags=subprocess.CREATE_NEW_PROCESS_GROUP|subprocess.DETACHED_PROCESS)
+    launch=dict(pid=p.pid,mode=a.mode,started_at=datetime.now().astimezone().isoformat(),command=cmd,automatic_queue=False)
+    (out/'launch.json').write_text(json.dumps(launch,indent=2),encoding='utf-8')
+    marker='## v40 '+a.mode+' 显式启动'
+    for path in (STUDY/'PROJECTS.md',ROOT/'PROJECTS.md',ROOT.parent/'PROJECTS.md'):append(path,marker,marker+'\n'+json.dumps(launch,ensure_ascii=False))
+    append(ROOT/'EXPLORATIONS.md','well_invariance_v40_20260929','- [v40 训练井不变性](results/deep_learning/well_invariance_v40_20260929/README.md)：同结构blocked/reversed梯度，井ID仅训练侧辅助监督，原SW预测输入不含ID。')
+    append(ROOT.parent/'AGENTS.md','## v40训练井辅助监督','## v40训练井辅助监督\n本批SW blocked/reversed井分类梯度对照，64训练井辅助标签、验证井不映射，ID不作为预测输入。只更新原骨干norm及训练用分类器，原Q50/评分/80-18/max2不改，无其他折或交付修改。维护well_invariance_v40_20260929。')
+    print(json.dumps(launch),flush=True)
+
+if __name__=='__main__':main()

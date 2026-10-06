@@ -1,0 +1,1 @@
+Maintain PROJECTS and README evidence. Original151/154/104 only, private inputhidden notpredictions. Donor256/SW1024 alignment; newencoder/readout/fusion jointoneSWphase. Max2GPU, noqueue/otherfolds; preserve priorartifacts.

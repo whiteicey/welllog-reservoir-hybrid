@@ -1,0 +1,2 @@
+# Scope
+Maintain PROJECTS/README/EXPLORATIONS/atlas. Only cross/additive336 original154frozenprior+fresh312body/readout/rational with816adapter joint. No trainedrepair checkpoints including306. Original9/206relative/Q50/fifth/score/seed/80pat14/b64x64/cos80/max2GPU/onePERMphase/max8. Atomicfullstate explicitresume; no further folds/rank-LR-scanqueue. Cross first then explicitcontrol after GPUfree.

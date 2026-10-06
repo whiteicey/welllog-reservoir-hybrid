@@ -1,0 +1,1 @@
+Goal SWrawencoder+directdensityjointtraining/pureDL82. Original104prior/gate frozen/no252repairweights; original9/206/Q/splits/decoder/max2GPU/80-14/oneSWaddedphase/total<=8. No teacher/labelsretrieval/otherfolds. Immutableactive source/atomicfullstate explicitresume. MaintainPROJECTS/README/EXPLORATIONS/atlas.

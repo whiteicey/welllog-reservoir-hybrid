@@ -1,0 +1,1174 @@
+{
+  "observed_at": "2026-09-29T09:34:54.261136+08:00",
+  "rows": [
+    {
+      "target": "POR",
+      "id": "pure_dl_champion_route_v28_POR_fold5",
+      "state": {
+        "status": "complete",
+        "target": "POR",
+        "pid": 58564,
+        "modes": {
+          "joint": {
+            "best": 77.5220239470156,
+            "best_epoch": 10,
+            "bad": 18,
+            "done": true,
+            "last_epoch": 28,
+            "stop_reason": "patience18"
+          },
+          "conditional": {
+            "best": 77.53599026762481,
+            "best_epoch": 8,
+            "bad": 18,
+            "done": true,
+            "last_epoch": 26,
+            "stop_reason": "patience18"
+          }
+        },
+        "atlas_current_trial": false
+      },
+      "report": {
+        "target": "POR",
+        "factor": "expert_routing",
+        "screening_fold": 5,
+        "arms": [
+          {
+            "target": "POR",
+            "mode": "joint",
+            "factor": "expert_routing",
+            "screening_fold": 5,
+            "target_score": 77.5220239470156,
+            "reference_replacement_total": 80.30121736340385,
+            "delta_reference_target": 0.0016225045486351064,
+            "best_epoch": 10,
+            "stopped_epoch": 28,
+            "stop_reason": "patience18",
+            "best_after_update": {
+              "epoch": 10,
+              "target_score": 77.5220239470156,
+              "reference_replacement_total": 80.30121736340385
+            },
+            "trainable_parameters": 10273,
+            "all144665_selected_predictions_restored_exactly": true,
+            "all_frozen_state_unchanged": true,
+            "gradient_scope": {
+              "input_gradient_norm": 4.077664198121056e-05,
+              "output_gradient_norm": 0.006266743876039982,
+              "frozen_gradients_none": true,
+              "target_only": "POR",
+              "second_step": true
+            },
+            "factor_scope": {
+              "mode": "joint",
+              "all_component_means_and_scales_exact": true,
+              "merged_default_logit_exact": false,
+              "routing_log_odds_max_abs": 0.24991023540496826,
+              "expert1_conditional_share_mean_change": 0.04801896587014198,
+              "expert1_conditional_share_max_abs_change": 0.06223219633102417,
+              "merged_default_probability_max_abs_change": 0.039268821477890015,
+              "scope": "two fixed training windows, diagnostic only; fixed default probability does not force the final default action"
+            },
+            "last_delta_parameter_change_L2": 2.781202223922277,
+            "checkpoint": "outputs\\pure_dl_champion_route_v28_POR_fold5\\joint\\model_best.pt",
+            "complete_five_folds": false,
+            "remaining_folds_started": false
+          },
+          {
+            "target": "POR",
+            "mode": "conditional",
+            "factor": "expert_routing",
+            "screening_fold": 5,
+            "target_score": 77.53599026762481,
+            "reference_replacement_total": 80.30540725958662,
+            "delta_reference_target": 0.015588825157848873,
+            "best_epoch": 8,
+            "stopped_epoch": 26,
+            "stop_reason": "patience18",
+            "best_after_update": {
+              "epoch": 8,
+              "target_score": 77.53599026762481,
+              "reference_replacement_total": 80.30540725958662
+            },
+            "trainable_parameters": 10273,
+            "all144665_selected_predictions_restored_exactly": true,
+            "all_frozen_state_unchanged": true,
+            "gradient_scope": {
+              "input_gradient_norm": 2.9184324375819415e-05,
+              "output_gradient_norm": 0.004268873017281294,
+              "frozen_gradients_none": true,
+              "target_only": "POR",
+              "second_step": true
+            },
+            "factor_scope": {
+              "mode": "conditional",
+              "all_component_means_and_scales_exact": true,
+              "merged_default_logit_exact": true,
+              "routing_log_odds_max_abs": 0.2499207854270935,
+              "expert1_conditional_share_mean_change": 0.05347096547484398,
+              "expert1_conditional_share_max_abs_change": 0.06233146786689758,
+              "merged_default_probability_max_abs_change": 0.0,
+              "scope": "two fixed training windows, diagnostic only; fixed default probability does not force the final default action"
+            },
+            "last_delta_parameter_change_L2": 2.9834038490338286,
+            "checkpoint": "outputs\\pure_dl_champion_route_v28_POR_fold5\\conditional\\model_best.pt",
+            "complete_five_folds": false,
+            "remaining_folds_started": false
+          }
+        ],
+        "reference_scores": {
+          "POR": 77.52040144246696,
+          "PERM": 89.34940782831941,
+          "SW": 73.63519268396395,
+          "TOTAL": 80.30073061203926
+        },
+        "seconds": 207.84843949999777,
+        "peak_allocated_MiB": 717.94287109375,
+        "epoch_timing": [
+          {
+            "epoch": 1,
+            "active_modes": [
+              "joint",
+              "conditional"
+            ],
+            "seconds": 7.58925040000031
+          },
+          {
+            "epoch": 2,
+            "active_modes": [
+              "joint",
+              "conditional"
+            ],
+            "seconds": 7.312518999999156
+          },
+          {
+            "epoch": 3,
+            "active_modes": [
+              "joint",
+              "conditional"
+            ],
+            "seconds": 7.518941400005133
+          },
+          {
+            "epoch": 4,
+            "active_modes": [
+              "joint",
+              "conditional"
+            ],
+            "seconds": 7.624915200001851
+          },
+          {
+            "epoch": 5,
+            "active_modes": [
+              "joint",
+              "conditional"
+            ],
+            "seconds": 7.646147500003281
+          },
+          {
+            "epoch": 6,
+            "active_modes": [
+              "joint",
+              "conditional"
+            ],
+            "seconds": 7.405921000005037
+          },
+          {
+            "epoch": 7,
+            "active_modes": [
+              "joint",
+              "conditional"
+            ],
+            "seconds": 7.4959439000012935
+          },
+          {
+            "epoch": 8,
+            "active_modes": [
+              "joint",
+              "conditional"
+            ],
+            "seconds": 7.402505699996254
+          },
+          {
+            "epoch": 9,
+            "active_modes": [
+              "joint",
+              "conditional"
+            ],
+            "seconds": 7.315478299999086
+          },
+          {
+            "epoch": 10,
+            "active_modes": [
+              "joint",
+              "conditional"
+            ],
+            "seconds": 7.302341399998113
+          },
+          {
+            "epoch": 11,
+            "active_modes": [
+              "joint",
+              "conditional"
+            ],
+            "seconds": 7.375276699996903
+          },
+          {
+            "epoch": 12,
+            "active_modes": [
+              "joint",
+              "conditional"
+            ],
+            "seconds": 7.468595599995751
+          },
+          {
+            "epoch": 13,
+            "active_modes": [
+              "joint",
+              "conditional"
+            ],
+            "seconds": 7.139037000000826
+          },
+          {
+            "epoch": 14,
+            "active_modes": [
+              "joint",
+              "conditional"
+            ],
+            "seconds": 7.157664800004568
+          },
+          {
+            "epoch": 15,
+            "active_modes": [
+              "joint",
+              "conditional"
+            ],
+            "seconds": 7.3100004000007175
+          },
+          {
+            "epoch": 16,
+            "active_modes": [
+              "joint",
+              "conditional"
+            ],
+            "seconds": 7.281027000004542
+          },
+          {
+            "epoch": 17,
+            "active_modes": [
+              "joint",
+              "conditional"
+            ],
+            "seconds": 7.258420899997873
+          },
+          {
+            "epoch": 18,
+            "active_modes": [
+              "joint",
+              "conditional"
+            ],
+            "seconds": 7.3223448999997345
+          },
+          {
+            "epoch": 19,
+            "active_modes": [
+              "joint",
+              "conditional"
+            ],
+            "seconds": 7.710869599999569
+          },
+          {
+            "epoch": 20,
+            "active_modes": [
+              "joint",
+              "conditional"
+            ],
+            "seconds": 7.35167929999443
+          },
+          {
+            "epoch": 21,
+            "active_modes": [
+              "joint",
+              "conditional"
+            ],
+            "seconds": 7.793981199996779
+          },
+          {
+            "epoch": 22,
+            "active_modes": [
+              "joint",
+              "conditional"
+            ],
+            "seconds": 6.231133799999952
+          },
+          {
+            "epoch": 23,
+            "active_modes": [
+              "joint",
+              "conditional"
+            ],
+            "seconds": 5.943966900005762
+          },
+          {
+            "epoch": 24,
+            "active_modes": [
+              "joint",
+              "conditional"
+            ],
+            "seconds": 5.9189045000021
+          },
+          {
+            "epoch": 25,
+            "active_modes": [
+              "joint",
+              "conditional"
+            ],
+            "seconds": 5.886818400002085
+          },
+          {
+            "epoch": 26,
+            "active_modes": [
+              "joint",
+              "conditional"
+            ],
+            "seconds": 5.9610198000009404
+          },
+          {
+            "epoch": 27,
+            "active_modes": [
+              "joint"
+            ],
+            "seconds": 4.817033899998933
+          },
+          {
+            "epoch": 28,
+            "active_modes": [
+              "joint"
+            ],
+            "seconds": 4.786228299999493
+          }
+        ],
+        "finished_at": "2026-09-29T09:26:12.275008+08:00",
+        "complete_five_folds": false,
+        "remaining_folds_started": false
+      }
+    },
+    {
+      "target": "PERM",
+      "id": "pure_dl_champion_route_v28_PERM_fold5",
+      "state": {
+        "status": "complete",
+        "target": "PERM",
+        "pid": 44572,
+        "modes": {
+          "joint": {
+            "best": 89.38243919006807,
+            "best_epoch": 21,
+            "bad": 18,
+            "done": true,
+            "last_epoch": 39,
+            "stop_reason": "patience18"
+          },
+          "conditional": {
+            "best": 89.37038549663082,
+            "best_epoch": 30,
+            "bad": 18,
+            "done": true,
+            "last_epoch": 48,
+            "stop_reason": "patience18"
+          }
+        },
+        "atlas_current_trial": false
+      },
+      "report": {
+        "target": "PERM",
+        "factor": "expert_routing",
+        "screening_fold": 5,
+        "arms": [
+          {
+            "target": "PERM",
+            "mode": "joint",
+            "factor": "expert_routing",
+            "screening_fold": 5,
+            "target_score": 89.38243919006807,
+            "reference_replacement_total": 80.31229158865129,
+            "delta_reference_target": 0.033031361748655286,
+            "best_epoch": 21,
+            "stopped_epoch": 39,
+            "stop_reason": "patience18",
+            "best_after_update": {
+              "epoch": 21,
+              "target_score": 89.38243919006807,
+              "reference_replacement_total": 80.31229158865129
+            },
+            "trainable_parameters": 10273,
+            "all144665_selected_predictions_restored_exactly": true,
+            "all_frozen_state_unchanged": true,
+            "gradient_scope": {
+              "input_gradient_norm": 2.67905506916577e-05,
+              "output_gradient_norm": 0.0034486830700188875,
+              "frozen_gradients_none": true,
+              "target_only": "PERM",
+              "second_step": true
+            },
+            "factor_scope": {
+              "mode": "joint",
+              "all_component_means_and_scales_exact": true,
+              "merged_default_logit_exact": false,
+              "routing_log_odds_max_abs": 0.2499786764383316,
+              "expert1_conditional_share_mean_change": 0.021589407697319984,
+              "expert1_conditional_share_max_abs_change": 0.06180602312088013,
+              "merged_default_probability_max_abs_change": 0.03462722897529602,
+              "scope": "two fixed training windows, diagnostic only; fixed default probability does not force the final default action"
+            },
+            "last_delta_parameter_change_L2": 3.5375192559273128,
+            "checkpoint": "outputs\\pure_dl_champion_route_v28_PERM_fold5\\joint\\model_best.pt",
+            "complete_five_folds": false,
+            "remaining_folds_started": false
+          },
+          {
+            "target": "PERM",
+            "mode": "conditional",
+            "factor": "expert_routing",
+            "screening_fold": 5,
+            "target_score": 89.37038549663082,
+            "reference_replacement_total": 80.30807279594825,
+            "delta_reference_target": 0.02097766831140291,
+            "best_epoch": 30,
+            "stopped_epoch": 48,
+            "stop_reason": "patience18",
+            "best_after_update": {
+              "epoch": 30,
+              "target_score": 89.37038549663082,
+              "reference_replacement_total": 80.30807279594825
+            },
+            "trainable_parameters": 10273,
+            "all144665_selected_predictions_restored_exactly": true,
+            "all_frozen_state_unchanged": true,
+            "gradient_scope": {
+              "input_gradient_norm": 1.5739047739771195e-05,
+              "output_gradient_norm": 0.0016807219944894314,
+              "frozen_gradients_none": true,
+              "target_only": "PERM",
+              "second_step": true
+            },
+            "factor_scope": {
+              "mode": "conditional",
+              "all_component_means_and_scales_exact": true,
+              "merged_default_logit_exact": true,
+              "routing_log_odds_max_abs": 0.24999989569187164,
+              "expert1_conditional_share_mean_change": 0.01829390786588192,
+              "expert1_conditional_share_max_abs_change": 0.062407463788986206,
+              "merged_default_probability_max_abs_change": 0.0,
+              "scope": "two fixed training windows, diagnostic only; fixed default probability does not force the final default action"
+            },
+            "last_delta_parameter_change_L2": 3.9773433361415926,
+            "checkpoint": "outputs\\pure_dl_champion_route_v28_PERM_fold5\\conditional\\model_best.pt",
+            "complete_five_folds": false,
+            "remaining_folds_started": false
+          }
+        ],
+        "reference_scores": {
+          "POR": 77.52040144246696,
+          "PERM": 89.34940782831941,
+          "SW": 73.63519268396395,
+          "TOTAL": 80.30073061203926
+        },
+        "seconds": 272.1614228000035,
+        "peak_allocated_MiB": 717.3515625,
+        "epoch_timing": [
+          {
+            "epoch": 1,
+            "active_modes": [
+              "joint",
+              "conditional"
+            ],
+            "seconds": 5.733745899997302
+          },
+          {
+            "epoch": 2,
+            "active_modes": [
+              "joint",
+              "conditional"
+            ],
+            "seconds": 5.66330459999881
+          },
+          {
+            "epoch": 3,
+            "active_modes": [
+              "joint",
+              "conditional"
+            ],
+            "seconds": 5.755222600004345
+          },
+          {
+            "epoch": 4,
+            "active_modes": [
+              "joint",
+              "conditional"
+            ],
+            "seconds": 5.632202699998743
+          },
+          {
+            "epoch": 5,
+            "active_modes": [
+              "joint",
+              "conditional"
+            ],
+            "seconds": 5.584008400001039
+          },
+          {
+            "epoch": 6,
+            "active_modes": [
+              "joint",
+              "conditional"
+            ],
+            "seconds": 5.96910879999632
+          },
+          {
+            "epoch": 7,
+            "active_modes": [
+              "joint",
+              "conditional"
+            ],
+            "seconds": 5.587060600002587
+          },
+          {
+            "epoch": 8,
+            "active_modes": [
+              "joint",
+              "conditional"
+            ],
+            "seconds": 5.526285100000678
+          },
+          {
+            "epoch": 9,
+            "active_modes": [
+              "joint",
+              "conditional"
+            ],
+            "seconds": 5.6349162999977125
+          },
+          {
+            "epoch": 10,
+            "active_modes": [
+              "joint",
+              "conditional"
+            ],
+            "seconds": 5.552483899999061
+          },
+          {
+            "epoch": 11,
+            "active_modes": [
+              "joint",
+              "conditional"
+            ],
+            "seconds": 5.85983049999777
+          },
+          {
+            "epoch": 12,
+            "active_modes": [
+              "joint",
+              "conditional"
+            ],
+            "seconds": 5.5795180999994045
+          },
+          {
+            "epoch": 13,
+            "active_modes": [
+              "joint",
+              "conditional"
+            ],
+            "seconds": 5.620225899998331
+          },
+          {
+            "epoch": 14,
+            "active_modes": [
+              "joint",
+              "conditional"
+            ],
+            "seconds": 5.746228999996674
+          },
+          {
+            "epoch": 15,
+            "active_modes": [
+              "joint",
+              "conditional"
+            ],
+            "seconds": 5.979141800002253
+          },
+          {
+            "epoch": 16,
+            "active_modes": [
+              "joint",
+              "conditional"
+            ],
+            "seconds": 5.582457399999839
+          },
+          {
+            "epoch": 17,
+            "active_modes": [
+              "joint",
+              "conditional"
+            ],
+            "seconds": 5.457738399993104
+          },
+          {
+            "epoch": 18,
+            "active_modes": [
+              "joint",
+              "conditional"
+            ],
+            "seconds": 5.517345299995213
+          },
+          {
+            "epoch": 19,
+            "active_modes": [
+              "joint",
+              "conditional"
+            ],
+            "seconds": 5.856835899998259
+          },
+          {
+            "epoch": 20,
+            "active_modes": [
+              "joint",
+              "conditional"
+            ],
+            "seconds": 5.4741623000008985
+          },
+          {
+            "epoch": 21,
+            "active_modes": [
+              "joint",
+              "conditional"
+            ],
+            "seconds": 5.7154910000026575
+          },
+          {
+            "epoch": 22,
+            "active_modes": [
+              "joint",
+              "conditional"
+            ],
+            "seconds": 5.626487099994847
+          },
+          {
+            "epoch": 23,
+            "active_modes": [
+              "joint",
+              "conditional"
+            ],
+            "seconds": 5.561495699999796
+          },
+          {
+            "epoch": 24,
+            "active_modes": [
+              "joint",
+              "conditional"
+            ],
+            "seconds": 5.6270615000030375
+          },
+          {
+            "epoch": 25,
+            "active_modes": [
+              "joint",
+              "conditional"
+            ],
+            "seconds": 5.661478000001807
+          },
+          {
+            "epoch": 26,
+            "active_modes": [
+              "joint",
+              "conditional"
+            ],
+            "seconds": 5.440991399998893
+          },
+          {
+            "epoch": 27,
+            "active_modes": [
+              "joint",
+              "conditional"
+            ],
+            "seconds": 5.788218300003791
+          },
+          {
+            "epoch": 28,
+            "active_modes": [
+              "joint",
+              "conditional"
+            ],
+            "seconds": 5.588439499995729
+          },
+          {
+            "epoch": 29,
+            "active_modes": [
+              "joint",
+              "conditional"
+            ],
+            "seconds": 5.56147300000157
+          },
+          {
+            "epoch": 30,
+            "active_modes": [
+              "joint",
+              "conditional"
+            ],
+            "seconds": 5.627998199997819
+          },
+          {
+            "epoch": 31,
+            "active_modes": [
+              "joint",
+              "conditional"
+            ],
+            "seconds": 5.4905510999960825
+          },
+          {
+            "epoch": 32,
+            "active_modes": [
+              "joint",
+              "conditional"
+            ],
+            "seconds": 5.6770160000014585
+          },
+          {
+            "epoch": 33,
+            "active_modes": [
+              "joint",
+              "conditional"
+            ],
+            "seconds": 5.47422280000319
+          },
+          {
+            "epoch": 34,
+            "active_modes": [
+              "joint",
+              "conditional"
+            ],
+            "seconds": 5.340474999997241
+          },
+          {
+            "epoch": 35,
+            "active_modes": [
+              "joint",
+              "conditional"
+            ],
+            "seconds": 5.971408999997948
+          },
+          {
+            "epoch": 36,
+            "active_modes": [
+              "joint",
+              "conditional"
+            ],
+            "seconds": 5.429115099999763
+          },
+          {
+            "epoch": 37,
+            "active_modes": [
+              "joint",
+              "conditional"
+            ],
+            "seconds": 5.6935592999943765
+          },
+          {
+            "epoch": 38,
+            "active_modes": [
+              "joint",
+              "conditional"
+            ],
+            "seconds": 5.6134072999993805
+          },
+          {
+            "epoch": 39,
+            "active_modes": [
+              "joint",
+              "conditional"
+            ],
+            "seconds": 5.62840590000269
+          },
+          {
+            "epoch": 40,
+            "active_modes": [
+              "conditional"
+            ],
+            "seconds": 4.685550700000022
+          },
+          {
+            "epoch": 41,
+            "active_modes": [
+              "conditional"
+            ],
+            "seconds": 4.561533200001577
+          },
+          {
+            "epoch": 42,
+            "active_modes": [
+              "conditional"
+            ],
+            "seconds": 4.491298300003109
+          },
+          {
+            "epoch": 43,
+            "active_modes": [
+              "conditional"
+            ],
+            "seconds": 4.641377400002966
+          },
+          {
+            "epoch": 44,
+            "active_modes": [
+              "conditional"
+            ],
+            "seconds": 4.737205800003721
+          },
+          {
+            "epoch": 45,
+            "active_modes": [
+              "conditional"
+            ],
+            "seconds": 4.6504493999964325
+          },
+          {
+            "epoch": 46,
+            "active_modes": [
+              "conditional"
+            ],
+            "seconds": 4.67409790000238
+          },
+          {
+            "epoch": 47,
+            "active_modes": [
+              "conditional"
+            ],
+            "seconds": 4.898271500002011
+          },
+          {
+            "epoch": 48,
+            "active_modes": [
+              "conditional"
+            ],
+            "seconds": 4.5705114000011235
+          }
+        ],
+        "finished_at": "2026-09-29T09:31:07.235272+08:00",
+        "complete_five_folds": false,
+        "remaining_folds_started": false
+      }
+    },
+    {
+      "target": "SW",
+      "id": "pure_dl_champion_route_v28_SW_fold5",
+      "state": {
+        "status": "complete",
+        "target": "SW",
+        "pid": 15448,
+        "modes": {
+          "joint": {
+            "best": 73.65170098292425,
+            "best_epoch": 3,
+            "bad": 18,
+            "done": true,
+            "last_epoch": 21,
+            "stop_reason": "patience18"
+          },
+          "conditional": {
+            "best": 73.6564185196088,
+            "best_epoch": 4,
+            "bad": 18,
+            "done": true,
+            "last_epoch": 22,
+            "stop_reason": "patience18"
+          }
+        },
+        "atlas_current_trial": false
+      },
+      "report": {
+        "target": "SW",
+        "factor": "expert_routing",
+        "screening_fold": 5,
+        "arms": [
+          {
+            "target": "SW",
+            "mode": "joint",
+            "factor": "expert_routing",
+            "screening_fold": 5,
+            "target_score": 73.65170098292425,
+            "reference_replacement_total": 80.30650851667536,
+            "delta_reference_target": 0.01650829896030359,
+            "best_epoch": 3,
+            "stopped_epoch": 21,
+            "stop_reason": "patience18",
+            "best_after_update": {
+              "epoch": 3,
+              "target_score": 73.65170098292425,
+              "reference_replacement_total": 80.30650851667536
+            },
+            "trainable_parameters": 10273,
+            "all144665_selected_predictions_restored_exactly": true,
+            "all_frozen_state_unchanged": true,
+            "gradient_scope": {
+              "input_gradient_norm": 2.104491795762442e-05,
+              "output_gradient_norm": 0.0026366726960986853,
+              "frozen_gradients_none": true,
+              "target_only": "SW",
+              "second_step": true
+            },
+            "factor_scope": {
+              "mode": "joint",
+              "all_component_means_and_scales_exact": true,
+              "merged_default_logit_exact": false,
+              "routing_log_odds_max_abs": 0.2476952075958252,
+              "expert1_conditional_share_mean_change": -0.009703594259917736,
+              "expert1_conditional_share_max_abs_change": 0.061448484659194946,
+              "merged_default_probability_max_abs_change": 0.0229489803314209,
+              "scope": "two fixed training windows, diagnostic only; fixed default probability does not force the final default action"
+            },
+            "last_delta_parameter_change_L2": 2.9217983857707566,
+            "checkpoint": "outputs\\pure_dl_champion_route_v28_SW_fold5\\joint\\model_best.pt",
+            "complete_five_folds": false,
+            "remaining_folds_started": false
+          },
+          {
+            "target": "SW",
+            "mode": "conditional",
+            "factor": "expert_routing",
+            "screening_fold": 5,
+            "target_score": 73.6564185196088,
+            "reference_replacement_total": 80.30815965451497,
+            "delta_reference_target": 0.021225835644855806,
+            "best_epoch": 4,
+            "stopped_epoch": 22,
+            "stop_reason": "patience18",
+            "best_after_update": {
+              "epoch": 4,
+              "target_score": 73.6564185196088,
+              "reference_replacement_total": 80.30815965451497
+            },
+            "trainable_parameters": 10273,
+            "all144665_selected_predictions_restored_exactly": true,
+            "all_frozen_state_unchanged": true,
+            "gradient_scope": {
+              "input_gradient_norm": 1.6571184460190125e-05,
+              "output_gradient_norm": 0.0016011485131457448,
+              "frozen_gradients_none": true,
+              "target_only": "SW",
+              "second_step": true
+            },
+            "factor_scope": {
+              "mode": "conditional",
+              "all_component_means_and_scales_exact": true,
+              "merged_default_logit_exact": true,
+              "routing_log_odds_max_abs": 0.2449932098388672,
+              "expert1_conditional_share_mean_change": -0.012533157132565975,
+              "expert1_conditional_share_max_abs_change": 0.05384480953216553,
+              "merged_default_probability_max_abs_change": 0.0,
+              "scope": "two fixed training windows, diagnostic only; fixed default probability does not force the final default action"
+            },
+            "last_delta_parameter_change_L2": 3.081573602882629,
+            "checkpoint": "outputs\\pure_dl_champion_route_v28_SW_fold5\\conditional\\model_best.pt",
+            "complete_five_folds": false,
+            "remaining_folds_started": false
+          }
+        ],
+        "reference_scores": {
+          "POR": 77.52040144246696,
+          "PERM": 89.34940782831941,
+          "SW": 73.63519268396395,
+          "TOTAL": 80.30073061203926
+        },
+        "seconds": 167.2178477999987,
+        "peak_allocated_MiB": 717.81298828125,
+        "epoch_timing": [
+          {
+            "epoch": 1,
+            "active_modes": [
+              "joint",
+              "conditional"
+            ],
+            "seconds": 7.548200600002019
+          },
+          {
+            "epoch": 2,
+            "active_modes": [
+              "joint",
+              "conditional"
+            ],
+            "seconds": 7.015778199995111
+          },
+          {
+            "epoch": 3,
+            "active_modes": [
+              "joint",
+              "conditional"
+            ],
+            "seconds": 7.189488900003198
+          },
+          {
+            "epoch": 4,
+            "active_modes": [
+              "joint",
+              "conditional"
+            ],
+            "seconds": 7.277846700002556
+          },
+          {
+            "epoch": 5,
+            "active_modes": [
+              "joint",
+              "conditional"
+            ],
+            "seconds": 7.268299499999557
+          },
+          {
+            "epoch": 6,
+            "active_modes": [
+              "joint",
+              "conditional"
+            ],
+            "seconds": 7.081322799996997
+          },
+          {
+            "epoch": 7,
+            "active_modes": [
+              "joint",
+              "conditional"
+            ],
+            "seconds": 7.1818874000018695
+          },
+          {
+            "epoch": 8,
+            "active_modes": [
+              "joint",
+              "conditional"
+            ],
+            "seconds": 7.116030299999693
+          },
+          {
+            "epoch": 9,
+            "active_modes": [
+              "joint",
+              "conditional"
+            ],
+            "seconds": 6.929096899999422
+          },
+          {
+            "epoch": 10,
+            "active_modes": [
+              "joint",
+              "conditional"
+            ],
+            "seconds": 7.073671199999808
+          },
+          {
+            "epoch": 11,
+            "active_modes": [
+              "joint",
+              "conditional"
+            ],
+            "seconds": 7.01051390000066
+          },
+          {
+            "epoch": 12,
+            "active_modes": [
+              "joint",
+              "conditional"
+            ],
+            "seconds": 6.989434299997811
+          },
+          {
+            "epoch": 13,
+            "active_modes": [
+              "joint",
+              "conditional"
+            ],
+            "seconds": 7.01018109999859
+          },
+          {
+            "epoch": 14,
+            "active_modes": [
+              "joint",
+              "conditional"
+            ],
+            "seconds": 6.821333899999445
+          },
+          {
+            "epoch": 15,
+            "active_modes": [
+              "joint",
+              "conditional"
+            ],
+            "seconds": 6.903603400001884
+          },
+          {
+            "epoch": 16,
+            "active_modes": [
+              "joint",
+              "conditional"
+            ],
+            "seconds": 7.022988099997747
+          },
+          {
+            "epoch": 17,
+            "active_modes": [
+              "joint",
+              "conditional"
+            ],
+            "seconds": 6.97785639999347
+          },
+          {
+            "epoch": 18,
+            "active_modes": [
+              "joint",
+              "conditional"
+            ],
+            "seconds": 7.0013609000016
+          },
+          {
+            "epoch": 19,
+            "active_modes": [
+              "joint",
+              "conditional"
+            ],
+            "seconds": 6.999622700001055
+          },
+          {
+            "epoch": 20,
+            "active_modes": [
+              "joint",
+              "conditional"
+            ],
+            "seconds": 7.418839999998454
+          },
+          {
+            "epoch": 21,
+            "active_modes": [
+              "joint",
+              "conditional"
+            ],
+            "seconds": 7.034977900002559
+          },
+          {
+            "epoch": 22,
+            "active_modes": [
+              "conditional"
+            ],
+            "seconds": 6.1952713999999105
+          }
+        ],
+        "finished_at": "2026-09-29T09:25:31.645085+08:00",
+        "complete_five_folds": false,
+        "remaining_folds_started": false
+      }
+    }
+  ],
+  "all_complete": true,
+  "reference_scores": {
+    "POR": 77.52040144246696,
+    "PERM": 89.34940782831941,
+    "SW": 73.63519268396395,
+    "TOTAL": 80.30073061203926
+  }
+}

@@ -1,0 +1,110 @@
+{
+  "project": "per_head_seed_weights_v365_20261002",
+  "scope": "obsolete-study",
+  "weights_retained": false,
+  "cleanup": "Obsolete artifacts removed by explicit user request. These are historical scores, not newly verified training.",
+  "results": [
+    {
+      "source": "FINAL.json",
+      "result": {
+        "selected_weights": {
+          "POR": {
+            "original_weight": 0.93,
+            "new_seed_weight": 0.06999999999999995,
+            "score": 78.06314784005319,
+            "selected_grid_index": 93
+          },
+          "PERM": {
+            "original_weight": 0.49,
+            "new_seed_weight": 0.51,
+            "score": 89.56546548645483,
+            "selected_grid_index": 49
+          },
+          "SW": {
+            "original_weight": 0.71,
+            "new_seed_weight": 0.29000000000000004,
+            "score": 74.1951684727142,
+            "selected_grid_index": 71
+          }
+        },
+        "scores": {
+          "POR": 78.06314784005319,
+          "PERM": 89.56546548645483,
+          "SW": 74.1951684727142,
+          "TOTAL": 80.73516623772511
+        },
+        "strata": {
+          "POR": {
+            "DEFAULT": {
+              "rows": 94357,
+              "score": 97.4331528132518
+            },
+            "CONT": {
+              "rows": 50308,
+              "score": 41.733030179719194
+            }
+          },
+          "PERM": {
+            "DEFAULT": {
+              "rows": 95533,
+              "score": 97.56544711178343
+            },
+            "CONT": {
+              "rows": 49132,
+              "score": 74.01018085296752
+            }
+          },
+          "SW": {
+            "DEFAULT": {
+              "rows": 100786,
+              "score": 98.7788544155667
+            },
+            "CONT": {
+              "rows": 43879,
+              "score": 17.72871820182738
+            }
+          }
+        },
+        "delta_vs_original": 0.02903651448704636,
+        "delta_vs_common_81_19": 0.010273328748354515,
+        "original_scores": {
+          "POR": 78.04643071793232,
+          "PERM": 89.51838939879066,
+          "SW": 74.17361205223327,
+          "TOTAL": 80.70612972323806
+        },
+        "common_weight_scores": {
+          "POR": 78.04793494837638,
+          "PERM": 89.5499386183918,
+          "SW": 74.19438259436203,
+          "TOTAL": 80.72489290897676
+        },
+        "continuous_delta_vs_original": {
+          "POR": -0.003610112275950428,
+          "PERM": 0.0005437697704593347,
+          "SW": -0.2506809482192516
+        },
+        "grid": "0:0.01:1",
+        "selection": "Per-target official whole score, one fixed ratio for every row; exact ties prefer greater original weight",
+        "diagnostic_limits": "Each fixed head ratio selected on same fifth; maximum within tested grid, not independent generalization/fullOOF. No CONT-specific checkpoint or per-row choice.",
+        "validation_rows": 144665,
+        "screening_fold": 5,
+        "cached_native_grid_reused": true,
+        "independent_disk_reload_already_verified": true,
+        "extra_training_stages": 0,
+        "extra_GPU_evaluations": 0,
+        "models": 2,
+        "stages_per_model": 8,
+        "total_preexisting_training_stages": 16,
+        "seconds_cpu": 0.7416839999496005,
+        "strict_808_qualified": false,
+        "complete_five_folds": false,
+        "remaining_folds_started": false,
+        "adopted_as_single_eight_stage_model": false
+      }
+    }
+  ],
+  "cleanup_completed": true,
+  "deleted_files": 2,
+  "deleted_bytes": 3472262
+}

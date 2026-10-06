@@ -1,0 +1,30 @@
+{
+  "report": {
+    "stage": "alpha30",
+    "target": "PERM",
+    "target_score": 89.49331453916963,
+    "initial_score": 89.4055666268939,
+    "against_initial": 0.08774791227573076,
+    "against_v97_target": 0.09659048980381613,
+    "best_epoch": 8,
+    "stopped_epoch": 22,
+    "validation_rows": 144665,
+    "predictions_reproduced_exactly": true,
+    "frozen_parameters_exact": true,
+    "gradient_groups": {
+      "PERM_new_multiscale_representation": 0.06609565019607544,
+      "PERM_direct_categorical_readout": 0.0360088124871254
+    },
+    "seconds": 307.5132636000053,
+    "peak_MiB": 788.2265625,
+    "complete_five_folds": false,
+    "early_terminated": false
+  },
+  "versus281": -0.005593999836364105,
+  "versus274": 0.010556062142697442,
+  "adopted": false,
+  "selected_alpha": 0.3,
+  "close_share_scan": true,
+  "remaining_folds_started": false,
+  "positive_fixed30_control_kept": true
+}

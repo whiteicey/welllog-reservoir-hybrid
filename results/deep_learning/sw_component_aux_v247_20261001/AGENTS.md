@@ -1,0 +1,1 @@
+Maintain PROJECTS/README. Originalfold5/Q50/scoring/normalGPU/80-14/max2, frozen104/no repairedweights. OneSWphase/sixalone/whole<=8. Actual owntrainlabels only, auxiliaryCE not teacher. Initialalpha.001 explicit nonidentity; separate initial change fromlearnedgain. Atomicstates/nootherfolds before808.

@@ -1,0 +1,81 @@
+{
+  "observed_epoch": 1790936787.3402116,
+  "fold": 2,
+  "sources": {
+    "original": {
+      "actual_seed": 20261007,
+      "config_base_seed": 20261006,
+      "source_sha256": "7cc90853bb5ca589d038b5c9ef45d402bd5964e2770baab1932de1ddd705f550",
+      "Q": {
+        "status": "ready",
+        "epoch": 44,
+        "sha256": "13becd18b9f5e14dd8509c1e39ef069053d56b7d8f5f59069c10ff187d283679",
+        "dynamic_updates": false,
+        "rule": "last original training-only source Q observation strictly before this fold best epoch; Q0=1 before first observation",
+        "minimum": 0.10000000149011612,
+        "maximum": 1.0,
+        "downweighted_training_rows": 1362
+      },
+      "scores": {
+        "POR": 78.90804266508842,
+        "PERM": 90.34162334254212,
+        "SW": 74.29579105693773,
+        "TOTAL": 81.29550783934447
+      },
+      "best_epoch": 45,
+      "stopped_epoch": 59,
+      "process_wall_seconds": 1017.6442134380341,
+      "concurrency": "solo",
+      "validation_rows": 144667,
+      "training_raw_rows": 578889,
+      "training_validation_raw_disjoint": true
+    },
+    "seed_20261013": {
+      "actual_seed": 20261010,
+      "config_base_seed": 20261009,
+      "source_sha256": "b2e43579577ae6d6befcdef1f81011578d234868a3fc8683d3d6d9309ae5210e",
+      "Q": {
+        "status": "ready",
+        "epoch": 42,
+        "sha256": "4c422d4bd1ecc822ba7331ce96f8e49924654c60e19511878811458fdf8b7a95",
+        "dynamic_updates": false,
+        "rule": "last original training-only source Q observation strictly before this fold best epoch; Q0=1 before first observation",
+        "minimum": 0.10000000149011612,
+        "maximum": 1.0,
+        "downweighted_training_rows": 1444
+      },
+      "scores": {
+        "POR": 79.05605643154057,
+        "PERM": 90.52438800229126,
+        "SW": 74.94652012820983,
+        "TOTAL": 81.63163477513754
+      },
+      "best_epoch": 43,
+      "stopped_epoch": 57,
+      "process_wall_seconds": 1710.1581537723541,
+      "concurrency": "existing safe overlap then serial drain",
+      "validation_rows": 144667,
+      "training_raw_rows": 578889,
+      "training_validation_raw_disjoint": true
+    }
+  },
+  "shared_input_same": true,
+  "shared_input_sha256": "4aeea191f570be91815fe619b55b34583b39df4a60598060bce8a8e66b484b4f",
+  "normalization_keys": [
+    "feature_median",
+    "feature_scale",
+    "regression_median",
+    "regression_scale",
+    "absolute_depth_median",
+    "absolute_depth_scale",
+    "selected_feature_names"
+  ],
+  "normalization_exact_between_sources": true,
+  "normalization_sha256": "9b818d7dd1102dbe81b0aeed7aec10759bb6f1a10d468d399904131fb2a047bc",
+  "same_training_validation_rows": true,
+  "different_learned_sources": true,
+  "own_Q_strictly_before_best": true,
+  "score_scope": "SOURCE prerequisites only; not complete8stage model or fullOOF",
+  "CPU_only": true,
+  "solo_benchmark": false
+}

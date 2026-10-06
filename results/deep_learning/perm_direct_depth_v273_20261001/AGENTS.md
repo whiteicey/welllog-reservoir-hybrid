@@ -1,0 +1,1 @@
+Goal: POR/PERM/SW pureDL82, new PERMbackbone+readout jointly train, original154prior retained. Original9/206/Q/splits/score, max2GPU/80-14/oneheadaddedphase/total<=8. No teacher/voting/otherfolds/271repairweights. Immutablelaunchedsource/atomicstate explicitresume; maintainPROJECTS/README/EXPLORATIONS/atlas.

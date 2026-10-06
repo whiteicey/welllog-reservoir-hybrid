@@ -1,0 +1,18 @@
+﻿{
+    "created_at":  "2026-09-29T16:58:56.6277768+08:00",
+    "total_bytes":  12341946,
+    "files":  [
+                  {
+                      "path":  "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_divergent_v45_POR_curve_axial_fold5\\last_state.pt",
+                      "bytes":  10281199,
+                      "sha256":  "D7FD6F9BBEF6BEEEEFE09C09668CE750EB689A3BA73967E82150E3A57250D9E8",
+                      "reason":  "finished negative POR axial configuration; SW new architecture checkpoint and original champions retained"
+                  },
+                  {
+                      "path":  "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_divergent_v45_POR_curve_axial_fold5\\model_best.pt",
+                      "bytes":  2060747,
+                      "sha256":  "C598C1D3B2E7A01BAC0907FB6289F1A25D33B70DBF6AD0BF452E88F58062DBD4",
+                      "reason":  "finished negative POR axial configuration; SW new architecture checkpoint and original champions retained"
+                  }
+              ]
+}

@@ -1,0 +1,41 @@
+# v50 PERM整井骨干：随机与跨目标迁移
+
+## 探索重点与固定对照
+当前组合TOTAL80.342771761689，其中PERM89.396724049366。v49辅助分位训练没有有效收益，本批切换目标与机制，不继续SW辅助系数。
+预定义scratch/sw_transfer两个836921参数的PERM私有网络：1024点长井段Transformer/TCN共享骨干、128点整井输入编码FiLM、PERM默认门控与8高斯混合密度。scratch全部骨干随机；sw_transfer加载v46自身原64训练井训练得到的SW骨干/LayerNorm/FiLM。两组均完整重置输出25行（门控/权重/位置/尺度），使用相同训练井PERM标签拟合初始偏置、权重为零；不得保留SW输出或投票。
+本轮变量是骨干初始化来源，所以两个完整初始参数哈希理应不同；输出头初始哈希与完整144665点初始预测应相同。所有参数均训练、拥有私有复制，不会更新源SW模型。用相同结构/预算验证SW训练学到的输入表征是否能迁移到PERM，不把不同旧架构的比较单独归因初始化。
+历史v34是训练侧辅助预测配合冻结小头，不是本次完整骨干权重迁移。本次不声称跨目标学习首次出现。来源SW曾按同一个开发折早停选模，非独立新井验证；继续使用开发折的局限如实保留。
+
+## 数据与监督边界
+源权重只在原64训练井标签上优化，验证井从未进入参数拟合。当前两个任务训练损失仅原64井PERM标签，源训练历史使用SW标签是已声明的监督迁移，不是外部发布权重或测试标签。随机组不读取网络源权重；共同加载的数据缓存仅复用原训练侧标准化/网格/Q。
+原9曲线/206特征、Q50、固定原第五144665点/原井集合/seed20261010、中心128及原256支持点/800动作加默认解码保持。输入记忆是当前井测井曲线，无井ID特征或标签。训练锚点仅64井，16验证井输入库仅该井推理。
+
+## 训练、已做与未做
+已经实现两项私有PERM初始化/训练器，开始前无新成绩。两组统一AdamWlr3e-4/wd.01/clip2/cosine80*64至1e-5，80上限/patience18/min10/b64/64步；完整网络训练，按PERM官方分选最佳。源检查点不是本次起点函数，不把初始先验成绩当迁移训练收益。
+显式两任务、最多2GPU，无自动队列/恢复；原子last_state含当前/最佳模型、优化器、调度/RNG/早停。基于明显落后的实际曲线允许提前结束。训练中记录真实梯度/初始预测，结束恢复最佳与实际三通道组合；有价值候选额外磁盘重建。未改的旧公式不重复预检；CUDA注意力/插值反向warn_only，不宣称重新训练逐位确定。
+待做实际训练、完成后的匹配差及相对当前PERM绝对差、原组合实际评分、负权重清理、PROJECTS/EXPLORATIONS与atlas更新。两项可先后显式启动但最多2GPU，单项和总墙钟/显存分开，含加载/预热/输入库，代码与收尾另计。
+若迁移无正收益，不扫描冻结层数或学习率；结论仅限当前SW来源与此结构。若有局部匹配收益可带入新独立方案，但完整原第五严格>80.5且明确收益后才考虑其余折。完整OOF>82未完成，不补其他折/重启旧队列/覆盖交付。目标达成后独立井确认、新目录交付尚未开始。
+
+
+## v50 scratch显式启动
+{"pid": 29080, "mode": "scratch", "started_at": "2026-09-29T18:57:44.244984+08:00", "command": ["C:\\Users\\z5364\\.conda\\envs\\normal\\python.exe", "-X", "utf8", "-u", "D:\\match_predict\\welllog-reservoir-hybrid\\experiments\\pure_dl\\train_perm_transfer_v50.py", "--mode", "scratch", "--out", "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_perm_transfer_v50_PERM_scratch_fold5"], "automatic_queue": false}
+
+
+## v50 sw_transfer显式启动
+{"pid": 37168, "mode": "sw_transfer", "started_at": "2026-09-29T18:58:02.438378+08:00", "command": ["C:\\Users\\z5364\\.conda\\envs\\normal\\python.exe", "-X", "utf8", "-u", "D:\\match_predict\\welllog-reservoir-hybrid\\experiments\\pure_dl\\train_perm_transfer_v50.py", "--mode", "sw_transfer", "--out", "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_perm_transfer_v50_PERM_sw_transfer_fold5"], "automatic_queue": false}
+
+
+## v50井条件对照完成
+两项完成，实际TOTAL=80.342771761689，采用None，训练后transfer-scratch=+0.239511576802。详见perm_transfer_v50_20260929/FINAL.md；无其他折或交付修改。
+
+## v50最终结果：保留训练井内迁移候选
+两组初始PERM先验68.383772436967，完整初始预测/输出头哈希一致，骨干哈希按设计不同。scratch第19轮最佳88.811295997433，第37轮patience18结束；sw_transfer第21轮最佳89.050807574234，第39轮结束。迁移较随机+0.239511576802PERM（等价TOTAL+0.083829051881），但较当前PERM89.396724049366仍低0.345916475131。
+匹配差9井升7井降，选择未校正的探索性井级TOTAL区间[-0.081486,0.252971]跨零；仅保留局部对照收益，不宣称稳定新井收益。迁移实际替换组合TOTAL80.221700995393，未采用；当前CURRENT_RECIPE三列仍为TOTAL80.342771761689。严格第五>80.5与完整OOF>82仍未完成，无其他折。
+迁移最佳模型磁盘重建全144665点与存档完全相同，实际三列评分一致，证据retained_transfer_verification.json。初始化/最佳恢复、源码哈希、相同输出头及数据来源已核验；训练骨干/头/FiLM均有真实梯度。汇总器曾把NPZ井编号字段误替换成模式名，已修复并记录finalization_failure_fixed.json；没有修改训练源码、权重或重训。
+单项327.53/331.33秒，总墙钟355.129723秒，含加载/预热/输入库和启动间隔；max2GPU、各1252.30MiB。代码编写与最终磁盘重建1.59秒另计。两项全部结束无队列，删除scratch两个负权重，保留迁移最佳/完整状态、当前三目标、v48平滑候选及所有父依赖/交付。哈希/字节见deletion_manifest.json。
+本次没有回到SW辅助损失扫描；后续可携带迁移表征设计新的PERM结构/训练方案，当前只是方向，未实施。随机冷启动当前配置不延伸，不能把初始化到88分的学习当成超越当前模型。独立新井确认、完整五折和新目录交付仍未完成。
+
+
+## 2026-10-02 user-authorized artifact cleanup
+
+Obsolete artifacts have been removed; SUMMARY_RESULTS.json and SUMMARY.md retain historical scores and conclusions. Detailed logs/caches/weights are unavailable for these obsolete trials. Current V370 original + seed20261013, retained-model dependency closure, reusable source, original data and deliveries are preserved. See D:/match_predict/maintenance_cleanup_20261002/VERIFICATION.json.

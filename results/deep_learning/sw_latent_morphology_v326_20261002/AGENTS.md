@@ -1,0 +1,1 @@
+Maintain PROJECTS/README actual evidence. Original104 only/freshjoint body/readout/positive earlyfusioncode + morphology inoneaddedSWphase. No repairweights/teacher/predictionfeatures. Originalinputs/Q/split/score/80-14/max2GPU; no automaticqueue/otherfolds. Preserve originaldeliveries.

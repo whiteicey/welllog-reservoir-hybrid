@@ -1,0 +1,22 @@
+{
+  "excludes_code_preparation": true,
+  "arms": {
+    "repeat": {
+      "process_creation_utc_seconds": 1790867971.904,
+      "pid": 89404
+    },
+    "multiscale": {
+      "process_creation_utc_seconds": 1790867971.924,
+      "pid": 40228
+    }
+  },
+  "pair_wallclock_pending": false,
+  "maximum_GPU_jobs": 2,
+  "concurrent": true,
+  "includes_startup_model_data_initial_eval": true,
+  "pair_wallclock_seconds": 247.2364182472229,
+  "individual_seconds": {
+    "repeat": 237.51109980000183,
+    "multiscale": 239.72134829999413
+  }
+}

@@ -1,0 +1,31 @@
+# Historical summary
+
+Focus and explored conditions: see retained README/FINAL and SUMMARY_RESULTS.json.
+
+Gain: scores and original comparison deltas are retained; incomplete folds remain incomplete.
+
+Not worth extending: original negative conclusions are retained below where available.
+
+Detailed logs, weights and caches were removed by the user request; rerunning requires retraining.
+
+## README.md
+
+# v124 SW finite-threshold CDF calibration loss
+Focus: augment retained local Gaussian model/NLL/utility1 with quality-weighted squared error of predicted cumulative probability against own SW truth at255 finite original density edges. This is finite-threshold Brier calibration, NOT claimed exact continuousCRPS or exact official-score loss. Default99.9 atom enters CDF at its transformed location; use true SW label transformed under original train-only stats.
+Controls: same v104 local random SW845913 parameters/init/priors/features/Q50/row sampler, proper Gaussian NLL+original utility1/SAM.1/DropKey.4/lr3e-4/80-18/min10/b64/64steps, original GaussianCDF/bin grid/action argmax/fifth score/population unchanged. Only added CDF coefficient1 or4 differs. Historical no-CDF control reused; no old trainedSW weights, extra model/data/labels/voting/oracle. Probability masses already computed for utility are reused via cumsum; no new decoder grid or expensive additional CDF evaluation.
+Explored/verified: implemented two bounded arms, no scores. Prior POR action-utility changes, SW hierarchical action proxy and fixed family negatives are separate from this proper threshold-probability target. Temporary SYSTEM_REQUIRED context wired into NEW trainer, release on exit; previous frozen sources untouched. Added explicit stage early-stop request at epoch boundary(min10), preserving full atomic st
+
+lready computed for utility are reused via cumsum; no new decoder grid or expensive additional CDF evaluation.
+Explored/verified: implemented two bounded arms, no scores. Prior POR action-utility changes, SW hierarchical action proxy and fixed family negatives are separate from this proper threshold-probability target. Temporary SYSTEM_REQUIRED context wired into NEW trainer, release on exit; previous frozen sources untouched. Added explicit stage early-stop request at epoch boundary(min10), preserving full atomic state and then normal best restoration/replay; no forced termination needed for this trainer.
+Gain: not established; original SW74.121752828158 and actual currentTOTAL80.489472312223. Report same-capacity loss gain vs no-CDF and coefficient contrast separately. Finite-threshold calibration does not guarantee higher official action score.
+Not worth continuing: no present evidence yet. Closed head connectivity/SAM direction/sampling/dilation/POR utility/unfreezing scopes remain closed. Stop weak trials with documented epoch-boundary requests if evidence supports, no automatic sweep.
+Pending: explicitly cdf1 first, restore best/144665 integrity and actual3-channel assembly, real time/peak including any gaps. Decide cdf4 launch from evidence; no queue. Fixed PORv114/PERMv100 + newSW totals5 phases incl source/2POR phases. Strict fifth>80.8+gain before otherfolds, original fullOOF>82 unmet. Old delivery preserved.
+Optional: follow a true measured calibration gain within stage/time/memory budget, not alter argmax scoring post hoc.
+
+Live snapshot: cdf1 PID=69456, epoch=25, best SW=73.866179307971 at epoch24; running, gain not established. cdf4 remains untrained and unqueued. No remaining folds or delivery changes.
+
+V124 cdf1: restored SW=74.051716256449; original no-CDF loss delta=-0.070036571709; actual fifth TOTAL=80.464959512125;5 stages including source and2 POR phases; strict808=False; no other folds. best/stop=32/50, seconds=733.464, peakMiB=1722.197.
+
+Final v124: cdf1 best32/stop50 SW74.051716256449, delta vs local control -0.070036571709; actual fifth TOTAL80.464959512125 vs current80.489472312223 (-0.024512800098). All144665 rows best replay exact and frozen parameters exact. Serial training 733.464s, launch-to-report wall 738.282s, median epoch 13.952s, peak 1722.197MiB. cdf4 untrained/skipped; no measured cdf4 result, no coefficient sweep. Negative best/last deleted with SHA manifest (18.205MiB). Current5-stage recipe and submitted artifacts retained, no other folds started. No active v124 training. Goal full original OOF>82 remains unmet.
+
+

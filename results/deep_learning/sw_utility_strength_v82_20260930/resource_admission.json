@@ -1,0 +1,25 @@
+{
+    "initial_record":  {
+                           "observed_at":  "2026-09-30T10:37:35.3842192+08:00",
+                           "active_mode":  "a025",
+                           "pid":  68224,
+                           "gpu_total_MiB":  12282,
+                           "gpu_used_MiB":  9758,
+                           "reported_free_MiB":  2524,
+                           "trainer_peak_allocated_MiB":  1870.50390625,
+                           "minimum_free_for_second_GiB":  3.5,
+                           "second_arm":  "a100",
+                           "second_launch_delayed":  true,
+                           "reason":  "one live task, whole GPU free below3.5GiB; do not assume max2 means enough VRAM"
+                       },
+    "initial_record_timestamp_scope":  "record creation; memory snapshot from earlier actual first-arm readback",
+    "now_observed_at":  "2026-09-30T10:41:42.3861469+08:00",
+    "gpu_snapshot":  "5676, 12282, 69",
+    "second_arm_pid":  79580,
+    "second_started_at":  "2026-09-30T10:39:48.485742+08:00",
+    "first_arm_terminal":  true,
+    "first_pid_missing_on_prelaunch_readback":  true,
+    "prelaunch_gpu_used_MiB":  3419,
+    "actual_serial_launch":  true,
+    "automatic_queue":  false
+}

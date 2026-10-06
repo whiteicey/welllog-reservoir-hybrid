@@ -1,0 +1,142 @@
+# Historical summary
+
+Focus and explored conditions: see retained README/FINAL and SUMMARY_RESULTS.json.
+
+Gain: scores and original comparison deltas are retained; incomplete folds remain incomplete.
+
+Not worth extending: original negative conclusions are retained below where available.
+
+Detailed logs, weights and caches were removed by the user request; rerunning requires retraining.
+
+## README.md
+
+# v36：跨井检索平滑门控对照
+
+完成：2026-09-29T14:29:58.099731+08:00
+原TOTAL=80.336513436816；实际组合TOTAL=80.336513436816；增量=+0.000000000000。
+
+## 先纠正v35实验解释
+
+v35已结束；末态64固定训练锚点的7973有效点上，两组proposal全部负，硬clip使alpha与全部分支梯度为0。初始输出层有梯度，查询/键无梯度；18轮验证分数恒定。这是学习通路失活，不能当作充分训练后的检索负证据。权重变化不代表有效梯度学习。旧源码/权重不改，gate_diagnostic.json单独保存。
+
+## 本批改变与不变
+
+仅替换参与门控为alpha=.25*sigmoid(u+logit(.04))，初始1%，输出最大25%。不使用替代梯度。初始候选分布不等于父分布；关闭检索时才逐点复现父模型。参数、参考库4096、Top16、27维距离、32维重排序、带宽机制与原NLL/Q50/80-18均保持。两个11266参数头同初始化，仅参考标签在其井内部是否打乱不同。
+
+## 实测候选
+
+|候选|初始SW|训练后最高SW|候选最佳轮|停止轮|相对原模型TOTAL|
+|---|---:|---:|---:|---:|---:|
+|matched|73.662274457|73.664060577|42|60|+0.000342223|
+|shuffled|73.656614592|73.664105130|30|48|+0.000357816|
+
+matched-shuffled通道差=-0.000044552467；采用=None。shuffled仅负对照不可部署。
+
+## 学习是否生效
+
+matched 首次梯度：{"query": 7.101757364580408e-05, "key": 1.5118575902306475e-05, "output": 0.0004305714392103255}；最后梯度：{"query": 0.0004548011056613177, "key": 0.00038542685797438025, "output": 0.0007510751020163298}
+最佳候选固定训练探针：{"mode": "matched", "points": 7973, "parent_factors_exact": true, "alpha_mean": 0.06659242510795593, "alpha_min": 1.183920694813878e-08, "alpha_max": 0.25, "active_fraction": 1.0, "bandwidth_mean": 0.11074637621641159, "attention_effective_neighbors_mean": 8.273240089416504, "scope": "64 fixed training anchors, valid middle128; no validation labels"}
+验证子集变化：{"default": {"n": 100786, "SW_delta": 0.0009922012977992974, "
+
+p16、27维距离、32维重排序、带宽机制与原NLL/Q50/80-18均保持。两个11266参数头同初始化，仅参考标签在其井内部是否打乱不同。
+
+## 实测候选
+
+|候选|初始SW|训练后最高SW|候选最佳轮|停止轮|相对原模型TOTAL|
+|---|---:|---:|---:|---:|---:|
+|matched|73.662274457|73.664060577|42|60|+0.000342223|
+|shuffled|73.656614592|73.664105130|30|48|+0.000357816|
+
+matched-shuffled通道差=-0.000044552467；采用=None。shuffled仅负对照不可部署。
+
+## 学习是否生效
+
+matched 首次梯度：{"query": 7.101757364580408e-05, "key": 1.5118575902306475e-05, "output": 0.0004305714392103255}；最后梯度：{"query": 0.0004548011056613177, "key": 0.00038542685797438025, "output": 0.0007510751020163298}
+最佳候选固定训练探针：{"mode": "matched", "points": 7973, "parent_factors_exact": true, "alpha_mean": 0.06659242510795593, "alpha_min": 1.183920694813878e-08, "alpha_max": 0.25, "active_fraction": 1.0, "bandwidth_mean": 0.11074637621641159, "attention_effective_neighbors_mean": 8.273240089416504, "scope": "64 fixed training anchors, valid middle128; no validation labels"}
+验证子集变化：{"default": {"n": 100786, "SW_delta": 0.0009922012977992974, "TOTAL_contribution": 0.00024193827117823937}, "numeric": {"n": 43879, "SW_delta": 0.0009446567133105116, "TOTAL_contribution": 0.0001002848454925046}}；实际预测变化点数27。
+shuffled 首次梯度：{"query": 6.161367491586134e-05, "key": 1.5323386833188124e-05, "output": 0.0005378461210057139}；最后梯度：{"query": 0.0001902909716591239, "key": 9.832990326685831e-05, "output": 0.0005628472426906228}
+最佳候选固定训练探针：{"mode": "shuffled", "points": 7973, "parent_factors_exact": true, "alpha_mean": 0.048447828739881516, "alpha_min": 2.098549742868272e-07, "alpha_max": 0.24999991059303284, "active_fraction": 1.0, "bandwidth_mean": 0.10273049026727676, "attention_effective_neighbors_mean": 7.409564018249512, "scope": "64 fixed training anchors, valid middle128; no validation labels"}
+验证子集变化：{"default": {"n": 100786, "SW_delta": 0.0019846012344771676, "TOTAL_contribution": 0.00048392497844195576}, "numeric": {"n": 43879, "SW_delta": -0.0011879086914755625, "TOTAL_contribution": -0.00012610849836269775}}；实际预测变化点数27。
+
+## 收益边界与停止方向
+
+最终0井升/0井降；未校正选择的整井重采样TOTAL区间[0.0, 0.0]，matched-shuffled区间[-0.000631784886371639, 0.0004954070444250984]。这仍是反复使用的开发折，无独立新井/种子确认。
+只满足数值上的正比较不代表有稳定收益；不据微小差值扩大K、库规模、带宽或初始比例扫描。固定候选池内学习重排序，不是全库学习度量。若需要新路线，应从来源质量与训练/推理误差差异重新提出独立假设。
+当前预测器在64井拟合过，参考仅排除查询整井，不代表整个训练系统完成了交叉拟合。对条件分布混合，默认概率固定不等于最终默认动作次数固定。
+
+## 已完成验证与未做
+
+候选最佳恢复全144665点一致，原冻结状态未改。入选SW额外磁盘重建目标=[]，三列实际组合评分完成。所有参考原行位于64训练井；全730268行的候选均排除查询整井，打乱保持来源井。
+原其他四折、强模型完整交叉拟合、全库学习检索、状态序列路线均未启动。旧交付保留。
+
+## 文件
+
+assembled_report.json、CURRENT_RECIPE.json、timing.json；v35/memory_manifest.json与gate_diagnostic.json；outputs/pure_dl_retrieval_smooth_v36_SW_fold5中的梯度、状态与候选权重。
+
+
+## FINAL.md
+
+# v36：跨井检索平滑门控对照
+
+完成：2026-09-29T14:29:58.099731+08:00
+原TOTAL=80.336513436816；实际组合TOTAL=80.336513436816；增量=+0.000000000000。
+
+## 先纠正v35实验解释
+
+v35已结束；末态64固定训练锚点的7973有效点上，两组proposal全部负，硬clip使alpha与全部分支梯度为0。初始输出层有梯度，查询/键无梯度；18轮验证分数恒定。这是学习通路失活，不能当作充分训练后的检索负证据。权重变化不代表有效梯度学习。旧源码/权重不改，gate_diagnostic.json单独保存。
+
+## 本批改变与不变
+
+仅替换参与门控为alpha=.25*sigmoid(u+logit(.04))，初始1%，输出最大25%。不使用替代梯度。初始候选分布不等于父分布；关闭检索时才逐点复现父模型。参数、参考库4096、Top16、27维距离、32维重排序、带宽机制与原NLL/Q50/80-18均保持。两个11266参数头同初始化，仅参考标签在其井内部是否打乱不同。
+
+## 实测候选
+
+|候选|初始SW|训练后最高SW|候选最佳轮|停止轮|相对原模型TOTAL|
+|---|---:|---:|---:|---:|---:|
+|matched|73.662274457|73.664060577|42|60|+0.000342223|
+|shuffled|73.656614592|73.664105130|30|48|+0.000357816|
+
+matched-shuffled通道差=-0.000044552467；采用=None。shuffled仅负对照不可部署。
+
+## 学习是否生效
+
+matched 首次梯度：{"query": 7.101757364580408e-05, "key": 1.5118575902306475e-05, "output": 0.0004305714392103255}；最后梯度：{"query": 0.0004548011056613177, "key": 0.00038542685797438025, "output": 0.0007510751020163298}
+最佳候选固定训练探针：{"mode": "matched", "points": 7973, "parent_factors_exact": true, "alpha_mean": 0.06659242510795593, "alpha_min": 1.183920694813878e-08, "alpha_max": 0.25, "active_fraction": 1.0, "bandwidth_mean": 0.11074637621641159, "attention_effective_neighbors_mean": 8.273240089416504, "scope": "64 fixed training anchors, valid middle128; no validation labels"}
+验证子集变化：{"default": {"n": 100786, "SW_delta": 0.0009922012977992974, "
+
+p16、27维距离、32维重排序、带宽机制与原NLL/Q50/80-18均保持。两个11266参数头同初始化，仅参考标签在其井内部是否打乱不同。
+
+## 实测候选
+
+|候选|初始SW|训练后最高SW|候选最佳轮|停止轮|相对原模型TOTAL|
+|---|---:|---:|---:|---:|---:|
+|matched|73.662274457|73.664060577|42|60|+0.000342223|
+|shuffled|73.656614592|73.664105130|30|48|+0.000357816|
+
+matched-shuffled通道差=-0.000044552467；采用=None。shuffled仅负对照不可部署。
+
+## 学习是否生效
+
+matched 首次梯度：{"query": 7.101757364580408e-05, "key": 1.5118575902306475e-05, "output": 0.0004305714392103255}；最后梯度：{"query": 0.0004548011056613177, "key": 0.00038542685797438025, "output": 0.0007510751020163298}
+最佳候选固定训练探针：{"mode": "matched", "points": 7973, "parent_factors_exact": true, "alpha_mean": 0.06659242510795593, "alpha_min": 1.183920694813878e-08, "alpha_max": 0.25, "active_fraction": 1.0, "bandwidth_mean": 0.11074637621641159, "attention_effective_neighbors_mean": 8.273240089416504, "scope": "64 fixed training anchors, valid middle128; no validation labels"}
+验证子集变化：{"default": {"n": 100786, "SW_delta": 0.0009922012977992974, "TOTAL_contribution": 0.00024193827117823937}, "numeric": {"n": 43879, "SW_delta": 0.0009446567133105116, "TOTAL_contribution": 0.0001002848454925046}}；实际预测变化点数27。
+shuffled 首次梯度：{"query": 6.161367491586134e-05, "key": 1.5323386833188124e-05, "output": 0.0005378461210057139}；最后梯度：{"query": 0.0001902909716591239, "key": 9.832990326685831e-05, "output": 0.0005628472426906228}
+最佳候选固定训练探针：{"mode": "shuffled", "points": 7973, "parent_factors_exact": true, "alpha_mean": 0.048447828739881516, "alpha_min": 2.098549742868272e-07, "alpha_max": 0.24999991059303284, "active_fraction": 1.0, "bandwidth_mean": 0.10273049026727676, "attention_effective_neighbors_mean": 7.409564018249512, "scope": "64 fixed training anchors, valid middle128; no validation labels"}
+验证子集变化：{"default": {"n": 100786, "SW_delta": 0.0019846012344771676, "TOTAL_contribution": 0.00048392497844195576}, "numeric": {"n": 43879, "SW_delta": -0.0011879086914755625, "TOTAL_contribution": -0.00012610849836269775}}；实际预测变化点数27。
+
+## 收益边界与停止方向
+
+最终0井升/0井降；未校正选择的整井重采样TOTAL区间[0.0, 0.0]，matched-shuffled区间[-0.000631784886371639, 0.0004954070444250984]。这仍是反复使用的开发折，无独立新井/种子确认。
+只满足数值上的正比较不代表有稳定收益；不据微小差值扩大K、库规模、带宽或初始比例扫描。固定候选池内学习重排序，不是全库学习度量。若需要新路线，应从来源质量与训练/推理误差差异重新提出独立假设。
+当前预测器在64井拟合过，参考仅排除查询整井，不代表整个训练系统完成了交叉拟合。对条件分布混合，默认概率固定不等于最终默认动作次数固定。
+
+## 已完成验证与未做
+
+候选最佳恢复全144665点一致，原冻结状态未改。入选SW额外磁盘重建目标=[]，三列实际组合评分完成。所有参考原行位于64训练井；全730268行的候选均排除查询整井，打乱保持来源井。
+原其他四折、强模型完整交叉拟合、全库学习检索、状态序列路线均未启动。旧交付保留。
+
+## 文件
+
+assembled_report.json、CURRENT_RECIPE.json、timing.json；v35/memory_manifest.json与gate_diagnostic.json；outputs/pure_dl_retrieval_smooth_v36_SW_fold5中的梯度、状态与候选权重。
+
+

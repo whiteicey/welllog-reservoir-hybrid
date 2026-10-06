@@ -1,0 +1,121 @@
+{
+  "project": "perm_selective_memory_v325_20261002",
+  "scope": "obsolete-study",
+  "weights_retained": false,
+  "cleanup": "Obsolete artifacts removed by explicit user request. These are historical scores, not newly verified training.",
+  "results": [
+    {
+      "source": "PAIRED_FINAL.json",
+      "result": {
+        "reports": {
+          "selective": {
+            "stage": "selective",
+            "target": "PERM",
+            "target_score": 89.50695727099236,
+            "initial_score": 89.4055666268939,
+            "against_initial": 0.10139064409845844,
+            "against_v97_target": 0.11023322162654381,
+            "best_epoch": 5,
+            "stopped_epoch": 19,
+            "validation_rows": 144665,
+            "predictions_reproduced_exactly": true,
+            "frozen_parameters_exact": true,
+            "seconds": 258.7579453000217,
+            "peak_MiB": 1007.93310546875,
+            "complete_five_folds": false,
+            "early_terminated": false
+          },
+          "window": {
+            "stage": "window",
+            "target": "PERM",
+            "target_score": 89.50939833458435,
+            "initial_score": 89.4055666268939,
+            "against_initial": 0.10383170769044625,
+            "against_v97_target": 0.11267428521853162,
+            "best_epoch": 5,
+            "stopped_epoch": 19,
+            "validation_rows": 144665,
+            "predictions_reproduced_exactly": true,
+            "frozen_parameters_exact": true,
+            "seconds": 253.6560068000108,
+            "peak_MiB": 1007.93359375,
+            "complete_five_folds": false,
+            "early_terminated": false
+          }
+        },
+        "strata": {
+          "selective": {
+            "default": 97.47904540550265,
+            "continuous": 74.00590916071569
+          },
+          "window": {
+            "default": 97.48115760730425,
+            "continuous": 74.00898966812086
+          }
+        },
+        "best_memory_delta_norms": {
+          "selective": {
+            "value.weight": 1.9595942497253418,
+            "value.bias": 0.3095610737800598,
+            "update.weight": 1.703460693359375,
+            "update.bias": 0.3039681315422058,
+            "output.weight": 1.5054750442504883,
+            "output.bias": 0.1525202989578247
+          },
+          "window": {
+            "value.weight": 1.9661911725997925,
+            "value.bias": 0.3151416778564453,
+            "update.weight": 1.930668830871582,
+            "update.bias": 0.307100772857666,
+            "output.weight": 1.5138895511627197,
+            "output.bias": 0.15659846365451813
+          }
+        },
+        "selective_minus_window": -0.002441063591987813,
+        "selective_minus_window_CONT": -0.003080507405172739,
+        "gain_vs312": {
+          "selective": -0.0088471338864764,
+          "window": -0.006406070294488586
+        },
+        "CONT_vs312": {
+          "selective": 0.0030207567029663096,
+          "window": 0.006101264108139048
+        },
+        "timing": {
+          "started_epoch": 1790892110.893,
+          "launch_epochs": {
+            "selective": 1790892110.893,
+            "window": 1790892148.6009762
+          },
+          "pids": {
+            "selective": 76132,
+            "window": 66616
+          },
+          "terminal": true,
+          "concurrency": "selective starts withPOR324reference, thenwindow afterterminal; pair concurrent",
+          "prelaunch_preparation_included": false,
+          "launch_stagger_seconds": 37.70797634124756,
+          "same_work_pair_wall_seconds": 297.2452964782715,
+          "individual_seconds": {
+            "selective": 258.7579453000217,
+            "window": 253.6560068000108
+          },
+          "peak_MiB": {
+            "selective": 1007.93310546875,
+            "window": 1007.93359375
+          },
+          "interpretation": "Actual stagger/concurrency retained. Includes data/initial/train/bestrestore, excludes implementation/CPUfinalization; not isolatedspeed ranking."
+        },
+        "screening_fold": 5,
+        "complete_five_folds": false,
+        "remaining_folds_started": false,
+        "independent_disk_reload": false,
+        "adopted": false,
+        "closure": "No adoption: selective bothwholeCONTnegative versuswindow, bothwholebelow312; close contentselective EMA gate setting, no timescale/width/rank/LR grid."
+      }
+    }
+  ],
+  "cleanup_completed": true,
+  "deleted_files": 15,
+  "deleted_bytes": 6982664
+}

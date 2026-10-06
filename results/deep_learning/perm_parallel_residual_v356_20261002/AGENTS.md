@@ -1,0 +1,1 @@
+Maintain PROJECTS.md/README/EXPLORATIONS/atlas. Latestuser residualbranch scope: original154completepredictor frozen,new22592localencoder/readoutjointzeroresidual; onePERMphase/whole<=8/no trainedrepairchains. Originaldata/Q50/split/score/80-14/max2/strict808 beforeotherfolds. Explicitlaunchonly/noqueue. Preservebest/deliveries.

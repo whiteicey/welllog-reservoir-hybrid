@@ -1,0 +1,2 @@
+# Scope
+One fixed.1 SPO+ versus fresh336reference loss pair, original154weights only, same37386params, jointnewencoderreadoutallmodules onePERMphase/max8. Original9/206/fifth/Q50/seed/80pat14/max2/ownofficialwholebest. Actualowntrainingtruth utility only/nontraintruth NaN, originalEvaluator actions/K/decoder. No teacher/KL/pseudo/validationoracle/lambda-LRgrid/repairchain. Maintain PROJECTS/README/EXPLORATIONS/atlas each batch. Explicit solo/noqueue.

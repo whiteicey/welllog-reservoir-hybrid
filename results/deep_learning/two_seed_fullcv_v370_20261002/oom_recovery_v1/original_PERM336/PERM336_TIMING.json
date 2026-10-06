@@ -1,0 +1,12 @@
+{
+  "identity": "original",
+  "fold": 1,
+  "stage": "PERM336",
+  "pid": 18788,
+  "terminal": true,
+  "exit_code": 1,
+  "process_wall_seconds": 128.9573619365692,
+  "concurrency": "overlapped",
+  "includes": "load/preprocess/warmup/training or scan/restore/write",
+  "attached_without_training_restart": false
+}

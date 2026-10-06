@@ -1,0 +1,80 @@
+{
+  "project": "perm_tempered_likelihood_v256_20261001",
+  "scope": "obsolete-study",
+  "weights_retained": false,
+  "cleanup": "Obsolete artifacts removed by explicit user request. These are historical scores, not newly verified training.",
+  "results": [
+    {
+      "source": "PAIRED_FINAL.json",
+      "result": {
+        "reports": {
+          "ce": {
+            "stage": "ce",
+            "target": "PERM",
+            "target_score": 89.41346559538779,
+            "initial_score": 89.4043983346458,
+            "against_initial": 0.00906726074198616,
+            "against_v97_target": 0.01674154602197575,
+            "best_epoch": 10,
+            "stopped_epoch": 17,
+            "validation_rows": 144665,
+            "predictions_reproduced_exactly": true,
+            "frozen_parameters_exact": true,
+            "seconds": 180.09975769999437,
+            "peak_MiB": 789.90380859375,
+            "complete_five_folds": false,
+            "early_terminated": true
+          },
+          "q02": {
+            "stage": "q02",
+            "target": "PERM",
+            "target_score": 89.41304887099027,
+            "initial_score": 89.4043983346458,
+            "against_initial": 0.008650536344461557,
+            "against_v97_target": 0.016324821624451147,
+            "best_epoch": 6,
+            "stopped_epoch": 17,
+            "validation_rows": 144665,
+            "predictions_reproduced_exactly": true,
+            "frozen_parameters_exact": true,
+            "seconds": 180.48979720001807,
+            "peak_MiB": 789.90380859375,
+            "complete_five_folds": false,
+            "early_terminated": true
+          }
+        },
+        "timing": {
+          "excludes_code_preparation": true,
+          "arms": {
+            "ce": {
+              "process_creation_utc_seconds": 1790863979.99,
+              "pid": 62520
+            },
+            "q02": {
+              "process_creation_utc_seconds": 1790863979.997,
+              "pid": 62420
+            }
+          },
+          "pair_wallclock_pending": false,
+          "maximum_GPU_jobs": 2,
+          "concurrent": true,
+          "includes_startup_model_data_initial_eval": true,
+          "pair_wallclock_seconds": 186.98262739181519,
+          "individual_seconds": {
+            "ce": 180.09975769999437,
+            "q02": 180.48979720001807
+          },
+          "serial_speedup_measured": false
+        },
+        "q02_minus_ce": -0.0004167243975246038,
+        "equal_bounded_epochs": 17,
+        "CE_checkpoint_state_exactly_old248": true,
+        "CE_prediction_exactly_old248": true,
+        "complete_five_folds": false
+      }
+    }
+  ],
+  "cleanup_completed": true,
+  "deleted_files": 16,
+  "deleted_bytes": 6963268
+}

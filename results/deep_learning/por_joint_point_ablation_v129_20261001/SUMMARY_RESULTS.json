@@ -1,0 +1,60 @@
+{
+  "project": "por_joint_point_ablation_v129_20261001",
+  "scope": "obsolete-study",
+  "weights_retained": false,
+  "cleanup": "Obsolete artifacts removed by explicit user request. These are historical scores, not newly verified training.",
+  "results": [
+    {
+      "source": "ablation_report.json",
+      "result": {
+        "point_POR": 77.5613761748327,
+        "local_POR": 77.56050447331172,
+        "local_minus_point_POR": -0.000871701520978263,
+        "same_initial_function": true,
+        "same_stored_parameters": true,
+        "effective_kernel_dof_differs": true,
+        "historical_control_unchanged": true,
+        "complete_five_folds": false
+      }
+    },
+    {
+      "source": "CURRENT_RECIPE.json",
+      "result": {
+        "scores": {
+          "POR": 77.5613761748327,
+          "PERM": 89.37839421114361,
+          "SW": 74.12175282815758,
+          "TOTAL": 80.49346431620522
+        },
+        "total_training_stages": 5,
+        "source_stage_counted": true,
+        "dependencies": [
+          "original source",
+          "v113 forward",
+          "v129 joint point head",
+          "v100 PERM",
+          "v104 SW"
+        ],
+        "POR": {
+          "checkpoint": "outputs/pure_dl_por_joint_point_ablation_v129_fold5/point_joint/model_best.pt",
+          "module": "por_joint_point_ablation_v129",
+          "stage": "point_joint"
+        },
+        "PERM": {
+          "checkpoint": "outputs/pure_dl_compact_v100_fold5/perm/model_best.pt"
+        },
+        "SW": {
+          "checkpoint": "outputs/pure_dl_compact_frequency_v104_fold5/local/model_best.pt"
+        },
+        "screening_fold": 5,
+        "complete_five_folds": false,
+        "strict_808_passed": false,
+        "strict_channel_gain_025": false,
+        "previous_recipe_path": "results/deep_learning/por_joint_context_head_v128_20261001/CURRENT_RECIPE.json"
+      }
+    }
+  ],
+  "cleanup_completed": true,
+  "deleted_files": 9,
+  "deleted_bytes": 3488361
+}

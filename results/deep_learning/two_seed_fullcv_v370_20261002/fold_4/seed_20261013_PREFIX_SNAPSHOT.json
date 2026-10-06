@@ -1,0 +1,276 @@
+{
+  "identity": "seed_20261013",
+  "fold": 4,
+  "stage": "SW351",
+  "observed_epoch": 1790951721.3525162,
+  "report": {
+    "stage": "SW351",
+    "target": "SW",
+    "target_score": 74.67464367240689,
+    "initial_score": 74.67057257647608,
+    "against_initial": 0.0040710959308114525,
+    "best_epoch": 3,
+    "stopped_epoch": 17,
+    "validation_rows": 144513,
+    "predictions_reproduced_exactly": true,
+    "frozen_parameters_exact": true,
+    "gradient_groups": {
+      "SW_new_raw_feature_backbone": 0.07984133809804916,
+      "SW_direct_categorical_readout": 0.05494198203086853,
+      "SW_new_state_readout": 0.002985039260238409,
+      "SW_new_raw_well_condition": 0.005170519929379225,
+      "SW_joint_own_latent_early_fusion": 0.007284331601113081,
+      "SW_joint_latent_morphology_backbone": 0.011965964920818806,
+      "SW_dynamic_cross_spectrum_backbone": 0.004578419029712677
+    },
+    "effective_patience": 14,
+    "SOTA_broken": true,
+    "seconds": 178.90963330003433,
+    "peak_MiB": 1800.099609375,
+    "complete_five_folds": false,
+    "early_terminated": false
+  },
+  "timing": {
+    "identity": "seed_20261013",
+    "fold": 4,
+    "stage": "SW351",
+    "pid": 52244,
+    "terminal": true,
+    "exit_code": 0,
+    "process_wall_seconds": 206.7503321170807,
+    "serial_invocation_seconds": 66.28415417671204,
+    "previous_failed_invocation_seconds": 140.46617794036865,
+    "concurrency": "failed solo invocation plus approved serial recovery",
+    "resumed": true,
+    "includes": "load/preprocess/warmup/training or scan/restore/write; sums invocations, excludes approval waiting; whole batch wall includes waiting"
+  },
+  "rows": 144513,
+  "source_scores": {
+    "POR": 79.78916816460293,
+    "PERM": 91.27156260971567,
+    "SW": 74.04333352827172,
+    "TOTAL": 81.79696409767647
+  },
+  "source_sha256": "88e091662cf604bb0e61bf3d193658fdaa53b1773371035702b3f8a9a9789baf",
+  "own_source_Q": {
+    "status": "ready",
+    "epoch": 54,
+    "sha256": "7d7ba2c9f772b3feb02d90ed3945bf20839415f9ba2505b0a2826d4d1d2a7c37",
+    "dynamic_updates": false,
+    "rule": "last original training-only source Q observation strictly before this fold best epoch; Q0=1 before first observation",
+    "minimum": 0.10000000149011612,
+    "maximum": 1.0,
+    "downweighted_training_rows": 1945
+  },
+  "completed_prefix": [
+    "SOURCE",
+    "POR113",
+    "POR151",
+    "PERM154",
+    "SW104",
+    "POR341",
+    "PERM336",
+    "SW351"
+  ],
+  "prefix_scores": {
+    "POR": 79.83274986803075,
+    "PERM": 91.30387108958806,
+    "SW": 74.67464367240689,
+    "TOTAL": 82.04230512710745
+  },
+  "stage_gains": [
+    {
+      "stage": "POR113",
+      "target": "POR",
+      "actual_target_gain": 0.013564705110397313,
+      "actual_TOTAL_contribution": 0.004069411533119194,
+      "previous_target_score": 79.78916816460293,
+      "selected_target_score": 79.80273286971332,
+      "optimizer_gain": 0.0,
+      "best_epoch": 0,
+      "stopped_epoch": 14,
+      "strata": {
+        "DEFAULT": {
+          "rows": 95112,
+          "before": 97.96765918075532,
+          "after": 97.98868702161661,
+          "delta": 0.021027840861293612
+        },
+        "CONT": {
+          "rows": 49401,
+          "before": 44.79002568715828,
+          "after": 44.78922157852933,
+          "delta": -0.0008041086289480859
+        }
+      },
+      "process_wall_seconds": 92.59958004951477,
+      "concurrency": "solo after user requested serial"
+    },
+    {
+      "stage": "POR151",
+      "target": "POR",
+      "actual_target_gain": 0.0,
+      "actual_TOTAL_contribution": 0.0,
+      "previous_target_score": 79.80273286971332,
+      "selected_target_score": 79.80273286971332,
+      "optimizer_gain": 0.0,
+      "best_epoch": 0,
+      "stopped_epoch": 14,
+      "strata": {
+        "DEFAULT": {
+          "rows": 95112,
+          "before": 97.98868702161661,
+          "after": 97.98868702161661,
+          "delta": 0.0
+        },
+        "CONT": {
+          "rows": 49401,
+          "before": 44.78922157852933,
+          "after": 44.78922157852933,
+          "delta": 0.0
+        }
+      },
+      "process_wall_seconds": 142.22728157043457,
+      "concurrency": "solo after user requested serial"
+    },
+    {
+      "stage": "PERM154",
+      "target": "PERM",
+      "actual_target_gain": 0.03230925050671374,
+      "actual_TOTAL_contribution": 0.011308237677349807,
+      "previous_target_score": 91.27156260971567,
+      "selected_target_score": 91.30387186022239,
+      "optimizer_gain": 0.03230925050671374,
+      "best_epoch": 4,
+      "stopped_epoch": 18,
+      "strata": {
+        "DEFAULT": {
+          "rows": 96585,
+          "before": 97.42475227838709,
+          "after": 97.45354172675441,
+          "delta": 0.028789448367319892
+        },
+        "CONT": {
+          "rows": 47928,
+          "before": 78.87159131634898,
+          "after": 78.91099370843446,
+          "delta": 0.0394023920854778
+        }
+      },
+      "process_wall_seconds": 148.006489276886,
+      "concurrency": "solo after user requested serial"
+    },
+    {
+      "stage": "SW104",
+      "target": "SW",
+      "actual_target_gain": 0.6272389096699982,
+      "actual_TOTAL_contribution": 0.21953361838449933,
+      "previous_target_score": 74.04333352827172,
+      "selected_target_score": 74.67057243794171,
+      "optimizer_gain": 3.2167083210609633,
+      "best_epoch": 36,
+      "stopped_epoch": 50,
+      "strata": {
+        "DEFAULT": {
+          "rows": 101334,
+          "before": 98.77818258338722,
+          "after": 98.73216317482706,
+          "delta": -0.04601940856015574
+        },
+        "CONT": {
+          "rows": 43179,
+          "before": 15.99471743824937,
+          "after": 18.2019827130404,
+          "delta": 2.2072652747910304
+        }
+      },
+      "process_wall_seconds": 701.778235912323,
+      "concurrency": "solo after user requested serial"
+    },
+    {
+      "stage": "POR341",
+      "target": "POR",
+      "actual_target_gain": 0.03001699831742144,
+      "actual_TOTAL_contribution": 0.009005099495226432,
+      "previous_target_score": 79.80273286971332,
+      "selected_target_score": 79.83274986803075,
+      "optimizer_gain": 0.03001699831742144,
+      "best_epoch": 29,
+      "stopped_epoch": 43,
+      "strata": {
+        "DEFAULT": {
+          "rows": 95112,
+          "before": 97.98868702161661,
+          "after": 98.19896543022962,
+          "delta": 0.21027840861300717
+        },
+        "CONT": {
+          "rows": 49401,
+          "before": 44.78922157852933,
+          "after": 44.47218035421955,
+          "delta": -0.31704122430977577
+        }
+      },
+      "process_wall_seconds": 540.8487575054169,
+      "concurrency": "solo after user requested serial"
+    },
+    {
+      "stage": "PERM336",
+      "target": "PERM",
+      "actual_target_gain": -7.706343296831619e-07,
+      "actual_TOTAL_contribution": -2.6972201538910667e-07,
+      "previous_target_score": 91.30387186022239,
+      "selected_target_score": 91.30387108958806,
+      "optimizer_gain": 0.0,
+      "best_epoch": 0,
+      "stopped_epoch": 14,
+      "strata": {
+        "DEFAULT": {
+          "rows": 96585,
+          "before": 97.45354172675441,
+          "after": 97.45353515310559,
+          "delta": -6.57364881817557e-06
+        },
+        "CONT": {
+          "rows": 47928,
+          "before": 78.91099370843446,
+          "after": 78.91100463209474,
+          "delta": 1.0923660283879144e-05
+        }
+      },
+      "process_wall_seconds": 131.90640950202942,
+      "concurrency": "solo after user requested serial"
+    },
+    {
+      "stage": "SW351",
+      "target": "SW",
+      "actual_target_gain": 0.004071234465172324,
+      "actual_TOTAL_contribution": 0.0014249320628103134,
+      "previous_target_score": 74.67057243794171,
+      "selected_target_score": 74.67464367240689,
+      "optimizer_gain": 0.0040710959308114525,
+      "best_epoch": 3,
+      "stopped_epoch": 17,
+      "strata": {
+        "DEFAULT": {
+          "rows": 101334,
+          "before": 98.73216317482706,
+          "after": 98.74642261443205,
+          "delta": 0.014259439604984436
+        },
+        "CONT": {
+          "rows": 43179,
+          "before": 18.2019827130404,
+          "after": 18.18214390837447,
+          "delta": -0.019838804665930354
+        }
+      },
+      "process_wall_seconds": 206.7503321170807,
+      "concurrency": "failed solo invocation plus approved serial recovery"
+    }
+  ],
+  "checkpoint_sha256": "081180eb2eca531f717b8d0f89a8150e7cfc5821420ff8ca621e4cb9ad1b3999",
+  "score_scope": "actually assembled complete8stage single-fold model; not fullOOF",
+  "complete8stage_single_fold": true,
+  "CPU_only": true
+}

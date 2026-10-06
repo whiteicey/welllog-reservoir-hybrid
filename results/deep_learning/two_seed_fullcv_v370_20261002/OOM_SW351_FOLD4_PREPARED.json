@@ -1,0 +1,122 @@
+{
+  "prepared_epoch": 1790951257.5843492,
+  "authorization_pending": true,
+  "failed_jobs": [
+    {
+      "identity": "seed_20261013",
+      "fold": 4,
+      "stage": "SW351",
+      "old_pid": 60132,
+      "last_completed_epoch": 11,
+      "best_epoch": 3,
+      "bad": 8,
+      "best_score": 74.67464367240689,
+      "last_state_path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_two_seed_fullcv_v370\\fold_4\\seed_20261013\\SW351\\last_state.pt",
+      "last_state_sha256": "9ad2fe5a70e3d14fa7ef5dec3e9e86801029f28e3fd28a69e1bf956069f35b3a",
+      "config_sha256": "e5723d20d980f7ab97529cd787d7c97bfb8f9b11935e5ac824a8b452b8d7a648",
+      "readback_path": "D:\\match_predict\\welllog-reservoir-hybrid\\results\\deep_learning\\two_seed_fullcv_v370_20261002\\SW351_FOLD4_RECOVERY_READBACK.json",
+      "full_optimizer_scheduler_RNG_window_states_present": true
+    }
+  ],
+  "reason": "New serial SW351 training failed with CUDA OOM after completed epoch11; failure-time driver pressure not captured",
+  "maximum_GPU_jobs": 1,
+  "training_batch64_unchanged": true,
+  "validation_batch16_unchanged": true,
+  "original_recipe_and_frozen_sources_unchanged": true,
+  "controller_path": "D:\\match_predict\\welllog-reservoir-hybrid\\results\\deep_learning\\two_seed_fullcv_v370_20261002\\resume_sw351_fold4_serial_v370r5.py",
+  "controller_sha256": "f01ed7ca1d82bbeb8a0cb4b753de89bfd133193e3a2a8a797db088b39c2ed129",
+  "restore_complete_state_from_epoch11": true,
+  "continue_native_scans_and_fullOOF_after_terminal": true,
+  "no_unattended_retry": true,
+  "confirmation_rule": "study AGENTS.md: ??/???????????",
+  "old_batch_state": {
+    "status": "failed_or_stopped",
+    "controller_pid": 68704,
+    "active_pid": null,
+    "identity": null,
+    "fold": null,
+    "stage": null,
+    "started_epoch": null,
+    "batch_started_epoch": 1790927178.5526347,
+    "concurrency": "existing workers drain, thereafter serial; no new overlap",
+    "maximum_GPU_jobs": 1,
+    "maximum_existing_GPU_jobs": 2,
+    "draining_existing_overlap": false,
+    "no_new_overlap": true,
+    "active_jobs": [],
+    "completed_model_folds": 7,
+    "events": [
+      {
+        "event": "launch",
+        "pid": 24812,
+        "identity": "seed_20261013",
+        "fold": 4,
+        "stage": "SW104",
+        "epoch": 1790949429.4975026
+      },
+      {
+        "event": "terminal",
+        "pid": 24812,
+        "stage": "SW104",
+        "fold": 4,
+        "identity": "seed_20261013",
+        "epoch": 1790950131.27768,
+        "exit_code": 0
+      },
+      {
+        "event": "launch",
+        "pid": 78160,
+        "identity": "seed_20261013",
+        "fold": 4,
+        "stage": "POR341",
+        "epoch": 1790950131.5461729
+      },
+      {
+        "event": "terminal",
+        "pid": 78160,
+        "stage": "POR341",
+        "fold": 4,
+        "identity": "seed_20261013",
+        "epoch": 1790950672.39593,
+        "exit_code": 0
+      },
+      {
+        "event": "launch",
+        "pid": 42332,
+        "identity": "seed_20261013",
+        "fold": 4,
+        "stage": "PERM336",
+        "epoch": 1790950672.6381142
+      },
+      {
+        "event": "terminal",
+        "pid": 42332,
+        "stage": "PERM336",
+        "fold": 4,
+        "identity": "seed_20261013",
+        "epoch": 1790950804.5455296,
+        "exit_code": 0
+      },
+      {
+        "event": "launch",
+        "pid": 60132,
+        "identity": "seed_20261013",
+        "fold": 4,
+        "stage": "SW351",
+        "epoch": 1790950804.755399
+      },
+      {
+        "event": "terminal",
+        "pid": 60132,
+        "stage": "SW351",
+        "fold": 4,
+        "identity": "seed_20261013",
+        "epoch": 1790950945.2235832,
+        "exit_code": 1
+      }
+    ],
+    "error": "({'fold': 4, 'identity': 'seed_20261013', 'stage': 'SW351', 'role': 'SW', 'dest': 'D:\\\\match_predict\\\\welllog-reservoir-hybrid\\\\outputs\\\\pure_dl_two_seed_fullcv_v370\\\\fold_4\\\\seed_20261013\\\\SW351', 'expected': 'D:\\\\match_predict\\\\welllog-reservoir-hybrid\\\\outputs\\\\pure_dl_two_seed_fullcv_v370\\\\fold_4\\\\seed_20261013\\\\SW351\\\\report.json', 'command': ['C:\\\\Users\\\\z5364\\\\.conda\\\\envs\\\\normal\\\\python.exe', '-u', 'experiments/pure_dl/train_pair_fullcv_stage_v370.py', '--stage', 'SW351'], 'pid': 60132, 'create_time': 1790950804.7571063, 'started_epoch': 1790950804.755399, 'attached': False, 'overlap_observed': False, 'other_GPU_pids_at_launch': []}, 1)",
+    "explicit_resume_only": true,
+    "no_retry": true
+  }
+}

@@ -1,0 +1,190 @@
+{
+  "at": "2026-10-01T00:34:53.182812+08:00",
+  "stages": [
+    {
+      "stage": "por",
+      "report": {
+        "stage": "por",
+        "target": "POR",
+        "target_score": 77.40726398783815,
+        "initial_score": 77.27786784460355,
+        "against_initial": 0.1293961432346009,
+        "against_v97_target": -0.1446728140468565,
+        "best_epoch": 9,
+        "stopped_epoch": 27,
+        "validation_rows": 144665,
+        "predictions_reproduced_exactly": true,
+        "frozen_parameters_exact": true,
+        "gradient_groups": {
+          "original_target_rows": 1.8941658735275269,
+          "combined_new_heads_routes": 0.47380363941192627
+        },
+        "seconds": 195.76844600000186,
+        "peak_MiB": 786.46533203125,
+        "complete_five_folds": false
+      },
+      "status": {
+        "status": "complete",
+        "pid": 70320,
+        "stage": "por",
+        "target": "POR",
+        "target_score": 77.40726398783815,
+        "initial_score": 77.27786784460355,
+        "against_initial": 0.1293961432346009,
+        "against_v97_target": -0.1446728140468565,
+        "best_epoch": 9,
+        "stopped_epoch": 27,
+        "validation_rows": 144665,
+        "predictions_reproduced_exactly": true,
+        "frozen_parameters_exact": true,
+        "gradient_groups": {
+          "original_target_rows": 1.8941658735275269,
+          "combined_new_heads_routes": 0.47380363941192627
+        },
+        "seconds": 195.76844600000186,
+        "peak_MiB": 786.46533203125,
+        "complete_five_folds": false
+      },
+      "live_process_verified": false
+    },
+    {
+      "stage": "perm",
+      "report": {
+        "stage": "perm",
+        "target": "PERM",
+        "target_score": 89.37839421114361,
+        "initial_score": 89.3447601747529,
+        "against_initial": 0.03363403639070839,
+        "against_v97_target": -0.01832983822220058,
+        "best_epoch": 2,
+        "stopped_epoch": 20,
+        "validation_rows": 144665,
+        "predictions_reproduced_exactly": true,
+        "frozen_parameters_exact": true,
+        "gradient_groups": {
+          "original_target_rows": 0.032838210463523865,
+          "combined_new_heads_routes": 0.006363858003169298
+        },
+        "seconds": 147.8027762999991,
+        "peak_MiB": 786.46533203125,
+        "complete_five_folds": false
+      },
+      "status": {
+        "status": "complete",
+        "pid": 29384,
+        "stage": "perm",
+        "target": "PERM",
+        "target_score": 89.37839421114361,
+        "initial_score": 89.3447601747529,
+        "against_initial": 0.03363403639070839,
+        "against_v97_target": -0.01832983822220058,
+        "best_epoch": 2,
+        "stopped_epoch": 20,
+        "validation_rows": 144665,
+        "predictions_reproduced_exactly": true,
+        "frozen_parameters_exact": true,
+        "gradient_groups": {
+          "original_target_rows": 0.032838210463523865,
+          "combined_new_heads_routes": 0.006363858003169298
+        },
+        "seconds": 147.8027762999991,
+        "peak_MiB": 786.46533203125,
+        "complete_five_folds": false
+      },
+      "live_process_verified": false
+    },
+    {
+      "stage": "sw_joint",
+      "report": {
+        "stage": "sw_joint",
+        "target": "SW",
+        "target_score": 74.0066149558752,
+        "initial_score": 71.19711508147167,
+        "against_initial": 2.809499874403528,
+        "against_v97_target": -0.1355649487915116,
+        "best_epoch": 34,
+        "stopped_epoch": 52,
+        "validation_rows": 144665,
+        "predictions_reproduced_exactly": true,
+        "frozen_parameters_exact": true,
+        "gradient_groups": {
+          "private_SW": 0.9783905148506165
+        },
+        "seconds": 799.1936526999925,
+        "peak_MiB": 1683.92919921875,
+        "complete_five_folds": false
+      },
+      "status": {
+        "status": "complete",
+        "pid": 40668,
+        "stage": "sw_joint",
+        "target": "SW",
+        "target_score": 74.0066149558752,
+        "initial_score": 71.19711508147167,
+        "against_initial": 2.809499874403528,
+        "against_v97_target": -0.1355649487915116,
+        "best_epoch": 34,
+        "stopped_epoch": 52,
+        "validation_rows": 144665,
+        "predictions_reproduced_exactly": true,
+        "frozen_parameters_exact": true,
+        "gradient_groups": {
+          "private_SW": 0.9783905148506165
+        },
+        "seconds": 799.1936526999925,
+        "peak_MiB": 1683.92919921875,
+        "complete_five_folds": false
+      },
+      "live_process_verified": false
+    },
+    {
+      "stage": "sw_density",
+      "report": {
+        "stage": "sw_density",
+        "target": "SW",
+        "target_score": 74.06875025398139,
+        "initial_score": 74.0066149558752,
+        "against_initial": 0.06213529810619889,
+        "against_v97_target": -0.07342965068531271,
+        "best_epoch": 11,
+        "stopped_epoch": 29,
+        "validation_rows": 144665,
+        "predictions_reproduced_exactly": true,
+        "frozen_parameters_exact": true,
+        "gradient_groups": {
+          "private_SW": 0.20950794219970703
+        },
+        "seconds": 432.2627019000065,
+        "peak_MiB": 1286.11376953125,
+        "complete_five_folds": false
+      },
+      "status": {
+        "status": "complete",
+        "pid": 89432,
+        "stage": "sw_density",
+        "target": "SW",
+        "target_score": 74.06875025398139,
+        "initial_score": 74.0066149558752,
+        "against_initial": 0.06213529810619889,
+        "against_v97_target": -0.07342965068531271,
+        "best_epoch": 11,
+        "stopped_epoch": 29,
+        "validation_rows": 144665,
+        "predictions_reproduced_exactly": true,
+        "frozen_parameters_exact": true,
+        "gradient_groups": {
+          "private_SW": 0.20950794219970703
+        },
+        "seconds": 432.2627019000065,
+        "peak_MiB": 1286.11376953125,
+        "complete_five_folds": false
+      },
+      "live_process_verified": false
+    }
+  ],
+  "all_new_stages_complete": true,
+  "total_training_stages": 5,
+  "source_stage_included": true,
+  "new_incremental_wall_seconds": 2169.761019,
+  "remaining_folds_started": false
+}

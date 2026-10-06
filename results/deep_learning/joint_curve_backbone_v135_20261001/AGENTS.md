@@ -1,0 +1,1 @@
+One curve-token backbone trial, retain train-onlyhiddenalignment; no teacherpredictions/pseudolabel/inference. Original9/206/labels/Q/scorer,max2sharedslots,2phasesinclsource. MaintainPROJECTS/README/atlas, atomicstate/explicitresume, no queues/deliveryedits/otherfolds below80.8+gain.

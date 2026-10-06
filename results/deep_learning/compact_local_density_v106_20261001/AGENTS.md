@@ -1,0 +1,1 @@
+目标：原第五严格>80.8且有收益再补折，纯DL原OOF>82；本项恰为源/POR/PERM/local SW joint/density的第5训练阶段。只从v104 local选定模型加载，atom冻结eval，density全网own SW NLL/SAM.1，无效用；原9曲线206/Q50/折/评分/80-18不变。单SW串行，normal全局最多2GPU；完整原子恢复状态，显式恢复。维护PROJECTS、README四项、EXPLORATIONS及图谱，旧来源源码/交付不改。

@@ -1,0 +1,120 @@
+{
+  "project": "por_late_vrex_v266_20261001",
+  "scope": "obsolete-study",
+  "weights_retained": false,
+  "cleanup": "Obsolete artifacts removed by explicit user request. These are historical scores, not newly verified training.",
+  "results": [
+    {
+      "source": "PAIRED_FINAL.json",
+      "result": {
+        "arms": {
+          "control": {
+            "scores": {
+              "POR": 77.92638076072386,
+              "PERM": 89.40556485691894,
+              "SW": 74.12175282815758,
+              "TOTAL": 80.61247541799393
+            },
+            "screening_fold": 5,
+            "validation_rows": 144665,
+            "complete_five_folds": false,
+            "remaining_folds_started": false,
+            "total_training_stages": 6,
+            "added_head_stages": {
+              "POR": 1,
+              "PERM": 0,
+              "SW": 0
+            },
+            "source_stage_counted": true,
+            "gain_vs151_POR": 0.0,
+            "strict_808_passed": false,
+            "learned_gain_vs_initial": 0.0,
+            "report": {
+              "stage": "control",
+              "target": "POR",
+              "target_score": 77.92638076072386,
+              "initial_score": 77.92638076072386,
+              "against_initial": 0.0,
+              "against_v97_target": 0.37444395883885306,
+              "best_epoch": 0,
+              "stopped_epoch": 14,
+              "validation_rows": 144665,
+              "predictions_reproduced_exactly": true,
+              "frozen_parameters_exact": true,
+              "seconds": 246.5219136000378,
+              "peak_MiB": 925.15087890625,
+              "complete_five_folds": false,
+              "early_terminated": false
+            }
+          },
+          "vrex": {
+            "scores": {
+              "POR": 77.92638076072386,
+              "PERM": 89.40556485691894,
+              "SW": 74.12175282815758,
+              "TOTAL": 80.61247541799393
+            },
+            "screening_fold": 5,
+            "validation_rows": 144665,
+            "complete_five_folds": false,
+            "remaining_folds_started": false,
+            "total_training_stages": 6,
+            "added_head_stages": {
+              "POR": 1,
+              "PERM": 0,
+              "SW": 0
+            },
+            "source_stage_counted": true,
+            "gain_vs151_POR": 0.0,
+            "strict_808_passed": false,
+            "learned_gain_vs_initial": 0.0,
+            "report": {
+              "stage": "vrex",
+              "target": "POR",
+              "target_score": 77.92638076072386,
+              "initial_score": 77.92638076072386,
+              "against_initial": 0.0,
+              "against_v97_target": 0.37444395883885306,
+              "best_epoch": 0,
+              "stopped_epoch": 14,
+              "validation_rows": 144665,
+              "predictions_reproduced_exactly": true,
+              "frozen_parameters_exact": true,
+              "seconds": 248.10975470003905,
+              "peak_MiB": 925.15087890625,
+              "complete_five_folds": false,
+              "early_terminated": false
+            }
+          }
+        },
+        "vrex_minus_control": 0.0,
+        "timing": {
+          "excludes_code_preparation": true,
+          "arms": {
+            "vrex": {
+              "process_creation_utc_seconds": 1790866347.67,
+              "pid": 13884
+            },
+            "control": {
+              "process_creation_utc_seconds": 1790866347.641,
+              "pid": 64340
+            }
+          },
+          "pair_wallclock_pending": false,
+          "maximum_GPU_jobs": 2,
+          "concurrent": true,
+          "includes_startup_model_data_initial_eval": true,
+          "pair_wallclock_seconds": 253.42863178253174,
+          "includes_final_restore_and_report": true
+        },
+        "independent_disk_reload": false,
+        "strict_808_passed": false,
+        "remaining_folds_started": false,
+        "conclusion": "Both restored initial151 best0/natural14stop, no learnedgain. Close this copied lateencoder plus151head coadapt/normalizedvariance. No general invariance or architecture failure claim."
+      }
+    }
+  ],
+  "cleanup_completed": true,
+  "deleted_files": 9,
+  "deleted_bytes": 6954201
+}

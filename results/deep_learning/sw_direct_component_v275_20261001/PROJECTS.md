@@ -1,0 +1,9 @@
+Goal82/fifth808. PreparedSWnewrawencoder/directdensitypair, pendingGPUslots, results/assembly/atlas; no trainedgain/nootherfolds.
+
+V275 both actualGPUprocesses verified active; SWrawfeaturebackbone+directdistribution jointlytrain,57568 each, probabilitymix versuspriorrelativetilt. InitialSW74.121752689769 common vs104tinyfloor/discretizationdifference notgain. Staggeredlaunch/partialoverlap with274 recorded, max2/80-14/oneSWphase, nootherfolds. V272/273unpromisingweights deleted afteractualassembly/SHAmanifest, original154/positive271/current274/active275 untouched. CurrentactualsevenTOTAL80.649109567911 below808/fullOOF82unmet; default5/deliveryunchanged.
+
+V275 mix final SW74.137236359285, actualTOTAL80.617894653889; learned gain+0.015483669516, vs211-0.010386263342. Six optionalphases, default5; new57568rawencoder/directdensity jointlytrain, fixedprobabilitymix versusprior-relative tilt/auxCE1/SAM0/conditionalRPS1.
+
+V275 tilt final SW74.121752689769, actualTOTAL80.612475369558; learned gain+0.000000000000, vs211-0.025869932858. Six optionalphases, default5; new57568rawencoder/directdensity jointlytrain, fixedprobabilitymix versusprior-relative tilt/auxCE1/SAM0/conditionalRPS1.
+
+V275 FINAL mixSW74.137236359285/best34/natural48; tilt74.121752689769/best0/natural14; pairedmixgain+0.015483669516, vsretained252-0.011991848527. Actual144665/RAMbest/frozenproof/no diskreload; retain usefulmix/control forfusionmechanism, notreplace252/noextraSWrepairchain. Individual454.294959/214.124284s/1242.015and1241.765MiB; staggeredpartlyconcurrentwall461.826s inclstartup/data/initialeval/finalrestore/excludesprep, notequal-startspeedcomparison. Diagnostic-only default/continuousstrata recorded, nottrainingweights ororacle. Currentactual7TOTAL80.649109567911/default5/deliveryunchanged/below808/fullOOF82unmet. V276numericPLE/scalarcompare body+readout bothjointtrain live/max2/80-14/onePERMphase.

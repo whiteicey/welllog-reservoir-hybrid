@@ -1,0 +1,131 @@
+{
+  "arms": {
+    "control": {
+      "report": {
+        "stage": "control",
+        "target": "POR",
+        "target_score": 78.0421330678737,
+        "initial_score": 77.92638076072386,
+        "against_initial": 0.11575230714984741,
+        "against_v97_target": 0.4901962659887005,
+        "best_epoch": 28,
+        "stopped_epoch": 42,
+        "validation_rows": 144665,
+        "predictions_reproduced_exactly": true,
+        "frozen_parameters_exact": true,
+        "gradient_groups": {
+          "POR_new_raw_feature_backbone": 0.066180519759655,
+          "POR_direct_categorical_readout": 0.049058277159929276,
+          "POR_curve_interaction_backbone": 0.06913185119628906
+        },
+        "seconds": 1140.1128470999538,
+        "peak_MiB": 2212.4833984375,
+        "complete_five_folds": false,
+        "early_terminated": false
+      },
+      "strata": {
+        "default": 97.40453808408492,
+        "continuous": 41.72626978341348
+      },
+      "zero_initialized_temporal_up_norm": {
+        "curve_interaction.temporal.up.weight": 0.5852476358413696,
+        "curve_interaction.temporal.up.bias": 0.05604460462927818
+      },
+      "whole_vs335": -7.956712835266444e-05,
+      "CONT_vs335": 0.0017589532752424475,
+      "CONT_vs_original151": -0.22769127149058477,
+      "predefined42": {
+        "through_epoch": 42,
+        "best_epoch": 28,
+        "target_score": 78.0421330678737,
+        "control_actual_epochs": 42,
+        "nominal_budget": 80,
+        "comparison": "Predefined bestthrough42 vs historical335width64 natural42; physicalcapacitymatchedpair/historicalcapacitydiffers/laterbest not equalwork evidence",
+        "continuous": 41.72626978341348
+      },
+      "stopped_before42": false,
+      "timing": {
+        "includes": "preprocessing warmup training best restoration",
+        "concurrency": "overlaps338depth after337terminal",
+        "pid": 86424,
+        "terminal": true,
+        "global_GPU_jobs_before": 1,
+        "started_epoch": 1790899134.702,
+        "individual_seconds": 1140.1128470999538,
+        "peak_MiB": 2212.4833984375,
+        "terminal_epoch": 1790900280.297312,
+        "process_creation_to_terminal_seconds": 1145.5953121185303
+      },
+      "independent_disk_reload": false
+    },
+    "depth": {
+      "report": {
+        "stage": "depth",
+        "target": "POR",
+        "target_score": 78.0458220539967,
+        "initial_score": 77.92638076072386,
+        "against_initial": 0.11944129327284259,
+        "against_v97_target": 0.49388525211169565,
+        "best_epoch": 28,
+        "stopped_epoch": 42,
+        "validation_rows": 144665,
+        "predictions_reproduced_exactly": true,
+        "frozen_parameters_exact": true,
+        "gradient_groups": {
+          "POR_new_raw_feature_backbone": 0.066180519759655,
+          "POR_direct_categorical_readout": 0.049058277159929276,
+          "POR_curve_interaction_backbone": 0.06913185119628906
+        },
+        "seconds": 1171.9258447000175,
+        "peak_MiB": 2212.4833984375,
+        "complete_five_folds": false,
+        "early_terminated": false
+      },
+      "strata": {
+        "default": 97.40559788886887,
+        "continuous": 41.73489002626708
+      },
+      "zero_initialized_temporal_up_norm": {
+        "curve_interaction.temporal.up.weight": 0.802537739276886,
+        "curve_interaction.temporal.up.bias": 0.06738772243261337
+      },
+      "whole_vs335": 0.0036094189946425104,
+      "CONT_vs335": 0.01037919612884508,
+      "CONT_vs_original151": -0.21907102863698213,
+      "predefined42": {
+        "through_epoch": 42,
+        "best_epoch": 28,
+        "target_score": 78.0458220539967,
+        "control_actual_epochs": 42,
+        "nominal_budget": 80,
+        "comparison": "Predefined bestthrough42 vs historical335width64 natural42; physicalcapacitymatchedpair/historicalcapacitydiffers/laterbest not equalwork evidence",
+        "continuous": 41.73489002626708
+      },
+      "stopped_before42": false,
+      "timing": {
+        "includes": "preprocessing warmup training best restoration",
+        "concurrency": "overlaps337 at launch",
+        "pid": 66772,
+        "terminal": true,
+        "global_GPU_jobs_before": 1,
+        "started_epoch": 1790899001.166,
+        "individual_seconds": 1171.9258447000175,
+        "peak_MiB": 2212.4833984375,
+        "terminal_epoch": 1790900178.4320438,
+        "process_creation_to_terminal_seconds": 1177.2660439014435
+      },
+      "independent_disk_reload": false
+    }
+  },
+  "depth_minus_control_whole": 0.003688986122995175,
+  "depth_minus_control_CONT": 0.008620242853602633,
+  "comparison_limits": "Same134752 physicalparameters/init,17depth taps vs samepoint cyclic8latent under identical availability; effectivefunction/informationcapacity differ. Original151only/allfreshencoderreadoutjoint. Historical335 not concurrent repeat. Predefined42; laterbest not equalwork, actual stopped work recorded.",
+  "pair_wall_seconds": 1279.1313121318817,
+  "stagger_seconds": 133.53600001335144,
+  "adopted": true,
+  "screening_fold": 5,
+  "complete_five_folds": false,
+  "remaining_folds_started": false,
+  "adopted_arm": "depth",
+  "adoption_recipe": "D:\\match_predict\\welllog-reservoir-hybrid\\results\\deep_learning\\por_depth_curve_coupling_v338_20261002\\CURRENT_EIGHT_STAGE_RECIPE.json"
+}

@@ -1,0 +1,9 @@
+﻿{
+    "execution":  "serial",
+    "controller_pid":  56316,
+    "finite_seeds":  5,
+    "maximum_GPU_jobs":  2,
+    "stages_per_seed":  8,
+    "global_GPU_jobs_before":  0,
+    "started_epoch":  1790913396.281
+}

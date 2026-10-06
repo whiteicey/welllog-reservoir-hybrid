@@ -1,0 +1,33 @@
+# Historical summary
+
+Focus and explored conditions: see retained README/FINAL and SUMMARY_RESULTS.json.
+
+Gain: scores and original comparison deltas are retained; incomplete folds remain incomplete.
+
+Not worth extending: original negative conclusions are retained below where available.
+
+Detailed logs, weights and caches were removed by the user request; rerunning requires retraining.
+
+## README.md
+
+# v118 own POR likelihood/official soft-utility optimization
+Focus: new positive mixed-family POR readout may optimize likelihood rather than original relative-error action reward. Two bounded loss arms alpha.25/.5, original utility soft-action temperature.05; retain proper mixed-family NLL and fixed t3/Cauchy CDF.
+Controls: same actual v113 forward checkpoint/function,54483 trainable parameters, existing locations/new heads/routes lr3e-5, original density weights/scales/gate/backbone frozen. Reuse completed v114 location_only likelihood control with identical init/optimizer/budget/window/score; no redundant retrain. This replaces v114 refinement phase, not an additional phase: source+initial POR+new refinement+PERM+SW=5 total training stages.
+Explored/verified: implemented, no training score yet. Original256-bin/800-action+default argmax unchanged; only training loss adds own POR truth utility under original tolerance.08/default.1 and log1p inverse. Training truths only; no foreign labels/voting/pseudo/row-wise oracle. DifferentiableCDF safe finite-edge arithmetic and constant tails; no scale updates. Original9curve/206+63/Q50/fifth split/population,80/18/min10/b64/64steps/cos80 unchanged. Atomic full last states, explicit resume; max2GPU.
+Gain: not established; historical controlPOR77.548069494893, actualTOTAL80.489472312223. Soft utility is a proxy, not exact argmax-score eq
+
+nchanged; only training loss adds own POR truth utility under original tolerance.08/default.1 and log1p inverse. Training truths only; no foreign labels/voting/pseudo/row-wise oracle. DifferentiableCDF safe finite-edge arithmetic and constant tails; no scale updates. Original9curve/206+63/Q50/fifth split/population,80/18/min10/b64/64steps/cos80 unchanged. Atomic full last states, explicit resume; max2GPU.
+Gain: not established; historical controlPOR77.548069494893, actualTOTAL80.489472312223. Soft utility is a proxy, not exact argmax-score equivalence. Earlier different all-backbone utility negatives do not prove this fixed-head mixed-family scope.
+Not worth continuing: no evidence for this new scope yet; failed heavy-tail PERM/density residual/dilated SW scopes remain closed.
+Pending: explicit two-arm launch, restore best and actual3-target score, compare alpha arms to control, measured per-run/pair timing and memory. Strict fifth>80.8+gain before other folds. FullOOF>82 remains unmet, delivered v97 untouched.
+Optional: retain real positive controls only; no automatic queue or hidden6th phase.
+
+V118 alpha050 restored POR=77.540454326739; actual TOTAL=80.487187761777; parent gain=+0.000000000000; executed stages5, selected stages=4; fifth only, strict808=False; best/stop=0/18.
+
+V118 alpha025 restored POR=77.545558734992; actual TOTAL=80.488719084253; parent gain=+0.005104408253; executed stages5, selected stages=5; fifth only, strict808=False; best/stop=13/31.
+
+V118 final utility loss delta (alpha050-alpha025) POR=-0.005104408253; same initial function, unequal active capacity; fifth only, no other folds.
+
+Final v118: alpha025POR77.545558734992, own initial gain+0.005104408253 but likelihood control delta=-0.002510759901; alpha050POR77.540454326739 best0, control delta=-0.007615168154. Both144665-point best replays and frozen parameters exact. Neither improves fixed fair likelihood control, so utility mechanism not adopted; no further coefficient/temperature sweep under this scope. Actual3-target scores in arm assembled JSONs; retained5-stageTOTAL80.489472312223, strict808false, no other folds/fullgoal claim. Pair concurrent wall=435.668s, launch-to-report overlap=315.306s; singles/peaks in pair_timing.json, includes contention, no matched serial speedup evidence. Negative best/last removed with manifests; initial learning gain alone is not a positive trick ablation. Source/current and verified positive controls, original delivery preserved. Next attempt should change training/representation mechanism rather than continue these failed utility strengths.
+
+

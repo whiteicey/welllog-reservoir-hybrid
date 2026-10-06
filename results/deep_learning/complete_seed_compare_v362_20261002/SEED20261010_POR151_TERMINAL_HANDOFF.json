@@ -1,0 +1,54 @@
+{
+  "POR151_report": {
+    "stage": "POR151",
+    "target": "POR",
+    "target_score": 77.42544665121915,
+    "initial_score": 77.42544665121915,
+    "against_initial": 0.0,
+    "against_v97_target": -0.1264901506658589,
+    "best_epoch": 0,
+    "stopped_epoch": 10,
+    "validation_rows": 144665,
+    "predictions_reproduced_exactly": true,
+    "frozen_parameters_exact": true,
+    "gradient_groups": {
+      "wide256_joint_location_weight_POR_head": 0.2969729006290436
+    },
+    "effective_patience": 10,
+    "SOTA_broken": false,
+    "seconds": 104.95979430002626,
+    "peak_MiB": 924.54736328125,
+    "complete_five_folds": false,
+    "early_terminated": false
+  },
+  "POR151_timing": {
+    "seed": 20261010,
+    "stage": "POR151",
+    "pid": 39756,
+    "started_epoch": 1790914902.4332092,
+    "terminal": true,
+    "exit_code": 0,
+    "process_wall_seconds": 113.83746552467346,
+    "concurrency": "solo",
+    "includes": "preprocessing warmup training best restoration"
+  },
+  "POR151_pid_missing": true,
+  "next_actual_live_pid": 18924,
+  "next_stage": "PERM154",
+  "actual_checkpoint_loads": [
+    {
+      "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261010\\SOURCE\\prepared_data.pt",
+      "sha256": "07bf3356b59a2473fb1384e7b3a68e2bf5c081c476c42cfd3b0eebd2f2590165"
+    },
+    {
+      "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261010\\SOURCE\\fold_5.pt",
+      "sha256": "7ce54c5a19dcdd61ef89ce21b2aaac621ee171e51ad7250059addc95f6230556"
+    }
+  ],
+  "completed_stages": 3,
+  "total_stages": 8,
+  "complete_seed_model": false,
+  "complete_five_folds": false,
+  "remaining_folds_started": false,
+  "limits": "Best0 is a valid zero-gain outcome under current10patience; does not disprove historical151 or all seeds. Whole model incomplete."
+}

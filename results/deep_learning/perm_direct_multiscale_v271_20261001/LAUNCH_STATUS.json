@@ -1,0 +1,12 @@
+{
+  "launched": true,
+  "pids": [
+    89404,
+    40228
+  ],
+  "prepared_plan_flag_superseded": true,
+  "initial_PERM": 89.4055666268939,
+  "active_parameters": 57568,
+  "gain_unproved": true,
+  "CUDA_linear_upsampling_backward_nondeterministic_warning": true
+}

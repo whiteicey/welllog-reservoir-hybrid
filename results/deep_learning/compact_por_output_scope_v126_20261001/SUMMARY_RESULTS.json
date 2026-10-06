@@ -1,0 +1,56 @@
+{
+  "project": "compact_por_output_scope_v126_20261001",
+  "scope": "obsolete-study",
+  "weights_retained": false,
+  "cleanup": "Obsolete artifacts removed by explicit user request. These are historical scores, not newly verified training.",
+  "results": [
+    {
+      "source": "ablation_report.json",
+      "result": {
+        "gate": {
+          "stage": "gate",
+          "target": "POR",
+          "target_score": 77.54045432673898,
+          "initial_score": 77.54045432673898,
+          "against_initial": 0.0,
+          "against_v97_target": -0.01148247514602474,
+          "best_epoch": 0,
+          "stopped_epoch": 18,
+          "validation_rows": 144665,
+          "predictions_reproduced_exactly": true,
+          "frozen_parameters_exact": true,
+          "seconds": 134.1915901999746,
+          "peak_MiB": 920.85546875,
+          "complete_five_folds": false,
+          "early_terminated": false
+        },
+        "weight": {
+          "stage": "weight",
+          "target": "POR",
+          "target_score": 77.54045432673898,
+          "initial_score": 77.54045432673898,
+          "against_initial": 0.0,
+          "against_v97_target": -0.01148247514602474,
+          "best_epoch": 0,
+          "stopped_epoch": 18,
+          "validation_rows": 144665,
+          "predictions_reproduced_exactly": true,
+          "frozen_parameters_exact": true,
+          "seconds": 132.46718979999423,
+          "peak_MiB": 920.8740234375,
+          "complete_five_folds": false,
+          "early_terminated": false
+        },
+        "weight_minus_gate_POR": 0.0,
+        "same_initial_function": true,
+        "equal_trainable_capacity": false,
+        "different_output_factor_scopes": true,
+        "original_fold": 5,
+        "complete_five_folds": false
+      }
+    }
+  ],
+  "cleanup_completed": true,
+  "deleted_files": 15,
+  "deleted_bytes": 6963338
+}

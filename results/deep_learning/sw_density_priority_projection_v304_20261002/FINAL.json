@@ -1,0 +1,100 @@
+{
+  "gradient_evidence": {
+    "mean_conflict_fraction": 0.3851902173913043,
+    "mean_cosine": 0.036708348084353616,
+    "training_only": true,
+    "extra_task_backward_passes": 2
+  },
+  "report": {
+    "stage": "density_priority",
+    "target": "SW",
+    "target_score": 74.15325461094035,
+    "initial_score": 74.12175268976877,
+    "against_initial": 0.031501921171582126,
+    "against_v97_target": 0.011074706273646484,
+    "best_epoch": 32,
+    "stopped_epoch": 46,
+    "validation_rows": 144665,
+    "predictions_reproduced_exactly": true,
+    "frozen_parameters_exact": true,
+    "gradient_groups": {
+      "SW_new_raw_feature_backbone": 0.08836686611175537,
+      "SW_direct_categorical_readout": 0.06910170614719391,
+      "SW_new_state_readout": 0.006067464128136635
+    },
+    "seconds": 401.4735731999972,
+    "peak_MiB": 1373.71923828125,
+    "complete_five_folds": false,
+    "early_terminated": false
+  },
+  "strata": {
+    "SW252": {
+      "SW": 74.14922820781207,
+      "default_SW": 98.64493054166336,
+      "continuous_SW": 17.88486813991017,
+      "default_rows": 100786,
+      "continuous_rows": 43879,
+      "atom_action": 99.9,
+      "continuous_decoded_atom_fraction": 0.30274163039267077,
+      "default_decoded_atom_fraction": 0.9809497350822535,
+      "continuous_near_default_action_fraction": 0.30274163039267077
+    },
+    "SW289": {
+      "SW": 74.1537264289993,
+      "default_SW": 98.72311025198368,
+      "continuous_SW": 17.72012680313723,
+      "default_rows": 100786,
+      "continuous_rows": 43879,
+      "atom_action": 99.9,
+      "continuous_decoded_atom_fraction": 0.30604617242872445,
+      "default_decoded_atom_fraction": 0.9814756017700871,
+      "continuous_near_default_action_fraction": 0.30604617242872445
+    },
+    "SW297well": {
+      "SW": 74.16003022301975,
+      "default_SW": 98.82679621708131,
+      "continuous_SW": 17.502752767347182,
+      "default_rows": 100786,
+      "continuous_rows": 43879,
+      "atom_action": 99.9,
+      "continuous_decoded_atom_fraction": 0.321201485904419,
+      "default_decoded_atom_fraction": 0.9833310181969718,
+      "continuous_near_default_action_fraction": 0.321201485904419
+    },
+    "SW304": {
+      "SW": 74.15325461094035,
+      "default_SW": 98.72539087785243,
+      "continuous_SW": 17.71333287624032,
+      "default_rows": 100786,
+      "continuous_rows": 43879,
+      "atom_action": 99.9,
+      "continuous_decoded_atom_fraction": 0.30622849198933433,
+      "default_decoded_atom_fraction": 0.9815053678090211,
+      "continuous_near_default_action_fraction": 0.30622849198933433
+    }
+  },
+  "whole_delta_vs289": -0.00047181805895490925,
+  "continuous_delta_vs289": -0.006793926896911273,
+  "continuous_delta_vs252": -0.1715352636698526,
+  "adopted": false,
+  "remaining_folds_started": false,
+  "complete_five_folds": false,
+  "timing": {
+    "terminal": true,
+    "maximum_concurrency": 2,
+    "includes": "data initial training best restore",
+    "starts": [
+      {
+        "start_epoch": 1790878342.337,
+        "pid": 81008,
+        "stage": "density_priority"
+      }
+    ],
+    "excludes": "code preparation CPU record",
+    "individual_seconds": 401.4735731999972,
+    "observed_launch_to_report_seconds": 405.78747153282166,
+    "peak_MiB": 1373.71923828125,
+    "concurrency": "Mostly one GPU training task; brief overlap with POR305 during final epoch/restore. Historical289 and302 contention differs; no speedranking."
+  },
+  "conclusion": "Directed state-gradient projection compared with same-forward289 reference; decoded action fractions diagnose posterior decision tradeoffs, not direct state-classifier probabilities or an oracle. No priority/threshold/BCEweight grid."
+}

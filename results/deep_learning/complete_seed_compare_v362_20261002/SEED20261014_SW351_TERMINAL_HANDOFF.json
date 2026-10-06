@@ -1,0 +1,60 @@
+{
+  "seed": 20261014,
+  "stage": "SW351",
+  "report": {
+    "stage": "SW351",
+    "target": "SW",
+    "target_score": 73.79607662428037,
+    "initial_score": 73.79497059371414,
+    "against_initial": 0.0011060305662340397,
+    "against_v97_target": -0.3461032803863304,
+    "best_epoch": 2,
+    "stopped_epoch": 12,
+    "validation_rows": 144665,
+    "predictions_reproduced_exactly": true,
+    "frozen_parameters_exact": true,
+    "gradient_groups": {
+      "SW_new_raw_feature_backbone": 0.09621988981962204,
+      "SW_direct_categorical_readout": 0.05743791162967682,
+      "SW_new_state_readout": 0.00431007519364357,
+      "SW_new_raw_well_condition": 0.005506717134267092,
+      "SW_joint_own_latent_early_fusion": 0.007545792032033205,
+      "SW_joint_latent_morphology_backbone": 0.010722251608967781,
+      "SW_dynamic_cross_spectrum_backbone": 0.003840402700006962
+    },
+    "effective_patience": 10,
+    "SOTA_broken": false,
+    "seconds": 120.51050489995396,
+    "peak_MiB": 1800.099609375,
+    "complete_five_folds": false,
+    "early_terminated": false
+  },
+  "timing": {
+    "seed": 20261014,
+    "stage": "SW351",
+    "pid": 28352,
+    "started_epoch": 1790926601.580703,
+    "terminal": true,
+    "exit_code": 0,
+    "process_wall_seconds": 127.71603655815125,
+    "concurrency": "solo",
+    "includes": "preprocessing warmup training best restoration"
+  },
+  "terminal_pid_missing": true,
+  "observed_epoch": 1790927017.9433577,
+  "next_batch_snapshot": {
+    "status": "complete",
+    "completed_models": 5,
+    "total_wall_seconds": 13329.315927267075,
+    "corrected_controller_wall_seconds": 10350.206624031067,
+    "complete_five_folds": false,
+    "remaining_folds_started": false
+  },
+  "next_actual_cmdline": [],
+  "next_actual_checkpoint_loads": [],
+  "completed_stages": 8,
+  "total_stages": 8,
+  "complete_seed_model": true,
+  "complete_five_folds": false,
+  "remaining_folds_started": false
+}

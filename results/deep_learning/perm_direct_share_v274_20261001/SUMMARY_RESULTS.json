@@ -1,0 +1,110 @@
+{
+  "project": "perm_direct_share_v274_20261001",
+  "scope": "obsolete-study",
+  "weights_retained": false,
+  "cleanup": "Obsolete artifacts removed by explicit user request. These are historical scores, not newly verified training.",
+  "results": [
+    {
+      "source": "CURRENT_SEVEN_STAGE_RECIPE.json",
+      "result": {
+        "scores": {
+          "POR": 77.92638076072386,
+          "PERM": 89.48275847702693,
+          "SW": 74.14922820781207,
+          "TOTAL": 80.64910956791081
+        },
+        "screening_fold": 5,
+        "validation_rows": 144665,
+        "strict_808_qualified": false,
+        "complete_five_folds": false,
+        "remaining_folds_started": false,
+        "total_training_stages": 7,
+        "stages": [
+          "SOURCE",
+          "POR113",
+          "POR151",
+          "PERM154",
+          "SW104",
+          "PERM274alpha25",
+          "SW252conditional"
+        ],
+        "added_head_stages": {
+          "POR": 0,
+          "PERM": 1,
+          "SW": 1
+        },
+        "heads": {
+          "POR": {
+            "checkpoint": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_por_ranked_probability_v151_fold5\\joint_rps\\model_best.pt"
+          },
+          "PERM": {
+            "checkpoint": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_perm_direct_share_v274_fold5\\alpha25\\model_best.pt"
+          },
+          "SW": {
+            "checkpoint": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_sw_mass_cdf_v252_fold5\\conditional\\model_best.pt"
+          }
+        },
+        "gain_vs_previous_optional7": 0.015178491137774586,
+        "not_material_improvement": true,
+        "default_five_stage_unchanged": true,
+        "verification": "RestoredRAM-best frozen/actual144665 composition; no independent disk reload",
+        "mechanism": "freshrawencoder/directdensity jointlytrained; fixedcomponentshare.25 vs .1"
+      }
+    },
+    {
+      "source": "FINAL.json",
+      "result": {
+        "result": {
+          "scores": {
+            "POR": 77.92638076072386,
+            "PERM": 89.48275847702693,
+            "SW": 74.12175282815758,
+            "TOTAL": 80.63949318503174
+          },
+          "screening_fold": 5,
+          "validation_rows": 144665,
+          "complete_five_folds": false,
+          "strict_808_passed": false,
+          "remaining_folds_started": false,
+          "total_training_stages": 6,
+          "stage_upper_bound": 8,
+          "added_head_stages": {
+            "POR": 0,
+            "PERM": 1,
+            "SW": 0
+          },
+          "source_stage_counted": true,
+          "gain_vs_original_PERM": 0.07719362010799102,
+          "gain_vs_original_TOTAL": 0.027017767037804674,
+          "report": {
+            "stage": "alpha25",
+            "target": "PERM",
+            "target_score": 89.48275847702693,
+            "initial_score": 89.4055666268939,
+            "against_initial": 0.07719185013303331,
+            "against_v97_target": 0.08603442766111868,
+            "best_epoch": 8,
+            "stopped_epoch": 22,
+            "validation_rows": 144665,
+            "predictions_reproduced_exactly": true,
+            "frozen_parameters_exact": true,
+            "seconds": 212.27029920002678,
+            "peak_MiB": 788.2265625,
+            "complete_five_folds": false,
+            "early_terminated": false
+          }
+        },
+        "alpha25_minus_reference271": 0.04336711753650491,
+        "reference_checkpoint": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_perm_direct_multiscale_v271_fold5\\repeat\\model_best.pt",
+        "both_jointly_train_rawencoder_and_readout": true,
+        "only_schedule_amplitude_changed": true,
+        "reference_not_rerun": true,
+        "no_independent_disk_reload": true,
+        "positive_gain": true
+      }
+    }
+  ],
+  "cleanup_completed": true,
+  "deleted_files": 7,
+  "deleted_bytes": 6949884
+}

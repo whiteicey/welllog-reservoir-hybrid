@@ -1,0 +1,549 @@
+{
+  "observed_epoch": 1790951854.428393,
+  "models": [
+    {
+      "identity": "original",
+      "fold": 1,
+      "actual_seed": 20261006,
+      "training_rows": 578935,
+      "validation_rows": 144621,
+      "own_Q": {
+        "status": "ready",
+        "epoch": 54,
+        "sha256": "cb8534af95c64e6d018aaeb72b862c81c059bcef110b3a57b7add39d2e3ffd02",
+        "dynamic_updates": false,
+        "rule": "last original training-only source Q observation strictly before this fold best epoch; Q0=1 before first observation",
+        "minimum": 0.10000000149011612,
+        "maximum": 1.0,
+        "downweighted_training_rows": 1670
+      },
+      "stages": [
+        {
+          "stage": "SOURCE",
+          "best_epoch": 55,
+          "stopped_epoch": 69,
+          "checkpoint_sha256": "6c9dfa2c8d11b0504d179ec8dea90914a5e18c9642262f2487ff0904c27c414e"
+        },
+        {
+          "stage": "POR113",
+          "best_epoch": 43,
+          "stopped_epoch": 57,
+          "checkpoint_sha256": "a244dea29009fe78c2b312e5acee968eb5a4f10c4ec50a3c25da678fb435d4e7"
+        },
+        {
+          "stage": "POR151",
+          "best_epoch": 11,
+          "stopped_epoch": 25,
+          "checkpoint_sha256": "537631affb6a17df7158beeb7f467cefeb4a52146bbab6984659140e19033bdd"
+        },
+        {
+          "stage": "PERM154",
+          "best_epoch": 0,
+          "stopped_epoch": 14,
+          "checkpoint_sha256": "9a32356e8fdaf6d8e802808d98c44a1dc7041508fa95c8fa5909375fcd525333"
+        },
+        {
+          "stage": "SW104",
+          "best_epoch": 25,
+          "stopped_epoch": 39,
+          "checkpoint_sha256": "2a64687745650e3aab268480265b3f5690fb194b7a5ef7c5ff0851cf09175af6"
+        },
+        {
+          "stage": "POR341",
+          "best_epoch": 0,
+          "stopped_epoch": 14,
+          "checkpoint_sha256": "f9bc2589dbf4b05bc9eda6562d7b01a961e10b227d35ff9bad7770fdba224e9b"
+        },
+        {
+          "stage": "PERM336",
+          "best_epoch": 0,
+          "stopped_epoch": 14,
+          "checkpoint_sha256": "0f981b548348470b7f6ea624eea9df30e15b3a3de53f93bb44acdf7140a7077b"
+        },
+        {
+          "stage": "SW351",
+          "best_epoch": 62,
+          "stopped_epoch": 76,
+          "checkpoint_sha256": "73635810dc0e4d3b2ee2e3abbf34b0ac302c189ba948065095dfcf2112bbc64f"
+        }
+      ]
+    },
+    {
+      "identity": "seed_20261013",
+      "fold": 1,
+      "actual_seed": 20261009,
+      "training_rows": 578935,
+      "validation_rows": 144621,
+      "own_Q": {
+        "status": "ready",
+        "epoch": 40,
+        "sha256": "b0145d9dcf00fee8e6fec55b08203561b332c4df6502b5f5a31420a08bfbc4dd",
+        "dynamic_updates": false,
+        "rule": "last original training-only source Q observation strictly before this fold best epoch; Q0=1 before first observation",
+        "minimum": 0.10000000149011612,
+        "maximum": 1.0,
+        "downweighted_training_rows": 1170
+      },
+      "stages": [
+        {
+          "stage": "SOURCE",
+          "best_epoch": 42,
+          "stopped_epoch": 56,
+          "checkpoint_sha256": "42d79d2f3d3d3de6d087921f876cf05bac60387462cd9aec3cda8a3ab5c6993d"
+        },
+        {
+          "stage": "POR113",
+          "best_epoch": 13,
+          "stopped_epoch": 27,
+          "checkpoint_sha256": "bb69a6db8d468aeba4c2da7522b01f8959ab3cb1dacf32abfa5736a7e83ed8c5"
+        },
+        {
+          "stage": "POR151",
+          "best_epoch": 0,
+          "stopped_epoch": 14,
+          "checkpoint_sha256": "a644fa9c0ee6e3ec54169ece17b9bfff80c4a6f9c6900fe3f1e716fbc6275c4d"
+        },
+        {
+          "stage": "PERM154",
+          "best_epoch": 0,
+          "stopped_epoch": 14,
+          "checkpoint_sha256": "6931c436b7e26a552f87c0e14cb71bb2fba2d31abf726b637773545a7438966c"
+        },
+        {
+          "stage": "SW104",
+          "best_epoch": 30,
+          "stopped_epoch": 44,
+          "checkpoint_sha256": "67d419e513ba049ee67169d6a77e1c7558c5619f40eac095ae9819aba6e8b48b"
+        },
+        {
+          "stage": "POR341",
+          "best_epoch": 4,
+          "stopped_epoch": 18,
+          "checkpoint_sha256": "ee1a68f3f33b1dea0c9be3587c5821b3009a8c756a4d3a0633fba2cfdc24198f"
+        },
+        {
+          "stage": "PERM336",
+          "best_epoch": 1,
+          "stopped_epoch": 15,
+          "checkpoint_sha256": "4424a91e703da3cf13aa5f40d04a3ecc4002775e56c1822530ca1fe77a53774c"
+        },
+        {
+          "stage": "SW351",
+          "best_epoch": 0,
+          "stopped_epoch": 14,
+          "checkpoint_sha256": "fb2699ca201a5383427ef5b1a089ca1dfa8bc43f35c96d5e6b6e96744be5a923"
+        }
+      ]
+    },
+    {
+      "identity": "original",
+      "fold": 2,
+      "actual_seed": 20261007,
+      "training_rows": 578889,
+      "validation_rows": 144667,
+      "own_Q": {
+        "status": "ready",
+        "epoch": 44,
+        "sha256": "13becd18b9f5e14dd8509c1e39ef069053d56b7d8f5f59069c10ff187d283679",
+        "dynamic_updates": false,
+        "rule": "last original training-only source Q observation strictly before this fold best epoch; Q0=1 before first observation",
+        "minimum": 0.10000000149011612,
+        "maximum": 1.0,
+        "downweighted_training_rows": 1362
+      },
+      "stages": [
+        {
+          "stage": "SOURCE",
+          "best_epoch": 45,
+          "stopped_epoch": 59,
+          "checkpoint_sha256": "7cc90853bb5ca589d038b5c9ef45d402bd5964e2770baab1932de1ddd705f550"
+        },
+        {
+          "stage": "POR113",
+          "best_epoch": 8,
+          "stopped_epoch": 22,
+          "checkpoint_sha256": "fb52c6dcfed34e9b8d7d76e3733e5bb46f7f7be129f8cca8c6fa58bc70f5c013"
+        },
+        {
+          "stage": "POR151",
+          "best_epoch": 0,
+          "stopped_epoch": 14,
+          "checkpoint_sha256": "6d9282e0999f87aae6b1c53f1d2973d961b9034c9300793fa6ef7cf650309ff4"
+        },
+        {
+          "stage": "PERM154",
+          "best_epoch": 1,
+          "stopped_epoch": 15,
+          "checkpoint_sha256": "0fe3710863a56a977694888a706a9ecc043c8bfac9b5787033534dc44d090b7f"
+        },
+        {
+          "stage": "SW104",
+          "best_epoch": 24,
+          "stopped_epoch": 38,
+          "checkpoint_sha256": "301e78fdd1ed0d1329807d0c7411240acdb0f95737cc660394184683cc8235cf"
+        },
+        {
+          "stage": "POR341",
+          "best_epoch": 6,
+          "stopped_epoch": 20,
+          "checkpoint_sha256": "33375eef209008b9974b9e1d5e97ba2e9061c9a8b6c75e0f18819da6c6b8cecb"
+        },
+        {
+          "stage": "PERM336",
+          "best_epoch": 5,
+          "stopped_epoch": 19,
+          "checkpoint_sha256": "c6c021ba1b4173713d3e63b7d673ab85f3eb8e7d4f3c66513d8d547b6761573c"
+        },
+        {
+          "stage": "SW351",
+          "best_epoch": 8,
+          "stopped_epoch": 22,
+          "checkpoint_sha256": "1887d3c21151e248b7d2c079ac3f88e98f719d6e3687b08d374b783eac6aefc3"
+        }
+      ]
+    },
+    {
+      "identity": "seed_20261013",
+      "fold": 2,
+      "actual_seed": 20261010,
+      "training_rows": 578889,
+      "validation_rows": 144667,
+      "own_Q": {
+        "status": "ready",
+        "epoch": 42,
+        "sha256": "4c422d4bd1ecc822ba7331ce96f8e49924654c60e19511878811458fdf8b7a95",
+        "dynamic_updates": false,
+        "rule": "last original training-only source Q observation strictly before this fold best epoch; Q0=1 before first observation",
+        "minimum": 0.10000000149011612,
+        "maximum": 1.0,
+        "downweighted_training_rows": 1444
+      },
+      "stages": [
+        {
+          "stage": "SOURCE",
+          "best_epoch": 43,
+          "stopped_epoch": 57,
+          "checkpoint_sha256": "b2e43579577ae6d6befcdef1f81011578d234868a3fc8683d3d6d9309ae5210e"
+        },
+        {
+          "stage": "POR113",
+          "best_epoch": 4,
+          "stopped_epoch": 18,
+          "checkpoint_sha256": "c6dff4c7662b0f81540cf526567d3ce53c24ef7126ed197beaf59a48ad960ae8"
+        },
+        {
+          "stage": "POR151",
+          "best_epoch": 3,
+          "stopped_epoch": 17,
+          "checkpoint_sha256": "bb901669d9963c3fe6740eb425f9b091a5801ffd67b4b746e8b1de7dae6f9d60"
+        },
+        {
+          "stage": "PERM154",
+          "best_epoch": 2,
+          "stopped_epoch": 16,
+          "checkpoint_sha256": "ff94d0bddd8ca40b979974db9431c2089bdf7ec469cfbb7946ada5b08379315b"
+        },
+        {
+          "stage": "SW104",
+          "best_epoch": 30,
+          "stopped_epoch": 44,
+          "checkpoint_sha256": "5abc516110be9fb1b692956f6fc8a8c997ae0150ad0b46c9ea03ee55dbecee36"
+        },
+        {
+          "stage": "POR341",
+          "best_epoch": 8,
+          "stopped_epoch": 22,
+          "checkpoint_sha256": "0741d86c557e7e3a9449fae44ff3b833cc30c4484db946b8ba85ccb062cbc4bf"
+        },
+        {
+          "stage": "PERM336",
+          "best_epoch": 6,
+          "stopped_epoch": 20,
+          "checkpoint_sha256": "9ce4e117f825ae705fad70e8e21f5ceb73a0ec9a49cb2157b49dbafa68229ec4"
+        },
+        {
+          "stage": "SW351",
+          "best_epoch": 3,
+          "stopped_epoch": 17,
+          "checkpoint_sha256": "85af06937a54eddc5b90bfa4d9325980244c3ffb0460fa35899c8fb457665b1e"
+        }
+      ]
+    },
+    {
+      "identity": "original",
+      "fold": 3,
+      "actual_seed": 20261008,
+      "training_rows": 578466,
+      "validation_rows": 145090,
+      "own_Q": {
+        "status": "ready",
+        "epoch": 46,
+        "sha256": "66602658642f850d7455fb32c0fcaa2304bfdc19d85777530e2edc511eee36d5",
+        "dynamic_updates": false,
+        "rule": "last original training-only source Q observation strictly before this fold best epoch; Q0=1 before first observation",
+        "minimum": 0.10000000149011612,
+        "maximum": 1.0,
+        "downweighted_training_rows": 1466
+      },
+      "stages": [
+        {
+          "stage": "SOURCE",
+          "best_epoch": 48,
+          "stopped_epoch": 62,
+          "checkpoint_sha256": "253ad2f5058729f331fec392204093986a69a6c17ac6c7eb44f2e432f8fa57ef"
+        },
+        {
+          "stage": "POR113",
+          "best_epoch": 12,
+          "stopped_epoch": 26,
+          "checkpoint_sha256": "df7be500bee70b6670b10acab81a82d8a7dc4c843ff5d8b1891ef7bc2a0e3c4e"
+        },
+        {
+          "stage": "POR151",
+          "best_epoch": 0,
+          "stopped_epoch": 14,
+          "checkpoint_sha256": "65c36f72630d2dc4667b14cf9ae50d5c573f7d03d90b43d8604b5dfba1a6804c"
+        },
+        {
+          "stage": "PERM154",
+          "best_epoch": 0,
+          "stopped_epoch": 14,
+          "checkpoint_sha256": "82c23843cf918e48a50f51017ffa72509d994213ec4189960fb9f69eb22cd2c8"
+        },
+        {
+          "stage": "SW104",
+          "best_epoch": 26,
+          "stopped_epoch": 40,
+          "checkpoint_sha256": "67822c3e3e59184aadc9e2a0e6552486bdeb2607a04ff9b583c57dfc577793ba"
+        },
+        {
+          "stage": "POR341",
+          "best_epoch": 24,
+          "stopped_epoch": 38,
+          "checkpoint_sha256": "6da5084db48ca625a4903c6d0b8076b54b1234990212f6d47f596d1ae3a0faa2"
+        },
+        {
+          "stage": "PERM336",
+          "best_epoch": 5,
+          "stopped_epoch": 19,
+          "checkpoint_sha256": "0632d2d13d213318c8807ef56130a89c6c0046de174f5dc19f1770834ed2049f"
+        },
+        {
+          "stage": "SW351",
+          "best_epoch": 0,
+          "stopped_epoch": 14,
+          "checkpoint_sha256": "f8afd35e14e5bbbe19a8c5db21dad76e29101b2d271bc4d2d99e8282a13d86a8"
+        }
+      ]
+    },
+    {
+      "identity": "seed_20261013",
+      "fold": 3,
+      "actual_seed": 20261011,
+      "training_rows": 578466,
+      "validation_rows": 145090,
+      "own_Q": {
+        "status": "ready",
+        "epoch": 70,
+        "sha256": "8fc82eeabf4f64a1a7ef4dd56594d43929b50762ca7f0b9ca2daff287af4c532",
+        "dynamic_updates": false,
+        "rule": "last original training-only source Q observation strictly before this fold best epoch; Q0=1 before first observation",
+        "minimum": 0.10000000149011612,
+        "maximum": 1.0,
+        "downweighted_training_rows": 2596
+      },
+      "stages": [
+        {
+          "stage": "SOURCE",
+          "best_epoch": 71,
+          "stopped_epoch": 80,
+          "checkpoint_sha256": "8c2bc48b3f2878545d68cc57a49bf9117b678617dbd5db23d5ec6c4b41c9939c"
+        },
+        {
+          "stage": "POR113",
+          "best_epoch": 0,
+          "stopped_epoch": 14,
+          "checkpoint_sha256": "cdd8235683c28aa950dd9803948c9a63326dd34596719fc438680232abc70140"
+        },
+        {
+          "stage": "POR151",
+          "best_epoch": 0,
+          "stopped_epoch": 14,
+          "checkpoint_sha256": "64327998112d208d03b990f3065b07a8586314dd6677f397e7dbdbd520864d2d"
+        },
+        {
+          "stage": "PERM154",
+          "best_epoch": 0,
+          "stopped_epoch": 14,
+          "checkpoint_sha256": "8b00b22dc1494e51fb3c9f40722121aa3bcb5821f5beecd58412d3a2388305b0"
+        },
+        {
+          "stage": "SW104",
+          "best_epoch": 29,
+          "stopped_epoch": 43,
+          "checkpoint_sha256": "a0d420ccaa704e69979c673c0cd3fd6ba88892a9e0a034786ceb3da8d9d340b9"
+        },
+        {
+          "stage": "POR341",
+          "best_epoch": 9,
+          "stopped_epoch": 23,
+          "checkpoint_sha256": "2fdef5afe24e6c27c1f214560202f9f29fc3807ff66fa9de10759cffc074f743"
+        },
+        {
+          "stage": "PERM336",
+          "best_epoch": 10,
+          "stopped_epoch": 24,
+          "checkpoint_sha256": "69b16d4e843a6a28484cadc0ff19815ae68dda13130c770ff89dac0c174eec6b"
+        },
+        {
+          "stage": "SW351",
+          "best_epoch": 13,
+          "stopped_epoch": 27,
+          "checkpoint_sha256": "894cc7ae7bb24f54b456394578b12298dda7d9ec8929adf020c9d7999b553511"
+        }
+      ]
+    },
+    {
+      "identity": "original",
+      "fold": 4,
+      "actual_seed": 20261009,
+      "training_rows": 579043,
+      "validation_rows": 144513,
+      "own_Q": {
+        "status": "ready",
+        "epoch": 44,
+        "sha256": "4fea685776c361bace9b7258385bb649bd9a50e45da44960b2fb328397126ba6",
+        "dynamic_updates": false,
+        "rule": "last original training-only source Q observation strictly before this fold best epoch; Q0=1 before first observation",
+        "minimum": 0.10000000149011612,
+        "maximum": 1.0,
+        "downweighted_training_rows": 1577
+      },
+      "stages": [
+        {
+          "stage": "SOURCE",
+          "best_epoch": 45,
+          "stopped_epoch": 59,
+          "checkpoint_sha256": "37bb4114fa50285049d71e5833187666c09f1c91fc99390da8cd44b875f17a7e"
+        },
+        {
+          "stage": "POR113",
+          "best_epoch": 10,
+          "stopped_epoch": 24,
+          "checkpoint_sha256": "2e4440c70d7b54295d3e247f5baa94c2065d880bfcb5573b49c8da655f38aad1"
+        },
+        {
+          "stage": "POR151",
+          "best_epoch": 10,
+          "stopped_epoch": 24,
+          "checkpoint_sha256": "da6a7bddc70e749ab4a445578aac4d4adefcf26019c5dbf5a4144776e0f6a40c"
+        },
+        {
+          "stage": "PERM154",
+          "best_epoch": 0,
+          "stopped_epoch": 14,
+          "checkpoint_sha256": "3bf9e8194fc72b697a50806f2cc0b59e1c2c1f0232639adffedc48f798e0b75c"
+        },
+        {
+          "stage": "SW104",
+          "best_epoch": 17,
+          "stopped_epoch": 31,
+          "checkpoint_sha256": "4b8fbcd009beaff41ce2e4bffb5b0695df02669cd5176b1e792e7d2406eee7ee"
+        },
+        {
+          "stage": "POR341",
+          "best_epoch": 4,
+          "stopped_epoch": 18,
+          "checkpoint_sha256": "a3566fda74a26f0ad6962c4704612a989accc2be6be79f5f0400a8ae1b6f7bc7"
+        },
+        {
+          "stage": "PERM336",
+          "best_epoch": 0,
+          "stopped_epoch": 14,
+          "checkpoint_sha256": "b2bf0243ccc1e0b423f7cc4500790668cdcbfddb728c513722e8679f8ced92fb"
+        },
+        {
+          "stage": "SW351",
+          "best_epoch": 2,
+          "stopped_epoch": 16,
+          "checkpoint_sha256": "7934681251fd35261d8bad1be4f1b710d2f6c6da2397b507d72288a8745aebf1"
+        }
+      ]
+    },
+    {
+      "identity": "seed_20261013",
+      "fold": 4,
+      "actual_seed": 20261012,
+      "training_rows": 579043,
+      "validation_rows": 144513,
+      "own_Q": {
+        "status": "ready",
+        "epoch": 54,
+        "sha256": "7d7ba2c9f772b3feb02d90ed3945bf20839415f9ba2505b0a2826d4d1d2a7c37",
+        "dynamic_updates": false,
+        "rule": "last original training-only source Q observation strictly before this fold best epoch; Q0=1 before first observation",
+        "minimum": 0.10000000149011612,
+        "maximum": 1.0,
+        "downweighted_training_rows": 1945
+      },
+      "stages": [
+        {
+          "stage": "SOURCE",
+          "best_epoch": 56,
+          "stopped_epoch": 70,
+          "checkpoint_sha256": "88e091662cf604bb0e61bf3d193658fdaa53b1773371035702b3f8a9a9789baf"
+        },
+        {
+          "stage": "POR113",
+          "best_epoch": 0,
+          "stopped_epoch": 14,
+          "checkpoint_sha256": "77644aa35d6cb8c1daa5a5217ce63bb2015de8370086762e446598e2f804be7f"
+        },
+        {
+          "stage": "POR151",
+          "best_epoch": 0,
+          "stopped_epoch": 14,
+          "checkpoint_sha256": "e650075a091e5b671487eb9c092717a423caee996f91329c4b47e3344d45d02e"
+        },
+        {
+          "stage": "PERM154",
+          "best_epoch": 4,
+          "stopped_epoch": 18,
+          "checkpoint_sha256": "df5c402bf21c611172902eca91681e27d8d45d5deccf5f7c448b52abb0bb35fd"
+        },
+        {
+          "stage": "SW104",
+          "best_epoch": 36,
+          "stopped_epoch": 50,
+          "checkpoint_sha256": "c56fa9880469a23ac0f815a6959f8e3f3d3d94e9aa02f320fccbf9f94e06796a"
+        },
+        {
+          "stage": "POR341",
+          "best_epoch": 29,
+          "stopped_epoch": 43,
+          "checkpoint_sha256": "bf4da63ba54902211687195990e019ac512e1de3debcc083c5844922b4943785"
+        },
+        {
+          "stage": "PERM336",
+          "best_epoch": 0,
+          "stopped_epoch": 14,
+          "checkpoint_sha256": "4b73e60f340000664e6c3118025b42f8857e9785f1010c42fd6c053763d3b090"
+        },
+        {
+          "stage": "SW351",
+          "best_epoch": 3,
+          "stopped_epoch": 17,
+          "checkpoint_sha256": "081180eb2eca531f717b8d0f89a8150e7cfc5821420ff8ca621e4cb9ad1b3999"
+        }
+      ]
+    }
+  ],
+  "remaining_fold_models": 8,
+  "stages_per_model": 8,
+  "actual_checkpoint_loads_scoped_and_exact": true,
+  "original_training_validation_raw_rows_exact": true,
+  "own_source_Q_before_best": true,
+  "dependency_source_hashes_exact": true,
+  "CPU_only": true,
+  "scope": "Folds1-4 actual checkpoints/configs/load traces and source row provenance. Historical fifth and unbiased accuracy are separate requirements."
+}

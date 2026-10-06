@@ -1,0 +1,88 @@
+{
+  "status": "failed_or_stopped",
+  "controller_pid": 86104,
+  "active_pid": null,
+  "identity": null,
+  "fold": null,
+  "stage": null,
+  "started_epoch": null,
+  "batch_started_epoch": 1790927178.5526347,
+  "concurrency": "overlap up to2; maximum one SOURCE/SW/scan each",
+  "maximum_GPU_jobs": 2,
+  "active_jobs": [],
+  "completed_model_folds": 0,
+  "events": [
+    {
+      "event": "terminal",
+      "pid": 46888,
+      "stage": "POR113",
+      "fold": 1,
+      "identity": "seed_20261013",
+      "epoch": 1790930291.529907,
+      "exit_code": 0
+    },
+    {
+      "event": "launch",
+      "pid": 69104,
+      "identity": "seed_20261013",
+      "fold": 1,
+      "stage": "POR151",
+      "epoch": 1790930291.5951707
+    },
+    {
+      "event": "terminal",
+      "pid": 77132,
+      "stage": "POR341",
+      "fold": 1,
+      "identity": "original",
+      "epoch": 1790930507.2374685,
+      "exit_code": 0
+    },
+    {
+      "event": "launch",
+      "pid": 18788,
+      "identity": "original",
+      "fold": 1,
+      "stage": "PERM336",
+      "epoch": 1790930507.305513
+    },
+    {
+      "event": "terminal",
+      "pid": 69104,
+      "stage": "POR151",
+      "fold": 1,
+      "identity": "seed_20261013",
+      "epoch": 1790930525.4325173,
+      "exit_code": 0
+    },
+    {
+      "event": "launch",
+      "pid": 49708,
+      "identity": "seed_20261013",
+      "fold": 1,
+      "stage": "PERM154",
+      "epoch": 1790930525.4828699
+    },
+    {
+      "event": "terminal",
+      "pid": 49708,
+      "stage": "PERM154",
+      "fold": 1,
+      "identity": "seed_20261013",
+      "epoch": 1790930632.2351635,
+      "exit_code": 1
+    },
+    {
+      "event": "terminal",
+      "pid": 18788,
+      "stage": "PERM336",
+      "fold": 1,
+      "identity": "original",
+      "epoch": 1790930636.2643855,
+      "exit_code": 1
+    }
+  ],
+  "error": "({'fold': 1, 'identity': 'original', 'stage': 'PERM336', 'role': 'head', 'dest': 'D:\\\\match_predict\\\\welllog-reservoir-hybrid\\\\outputs\\\\pure_dl_two_seed_fullcv_v370\\\\fold_1\\\\original\\\\PERM336', 'expected': 'D:\\\\match_predict\\\\welllog-reservoir-hybrid\\\\outputs\\\\pure_dl_two_seed_fullcv_v370\\\\fold_1\\\\original\\\\PERM336\\\\report.json', 'command': ['C:\\\\Users\\\\z5364\\\\.conda\\\\envs\\\\normal\\\\python.exe', '-u', 'experiments/pure_dl/train_pair_fullcv_stage_v370.py', '--stage', 'PERM336'], 'pid': 18788, 'create_time': 1790930507.309353, 'started_epoch': 1790930507.305513, 'attached': False, 'overlap_observed': True, 'other_GPU_pids_at_launch': [69104]}, 1)",
+  "explicit_resume_only": true,
+  "no_retry": true
+}

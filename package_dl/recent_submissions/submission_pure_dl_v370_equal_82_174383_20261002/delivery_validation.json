@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "wells": 10,
+  "rows": 95948,
+  "all_heads_original_new_ratio": "50:50",
+  "fold_weights": "20% each",
+  "oof": 82.17438326001694,
+  "result_sha256": "72b102fdf1c1753afaf31d12ee35bbe98b7a86c28b76f4c1c84381ba56a114b6",
+  "code_zip_sha256": "4d297ab062a51eb1167f99d47cc6941d9a0afd6a0aa7e3055b97f68b3e2f1007",
+  "code_zip_CRC_and_manifest": true,
+  "test_accuracy": "unknown",
+  "validation_scope": "Changed fusion default; original runtime graphs preserved; new test CLI and schema validation passed; no new independent extracted CLI replay"
+}

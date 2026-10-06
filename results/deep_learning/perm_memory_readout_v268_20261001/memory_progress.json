@@ -1,0 +1,47 @@
+{
+  "live": false,
+  "state": {
+    "status": "complete",
+    "pid": 68720,
+    "stage": "memory",
+    "target": "PERM",
+    "target_score": 89.41527724701139,
+    "initial_score": 89.4043983346458,
+    "against_initial": 0.010878912365583915,
+    "against_v97_target": 0.018553197645573505,
+    "best_epoch": 10,
+    "stopped_epoch": 24,
+    "validation_rows": 144665,
+    "predictions_reproduced_exactly": true,
+    "frozen_parameters_exact": true,
+    "gradient_groups": {
+      "PERM_probability_mass_patch": 0.02908797562122345,
+      "PERM_new_representation_readout": 2.1047505924798315e-06
+    },
+    "seconds": 236.02518949995283,
+    "peak_MiB": 790.36083984375,
+    "complete_five_folds": false,
+    "early_terminated": false
+  },
+  "report": {
+    "stage": "memory",
+    "target": "PERM",
+    "target_score": 89.41527724701139,
+    "initial_score": 89.4043983346458,
+    "against_initial": 0.010878912365583915,
+    "against_v97_target": 0.018553197645573505,
+    "best_epoch": 10,
+    "stopped_epoch": 24,
+    "validation_rows": 144665,
+    "predictions_reproduced_exactly": true,
+    "frozen_parameters_exact": true,
+    "gradient_groups": {
+      "PERM_probability_mass_patch": 0.02908797562122345,
+      "PERM_new_representation_readout": 2.1047505924798315e-06
+    },
+    "seconds": 236.02518949995283,
+    "peak_MiB": 790.36083984375,
+    "complete_five_folds": false,
+    "early_terminated": false
+  }
+}

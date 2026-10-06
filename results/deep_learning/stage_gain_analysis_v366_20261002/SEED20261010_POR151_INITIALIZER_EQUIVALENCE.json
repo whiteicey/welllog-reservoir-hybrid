@@ -1,0 +1,54 @@
+{
+  "seed": 20261010,
+  "stage": "POR151",
+  "selected_best_epoch": 0,
+  "initializer_state_exact": true,
+  "state_tensors": 335,
+  "missing": [],
+  "extra": [],
+  "differing_tensors": [],
+  "fresh_state_sha256": "579fa09261461899c99b5489123fd1f7ab30a90c59c230e224f4dd8b40f26b0f",
+  "selected_state_sha256": "579fa09261461899c99b5489123fd1f7ab30a90c59c230e224f4dd8b40f26b0f",
+  "initialization": {
+    "parent_checkpoint": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261010\\POR113\\model_best.pt",
+    "same_initial_predictive_function": true,
+    "old_predictor_fully_frozen": true,
+    "own_new_locations_only": false,
+    "new_component_logweight_correction": true,
+    "logweight_bound": 1.0,
+    "branch_bound_reference_sd": 1.0,
+    "bound_only_new_branch": true,
+    "input_hidden": 256,
+    "input_side": 63,
+    "depth_kernel": 1,
+    "stored_kernel": 33,
+    "effective_point_kernel_is_sum": true,
+    "width": 256,
+    "family_mode": "t3_cauchy",
+    "no_finite_whole_mixture_mean_variance": true,
+    "executed_training_stages_including_source": 5,
+    "joint_ranked_probability_loss": true,
+    "rps_coefficient": 1.0,
+    "rps_finite_original_edges": 255,
+    "true_default_labels_supervise_conditional_distribution": true,
+    "additional_trainable_parameters": 0,
+    "no_continuous_infinite_support_CRPS_claim": true,
+    "no_action_utility_or_softargmax_loss": true
+  },
+  "construction_dependencies": [
+    {
+      "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261010\\SOURCE\\fold_5.pt",
+      "sha256": "7ce54c5a19dcdd61ef89ce21b2aaac621ee171e51ad7250059addc95f6230556"
+    },
+    {
+      "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261010\\POR113\\model_best.pt",
+      "sha256": "58ed13b4f8d60b8d7e1e26a16aaca8c4fac3c09db315a836f61b78aa05b54861"
+    }
+  ],
+  "CPU_only": true,
+  "optimizer_steps": 0,
+  "model_forward_calls": 0,
+  "extra_training_stages": 0,
+  "historical_executed_stage_count_unchanged": 8,
+  "conclusion_scope": "Initializer equivalence only. Supports future omission of this optimizer phase while retaining its untrained architecture; existing historical training cost remains eight phases. No descendant retraining or GPU predictive replay performed."
+}

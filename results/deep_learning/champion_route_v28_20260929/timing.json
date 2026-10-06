@@ -1,0 +1,26 @@
+{
+  "max_parallel_target_jobs": 2,
+  "first_launch_to_last_finish_seconds": 511.774887,
+  "targets": {
+    "POR": {
+      "process_seconds": 207.84843949999777,
+      "peak_allocated_MiB": 717.94287109375,
+      "epoch_median_seconds": 7.313998649999121,
+      "scope": "two candidates share fixed forward; not independent per-candidate time"
+    },
+    "PERM": {
+      "process_seconds": 272.1614228000035,
+      "peak_allocated_MiB": 717.3515625,
+      "epoch_median_seconds": 5.585534500001813,
+      "scope": "two candidates share fixed forward; not independent per-candidate time"
+    },
+    "SW": {
+      "process_seconds": 167.2178477999987,
+      "peak_allocated_MiB": 717.81298828125,
+      "epoch_median_seconds": 7.019383149996429,
+      "scope": "two candidates share fixed forward; not independent per-candidate time"
+    }
+  },
+  "final_scopes_and_replay_seconds": 9.536237000000256,
+  "scope": "target process times include preparation/training/restore; overall interval includes staged gaps; implementation and final diagnostics separate"
+}

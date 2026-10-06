@@ -1,0 +1,75 @@
+{
+  "project": "sw_state_range_v360_20261002",
+  "scope": "obsolete-study",
+  "weights_retained": false,
+  "cleanup": "Obsolete artifacts removed by explicit user request. These are historical scores, not newly verified training.",
+  "results": [
+    {
+      "source": "FINAL.json",
+      "result": {
+        "report": {
+          "stage": "bound8",
+          "target": "SW",
+          "target_score": 74.17170342746022,
+          "initial_score": 74.12175268976877,
+          "against_initial": 0.049950737691446534,
+          "against_v97_target": 0.029523522793510892,
+          "best_epoch": 13,
+          "stopped_epoch": 23,
+          "validation_rows": 144665,
+          "predictions_reproduced_exactly": true,
+          "frozen_parameters_exact": true,
+          "effective_patience": 10,
+          "SOTA_broken": false,
+          "seconds": 252.23016620002454,
+          "peak_MiB": 1800.099609375,
+          "complete_five_folds": false,
+          "early_terminated": false
+        },
+        "strata": {
+          "default": 98.64096349976718,
+          "continuous": 17.96807878588985
+        },
+        "whole_vs351": -0.001908624773051315,
+        "CONT_vs351": -0.011320364156780727,
+        "diagnostic_eight_stage_scores": {
+          "POR": 78.04643071793232,
+          "PERM": 89.51838939879066,
+          "SW": 74.17170342746022,
+          "TOTAL": 80.7054617045675
+        },
+        "TOTAL_vs_retained351": -0.0006680186705665392,
+        "common_prefix_epochs": 23,
+        "common_prefix_best_new": 74.17170342746022,
+        "common_prefix_best_old": 74.17361205223327,
+        "training_patch_snapshots": {
+          "last_batch_max_over_observed_epochs": 1.3359375,
+          "last_batch_gt4_fraction_max_over_observed_epochs": 0.0,
+          "limits": "last minibatch/epoch snapshots only; not whole population/saturation proof"
+        },
+        "timing": {
+          "includes": "preprocessing warmup training best restoration",
+          "terminal": true,
+          "pid": 23528,
+          "concurrency": "solo after359terminal",
+          "global_GPU_jobs_before": 0,
+          "started_epoch": 1790912442.809,
+          "individual_seconds": 252.23016620002454,
+          "peak_MiB": 1800.099609375,
+          "process_creation_to_terminal_seconds": 256.87430810928345
+        },
+        "adopted": false,
+        "closed": true,
+        "screening_fold": 5,
+        "complete_five_folds": false,
+        "remaining_folds_started": false,
+        "independent_disk_reload": false,
+        "strict_808_passed": false,
+        "comparison_limits": "same architecture/92841params but oldpat14 versusnew10->14 and nonconcurrent; common prefix reported not equal total wall; single seed/RAMbest restoration only"
+      }
+    }
+  ],
+  "cleanup_completed": true,
+  "deleted_files": 5,
+  "deleted_bytes": 3486808
+}

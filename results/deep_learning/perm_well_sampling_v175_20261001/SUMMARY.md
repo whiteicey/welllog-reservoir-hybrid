@@ -1,0 +1,61 @@
+# Historical summary
+
+Focus and explored conditions: see retained README/FINAL and SUMMARY_RESULTS.json.
+
+Gain: scores and original comparison deltas are retained; incomplete folds remain incomplete.
+
+Not worth extending: original negative conclusions are retained below where available.
+
+Detailed logs, weights and caches were removed by the user request; rerunning requires retraining.
+
+## README.md
+
+# v175 私有PERM井均衡采样
+
+## 探索重点
+同v173独立PERM骨干，只将训练锚点改为0.5行均匀+0.5井均匀。假设长井过多曝光会妨碍新井泛化；固定64训练井锚点分组，不读验证或标签决定采样权。
+预定义对照v173PERM88.847573085146；绝对v15489.405564856919。
+
+## 已探索与验证
+已实现、尚未训练、无分数。结构/685873参数/原随机初始化和训练侧默认比例/分位数先验/损失/seed20261010/80-14/min10/b64/64步/cos80*64/Q50/评分解码保持；不加载173权重。新采样增加随机抽取，seed相同但窗口序列不相同，不能声称逐步相同轨迹。
+
+## 收益
+尚未证实。必须完成最佳恢复并报告同容量消融差值和绝对分数；低于SOTA只有最终配对正收益才算机制有用。固定POR151/SW104实际组合144665点，全方法仍5阶段。
+
+## 不继续的点
+本批不扫混合比例、不改loss/模型宽度、不给验证井调权；若无消融收益关闭这次均衡采样设置。无其他折/交付覆盖，原OOF>82未完成。
+
+耗时区分单次与同等工作总墙钟；与174错峰并发最多2GPU，显存待实测，数据/初始化/最终评价包含，不另做预热，组装另计。
+
+已启动PID16724、normal GPU，初始PERM68.383772436967与173一致，685873参数。64训练井锚点最少4379、最多13017，行采样井曝光0.756446%~2.248610%，新混合采样1.159473%~1.905555%。快照{'status': 'running', 'pid': 16724, 'stage': 'perm_conditional', 'epoch': 4, 'best': 88.0536673951041, 'best_epoch': 4, 'bad': 0, 'peak_MiB': 798.00732421875}，非最终成绩。
+CUDA插值/attention反向warn_only非确定性警告，同173，未发生运行错误；不声称训练逐步位级一致。
+
+V175 final PERM=88.893539547789, compactcontrolgain=-0.484854663355; actualTOTAL=80.433266559798, fivephases inclsource;strict808=False, no otherfolds. best/stop=21/35, seconds=294.565, peakMiB=798.007; all144665replay/frozen exact.
+
+最终配对正收益：PERM88.893539547789，相对173 +0.045966462643；同容量/初始化/损失/80-14/Q/解码检查通过。初始均68.383772436967，随机窗口序列因采样机制不同，反向存在warn_only非确定性警告，不声称逐步位级一致或跨折稳定收益。实际TOTAL80.433266559798，best/stop21/35，144665磁盘恢复一致和冻结校验通过。低于v154-0.512025309130，保留正消融best/last，当前有效配方不替换、其
+
+# v175 私有PERM井均衡采样
+
+## 探索重点
+同v173独立PERM骨干，只将训练锚点改为0.5行均匀+0.5井均匀。假设长井过多曝光会妨碍新井泛化；固定64训练井锚点分组，不读验证或标签决定采样权。
+预定义对照v173PERM88.847573085146；绝对v15489.405564856919。
+
+## 已探索与验证
+已实现、尚未训练、无分数。结构/685873参数/原随机初始化和训练侧默认比例/分位数先验/损失/seed20261010/80-14/min10/b64/64步/cos80*64/Q50/评分解码保持；不加载173权重。新采样增加随机抽取，seed相同但窗口序列不相同，不能声称逐步相同轨迹。
+
+## 收益
+尚未证实。必须完成最佳恢复并报告同容量消融差值和绝对分数；低于SOTA只有最终配对正收益才算机制有用。固定POR151/SW104实际组合144665点，全方法仍5阶段。
+
+## 不继续的点
+本批不扫混合比例、不改loss/模型宽度、不给验证井调权；若无消融收益关闭这次均衡采样设置。无其他折/交付覆盖，原OOF>82未完成。
+
+耗时区分单次与同等工作总墙钟；与174错峰并发最多2GPU，显存待实测，数据/初始化/最终评价包含，不另做预热，组装另计。
+
+已启动PID16724、normal GPU，初始PERM68.383772436967与173一致，685873参数。64训练井锚点最少4379、最多13017，行采样井曝光0.756446%~2.248610%，新混合采样1.159473%~1.905555%。快照{'status': 'running', 'pid': 16724, 'stage': 'perm_conditional', 'epoch': 4, 'best': 88.0536673951041, 'best_epoch': 4, 'bad': 0, 'peak_MiB': 798.00732421875}，非最终成绩。
+CUDA插值/attention反向warn_only非确定性警告，同173，未发生运行错误；不声称训练逐步位级一致。
+
+V175 final PERM=88.893539547789, compactcontrolgain=-0.484854663355; actualTOTAL=80.433266559798, fivephases inclsource;strict808=False, no otherfolds. best/stop=21/35, seconds=294.565, peakMiB=798.007; all144665replay/frozen exact.
+
+最终配对正收益：PERM88.893539547789，相对173 +0.045966462643；同容量/初始化/损失/80-14/Q/解码检查通过。初始均68.383772436967，随机窗口序列因采样机制不同，反向存在warn_only非确定性警告，不声称逐步位级一致或跨折稳定收益。实际TOTAL80.433266559798，best/stop21/35，144665磁盘恢复一致和冻结校验通过。低于v154-0.512025309130，保留正消融best/last，当前有效配方不替换、其他折未启动。
+
+

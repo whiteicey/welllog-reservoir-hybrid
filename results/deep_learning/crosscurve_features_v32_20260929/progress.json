@@ -1,0 +1,804 @@
+{
+  "observed_at": "2026-09-29T11:37:29.369275+08:00",
+  "rows": [
+    {
+      "target": "POR",
+      "id": "pure_dl_crosscurve_v32_POR_fold5",
+      "state": {
+        "status": "complete",
+        "target": "POR",
+        "pid": 27856,
+        "modes": {
+          "marginal": {
+            "best": 77.551936801885,
+            "best_epoch": 0,
+            "bad": 18,
+            "done": true,
+            "last_epoch": 18,
+            "stop_reason": "patience18"
+          },
+          "crosscorr": {
+            "best": 77.551936801885,
+            "best_epoch": 0,
+            "bad": 18,
+            "done": true,
+            "last_epoch": 18,
+            "stop_reason": "patience18"
+          }
+        },
+        "atlas_current_trial": false
+      },
+      "report": {
+        "target": "POR",
+        "arms": [
+          {
+            "target": "POR",
+            "mode": "marginal",
+            "screening_fold": 5,
+            "target_score": 77.551936801885,
+            "reference_replacement_total": 80.33651343681649,
+            "best_epoch": 0,
+            "stopped_epoch": 18,
+            "stop_reason": "patience18",
+            "best_after_update": {
+              "epoch": 6,
+              "target_score": 77.55076918136616,
+              "reference_replacement_total": 80.33616315066084
+            },
+            "trainable_parameters": 11344,
+            "all_frozen_state_unchanged": true,
+            "all144665_selected_predictions_restored_exactly": true,
+            "gradient_scope": {
+              "group_norms": {
+                "feature_correction": 0.24111151695251465
+              },
+              "frozen_gradients_none": true
+            },
+            "last_parameter_change_L2": 1.7323559241919873,
+            "mechanism_scope": {
+              "mode": "marginal",
+              "factor": "location",
+              "unchanged_factors": {
+                "gate": true,
+                "weight": true,
+                "scale": true
+              },
+              "max_bound_ratio": 0.0,
+              "scope": "two fixed training windows; parent input path excludes both additional views"
+            },
+            "checkpoint": "outputs\\pure_dl_crosscurve_v32_POR_fold5\\marginal\\model_best.pt",
+            "complete_five_folds": false,
+            "remaining_folds_started": false
+          },
+          {
+            "target": "POR",
+            "mode": "crosscorr",
+            "screening_fold": 5,
+            "target_score": 77.551936801885,
+            "reference_replacement_total": 80.33651343681649,
+            "best_epoch": 0,
+            "stopped_epoch": 18,
+            "stop_reason": "patience18",
+            "best_after_update": {
+              "epoch": 3,
+              "target_score": 77.54078540150152,
+              "reference_replacement_total": 80.33316801670145
+            },
+            "trainable_parameters": 11344,
+            "all_frozen_state_unchanged": true,
+            "all144665_selected_predictions_restored_exactly": true,
+            "gradient_scope": {
+              "group_norms": {
+                "feature_correction": 0.25287148356437683
+              },
+              "frozen_gradients_none": true
+            },
+            "last_parameter_change_L2": 1.7546262019103127,
+            "mechanism_scope": {
+              "mode": "crosscorr",
+              "factor": "location",
+              "unchanged_factors": {
+                "gate": true,
+                "weight": true,
+                "scale": true
+              },
+              "max_bound_ratio": 0.0,
+              "scope": "two fixed training windows; parent input path excludes both additional views"
+            },
+            "checkpoint": "outputs\\pure_dl_crosscurve_v32_POR_fold5\\crosscorr\\model_best.pt",
+            "complete_five_folds": false,
+            "remaining_folds_started": false
+          }
+        ],
+        "reference_scores": {
+          "POR": 77.551936801885,
+          "PERM": 89.39672404936582,
+          "SW": 73.6630827970656,
+          "TOTAL": 80.33651343681649
+        },
+        "seconds": 145.5551132000037,
+        "peak_allocated_MiB": 767.7138671875,
+        "epoch_timing": [
+          {
+            "epoch": 1,
+            "seconds": 7.834595699998317,
+            "active_modes": [
+              "marginal",
+              "crosscorr"
+            ]
+          },
+          {
+            "epoch": 2,
+            "seconds": 7.801982700002554,
+            "active_modes": [
+              "marginal",
+              "crosscorr"
+            ]
+          },
+          {
+            "epoch": 3,
+            "seconds": 7.663578699997743,
+            "active_modes": [
+              "marginal",
+              "crosscorr"
+            ]
+          },
+          {
+            "epoch": 4,
+            "seconds": 7.734740599997167,
+            "active_modes": [
+              "marginal",
+              "crosscorr"
+            ]
+          },
+          {
+            "epoch": 5,
+            "seconds": 7.544308800002909,
+            "active_modes": [
+              "marginal",
+              "crosscorr"
+            ]
+          },
+          {
+            "epoch": 6,
+            "seconds": 8.0554587000006,
+            "active_modes": [
+              "marginal",
+              "crosscorr"
+            ]
+          },
+          {
+            "epoch": 7,
+            "seconds": 7.721968800004106,
+            "active_modes": [
+              "marginal",
+              "crosscorr"
+            ]
+          },
+          {
+            "epoch": 8,
+            "seconds": 7.559182300006796,
+            "active_modes": [
+              "marginal",
+              "crosscorr"
+            ]
+          },
+          {
+            "epoch": 9,
+            "seconds": 7.5678086999978404,
+            "active_modes": [
+              "marginal",
+              "crosscorr"
+            ]
+          },
+          {
+            "epoch": 10,
+            "seconds": 7.64920279999933,
+            "active_modes": [
+              "marginal",
+              "crosscorr"
+            ]
+          },
+          {
+            "epoch": 11,
+            "seconds": 7.674640499993984,
+            "active_modes": [
+              "marginal",
+              "crosscorr"
+            ]
+          },
+          {
+            "epoch": 12,
+            "seconds": 7.684050900003058,
+            "active_modes": [
+              "marginal",
+              "crosscorr"
+            ]
+          },
+          {
+            "epoch": 13,
+            "seconds": 7.525524199998472,
+            "active_modes": [
+              "marginal",
+              "crosscorr"
+            ]
+          },
+          {
+            "epoch": 14,
+            "seconds": 7.5724866000018665,
+            "active_modes": [
+              "marginal",
+              "crosscorr"
+            ]
+          },
+          {
+            "epoch": 15,
+            "seconds": 7.534539100000984,
+            "active_modes": [
+              "marginal",
+              "crosscorr"
+            ]
+          },
+          {
+            "epoch": 16,
+            "seconds": 7.476531500004057,
+            "active_modes": [
+              "marginal",
+              "crosscorr"
+            ]
+          },
+          {
+            "epoch": 17,
+            "seconds": 6.558258500001102,
+            "active_modes": [
+              "marginal",
+              "crosscorr"
+            ]
+          },
+          {
+            "epoch": 18,
+            "seconds": 6.231730899999093,
+            "active_modes": [
+              "marginal",
+              "crosscorr"
+            ]
+          }
+        ],
+        "finished_at": "2026-09-29T11:34:26.068680+08:00"
+      }
+    },
+    {
+      "target": "PERM",
+      "id": "pure_dl_crosscurve_v32_PERM_fold5",
+      "state": {
+        "status": "complete",
+        "target": "PERM",
+        "pid": 45624,
+        "modes": {
+          "marginal": {
+            "best": 89.39672404936582,
+            "best_epoch": 0,
+            "bad": 18,
+            "done": true,
+            "last_epoch": 18,
+            "stop_reason": "patience18"
+          },
+          "crosscorr": {
+            "best": 89.39672404936582,
+            "best_epoch": 0,
+            "bad": 18,
+            "done": true,
+            "last_epoch": 18,
+            "stop_reason": "patience18"
+          }
+        },
+        "atlas_current_trial": false
+      },
+      "report": {
+        "target": "PERM",
+        "arms": [
+          {
+            "target": "PERM",
+            "mode": "marginal",
+            "screening_fold": 5,
+            "target_score": 89.39672404936582,
+            "reference_replacement_total": 80.33651343681649,
+            "best_epoch": 0,
+            "stopped_epoch": 18,
+            "stop_reason": "patience18",
+            "best_after_update": {
+              "epoch": 1,
+              "target_score": 89.39294078933544,
+              "reference_replacement_total": 80.33518929580586
+            },
+            "trainable_parameters": 10849,
+            "all_frozen_state_unchanged": true,
+            "all144665_selected_predictions_restored_exactly": true,
+            "gradient_scope": {
+              "group_norms": {
+                "feature_correction": 0.004993564449250698
+              },
+              "frozen_gradients_none": true
+            },
+            "last_parameter_change_L2": 2.9135868513807752,
+            "mechanism_scope": {
+              "mode": "marginal",
+              "factor": "gate",
+              "unchanged_factors": {
+                "weight": true,
+                "location": true,
+                "scale": true
+              },
+              "max_bound_ratio": 0.0,
+              "scope": "two fixed training windows; parent input path excludes both additional views"
+            },
+            "checkpoint": "outputs\\pure_dl_crosscurve_v32_PERM_fold5\\marginal\\model_best.pt",
+            "complete_five_folds": false,
+            "remaining_folds_started": false
+          },
+          {
+            "target": "PERM",
+            "mode": "crosscorr",
+            "screening_fold": 5,
+            "target_score": 89.39672404936582,
+            "reference_replacement_total": 80.33651343681649,
+            "best_epoch": 0,
+            "stopped_epoch": 18,
+            "stop_reason": "patience18",
+            "best_after_update": {
+              "epoch": 1,
+              "target_score": 89.39169547365621,
+              "reference_replacement_total": 80.33475343531813
+            },
+            "trainable_parameters": 10849,
+            "all_frozen_state_unchanged": true,
+            "all144665_selected_predictions_restored_exactly": true,
+            "gradient_scope": {
+              "group_norms": {
+                "feature_correction": 0.004974248819053173
+              },
+              "frozen_gradients_none": true
+            },
+            "last_parameter_change_L2": 2.9283023900532292,
+            "mechanism_scope": {
+              "mode": "crosscorr",
+              "factor": "gate",
+              "unchanged_factors": {
+                "weight": true,
+                "location": true,
+                "scale": true
+              },
+              "max_bound_ratio": 0.0,
+              "scope": "two fixed training windows; parent input path excludes both additional views"
+            },
+            "checkpoint": "outputs\\pure_dl_crosscurve_v32_PERM_fold5\\crosscorr\\model_best.pt",
+            "complete_five_folds": false,
+            "remaining_folds_started": false
+          }
+        ],
+        "reference_scores": {
+          "POR": 77.551936801885,
+          "PERM": 89.39672404936582,
+          "SW": 73.6630827970656,
+          "TOTAL": 80.33651343681649
+        },
+        "seconds": 98.8816313999996,
+        "peak_allocated_MiB": 765.29052734375,
+        "epoch_timing": [
+          {
+            "epoch": 1,
+            "seconds": 5.221384399999806,
+            "active_modes": [
+              "marginal",
+              "crosscorr"
+            ]
+          },
+          {
+            "epoch": 2,
+            "seconds": 4.988658000002033,
+            "active_modes": [
+              "marginal",
+              "crosscorr"
+            ]
+          },
+          {
+            "epoch": 3,
+            "seconds": 4.9915590999953565,
+            "active_modes": [
+              "marginal",
+              "crosscorr"
+            ]
+          },
+          {
+            "epoch": 4,
+            "seconds": 4.906508699998085,
+            "active_modes": [
+              "marginal",
+              "crosscorr"
+            ]
+          },
+          {
+            "epoch": 5,
+            "seconds": 4.942892599996412,
+            "active_modes": [
+              "marginal",
+              "crosscorr"
+            ]
+          },
+          {
+            "epoch": 6,
+            "seconds": 4.940637899999274,
+            "active_modes": [
+              "marginal",
+              "crosscorr"
+            ]
+          },
+          {
+            "epoch": 7,
+            "seconds": 5.040825299998687,
+            "active_modes": [
+              "marginal",
+              "crosscorr"
+            ]
+          },
+          {
+            "epoch": 8,
+            "seconds": 5.044808799997554,
+            "active_modes": [
+              "marginal",
+              "crosscorr"
+            ]
+          },
+          {
+            "epoch": 9,
+            "seconds": 5.083057700001518,
+            "active_modes": [
+              "marginal",
+              "crosscorr"
+            ]
+          },
+          {
+            "epoch": 10,
+            "seconds": 5.0871272000003955,
+            "active_modes": [
+              "marginal",
+              "crosscorr"
+            ]
+          },
+          {
+            "epoch": 11,
+            "seconds": 5.142698499999824,
+            "active_modes": [
+              "marginal",
+              "crosscorr"
+            ]
+          },
+          {
+            "epoch": 12,
+            "seconds": 5.093890299998748,
+            "active_modes": [
+              "marginal",
+              "crosscorr"
+            ]
+          },
+          {
+            "epoch": 13,
+            "seconds": 4.996561300002213,
+            "active_modes": [
+              "marginal",
+              "crosscorr"
+            ]
+          },
+          {
+            "epoch": 14,
+            "seconds": 4.956111500003317,
+            "active_modes": [
+              "marginal",
+              "crosscorr"
+            ]
+          },
+          {
+            "epoch": 15,
+            "seconds": 5.410822400001052,
+            "active_modes": [
+              "marginal",
+              "crosscorr"
+            ]
+          },
+          {
+            "epoch": 16,
+            "seconds": 4.954246200002672,
+            "active_modes": [
+              "marginal",
+              "crosscorr"
+            ]
+          },
+          {
+            "epoch": 17,
+            "seconds": 4.968478200004029,
+            "active_modes": [
+              "marginal",
+              "crosscorr"
+            ]
+          },
+          {
+            "epoch": 18,
+            "seconds": 4.911732599997777,
+            "active_modes": [
+              "marginal",
+              "crosscorr"
+            ]
+          }
+        ],
+        "finished_at": "2026-09-29T11:36:56.614326+08:00"
+      }
+    },
+    {
+      "target": "SW",
+      "id": "pure_dl_crosscurve_v32_SW_fold5",
+      "state": {
+        "status": "complete",
+        "target": "SW",
+        "pid": 35624,
+        "modes": {
+          "marginal": {
+            "best": 73.6630827970656,
+            "best_epoch": 0,
+            "bad": 18,
+            "done": true,
+            "last_epoch": 18,
+            "stop_reason": "patience18"
+          },
+          "crosscorr": {
+            "best": 73.6630827970656,
+            "best_epoch": 0,
+            "bad": 18,
+            "done": true,
+            "last_epoch": 18,
+            "stop_reason": "patience18"
+          }
+        },
+        "atlas_current_trial": false
+      },
+      "report": {
+        "target": "SW",
+        "arms": [
+          {
+            "target": "SW",
+            "mode": "marginal",
+            "screening_fold": 5,
+            "target_score": 73.6630827970656,
+            "reference_replacement_total": 80.33651343681649,
+            "best_epoch": 0,
+            "stopped_epoch": 18,
+            "stop_reason": "patience18",
+            "best_after_update": {
+              "epoch": 1,
+              "target_score": 73.65487605159468,
+              "reference_replacement_total": 80.33364107590167
+            },
+            "trainable_parameters": 11344,
+            "all_frozen_state_unchanged": true,
+            "all144665_selected_predictions_restored_exactly": true,
+            "gradient_scope": {
+              "group_norms": {
+                "feature_correction": 0.007548369932919741
+              },
+              "frozen_gradients_none": true
+            },
+            "last_parameter_change_L2": 3.3125766735926794,
+            "mechanism_scope": {
+              "mode": "marginal",
+              "factor": "weight",
+              "unchanged_factors": {
+                "gate": true,
+                "location": true,
+                "scale": true
+              },
+              "max_bound_ratio": 0.0,
+              "scope": "two fixed training windows; parent input path excludes both additional views"
+            },
+            "checkpoint": "outputs\\pure_dl_crosscurve_v32_SW_fold5\\marginal\\model_best.pt",
+            "complete_five_folds": false,
+            "remaining_folds_started": false
+          },
+          {
+            "target": "SW",
+            "mode": "crosscorr",
+            "screening_fold": 5,
+            "target_score": 73.6630827970656,
+            "reference_replacement_total": 80.33651343681649,
+            "best_epoch": 0,
+            "stopped_epoch": 18,
+            "stop_reason": "patience18",
+            "best_after_update": {
+              "epoch": 1,
+              "target_score": 73.65998386174385,
+              "reference_replacement_total": 80.33542880945389
+            },
+            "trainable_parameters": 11344,
+            "all_frozen_state_unchanged": true,
+            "all144665_selected_predictions_restored_exactly": true,
+            "gradient_scope": {
+              "group_norms": {
+                "feature_correction": 0.007617932744324207
+              },
+              "frozen_gradients_none": true
+            },
+            "last_parameter_change_L2": 3.396508736479608,
+            "mechanism_scope": {
+              "mode": "crosscorr",
+              "factor": "weight",
+              "unchanged_factors": {
+                "gate": true,
+                "location": true,
+                "scale": true
+              },
+              "max_bound_ratio": 0.0,
+              "scope": "two fixed training windows; parent input path excludes both additional views"
+            },
+            "checkpoint": "outputs\\pure_dl_crosscurve_v32_SW_fold5\\crosscorr\\model_best.pt",
+            "complete_five_folds": false,
+            "remaining_folds_started": false
+          }
+        ],
+        "reference_scores": {
+          "POR": 77.551936801885,
+          "PERM": 89.39672404936582,
+          "SW": 73.6630827970656,
+          "TOTAL": 80.33651343681649
+        },
+        "seconds": 132.79813540000032,
+        "peak_allocated_MiB": 767.0625,
+        "epoch_timing": [
+          {
+            "epoch": 1,
+            "seconds": 6.730237399999169,
+            "active_modes": [
+              "marginal",
+              "crosscorr"
+            ]
+          },
+          {
+            "epoch": 2,
+            "seconds": 6.74562600000354,
+            "active_modes": [
+              "marginal",
+              "crosscorr"
+            ]
+          },
+          {
+            "epoch": 3,
+            "seconds": 6.8005707999982405,
+            "active_modes": [
+              "marginal",
+              "crosscorr"
+            ]
+          },
+          {
+            "epoch": 4,
+            "seconds": 6.819989399999031,
+            "active_modes": [
+              "marginal",
+              "crosscorr"
+            ]
+          },
+          {
+            "epoch": 5,
+            "seconds": 6.653364599995257,
+            "active_modes": [
+              "marginal",
+              "crosscorr"
+            ]
+          },
+          {
+            "epoch": 6,
+            "seconds": 6.716296400001738,
+            "active_modes": [
+              "marginal",
+              "crosscorr"
+            ]
+          },
+          {
+            "epoch": 7,
+            "seconds": 7.56903130000137,
+            "active_modes": [
+              "marginal",
+              "crosscorr"
+            ]
+          },
+          {
+            "epoch": 8,
+            "seconds": 6.926163000003726,
+            "active_modes": [
+              "marginal",
+              "crosscorr"
+            ]
+          },
+          {
+            "epoch": 9,
+            "seconds": 6.965834300004644,
+            "active_modes": [
+              "marginal",
+              "crosscorr"
+            ]
+          },
+          {
+            "epoch": 10,
+            "seconds": 6.940326600000844,
+            "active_modes": [
+              "marginal",
+              "crosscorr"
+            ]
+          },
+          {
+            "epoch": 11,
+            "seconds": 6.863447700001416,
+            "active_modes": [
+              "marginal",
+              "crosscorr"
+            ]
+          },
+          {
+            "epoch": 12,
+            "seconds": 6.735379300000204,
+            "active_modes": [
+              "marginal",
+              "crosscorr"
+            ]
+          },
+          {
+            "epoch": 13,
+            "seconds": 6.865319700002146,
+            "active_modes": [
+              "marginal",
+              "crosscorr"
+            ]
+          },
+          {
+            "epoch": 14,
+            "seconds": 6.757350200001383,
+            "active_modes": [
+              "marginal",
+              "crosscorr"
+            ]
+          },
+          {
+            "epoch": 15,
+            "seconds": 6.794487899998785,
+            "active_modes": [
+              "marginal",
+              "crosscorr"
+            ]
+          },
+          {
+            "epoch": 16,
+            "seconds": 6.76614829999744,
+            "active_modes": [
+              "marginal",
+              "crosscorr"
+            ]
+          },
+          {
+            "epoch": 17,
+            "seconds": 6.76771269999881,
+            "active_modes": [
+              "marginal",
+              "crosscorr"
+            ]
+          },
+          {
+            "epoch": 18,
+            "seconds": 6.7949519000030705,
+            "active_modes": [
+              "marginal",
+              "crosscorr"
+            ]
+          }
+        ],
+        "finished_at": "2026-09-29T11:34:13.323541+08:00"
+      }
+    }
+  ],
+  "all_complete": true
+}

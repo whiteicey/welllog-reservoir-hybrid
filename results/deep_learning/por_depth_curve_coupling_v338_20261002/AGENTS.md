@@ -1,0 +1,2 @@
+# Scope
+One paired POR temporal-coupling mechanism, depth/control explicit launches only. Original151 frozen prior, all fresh encoder/attention/readout jointly trained, no trained335/otherrepair weights. One added POR phase; max8 total. Maintain PROJECTS.md and README, actual progress/results/gain/closure. Original fold5/Q50/score,80/14/min10/b64/64steps,global max2GPU. No autoqueue/grid/remainingfolds/deliveryoverwrite. Strict80.8+gain then remainingfolds; fullOOF82 unmet.

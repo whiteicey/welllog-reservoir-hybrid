@@ -1,0 +1,22 @@
+{
+  "mlp": {
+    "status": "running",
+    "pid": 88004,
+    "stage": "mlp",
+    "epoch": 8,
+    "best": 89.41558638494995,
+    "best_epoch": 8,
+    "bad": 0,
+    "peak_MiB": 790.6416015625
+  },
+  "memory": {
+    "status": "running",
+    "pid": 68720,
+    "stage": "memory",
+    "epoch": 7,
+    "best": 89.41377842188743,
+    "best_epoch": 5,
+    "bad": 2,
+    "peak_MiB": 790.36083984375
+  }
+}

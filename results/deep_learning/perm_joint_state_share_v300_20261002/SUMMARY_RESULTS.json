@@ -1,0 +1,101 @@
+{
+  "project": "perm_joint_state_share_v300_20261002",
+  "scope": "obsolete-study",
+  "weights_retained": false,
+  "cleanup": "Obsolete artifacts removed by explicit user request. These are historical scores, not newly verified training.",
+  "results": [
+    {
+      "source": "PAIRED_FINAL.json",
+      "result": {
+        "reports": {
+          "fixed_gate": {
+            "stage": "fixed_gate",
+            "target": "PERM",
+            "target_score": 89.40973809278749,
+            "initial_score": 89.4055666268939,
+            "against_initial": 0.0041714658935916304,
+            "against_v97_target": 0.013014043421677002,
+            "best_epoch": 3,
+            "stopped_epoch": 17,
+            "validation_rows": 144665,
+            "predictions_reproduced_exactly": true,
+            "frozen_parameters_exact": true,
+            "seconds": 210.24051969998982,
+            "peak_MiB": 787.85107421875,
+            "complete_five_folds": false,
+            "early_terminated": false
+          },
+          "joint_gate": {
+            "stage": "joint_gate",
+            "target": "PERM",
+            "target_score": 89.41965022381922,
+            "initial_score": 89.4055666268939,
+            "against_initial": 0.014083596925317465,
+            "against_v97_target": 0.022926174453402837,
+            "best_epoch": 29,
+            "stopped_epoch": 43,
+            "validation_rows": 144665,
+            "predictions_reproduced_exactly": true,
+            "frozen_parameters_exact": true,
+            "seconds": 438.7689734000014,
+            "peak_MiB": 787.85400390625,
+            "complete_five_folds": false,
+            "early_terminated": false
+          }
+        },
+        "strata": {
+          "fixed_gate": {
+            "PERM": 89.40973809278749,
+            "default_PERM": 97.28798164066512,
+            "continuous_PERM": 74.0911628086661
+          },
+          "joint_gate": {
+            "PERM": 89.41965022381922,
+            "default_PERM": 97.09082873623822,
+            "continuous_PERM": 74.50369530997554
+          },
+          "retained291": {
+            "PERM": 89.5155547932572,
+            "default_PERM": 97.4945552087921,
+            "continuous_PERM": 74.0010663397606
+          },
+          "conditional298": {
+            "PERM": 89.40973809278749,
+            "default_PERM": 97.28798164066512,
+            "continuous_PERM": 74.0911628086661
+          }
+        },
+        "fixed_reproduces298conditional_predictions_exactly": true,
+        "joint_minus_fixed": 0.009912131031725835,
+        "joint_minus_fixed_continuous": 0.4125325013094425,
+        "joint_minus_retained291": -0.09590456943797676,
+        "active_capacity_difference": 49,
+        "adopted": false,
+        "remaining_folds_started": false,
+        "complete_five_folds": false,
+        "timing": {
+          "terminal": true,
+          "maximum_concurrency": 2,
+          "includes_prep_initial_train_final": true,
+          "joint_gate_start_epoch": 1790876558.174,
+          "codeprep_CPUassembly_excluded": true,
+          "fixed_gate_start_epoch": 1790876636.681,
+          "total_paired_wall_seconds": 447.8347096443176,
+          "individual_seconds": {
+            "fixed_gate": 210.24051969998982,
+            "joint_gate": 438.7689734000014
+          },
+          "peak_MiB": {
+            "fixed_gate": 787.85107421875,
+            "joint_gate": 787.85400390625
+          },
+          "scope": "Partialoverlap/stagger/otherjob contention; data/initial/train/finalrestore incl, codeprep/CPUassembly excluded; not isolatedspeed"
+        },
+        "conclusion": "Small wholePERM benefit from trainedstate still below retained291; assess continuous tradeoff rather than claiming recovery. No statebound/LR grid; preserve measured local benefit as mechanism control, not adopted recipe."
+      }
+    }
+  ],
+  "cleanup_completed": true,
+  "deleted_files": 16,
+  "deleted_bytes": 11589749
+}

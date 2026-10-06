@@ -1,0 +1,1 @@
+MaintainPROJECTS/README. Fixedoriginalfold5/9curves/Q/score/80-14/normalGPUmax2. OnePORaddition from151/no laterrepair. Frozen113prior and gate, copiedexistinglateencoder +151readout jointupdates. GroupIDs trainingloss only/no inferencefeatures. No teacher/testlabels/otherfolds below808. Preservepositives/delivery.

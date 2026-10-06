@@ -1,0 +1,25 @@
+{
+  "started_epoch": 1790892416.003,
+  "launch_epochs": {
+    "depth": 1790892416.003,
+    "channel": 1790892446.6223202
+  },
+  "pids": {
+    "depth": 45412,
+    "channel": 65636
+  },
+  "terminal": true,
+  "concurrency": "bothSW326 afterPERM325terminal; initialdepthstartupmayoverlapCPU325records",
+  "prelaunch_preparation_included": false,
+  "launch_stagger_seconds": 30.619320154190063,
+  "same_work_pair_wall_seconds": 595.9042818546295,
+  "individual_seconds": {
+    "depth": 576.5855676000356,
+    "channel": 563.8207906999742
+  },
+  "peak_MiB": {
+    "depth": 1779.21240234375,
+    "channel": 1779.15771484375
+  },
+  "interpretation": "Actual stagger/concurrency retained; includes preparation/initial/train/bestrestoration, excludes implementation/CPUfinalization. Not isolatedspeed ranking."
+}

@@ -1,0 +1,19 @@
+{
+  "deleted": [
+    {
+      "path": "outputs\\pure_dl_sw_utility_strength_v82_SW_a025_fold5\\model_best.pt",
+      "bytes": 3450667,
+      "sha256": "517f9f21e5f7125a894a4861e9c44b7312725e0774e47ff3e3190c0783393faa"
+    },
+    {
+      "path": "outputs\\pure_dl_sw_utility_strength_v82_SW_a025_fold5\\last_state.pt",
+      "bytes": 15601563,
+      "sha256": "33835b81ffb5f9192e751965aea319a71c27d76c4ceffaa6f09629dde31065c8"
+    }
+  ],
+  "bytes": 19052230,
+  "status": "complete",
+  "retained": [
+    "a100"
+  ]
+}

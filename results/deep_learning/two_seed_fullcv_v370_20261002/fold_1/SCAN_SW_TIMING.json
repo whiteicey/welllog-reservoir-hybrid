@@ -1,0 +1,14 @@
+{
+  "identity": "original",
+  "fold": 1,
+  "stage": "SCAN_SW",
+  "pid": 90796,
+  "terminal": true,
+  "exit_code": 0,
+  "process_wall_seconds": 22.06871271133423,
+  "serial_invocation_seconds": 22.06871271133423,
+  "previous_failed_invocation_seconds": 0.0,
+  "concurrency": "solo",
+  "resumed": false,
+  "includes": "load/preprocess/warmup/training or scan/restore/write; sums invocations, excludes approval waiting; whole batch wall includes waiting"
+}

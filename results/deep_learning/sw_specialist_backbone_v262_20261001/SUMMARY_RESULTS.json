@@ -1,0 +1,150 @@
+{
+  "project": "sw_specialist_backbone_v262_20261001",
+  "scope": "obsolete-study",
+  "weights_retained": false,
+  "cleanup": "Obsolete artifacts removed by explicit user request. These are historical scores, not newly verified training.",
+  "results": [
+    {
+      "source": "PAIRED_FINAL.json",
+      "result": {
+        "arms": {
+          "tcn": {
+            "scores": {
+              "POR": 77.92638076072386,
+              "PERM": 89.40556485691894,
+              "SW": 74.12252945562346,
+              "TOTAL": 80.612747237607
+            },
+            "screening_fold": 5,
+            "validation_rows": 144665,
+            "complete_five_folds": false,
+            "remaining_folds_started": false,
+            "total_training_stages": 6,
+            "added_head_stages": {
+              "POR": 0,
+              "PERM": 0,
+              "SW": 1
+            },
+            "source_stage_counted": true,
+            "gain_vs104_SW": 0.0007766274658820294,
+            "gain_vs211_SW": -0.025093167003603867,
+            "learned_gain_vs_initial": 0.0004787867672604307,
+            "report": {
+              "stage": "tcn",
+              "target": "SW",
+              "target_score": 74.12252945562346,
+              "initial_score": 74.1220506688562,
+              "against_initial": 0.0004787867672604307,
+              "against_v97_target": -0.019650449043240314,
+              "best_epoch": 12,
+              "stopped_epoch": 16,
+              "validation_rows": 144665,
+              "predictions_reproduced_exactly": true,
+              "frozen_parameters_exact": true,
+              "seconds": 213.6111508999602,
+              "peak_MiB": 938.6923828125,
+              "complete_five_folds": false,
+              "early_terminated": true
+            }
+          },
+          "bigru": {
+            "scores": {
+              "POR": 77.92638076072386,
+              "PERM": 89.40556485691894,
+              "SW": 74.12294268576024,
+              "TOTAL": 80.61289186815486
+            },
+            "screening_fold": 5,
+            "validation_rows": 144665,
+            "complete_five_folds": false,
+            "remaining_folds_started": false,
+            "total_training_stages": 6,
+            "added_head_stages": {
+              "POR": 0,
+              "PERM": 0,
+              "SW": 1
+            },
+            "source_stage_counted": true,
+            "gain_vs104_SW": 0.0011898576026538876,
+            "gain_vs211_SW": -0.02467993686683201,
+            "learned_gain_vs_initial": 0.000892016904032289,
+            "report": {
+              "stage": "bigru",
+              "target": "SW",
+              "target_score": 74.12294268576024,
+              "initial_score": 74.1220506688562,
+              "against_initial": 0.000892016904032289,
+              "against_v97_target": -0.019237218906468456,
+              "best_epoch": 2,
+              "stopped_epoch": 16,
+              "validation_rows": 144665,
+              "predictions_reproduced_exactly": true,
+              "frozen_parameters_exact": true,
+              "seconds": 177.97263859998202,
+              "peak_MiB": 1295.685546875,
+              "complete_five_folds": false,
+              "early_terminated": false
+            }
+          }
+        },
+        "bigru_minus_tcn": 0.00041323013677185827,
+        "timing": {
+          "excludes_code_preparation": true,
+          "arms": {
+            "tcn": {
+              "process_creation_utc_seconds": 1790865497.736,
+              "pid": 69224
+            },
+            "bigru": {
+              "process_creation_utc_seconds": 1790865497.756,
+              "pid": 44720
+            }
+          },
+          "pair_wallclock_pending": false,
+          "maximum_GPU_jobs": 2,
+          "concurrent": true,
+          "includes_startup_model_data_initial_eval": true,
+          "pair_wallclock_seconds": 222.29075646400452,
+          "includes_final_restore_and_report": true
+        },
+        "training_alpha_diagnostic": {
+          "tcn": {
+            "epoch": 9,
+            "anchors": 16,
+            "population": "deterministic evenly spaced training anchors ONLY",
+            "alpha_mean_all": 0.0018230155110359192,
+            "alpha_mean_continuous": 0.0002279746113345027,
+            "alpha_continuous_quantiles": [
+              4.537243114555167e-08,
+              9.006837444758276e-07,
+              4.570369128487073e-05
+            ],
+            "expert_entropy_mean": 3.8632373809814453,
+            "CPU_float32_not_exact_GPU_replay": true
+          },
+          "bigru": {
+            "epoch": 12,
+            "anchors": 16,
+            "population": "deterministic evenly spaced training anchors ONLY",
+            "alpha_mean_all": 0.0012387428432703018,
+            "alpha_mean_continuous": 0.00043498657760210335,
+            "alpha_continuous_quantiles": [
+              9.707088611321524e-05,
+              0.00011909952445421368,
+              0.00023493124172091484
+            ],
+            "expert_entropy_mean": 3.9460701942443848,
+            "CPU_float32_not_exact_GPU_replay": true
+          }
+        },
+        "strict_808_passed": false,
+        "remaining_folds_started": false,
+        "independent_disk_reload": false,
+        "conclusion": "Newinput specialist mixture gives no meaningful officialgain; sampled train continuousgate collapses. TCN boundedstop16/GRU naturalpatience16; architecture capacities differ, no allencoder-failure claim."
+      }
+    }
+  ],
+  "cleanup_completed": true,
+  "deleted_files": 11,
+  "deleted_bytes": 6956867
+}

@@ -1,0 +1,1 @@
+﻿All104 oldweightsfrozen, trainonly12609mass+gatepatch. OwnSW labels, originalinput/fold5/Q50/score,80-14/normalGPUmax2. One addedSWstage, no211warmstack. Atomicstates/frozen/replay/actualassembly, preservepositives/active/deliveries, maintainPROJECTS/README/EXPLORATIONS/atlas. Explicitlaunch only/noqueue.

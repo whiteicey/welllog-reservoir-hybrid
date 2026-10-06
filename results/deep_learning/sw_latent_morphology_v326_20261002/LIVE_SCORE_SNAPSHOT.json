@@ -1,0 +1,28 @@
+{
+  "depth": {
+    "epoch": 18,
+    "best_epoch": 13,
+    "whole": 74.1695430320749,
+    "strata": {
+      "default": 98.63988120716091,
+      "continuous": 17.96344208824835
+    },
+    "CONT_vs321own": 0.052086660558405384,
+    "scope": "live atomic own-best snapshot, no finalgain or diskreload claim"
+  },
+  "channel": {
+    "epoch": 15,
+    "best_epoch": 13,
+    "whole": 74.1666755143582,
+    "strata": {
+      "default": 98.63622127085729,
+      "continuous": 17.962394682651496
+    },
+    "CONT_vs321own": 0.051039254961551705,
+    "scope": "live atomic own-best snapshot, no finalgain or diskreload claim"
+  },
+  "depth_minus_channel": {
+    "whole": 0.0028675177166945787,
+    "CONT": 0.0010474055968536788
+  }
+}

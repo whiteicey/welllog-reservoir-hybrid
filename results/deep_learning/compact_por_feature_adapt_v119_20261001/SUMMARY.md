@@ -1,0 +1,33 @@
+# Historical summary
+
+Focus and explored conditions: see retained README/FINAL and SUMMARY_RESULTS.json.
+
+Gain: scores and original comparison deltas are retained; incomplete folds remain incomplete.
+
+Not worth extending: original negative conclusions are retained below where available.
+
+Detailed logs, weights and caches were removed by the user request; rerunning requires retraining.
+
+## README.md
+
+# v119 POR feature adaptation scope
+Focus: small output-only changes may be constrained by frozen source features. Compare updating expert input calibration only versus all expert non-head feature parameters, at1e-5, using the positive mixed t3/Cauchy POR function.
+Controls: same v113 actual best checkpoint/function, existing54483 POR mean/side/point/routes parameters lr3e-5; historical v114 location-only control reused. Input-only old router/readout coefficient tensors frozen. Predictions of gate/weight/width can still change via modified hidden features, so do not claim those functions frozen. Expert eval mode retained with gradients, preventing a dropout policy change. Hook detachment/no_grad removed in this isolated module only. Update-scope ablation, not equal active capacity.
+Explored/verified: implemented two explicit arms, no training result yet. Proper own-POR mixed-family likelihood and synchronizedCDF/old original action argmax unchanged. Original nine curves/206+63/split/Q50/population,80/18/min10/bs64/64steps. Existing groups cosine3e-5 to1e-5; new feature group starts ateta_min1e-5 and remains constant. No utility/prediction voting/foreign labels. Atomic complete state, explicit resume, max2GPU.
+Gain: not established; likelihood controlPOR77.548069494893/actualTOTAL80.489472312223. Different earlier full-backbone anchored/t3 study lost0.029103 at larger scope; thi
+
+mains constant. No utility/prediction voting/foreign labels. Atomic complete state, explicit resume, max2GPU.
+Gain: not established; likelihood controlPOR77.548069494893/actualTOTAL80.489472312223. Different earlier full-backbone anchored/t3 study lost0.029103 at larger scope; this mixed-family init/frozen-router/eval-mode and restricted-calibration contrast is separately tested, not presumed successful.
+Not worth continuing: utility strengths, PERM tiny density heads and SW dilation are closed. No repeated projection/width expansion.
+Pending: direct train, actual gradient groups/restored best/144665 population integrity, fixed3-channel assembly, fair control delta and measured time/peak. Source+initialPOR+new adaptation+PERM+SW=5 total stages, replacing v114 refinement, not appending6th. Strict fifth>80.8+gain before otherfolds; fullOOF>82 unmet, delivered package unchanged.
+Optional: follow actual feature-scope positive evidence only; no automatic queue.
+
+V119 calibration restored POR=77.540454326739; actual TOTAL=80.487187761777; parent gain=+0.000000000000; executed stages5, selected stages=4; fifth only, strict808=False; best/stop=0/18.
+
+V119 features restored POR=77.540454326739; actual TOTAL=80.487187761777; parent gain=+0.000000000000; executed stages5, selected stages=4; fifth only, strict808=False; best/stop=0/18.
+
+V119 final feature scope delta (features-calibration) POR=+0.000000000000; same initial function, unequal active capacity; fifth only, no other folds.
+
+Final v119: both restoredPOR77.540454326739 best0/stop18, no gain vs own start, delta against same-init output-only likelihood control=-0.007615168154. Both144665-point replay/frozen-tensor integrity checks passed; feature/calibration gradient groups nonzero, so adaptation was actually attempted. Executed dependency phases5 but effective selected functions4 because epoch0 retained. Actual3-channel fifthTOTAL80.487187761777 for both; retain completed v1145-stageTOTAL80.489472312223. Close this low-rate/eval-mode warm feature scope, not all backbone adaptation; no LR/thaw-range sweep here. Pair concurrent wall=208.153s, overlap launch-to-report=164.693s, singles159.563/203.028s and peaks952.597/968.078MiB, active capacity differs; no equal-work serial speedup evidence. Negative duplicate best/last removed with manifest, parent/source/current positives and old delivery retained. No other folds; fullOOF>82 still unmet. Further work should move to a genuinely different representation/training strategy rather than extend closed small-head/density/utility/dilation/feature-unfreezing scopes.
+
+

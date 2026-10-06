@@ -1,0 +1,14 @@
+{
+  "explicit_concurrent_jobs": 2,
+  "launch_to_last_finish_seconds": 279.133848,
+  "per_run_seconds": {
+    "amplitude": 274.87947839999833,
+    "shape": 114.67497820000062
+  },
+  "peak_allocated_MiB": {
+    "amplitude": 714.36474609375,
+    "shape": 714.36474609375
+  },
+  "final_updated_checkpoint_replay_seconds": 6.6304167000016605,
+  "scope": "launch/setup/cached inputs/training/validation/selected restore; excludes implementation and final replay; no throughput speedup claim"
+}

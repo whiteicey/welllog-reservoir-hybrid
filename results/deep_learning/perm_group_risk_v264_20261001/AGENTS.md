@@ -1,0 +1,1 @@
+Maintain PROJECTS/README. Originalfold5/9curves/Q/score/80-14/normalGPUmax2. OnePERMaddition from154 only, no248repairweights. TrainingwellIDs aggregate loss only, never inference input or heldout fitting. No sample deletion/teacher/testlabels. Preserve currentpositives/default5/delivery, no below808otherfolds.

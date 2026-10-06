@@ -1,0 +1,166 @@
+{
+  "project": "por_adaptive_depth_read_v345_20261002",
+  "scope": "obsolete-study",
+  "weights_retained": false,
+  "cleanup": "Obsolete artifacts removed by explicit user request. These are historical scores, not newly verified training.",
+  "results": [
+    {
+      "source": "PAIRED_FINAL.json",
+      "result": {
+        "arms": {
+          "adaptive": {
+            "report": {
+              "stage": "adaptive",
+              "target": "POR",
+              "target_score": 78.04529023876282,
+              "initial_score": 77.92638076072386,
+              "against_initial": 0.11890947803895813,
+              "against_v97_target": 0.4933534368778112,
+              "best_epoch": 28,
+              "stopped_epoch": 42,
+              "validation_rows": 144665,
+              "predictions_reproduced_exactly": true,
+              "frozen_parameters_exact": true,
+              "seconds": 573.1132745000068,
+              "peak_MiB": 2437.8046875,
+              "complete_five_folds": false,
+              "early_terminated": false
+            },
+            "strata": {
+              "default": 97.40347827930094,
+              "continuous": 41.73733625647294
+            },
+            "whole_vs341": -0.0011404791695071026,
+            "CONT_vs341": 0.0006959644777992935,
+            "CONT_vs151": -0.2166247984311198,
+            "predefined42": {
+              "through_epoch": 42,
+              "best_epoch": 28,
+              "target_score": 78.04529023876282,
+              "control_actual_epochs": 42,
+              "nominal_budget": 80,
+              "comparison": "Predefined bestthrough42 vs historical341 natural42; +1874 sparse reader not samecapacity; laterbest not equalwork",
+              "strata": {
+                "default": 97.40347827930094,
+                "continuous": 41.73733625647294
+              }
+            },
+            "full_best_after42_not_equalwork": false,
+            "reader_norms": {
+              "curve_interaction.reader.norm.weight": 8.18934440612793,
+              "curve_interaction.reader.norm.bias": 0.06978517770767212,
+              "curve_interaction.reader.select.weight": 1.4611506462097168,
+              "curve_interaction.reader.select.bias": 0.24983857572078705,
+              "curve_interaction.reader.value.weight": 1.8707752227783203,
+              "curve_interaction.reader.value.bias": 0.22629618644714355,
+              "curve_interaction.reader.up.weight": 0.9639798402786255,
+              "curve_interaction.reader.up.bias": 0.062230851501226425
+            },
+            "selector_norms": {
+              "first5_weight": 0.9981493353843689,
+              "first5_bias": 0.1765696406364441,
+              "last5_weight": 1.0670796632766724,
+              "last5_bias": 0.1767553985118866,
+              "first5_use": "offsets"
+            },
+            "timing": {
+              "includes": "preprocessing warmup training best restoration",
+              "concurrency": "solo after344pairterminal",
+              "pid": 76472,
+              "started_epoch": 1790904364.173,
+              "global_GPU_jobs_before": 0,
+              "terminal": true,
+              "individual_seconds": 573.1132745000068,
+              "peak_MiB": 2437.8046875,
+              "process_creation_to_terminal_seconds": 577.8639097213745
+            }
+          },
+          "fixed": {
+            "report": {
+              "stage": "fixed",
+              "target": "POR",
+              "target_score": 78.04324061142319,
+              "initial_score": 77.92638076072386,
+              "against_initial": 0.1168598506993277,
+              "against_v97_target": 0.49130380953818076,
+              "best_epoch": 28,
+              "stopped_epoch": 42,
+              "validation_rows": 144665,
+              "predictions_reproduced_exactly": true,
+              "frozen_parameters_exact": true,
+              "seconds": 577.9178937999532,
+              "peak_MiB": 2364.8369140625,
+              "complete_five_folds": false,
+              "early_terminated": false
+            },
+            "strata": {
+              "default": 97.40453808408492,
+              "continuous": 41.7294546205682
+            },
+            "whole_vs341": -0.003190106509137536,
+            "CONT_vs341": -0.007185671426945817,
+            "CONT_vs151": -0.22450643433586492,
+            "predefined42": {
+              "through_epoch": 42,
+              "best_epoch": 28,
+              "target_score": 78.04324061142319,
+              "control_actual_epochs": 42,
+              "nominal_budget": 80,
+              "comparison": "Predefined bestthrough42 vs historical341 natural42; +1874 sparse reader not samecapacity; laterbest not equalwork",
+              "strata": {
+                "default": 97.40453808408492,
+                "continuous": 41.7294546205682
+              }
+            },
+            "full_best_after42_not_equalwork": false,
+            "reader_norms": {
+              "curve_interaction.reader.norm.weight": 8.160407066345215,
+              "curve_interaction.reader.norm.bias": 0.08180186152458191,
+              "curve_interaction.reader.select.weight": 1.7828084230422974,
+              "curve_interaction.reader.select.bias": 0.31101900339126587,
+              "curve_interaction.reader.value.weight": 1.8059108257293701,
+              "curve_interaction.reader.value.bias": 0.22644953429698944,
+              "curve_interaction.reader.up.weight": 0.7873217463493347,
+              "curve_interaction.reader.up.bias": 0.05677025765180588
+            },
+            "selector_norms": {
+              "first5_weight": 1.2606358528137207,
+              "first5_bias": 0.21992366015911102,
+              "last5_weight": 1.2606358528137207,
+              "last5_bias": 0.21992366015911102,
+              "first5_use": "contentweights average, redundant antisymmetric directions"
+            },
+            "timing": {
+              "includes": "preprocessing warmup training best restoration",
+              "concurrency": "solo after345adaptiveterminal",
+              "pid": 18156,
+              "started_epoch": 1790904973.208,
+              "global_GPU_jobs_before": 0,
+              "terminal": true,
+              "individual_seconds": 577.9178937999532,
+              "peak_MiB": 2364.8369140625,
+              "process_creation_to_terminal_seconds": 583.3173055648804
+            }
+          }
+        },
+        "adaptive_minus_fixed_whole": 0.002049627339630433,
+        "adaptive_minus_fixed_CONT": 0.00788163590474511,
+        "comparison_limits": "Same136626 physicalparams/init but offset-vs-contentweight roles and effective function capacity differ. Historical341134752 not matched capacity. Single seed historical microgain not robustness.",
+        "adopted": false,
+        "screening_fold": 5,
+        "complete_five_folds": false,
+        "remaining_folds_started": false,
+        "independent_disk_reload": false,
+        "pair_wall_process_seconds": 1192.3523054122925,
+        "launch_stagger_seconds": 609.0349998474121,
+        "pair_timing_limits": "Process start through last report includes explicit serial launch gaps; individual includes prep/warmup/restoration, not isolated architecture speed ranking",
+        "local_reader_gain_verified": true,
+        "absolute_recipe_not_adopted": true,
+        "closure": "Adaptive vsfixed whole+CONT localpositive; adaptivewhole stillbelow341 thoughCONTtinypositive. Preservecodehypothesis/nooffsetrange-LRgrid orcurrentrecipeswap. Singlepair notrobustness"
+      }
+    }
+  ],
+  "cleanup_completed": true,
+  "deleted_files": 16,
+  "deleted_bytes": 7000819
+}

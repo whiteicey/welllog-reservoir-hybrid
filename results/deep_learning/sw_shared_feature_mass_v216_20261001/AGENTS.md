@@ -1,0 +1,2 @@
+﻿OriginalSOURCE sharedbyPOR/PERM andoriginal104 fullyfrozen; only21280newmasspatchparameters maytrain. Source hiddeninputs only, outputs discarded/no voting/teacher/testlabels. OwnSW labels/fold5/Q50/score unchanged, normalGPUmax2/80-14. Sourcecountedonce, oneextraSWstage alternativesnotstack. Atomicstate/frozen/replay/assembly, preservepositives/active/deliveries, maintainPROJECTS/README/EXPLORATIONS/atlas. Preparedonly/noautolaunch.
+

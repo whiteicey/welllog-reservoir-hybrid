@@ -1,0 +1,78 @@
+{
+  "project": "sw_density_backbone_v251_20261001",
+  "scope": "obsolete-study",
+  "weights_retained": false,
+  "cleanup": "Obsolete artifacts removed by explicit user request. These are historical scores, not newly verified training.",
+  "results": [
+    {
+      "source": "PAIRED_FINAL.json",
+      "result": {
+        "reports": {
+          "head": {
+            "stage": "head",
+            "target": "SW",
+            "target_score": 74.13340197060813,
+            "initial_score": 74.12170158067455,
+            "against_initial": 0.011700389933579913,
+            "against_v97_target": -0.00877793405857119,
+            "best_epoch": 1,
+            "stopped_epoch": 15,
+            "validation_rows": 144665,
+            "predictions_reproduced_exactly": true,
+            "frozen_parameters_exact": true,
+            "seconds": 193.43334300001152,
+            "peak_MiB": 667.69482421875,
+            "complete_five_folds": false,
+            "early_terminated": false
+          },
+          "body": {
+            "stage": "body",
+            "target": "SW",
+            "target_score": 74.12170158067455,
+            "initial_score": 74.12170158067455,
+            "against_initial": 0.0,
+            "against_v97_target": -0.020478323992151104,
+            "best_epoch": 0,
+            "stopped_epoch": 12,
+            "validation_rows": 144665,
+            "predictions_reproduced_exactly": true,
+            "frozen_parameters_exact": true,
+            "seconds": 220.51214810000965,
+            "peak_MiB": 1464.6298828125,
+            "complete_five_folds": false,
+            "early_terminated": true
+          }
+        },
+        "timing": {
+          "excludes_code_preparation": true,
+          "arms": {
+            "body": {
+              "process_creation_utc_seconds": 1790862420.531,
+              "pid": 42372
+            },
+            "head": {
+              "process_creation_utc_seconds": 1790862420.522,
+              "pid": 25000
+            }
+          },
+          "pair_wallclock_pending": false,
+          "maximum_GPU_jobs": 2,
+          "concurrent": true,
+          "includes_startup_model_data_initial_eval": true,
+          "pair_wallclock_seconds": 227.838059425354,
+          "individual_seconds": {
+            "head": 193.43334300001152,
+            "body": 220.51214810000965
+          },
+          "serial_speedup_measured": false
+        },
+        "body_minus_head": -0.011700389933579913,
+        "unequal_achieved_budgets": true,
+        "complete_five_folds": false
+      }
+    }
+  ],
+  "cleanup_completed": true,
+  "deleted_files": 13,
+  "deleted_bytes": 6959238
+}

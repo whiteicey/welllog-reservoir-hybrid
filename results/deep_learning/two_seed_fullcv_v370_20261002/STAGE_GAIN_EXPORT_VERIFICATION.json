@@ -1,0 +1,26 @@
+{
+  "observed_epoch": 1790932850.3027556,
+  "stage_export_rows": 10,
+  "stage_values_exact_to_terminal_evidence": true,
+  "verified_live_job": {
+    "identity": "seed_20261013",
+    "fold": 1,
+    "stage": "SW104",
+    "pid": 62148,
+    "runtime": {
+      "status": "running",
+      "pid": 62148,
+      "stage": "SW104",
+      "epoch": 29,
+      "best": 76.87308300861723,
+      "best_epoch": 27,
+      "bad": 2,
+      "effective_patience": 14,
+      "SOTA_broken": true,
+      "peak_MiB": 1722.197265625
+    }
+  },
+  "previous_goal_turn": "progress: two explicit recoveries completed and original fold1 complete",
+  "current_goal_turn": "progress: compact evidence export; verified wait on live seed13 SW104",
+  "complete_five_fold_OOF": false
+}

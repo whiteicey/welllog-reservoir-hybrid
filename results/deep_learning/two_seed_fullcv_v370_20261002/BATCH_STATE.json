@@ -1,0 +1,105 @@
+{
+  "status": "complete",
+  "controller_pid": 89216,
+  "active_pid": null,
+  "identity": null,
+  "fold": null,
+  "stage": null,
+  "started_epoch": null,
+  "batch_started_epoch": 1790927178.5526347,
+  "concurrency": "serial after explicit OOM recovery",
+  "maximum_GPU_jobs": 1,
+  "active_jobs": [],
+  "completed_model_folds": 8,
+  "events": [
+    {
+      "event": "explicit_resume",
+      "pid": 52244,
+      "identity": "seed_20261013",
+      "fold": 4,
+      "stage": "SW351"
+    },
+    {
+      "event": "terminal",
+      "pid": 52244,
+      "identity": "seed_20261013",
+      "fold": 4,
+      "stage": "SW351",
+      "exit_code": 0
+    },
+    {
+      "event": "launch",
+      "pid": 54988,
+      "identity": "original",
+      "fold": 4,
+      "stage": "SCAN_POR"
+    },
+    {
+      "event": "terminal",
+      "pid": 54988,
+      "identity": "original",
+      "fold": 4,
+      "stage": "SCAN_POR",
+      "exit_code": 0
+    },
+    {
+      "event": "launch",
+      "pid": 74308,
+      "identity": "original",
+      "fold": 4,
+      "stage": "SCAN_PERM"
+    },
+    {
+      "event": "terminal",
+      "pid": 74308,
+      "identity": "original",
+      "fold": 4,
+      "stage": "SCAN_PERM",
+      "exit_code": 0
+    },
+    {
+      "event": "launch",
+      "pid": 21656,
+      "identity": "original",
+      "fold": 4,
+      "stage": "SCAN_SW"
+    },
+    {
+      "event": "terminal",
+      "pid": 21656,
+      "identity": "original",
+      "fold": 4,
+      "stage": "SCAN_SW",
+      "exit_code": 0
+    }
+  ],
+  "total_wall_seconds": 24576.82789826393,
+  "serial_recovery_seconds": 135.91151094436646,
+  "complete_original_five_fold_OOF": true,
+  "scores": {
+    "fixed": {
+      "POR": 79.82902159965268,
+      "PERM": 90.7512176606251,
+      "SW": 75.58795688876792,
+      "TOTAL": 82.16741757218335
+    },
+    "diagnostic": {
+      "POR": 79.8783404937237,
+      "PERM": 90.7642668738331,
+      "SW": 75.61044541308326,
+      "TOTAL": 82.19465144853783
+    },
+    "original": {
+      "POR": 79.54232244907331,
+      "PERM": 90.58546986846994,
+      "SW": 75.49126232696625,
+      "TOTAL": 81.98955300312466
+    },
+    "seed13": {
+      "POR": 79.45870068109176,
+      "PERM": 90.56304127715575,
+      "SW": 75.36791457922408,
+      "TOTAL": 81.91344475406046
+    }
+  }
+}

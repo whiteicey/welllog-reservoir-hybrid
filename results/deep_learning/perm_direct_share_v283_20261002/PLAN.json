@@ -1,0 +1,25 @@
+{
+  "total_training_stages": 6,
+  "source_sha256": "45a09476e3126820688420579c100c86e0e4f45df335904380a298cf5f66b9a9",
+  "parent_sha256": "2b355bb8c3736990b05e2726373a4343c574a93ab6ab1a3eda0ef796ac70cf11",
+  "candidates": [
+    "alpha30"
+  ],
+  "epochs": 80,
+  "patience": 14,
+  "maximum_GPU_jobs": 2,
+  "added_head_stages": {
+    "POR": 0,
+    "PERM": 1,
+    "SW": 0
+  },
+  "remaining_folds_started": false,
+  "prepared_not_launched": true,
+  "direct_aux_CE": 1.0,
+  "alpha_ramp_epochs": 5,
+  "final_alpha": 0.3,
+  "reference_final_alpha": 0.25,
+  "primary_control": "274alpha25 and281schedule-selected-best3 actual.3",
+  "no274_weights_loaded": true,
+  "no281_weights_loaded": true
+}

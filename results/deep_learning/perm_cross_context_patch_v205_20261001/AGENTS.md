@@ -1,0 +1,2 @@
+﻿Only new cross-context patch on frozen154 may train. Original9curves/fold5/Q50/score unchanged, ownPERM loss/80-14/max2GPU. One newPERMstage, never stack202. No targethistory, releasedweights, oldvote. Atomicstates/frozen checks/actualassembly. Preserve positives/active/deliveries and maintainPROJECTS/README/EXPLORATIONS/atlas.
+

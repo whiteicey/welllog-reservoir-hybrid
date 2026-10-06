@@ -1,0 +1,13 @@
+{
+  "seed": 20261010,
+  "independent_disk_reload": true,
+  "all_native_selected_head_predictions_exact": true,
+  "validation_rows": 144665,
+  "checkpoint_sha256": {
+    "POR": "68fe9da472b729853888efdf4d847054871d75c31f70f082b17627612a07d273",
+    "PERM": "ad99e9846f046fa7e4add6f8643bd495fac1fc85793244ef91533d72671cdfee",
+    "SW": "e97d76e8b2d11168407dee1ac9b5b7a34504d18eb073d7efdac1fb8b504c78be"
+  },
+  "evidence": "../original_seed_pair_v363_20261002/FINAL.json",
+  "complete_five_folds": false
+}

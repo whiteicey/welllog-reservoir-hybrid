@@ -1,0 +1,1 @@
+﻿Original9curves/206+63amp/fold5/Q50/scoring unchanged. Freeze all151/source/113 weights; train only bounded32width localfeature adapter. One additionalPORstage only, no203warmstack. Ownloss/max80/pat14/max2GPU/atomicstates/frozen/replay/actualassembly. Preserve positives/active/deliveries, updatePROJECTS/README/EXPLORATIONS/atlas. Current explicitlaunch only, noqueues.

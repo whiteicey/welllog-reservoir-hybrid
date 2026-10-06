@@ -1,0 +1,22 @@
+{
+  "candidates": [
+    {
+      "mode": "both",
+      "start": "2026-09-29T23:59:47.489680+08:00",
+      "end": "2026-09-30T00:04:49.204790+08:00",
+      "seconds": 297.6268524000043,
+      "peak_allocated_MiB": 2028.4169921875
+    },
+    {
+      "mode": "gate_only",
+      "start": "2026-09-30T00:01:00.258253+08:00",
+      "end": "2026-09-30T00:06:10.940224+08:00",
+      "seconds": 305.44858289998956,
+      "peak_allocated_MiB": 2028.4169921875
+    }
+  ],
+  "first_launch_to_last_completion_seconds": 383.450544,
+  "peak_process_concurrency": 2,
+  "finalization_seconds": 0.3557966999942437,
+  "scope": "loading/preprocessing/warmup/training/evaluation/launch gap included; authoring and finalization separate"
+}

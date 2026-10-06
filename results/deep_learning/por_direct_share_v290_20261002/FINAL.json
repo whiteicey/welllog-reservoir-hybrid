@@ -1,0 +1,35 @@
+{
+  "report": {
+    "stage": "raw",
+    "target": "POR",
+    "target_score": 78.0235265552551,
+    "initial_score": 77.92638076072386,
+    "against_initial": 0.09714579453124372,
+    "against_v97_target": 0.4715897533700968,
+    "best_epoch": 11,
+    "stopped_epoch": 25,
+    "validation_rows": 144665,
+    "predictions_reproduced_exactly": true,
+    "frozen_parameters_exact": true,
+    "gradient_groups": {
+      "POR_new_raw_feature_backbone": 0.06648895144462585,
+      "POR_direct_categorical_readout": 0.04901475831866264
+    },
+    "seconds": 447.6453400000464,
+    "peak_MiB": 981.986328125,
+    "complete_five_folds": false,
+    "early_terminated": false
+  },
+  "adopted_positive": true,
+  "versus151": 0.09714579453124372,
+  "versus287": 0.07152420741539345,
+  "actual_optional8": {
+    "POR": 78.0235265552551,
+    "PERM": 89.498908539006,
+    "SW": 74.15237674585131,
+    "TOTAL": 80.68500781627658
+  },
+  "strict808": false,
+  "independent_disk_reload": false,
+  "remaining_folds_started": false
+}

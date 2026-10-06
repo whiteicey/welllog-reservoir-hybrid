@@ -40,3 +40,11 @@ cleanup_negative_*.json
 delivery_*_pending.json
 EXPLORATIONS.md
 package_dl/models/fold_*.pt
+
+# Rebuildable atlas snapshots and verbose local events
+docs/deep_learning/atlas/index.html
+docs/deep_learning/atlas/atlas-data.json
+docs/deep_learning/atlas/curation.json
+*.jsonl
+cleanup_inventory_*.json
+cleanup_results_inventory_*.json

@@ -1,0 +1,1 @@
+Goal pureDL82/fullOOF/fifth808. Train newrawfeatureencoder+directdensityhead jointly, no head-only. Original154prior frozen/9curves/Q/data/scoring/max2GPU/80-14/onePERMaddedphase/total<=8. No271repairweights/teacher/newlabels/otherfolds. Immutableactive source, atomiclast explicitresume. MaintainPROJECTS/README/EXPLORATIONS/atlas.

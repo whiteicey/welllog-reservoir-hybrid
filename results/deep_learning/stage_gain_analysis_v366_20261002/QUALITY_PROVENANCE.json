@@ -1,0 +1,92 @@
+{
+  "records": {
+    "original": {
+      "SOURCE_best_epoch": 52,
+      "SOURCE_TOTAL": 80.22186108303967,
+      "quality": {
+        "epoch": 50,
+        "minimum": 0.10000000149011612,
+        "maximum": 1.0,
+        "downweighted_training_rows": 1755,
+        "dynamic_updates": false,
+        "sha256": "b96d498519c6a13ddd778ceb3ffef5fb03a8580902a903f2042cd3db3c593297"
+      },
+      "config_source": "outputs\\pure_dl_por_coupling_conditional_rps_v341_fold5\\conditional\\config.json",
+      "config_sha256": "8e8cdb491e4aec6f115c50f971b7a4362ae1a404c71a1737e75e9e3036b94e74",
+      "SOURCE_report": "outputs\\pure_dl_paired_local_context_router80_sequence\\fold_5_report.json"
+    },
+    "20261010": {
+      "SOURCE_best_epoch": 52,
+      "SOURCE_TOTAL": 80.18138427356004,
+      "quality": {
+        "status": "ready",
+        "epoch": 50,
+        "sha256": "f75294cae5747e11a7f72dbb2879b4fcc9d394a8b8a5a587bf25cba02c639e4a",
+        "dynamic_updates": false,
+        "rule": "last original training-only source Q observation strictly before this fold best epoch; Q0=1 before first observation",
+        "minimum": 0.10000000149011612,
+        "maximum": 1.0,
+        "downweighted_training_rows": 1736
+      },
+      "config_source": "outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261010\\POR151\\config.json",
+      "config_sha256": "4209c226215b418d2ae59603d0fdafbafc9a6c10447f72570dbd828b3c1e543b",
+      "SOURCE_report": "outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261010\\SOURCE\\fold_5_report.json"
+    },
+    "20261011": {
+      "SOURCE_best_epoch": 42,
+      "SOURCE_TOTAL": 79.67642916199037,
+      "quality": {
+        "status": "ready",
+        "epoch": 40,
+        "sha256": "cefb5e0130a371d7814cb26072aedbb434397e6f97bd3213c349e6a9c900a71a",
+        "dynamic_updates": false,
+        "rule": "last original training-only source Q observation strictly before this fold best epoch; Q0=1 before first observation",
+        "minimum": 0.10000000149011612,
+        "maximum": 1.0,
+        "downweighted_training_rows": 1394
+      },
+      "config_source": "outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261011\\POR151\\config.json",
+      "config_sha256": "cf9ba80545776d890ea13c9273b47bda1e6356e6c23025a495f3949208c5f8e6",
+      "SOURCE_report": "outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261011\\SOURCE\\fold_5_report.json"
+    },
+    "20261012": {
+      "SOURCE_best_epoch": 38,
+      "SOURCE_TOTAL": 79.86008699734228,
+      "quality": {
+        "status": "ready",
+        "epoch": 36,
+        "sha256": "14ecf1a0e79bfa07b7dd68fea004139e2beada99078ef2bc79614e6b900eba78",
+        "dynamic_updates": false,
+        "rule": "last original training-only source Q observation strictly before this fold best epoch; Q0=1 before first observation",
+        "minimum": 0.10000000149011612,
+        "maximum": 1.0,
+        "downweighted_training_rows": 1233
+      },
+      "config_source": "outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261012\\POR151\\config.json",
+      "config_sha256": "53ed1acfe3bd848d41d0397120dd65c1c23a6af88c87c100af5131ed132cd4d8",
+      "SOURCE_report": "outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261012\\SOURCE\\fold_5_report.json"
+    },
+    "20261013": {
+      "SOURCE_best_epoch": 40,
+      "SOURCE_TOTAL": 79.79912095227387,
+      "quality": {
+        "status": "ready",
+        "epoch": 38,
+        "sha256": "7d382888715c911eb4994ce5965a0bbc872f0a388f10a2b2c9a07a2372a80311",
+        "dynamic_updates": false,
+        "rule": "last original training-only source Q observation strictly before this fold best epoch; Q0=1 before first observation",
+        "minimum": 0.10000000149011612,
+        "maximum": 1.0,
+        "downweighted_training_rows": 1459
+      },
+      "config_source": "outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261013\\POR151\\config.json",
+      "config_sha256": "26dca2c40a03d764acc86441bb0d40ed9532cc85021d7402e2bc6e9000b004f7",
+      "SOURCE_report": "outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261013\\SOURCE\\fold_5_report.json"
+    }
+  },
+  "scope": "Saved config provenance and frozen-source interpretation only; no Q recalculation/model forward/label evaluation",
+  "CPU_only": true,
+  "training_runs_added": 0,
+  "causal_gain_not_established": true,
+  "complete_five_folds": false
+}

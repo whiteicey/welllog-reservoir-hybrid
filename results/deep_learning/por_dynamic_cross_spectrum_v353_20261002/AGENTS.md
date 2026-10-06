@@ -1,0 +1,1 @@
+Maintain PROJECTS/fourfieldREADME. Original151only/fresh341351code jointly135304,onePORphase/max8. No trained341351repairweights,otherfolds,queue,preflight/review. Originalsplit/Q50/scoring80pat14/max2; freeze sourceswhenlaunched.

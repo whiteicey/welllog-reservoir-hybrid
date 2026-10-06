@@ -1,0 +1,53 @@
+{
+  "observed_epoch": 1790935255.693586,
+  "explicit_user_reply": "可以加入另外一个并发线程",
+  "controller_pid": 77612,
+  "active_jobs": [
+    {
+      "identity": "seed_20261013",
+      "fold": 2,
+      "stage": "SOURCE",
+      "pid": 75188,
+      "create_time": 1790934993.989125,
+      "process_identity_exact": true
+    },
+    {
+      "identity": "original",
+      "fold": 2,
+      "stage": "SW104",
+      "pid": 91432,
+      "create_time": 1790935073.1618612,
+      "process_identity_exact": true
+    }
+  ],
+  "maximum_GPU_jobs": 2,
+  "old_CPU_only_stopped": true,
+  "exact_GPU_worker_preserved_at_handoff": {
+    "pid": 74592,
+    "create_time": 1790934941.0796938,
+    "cmdline": [
+      "C:\\Users\\z5364\\.conda\\envs\\normal\\python.exe",
+      "-u",
+      "experiments/pure_dl/train_pair_fullcv_stage_v370.py",
+      "--stage",
+      "PERM154"
+    ]
+  },
+  "GPU_workers_stopped": 0,
+  "frozen_code_sha_checks": {
+    "experiments/pure_dl/fullcv_pair_context_v370.py": true,
+    "experiments/pure_dl/pair_fullcv_models_v370.py": true,
+    "experiments/pure_dl/train_pair_fullcv_source_v370.py": true,
+    "experiments/pure_dl/train_pair_fullcv_stage_v370.py": true,
+    "experiments/pure_dl/evaluate_pair_fullcv_v370.py": true,
+    "experiments/pure_dl/record_pair_fullcv_v370.py": true,
+    "experiments/pure_dl/run_pair_fullcv_v370.py": true
+  },
+  "training_recipe_unchanged": true,
+  "automatic_failure_retry": false,
+  "maximum_PERM_jobs": 1,
+  "minimum_launch_driver_free_MiB": 7168,
+  "driver_snapshot": "6798 MiB, 5198 MiB, 95 %",
+  "authorization_text_encoding_note": "Earlier launch receipts contain replacement characters; exact direct user instruction preserved in this UTF-8 readback. Numerical authorization and controller hash checks unchanged.",
+  "score_scope": "Two active training jobs; full five-fold OOF remains incomplete"
+}

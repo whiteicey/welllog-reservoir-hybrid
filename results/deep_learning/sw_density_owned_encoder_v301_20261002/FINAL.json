@@ -1,0 +1,88 @@
+{
+  "report": {
+    "stage": "density_owned",
+    "target": "SW",
+    "target_score": 74.14890417375682,
+    "initial_score": 74.12175268976877,
+    "against_initial": 0.027151483988049563,
+    "against_v97_target": 0.006724269090113921,
+    "best_epoch": 17,
+    "stopped_epoch": 31,
+    "validation_rows": 144665,
+    "predictions_reproduced_exactly": true,
+    "frozen_parameters_exact": true,
+    "gradient_groups": {
+      "SW_new_raw_feature_backbone": 0.08836353570222855,
+      "SW_direct_categorical_readout": 0.06910170614719391,
+      "SW_new_state_readout": 0.006067464128136635
+    },
+    "seconds": 294.6843583000009,
+    "peak_MiB": 1241.642578125,
+    "complete_five_folds": false,
+    "early_terminated": false
+  },
+  "strata": {
+    "SW252": {
+      "SW": 74.14922820781207,
+      "default_SW": 98.64493054166336,
+      "continuous_SW": 17.88486813991017,
+      "default_rows": 100786,
+      "continuous_rows": 43879,
+      "atom_action": 99.9,
+      "continuous_decoded_atom_fraction": 0.30274163039267077,
+      "default_decoded_atom_fraction": 0.9809497350822535,
+      "continuous_near_default_action_fraction": 0.30274163039267077
+    },
+    "SW289": {
+      "SW": 74.1537264289993,
+      "default_SW": 98.72311025198368,
+      "continuous_SW": 17.72012680313723,
+      "default_rows": 100786,
+      "continuous_rows": 43879,
+      "atom_action": 99.9,
+      "continuous_decoded_atom_fraction": 0.30604617242872445,
+      "default_decoded_atom_fraction": 0.9814756017700871,
+      "continuous_near_default_action_fraction": 0.30604617242872445
+    },
+    "SW297well": {
+      "SW": 74.16003022301975,
+      "default_SW": 98.82679621708131,
+      "continuous_SW": 17.502752767347182,
+      "default_rows": 100786,
+      "continuous_rows": 43879,
+      "atom_action": 99.9,
+      "continuous_decoded_atom_fraction": 0.321201485904419,
+      "default_decoded_atom_fraction": 0.9833310181969718,
+      "continuous_near_default_action_fraction": 0.321201485904419
+    },
+    "SW301": {
+      "SW": 74.14890417375682,
+      "default_SW": 98.81441629589513,
+      "continuous_SW": 17.494506745789128,
+      "default_rows": 100786,
+      "continuous_rows": 43879,
+      "atom_action": 99.9,
+      "continuous_decoded_atom_fraction": 0.32165728480594363,
+      "default_decoded_atom_fraction": 0.9832417200801699,
+      "continuous_near_default_action_fraction": 0.32165728480594363
+    }
+  },
+  "whole_delta_vs289": -0.004822255242487472,
+  "continuous_delta_vs289": -0.22562005734810242,
+  "continuous_delta_vs252": -0.39036139412104376,
+  "adopted": false,
+  "remaining_folds_started": false,
+  "complete_five_folds": false,
+  "timing": {
+    "start_epoch": 1790876942.827,
+    "terminal": true,
+    "includes_prep_initial_train_final": true,
+    "maximum_concurrency": 2,
+    "codeprep_CPUassembly_excluded": true,
+    "individual_seconds": 294.6843583000009,
+    "observed_launch_to_report_seconds": 303.6842703819275,
+    "peak_MiB": 1241.642578125,
+    "concurrency": "overlap with v300; not isolatedspeedcomparison"
+  },
+  "conclusion": "Detaching state gradient alone fails overall289 reference; decoded action fractions diagnose posterior decision tradeoffs, not direct state-classifier probabilities or an oracle. No detachratio/BCEweight/LR grid."
+}

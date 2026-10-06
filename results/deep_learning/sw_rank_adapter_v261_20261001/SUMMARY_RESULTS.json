@@ -1,0 +1,121 @@
+{
+  "project": "sw_rank_adapter_v261_20261001",
+  "scope": "obsolete-study",
+  "weights_retained": false,
+  "cleanup": "Obsolete artifacts removed by explicit user request. These are historical scores, not newly verified training.",
+  "results": [
+    {
+      "source": "PAIRED_FINAL.json",
+      "result": {
+        "arms": {
+          "ce": {
+            "scores": {
+              "POR": 77.92638076072386,
+              "PERM": 89.40556485691894,
+              "SW": 74.14058038987825,
+              "TOTAL": 80.61906506459617
+            },
+            "screening_fold": 5,
+            "validation_rows": 144665,
+            "complete_five_folds": false,
+            "remaining_folds_started": false,
+            "total_training_stages": 6,
+            "added_head_stages": {
+              "POR": 0,
+              "PERM": 0,
+              "SW": 1
+            },
+            "source_stage_counted": true,
+            "gain_vs104_SW": 0.018827561720669905,
+            "gain_vs211_SW": -0.007042232748815991,
+            "learned_gain_vs_initial": 0.018878809203698665,
+            "report": {
+              "stage": "ce",
+              "target": "SW",
+              "target_score": 74.14058038987825,
+              "initial_score": 74.12170158067455,
+              "against_initial": 0.018878809203698665,
+              "against_v97_target": -0.0015995147884524386,
+              "best_epoch": 7,
+              "stopped_epoch": 14,
+              "validation_rows": 144665,
+              "predictions_reproduced_exactly": true,
+              "frozen_parameters_exact": true,
+              "seconds": 209.63535749999573,
+              "peak_MiB": 804.75341796875,
+              "complete_five_folds": false,
+              "early_terminated": true
+            }
+          },
+          "rnc": {
+            "scores": {
+              "POR": 77.92638076072386,
+              "PERM": 89.40556485691894,
+              "SW": 74.13437173680838,
+              "TOTAL": 80.61689203602171
+            },
+            "screening_fold": 5,
+            "validation_rows": 144665,
+            "complete_five_folds": false,
+            "remaining_folds_started": false,
+            "total_training_stages": 6,
+            "added_head_stages": {
+              "POR": 0,
+              "PERM": 0,
+              "SW": 1
+            },
+            "source_stage_counted": true,
+            "gain_vs104_SW": 0.012618908650793514,
+            "gain_vs211_SW": -0.013250885818692382,
+            "learned_gain_vs_initial": 0.012670156133822275,
+            "report": {
+              "stage": "rnc",
+              "target": "SW",
+              "target_score": 74.13437173680838,
+              "initial_score": 74.12170158067455,
+              "against_initial": 0.012670156133822275,
+              "against_v97_target": -0.007808167858328829,
+              "best_epoch": 3,
+              "stopped_epoch": 14,
+              "validation_rows": 144665,
+              "predictions_reproduced_exactly": true,
+              "frozen_parameters_exact": true,
+              "seconds": 209.04067660000874,
+              "peak_MiB": 804.75341796875,
+              "complete_five_folds": false,
+              "early_terminated": true
+            }
+          }
+        },
+        "rnc_minus_ce": -0.006208653069876391,
+        "timing": {
+          "excludes_code_preparation": true,
+          "arms": {
+            "ce": {
+              "process_creation_utc_seconds": 1790865252.283,
+              "pid": 86312
+            },
+            "rnc": {
+              "process_creation_utc_seconds": 1790865252.302,
+              "pid": 18912
+            }
+          },
+          "pair_wallclock_pending": false,
+          "maximum_GPU_jobs": 2,
+          "concurrent": true,
+          "includes_startup_model_data_initial_eval": true,
+          "pair_wallclock_seconds": 217.3249650001526,
+          "includes_final_restore_and_report": true
+        },
+        "CE_predictions_equal_retained250": true,
+        "CE_weights_identity_not_checked": true,
+        "independent_disk_reload": false,
+        "remaining_folds_started": false,
+        "conclusion": "Bounded rank.1 gives negative paired gain; close fixed RNC study, not all representation supervision."
+      }
+    }
+  ],
+  "cleanup_completed": true,
+  "deleted_files": 11,
+  "deleted_bytes": 6955165
+}

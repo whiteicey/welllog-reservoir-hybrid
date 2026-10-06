@@ -1,0 +1,45 @@
+{
+  "scores": {
+    "POR": 77.50036838764457,
+    "PERM": 89.37839421114361,
+    "SW": 73.97448063513094,
+    "TOTAL": 80.42361671248946
+  },
+  "original_fold": 5,
+  "complete_five_folds": false,
+  "total_training_stages": 4,
+  "optional_density_would_make_five": true,
+  "dependency_stages": [
+    "original_source",
+    "v101_por_mean_scope",
+    "v100_perm",
+    "v104_spectral"
+  ],
+  "source_stage_counted": true,
+  "old_SW_weights_or_source_hidden_features_used": false,
+  "strict_808_passed": false,
+  "remaining_folds_started": false,
+  "sum_dependency_seconds": 2421.917050799995,
+  "timing_scope": "includes historical source and shared stages; sum not parallel wall or speedup",
+  "gain_vs_old_best": -0.08058071198742311,
+  "checkpoint_sha256": "0554c36cd08c4211654f57b4d1406bb4de14793e3153d23dbf5c553596764bca",
+  "report": {
+    "stage": "spectral",
+    "target": "SW",
+    "target_score": 73.97448063513094,
+    "initial_score": 71.19711508147167,
+    "against_initial": 2.77736555365928,
+    "against_v97_target": -0.16769926953575975,
+    "best_epoch": 38,
+    "stopped_epoch": 56,
+    "validation_rows": 144665,
+    "predictions_reproduced_exactly": true,
+    "frozen_parameters_exact": true,
+    "gradient_groups": {
+      "private_SW": 0.9789863228797913
+    },
+    "seconds": 805.619317100005,
+    "peak_MiB": 1805.7216796875,
+    "complete_five_folds": false
+  }
+}

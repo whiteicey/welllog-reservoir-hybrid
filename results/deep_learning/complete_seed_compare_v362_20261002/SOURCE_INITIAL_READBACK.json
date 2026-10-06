@@ -1,0 +1,40 @@
+{
+  "actual_seed": 20261010,
+  "config_root_seed": 20261006,
+  "original_fold": 5,
+  "epochs": 80,
+  "early_stopping": {
+    "patience": 10,
+    "patience_after_strict_SOTA": 14,
+    "SOTA_reference": 80.70612972323806,
+    "minimum_epochs": 10,
+    "maximum_epochs": 80,
+    "criterion": "official_TOTAL",
+    "mode": "max"
+  },
+  "features": 206,
+  "training_wells": 64,
+  "heldout_wells": 16,
+  "latest": {
+    "epoch": 6,
+    "first_lr": 0.0005943316577189532,
+    "last_lr": 0.000591891328398933,
+    "next_lr": 0.0005918491265173149,
+    "expert_train_loss": 0.2742353312205523,
+    "router_train_loss": 0.19607220962643623,
+    "router_next_lr": 0.0005918491265173149,
+    "official_total": 77.6419287354647,
+    "official_scores": {
+      "POR": 71.64688195731571,
+      "PERM": 88.14965153323661,
+      "SW": 72.27281746182051,
+      "TOTAL": 77.6419287354647
+    },
+    "best_epoch": 6,
+    "best_score": 77.6419287354647,
+    "bad_epochs": 0,
+    "effective_patience": 10,
+    "SOTA_broken": false
+  },
+  "limits": "SOURCE prerequisite score only, not complete eight-stage model"
+}

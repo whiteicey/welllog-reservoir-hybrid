@@ -1,0 +1,15 @@
+{
+  "observed_at": "2026-09-29T10:29:50.862061+08:00",
+  "all_six_complete": true,
+  "selected_full_disk_replays": [
+    "POR"
+  ],
+  "active_jobs": [],
+  "training_failures": [],
+  "atlas_score_scope_verified": true,
+  "historical_training_sources_unchanged": true,
+  "curation_method": "curate_coadapt_v30.py incremental then build_atlas.py",
+  "tool_notes": [
+    "Multiline curate.py snippet did not match; single-line retry was blocked as secret-looking content. Original curate.py was not modified. No shell bypass was used."
+  ]
+}

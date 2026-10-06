@@ -1,0 +1,1790 @@
+{
+  "scores": {
+    "POR": 78.23303953551347,
+    "PERM": 89.74367648664987,
+    "SW": 74.23788264685729,
+    "TOTAL": 80.86345755738155
+  },
+  "best_pair": "original__seed_20261013",
+  "ranking": [
+    {
+      "id": "original__seed_20261013",
+      "A": "original",
+      "B": "seed_20261013",
+      "scores": {
+        "POR": 78.23303953551347,
+        "PERM": 89.74367648664987,
+        "SW": 74.23788264685729,
+        "TOTAL": 80.86345755738155
+      },
+      "selected_weights": {
+        "POR": {
+          "weight_A": 0.56,
+          "weight_B": 0.43999999999999995,
+          "score": 78.23303953551347,
+          "grid_index": 56
+        },
+        "PERM": {
+          "weight_A": 0.44,
+          "weight_B": 0.56,
+          "score": 89.74367648664987,
+          "grid_index": 44
+        },
+        "SW": {
+          "weight_A": 0.68,
+          "weight_B": 0.31999999999999995,
+          "score": 74.23788264685729,
+          "grid_index": 68
+        }
+      },
+      "equal_weight_scores": {
+        "POR": 78.22695470462942,
+        "PERM": 89.72567236844395,
+        "SW": 74.19508532781876,
+        "TOTAL": 80.84035160508077
+      },
+      "common_weight": {
+        "weight_A": 0.58,
+        "weight_B": 0.42000000000000004,
+        "scores": {
+          "POR": 78.22574413863069,
+          "PERM": 89.71230686848824,
+          "SW": 74.22324539187433,
+          "TOTAL": 80.84516653271609
+        }
+      },
+      "strata": {
+        "POR": {
+          "DEFAULT": {
+            "rows": 94357,
+            "score": 97.82422077853259
+          },
+          "CONT": {
+            "rows": 50308,
+            "score": 41.48808667418874
+          }
+        },
+        "PERM": {
+          "DEFAULT": {
+            "rows": 95533,
+            "score": 97.7488471893305
+          },
+          "CONT": {
+            "rows": 49132,
+            "score": 74.17830213308861
+          }
+        },
+        "SW": {
+          "DEFAULT": {
+            "rows": 100786,
+            "score": 98.9400546496492
+          },
+          "CONT": {
+            "rows": 43879,
+            "score": 17.49928086757014
+          }
+        }
+      },
+      "strictly_above_8074": true,
+      "delta_vs_8074": 0.12345755738155617,
+      "delta_vs_prior_per_head": 0.1282913196564408,
+      "prediction_sha256": "0a5a335230d77fba57214ccc50084ff17a649bb4b9297248a74ca5a266bcba1d",
+      "validation_rows": 144665,
+      "actual_three_head_assembly": true
+    },
+    {
+      "id": "original__seed_20261012",
+      "A": "original",
+      "B": "seed_20261012",
+      "scores": {
+        "POR": 78.06805975255475,
+        "PERM": 89.72928487405301,
+        "SW": 74.27881522417432,
+        "TOTAL": 80.82325296014598
+      },
+      "selected_weights": {
+        "POR": {
+          "weight_A": 0.76,
+          "weight_B": 0.24,
+          "score": 78.06805975255475,
+          "grid_index": 76
+        },
+        "PERM": {
+          "weight_A": 0.46,
+          "weight_B": 0.54,
+          "score": 89.72928487405301,
+          "grid_index": 46
+        },
+        "SW": {
+          "weight_A": 0.66,
+          "weight_B": 0.33999999999999997,
+          "score": 74.27881522417432,
+          "grid_index": 66
+        }
+      },
+      "equal_weight_scores": {
+        "POR": 77.92957984091069,
+        "PERM": 89.72318142225417,
+        "SW": 74.25686938026887,
+        "TOTAL": 80.77189173315627
+      },
+      "common_weight": {
+        "weight_A": 0.66,
+        "weight_B": 0.33999999999999997,
+        "scores": {
+          "POR": 78.04306038085575,
+          "PERM": 89.69441032937307,
+          "SW": 74.27881522417432,
+          "TOTAL": 80.8035470579983
+        }
+      },
+      "strata": {
+        "POR": {
+          "DEFAULT": {
+            "rows": 94357,
+            "score": 97.52429602467225
+          },
+          "CONT": {
+            "rows": 50308,
+            "score": 41.57620784176249
+          }
+        },
+        "PERM": {
+          "DEFAULT": {
+            "rows": 95533,
+            "score": 97.53127916818242
+          },
+          "CONT": {
+            "rows": 49132,
+            "score": 74.55896978610575
+          }
+        },
+        "SW": {
+          "DEFAULT": {
+            "rows": 100786,
+            "score": 98.88764337904628
+          },
+          "CONT": {
+            "rows": 43879,
+            "score": 17.754615620335564
+          }
+        }
+      },
+      "strictly_above_8074": true,
+      "delta_vs_8074": 0.08325296014598393,
+      "delta_vs_prior_per_head": 0.08808672242086857,
+      "prediction_sha256": "8b88a1ae7880654895a02fc6f3f8e68a288d7d09d5a66a34272f5667bf982289",
+      "validation_rows": 144665,
+      "actual_three_head_assembly": true
+    },
+    {
+      "id": "original__seed_20261011",
+      "A": "original",
+      "B": "seed_20261011",
+      "scores": {
+        "POR": 78.1589686214515,
+        "PERM": 89.63804749953623,
+        "SW": 74.20600839731975,
+        "TOTAL": 80.79311015033504
+      },
+      "selected_weights": {
+        "POR": {
+          "weight_A": 0.69,
+          "weight_B": 0.31000000000000005,
+          "score": 78.1589686214515,
+          "grid_index": 69
+        },
+        "PERM": {
+          "weight_A": 0.43,
+          "weight_B": 0.5700000000000001,
+          "score": 89.63804749953623,
+          "grid_index": 43
+        },
+        "SW": {
+          "weight_A": 0.72,
+          "weight_B": 0.28,
+          "score": 74.20600839731975,
+          "grid_index": 72
+        }
+      },
+      "equal_weight_scores": {
+        "POR": 78.00315056582188,
+        "PERM": 89.6276063206395,
+        "SW": 74.1455859215551,
+        "TOTAL": 80.72156245451467
+      },
+      "common_weight": {
+        "weight_A": 0.69,
+        "weight_B": 0.31000000000000005,
+        "scores": {
+          "POR": 78.1589686214515,
+          "PERM": 89.6336727723192,
+          "SW": 74.20183197514932,
+          "TOTAL": 80.79011724804943
+        }
+      },
+      "strata": {
+        "POR": {
+          "DEFAULT": {
+            "rows": 94357,
+            "score": 97.68326674226607
+          },
+          "CONT": {
+            "rows": 50308,
+            "score": 41.53946083371025
+          }
+        },
+        "PERM": {
+          "DEFAULT": {
+            "rows": 95533,
+            "score": 97.65355002054012
+          },
+          "CONT": {
+            "rows": 49132,
+            "score": 74.05258380298162
+          }
+        },
+        "SW": {
+          "DEFAULT": {
+            "rows": 100786,
+            "score": 98.90126566594107
+          },
+          "CONT": {
+            "rows": 43879,
+            "score": 17.483289122148946
+          }
+        }
+      },
+      "strictly_above_8074": true,
+      "delta_vs_8074": 0.05311015033504418,
+      "delta_vs_prior_per_head": 0.057943912609928816,
+      "prediction_sha256": "cd2ae9997ea86de36bfc4d873e9a09dd26dfbe1e1ba122dc3f401e917eeed0ed",
+      "validation_rows": 144665,
+      "actual_three_head_assembly": true
+    },
+    {
+      "id": "original__seed_20261010",
+      "A": "original",
+      "B": "seed_20261010",
+      "scores": {
+        "POR": 78.06314784005319,
+        "PERM": 89.56546548645483,
+        "SW": 74.1951684727142,
+        "TOTAL": 80.73516623772511
+      },
+      "selected_weights": {
+        "POR": {
+          "weight_A": 0.93,
+          "weight_B": 0.06999999999999995,
+          "score": 78.06314784005319,
+          "grid_index": 93
+        },
+        "PERM": {
+          "weight_A": 0.49,
+          "weight_B": 0.51,
+          "score": 89.56546548645483,
+          "grid_index": 49
+        },
+        "SW": {
+          "weight_A": 0.71,
+          "weight_B": 0.29000000000000004,
+          "score": 74.1951684727142,
+          "grid_index": 71
+        }
+      },
+      "equal_weight_scores": {
+        "POR": 77.93964020763568,
+        "PERM": 89.56537181009944,
+        "SW": 74.17086138314515,
+        "TOTAL": 80.68957367992631
+      },
+      "common_weight": {
+        "weight_A": 0.81,
+        "weight_B": 0.18999999999999995,
+        "scores": {
+          "POR": 78.04793494837638,
+          "PERM": 89.5499386183918,
+          "SW": 74.19438259436203,
+          "TOTAL": 80.72489290897676
+        }
+      },
+      "strata": {
+        "POR": {
+          "DEFAULT": {
+            "rows": 94357,
+            "score": 97.4331528132518
+          },
+          "CONT": {
+            "rows": 50308,
+            "score": 41.733030179719194
+          }
+        },
+        "PERM": {
+          "DEFAULT": {
+            "rows": 95533,
+            "score": 97.56544711178343
+          },
+          "CONT": {
+            "rows": 49132,
+            "score": 74.01018085296752
+          }
+        },
+        "SW": {
+          "DEFAULT": {
+            "rows": 100786,
+            "score": 98.7788544155667
+          },
+          "CONT": {
+            "rows": 43879,
+            "score": 17.72871820182738
+          }
+        }
+      },
+      "strictly_above_8074": false,
+      "delta_vs_8074": -0.004833762274884634,
+      "delta_vs_prior_per_head": 0.0,
+      "prediction_sha256": "6b99887f4c1751effcb63f829e62f5820d19f091046e3658a4ff608b5fa5d5c3",
+      "validation_rows": 144665,
+      "actual_three_head_assembly": true
+    },
+    {
+      "id": "seed_20261010__seed_20261013",
+      "A": "seed_20261010",
+      "B": "seed_20261013",
+      "scores": {
+        "POR": 77.87987794756947,
+        "PERM": 89.70989361316897,
+        "SW": 74.11051575008668,
+        "TOTAL": 80.70110666141031
+      },
+      "selected_weights": {
+        "POR": {
+          "weight_A": 0.43,
+          "weight_B": 0.5700000000000001,
+          "score": 77.87987794756947,
+          "grid_index": 43
+        },
+        "PERM": {
+          "weight_A": 0.44,
+          "weight_B": 0.56,
+          "score": 89.70989361316897,
+          "grid_index": 44
+        },
+        "SW": {
+          "weight_A": 0.69,
+          "weight_B": 0.31000000000000005,
+          "score": 74.11051575008668,
+          "grid_index": 69
+        }
+      },
+      "equal_weight_scores": {
+        "POR": 77.85963176946645,
+        "PERM": 89.70144901903258,
+        "SW": 74.0747107962697,
+        "TOTAL": 80.67954546619573
+      },
+      "common_weight": {
+        "weight_A": 0.56,
+        "weight_B": 0.43999999999999995,
+        "scores": {
+          "POR": 77.85273322572675,
+          "PERM": 89.6990881816535,
+          "SW": 74.09312807419809,
+          "TOTAL": 80.68309565726608
+        }
+      },
+      "strata": {
+        "POR": {
+          "DEFAULT": {
+            "rows": 94357,
+            "score": 97.97259344828683
+          },
+          "CONT": {
+            "rows": 50308,
+            "score": 40.194254259465076
+          }
+        },
+        "PERM": {
+          "DEFAULT": {
+            "rows": 95533,
+            "score": 97.7967246377669
+          },
+          "CONT": {
+            "rows": 49132,
+            "score": 73.98573770107703
+          }
+        },
+        "SW": {
+          "DEFAULT": {
+            "rows": 100786,
+            "score": 99.06794394974452
+          },
+          "CONT": {
+            "rows": 43879,
+            "score": 16.78561412218622
+          }
+        }
+      },
+      "strictly_above_8074": false,
+      "delta_vs_8074": -0.03889333858968769,
+      "delta_vs_prior_per_head": -0.03405957631480305,
+      "prediction_sha256": "c6b831bdb0d538901ab5d09886bb931f84b46969dbe681ecf7e48048e3fe1671",
+      "validation_rows": 144665,
+      "actual_three_head_assembly": true
+    },
+    {
+      "id": "seed_20261010__seed_20261011",
+      "A": "seed_20261010",
+      "B": "seed_20261011",
+      "scores": {
+        "POR": 77.7670763065303,
+        "PERM": 89.56219194278414,
+        "SW": 74.12295650588561,
+        "TOTAL": 80.61992484899349
+      },
+      "selected_weights": {
+        "POR": {
+          "weight_A": 0.7,
+          "weight_B": 0.30000000000000004,
+          "score": 77.7670763065303,
+          "grid_index": 70
+        },
+        "PERM": {
+          "weight_A": 0.51,
+          "weight_B": 0.49,
+          "score": 89.56219194278414,
+          "grid_index": 51
+        },
+        "SW": {
+          "weight_A": 0.6,
+          "weight_B": 0.4,
+          "score": 74.12295650588561,
+          "grid_index": 60
+        }
+      },
+      "equal_weight_scores": {
+        "POR": 77.4222297184294,
+        "PERM": 89.5585288431205,
+        "SW": 74.09430676188722,
+        "TOTAL": 80.50516137728152
+      },
+      "common_weight": {
+        "weight_A": 0.7,
+        "weight_B": 0.30000000000000004,
+        "scores": {
+          "POR": 77.7670763065303,
+          "PERM": 89.54298271482044,
+          "SW": 74.11509809427407,
+          "TOTAL": 80.61045117514217
+        }
+      },
+      "strata": {
+        "POR": {
+          "DEFAULT": {
+            "rows": 94357,
+            "score": 97.7956060493657
+          },
+          "CONT": {
+            "rows": 50308,
+            "score": 40.20183855220314
+          }
+        },
+        "PERM": {
+          "DEFAULT": {
+            "rows": 95533,
+            "score": 97.69615579779612
+          },
+          "CONT": {
+            "rows": 49132,
+            "score": 73.74639024611321
+          }
+        },
+        "SW": {
+          "DEFAULT": {
+            "rows": 100786,
+            "score": 99.14203435435549
+          },
+          "CONT": {
+            "rows": 43879,
+            "score": 16.656451343147594
+          }
+        }
+      },
+      "strictly_above_8074": false,
+      "delta_vs_8074": -0.12007515100650323,
+      "delta_vs_prior_per_head": -0.1152413887316186,
+      "prediction_sha256": "e1f1ed2f82c0af2d41f3dd9e452da1ddda11cf4e541d3c241674afdb90aaff2f",
+      "validation_rows": 144665,
+      "actual_three_head_assembly": true
+    },
+    {
+      "id": "seed_20261010__seed_20261012",
+      "A": "seed_20261010",
+      "B": "seed_20261012",
+      "scores": {
+        "POR": 77.62670491861377,
+        "PERM": 89.63611473083577,
+        "SW": 74.13890550731362,
+        "TOTAL": 80.60926855893642
+      },
+      "selected_weights": {
+        "POR": {
+          "weight_A": 0.82,
+          "weight_B": 0.18000000000000005,
+          "score": 77.62670491861377,
+          "grid_index": 82
+        },
+        "PERM": {
+          "weight_A": 0.51,
+          "weight_B": 0.49,
+          "score": 89.63611473083577,
+          "grid_index": 51
+        },
+        "SW": {
+          "weight_A": 0.59,
+          "weight_B": 0.41000000000000003,
+          "score": 74.13890550731362,
+          "grid_index": 59
+        }
+      },
+      "equal_weight_scores": {
+        "POR": 77.36516421439684,
+        "PERM": 89.63236842709499,
+        "SW": 74.13053527143626,
+        "TOTAL": 80.52656555880498
+      },
+      "common_weight": {
+        "weight_A": 0.69,
+        "weight_B": 0.31000000000000005,
+        "scores": {
+          "POR": 77.6073039988782,
+          "PERM": 89.61551426538443,
+          "SW": 74.11893328717423,
+          "TOTAL": 80.58924784305898
+        }
+      },
+      "strata": {
+        "POR": {
+          "DEFAULT": {
+            "rows": 94357,
+            "score": 97.68114713269816
+          },
+          "CONT": {
+            "rows": 50308,
+            "score": 40.012866085936025
+          }
+        },
+        "PERM": {
+          "DEFAULT": {
+            "rows": 95533,
+            "score": 97.57596607273126
+          },
+          "CONT": {
+            "rows": 49132,
+            "score": 74.19774832512573
+          }
+        },
+        "SW": {
+          "DEFAULT": {
+            "rows": 100786,
+            "score": 99.02514165688719
+          },
+          "CONT": {
+            "rows": 43879,
+            "score": 16.977525426390073
+          }
+        }
+      },
+      "strictly_above_8074": false,
+      "delta_vs_8074": -0.13073144106357404,
+      "delta_vs_prior_per_head": -0.1258976787886894,
+      "prediction_sha256": "e0384bfef3c90e7c1077b8f11e224df3a9f88587426f6a14278c90542e10d43c",
+      "validation_rows": 144665,
+      "actual_three_head_assembly": true
+    },
+    {
+      "id": "seed_20261012__seed_20261013",
+      "A": "seed_20261012",
+      "B": "seed_20261013",
+      "scores": {
+        "POR": 77.51152324950294,
+        "PERM": 89.62994401919543,
+        "SW": 73.91440021311006,
+        "TOTAL": 80.49397745615781
+      },
+      "selected_weights": {
+        "POR": {
+          "weight_A": 0.25,
+          "weight_B": 0.75,
+          "score": 77.51152324950294,
+          "grid_index": 25
+        },
+        "PERM": {
+          "weight_A": 0.63,
+          "weight_B": 0.37,
+          "score": 89.62994401919543,
+          "grid_index": 63
+        },
+        "SW": {
+          "weight_A": 0.69,
+          "weight_B": 0.31000000000000005,
+          "score": 73.91440021311006,
+          "grid_index": 69
+        }
+      },
+      "equal_weight_scores": {
+        "POR": 77.35983247536026,
+        "PERM": 89.62208196509913,
+        "SW": 73.88142116322062,
+        "TOTAL": 80.43417583751999
+      },
+      "common_weight": {
+        "weight_A": 0.35,
+        "weight_B": 0.65,
+        "scores": {
+          "POR": 77.50192912689225,
+          "PERM": 89.62273303683668,
+          "SW": 73.81678660059654,
+          "TOTAL": 80.4544106111693
+        }
+      },
+      "strata": {
+        "POR": {
+          "DEFAULT": {
+            "rows": 94357,
+            "score": 97.94079930476806
+          },
+          "CONT": {
+            "rows": 50308,
+            "score": 39.19465116660057
+          }
+        },
+        "PERM": {
+          "DEFAULT": {
+            "rows": 95533,
+            "score": 97.55166119293726
+          },
+          "CONT": {
+            "rows": 49132,
+            "score": 74.22683796287619
+          }
+        },
+        "SW": {
+          "DEFAULT": {
+            "rows": 100786,
+            "score": 99.04738590965354
+          },
+          "CONT": {
+            "rows": 43879,
+            "score": 16.18625927070584
+          }
+        }
+      },
+      "strictly_above_8074": false,
+      "delta_vs_8074": -0.24602254384218725,
+      "delta_vs_prior_per_head": -0.2411887815673026,
+      "prediction_sha256": "5fd313b4b941985b1ac3c2e401f5463b16eb8e9666251211ca683eee75ccf04c",
+      "validation_rows": 144665,
+      "actual_three_head_assembly": true
+    },
+    {
+      "id": "seed_20261011__seed_20261013",
+      "A": "seed_20261011",
+      "B": "seed_20261013",
+      "scores": {
+        "POR": 77.63663243559004,
+        "PERM": 89.6095476237899,
+        "SW": 73.81946265348363,
+        "TOTAL": 80.49114332772274
+      },
+      "selected_weights": {
+        "POR": {
+          "weight_A": 0.33,
+          "weight_B": 0.6699999999999999,
+          "score": 77.63663243559004,
+          "grid_index": 33
+        },
+        "PERM": {
+          "weight_A": 0.33,
+          "weight_B": 0.6699999999999999,
+          "score": 89.6095476237899,
+          "grid_index": 33
+        },
+        "SW": {
+          "weight_A": 0.65,
+          "weight_B": 0.35,
+          "score": 73.81946265348363,
+          "grid_index": 65
+        }
+      },
+      "equal_weight_scores": {
+        "POR": 77.45602887939718,
+        "PERM": 89.59749077808743,
+        "SW": 73.80360936529914,
+        "TOTAL": 80.42719371400446
+      },
+      "common_weight": {
+        "weight_A": 0.38,
+        "weight_B": 0.62,
+        "scores": {
+          "POR": 77.61853102433994,
+          "PERM": 89.60372281815953,
+          "SW": 73.7763536004548,
+          "TOTAL": 80.46858605381699
+        }
+      },
+      "strata": {
+        "POR": {
+          "DEFAULT": {
+            "rows": 94357,
+            "score": 98.04360036881206
+          },
+          "CONT": {
+            "rows": 50308,
+            "score": 39.36160116273012
+          }
+        },
+        "PERM": {
+          "DEFAULT": {
+            "rows": 95533,
+            "score": 97.75926112082524
+          },
+          "CONT": {
+            "rows": 49132,
+            "score": 73.7631220862152
+          }
+        },
+        "SW": {
+          "DEFAULT": {
+            "rows": 100786,
+            "score": 99.20129125452831
+          },
+          "CONT": {
+            "rows": 43879,
+            "score": 15.519752601185507
+          }
+        }
+      },
+      "strictly_above_8074": false,
+      "delta_vs_8074": -0.24885667227725605,
+      "delta_vs_prior_per_head": -0.24402291000237142,
+      "prediction_sha256": "0818854057b95fad87e4a39b3b7152a5507f9969f1fb224c6b2595491af48c37",
+      "validation_rows": 144665,
+      "actual_three_head_assembly": true
+    },
+    {
+      "id": "seed_20261011__seed_20261012",
+      "A": "seed_20261011",
+      "B": "seed_20261012",
+      "scores": {
+        "POR": 77.03971172925115,
+        "PERM": 89.55190287478018,
+        "SW": 73.98669705891729,
+        "TOTAL": 80.35042349556946
+      },
+      "selected_weights": {
+        "POR": {
+          "weight_A": 0.33,
+          "weight_B": 0.6699999999999999,
+          "score": 77.03971172925115,
+          "grid_index": 33
+        },
+        "PERM": {
+          "weight_A": 0.52,
+          "weight_B": 0.48,
+          "score": 89.55190287478018,
+          "grid_index": 52
+        },
+        "SW": {
+          "weight_A": 0.39,
+          "weight_B": 0.61,
+          "score": 73.98669705891729,
+          "grid_index": 39
+        }
+      },
+      "equal_weight_scores": {
+        "POR": 77.02260729536954,
+        "PERM": 89.54952572964157,
+        "SW": 73.95970199142766,
+        "TOTAL": 80.33501189098509
+      },
+      "common_weight": {
+        "weight_A": 0.39,
+        "weight_B": 0.61,
+        "scores": {
+          "POR": 77.02583755926672,
+          "PERM": 89.5471564944985,
+          "SW": 73.98669705891729,
+          "TOTAL": 80.34460001147553
+        }
+      },
+      "strata": {
+        "POR": {
+          "DEFAULT": {
+            "rows": 94357,
+            "score": 97.75851288192715
+          },
+          "CONT": {
+            "rows": 50308,
+            "score": 38.17981031470411
+          }
+        },
+        "PERM": {
+          "DEFAULT": {
+            "rows": 95533,
+            "score": 97.56341307574961
+          },
+          "CONT": {
+            "rows": 49132,
+            "score": 73.97420190536691
+          }
+        },
+        "SW": {
+          "DEFAULT": {
+            "rows": 100786,
+            "score": 99.14283562943355
+          },
+          "CONT": {
+            "rows": 43879,
+            "score": 16.205376108850615
+          }
+        }
+      },
+      "strictly_above_8074": false,
+      "delta_vs_8074": -0.3895765044305364,
+      "delta_vs_prior_per_head": -0.38474274215565174,
+      "prediction_sha256": "3edf1c26d53b1643d397bca85797501ba3cf139756acb969428e69d06d7d1cba",
+      "validation_rows": 144665,
+      "actual_three_head_assembly": true
+    }
+  ],
+  "models": [
+    {
+      "id": "original",
+      "seed": null,
+      "scores": {
+        "POR": 78.04643071793232,
+        "PERM": 89.51838939879066,
+        "SW": 74.17361205223327,
+        "TOTAL": 80.70612972323806
+      },
+      "heads": {
+        "POR": {
+          "checkpoint": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_por_coupling_conditional_rps_v341_fold5\\conditional\\model_best.pt",
+          "sha256": "878444dafeb7e8205d44315715ca3ac6870386b28741c7669e965977195d5af2"
+        },
+        "PERM": {
+          "checkpoint": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_perm_low_rank_cross_v336_fold5\\cross\\model_best.pt",
+          "sha256": "e61bce6f693b86380c98dbb0ecfdd6bd7d53d281cad92d3fe9295917f22ea0f0"
+        },
+        "SW": {
+          "checkpoint": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_sw_dynamic_cross_spectrum_v351_fold5\\aligned\\model_best.pt",
+          "sha256": "48ea1314a9cf9e3d4f30d92b939bc8cf9da3fa1769c15431f53d297566cf4206"
+        }
+      },
+      "stage_count": 8
+    },
+    {
+      "id": "seed_20261010",
+      "seed": 20261010,
+      "scores": {
+        "POR": 77.5520561792274,
+        "PERM": 89.49625487509155,
+        "SW": 74.03612889675152,
+        "TOTAL": 80.5019511739133
+      },
+      "heads": {
+        "POR": {
+          "checkpoint": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261010\\POR341\\model_best.pt",
+          "sha256": "68fe9da472b729853888efdf4d847054871d75c31f70f082b17627612a07d273"
+        },
+        "PERM": {
+          "checkpoint": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261010\\PERM336\\model_best.pt",
+          "sha256": "ad99e9846f046fa7e4add6f8643bd495fac1fc85793244ef91533d72671cdfee"
+        },
+        "SW": {
+          "checkpoint": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261010\\SW351_fixed\\model_best.pt",
+          "sha256": "e97d76e8b2d11168407dee1ac9b5b7a34504d18eb073d7efdac1fb8b504c78be"
+        }
+      },
+      "stage_count": 8
+    },
+    {
+      "id": "seed_20261011",
+      "seed": 20261011,
+      "scores": {
+        "POR": 76.72694269202935,
+        "PERM": 89.38299330747085,
+        "SW": 73.74686202568397,
+        "TOTAL": 80.11353217421299
+      },
+      "heads": {
+        "POR": {
+          "checkpoint": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261011\\POR341\\model_best.pt",
+          "sha256": "00c1bfc7f0578b2405ece9a58eaf21163780f754c3e3ffeb808c00a071bed272"
+        },
+        "PERM": {
+          "checkpoint": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261011\\PERM336\\model_best.pt",
+          "sha256": "1d927662b78027bc55f8f5caa9a5af0b60406838f31266d45d75af7159a506bf"
+        },
+        "SW": {
+          "checkpoint": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261011\\SW351_fixed\\model_best.pt",
+          "sha256": "35ba5c14b78aaf7de5c7cb1a04893c094644617b087acc422d893199745c3795"
+        }
+      },
+      "stage_count": 8
+    },
+    {
+      "id": "seed_20261012",
+      "seed": 20261012,
+      "scores": {
+        "POR": 76.81520301795747,
+        "PERM": 89.46897371901133,
+        "SW": 73.84783722739398,
+        "TOTAL": 80.2054447366291
+      },
+      "heads": {
+        "POR": {
+          "checkpoint": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261012\\POR341\\model_best.pt",
+          "sha256": "cf207f90e5b0041bc48086f042f1a2a2b0e2aaf11435c780e7ae1bc803efc170"
+        },
+        "PERM": {
+          "checkpoint": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261012\\PERM336\\model_best.pt",
+          "sha256": "4da7e778c7b60d686127f8601d647d4f1fd7993a22fb52e23de2db7740caba0d"
+        },
+        "SW": {
+          "checkpoint": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261012\\SW351_fixed\\model_best.pt",
+          "sha256": "989ca000583a1740421e31b809dfccd00e58e12a39aa790a424bc2674a3fdd38"
+        }
+      },
+      "stage_count": 8
+    },
+    {
+      "id": "seed_20261013",
+      "seed": 20261013,
+      "scores": {
+        "POR": 77.38833330639497,
+        "PERM": 89.52127968635101,
+        "SW": 73.63533098562274,
+        "TOTAL": 80.3213137271093
+      },
+      "stage_count": 8,
+      "heads": {
+        "POR": {
+          "checkpoint": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261013\\POR341\\model_best.pt",
+          "sha256": "4979216f2196ac701da12712ea0632da9d0a2f527708bf38342ad34454677061"
+        },
+        "PERM": {
+          "checkpoint": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261013\\PERM336\\model_best.pt",
+          "sha256": "3ef4eaf7dea84c889888c37cda1fa0545894340614e357ce1a930a40d99410b4"
+        },
+        "SW": {
+          "checkpoint": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261013\\SW351_fixed\\model_best.pt",
+          "sha256": "8dfcd82728e8432a26bb495ae354d7a2806e589850312f30cc0052878f8e5caf"
+        }
+      }
+    }
+  ],
+  "pairs": 10,
+  "grid": "0:0.01:1",
+  "selection": "Per-head official whole-head score, fixed ratio for every row; exact ties prefer higher A weight",
+  "method": "Native predictive probability mixture, unchanged per-head official utility argmax; utility weighting is linear-equivalent",
+  "limitation": "Same fifth-fold labels used to choose pair and ratios; diagnostic only, no independent generalization/full OOF claim.",
+  "CPU_seconds": 37.74487260001479,
+  "GPU_pass_reports": [
+    {
+      "target": "POR",
+      "pairs": [
+        {
+          "id": "original__seed_20261011",
+          "A": "original",
+          "B": "seed_20261011"
+        },
+        {
+          "id": "original__seed_20261012",
+          "A": "original",
+          "B": "seed_20261012"
+        },
+        {
+          "id": "seed_20261010__seed_20261011",
+          "A": "seed_20261010",
+          "B": "seed_20261011"
+        },
+        {
+          "id": "seed_20261010__seed_20261012",
+          "A": "seed_20261010",
+          "B": "seed_20261012"
+        },
+        {
+          "id": "seed_20261011__seed_20261012",
+          "A": "seed_20261011",
+          "B": "seed_20261012"
+        }
+      ],
+      "models": [
+        "original",
+        "seed_20261010",
+        "seed_20261011",
+        "seed_20261012"
+      ],
+      "rows": 144665,
+      "coverage_exactly_once": true,
+      "native_disk_replay_exact": true,
+      "endpoints_exact": true,
+      "actual_seed_loads": {
+        "original": [],
+        "seed_20261010": [
+          {
+            "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261010\\SOURCE\\prepared_data.pt",
+            "sha256": "07bf3356b59a2473fb1384e7b3a68e2bf5c081c476c42cfd3b0eebd2f2590165"
+          },
+          {
+            "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261010\\SOURCE\\fold_5.pt",
+            "sha256": "7ce54c5a19dcdd61ef89ce21b2aaac621ee171e51ad7250059addc95f6230556"
+          },
+          {
+            "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261010\\POR113\\model_best.pt",
+            "sha256": "58ed13b4f8d60b8d7e1e26a16aaca8c4fac3c09db315a836f61b78aa05b54861"
+          },
+          {
+            "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261010\\POR151\\model_best.pt",
+            "sha256": "f9063efd48b539fea5bbfe54b7bffaef3ea663f475d4931fe14b816734a8163e"
+          },
+          {
+            "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261010\\POR341\\model_best.pt",
+            "sha256": "68fe9da472b729853888efdf4d847054871d75c31f70f082b17627612a07d273"
+          }
+        ],
+        "seed_20261011": [
+          {
+            "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261011\\SOURCE\\prepared_data.pt",
+            "sha256": "b0dc567d307905ae405db841b73f1772ac00ed1860a4c03b3a70edd4f109ae0f"
+          },
+          {
+            "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261011\\SOURCE\\fold_5.pt",
+            "sha256": "6f13e1ced8e0ee6b50eb9248e07f9ee2a72f9aec35b221c97a782e65b3e81471"
+          },
+          {
+            "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261011\\POR113\\model_best.pt",
+            "sha256": "b7bfcdfdd2014043cdc78c4ab7b570ecb72c9c8381e3adba1991289ef3f77059"
+          },
+          {
+            "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261011\\POR151\\model_best.pt",
+            "sha256": "2e3f5d85b0128b45904be902009d0aa89acce3efa085ca6a78371baad44fe56b"
+          },
+          {
+            "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261011\\POR341\\model_best.pt",
+            "sha256": "00c1bfc7f0578b2405ece9a58eaf21163780f754c3e3ffeb808c00a071bed272"
+          }
+        ],
+        "seed_20261012": [
+          {
+            "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261012\\SOURCE\\prepared_data.pt",
+            "sha256": "65ec323ddb976309d2753fa8ac186660f1811be39e41d9ffac6a46911efc1189"
+          },
+          {
+            "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261012\\SOURCE\\fold_5.pt",
+            "sha256": "315f490ab3d9233420d15d9b29deb644d0a5f419e69a34567cdc8eb5de41f525"
+          },
+          {
+            "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261012\\POR113\\model_best.pt",
+            "sha256": "a5b49790ee6810dbca8ad5f93ac93e721147f6f6e97a7200fc996cfbb2184601"
+          },
+          {
+            "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261012\\POR151\\model_best.pt",
+            "sha256": "ddc70ad2fbff273f4215535ac77981246cf861c34820b5c893fbbc91a693217d"
+          },
+          {
+            "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261012\\POR341\\model_best.pt",
+            "sha256": "cf207f90e5b0041bc48086f042f1a2a2b0e2aaf11435c780e7ae1bc803efc170"
+          }
+        ]
+      },
+      "seconds": 45.22026009997353,
+      "load_preparation_seconds": 18.440558400005102,
+      "peak_MiB": 2251.23388671875,
+      "admission": {
+        "maximum_concurrent_jobs": 2,
+        "other_jobs": [
+          {
+            "pid": 90804,
+            "script": "train_complete_seed_stage_v362r1.py"
+          }
+        ],
+        "free_gib": 10.8037109375,
+        "total_gib": 11.99365234375
+      },
+      "other_GPU_pids": [
+        90804
+      ],
+      "concurrent_training_continues": true,
+      "includes": "load/preparation/warmup/shared four-model forward/all grids/output writing",
+      "extra_training_stages": 0,
+      "screening_fold": 5,
+      "complete_five_folds": false
+    },
+    {
+      "target": "POR",
+      "pairs": [
+        {
+          "id": "original__seed_20261013",
+          "A": "original",
+          "B": "seed_20261013"
+        },
+        {
+          "id": "seed_20261010__seed_20261013",
+          "A": "seed_20261010",
+          "B": "seed_20261013"
+        },
+        {
+          "id": "seed_20261011__seed_20261013",
+          "A": "seed_20261011",
+          "B": "seed_20261013"
+        },
+        {
+          "id": "seed_20261012__seed_20261013",
+          "A": "seed_20261012",
+          "B": "seed_20261013"
+        }
+      ],
+      "models": [
+        "original",
+        "seed_20261010",
+        "seed_20261011",
+        "seed_20261012",
+        "seed_20261013"
+      ],
+      "rows": 144665,
+      "coverage_exactly_once": true,
+      "native_disk_replay_exact": true,
+      "endpoints_exact": true,
+      "actual_seed_loads": {
+        "original": [],
+        "seed_20261010": [
+          {
+            "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261010\\SOURCE\\prepared_data.pt",
+            "sha256": "07bf3356b59a2473fb1384e7b3a68e2bf5c081c476c42cfd3b0eebd2f2590165"
+          },
+          {
+            "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261010\\SOURCE\\fold_5.pt",
+            "sha256": "7ce54c5a19dcdd61ef89ce21b2aaac621ee171e51ad7250059addc95f6230556"
+          },
+          {
+            "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261010\\POR113\\model_best.pt",
+            "sha256": "58ed13b4f8d60b8d7e1e26a16aaca8c4fac3c09db315a836f61b78aa05b54861"
+          },
+          {
+            "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261010\\POR151\\model_best.pt",
+            "sha256": "f9063efd48b539fea5bbfe54b7bffaef3ea663f475d4931fe14b816734a8163e"
+          },
+          {
+            "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261010\\POR341\\model_best.pt",
+            "sha256": "68fe9da472b729853888efdf4d847054871d75c31f70f082b17627612a07d273"
+          }
+        ],
+        "seed_20261011": [
+          {
+            "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261011\\SOURCE\\prepared_data.pt",
+            "sha256": "b0dc567d307905ae405db841b73f1772ac00ed1860a4c03b3a70edd4f109ae0f"
+          },
+          {
+            "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261011\\SOURCE\\fold_5.pt",
+            "sha256": "6f13e1ced8e0ee6b50eb9248e07f9ee2a72f9aec35b221c97a782e65b3e81471"
+          },
+          {
+            "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261011\\POR113\\model_best.pt",
+            "sha256": "b7bfcdfdd2014043cdc78c4ab7b570ecb72c9c8381e3adba1991289ef3f77059"
+          },
+          {
+            "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261011\\POR151\\model_best.pt",
+            "sha256": "2e3f5d85b0128b45904be902009d0aa89acce3efa085ca6a78371baad44fe56b"
+          },
+          {
+            "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261011\\POR341\\model_best.pt",
+            "sha256": "00c1bfc7f0578b2405ece9a58eaf21163780f754c3e3ffeb808c00a071bed272"
+          }
+        ],
+        "seed_20261012": [
+          {
+            "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261012\\SOURCE\\prepared_data.pt",
+            "sha256": "65ec323ddb976309d2753fa8ac186660f1811be39e41d9ffac6a46911efc1189"
+          },
+          {
+            "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261012\\SOURCE\\fold_5.pt",
+            "sha256": "315f490ab3d9233420d15d9b29deb644d0a5f419e69a34567cdc8eb5de41f525"
+          },
+          {
+            "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261012\\POR113\\model_best.pt",
+            "sha256": "a5b49790ee6810dbca8ad5f93ac93e721147f6f6e97a7200fc996cfbb2184601"
+          },
+          {
+            "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261012\\POR151\\model_best.pt",
+            "sha256": "ddc70ad2fbff273f4215535ac77981246cf861c34820b5c893fbbc91a693217d"
+          },
+          {
+            "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261012\\POR341\\model_best.pt",
+            "sha256": "cf207f90e5b0041bc48086f042f1a2a2b0e2aaf11435c780e7ae1bc803efc170"
+          }
+        ],
+        "seed_20261013": [
+          {
+            "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261013\\SOURCE\\prepared_data.pt",
+            "sha256": "7631a742dfefa29ef08f31122a10437c0cf8b208b98ac730b5841e9713c139a3"
+          },
+          {
+            "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261013\\SOURCE\\fold_5.pt",
+            "sha256": "914ee8d14be5c05f9bea14a3faeedb9dc2a2129ae1ffb4bc0e7cceab07b6cbd5"
+          },
+          {
+            "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261013\\POR113\\model_best.pt",
+            "sha256": "72b2cf5d08522135c6ead41de6d62443ac990988b759272ac54011fa082b62af"
+          },
+          {
+            "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261013\\POR151\\model_best.pt",
+            "sha256": "9a70a7a8c8b2391b0a0a0f6399b5dcf3802f12b425fc100553c69f028503a5ff"
+          },
+          {
+            "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261013\\POR341\\model_best.pt",
+            "sha256": "4979216f2196ac701da12712ea0632da9d0a2f527708bf38342ad34454677061"
+          }
+        ]
+      },
+      "seconds": 41.516555799986236,
+      "load_preparation_seconds": 18.720228499965742,
+      "peak_MiB": 2681.76123046875,
+      "admission": {
+        "maximum_concurrent_jobs": 2,
+        "other_jobs": [
+          {
+            "pid": 39412,
+            "script": "train_complete_seed_source_v362.py"
+          }
+        ],
+        "free_gib": 10.8037109375,
+        "total_gib": 11.99365234375
+      },
+      "other_GPU_pids": [
+        39412
+      ],
+      "concurrent_training_continues": true,
+      "includes": "load/preparation/warmup/shared four-model forward/all grids/output writing",
+      "extra_training_stages": 0,
+      "screening_fold": 5,
+      "complete_five_folds": false
+    },
+    {
+      "target": "PERM",
+      "pairs": [
+        {
+          "id": "original__seed_20261011",
+          "A": "original",
+          "B": "seed_20261011"
+        },
+        {
+          "id": "original__seed_20261012",
+          "A": "original",
+          "B": "seed_20261012"
+        },
+        {
+          "id": "seed_20261010__seed_20261011",
+          "A": "seed_20261010",
+          "B": "seed_20261011"
+        },
+        {
+          "id": "seed_20261010__seed_20261012",
+          "A": "seed_20261010",
+          "B": "seed_20261012"
+        },
+        {
+          "id": "seed_20261011__seed_20261012",
+          "A": "seed_20261011",
+          "B": "seed_20261012"
+        }
+      ],
+      "models": [
+        "original",
+        "seed_20261010",
+        "seed_20261011",
+        "seed_20261012"
+      ],
+      "rows": 144665,
+      "coverage_exactly_once": true,
+      "native_disk_replay_exact": true,
+      "endpoints_exact": true,
+      "actual_seed_loads": {
+        "original": [],
+        "seed_20261010": [
+          {
+            "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261010\\SOURCE\\prepared_data.pt",
+            "sha256": "07bf3356b59a2473fb1384e7b3a68e2bf5c081c476c42cfd3b0eebd2f2590165"
+          },
+          {
+            "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261010\\SOURCE\\fold_5.pt",
+            "sha256": "7ce54c5a19dcdd61ef89ce21b2aaac621ee171e51ad7250059addc95f6230556"
+          },
+          {
+            "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261010\\PERM154\\model_best.pt",
+            "sha256": "7799ea3f7ee5ec5099d07bae9c76081440dc88218d0cd679355b9304c2030715"
+          },
+          {
+            "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261010\\PERM336\\model_best.pt",
+            "sha256": "ad99e9846f046fa7e4add6f8643bd495fac1fc85793244ef91533d72671cdfee"
+          }
+        ],
+        "seed_20261011": [
+          {
+            "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261011\\SOURCE\\prepared_data.pt",
+            "sha256": "b0dc567d307905ae405db841b73f1772ac00ed1860a4c03b3a70edd4f109ae0f"
+          },
+          {
+            "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261011\\SOURCE\\fold_5.pt",
+            "sha256": "6f13e1ced8e0ee6b50eb9248e07f9ee2a72f9aec35b221c97a782e65b3e81471"
+          },
+          {
+            "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261011\\PERM154\\model_best.pt",
+            "sha256": "03536ce420e0c33fb6fa37a86454b2906a2c5fa42945f0e2d5ed8c9b46e8865f"
+          },
+          {
+            "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261011\\PERM336\\model_best.pt",
+            "sha256": "1d927662b78027bc55f8f5caa9a5af0b60406838f31266d45d75af7159a506bf"
+          }
+        ],
+        "seed_20261012": [
+          {
+            "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261012\\SOURCE\\prepared_data.pt",
+            "sha256": "65ec323ddb976309d2753fa8ac186660f1811be39e41d9ffac6a46911efc1189"
+          },
+          {
+            "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261012\\SOURCE\\fold_5.pt",
+            "sha256": "315f490ab3d9233420d15d9b29deb644d0a5f419e69a34567cdc8eb5de41f525"
+          },
+          {
+            "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261012\\PERM154\\model_best.pt",
+            "sha256": "cc80a537fc7d1489540af4807516ba51daa2317263fcf301673a8ab2091d5d17"
+          },
+          {
+            "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261012\\PERM336\\model_best.pt",
+            "sha256": "4da7e778c7b60d686127f8601d647d4f1fd7993a22fb52e23de2db7740caba0d"
+          }
+        ]
+      },
+      "seconds": 44.543286599975545,
+      "load_preparation_seconds": 19.96556069998769,
+      "peak_MiB": 2052.1630859375,
+      "admission": {
+        "maximum_concurrent_jobs": 2,
+        "other_jobs": [
+          {
+            "pid": 90804,
+            "script": "train_complete_seed_stage_v362r1.py"
+          }
+        ],
+        "free_gib": 10.8037109375,
+        "total_gib": 11.99365234375
+      },
+      "other_GPU_pids": [
+        90804
+      ],
+      "concurrent_training_continues": true,
+      "includes": "load/preparation/warmup/shared four-model forward/all grids/output writing",
+      "extra_training_stages": 0,
+      "screening_fold": 5,
+      "complete_five_folds": false
+    },
+    {
+      "target": "PERM",
+      "pairs": [
+        {
+          "id": "original__seed_20261013",
+          "A": "original",
+          "B": "seed_20261013"
+        },
+        {
+          "id": "seed_20261010__seed_20261013",
+          "A": "seed_20261010",
+          "B": "seed_20261013"
+        },
+        {
+          "id": "seed_20261011__seed_20261013",
+          "A": "seed_20261011",
+          "B": "seed_20261013"
+        },
+        {
+          "id": "seed_20261012__seed_20261013",
+          "A": "seed_20261012",
+          "B": "seed_20261013"
+        }
+      ],
+      "models": [
+        "original",
+        "seed_20261010",
+        "seed_20261011",
+        "seed_20261012",
+        "seed_20261013"
+      ],
+      "rows": 144665,
+      "coverage_exactly_once": true,
+      "native_disk_replay_exact": true,
+      "endpoints_exact": true,
+      "actual_seed_loads": {
+        "original": [],
+        "seed_20261010": [
+          {
+            "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261010\\SOURCE\\prepared_data.pt",
+            "sha256": "07bf3356b59a2473fb1384e7b3a68e2bf5c081c476c42cfd3b0eebd2f2590165"
+          },
+          {
+            "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261010\\SOURCE\\fold_5.pt",
+            "sha256": "7ce54c5a19dcdd61ef89ce21b2aaac621ee171e51ad7250059addc95f6230556"
+          },
+          {
+            "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261010\\PERM154\\model_best.pt",
+            "sha256": "7799ea3f7ee5ec5099d07bae9c76081440dc88218d0cd679355b9304c2030715"
+          },
+          {
+            "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261010\\PERM336\\model_best.pt",
+            "sha256": "ad99e9846f046fa7e4add6f8643bd495fac1fc85793244ef91533d72671cdfee"
+          }
+        ],
+        "seed_20261011": [
+          {
+            "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261011\\SOURCE\\prepared_data.pt",
+            "sha256": "b0dc567d307905ae405db841b73f1772ac00ed1860a4c03b3a70edd4f109ae0f"
+          },
+          {
+            "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261011\\SOURCE\\fold_5.pt",
+            "sha256": "6f13e1ced8e0ee6b50eb9248e07f9ee2a72f9aec35b221c97a782e65b3e81471"
+          },
+          {
+            "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261011\\PERM154\\model_best.pt",
+            "sha256": "03536ce420e0c33fb6fa37a86454b2906a2c5fa42945f0e2d5ed8c9b46e8865f"
+          },
+          {
+            "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261011\\PERM336\\model_best.pt",
+            "sha256": "1d927662b78027bc55f8f5caa9a5af0b60406838f31266d45d75af7159a506bf"
+          }
+        ],
+        "seed_20261012": [
+          {
+            "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261012\\SOURCE\\prepared_data.pt",
+            "sha256": "65ec323ddb976309d2753fa8ac186660f1811be39e41d9ffac6a46911efc1189"
+          },
+          {
+            "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261012\\SOURCE\\fold_5.pt",
+            "sha256": "315f490ab3d9233420d15d9b29deb644d0a5f419e69a34567cdc8eb5de41f525"
+          },
+          {
+            "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261012\\PERM154\\model_best.pt",
+            "sha256": "cc80a537fc7d1489540af4807516ba51daa2317263fcf301673a8ab2091d5d17"
+          },
+          {
+            "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261012\\PERM336\\model_best.pt",
+            "sha256": "4da7e778c7b60d686127f8601d647d4f1fd7993a22fb52e23de2db7740caba0d"
+          }
+        ],
+        "seed_20261013": [
+          {
+            "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261013\\SOURCE\\prepared_data.pt",
+            "sha256": "7631a742dfefa29ef08f31122a10437c0cf8b208b98ac730b5841e9713c139a3"
+          },
+          {
+            "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261013\\SOURCE\\fold_5.pt",
+            "sha256": "914ee8d14be5c05f9bea14a3faeedb9dc2a2129ae1ffb4bc0e7cceab07b6cbd5"
+          },
+          {
+            "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261013\\PERM154\\model_best.pt",
+            "sha256": "91fb5dc1dd5bda662c33adbd964c56c5c7ca9c1e572d5df96b18b0b511d394cb"
+          },
+          {
+            "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261013\\PERM336\\model_best.pt",
+            "sha256": "3ef4eaf7dea84c889888c37cda1fa0545894340614e357ce1a930a40d99410b4"
+          }
+        ]
+      },
+      "seconds": 42.25496659998316,
+      "load_preparation_seconds": 23.663502799987327,
+      "peak_MiB": 2481.27294921875,
+      "admission": {
+        "maximum_concurrent_jobs": 2,
+        "other_jobs": [
+          {
+            "pid": 39412,
+            "script": "train_complete_seed_source_v362.py"
+          }
+        ],
+        "free_gib": 10.8037109375,
+        "total_gib": 11.99365234375
+      },
+      "other_GPU_pids": [
+        39412
+      ],
+      "concurrent_training_continues": true,
+      "includes": "load/preparation/warmup/shared four-model forward/all grids/output writing",
+      "extra_training_stages": 0,
+      "screening_fold": 5,
+      "complete_five_folds": false
+    },
+    {
+      "target": "SW",
+      "pairs": [
+        {
+          "id": "original__seed_20261011",
+          "A": "original",
+          "B": "seed_20261011"
+        },
+        {
+          "id": "original__seed_20261012",
+          "A": "original",
+          "B": "seed_20261012"
+        },
+        {
+          "id": "seed_20261010__seed_20261011",
+          "A": "seed_20261010",
+          "B": "seed_20261011"
+        },
+        {
+          "id": "seed_20261010__seed_20261012",
+          "A": "seed_20261010",
+          "B": "seed_20261012"
+        },
+        {
+          "id": "seed_20261011__seed_20261012",
+          "A": "seed_20261011",
+          "B": "seed_20261012"
+        }
+      ],
+      "models": [
+        "original",
+        "seed_20261010",
+        "seed_20261011",
+        "seed_20261012"
+      ],
+      "rows": 144665,
+      "coverage_exactly_once": true,
+      "native_disk_replay_exact": true,
+      "endpoints_exact": true,
+      "actual_seed_loads": {
+        "original": [],
+        "seed_20261010": [
+          {
+            "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261010\\SOURCE\\prepared_data.pt",
+            "sha256": "07bf3356b59a2473fb1384e7b3a68e2bf5c081c476c42cfd3b0eebd2f2590165"
+          },
+          {
+            "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261010\\SOURCE\\fold_5.pt",
+            "sha256": "7ce54c5a19dcdd61ef89ce21b2aaac621ee171e51ad7250059addc95f6230556"
+          },
+          {
+            "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261010\\SW104\\model_best.pt",
+            "sha256": "408466bb2f38aadcf61d266da5ea8df08355b17604c5f6d26d0b09ab2967c0e9"
+          },
+          {
+            "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261010\\SW351_fixed\\model_best.pt",
+            "sha256": "e97d76e8b2d11168407dee1ac9b5b7a34504d18eb073d7efdac1fb8b504c78be"
+          }
+        ],
+        "seed_20261011": [
+          {
+            "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261011\\SOURCE\\prepared_data.pt",
+            "sha256": "b0dc567d307905ae405db841b73f1772ac00ed1860a4c03b3a70edd4f109ae0f"
+          },
+          {
+            "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261011\\SOURCE\\fold_5.pt",
+            "sha256": "6f13e1ced8e0ee6b50eb9248e07f9ee2a72f9aec35b221c97a782e65b3e81471"
+          },
+          {
+            "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261011\\SW104\\model_best.pt",
+            "sha256": "a8ad3b76570f713d53f42473717396c346f1a56f647ec0e99470ef2d0ea1f9d1"
+          },
+          {
+            "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261011\\SW351_fixed\\model_best.pt",
+            "sha256": "35ba5c14b78aaf7de5c7cb1a04893c094644617b087acc422d893199745c3795"
+          }
+        ],
+        "seed_20261012": [
+          {
+            "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261012\\SOURCE\\prepared_data.pt",
+            "sha256": "65ec323ddb976309d2753fa8ac186660f1811be39e41d9ffac6a46911efc1189"
+          },
+          {
+            "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261012\\SOURCE\\fold_5.pt",
+            "sha256": "315f490ab3d9233420d15d9b29deb644d0a5f419e69a34567cdc8eb5de41f525"
+          },
+          {
+            "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261012\\SW104\\model_best.pt",
+            "sha256": "75945909d0d682964307f910065b24a0cece59e251652b73719c3d7853fd90e1"
+          },
+          {
+            "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261012\\SW351_fixed\\model_best.pt",
+            "sha256": "989ca000583a1740421e31b809dfccd00e58e12a39aa790a424bc2674a3fdd38"
+          }
+        ]
+      },
+      "seconds": 27.376903900003526,
+      "load_preparation_seconds": 14.624828700034413,
+      "peak_MiB": 1558.54931640625,
+      "admission": {
+        "maximum_concurrent_jobs": 2,
+        "other_jobs": [
+          {
+            "pid": 39412,
+            "script": "train_complete_seed_source_v362.py"
+          }
+        ],
+        "free_gib": 10.8037109375,
+        "total_gib": 11.99365234375
+      },
+      "other_GPU_pids": [
+        39412
+      ],
+      "concurrent_training_continues": true,
+      "includes": "load/preparation/warmup/shared four-model forward/all grids/output writing",
+      "extra_training_stages": 0,
+      "screening_fold": 5,
+      "complete_five_folds": false
+    },
+    {
+      "target": "SW",
+      "pairs": [
+        {
+          "id": "original__seed_20261013",
+          "A": "original",
+          "B": "seed_20261013"
+        },
+        {
+          "id": "seed_20261010__seed_20261013",
+          "A": "seed_20261010",
+          "B": "seed_20261013"
+        },
+        {
+          "id": "seed_20261011__seed_20261013",
+          "A": "seed_20261011",
+          "B": "seed_20261013"
+        },
+        {
+          "id": "seed_20261012__seed_20261013",
+          "A": "seed_20261012",
+          "B": "seed_20261013"
+        }
+      ],
+      "models": [
+        "original",
+        "seed_20261010",
+        "seed_20261011",
+        "seed_20261012",
+        "seed_20261013"
+      ],
+      "rows": 144665,
+      "coverage_exactly_once": true,
+      "native_disk_replay_exact": true,
+      "endpoints_exact": true,
+      "actual_seed_loads": {
+        "original": [],
+        "seed_20261010": [
+          {
+            "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261010\\SOURCE\\prepared_data.pt",
+            "sha256": "07bf3356b59a2473fb1384e7b3a68e2bf5c081c476c42cfd3b0eebd2f2590165"
+          },
+          {
+            "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261010\\SOURCE\\fold_5.pt",
+            "sha256": "7ce54c5a19dcdd61ef89ce21b2aaac621ee171e51ad7250059addc95f6230556"
+          },
+          {
+            "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261010\\SW104\\model_best.pt",
+            "sha256": "408466bb2f38aadcf61d266da5ea8df08355b17604c5f6d26d0b09ab2967c0e9"
+          },
+          {
+            "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261010\\SW351_fixed\\model_best.pt",
+            "sha256": "e97d76e8b2d11168407dee1ac9b5b7a34504d18eb073d7efdac1fb8b504c78be"
+          }
+        ],
+        "seed_20261011": [
+          {
+            "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261011\\SOURCE\\prepared_data.pt",
+            "sha256": "b0dc567d307905ae405db841b73f1772ac00ed1860a4c03b3a70edd4f109ae0f"
+          },
+          {
+            "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261011\\SOURCE\\fold_5.pt",
+            "sha256": "6f13e1ced8e0ee6b50eb9248e07f9ee2a72f9aec35b221c97a782e65b3e81471"
+          },
+          {
+            "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261011\\SW104\\model_best.pt",
+            "sha256": "a8ad3b76570f713d53f42473717396c346f1a56f647ec0e99470ef2d0ea1f9d1"
+          },
+          {
+            "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261011\\SW351_fixed\\model_best.pt",
+            "sha256": "35ba5c14b78aaf7de5c7cb1a04893c094644617b087acc422d893199745c3795"
+          }
+        ],
+        "seed_20261012": [
+          {
+            "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261012\\SOURCE\\prepared_data.pt",
+            "sha256": "65ec323ddb976309d2753fa8ac186660f1811be39e41d9ffac6a46911efc1189"
+          },
+          {
+            "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261012\\SOURCE\\fold_5.pt",
+            "sha256": "315f490ab3d9233420d15d9b29deb644d0a5f419e69a34567cdc8eb5de41f525"
+          },
+          {
+            "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261012\\SW104\\model_best.pt",
+            "sha256": "75945909d0d682964307f910065b24a0cece59e251652b73719c3d7853fd90e1"
+          },
+          {
+            "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261012\\SW351_fixed\\model_best.pt",
+            "sha256": "989ca000583a1740421e31b809dfccd00e58e12a39aa790a424bc2674a3fdd38"
+          }
+        ],
+        "seed_20261013": [
+          {
+            "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261013\\SOURCE\\prepared_data.pt",
+            "sha256": "7631a742dfefa29ef08f31122a10437c0cf8b208b98ac730b5841e9713c139a3"
+          },
+          {
+            "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261013\\SOURCE\\fold_5.pt",
+            "sha256": "914ee8d14be5c05f9bea14a3faeedb9dc2a2129ae1ffb4bc0e7cceab07b6cbd5"
+          },
+          {
+            "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261013\\SW104\\model_best.pt",
+            "sha256": "9951fa6bf24aad747c9e82076969da96c04ddfce8cd3ff96d56a7991b2b751ea"
+          },
+          {
+            "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261013\\SW351_fixed\\model_best.pt",
+            "sha256": "8dfcd82728e8432a26bb495ae354d7a2806e589850312f30cc0052878f8e5caf"
+          }
+        ]
+      },
+      "seconds": 45.72267439996358,
+      "load_preparation_seconds": 20.67990849999478,
+      "peak_MiB": 1893.4931640625,
+      "admission": {
+        "maximum_concurrent_jobs": 2,
+        "other_jobs": [
+          {
+            "pid": 39412,
+            "script": "train_complete_seed_source_v362.py"
+          }
+        ],
+        "free_gib": 10.8037109375,
+        "total_gib": 11.99365234375
+      },
+      "other_GPU_pids": [
+        39412
+      ],
+      "concurrent_training_continues": true,
+      "includes": "load/preparation/warmup/shared 5-model forward/all grids/output writing",
+      "extra_training_stages": 0,
+      "screening_fold": 5,
+      "complete_five_folds": false
+    }
+  ],
+  "GPU_process_seconds_sum": 246.63464739988558,
+  "study_wall_seconds": 657.115823507309,
+  "timing_scope": "Concurrent with ongoing serial training; includes implementation/preparation/waiting and evaluation, not solo benchmark",
+  "extra_training_stages": 0,
+  "preexisting_training_stages_per_pair": 16,
+  "screening_fold": 5,
+  "complete_five_folds": false,
+  "remaining_folds_started": false,
+  "automatic_adoption": false,
+  "strictly_above_8074": true
+}

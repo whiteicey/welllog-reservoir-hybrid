@@ -1,0 +1,47 @@
+# v80 SW输出头联合效用对照
+
+## 探索重点与历史依据
+当前v77 p40 SW73.740423322864，独立三通道组合TOTAL80.363582620846。v78全网络低LR微调和v79输入适配均无收益，停止对应扫描。本批固定完整当前骨干，只训练25维原输出线性层（3225参数），比较likelihood/joint两项同初始化。
+历史v12用旧TCN类别分布、全网络训练：两项均回退73.093512781564起点；更新后最高joint72.963080210424 versus likelihood72.941747620362，差+0.021332590061。该结果不是绝对改进，只支持一次有界迁移。本批更换为当前已有效Gaussian模型与固定骨干头拟合，不能冒称历史重跑或已证实新收益。
+
+## 损失与相同条件
+两项都计算原Q50加权SW BCE+Gaussian NLL（除3）。从本模型8Gaussian和默认概率形成原257格联合概率，再乘完全原样的801左右去重动作效用矩阵；训练动作策略softmax(U/0.05)。真标签反变换exp(z*原训练侧scale+median)，默认取99.9；每动作真收益max(0,1-|a-y|/(0.05*(|y|+1e-5)))。辅助项mean Q*(1-策略期望收益)/3。
+likelihood为L_like+0*L_joint，joint为L_like+0.5*L_joint；共同完整图计算/遍历，唯一差是辅助权重0/.5。门控和Gaussian密度均须在实际训练获得辅助梯度。所有标签、Q及归一化仅原64训练井；不加载其他目标预测到训练损失，不按验证标签构造效用目标。这个平滑动作代理受动作网格密度影响，并不等于精确argmax官方分数。
+完整v77第25轮同起点、同839481总参数，原权重除output.weight/bias外全部冻结且eval（训练不丢key）。原9曲线206、原64/16井/第五144665点/seed20261010/1024上下文中心128/256支持与原800动作+默认/原评分保持。两组新AdamW3e-5/wd.01/clip2/cos80*64至1e-5/max80-pat18-min10-b64-64steps，优化器重置；原子完整状态/RNG，仅显式恢复。推理不使用softmax温度或辅助项，保留原argmax解码。新源使用fold5_screening_805资格函数。
+
+## 已探索、收益与不继续
+已实现，启动尚无新成绩；直接训练，不另作数值预检或审查。实际初始预测恢复完整父函数，新输出层梯度、旧层无梯度/权重逐位冻结、辅助损失两条路径、最佳恢复及真实三列评分需记录。报告含起点与更新后最高、joint-likelihood、各自相对当前绝对差、默认/数值子群；开发折选择不当独立泛化证明。
+joint若无最终配对收益，不扫描当前温度/辅助权重；两项都無绝对改进也不扩大相同头拟合LR扫描。正候选磁盘重建，负或重复checkpoint先写清单后删；来源/历史正候选/交付保留。最多2GPU，根据实测资源显式启动第二项，无自动队列。单项与同工作量总墙钟、并发、显存记录，加载/预热/训练/验证/保存/启动间隔计入，代码与收尾分开。
+维护PROJECTS/README/EXPLORATIONS/图谱。固定原第五严格>80.5且明确收益才考虑其他折，完整原五折OOF>82仍未完成；无旧队列/补折/交付覆盖。目标后独立井验证与新目录交付。
+
+
+## v80 likelihood显式启动
+{"pid": 67656, "mode": "likelihood", "started_at": "2026-09-30T09:56:24.371075+08:00", "command": ["C:\\Users\\z5364\\.conda\\envs\\normal\\python.exe", "-X", "utf8", "-u", "D:\\match_predict\\welllog-reservoir-hybrid\\experiments\\pure_dl\\train_sw_head_utility_v80.py", "--mode", "likelihood", "--out", "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_sw_head_utility_v80_SW_likelihood_fold5"], "automatic_queue": false}
+
+## 首次启动失败与新版本边界
+原v80 likelihood在第1轮第2个batch的辅助梯度记录时报unused density tensor；此前仅一步优化，尚无完成轮或新验证成绩。查实调用的是带@torch.no_grad的推理Gaussian区间质量函数，所以密度梯度被阻断；门控路径并不足以满足本实验联合损失设计。该失败不得算无效算法结果或精度证据，joint未启动。
+原module/trainer/config/source hash保持；本目录v80r1新源码、新运行目录，从原完整v77重新开始，不恢复失败状态。新Gaussian区间质量计算有梯度；负/正无穷边界在除法前替换有限值，CDF尾值再设常数0/1，防止sigma梯度出现0*inf。推理仍使用原函数，前向区间质量数学公式相同。仅修复本来预定的损失路径，不改初始化/参数/数据/动作/系数/预算，也不增加候选。
+
+
+## v80r1 likelihood显式启动
+{"pid": 49288, "mode": "likelihood", "started_at": "2026-09-30T10:00:15.914655+08:00", "command": ["C:\\Users\\z5364\\.conda\\envs\\normal\\python.exe", "-X", "utf8", "-u", "D:\\match_predict\\welllog-reservoir-hybrid\\experiments\\pure_dl\\train_sw_head_utility_v80r1.py", "--mode", "likelihood", "--out", "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_sw_head_utility_v80r1_SW_likelihood_fold5"], "automatic_queue": false}
+
+
+## v80r1 joint显式启动
+{"pid": 31580, "mode": "joint", "started_at": "2026-09-30T10:01:41.775650+08:00", "command": ["C:\\Users\\z5364\\.conda\\envs\\normal\\python.exe", "-X", "utf8", "-u", "D:\\match_predict\\welllog-reservoir-hybrid\\experiments\\pure_dl\\train_sw_head_utility_v80r1.py", "--mode", "joint", "--out", "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_sw_head_utility_v80r1_SW_joint_fold5"], "automatic_queue": false}
+
+
+## v80首次失败与v80r1显式修复
+首次likelihood在第1轮第二batch辅助梯度记录失败，误用no_grad推理质量函数；仅一步优化，无完成轮/新验证分，joint未启动。这不是算法负结果。原源码/config/hash保留，重复epoch0两个checkpoint按清单删；失败信息见sw_head_utility_v80_20260930/failure_summary.json。
+v80r1新增可微Gaussian区间质量，无限边界先有限替代再设置CDF常数尾；同预定数据/模型/损失/系数/预算，仅修复路径。重新从完整v77起点新目录启动两项，不恢复失败状态；实际训练门控和密度辅助梯度均正、旧权重无梯度。原推理不改，未完成收益不提前声明。保持max2，无其他折/旧队列/交付覆盖。
+
+
+## v80r1最终结果
+两项完成，当前独立通道路线TOTAL=80.363582620846，相对起点+0.000000000000；joint-likelihood SW=+0.000000000000，训练后差+0.002902171987。采用=None，保留=[]；负或重复权重清理，原来源/交付保留，无其他折。完整OOF>82未完成。见sw_head_utility_v80r1_20260930/FINAL.md。
+
+
+## v80r1实际结论与关闭范围
+两项均恢复原v77第25轮完整函数，本批最佳轮0，当前三通道TOTAL80.363582620846不变。更新后最高SW：likelihood=73.483006007207，joint=73.485908179195，差+0.002902171987；这一微小配对诊断差与含起点无提升分开，不当独立泛化或完整收益。实际辅助项门控/密度梯度均正且有限，所有非输出权重在训练末状态和恢复后逐位冻结。
+关闭当前完整函数热启动、固定骨干只拟合输出层的LR/温度/系数密集扫参。该窄局部辅助损失线索可供不同隔离学习场景参考，不宣称普遍有效。四个新负/重复checkpoint按清单删除；最优存的是epoch0重复父函数，更新后峰值权重未单独保留，不把该峰值说成可用完整模型。原v77、历史正候选与旧交付保留；无新正候选，不重复GPU磁盘重建。
+首次v80实现失败未完成一轮，不能当算法负结果；原no_grad推理函数源码/config/hash留档，两个重复初始checkpoint已删12,223,982字节。v80r1为新文件/新运行，不恢复失败状态；原Gaussian推理解码未改。完整原五折OOF>82与严格原第五>80.5仍未达到，无其他折/旧队列。
+修正版单项92.120694/92.817162秒，峰值1129.143066MiB，最多2进程，但实际仅11.002550秒进程重叠，主要串行，不能当双并发吞吐证据。修正版启动至最后训练结束183.446918秒（3.06分钟），至核验333.910498秒（5.57分钟）；首次失败启动至修正版核验565.454078秒（9.42分钟），包括排障/修复/重新启动间隔。原失败启动至错误文件13.774927秒仅墙钟，不冒称GPU训练耗时。加载预热/训练/评价/保存/启动间隔计入，初次启动前代码与核验后图谱收尾另计。

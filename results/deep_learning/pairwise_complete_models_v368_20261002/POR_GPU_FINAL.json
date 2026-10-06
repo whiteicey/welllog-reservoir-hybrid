@@ -1,0 +1,131 @@
+{
+  "target": "POR",
+  "pairs": [
+    {
+      "id": "original__seed_20261011",
+      "A": "original",
+      "B": "seed_20261011"
+    },
+    {
+      "id": "original__seed_20261012",
+      "A": "original",
+      "B": "seed_20261012"
+    },
+    {
+      "id": "seed_20261010__seed_20261011",
+      "A": "seed_20261010",
+      "B": "seed_20261011"
+    },
+    {
+      "id": "seed_20261010__seed_20261012",
+      "A": "seed_20261010",
+      "B": "seed_20261012"
+    },
+    {
+      "id": "seed_20261011__seed_20261012",
+      "A": "seed_20261011",
+      "B": "seed_20261012"
+    }
+  ],
+  "models": [
+    "original",
+    "seed_20261010",
+    "seed_20261011",
+    "seed_20261012"
+  ],
+  "rows": 144665,
+  "coverage_exactly_once": true,
+  "native_disk_replay_exact": true,
+  "endpoints_exact": true,
+  "actual_seed_loads": {
+    "original": [],
+    "seed_20261010": [
+      {
+        "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261010\\SOURCE\\prepared_data.pt",
+        "sha256": "07bf3356b59a2473fb1384e7b3a68e2bf5c081c476c42cfd3b0eebd2f2590165"
+      },
+      {
+        "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261010\\SOURCE\\fold_5.pt",
+        "sha256": "7ce54c5a19dcdd61ef89ce21b2aaac621ee171e51ad7250059addc95f6230556"
+      },
+      {
+        "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261010\\POR113\\model_best.pt",
+        "sha256": "58ed13b4f8d60b8d7e1e26a16aaca8c4fac3c09db315a836f61b78aa05b54861"
+      },
+      {
+        "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261010\\POR151\\model_best.pt",
+        "sha256": "f9063efd48b539fea5bbfe54b7bffaef3ea663f475d4931fe14b816734a8163e"
+      },
+      {
+        "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261010\\POR341\\model_best.pt",
+        "sha256": "68fe9da472b729853888efdf4d847054871d75c31f70f082b17627612a07d273"
+      }
+    ],
+    "seed_20261011": [
+      {
+        "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261011\\SOURCE\\prepared_data.pt",
+        "sha256": "b0dc567d307905ae405db841b73f1772ac00ed1860a4c03b3a70edd4f109ae0f"
+      },
+      {
+        "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261011\\SOURCE\\fold_5.pt",
+        "sha256": "6f13e1ced8e0ee6b50eb9248e07f9ee2a72f9aec35b221c97a782e65b3e81471"
+      },
+      {
+        "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261011\\POR113\\model_best.pt",
+        "sha256": "b7bfcdfdd2014043cdc78c4ab7b570ecb72c9c8381e3adba1991289ef3f77059"
+      },
+      {
+        "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261011\\POR151\\model_best.pt",
+        "sha256": "2e3f5d85b0128b45904be902009d0aa89acce3efa085ca6a78371baad44fe56b"
+      },
+      {
+        "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261011\\POR341\\model_best.pt",
+        "sha256": "00c1bfc7f0578b2405ece9a58eaf21163780f754c3e3ffeb808c00a071bed272"
+      }
+    ],
+    "seed_20261012": [
+      {
+        "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261012\\SOURCE\\prepared_data.pt",
+        "sha256": "65ec323ddb976309d2753fa8ac186660f1811be39e41d9ffac6a46911efc1189"
+      },
+      {
+        "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261012\\SOURCE\\fold_5.pt",
+        "sha256": "315f490ab3d9233420d15d9b29deb644d0a5f419e69a34567cdc8eb5de41f525"
+      },
+      {
+        "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261012\\POR113\\model_best.pt",
+        "sha256": "a5b49790ee6810dbca8ad5f93ac93e721147f6f6e97a7200fc996cfbb2184601"
+      },
+      {
+        "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261012\\POR151\\model_best.pt",
+        "sha256": "ddc70ad2fbff273f4215535ac77981246cf861c34820b5c893fbbc91a693217d"
+      },
+      {
+        "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261012\\POR341\\model_best.pt",
+        "sha256": "cf207f90e5b0041bc48086f042f1a2a2b0e2aaf11435c780e7ae1bc803efc170"
+      }
+    ]
+  },
+  "seconds": 45.22026009997353,
+  "load_preparation_seconds": 18.440558400005102,
+  "peak_MiB": 2251.23388671875,
+  "admission": {
+    "maximum_concurrent_jobs": 2,
+    "other_jobs": [
+      {
+        "pid": 90804,
+        "script": "train_complete_seed_stage_v362r1.py"
+      }
+    ],
+    "free_gib": 10.8037109375,
+    "total_gib": 11.99365234375
+  },
+  "other_GPU_pids": [
+    90804
+  ],
+  "concurrent_training_continues": true,
+  "includes": "load/preparation/warmup/shared four-model forward/all grids/output writing",
+  "extra_training_stages": 0,
+  "screening_fold": 5,
+  "complete_five_folds": false
+}

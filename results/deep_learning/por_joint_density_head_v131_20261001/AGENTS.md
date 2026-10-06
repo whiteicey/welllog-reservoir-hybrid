@@ -1,0 +1,1 @@
+PORroute singlelocation+logweight jointconditionalhead; frozenv113,5recipephases inclsource,max2totaljobs,ownPORlabels/originalQ/scorer. MaintainPROJECTS/README/atlas, explicitlaunch/resume/atomicstate. No trainedv128headloads/queues/deliveryedits/otherfolds below80.8+gain.

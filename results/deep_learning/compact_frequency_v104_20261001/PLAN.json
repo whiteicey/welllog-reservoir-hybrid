@@ -1,0 +1,38 @@
+{
+  "total_training_stages": 5,
+  "source_sha256": "45a09476e3126820688420579c100c86e0e4f45df335904380a298cf5f66b9a9",
+  "stages": [
+    "original source pretrain",
+    "v101 POR mean scope",
+    "v100 PERM",
+    "v104 SW joint",
+    "conditional density if warranted"
+  ],
+  "candidates": [
+    "local",
+    "spectral"
+  ],
+  "seed": 20261010,
+  "window": 1024,
+  "maximum_epochs": 80,
+  "patience": 18,
+  "minimum_epochs": 10,
+  "batch": 64,
+  "steps": 64,
+  "lr": 0.0003,
+  "sam": 0.1,
+  "utility": 1.0,
+  "dropkey": 0.4,
+  "extra_parameters": 6432,
+  "total_trainable_parameters": 845913,
+  "matched_capacity": true,
+  "zero_filter_initial": true,
+  "old_SW_weights_used": false,
+  "source_hidden_features_used": false,
+  "source_pretrain_seconds": 1289.1515023999964,
+  "maximum_gpu_jobs": 2,
+  "maximum_SW_jobs": 1,
+  "concurrency_reason": "cached v103 pair roughly28sec/epoch each vs solo13-14; no clear aggregate benefit",
+  "strict_808": true,
+  "remaining_folds_started": false
+}

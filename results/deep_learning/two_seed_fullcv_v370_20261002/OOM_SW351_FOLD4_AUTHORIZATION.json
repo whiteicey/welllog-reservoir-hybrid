@@ -1,0 +1,9 @@
+﻿{
+    "explicit_user_approved":  true,
+    "user_reply":  "重试断点续训就好了",
+    "maximum_GPU_jobs":  1,
+    "prepared_sha256":  "1832caa83d5995a5a6e8a7dd693893f158a256efa21118289c70d5bf5387a45d",
+    "controller_sha256":  "f01ed7ca1d82bbeb8a0cb4b753de89bfd133193e3a2a8a797db088b39c2ed129",
+    "authorized_epoch":  1790951615.267,
+    "scope":  "Resume only fold4 seed20261013 SW351 from completed epoch11; unchanged recipe, logical batch64, optimizer/scheduler/RNG; continue native scans and full OOF; maximum1 GPU; future failures stop without retry."
+}

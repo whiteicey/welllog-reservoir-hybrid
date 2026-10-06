@@ -1,0 +1,22 @@
+{
+  "first_process_started_utc": "2026-10-01T16:42:03.718643+00:00",
+  "point_started_epoch": 1790872923.7186427,
+  "window_started_epoch": 1790872989.5238235,
+  "concurrency": 2,
+  "maximum_GPU_jobs": 2,
+  "terminal": true,
+  "batch_wall_start": "first OS process creation; includes data prep and warmup",
+  "code_preparation_excluded": true,
+  "batch_wall_seconds": 290.45420360565186,
+  "individual_seconds": {
+    "point": 231.1089074999909,
+    "window": 216.94625869998708
+  },
+  "peak_MiB": {
+    "point": 788.69775390625,
+    "window": 788.69775390625
+  },
+  "completed_utc": "2026-10-01T16:46:54.172846+00:00",
+  "wall_end": "last training report write mtime; CPU composition excluded",
+  "startup_overlap_partial": true
+}

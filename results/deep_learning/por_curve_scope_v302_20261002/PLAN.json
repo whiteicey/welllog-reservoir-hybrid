@@ -1,0 +1,38 @@
+{
+  "total_training_stages": 6,
+  "source_sha256": "45a09476e3126820688420579c100c86e0e4f45df335904380a298cf5f66b9a9",
+  "parent_sha256": "39f2255b8fe61fa74607af027ece1dd352e5e2d0729b9bce95d1424c1b227603",
+  "candidates": [
+    "grouped",
+    "full"
+  ],
+  "epochs": 80,
+  "patience": 14,
+  "maximum_GPU_jobs": 2,
+  "added_head_stages": {
+    "POR": 1,
+    "PERM": 0,
+    "SW": 0
+  },
+  "remaining_folds_started": false,
+  "prepared_not_launched": true,
+  "direct_aux_CE": 1.0,
+  "alpha_ramp_epochs": 5,
+  "final_alpha": 0.25,
+  "reference_final_alpha": 0.1,
+  "primary_control": "same numeric9token module/tensors/capacity; 3groups of3 attention versusall9",
+  "no274_weights_loaded": true,
+  "joint_RPS": true,
+  "physical_tolerance": 0.08,
+  "no_trained_repair_weights": true,
+  "failed284_wrong_eval_target": true,
+  "no284trained_weights_loaded": true,
+  "initial_target_score_check": "same ordinary initial evaluation assert POR151 within1e-3; no extraeval",
+  "scoring_column": "self.c=0/POR",
+  "no287trained_weights_loaded": true,
+  "trainable_parameters": 76592,
+  "new_interaction_parameters": 19024,
+  "registered_and_active_capacity_same": true,
+  "no290trained_weights": true,
+  "only_original151_checkpoint": true
+}

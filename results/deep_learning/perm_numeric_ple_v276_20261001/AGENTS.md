@@ -1,0 +1,1 @@
+Goal pureDL82/fifth808, newnumericrepresentation encoder+readout jointlytrain. Original9/206/Q/scoring/splits/max2GPU/80-14/onePERMphase/total<=8. Fitknots onlyoriginaltraininputs, no label/Q/missingflagguesses/no supervisedtreebins. Original154priorfixed/no274repairweights. Immutableactive source/atomiclast explicitresume. MaintainPROJECTS/README/EXPLORATIONS/atlas.

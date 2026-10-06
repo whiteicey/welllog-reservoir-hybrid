@@ -1,0 +1,11 @@
+{
+  "includes": "preprocessing warmup training best restoration",
+  "concurrency": "solo after aligned terminal",
+  "pid": 74664,
+  "terminal": true,
+  "global_GPU_jobs_before": 0,
+  "started_epoch": 1790908379.628,
+  "individual_seconds": 246.76499830000103,
+  "peak_MiB": 1800.099609375,
+  "process_creation_to_terminal_seconds": 251.06670784950256
+}

@@ -1,0 +1,59 @@
+{
+  "POR113_report": {
+    "stage": "POR113",
+    "target": "POR",
+    "target_score": 77.42544665121915,
+    "initial_score": 77.09053778381798,
+    "against_initial": 0.3349088674011682,
+    "against_v97_target": -0.1264901506658589,
+    "best_epoch": 18,
+    "stopped_epoch": 28,
+    "validation_rows": 144665,
+    "predictions_reproduced_exactly": true,
+    "frozen_parameters_exact": true,
+    "gradient_groups": {
+      "original_target_locations": 2.4528963565826416,
+      "combined_new_heads_routes": 0.567358136177063
+    },
+    "effective_patience": 10,
+    "SOTA_broken": false,
+    "seconds": 181.39425710000796,
+    "peak_MiB": 920.84765625,
+    "complete_five_folds": false,
+    "early_terminated": false
+  },
+  "POR113_timing": {
+    "seed": 20261010,
+    "stage": "POR113",
+    "pid": 77552,
+    "started_epoch": 1790914710.9035747,
+    "terminal": true,
+    "exit_code": 0,
+    "process_wall_seconds": 191.4637324810028,
+    "concurrency": "solo",
+    "includes": "preprocessing warmup training best restoration"
+  },
+  "POR113_pid_missing": true,
+  "next_actual_live_pid": 39756,
+  "next_stage": "POR151",
+  "next_parent_sha256": "58ed13b4f8d60b8d7e1e26a16aaca8c4fac3c09db315a836f61b78aa05b54861",
+  "actual_checkpoint_loads": [
+    {
+      "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261010\\SOURCE\\prepared_data.pt",
+      "sha256": "07bf3356b59a2473fb1384e7b3a68e2bf5c081c476c42cfd3b0eebd2f2590165"
+    },
+    {
+      "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261010\\SOURCE\\fold_5.pt",
+      "sha256": "7ce54c5a19dcdd61ef89ce21b2aaac621ee171e51ad7250059addc95f6230556"
+    },
+    {
+      "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261010\\POR113\\model_best.pt",
+      "sha256": "58ed13b4f8d60b8d7e1e26a16aaca8c4fac3c09db315a836f61b78aa05b54861"
+    }
+  ],
+  "completed_stages": 2,
+  "total_stages": 8,
+  "complete_seed_model": false,
+  "complete_five_folds": false,
+  "remaining_folds_started": false
+}

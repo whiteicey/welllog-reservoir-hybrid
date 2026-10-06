@@ -1,0 +1,1 @@
+Maintain PROJECTS/README four exploration fields. Original151only; freshparallelencoder/readoutjoint,136626 params,oneaddedPORphase/max8. Original9/206/fifth/Q/80pat14/max2. No automatic queue orremainingfolds. Sources frozen once launched.

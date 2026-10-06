@@ -1,0 +1,1 @@
+Maintain PROJECTS/README/EXPLORATIONS/atlas. Only finite-thresholdCDF-Brier added ownSW loss, original model/data/splits/scoring/Q/decoder and80/18, normal/max2GPU,5 phases incl source/parent. Temporary keepawake, atomic states, explicit epoch-boundary early stop/resume. Serial explicit SW starts; no queue/otherfolds/oldsource/delivery edits.

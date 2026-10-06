@@ -1,0 +1,113 @@
+{
+  "project": "por_raw_delta_token_v324_20261002",
+  "scope": "obsolete-study",
+  "weights_retained": false,
+  "cleanup": "Obsolete artifacts removed by explicit user request. These are historical scores, not newly verified training.",
+  "results": [
+    {
+      "source": "PAIRED_FINAL.json",
+      "result": {
+        "reports": {
+          "adaptive": {
+            "stage": "adaptive",
+            "target": "POR",
+            "target_score": 78.02798651108418,
+            "initial_score": 77.92638076072386,
+            "against_initial": 0.10160575036032071,
+            "against_v97_target": 0.4760497091991738,
+            "best_epoch": 29,
+            "stopped_epoch": 43,
+            "validation_rows": 144665,
+            "predictions_reproduced_exactly": true,
+            "frozen_parameters_exact": true,
+            "seconds": 1046.9704540999955,
+            "peak_MiB": 1815.47705078125,
+            "complete_five_folds": false,
+            "early_terminated": false
+          },
+          "reference": {
+            "stage": "reference",
+            "target": "POR",
+            "target_score": 78.02718992246844,
+            "initial_score": 77.92638076072386,
+            "against_initial": 0.10080916174457855,
+            "against_v97_target": 0.4752531205834316,
+            "best_epoch": 29,
+            "stopped_epoch": 43,
+            "validation_rows": 144665,
+            "predictions_reproduced_exactly": true,
+            "frozen_parameters_exact": true,
+            "seconds": 917.9756144999992,
+            "peak_MiB": 1815.16455078125,
+            "complete_five_folds": false,
+            "early_terminated": false
+          }
+        },
+        "strata": {
+          "adaptive": {
+            "default": 97.4151361319245,
+            "continuous": 41.66571258300895
+          },
+          "reference": {
+            "default": 97.41195671757262,
+            "continuous": 41.66938518990849
+          }
+        },
+        "best_normalizer_delta_norms": {
+          "adaptive": {
+            "shift": 0.6114504933357239,
+            "scale": 0.8691047430038452
+          },
+          "reference": {
+            "shift": 0.6811100244522095,
+            "scale": 0.43285825848579407
+          }
+        },
+        "adaptive_minus_reference": 0.0007965886157421664,
+        "adaptive_minus_reference_CONT": -0.0036726068995420746,
+        "gain_vs302": {
+          "adaptive": -0.0025662830604602505,
+          "reference": -0.003362871676202417
+        },
+        "CONT_vs302": {
+          "adaptive": -0.009367324062452553,
+          "reference": -0.005694717162910479
+        },
+        "timing": {
+          "started_epoch": 1790890947.779,
+          "launch_epochs": {
+            "adaptive": 1790890947.779,
+            "reference": 1790891203.9083254
+          },
+          "pids": {
+            "adaptive": 41036,
+            "reference": 65712
+          },
+          "terminal": true,
+          "concurrency": "adaptive initially overlapsSW323, reference launches afterSW323terminal, then pairconcurrent",
+          "prelaunch_preparation_included": false,
+          "launch_stagger_seconds": 256.12932538986206,
+          "same_work_pair_wall_seconds": 1179.6851434707642,
+          "individual_seconds": {
+            "adaptive": 1046.9704540999955,
+            "reference": 917.9756144999992
+          },
+          "peak_MiB": {
+            "adaptive": 1815.47705078125,
+            "reference": 1815.16455078125
+          },
+          "interpretation": "Actual launch stagger and concurrency recorded in this study. Includes data/initial/train/bestrestore; pair process-to-lastterminal excludesprelaunch/CPUfinalization. No isolatedspeedranking."
+        },
+        "screening_fold": 5,
+        "complete_five_folds": false,
+        "remaining_folds_started": false,
+        "independent_disk_reload": false,
+        "adopted": false,
+        "closure": "No adoption: pairedCONTnegative and bothwhole/CONTbelow302. Close rawdelta token and normalizationextension, no width/bound/LR/windowgrid."
+      }
+    }
+  ],
+  "cleanup_completed": true,
+  "deleted_files": 15,
+  "deleted_bytes": 6995582
+}

@@ -1,0 +1,61 @@
+{
+  "project": "perm_cross_context_slow_v207_20261001",
+  "scope": "obsolete-study",
+  "weights_retained": false,
+  "cleanup": "Obsolete artifacts removed by explicit user request. These are historical scores, not newly verified training.",
+  "results": [
+    {
+      "source": "CURRENT_RECIPE.json",
+      "result": {
+        "scores": {
+          "POR": 77.92638076072386,
+          "PERM": 89.40864904024126,
+          "SW": 74.12175282815758,
+          "TOTAL": 80.61355488215675
+        },
+        "total_training_stages": 6,
+        "source_stage_counted": true,
+        "dependencies": [
+          "original source",
+          "v113 mixed POR",
+          "v151 POR jointRPS",
+          "v154 PERM jointRPS",
+          "v104 SW",
+          "v207 frozen154 inputcontext lowerLR patch"
+        ],
+        "POR": {
+          "checkpoint": "outputs/pure_dl_por_ranked_probability_v151_fold5/joint_rps/model_best.pt",
+          "module": "por_ranked_probability_v151",
+          "stage": "joint_rps"
+        },
+        "PERM": {
+          "checkpoint": "outputs/pure_dl_perm_cross_context_slow_v207_fold5/attention/model_best.pt",
+          "module": "perm_cross_context_slow_v207",
+          "stage": "attention",
+          "parent_checkpoint": "outputs/pure_dl_perm_ranked_probability_v154_fold5/perm_conditional/model_best.pt"
+        },
+        "SW": {
+          "checkpoint": "outputs/pure_dl_compact_frequency_v104_fold5/local/model_best.pt"
+        },
+        "screening_fold": 5,
+        "complete_five_folds": false,
+        "strict_808_passed": false,
+        "strict_channel_gain_025": true,
+        "previous_recipe_path": "results/deep_learning/perm_cross_context_patch_v205_20261001/CURRENT_RECIPE.json",
+        "gain_vs_previous_TOTAL": 1.148323035e-05,
+        "remaining_folds_started": false,
+        "total_stage_upper_bound": 8,
+        "added_head_stages": {
+          "POR": 0,
+          "PERM": 1,
+          "SW": 0
+        },
+        "gain_vs_verified_five_stage_TOTAL": 0.00107946416285,
+        "optional_not_default": true
+      }
+    }
+  ],
+  "cleanup_completed": true,
+  "deleted_files": 8,
+  "deleted_bytes": 3481696
+}

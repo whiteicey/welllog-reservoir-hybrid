@@ -1,0 +1,27 @@
+{
+  "deleted": [
+    {
+      "path": "outputs\\pure_dl_sw_dropout_scope_v75_SW_both_fold5\\model_best.pt",
+      "bytes": 3449131,
+      "sha256": "a57d0e012f23905d028577390f78c3e7464f8992977b7b1d6274c4adfe963dca"
+    },
+    {
+      "path": "outputs\\pure_dl_sw_dropout_scope_v75_SW_both_fold5\\last_state.pt",
+      "bytes": 15610779,
+      "sha256": "32e301534904f0614cdad44a9b1c37a39dc6c447505fd4a35083d6ef031a5cc0"
+    },
+    {
+      "path": "outputs\\pure_dl_sw_dropout_scope_v75_SW_gate_only_fold5\\model_best.pt",
+      "bytes": 3449195,
+      "sha256": "6403e61ce0f5e0b5da13b5175266ba486abeb562b98486c96e2980c6a1577967"
+    },
+    {
+      "path": "outputs\\pure_dl_sw_dropout_scope_v75_SW_gate_only_fold5\\last_state.pt",
+      "bytes": 15610395,
+      "sha256": "5621e1c550b5e2576621183cc21a3ef52938913371876e012e8d2d3e6bf979af"
+    }
+  ],
+  "bytes": 38119500,
+  "status": "complete",
+  "retained": []
+}

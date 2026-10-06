@@ -1,0 +1,67 @@
+{
+  "completed_seeds": 5,
+  "planned_seeds": 5,
+  "ranking": [
+    {
+      "seed": 20261010,
+      "scores": {
+        "POR": 77.5520561792274,
+        "PERM": 89.49625487509155,
+        "SW": 74.03612889675152,
+        "TOTAL": 80.5019511739133
+      },
+      "delta_vs_historical": -0.20417854932476587
+    },
+    {
+      "seed": 20261014,
+      "scores": {
+        "POR": 77.42032846923811,
+        "PERM": 89.44922714148387,
+        "SW": 73.79607662428037,
+        "TOTAL": 80.36195485878892
+      },
+      "delta_vs_historical": -0.344174864449144
+    },
+    {
+      "seed": 20261013,
+      "scores": {
+        "POR": 77.38833330639497,
+        "PERM": 89.52127968635101,
+        "SW": 73.63533098562274,
+        "TOTAL": 80.3213137271093
+      },
+      "delta_vs_historical": -0.38481599612876494
+    },
+    {
+      "seed": 20261012,
+      "scores": {
+        "POR": 76.81520301795747,
+        "PERM": 89.46897371901133,
+        "SW": 73.84783722739398,
+        "TOTAL": 80.2054447366291
+      },
+      "delta_vs_historical": -0.5006849866089595
+    },
+    {
+      "seed": 20261011,
+      "scores": {
+        "POR": 76.72694269202935,
+        "PERM": 89.38299330747085,
+        "SW": 73.74686202568397,
+        "TOTAL": 80.11353217421299
+      },
+      "delta_vs_historical": -0.5925975490250721
+    }
+  ],
+  "mean_TOTAL": 80.30083933413071,
+  "std_TOTAL_population": 0.13325492982382475,
+  "range_TOTAL": [
+    80.11353217421299,
+    80.5019511739133
+  ],
+  "screening_fold": 5,
+  "complete_five_folds": false,
+  "remaining_folds_started": false,
+  "complete": true,
+  "selection_limits": "Same held-out fifth used for ranking seeds; selection can be optimistic, not an independent generalization/fullOOF claim. No cross-seed head splice/ensemble/row choice."
+}

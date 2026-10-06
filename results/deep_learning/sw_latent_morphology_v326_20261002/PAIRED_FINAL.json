@@ -1,0 +1,126 @@
+{
+  "reports": {
+    "depth": {
+      "stage": "depth",
+      "target": "SW",
+      "target_score": 74.1695430320749,
+      "initial_score": 74.12175268976877,
+      "against_initial": 0.04779034230612922,
+      "against_v97_target": 0.027363127408193577,
+      "best_epoch": 13,
+      "stopped_epoch": 27,
+      "validation_rows": 144665,
+      "predictions_reproduced_exactly": true,
+      "frozen_parameters_exact": true,
+      "gradient_groups": {
+        "SW_new_raw_feature_backbone": 0.08828650414943695,
+        "SW_direct_categorical_readout": 0.0689789429306984,
+        "SW_new_state_readout": 0.006067777052521706,
+        "SW_new_raw_well_condition": 0.005991720594465733,
+        "SW_joint_own_latent_early_fusion": 0.007024737540632486,
+        "SW_joint_latent_morphology_backbone": 0.011878635734319687
+      },
+      "seconds": 576.5855676000356,
+      "peak_MiB": 1779.21240234375,
+      "complete_five_folds": false,
+      "early_terminated": false
+    },
+    "channel": {
+      "stage": "channel",
+      "target": "SW",
+      "target_score": 74.1666755143582,
+      "initial_score": 74.12175268976877,
+      "against_initial": 0.04492282458943464,
+      "against_v97_target": 0.024495609691499,
+      "best_epoch": 13,
+      "stopped_epoch": 27,
+      "validation_rows": 144665,
+      "predictions_reproduced_exactly": true,
+      "frozen_parameters_exact": true,
+      "gradient_groups": {
+        "SW_new_raw_feature_backbone": 0.08824028819799423,
+        "SW_direct_categorical_readout": 0.06890714913606644,
+        "SW_new_state_readout": 0.00606689415872097,
+        "SW_new_raw_well_condition": 0.005986867472529411,
+        "SW_joint_own_latent_early_fusion": 0.0070157526060938835,
+        "SW_joint_latent_morphology_backbone": 0.01780259609222412
+      },
+      "seconds": 563.8207906999742,
+      "peak_MiB": 1779.15771484375,
+      "complete_five_folds": false,
+      "early_terminated": false
+    }
+  },
+  "strata": {
+    "depth": {
+      "default": 98.63988120716091,
+      "continuous": 17.96344208824835
+    },
+    "channel": {
+      "default": 98.63622127085729,
+      "continuous": 17.962394682651496
+    }
+  },
+  "best_morphology_delta_norms": {
+    "depth": {
+      "dilation": 0.5178912281990051,
+      "erosion": 0.5168905854225159,
+      "norm.weight": 0.5512796640396118,
+      "norm.bias": 0.1493445634841919,
+      "projection.weight": 2.1781506538391113,
+      "projection.bias": 0.11281725019216537
+    },
+    "channel": {
+      "dilation": 0.8340282440185547,
+      "erosion": 1.0002236366271973,
+      "norm.weight": 0.275859534740448,
+      "norm.bias": 0.3090744912624359,
+      "projection.weight": 1.094902515411377,
+      "projection.bias": 0.07081207633018494
+    }
+  },
+  "depth_minus_channel": 0.0028675177166945787,
+  "depth_minus_channel_CONT": 0.0010474055968536788,
+  "gain_vs321own": {
+    "depth": 0.0035128515832099083,
+    "channel": 0.0006453338665153296
+  },
+  "CONT_vs321own": {
+    "depth": 0.052086660558405384,
+    "channel": 0.051039254961551705
+  },
+  "timing": {
+    "started_epoch": 1790892416.003,
+    "launch_epochs": {
+      "depth": 1790892416.003,
+      "channel": 1790892446.6223202
+    },
+    "pids": {
+      "depth": 45412,
+      "channel": 65636
+    },
+    "terminal": true,
+    "concurrency": "bothSW326 afterPERM325terminal; initialdepthstartupmayoverlapCPU325records",
+    "prelaunch_preparation_included": false,
+    "launch_stagger_seconds": 30.619320154190063,
+    "same_work_pair_wall_seconds": 595.9042818546295,
+    "individual_seconds": {
+      "depth": 576.5855676000356,
+      "channel": 563.8207906999742
+    },
+    "peak_MiB": {
+      "depth": 1779.21240234375,
+      "channel": 1779.15771484375
+    },
+    "interpretation": "Actual stagger/concurrency retained; includes preparation/initial/train/bestrestoration, excludes implementation/CPUfinalization. Not isolatedspeed ranking."
+  },
+  "screening_fold": 5,
+  "complete_five_folds": false,
+  "remaining_folds_started": false,
+  "independent_disk_reload": false,
+  "adopted": true,
+  "adopted_arm": "depth",
+  "whole_depth_effect_micro": true,
+  "depth_specific_CONT_effect_small": true,
+  "actual_eight_stage_TOTAL": 80.6990374411772
+}

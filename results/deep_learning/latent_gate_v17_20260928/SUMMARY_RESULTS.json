@@ -1,0 +1,254 @@
+{
+  "project": "latent_gate_v17_20260928",
+  "scope": "obsolete-study",
+  "weights_retained": false,
+  "cleanup": "Obsolete artifacts removed by explicit user request. These are historical scores, not newly verified training.",
+  "results": [
+    {
+      "source": "assembled_report.json",
+      "result": {
+        "fold": 5,
+        "rows": 144665,
+        "reference_scores": {
+          "POR": 77.44891570750882,
+          "PERM": 89.3475027344081,
+          "SW": 73.62238476712884,
+          "TOTAL": 80.27413533779057
+        },
+        "candidates": [
+          {
+            "mode": "shared_global",
+            "scores": {
+              "POR": 77.44891570750882,
+              "PERM": 89.3475027344081,
+              "SW": 73.46638145710882,
+              "TOTAL": 80.21953417928357
+            },
+            "delta_v5_TOTAL": -0.05460115850699765,
+            "best_epoch": 11,
+            "stopped_epoch": 29,
+            "three_private_models_reloaded": true,
+            "no_shared_parameter_storage": true,
+            "POR_PERM_exactly_unchanged": true,
+            "all144665SW_predictions_exact": true,
+            "checkpoint": "outputs/pure_dl_latent_gate_v17_shared_global_fold5/model_best.pt"
+          },
+          {
+            "mode": "local_gate",
+            "scores": {
+              "POR": 77.44891570750882,
+              "PERM": 89.3475027344081,
+              "SW": 73.14092875885109,
+              "TOTAL": 80.10562573489335
+            },
+            "delta_v5_TOTAL": -0.16850960289721684,
+            "best_epoch": 9,
+            "stopped_epoch": 27,
+            "three_private_models_reloaded": true,
+            "no_shared_parameter_storage": true,
+            "POR_PERM_exactly_unchanged": true,
+            "all144665SW_predictions_exact": true,
+            "checkpoint": "outputs/pure_dl_latent_gate_v17_local_gate_fold5/model_best.pt"
+          }
+        ],
+        "comparison": {
+          "local_minus_shared_SW": -0.3254526982578288,
+          "local_minus_shared_TOTAL": -0.11390844439024007,
+          "default_SW_delta": -0.15736597843065037,
+          "nondefault_SW_delta": -0.7115323296191176,
+          "default_TOTAL_contribution": -0.038372105386507,
+          "nondefault_TOTAL_contribution": -0.07553633900373305,
+          "well_wins": 6,
+          "well_losses": 10,
+          "per_well": [
+            {
+              "well": 7,
+              "n": 10219,
+              "SW_delta": -0.8817556398647447
+            },
+            {
+              "well": 8,
+              "n": 9011,
+              "SW_delta": 0.3003190217147264
+            },
+            {
+              "well": 14,
+              "n": 12078,
+              "SW_delta": 0.1322048902869059
+            },
+            {
+              "well": 16,
+              "n": 8149,
+              "SW_delta": -0.4320267083462439
+            },
+            {
+              "well": 25,
+              "n": 7739,
+              "SW_delta": 0.8071172558845359
+            },
+            {
+              "well": 34,
+              "n": 10913,
+              "SW_delta": -0.6864390365767473
+            },
+            {
+              "well": 35,
+              "n": 8348,
+              "SW_delta": -1.389930019814803
+            },
+            {
+              "well": 37,
+              "n": 9939,
+              "SW_delta": -1.0248299075108207
+            },
+            {
+              "well": 50,
+              "n": 11874,
+              "SW_delta": -0.14825361911699828
+            },
+            {
+              "well": 54,
+              "n": 9630,
+              "SW_delta": -1.2099975684342688
+            },
+            {
+              "well": 63,
+              "n": 5639,
+              "SW_delta": -1.7767728721130642
+            },
+            {
+              "well": 69,
+              "n": 9120,
+              "SW_delta": -0.3408600778127095
+            },
+            {
+              "well": 71,
+              "n": 4709,
+              "SW_delta": 0.5851880104596123
+            },
+            {
+              "well": 72,
+              "n": 9559,
+              "SW_delta": -0.8012750210766132
+            },
+            {
+              "well": 76,
+              "n": 7109,
+              "SW_delta": 0.952347717773657
+            },
+            {
+              "well": 79,
+              "n": 10629,
+              "SW_delta": 0.8330453888964529
+            }
+          ],
+          "exploratory_selection_unadjusted_TOTAL_95": [
+            -0.242097512553607,
+            0.015816037500410822
+          ]
+        },
+        "selected_scores": {
+          "POR": 77.44891570750882,
+          "PERM": 89.3475027344081,
+          "SW": 73.62238476712884,
+          "TOTAL": 80.27413533779057
+        },
+        "selected_new_SW": false,
+        "all_new_SW_and_fixed_POR_PERM_reloaded": true,
+        "all_original_row_order_verified": true,
+        "implementation_checks": {
+          "shared_global": {
+            "training_input_windows": 2,
+            "padding_invariance_max_error": 0.0,
+            "empty_window_finite_and_zero": true,
+            "memory_bypass_gate_max_error": 2.953125,
+            "memory_bypass_density_mean_absolute_logit_change": 3.6753878593444824,
+            "note": "Post-training forward dependency check only, not a retrained ablation or scoring candidate"
+          },
+          "local_gate": {
+            "training_input_windows": 2,
+            "padding_invariance_max_error": 0.0,
+            "empty_window_finite_and_zero": true,
+            "memory_bypass_gate_max_error": 0.0,
+            "memory_bypass_density_mean_absolute_logit_change": 2.7805848121643066,
+            "note": "Post-training forward dependency check only, not a retrained ablation or scoring candidate"
+          }
+        },
+        "timings": [
+          {
+            "target": "SW",
+            "mode": "shared_global",
+            "replay_and_small_checks_seconds": 0.899963200000002,
+            "all144665rows_exact": true
+          },
+          {
+            "target": "SW",
+            "mode": "local_gate",
+            "replay_and_small_checks_seconds": 0.5977390000000469,
+            "all144665rows_exact": true
+          },
+          {
+            "target": "POR",
+            "replay_seconds": 2.261268199999904,
+            "all144665rows_exact": true
+          },
+          {
+            "target": "PERM",
+            "replay_seconds": 1.383273299999928,
+            "all144665rows_exact": true
+          }
+        ],
+        "setup_and_replay_seconds": 53.477169499999945,
+        "finished_at": "2026-09-28T19:35:57.618858+08:00",
+        "complete_five_folds": false,
+        "remaining_folds_started": false
+      }
+    },
+    {
+      "source": "CURRENT_RECIPE.json",
+      "result": {
+        "scores": {
+          "POR": 77.44891570750882,
+          "PERM": 89.3475027344081,
+          "SW": 73.62238476712884,
+          "TOTAL": 80.27413533779057
+        },
+        "choices": [
+          {
+            "target": "POR",
+            "key": "POR_dual",
+            "architecture": "dual",
+            "target_score": 77.44891570750882,
+            "best_epoch": 0,
+            "checkpoint": "outputs/pure_dl_independent_v8_POR_dual80_fold5/model_best.pt"
+          },
+          {
+            "target": "PERM",
+            "key": "PERM_dual",
+            "architecture": "dual",
+            "target_score": 89.3475027344081,
+            "best_epoch": 0,
+            "checkpoint": "outputs/pure_dl_independent_v8_PERM_dual80_fold5/model_best.pt"
+          },
+          {
+            "target": "SW",
+            "key": "SW_dual",
+            "architecture": "dual",
+            "target_score": 73.62238476712884,
+            "best_epoch": 0,
+            "checkpoint": "outputs/pure_dl_independent_v8_SW_dual80_fold5/model_best.pt"
+          }
+        ],
+        "selected_new_SW": false,
+        "best_new_candidate": "shared_global",
+        "original_fifth_development_selection": true,
+        "complete_five_folds": false,
+        "remaining_folds_started": false,
+        "old_delivery_unchanged": true
+      }
+    }
+  ],
+  "cleanup_completed": true,
+  "deleted_files": 7,
+  "deleted_bytes": 6960533
+}

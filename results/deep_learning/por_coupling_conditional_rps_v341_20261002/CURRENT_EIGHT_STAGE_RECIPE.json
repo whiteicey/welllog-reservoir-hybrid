@@ -1,0 +1,56 @@
+{
+  "scores": {
+    "POR": 78.04643071793232,
+    "PERM": 89.51838939879066,
+    "SW": 74.1695430320749,
+    "TOTAL": 80.70470556618264
+  },
+  "screening_fold": 5,
+  "validation_rows": 144665,
+  "strict_808_qualified": false,
+  "complete_five_folds": false,
+  "remaining_folds_started": false,
+  "fullOOF_verified": false,
+  "total_training_stages": 8,
+  "stages": [
+    "SOURCE",
+    "POR113",
+    "POR151",
+    "PERM154",
+    "SW104",
+    "POR341conditional",
+    "PERM336cross",
+    "SW326depth"
+  ],
+  "added_head_stages": {
+    "POR": 1,
+    "PERM": 1,
+    "SW": 1
+  },
+  "heads": {
+    "POR": {
+      "checkpoint": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_por_coupling_conditional_rps_v341_fold5\\conditional\\model_best.pt",
+      "sha256": "878444dafeb7e8205d44315715ca3ac6870386b28741c7669e965977195d5af2"
+    },
+    "PERM": {
+      "checkpoint": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_perm_low_rank_cross_v336_fold5\\cross\\model_best.pt",
+      "sha256": "e61bce6f693b86380c98dbb0ecfdd6bd7d53d281cad92d3fe9295917f22ea0f0"
+    },
+    "SW": {
+      "checkpoint": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_sw_latent_morphology_v326_fold5\\depth\\model_best.pt",
+      "sha256": "e03aaba7fdd6d95870d293d64d5ebc2bc41ab6671e7698f43dc682339a6c2023"
+    }
+  },
+  "pred_sha256": "3db6c2312c0c05190e436325c0144eefe3c555d9c21befb4f8999a44cb9e59d2",
+  "verification": "Actual144665fixedwhole-targetcolumns/terminalRAMbestreplay/frozenexact; notindependentdiskreload orfullOOF",
+  "independent_disk_reload": false,
+  "default_five_stage_unchanged": true,
+  "prior_optional8_artifacts_unchanged": true,
+  "gain_vs_prior338_recipe": 0.00018259918068963543,
+  "gain_vs_default_five": 0.09223014818870467,
+  "POR_continuous": 41.736640291995144,
+  "PERM_continuous": 74.00963708319706,
+  "SW_continuous": 17.96344208824835,
+  "single_seed_small_gain_not_robustness": true,
+  "selection_reason": "ConditionalRPS plus depth coupling whole+CONT >338 historicalcontrol; one fresh joint POR phase nottrainedrepairchain"
+}

@@ -1,0 +1,1 @@
+One privatePERMnonlinear location/logweighthead; sourceonlyfrozen, ownPERMlabels/Q/CDF/score, fixedPORv134/SWv104. Max2sharedslots,5recipephases inclsource. MaintainPROJECTS/README/atlas, atomicstate/explicitlaunch/resume; no oldPERMheadwarmstart/queues/deliveryedits/otherfolds below80.8+gain.

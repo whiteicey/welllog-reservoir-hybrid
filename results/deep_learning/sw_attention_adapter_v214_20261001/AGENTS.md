@@ -1,0 +1,1 @@
+﻿Preserve104 all oldweights/readout, only3072rank8 QKV delta atfirstglobalattention trains. OwnSW loss/normalGPU/max2/80-14/originaldata/Q50/scoring. One extraSWstage, no masspatchstack. Atomicstates/frozen/replay/assembly, no externalweights/testlabels, maintainPROJECTS/README/EXPLORATIONS/atlas. Currentprepared only/noqueue/autolaunch.

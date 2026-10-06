@@ -1,0 +1,615 @@
+{
+  "observed_at": "2026-09-29T11:07:28.943814+08:00",
+  "all_complete": true,
+  "rows": [
+    {
+      "target": "POR",
+      "id": "pure_dl_mechanism_v31_POR_fold5",
+      "state": {
+        "status": "complete",
+        "target": "POR",
+        "pid": 43332,
+        "modes": {
+          "tanh": {
+            "best": 77.55093183166899,
+            "best_epoch": 0,
+            "bad": 18,
+            "done": true,
+            "last_epoch": 18,
+            "stop_reason": "patience18"
+          },
+          "anchored": {
+            "best": 77.551936801885,
+            "best_epoch": 7,
+            "bad": 18,
+            "done": true,
+            "last_epoch": 25,
+            "stop_reason": "patience18"
+          }
+        },
+        "atlas_current_trial": false
+      },
+      "report": {
+        "target": "POR",
+        "arms": [
+          {
+            "target": "POR",
+            "mode": "tanh",
+            "screening_fold": 5,
+            "target_score": 77.55093183166899,
+            "reference_replacement_total": 80.33621194575169,
+            "best_epoch": 0,
+            "stopped_epoch": 18,
+            "stop_reason": "patience18",
+            "best_after_update": {
+              "epoch": 4,
+              "target_score": 77.55031870421632,
+              "reference_replacement_total": 80.33602800751589
+            },
+            "trainable_parameters": 30819,
+            "all_frozen_state_unchanged": true,
+            "all144665_selected_predictions_restored_exactly": true,
+            "gradient_scope": {
+              "group_norms": {
+                "existing_routes": 0.004630403593182564
+              },
+              "frozen_gradients_none": true
+            },
+            "last_parameter_change_L2": 0.41762336149613816,
+            "mechanism_scope": {
+              "mode": "tanh",
+              "route_bounds": {
+                "0": {
+                  "bound": 0.25,
+                  "max_abs": 0.24993008375167847,
+                  "fraction_near_bound": 0.8863636255264282
+                },
+                "1": {
+                  "bound": 0.125,
+                  "max_abs": 0.125,
+                  "fraction_near_bound": 0.6900826096534729
+                },
+                "2": {
+                  "bound": 0.125,
+                  "max_abs": 0.125,
+                  "fraction_near_bound": 0.6425619721412659
+                }
+              },
+              "scope": "two fixed training windows; component outputs remain frozen by parameter checks"
+            },
+            "checkpoint": "outputs\\pure_dl_mechanism_v31_POR_fold5\\tanh\\model_best.pt",
+            "complete_five_folds": false,
+            "remaining_folds_started": false
+          },
+          {
+            "target": "POR",
+            "mode": "anchored",
+            "screening_fold": 5,
+            "target_score": 77.551936801885,
+            "reference_replacement_total": 80.33651343681649,
+            "best_epoch": 7,
+            "stopped_epoch": 25,
+            "stop_reason": "patience18",
+            "best_after_update": {
+              "epoch": 7,
+              "target_score": 77.551936801885,
+              "reference_replacement_total": 80.33651343681649
+            },
+            "trainable_parameters": 30819,
+            "all_frozen_state_unchanged": true,
+            "all144665_selected_predictions_restored_exactly": true,
+            "gradient_scope": {
+              "group_norms": {
+                "existing_routes": 0.013990568928420544
+              },
+              "frozen_gradients_none": true
+            },
+            "last_parameter_change_L2": 0.4343496843821532,
+            "mechanism_scope": {
+              "mode": "anchored",
+              "route_bounds": {
+                "0": {
+                  "bound": 0.25,
+                  "max_abs": 0.25,
+                  "fraction_near_bound": 0.9669421315193176
+                },
+                "1": {
+                  "bound": 0.125,
+                  "max_abs": 0.125,
+                  "fraction_near_bound": 0.7293388247489929
+                },
+                "2": {
+                  "bound": 0.125,
+                  "max_abs": 0.125,
+                  "fraction_near_bound": 0.8057851195335388
+                }
+              },
+              "scope": "two fixed training windows; component outputs remain frozen by parameter checks"
+            },
+            "checkpoint": "outputs\\pure_dl_mechanism_v31_POR_fold5\\anchored\\model_best.pt",
+            "complete_five_folds": false,
+            "remaining_folds_started": false
+          }
+        ],
+        "reference_scores": {
+          "POR": 77.55093183166899,
+          "PERM": 89.39672404936582,
+          "SW": 73.6630827970656,
+          "TOTAL": 80.33621194575169
+        },
+        "seconds": 180.74981259999913,
+        "peak_allocated_MiB": 718.9150390625,
+        "epoch_timing": [
+          {
+            "epoch": 1,
+            "seconds": 7.079890900000464,
+            "active_modes": [
+              "tanh",
+              "anchored"
+            ]
+          },
+          {
+            "epoch": 2,
+            "seconds": 6.892685699996946,
+            "active_modes": [
+              "tanh",
+              "anchored"
+            ]
+          },
+          {
+            "epoch": 3,
+            "seconds": 6.926125500001945,
+            "active_modes": [
+              "tanh",
+              "anchored"
+            ]
+          },
+          {
+            "epoch": 4,
+            "seconds": 7.040648800000781,
+            "active_modes": [
+              "tanh",
+              "anchored"
+            ]
+          },
+          {
+            "epoch": 5,
+            "seconds": 6.916297999996459,
+            "active_modes": [
+              "tanh",
+              "anchored"
+            ]
+          },
+          {
+            "epoch": 6,
+            "seconds": 7.082942000000912,
+            "active_modes": [
+              "tanh",
+              "anchored"
+            ]
+          },
+          {
+            "epoch": 7,
+            "seconds": 6.858503899995412,
+            "active_modes": [
+              "tanh",
+              "anchored"
+            ]
+          },
+          {
+            "epoch": 8,
+            "seconds": 6.875139399999171,
+            "active_modes": [
+              "tanh",
+              "anchored"
+            ]
+          },
+          {
+            "epoch": 9,
+            "seconds": 6.895639200003643,
+            "active_modes": [
+              "tanh",
+              "anchored"
+            ]
+          },
+          {
+            "epoch": 10,
+            "seconds": 6.9095293000063975,
+            "active_modes": [
+              "tanh",
+              "anchored"
+            ]
+          },
+          {
+            "epoch": 11,
+            "seconds": 7.200869700005569,
+            "active_modes": [
+              "tanh",
+              "anchored"
+            ]
+          },
+          {
+            "epoch": 12,
+            "seconds": 7.027369199997338,
+            "active_modes": [
+              "tanh",
+              "anchored"
+            ]
+          },
+          {
+            "epoch": 13,
+            "seconds": 6.898130000001402,
+            "active_modes": [
+              "tanh",
+              "anchored"
+            ]
+          },
+          {
+            "epoch": 14,
+            "seconds": 7.237159700001939,
+            "active_modes": [
+              "tanh",
+              "anchored"
+            ]
+          },
+          {
+            "epoch": 15,
+            "seconds": 7.089522599999327,
+            "active_modes": [
+              "tanh",
+              "anchored"
+            ]
+          },
+          {
+            "epoch": 16,
+            "seconds": 7.032866600005946,
+            "active_modes": [
+              "tanh",
+              "anchored"
+            ]
+          },
+          {
+            "epoch": 17,
+            "seconds": 7.3520547000007355,
+            "active_modes": [
+              "tanh",
+              "anchored"
+            ]
+          },
+          {
+            "epoch": 18,
+            "seconds": 6.988020199998573,
+            "active_modes": [
+              "tanh",
+              "anchored"
+            ]
+          },
+          {
+            "epoch": 19,
+            "seconds": 5.338186099994346,
+            "active_modes": [
+              "anchored"
+            ]
+          },
+          {
+            "epoch": 20,
+            "seconds": 5.257036599999992,
+            "active_modes": [
+              "anchored"
+            ]
+          },
+          {
+            "epoch": 21,
+            "seconds": 5.375334999996994,
+            "active_modes": [
+              "anchored"
+            ]
+          },
+          {
+            "epoch": 22,
+            "seconds": 5.419272300001467,
+            "active_modes": [
+              "anchored"
+            ]
+          },
+          {
+            "epoch": 23,
+            "seconds": 5.399326999999175,
+            "active_modes": [
+              "anchored"
+            ]
+          },
+          {
+            "epoch": 24,
+            "seconds": 5.577648300000874,
+            "active_modes": [
+              "anchored"
+            ]
+          },
+          {
+            "epoch": 25,
+            "seconds": 5.299221599998418,
+            "active_modes": [
+              "anchored"
+            ]
+          }
+        ],
+        "finished_at": "2026-09-29T11:04:32.057800+08:00"
+      }
+    },
+    {
+      "target": "SW",
+      "id": "pure_dl_mechanism_v31_SW_fold5",
+      "state": {
+        "status": "complete",
+        "target": "SW",
+        "pid": 3320,
+        "modes": {
+          "affine": {
+            "best": 73.6630827970656,
+            "best_epoch": 0,
+            "bad": 18,
+            "done": true,
+            "last_epoch": 18,
+            "stop_reason": "patience18"
+          },
+          "pwl4": {
+            "best": 73.6630827970656,
+            "best_epoch": 0,
+            "bad": 18,
+            "done": true,
+            "last_epoch": 18,
+            "stop_reason": "patience18"
+          }
+        },
+        "atlas_current_trial": false
+      },
+      "report": {
+        "target": "SW",
+        "arms": [
+          {
+            "target": "SW",
+            "mode": "affine",
+            "screening_fold": 5,
+            "target_score": 73.6630827970656,
+            "reference_replacement_total": 80.33621194575169,
+            "best_epoch": 0,
+            "stopped_epoch": 18,
+            "stop_reason": "patience18",
+            "best_after_update": {
+              "epoch": 1,
+              "target_score": 73.62939776010352,
+              "reference_replacement_total": 80.32442218281496
+            },
+            "trainable_parameters": 10306,
+            "all_frozen_state_unchanged": true,
+            "all144665_selected_predictions_restored_exactly": true,
+            "gradient_scope": {
+              "group_norms": {
+                "monotone_warp": 0.14758847653865814
+              },
+              "frozen_gradients_none": true
+            },
+            "last_parameter_change_L2": 2.2474448208476843,
+            "mechanism_scope": {
+              "default_logit_exact": true,
+              "all_original_mixture_parameters_exact": true,
+              "derivative_min": 1.0,
+              "derivative_max": 1.0,
+              "max_abs_transformed_shift": 0.0,
+              "knots": [
+                -9.430212020874023,
+                -0.5895597338676453,
+                0.0,
+                0.41044026613235474,
+                0.9075179696083069
+              ],
+              "scope": "two fixed training windows; input-only-conditioned transform"
+            },
+            "checkpoint": "outputs\\pure_dl_mechanism_v31_SW_fold5\\affine\\model_best.pt",
+            "complete_five_folds": false,
+            "remaining_folds_started": false
+          },
+          {
+            "target": "SW",
+            "mode": "pwl4",
+            "screening_fold": 5,
+            "target_score": 73.6630827970656,
+            "reference_replacement_total": 80.33621194575169,
+            "best_epoch": 0,
+            "stopped_epoch": 18,
+            "stop_reason": "patience18",
+            "best_after_update": {
+              "epoch": 1,
+              "target_score": 73.63006991610946,
+              "reference_replacement_total": 80.32465743741705
+            },
+            "trainable_parameters": 10339,
+            "all_frozen_state_unchanged": true,
+            "all144665_selected_predictions_restored_exactly": true,
+            "gradient_scope": {
+              "group_norms": {
+                "monotone_warp": 0.0953848734498024
+              },
+              "frozen_gradients_none": true
+            },
+            "last_parameter_change_L2": 2.499996272278356,
+            "mechanism_scope": {
+              "default_logit_exact": true,
+              "all_original_mixture_parameters_exact": true,
+              "derivative_min": 1.0,
+              "derivative_max": 1.0,
+              "max_abs_transformed_shift": 0.0,
+              "knots": [
+                -9.430212020874023,
+                -0.5895597338676453,
+                0.0,
+                0.41044026613235474,
+                0.9075179696083069
+              ],
+              "scope": "two fixed training windows; input-only-conditioned transform"
+            },
+            "checkpoint": "outputs\\pure_dl_mechanism_v31_SW_fold5\\pwl4\\model_best.pt",
+            "complete_five_folds": false,
+            "remaining_folds_started": false
+          }
+        ],
+        "reference_scores": {
+          "POR": 77.55093183166899,
+          "PERM": 89.39672404936582,
+          "SW": 73.6630827970656,
+          "TOTAL": 80.33621194575169
+        },
+        "seconds": 103.3955763000049,
+        "peak_allocated_MiB": 723.6787109375,
+        "epoch_timing": [
+          {
+            "epoch": 1,
+            "seconds": 5.542185500002233,
+            "active_modes": [
+              "affine",
+              "pwl4"
+            ]
+          },
+          {
+            "epoch": 2,
+            "seconds": 5.35094769999705,
+            "active_modes": [
+              "affine",
+              "pwl4"
+            ]
+          },
+          {
+            "epoch": 3,
+            "seconds": 5.380170199998247,
+            "active_modes": [
+              "affine",
+              "pwl4"
+            ]
+          },
+          {
+            "epoch": 4,
+            "seconds": 5.316860999999335,
+            "active_modes": [
+              "affine",
+              "pwl4"
+            ]
+          },
+          {
+            "epoch": 5,
+            "seconds": 5.393003000004683,
+            "active_modes": [
+              "affine",
+              "pwl4"
+            ]
+          },
+          {
+            "epoch": 6,
+            "seconds": 5.274604099999124,
+            "active_modes": [
+              "affine",
+              "pwl4"
+            ]
+          },
+          {
+            "epoch": 7,
+            "seconds": 5.300213099995744,
+            "active_modes": [
+              "affine",
+              "pwl4"
+            ]
+          },
+          {
+            "epoch": 8,
+            "seconds": 5.404659199994057,
+            "active_modes": [
+              "affine",
+              "pwl4"
+            ]
+          },
+          {
+            "epoch": 9,
+            "seconds": 5.365224699999089,
+            "active_modes": [
+              "affine",
+              "pwl4"
+            ]
+          },
+          {
+            "epoch": 10,
+            "seconds": 5.43542239999806,
+            "active_modes": [
+              "affine",
+              "pwl4"
+            ]
+          },
+          {
+            "epoch": 11,
+            "seconds": 5.244383399993239,
+            "active_modes": [
+              "affine",
+              "pwl4"
+            ]
+          },
+          {
+            "epoch": 12,
+            "seconds": 5.169464500002505,
+            "active_modes": [
+              "affine",
+              "pwl4"
+            ]
+          },
+          {
+            "epoch": 13,
+            "seconds": 5.244778100000985,
+            "active_modes": [
+              "affine",
+              "pwl4"
+            ]
+          },
+          {
+            "epoch": 14,
+            "seconds": 5.2365978000016185,
+            "active_modes": [
+              "affine",
+              "pwl4"
+            ]
+          },
+          {
+            "epoch": 15,
+            "seconds": 5.089146900005289,
+            "active_modes": [
+              "affine",
+              "pwl4"
+            ]
+          },
+          {
+            "epoch": 16,
+            "seconds": 5.2364592000012635,
+            "active_modes": [
+              "affine",
+              "pwl4"
+            ]
+          },
+          {
+            "epoch": 17,
+            "seconds": 5.163129000000481,
+            "active_modes": [
+              "affine",
+              "pwl4"
+            ]
+          },
+          {
+            "epoch": 18,
+            "seconds": 5.204622799996287,
+            "active_modes": [
+              "affine",
+              "pwl4"
+            ]
+          }
+        ],
+        "finished_at": "2026-09-29T11:06:19.809916+08:00"
+      }
+    }
+  ]
+}

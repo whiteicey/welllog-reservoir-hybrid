@@ -1,0 +1,130 @@
+{
+  "project": "compact_sw_dilation_v116_20261001",
+  "scope": "obsolete-study",
+  "weights_retained": false,
+  "cleanup": "Obsolete artifacts removed by explicit user request. These are historical scores, not newly verified training.",
+  "results": [
+    {
+      "source": "ablation_report.json",
+      "result": {
+        "dilation2": {
+          "stage": "dilation2",
+          "target": "SW",
+          "target_score": 74.03690631159932,
+          "initial_score": 71.19711508147167,
+          "against_initial": 2.839791230127659,
+          "against_v97_target": -0.10527359306738049,
+          "best_epoch": 32,
+          "stopped_epoch": 50,
+          "validation_rows": 144665,
+          "predictions_reproduced_exactly": true,
+          "frozen_parameters_exact": true,
+          "seconds": 617.0222576000087,
+          "peak_MiB": 1722.197265625,
+          "complete_five_folds": false
+        },
+        "dilation4": {
+          "stage": "dilation4",
+          "target": "SW",
+          "target_score": 74.03968340770483,
+          "initial_score": 71.19711508147167,
+          "against_initial": 2.842568326233163,
+          "against_v97_target": -0.10249649696187646,
+          "best_epoch": 32,
+          "stopped_epoch": 50,
+          "validation_rows": 144665,
+          "predictions_reproduced_exactly": true,
+          "frozen_parameters_exact": true,
+          "seconds": 685.9944756000186,
+          "peak_MiB": 1722.197265625,
+          "complete_five_folds": false
+        },
+        "equal_active_capacity": true,
+        "initial_raw_identical": true,
+        "initial_predictive_functions_differ": false,
+        "original_fold": 5,
+        "complete_five_folds": false,
+        "dilation4_minus_dilation2_SW": 0.002777096105504029,
+        "primary_comparison": "Both candidates versus retained original dilation1"
+      }
+    },
+    {
+      "source": "CURRENT_RECIPE.json",
+      "result": {
+        "format": "compact_independent_target_recipe",
+        "scores": {
+          "POR": 77.54806949489308,
+          "PERM": 89.37839421114361,
+          "SW": 74.12175282815758,
+          "TOTAL": 80.48947231222334
+        },
+        "screening_fold": 5,
+        "complete_five_folds": false,
+        "strict_808_passed": false,
+        "source_pretraining_counted": true,
+        "total_training_stages": 5,
+        "source_checkpoint": "outputs/pure_dl_paired_local_context_router80_sequence/fold_5.pt",
+        "models": {
+          "POR": {
+            "checkpoint": "outputs\\pure_dl_compact_por_scale_v114_fold5\\location_only\\model_best.pt",
+            "module": "compact_por_scale_v114",
+            "mode": "location_only",
+            "density_family": "expert0 first8 Student-t3; expert1 next8 Cauchy; fixed IQR scale conversion",
+            "best_epoch": 13,
+            "stopped_epoch": 31,
+            "training_seconds": 201.47776360000717,
+            "target_score": 77.54806949489308
+          },
+          "PERM": {
+            "checkpoint": "outputs\\pure_dl_compact_v100_fold5\\perm\\model_best.pt",
+            "module": "compact_five_stage_v100",
+            "density_family": "Gaussian",
+            "best_epoch": 2,
+            "stopped_epoch": 20,
+            "training_seconds": 147.8027762999991,
+            "target_score": 89.37839421114361
+          },
+          "SW": {
+            "checkpoint": "outputs\\pure_dl_compact_frequency_v104_fold5\\local\\model_best.pt",
+            "module": "compact_frequency_v104",
+            "density_family": "Gaussian",
+            "best_epoch": 37,
+            "stopped_epoch": 55,
+            "training_seconds": 785.6777900999878,
+            "target_score": 74.12175282815758
+          }
+        },
+        "source_training_seconds": 1289.1515023999964,
+        "dependency_training_seconds_sum": 2947.4977877999772,
+        "timing_scope": "historical source/shared and observed candidate timing sum; candidate partially concurrent, not fresh serial pipeline wall",
+        "gain_vs_previous_compact": 0.0022845504462338795,
+        "gain_vs_old_18_stage": -0.01472511225354367,
+        "validation_rows": 144665,
+        "original_splits_labels_score_and_population": true,
+        "remaining_folds_started": false,
+        "old_delivery_unchanged": true,
+        "parent_POR_training_phase": {
+          "checkpoint": "outputs\\pure_dl_compact_por_mixed_family_v113_fold5\\t3_cauchy\\model_best.pt",
+          "module": "compact_por_mixed_family_v113",
+          "mode": "t3_cauchy",
+          "density_family": "expert0 first8 Student-t3; expert1 next8 Cauchy; fixed IQR scale conversion",
+          "best_epoch": 69,
+          "stopped_epoch": 80,
+          "training_seconds": 523.3879553999868,
+          "target_score": 77.54045432673898
+        },
+        "dependency_stages": [
+          "original_source",
+          "v113_initial_POR",
+          "v114_refinement_location_only",
+          "v100_PERM",
+          "v104_SW"
+        ],
+        "v116_both_dilations_below_original": true
+      }
+    }
+  ],
+  "cleanup_completed": true,
+  "deleted_files": 16,
+  "deleted_bytes": 6979016
+}

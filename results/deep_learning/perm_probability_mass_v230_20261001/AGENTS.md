@@ -1,0 +1,1 @@
+Freeze154/SOURCE entirely; only12576-param PERM mass correction trains. OwnPERM true labels,originalfold5/Q50/score/80-14/max2GPU,onePERMaddition/six total,no207/otherrepair weights/stacking/otherfolds. MaintainPROJECTS/evidence.

@@ -1,0 +1,184 @@
+{
+  "created_epoch": 1790936001.0799372,
+  "user_instruction": "Existing overlapping workers may finish; thereafter serial, no new overlap.",
+  "old_CPU_controller": {
+    "pid": 77612,
+    "create_time": 1790934988.5738857,
+    "cmdline": [
+      "C:\\Users\\z5364\\.conda\\envs\\normal\\python.exe",
+      "-u",
+      "D:\\match_predict\\welllog-reservoir-hybrid\\results\\deep_learning\\two_seed_fullcv_v370_20261002\\run_safe_overlap_pair_fullcv_v370r3.py"
+    ]
+  },
+  "active_jobs": [
+    {
+      "fold": 2,
+      "identity": "seed_20261013",
+      "stage": "SOURCE",
+      "role": "SOURCE",
+      "dest": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_two_seed_fullcv_v370\\fold_2\\seed_20261013\\SOURCE",
+      "expected": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_two_seed_fullcv_v370\\fold_2\\seed_20261013\\SOURCE\\fold_2_report.json",
+      "command": [
+        "C:\\Users\\z5364\\.conda\\envs\\normal\\python.exe",
+        "-u",
+        "experiments/pure_dl/train_pair_fullcv_source_v370.py",
+        "--out",
+        "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_two_seed_fullcv_v370\\fold_2\\seed_20261013\\SOURCE",
+        "--learning-rate",
+        ".0006",
+        "--schedule",
+        "cosine",
+        "--fold",
+        "2",
+        "--seed",
+        "20261010"
+      ],
+      "pid": 75188,
+      "create_time": 1790934993.989125,
+      "started_epoch": 1790934993.9843771,
+      "attached": false,
+      "overlap_observed": true,
+      "other_GPU_pids_at_launch": [
+        74592
+      ]
+    },
+    {
+      "fold": 2,
+      "identity": "original",
+      "stage": "POR341",
+      "role": "head",
+      "dest": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_two_seed_fullcv_v370\\fold_2\\original\\POR341",
+      "expected": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_two_seed_fullcv_v370\\fold_2\\original\\POR341\\report.json",
+      "command": [
+        "C:\\Users\\z5364\\.conda\\envs\\normal\\python.exe",
+        "-u",
+        "experiments/pure_dl/train_pair_fullcv_stage_v370.py",
+        "--stage",
+        "POR341"
+      ],
+      "pid": 56476,
+      "create_time": 1790935913.3471491,
+      "started_epoch": 1790935913.3436244,
+      "attached": false,
+      "overlap_observed": true,
+      "other_GPU_pids_at_launch": [
+        75188
+      ]
+    }
+  ],
+  "batch": {
+    "status": "running",
+    "controller_pid": 77612,
+    "active_pid": 75188,
+    "identity": "seed_20261013",
+    "fold": 2,
+    "stage": "SOURCE",
+    "started_epoch": 1790934993.9843771,
+    "batch_started_epoch": 1790927178.5526347,
+    "concurrency": "safe overlap up to2; at most one SOURCE/SW/scan/PERM each; driver headroom7GiB",
+    "maximum_GPU_jobs": 2,
+    "active_jobs": [
+      {
+        "fold": 2,
+        "identity": "seed_20261013",
+        "stage": "SOURCE",
+        "role": "SOURCE",
+        "dest": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_two_seed_fullcv_v370\\fold_2\\seed_20261013\\SOURCE",
+        "expected": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_two_seed_fullcv_v370\\fold_2\\seed_20261013\\SOURCE\\fold_2_report.json",
+        "command": [
+          "C:\\Users\\z5364\\.conda\\envs\\normal\\python.exe",
+          "-u",
+          "experiments/pure_dl/train_pair_fullcv_source_v370.py",
+          "--out",
+          "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_two_seed_fullcv_v370\\fold_2\\seed_20261013\\SOURCE",
+          "--learning-rate",
+          ".0006",
+          "--schedule",
+          "cosine",
+          "--fold",
+          "2",
+          "--seed",
+          "20261010"
+        ],
+        "pid": 75188,
+        "create_time": 1790934993.989125,
+        "started_epoch": 1790934993.9843771,
+        "attached": false,
+        "overlap_observed": true,
+        "other_GPU_pids_at_launch": [
+          74592
+        ]
+      },
+      {
+        "fold": 2,
+        "identity": "original",
+        "stage": "POR341",
+        "role": "head",
+        "dest": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_two_seed_fullcv_v370\\fold_2\\original\\POR341",
+        "expected": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_two_seed_fullcv_v370\\fold_2\\original\\POR341\\report.json",
+        "command": [
+          "C:\\Users\\z5364\\.conda\\envs\\normal\\python.exe",
+          "-u",
+          "experiments/pure_dl/train_pair_fullcv_stage_v370.py",
+          "--stage",
+          "POR341"
+        ],
+        "pid": 56476,
+        "create_time": 1790935913.3471491,
+        "started_epoch": 1790935913.3436244,
+        "attached": false,
+        "overlap_observed": true,
+        "other_GPU_pids_at_launch": [
+          75188
+        ]
+      }
+    ],
+    "completed_model_folds": 2,
+    "events": [
+      {
+        "event": "launch",
+        "pid": 75188,
+        "identity": "seed_20261013",
+        "fold": 2,
+        "stage": "SOURCE",
+        "epoch": 1790934993.9843771
+      },
+      {
+        "event": "terminal",
+        "pid": 74592,
+        "stage": "PERM154",
+        "fold": 2,
+        "identity": "original",
+        "epoch": 1790935072.9608731,
+        "exit_code": null
+      },
+      {
+        "event": "launch",
+        "pid": 91432,
+        "identity": "original",
+        "fold": 2,
+        "stage": "SW104",
+        "epoch": 1790935073.160202
+      },
+      {
+        "event": "terminal",
+        "pid": 91432,
+        "stage": "SW104",
+        "fold": 2,
+        "identity": "original",
+        "epoch": 1790935912.9942899,
+        "exit_code": 0
+      },
+      {
+        "event": "launch",
+        "pid": 56476,
+        "identity": "original",
+        "fold": 2,
+        "stage": "POR341",
+        "epoch": 1790935913.3436244
+      }
+    ]
+  },
+  "CPU_suspended_only": true,
+  "GPU_workers_stopped": 0
+}

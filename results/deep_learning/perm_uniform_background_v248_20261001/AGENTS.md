@@ -1,0 +1,1 @@
+Maintain PROJECTS/README. Originalfold5/Q50/normalGPU/80-14/max2. Frozen154/no repairedweights, onePERMaddition/sixalone/whole<=8. Initialuniform .001 changesfunction; separate initial fromlearnedgain. Actual owntrainlabels/unchangedscore/atomicstates/nootherfolds below808.

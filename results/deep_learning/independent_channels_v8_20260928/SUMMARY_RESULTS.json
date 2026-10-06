@@ -1,0 +1,304 @@
+{
+  "project": "independent_channels_v8_20260928",
+  "scope": "obsolete-study",
+  "weights_retained": false,
+  "cleanup": "Obsolete artifacts removed by explicit user request. These are historical scores, not newly verified training.",
+  "results": [
+    {
+      "source": "assembled_report.json",
+      "result": {
+        "fold": 5,
+        "screening_fold": 5,
+        "scores": {
+          "POR": 77.44891570750882,
+          "PERM": 89.3475027344081,
+          "SW": 73.62238476712884,
+          "TOTAL": 80.27413533779057
+        },
+        "reference_scores": {
+          "POR": 77.44891570750882,
+          "PERM": 89.3475027344081,
+          "SW": 73.62238476712884,
+          "TOTAL": 80.27413533779057
+        },
+        "delta_reference": 0.0,
+        "choices": [
+          {
+            "target": "POR",
+            "key": "POR_dual",
+            "architecture": "dual",
+            "target_score": 77.44891570750882,
+            "best_epoch": 0,
+            "checkpoint": "outputs/pure_dl_independent_v8_POR_dual80_fold5/model_best.pt"
+          },
+          {
+            "target": "PERM",
+            "key": "PERM_dual",
+            "architecture": "dual",
+            "target_score": 89.3475027344081,
+            "best_epoch": 0,
+            "checkpoint": "outputs/pure_dl_independent_v8_PERM_dual80_fold5/model_best.pt"
+          },
+          {
+            "target": "SW",
+            "key": "SW_dual",
+            "architecture": "dual",
+            "target_score": 73.62238476712884,
+            "best_epoch": 0,
+            "checkpoint": "outputs/pure_dl_independent_v8_SW_dual80_fold5/model_best.pt"
+          }
+        ],
+        "three_distinct_full_model_checkpoints": true,
+        "no_shared_parameter_storage": true,
+        "all144665rows_reloaded_exactly": true,
+        "original_row_order_verified": true,
+        "private_backbone_branches": 6,
+        "total_model_parameters": 3853902,
+        "selected_backbone_changes": {
+          "POR": 0.0,
+          "PERM": 0.0,
+          "SW": 0.0
+        },
+        "well_wins": 0,
+        "well_losses": 0,
+        "per_well": [
+          {
+            "well_index": 7,
+            "n": 10219,
+            "TOTAL_delta": 0.0,
+            "target_deltas": {
+              "POR": 0.0,
+              "PERM": 0.0,
+              "SW": 0.0
+            }
+          },
+          {
+            "well_index": 8,
+            "n": 9011,
+            "TOTAL_delta": 0.0,
+            "target_deltas": {
+              "POR": 0.0,
+              "PERM": 0.0,
+              "SW": 0.0
+            }
+          },
+          {
+            "well_index": 14,
+            "n": 12078,
+            "TOTAL_delta": 0.0,
+            "target_deltas": {
+              "POR": 0.0,
+              "PERM": 0.0,
+              "SW": 0.0
+            }
+          },
+          {
+            "well_index": 16,
+            "n": 8149,
+            "TOTAL_delta": 0.0,
+            "target_deltas": {
+              "POR": 0.0,
+              "PERM": 0.0,
+              "SW": 0.0
+            }
+          },
+          {
+            "well_index": 25,
+            "n": 7739,
+            "TOTAL_delta": 0.0,
+            "target_deltas": {
+              "POR": 0.0,
+              "PERM": 0.0,
+              "SW": 0.0
+            }
+          },
+          {
+            "well_index": 34,
+            "n": 10913,
+            "TOTAL_delta": 0.0,
+            "target_deltas": {
+              "POR": 0.0,
+              "PERM": 0.0,
+              "SW": 0.0
+            }
+          },
+          {
+            "well_index": 35,
+            "n": 8348,
+            "TOTAL_delta": 0.0,
+            "target_deltas": {
+              "POR": 0.0,
+              "PERM": 0.0,
+              "SW": 0.0
+            }
+          },
+          {
+            "well_index": 37,
+            "n": 9939,
+            "TOTAL_delta": 0.0,
+            "target_deltas": {
+              "POR": 0.0,
+              "PERM": 0.0,
+              "SW": 0.0
+            }
+          },
+          {
+            "well_index": 50,
+            "n": 11874,
+            "TOTAL_delta": 0.0,
+            "target_deltas": {
+              "POR": 0.0,
+              "PERM": 0.0,
+              "SW": 0.0
+            }
+          },
+          {
+            "well_index": 54,
+            "n": 9630,
+            "TOTAL_delta": 0.0,
+            "target_deltas": {
+              "POR": 0.0,
+              "PERM": 0.0,
+              "SW": 0.0
+            }
+          },
+          {
+            "well_index": 63,
+            "n": 5639,
+            "TOTAL_delta": 0.0,
+            "target_deltas": {
+              "POR": 0.0,
+              "PERM": 0.0,
+              "SW": 0.0
+            }
+          },
+          {
+            "well_index": 69,
+            "n": 9120,
+            "TOTAL_delta": 0.0,
+            "target_deltas": {
+              "POR": 0.0,
+              "PERM": 0.0,
+              "SW": 0.0
+            }
+          },
+          {
+            "well_index": 71,
+            "n": 4709,
+            "TOTAL_delta": 0.0,
+            "target_deltas": {
+              "POR": 0.0,
+              "PERM": 0.0,
+              "SW": 0.0
+            }
+          },
+          {
+            "well_index": 72,
+            "n": 9559,
+            "TOTAL_delta": 0.0,
+            "target_deltas": {
+              "POR": 0.0,
+              "PERM": 0.0,
+              "SW": 0.0
+            }
+          },
+          {
+            "well_index": 76,
+            "n": 7109,
+            "TOTAL_delta": 0.0,
+            "target_deltas": {
+              "POR": 0.0,
+              "PERM": 0.0,
+              "SW": 0.0
+            }
+          },
+          {
+            "well_index": 79,
+            "n": 10629,
+            "TOTAL_delta": 0.0,
+            "target_deltas": {
+              "POR": 0.0,
+              "PERM": 0.0,
+              "SW": 0.0
+            }
+          }
+        ],
+        "exploratory_selection_unadjusted_95": [
+          0.0,
+          0.0
+        ],
+        "timing": [
+          {
+            "target": "POR",
+            "seconds_full_validation": 3.0552985000540502
+          },
+          {
+            "target": "PERM",
+            "seconds_full_validation": 1.5426295999786817
+          },
+          {
+            "target": "SW",
+            "seconds_full_validation": 1.5606318000354804
+          }
+        ],
+        "setup_and_three_replays_seconds": 55.92976440000348,
+        "score_scope": "actual three independent target models on original full fifth fold",
+        "complete_five_folds": false,
+        "remaining_folds_started": false,
+        "screening_threshold": 80.5,
+        "screening_passed": false,
+        "development_selection": true,
+        "new_shared_training_control_run": false,
+        "limitations": "Repeated fold5selection and pretrained multitarget initialization; no independent test. Update scope and total compute differ from old frozen model.",
+        "finished_at": "2026-09-28T11:48:13.776120+08:00"
+      }
+    },
+    {
+      "source": "CURRENT_RECIPE.json",
+      "result": {
+        "choices": [
+          {
+            "target": "POR",
+            "key": "POR_dual",
+            "architecture": "dual",
+            "target_score": 77.44891570750882,
+            "best_epoch": 0,
+            "checkpoint": "outputs/pure_dl_independent_v8_POR_dual80_fold5/model_best.pt"
+          },
+          {
+            "target": "PERM",
+            "key": "PERM_dual",
+            "architecture": "dual",
+            "target_score": 89.3475027344081,
+            "best_epoch": 0,
+            "checkpoint": "outputs/pure_dl_independent_v8_PERM_dual80_fold5/model_best.pt"
+          },
+          {
+            "target": "SW",
+            "key": "SW_dual",
+            "architecture": "dual",
+            "target_score": 73.62238476712884,
+            "best_epoch": 0,
+            "checkpoint": "outputs/pure_dl_independent_v8_SW_dual80_fold5/model_best.pt"
+          }
+        ],
+        "scores": {
+          "POR": 77.44891570750882,
+          "PERM": 89.3475027344081,
+          "SW": 73.62238476712884,
+          "TOTAL": 80.27413533779057
+        },
+        "model_module": "independent_channels_v8",
+        "preprocessing_source": "outputs\\pure_dl_paired_local_context_router80_sequence\\fold_5.pt",
+        "constructor_reference": "outputs\\pure_dl_dual8222_v5_location_point3280_fold5\\readout_checkpoint.pt",
+        "training_shares_backbone": false,
+        "inference_shares_backbone": false,
+        "old_delivery_unchanged": true,
+        "extra_folds": false
+      }
+    }
+  ],
+  "cleanup_completed": true,
+  "deleted_files": 7,
+  "deleted_bytes": 42770
+}

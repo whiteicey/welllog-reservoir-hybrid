@@ -1,0 +1,9 @@
+{
+  "pid": 81580,
+  "command": [
+    "C:\\Users\\z5364\\.conda\\envs\\normal\\python.exe",
+    "-u",
+    "experiments/pure_dl/run_fullcv_v97.py"
+  ],
+  "authorized_scope": "fixed v96 recipe original folds1..4, serial; fifth reused"
+}

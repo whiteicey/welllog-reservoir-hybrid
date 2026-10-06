@@ -1,0 +1,120 @@
+{
+  "project": "sw_specialist_tilt_v263_20261001",
+  "scope": "obsolete-study",
+  "weights_retained": false,
+  "cleanup": "Obsolete artifacts removed by explicit user request. These are historical scores, not newly verified training.",
+  "results": [
+    {
+      "source": "PAIRED_FINAL.json",
+      "result": {
+        "arms": {
+          "tcn": {
+            "scores": {
+              "POR": 77.92638076072386,
+              "PERM": 89.40556485691894,
+              "SW": 74.12170158067455,
+              "TOTAL": 80.61245748137488
+            },
+            "screening_fold": 5,
+            "validation_rows": 144665,
+            "complete_five_folds": false,
+            "remaining_folds_started": false,
+            "total_training_stages": 6,
+            "added_head_stages": {
+              "POR": 0,
+              "PERM": 0,
+              "SW": 1
+            },
+            "source_stage_counted": true,
+            "gain_vs104_SW": -5.1247483028760143e-05,
+            "gain_vs211_SW": -0.025921041952514656,
+            "learned_gain_vs_initial": 0.0,
+            "report": {
+              "stage": "tcn",
+              "target": "SW",
+              "target_score": 74.12170158067455,
+              "initial_score": 74.12170158067455,
+              "against_initial": 0.0,
+              "against_v97_target": -0.020478323992151104,
+              "best_epoch": 0,
+              "stopped_epoch": 14,
+              "validation_rows": 144665,
+              "predictions_reproduced_exactly": true,
+              "frozen_parameters_exact": true,
+              "seconds": 188.6054113000282,
+              "peak_MiB": 937.7822265625,
+              "complete_five_folds": false,
+              "early_terminated": false
+            }
+          },
+          "bigru": {
+            "scores": {
+              "POR": 77.92638076072386,
+              "PERM": 89.40556485691894,
+              "SW": 74.12170158067455,
+              "TOTAL": 80.61245748137488
+            },
+            "screening_fold": 5,
+            "validation_rows": 144665,
+            "complete_five_folds": false,
+            "remaining_folds_started": false,
+            "total_training_stages": 6,
+            "added_head_stages": {
+              "POR": 0,
+              "PERM": 0,
+              "SW": 1
+            },
+            "source_stage_counted": true,
+            "gain_vs104_SW": -5.1247483028760143e-05,
+            "gain_vs211_SW": -0.025921041952514656,
+            "learned_gain_vs_initial": 0.0,
+            "report": {
+              "stage": "bigru",
+              "target": "SW",
+              "target_score": 74.12170158067455,
+              "initial_score": 74.12170158067455,
+              "against_initial": 0.0,
+              "against_v97_target": -0.020478323992151104,
+              "best_epoch": 0,
+              "stopped_epoch": 14,
+              "validation_rows": 144665,
+              "predictions_reproduced_exactly": true,
+              "frozen_parameters_exact": true,
+              "seconds": 151.4684243000229,
+              "peak_MiB": 1295.65869140625,
+              "complete_five_folds": false,
+              "early_terminated": false
+            }
+          }
+        },
+        "paired_delta": 0.0,
+        "timing": {
+          "excludes_code_preparation": true,
+          "arms": {
+            "tcn": {
+              "process_creation_utc_seconds": 1790865740.37,
+              "pid": 9332
+            },
+            "bigru": {
+              "process_creation_utc_seconds": 1790865740.386,
+              "pid": 45272
+            }
+          },
+          "pair_wallclock_pending": false,
+          "maximum_GPU_jobs": 2,
+          "concurrent": true,
+          "includes_startup_model_data_initial_eval": true,
+          "pair_wallclock_seconds": 194.19235610961914,
+          "includes_final_restore_and_report": true
+        },
+        "strict_808_passed": false,
+        "remaining_folds_started": false,
+        "independent_disk_reload": false,
+        "conclusion": "Both no learnedgain/restoredinitial0, natural14stop. Close newrawTCN/GRU specialist with directpriorrelative readout; do not infer allarchitecture failure."
+      }
+    }
+  ],
+  "cleanup_completed": true,
+  "deleted_files": 9,
+  "deleted_bytes": 6954271
+}

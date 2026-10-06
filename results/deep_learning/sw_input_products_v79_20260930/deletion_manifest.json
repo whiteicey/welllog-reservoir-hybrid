@@ -1,0 +1,27 @@
+{
+  "deleted": [
+    {
+      "path": "outputs\\pure_dl_sw_input_products_v79_SW_marginal_fold5\\model_best.pt",
+      "bytes": 3468215,
+      "sha256": "a7a92665fcb4e947b8a44045c156e5db85685946395967f71d657ece2e3c76f0"
+    },
+    {
+      "path": "outputs\\pure_dl_sw_input_products_v79_SW_marginal_fold5\\last_state.pt",
+      "bytes": 8852967,
+      "sha256": "0a5aabd8de435ad07b8ae41e3c1760b9a0788b410c8f1b64b061c6a14d2eb971"
+    },
+    {
+      "path": "outputs\\pure_dl_sw_input_products_v79_SW_cross_fold5\\model_best.pt",
+      "bytes": 3468215,
+      "sha256": "79338b0a460fe2cbe55021ef8202781c895744468bda7c95d47d52a8dc8b538e"
+    },
+    {
+      "path": "outputs\\pure_dl_sw_input_products_v79_SW_cross_fold5\\last_state.pt",
+      "bytes": 8852967,
+      "sha256": "d58fc02afce6d2cd5f7b8ba6275c5b908011f8da2025a2fc185991abed4b8418"
+    }
+  ],
+  "bytes": 24642364,
+  "status": "complete",
+  "retained": []
+}

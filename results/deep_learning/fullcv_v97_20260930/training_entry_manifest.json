@@ -1,0 +1,22 @@
+{
+  "source_sha256": {
+    "experiments\\pure_dl\\fullcv_context_v97.py": "ffb2d60948997d304f8c7a0c18107fc3c8c9e10c8209ec36f1e20a2683cec225",
+    "experiments\\pure_dl\\fullcv_resume_v97.py": "0d5110e6ef860357b25f585bf217171e0e32a218ec2d10327fc39478093605d3",
+    "experiments\\pure_dl\\fullcv_models_v97.py": "eb6fdad09257d7601490cb9f6232e41ac12d96a3d8e3f4023c0eee7079764d44",
+    "experiments\\pure_dl\\train_root_fullcv_v97.py": "abf890b6e42e748c8b639356d0039cadc228cf9a5bdf2822dc2000dd2c5109c7",
+    "experiments\\pure_dl\\prepare_fold_fullcv_v97.py": "739f0a092bfa10a3953017aafe375da5cbbd7b704e50867118204149d6776b3b",
+    "experiments\\pure_dl\\train_stage_fullcv_v97.py": "ef27360fd37036fe75f60e41e5e1bea9da0b0b722fa68ffc73e8700d3b30f639",
+    "experiments\\pure_dl\\assemble_sources_fullcv_v97.py": "5458bbb40e311ff05120343ef5d9247eb88c38644581715e510c1d7c2a7b06e3",
+    "experiments\\pure_dl\\run_fullcv_v97.py": "3e7f2acfa610d9da1278ad6ff5270678357db2e7dd87a2760933ad82e5e7dc71",
+    "experiments\\pure_dl\\record_fullcv_v97.py": "c110220bf15161170301766ad33d470881d5b72ab4538ce8b49af0e3927cc720",
+    "experiments\\pure_dl\\verify_decoder_fullcv_v97.py": "65ad677f8c4b73b792127064987985c016fbedc0d077d6c4bc65668021ea12e5"
+  },
+  "remaining_training_implementation_complete": true,
+  "remaining_folds_authorized": true,
+  "execution": "serial, no retry; explicit resume only",
+  "fixed_effective_training_stages": 18,
+  "source_pretraining_stages": 1,
+  "pruned_stage": "v8 selected epoch0 private extraction verified tensor-exact",
+  "decoder_migration": "frozen fifth144665 each channel exact",
+  "full_oof_verified": false
+}

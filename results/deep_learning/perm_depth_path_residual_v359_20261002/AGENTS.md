@@ -1,0 +1,1 @@
+Maintain PROJECTS/README/EXPLORATIONS/atlas. Original154only/freshpositive336358code+6112learneddepthresidual45274alljointonePERMphase/<=8/no trainedrepairchain. Fixedfifth/Q50/ownloss/9curves/max80min10/pat10strictSOTAthen14/max2. Explicitlaunch/noqueue/strict808 beforeotherfolds. Sourcesimmutableonlaunch/atomicresume.

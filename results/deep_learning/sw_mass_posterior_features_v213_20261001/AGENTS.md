@@ -1,0 +1,1 @@
+﻿Both arms preserve all104 oldweights/input/scoring. Only21280patchparameters train, ownSW categoricalNLL/BCE/utility0/SAM0.1/80-14/normalGPUmax2. SingleaddedSWstage, alternatives no stacking, sourcecountonce. Atomicstates/frozen/grad/replay/assembly. Preserve positives/active/deliveries and maintainPROJECTS/README/EXPLORATIONS/atlas. Explicitlaunch only/noqueue.

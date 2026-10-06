@@ -1,0 +1,1 @@
+维护PROJECTS/README四项/EXPLORATIONS/图谱。固定原第五折/9曲线/Q50/ownPERM/80-14/max2GPU，只增加输入整井FiLM，不使用标签/井ID作为输入、不在验证拟合统计；无teacher/旧SW模型权重/177热启动，总5阶段、原子last、无自动队列恢复补折、旧交付不改。

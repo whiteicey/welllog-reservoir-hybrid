@@ -1,0 +1,1 @@
+Maintain PROJECTS/README/atlas per batch. POR-only gate/weight two-arm update study; fixed PERM/SW. Historical POR gain strictly>0.25 target, max2GPU,5 phases inclsource, original fifth>80.8 promotion, no old weights/delivery edits/queues.

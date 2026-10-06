@@ -1,0 +1,17 @@
+{
+  "execution": "first two concurrent; third explicitly launched when slot available",
+  "maximum_jobs": 2,
+  "first_launch_to_last_finish_seconds": 452.510357,
+  "per_run_seconds": {
+    "base1": 197.70473519999996,
+    "ffn2": 222.36412139999993,
+    "ffn4": 179.0264141000007
+  },
+  "epoch_seconds_median": {
+    "base1": 10.332237000000532,
+    "ffn2": 11.895594099999926,
+    "ffn4": 9.262921049999932
+  },
+  "preparation_seconds": 46.750898000000234,
+  "caution": "Epoch times include64updates,validation,checkpoint I/O; workloads overlap differently, not controlled throughput benchmarking. Wall includes explicit launch gaps, excludes code and prior data preparation."
+}

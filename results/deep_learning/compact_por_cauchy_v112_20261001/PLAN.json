@@ -1,0 +1,21 @@
+{
+  "total_training_stages": 5,
+  "selected_dependency_stages": 4,
+  "source_sha256": "45a09476e3126820688420579c100c86e0e4f45df335904380a298cf5f66b9a9",
+  "candidates": [
+    "cauchy"
+  ],
+  "historical_t3_control": "outputs/pure_dl_compact_mean_scope_v101_fold5/por",
+  "control_POR": 77.50036838764457,
+  "scope": "same compact location readout capacity/initial raw parameters, family likelihood plus predictive CDF changes; initial function differs",
+  "IQR_conversion": "scipy t.ppf(.75,3)/sqrt3; fixed analytic constant, no fitting",
+  "variance_matching": false,
+  "stages": [
+    "original source",
+    "v112 POR location readout",
+    "v100 PERM",
+    "v104 SW local",
+    "optional warranted refinement only"
+  ],
+  "remaining_folds_started": false
+}

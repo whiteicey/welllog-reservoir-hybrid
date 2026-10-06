@@ -1,0 +1,77 @@
+{
+  "project": "perm_native_encoder_lora_v349_20261002",
+  "scope": "obsolete-study",
+  "weights_retained": false,
+  "cleanup": "Obsolete artifacts removed by explicit user request. These are historical scores, not newly verified training.",
+  "results": [
+    {
+      "source": "FINAL.json",
+      "result": {
+        "report": {
+          "stage": "encoder_lora",
+          "target": "PERM",
+          "target_score": 89.40556485691894,
+          "initial_score": 89.40556485691894,
+          "against_initial": 0.0,
+          "against_v97_target": 0.00884080755312766,
+          "best_epoch": 0,
+          "stopped_epoch": 14,
+          "validation_rows": 144665,
+          "predictions_reproduced_exactly": true,
+          "frozen_parameters_exact": true,
+          "lora_parameter_norms": {
+            "backbone.members.0.enc2.expand.lora_A.weight": 1.1361552476882935,
+            "backbone.members.0.enc2.expand.lora_B.weight": 0.0,
+            "backbone.members.1.enc2.expand.lora_A.weight": 1.1313365697860718,
+            "backbone.members.1.enc2.expand.lora_B.weight": 0.0
+          },
+          "seconds": 119.130165199982,
+          "peak_MiB": 849.642578125,
+          "complete_five_folds": false,
+          "early_terminated": false
+        },
+        "strata": {
+          "default": 97.27870539397452,
+          "continuous": 74.09691194381553
+        },
+        "whole_vs154": 0.0,
+        "whole_vs336": -0.11282454187171709,
+        "CONT_vs154": -1.0231815394945443e-12,
+        "changed_vs154": 0,
+        "current_last_lora_norms": {
+          "backbone.members.0.enc2.expand.lora_A.weight": 1.6681947708129883,
+          "backbone.members.0.enc2.expand.lora_B.weight": 1.1719835996627808,
+          "backbone.members.1.enc2.expand.lora_A.weight": 1.6116582155227661,
+          "backbone.members.1.enc2.expand.lora_B.weight": 0.9206539392471313
+        },
+        "restored_best_lora_norms": {
+          "backbone.members.0.enc2.expand.lora_A.weight": 1.1361552476882935,
+          "backbone.members.0.enc2.expand.lora_B.weight": 0.0,
+          "backbone.members.1.enc2.expand.lora_A.weight": 1.1313365697860718,
+          "backbone.members.1.enc2.expand.lora_B.weight": 0.0
+        },
+        "timing": {
+          "includes": "process wallclock includes preprocessing warmup training best restoration",
+          "concurrency": "solo",
+          "pid": 88616,
+          "terminal": true,
+          "global_GPU_jobs_before": 0,
+          "started_epoch": 1790907076.569,
+          "individual_seconds": 119.130165199982,
+          "peak_MiB": 849.642578125,
+          "process_creation_to_terminal_seconds": 124.41821479797363
+        },
+        "adopted": false,
+        "closed_setting": "native original154warm enc2 rank4 only; no rank/location/LR sweep; not all backbone adaptation invalid",
+        "screening_fold": 5,
+        "complete_five_folds": false,
+        "remaining_folds_started": false,
+        "independent_disk_reload": false,
+        "comparison_limits": "Historical270headonly best0/natural14 not concurrent/capacitymatched; no fair LoRA positive claim. Snapshotcurrent A/B norms and actual group gradients show functioning training; restoredbest0 Bzero reflects selection, not gradient blockage."
+      }
+    }
+  ],
+  "cleanup_completed": true,
+  "deleted_files": 8,
+  "deleted_bytes": 3483807
+}

@@ -1,0 +1,45 @@
+{
+  "scores": {
+    "POR": 77.50036838764457,
+    "PERM": 89.37839421114361,
+    "SW": 74.12175282815758,
+    "TOTAL": 80.47516198004878
+  },
+  "original_fold": 5,
+  "complete_five_folds": false,
+  "total_training_stages": 4,
+  "optional_density_would_make_five": true,
+  "dependency_stages": [
+    "original_source",
+    "v101_por_mean_scope",
+    "v100_perm",
+    "v104_local"
+  ],
+  "source_stage_counted": true,
+  "old_SW_weights_or_source_hidden_features_used": false,
+  "strict_808_passed": false,
+  "remaining_folds_started": false,
+  "sum_dependency_seconds": 2401.975523799978,
+  "timing_scope": "includes historical source and shared stages; sum not parallel wall or speedup",
+  "gain_vs_old_best": -0.029035444428103574,
+  "checkpoint_sha256": "07e0b8df208fe93c8ac07dcf18924459c47afb12ec84b1b7306a0e6017f58670",
+  "report": {
+    "stage": "local",
+    "target": "SW",
+    "target_score": 74.12175282815758,
+    "initial_score": 71.19711508147167,
+    "against_initial": 2.9246377466859173,
+    "against_v97_target": -0.020427076509122344,
+    "best_epoch": 37,
+    "stopped_epoch": 55,
+    "validation_rows": 144665,
+    "predictions_reproduced_exactly": true,
+    "frozen_parameters_exact": true,
+    "gradient_groups": {
+      "private_SW": 0.978633463382721
+    },
+    "seconds": 785.6777900999878,
+    "peak_MiB": 1722.197265625,
+    "complete_five_folds": false
+  }
+}

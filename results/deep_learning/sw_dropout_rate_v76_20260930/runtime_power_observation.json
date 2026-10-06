@@ -1,0 +1,11 @@
+{
+  "recorded_at": "2026-09-30T00:17:48.122491+08:00",
+  "live_gpu": "temperature.gpu, utilization.gpu [%], clocks.current.sm [MHz], power.draw [W], pstate, memory.used [MiB]\n63, 73 %, 1335 MHz, 32.21 W, P4, 5953 MiB",
+  "preceding_os_snapshot": {
+    "PowerLineStatus": "Offline",
+    "BatteryChargeStatus": "High",
+    "BatteryLifePercent": 0.97,
+    "power_scheme": "Balanced"
+  },
+  "note": "Battery-powered during later batch. No power plan, clocks, thermal or driver settings changed; wall-clock comparisons across batches are not a controlled speed benchmark."
+}

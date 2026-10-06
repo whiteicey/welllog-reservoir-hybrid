@@ -1,0 +1,11 @@
+{
+  "explicit_user_approved": true,
+  "user_reply": "现有的双并发可以继续，之后不再双并发，看一下阶段性得分",
+  "authorized_epoch": 1790936045.4005492,
+  "maximum_new_GPU_jobs": 1,
+  "maximum_preserved_GPU_jobs": 2,
+  "controller_sha256": "9626753d5a9ac3ef6311399ea642701962208903f0cf759567eda7e20fb4c0bb",
+  "no_training_restart": true,
+  "no_model_changes": true,
+  "no_failure_retry": true
+}

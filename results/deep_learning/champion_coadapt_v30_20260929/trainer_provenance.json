@@ -1,0 +1,14 @@
+{
+  "template": "experiments\\pure_dl\\train_champion_route_v28.py",
+  "template_sha256": "952f56b4a2e1b8038bc91625dfe473db1a08229a6e9b677ff3eac4499328b6f6",
+  "new_trainer": "experiments\\pure_dl\\train_coadapt_v30.py",
+  "new_trainer_sha256": "2725fc610aa07926c8d4fa8f25002516057e3da03853b4520ba28f5f20e4526a",
+  "historical_source_modified": false,
+  "changes": [
+    "retained v29 initialization",
+    "no new capacity",
+    "six fixed update-range trials",
+    "LR3e-5",
+    "separate gradient clipping per route/factor group"
+  ]
+}

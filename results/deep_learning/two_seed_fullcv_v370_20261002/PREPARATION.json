@@ -1,0 +1,15 @@
+{
+  "status": "syntax_checked_not_launched",
+  "code_sha256": {
+    "experiments/pure_dl/fullcv_pair_context_v370.py": "5a23f06df142ac5fb68f4eb21dedd3f6018771607ced307f6d43707e20d1675e",
+    "experiments/pure_dl/pair_fullcv_models_v370.py": "ddd91ab1a25b1326be0b11c9b8d79b9c1cbfd8f1edfe106fe4fd790937e6cd5b",
+    "experiments/pure_dl/train_pair_fullcv_source_v370.py": "1ba2d19886236ade143b71dbcf12dd56a50d2cd909ef9823a681abefffde3376",
+    "experiments/pure_dl/train_pair_fullcv_stage_v370.py": "59be56d43ca9c35d5d2e56ede1bd805842d50607f8281cf33d1858e5e6418c27",
+    "experiments/pure_dl/evaluate_pair_fullcv_v370.py": "4997767ec88a6e5b3d6c7c93b5c4de1be754e788753836b277200835f6c13373",
+    "experiments/pure_dl/record_pair_fullcv_v370.py": "90c7fb93b81e70da90cf927103a5a06faa7c2df07c08177a4e11762c03290d90",
+    "experiments/pure_dl/run_pair_fullcv_v370.py": "e4b368d8516c558b085338a11c8545abee5df5c276e745c364658ab9aea791ff"
+  },
+  "validation": "source port syntax; own-fold training input/side-feature cache replaces fifth-only legacy loader; no redundant numerical preflight",
+  "source_template_sha256": "52351e45fce0671b32efd38e90db10596641b3b407776258349667d222c2ea3f",
+  "stage_template_sha256": "8526d895cdc52d3e9745368acf227bb9d7eb7a3538948de5a29a11ffe4a68eff"
+}

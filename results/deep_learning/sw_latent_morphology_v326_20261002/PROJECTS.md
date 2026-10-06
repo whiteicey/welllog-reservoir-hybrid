@@ -1,0 +1,13 @@
+# Goal / work / next
+Goal: test nonlinear depthsignal preservation withbody/readoutjoint and keep gains. Implemented freshdepth/channel learnedmorphology pair. Nextwhenappropriate: explicitfixedfifthlaunch?2GPU, ownbest/frozen/integrity thenpairedwhole/CONT evidence. Unfinished actualbenefit/fullOOF82. Afterfailureclosewithoutgrid; afterpositiveonlyevidence-basedpromotion.
+
+V326 depthPID45412/channelPID65636 explicitlylaunched afterfreshactualGPUchecks; only2GPUjobs. Depthordinaryinitial SW74.121752689769/92289active verified, channelinitialpending. Original104only/freshpositiveearlyfusioncode, allfreshbody/readout+morphjoint inoneSWphase, no trainedrepair/otherfolds. Traininggainunproven.
+
+V326 live best13 depth74.169543032075/CONT17.963442088248, channel74.166675514358/CONT17.962394682651. Pairedwhole+0.002867517717/CONT+0.001047405597; absoluteCONTvs321own+0.052086660558/+0.051039254962, most benefit common nonlinearmodule, not bigdepthcausalproof. Bothconfirmedlive45412/65636, snapshotnotfinal/noadoption/recipeunchanged. Currentandbestmorphparameters updated; channelinitialbest0 earlierwasrollback notdead. Conditionalresearchnow explores same5424 module sharedfirst-vsallthreebranches onlyifterminalpositivepersists, no code/newstudy/automaticqueue or trainedrepairweights. Maskedreconstruction remains lowpriorityafterhistoricv45negative.
+
+V326 depth: SW74.169543032075, actualTOTAL80.629201989365; fresh297encoder/state/readout +21600 own104norm128 latentlatefusion, original104only; no trained321repairweights, oneaddedSWphase. No fullOOF/otherfolds.
+
+V326 channel: SW74.166675514358, actualTOTAL80.628198358164; fresh297encoder/state/readout +21600 own104norm128 latentlatefusion, original104only; no trained321repairweights, oneaddedSWphase. No fullOOF/otherfolds.
+
+## Final retained small gain
+Bothnaturalstop27/best13. DepthSW74.169543032075/CONT17.963442088248, channel74.166675514358/CONT17.962394682651; pairedwhole+0.002867517717/CONT+0.001047405597. Depthvs321own whole+0.003512851583/CONT+0.052086660558. Most continuousbenefit common nonlinearenvelope, notbigdepthcausalproof; single-seedmicro notrobust. Actual144665fixedtargetcomposition POR302full/PERM312rational/SW326depth TOTAL80.699037441177 (+0.001229498054),8phases/sourcecounted/oneaddedphasehead. NewCURRENT_EIGHT_STAGE_RECIPE.json, oldrecipes/default5/deliveryunchanged; strict808false/nootherfolds/fullOOF82unmet. AllbestRAMreplay/frozenexact, actualmoduleupdates, noindependentdiskreload. Individual576.585568/563.820791s, total595.904282s/stagger30.619320s, peaks1779.212402/1779.157715MiB. Includesprep/initial/train/bestrestore, notimplementation/finalization orisolatedspeedclaim. Conditionalsharedallcoverage327 nowimplementedfreshonly; sourceweightsnotchained.

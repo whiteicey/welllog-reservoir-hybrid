@@ -1,0 +1,124 @@
+{
+  "project": "por_group_shape_v314_20261002",
+  "scope": "obsolete-study",
+  "weights_retained": false,
+  "cleanup": "Obsolete artifacts removed by explicit user request. These are historical scores, not newly verified training.",
+  "results": [
+    {
+      "source": "PAIRED_FINAL.json",
+      "result": {
+        "reports": {
+          "rational": {
+            "stage": "rational",
+            "target": "POR",
+            "target_score": 78.03078642930447,
+            "initial_score": 77.92638076072386,
+            "against_initial": 0.10440566858061118,
+            "against_v97_target": 0.47884962741946424,
+            "best_epoch": 29,
+            "stopped_epoch": 33,
+            "validation_rows": 144665,
+            "predictions_reproduced_exactly": true,
+            "frozen_parameters_exact": true,
+            "seconds": 904.5683581000194,
+            "peak_MiB": 1814.08740234375,
+            "complete_five_folds": false,
+            "early_terminated": true
+          },
+          "polynomial": {
+            "stage": "polynomial",
+            "target": "POR",
+            "target_score": 78.02847584828407,
+            "initial_score": 77.92638076072386,
+            "against_initial": 0.10209508756021535,
+            "against_v97_target": 0.4765390463990684,
+            "best_epoch": 29,
+            "stopped_epoch": 33,
+            "validation_rows": 144665,
+            "predictions_reproduced_exactly": true,
+            "frozen_parameters_exact": true,
+            "seconds": 904.4828527999925,
+            "peak_MiB": 1813.98974609375,
+            "complete_five_folds": false,
+            "early_terminated": true
+          }
+        },
+        "strata": {
+          "rational": {
+            "default": 97.4151361319245,
+            "continuous": 41.673763989730155
+          },
+          "polynomial": {
+            "default": 97.41407632714055,
+            "continuous": 41.66910746982659
+          }
+        },
+        "best_shape_delta_norms": {
+          "rational": {
+            "body_shape.a": 0.9020287394523621,
+            "body_shape.b": 0.07037369161844254,
+            "readout_shape.a": 0.47224441170692444,
+            "readout_shape.b": 0.0745655745267868
+          },
+          "polynomial": {
+            "body_shape.a": 0.9197736382484436,
+            "body_shape.b": 0.32826900482177734,
+            "readout_shape.a": 0.4555962383747101,
+            "readout_shape.b": 0.21899862587451935
+          }
+        },
+        "rational_minus_polynomial": 0.00231058102039583,
+        "rational_minus_polynomial_CONT": 0.004656519903562639,
+        "gain_vs_retained302": {
+          "rational": 0.00023363515983021443,
+          "polynomial": -0.0020769458605656155
+        },
+        "CONT_vs_retained302": {
+          "rational": -0.001315917341244699,
+          "polynomial": -0.005972437244807338
+        },
+        "timing": {
+          "maximum_parallelism": 2,
+          "gain": "unproved",
+          "jobs": [
+            {
+              "start_epoch": 1790884170.928,
+              "pid": 86736,
+              "stage": "rational"
+            },
+            {
+              "start_epoch": 1790884170.941,
+              "pid": 53836,
+              "stage": "polynomial"
+            }
+          ],
+          "started_UTC": "2026-10-01T19:49:30.9133814+00:00",
+          "status": "pair_launched",
+          "started_epoch": 1790884170.913,
+          "terminal": true,
+          "same_work_pair_wall_seconds": 910.6228020191193,
+          "individual_seconds": {
+            "rational": 904.5683581000194,
+            "polynomial": 904.4828527999925
+          },
+          "peak_MiB": {
+            "rational": 1814.08740234375,
+            "polynomial": 1813.98974609375
+          },
+          "interpretation": "Concurrent pair, maximum two GPU jobs; pair wall includes training warmup and final replay, excludes study preparation and this CPU finalization. No isolated serial-versus-parallel comparison."
+        },
+        "screening_fold": 5,
+        "complete_five_folds": false,
+        "remaining_folds_started": false,
+        "independent_disk_reload": false,
+        "automatic_adoption": false,
+        "adopted": false,
+        "closure": "Rational beats polynomial whole+.00231058102/CONT+.00465651990, but retained302 whole+.00023363516 and CONT-.00131591734. Retain matched mechanism/control evidence only; do not replace best POR or perform response basis grids. Scope: this shared input/readout bank placement, not all rational mechanisms.",
+        "retained_as_local_mechanism_control": true
+      }
+    }
+  ],
+  "cleanup_completed": true,
+  "deleted_files": 15,
+  "deleted_bytes": 6964251
+}

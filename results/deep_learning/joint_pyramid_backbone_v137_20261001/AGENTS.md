@@ -1,0 +1,2 @@
+# Goal and constraints
+Optimize actual original-fifth three-target neural predictions with a new convolutional pyramid, retain original data isolation/scoring and 80/18 budget. Max2GPU jobs, no automatic queues or remaining folds. Keep sources/configs frozen after launch, count original source phase, preserve prior deliveries. Update PROJECTS.md, README, EXPLORATIONS and atlas each batch; partial snapshots are not final gains.

@@ -1,0 +1,214 @@
+{
+  "identity": "seed_20261013",
+  "fold": 2,
+  "stage": "POR341",
+  "observed_epoch": 1790938526.7244973,
+  "report": {
+    "stage": "POR341",
+    "target": "POR",
+    "target_score": 79.3197410309422,
+    "initial_score": 79.31187842855309,
+    "against_initial": 0.007862602389110407,
+    "best_epoch": 8,
+    "stopped_epoch": 22,
+    "validation_rows": 144667,
+    "predictions_reproduced_exactly": true,
+    "frozen_parameters_exact": true,
+    "gradient_groups": {
+      "POR_new_raw_feature_backbone": 0.08859619498252869,
+      "POR_direct_categorical_readout": 0.05611657351255417,
+      "POR_curve_interaction_backbone": 0.0850294977426529
+    },
+    "effective_patience": 14,
+    "SOTA_broken": true,
+    "seconds": 278.36848199996166,
+    "peak_MiB": 2212.4833984375,
+    "complete_five_folds": false,
+    "early_terminated": false
+  },
+  "timing": {
+    "identity": "seed_20261013",
+    "fold": 2,
+    "stage": "POR341",
+    "pid": 66628,
+    "terminal": true,
+    "exit_code": 0,
+    "process_wall_seconds": 288.3050186634064,
+    "concurrency": "solo after user requested serial",
+    "includes": "load/preprocess/warmup/training or scan/restore/write",
+    "attached_without_training_restart": false
+  },
+  "rows": 144667,
+  "source_scores": {
+    "POR": 79.05605643154057,
+    "PERM": 90.52438800229126,
+    "SW": 74.94652012820983,
+    "TOTAL": 81.63163477513754
+  },
+  "source_sha256": "b2e43579577ae6d6befcdef1f81011578d234868a3fc8683d3d6d9309ae5210e",
+  "own_source_Q": {
+    "status": "ready",
+    "epoch": 42,
+    "sha256": "4c422d4bd1ecc822ba7331ce96f8e49924654c60e19511878811458fdf8b7a95",
+    "dynamic_updates": false,
+    "rule": "last original training-only source Q observation strictly before this fold best epoch; Q0=1 before first observation",
+    "minimum": 0.10000000149011612,
+    "maximum": 1.0,
+    "downweighted_training_rows": 1444
+  },
+  "completed_prefix": [
+    "SOURCE",
+    "POR113",
+    "POR151",
+    "PERM154",
+    "SW104",
+    "POR341"
+  ],
+  "prefix_scores": {
+    "POR": 79.3197410309422,
+    "PERM": 90.56670516460275,
+    "SW": 74.75889434054632,
+    "TOTAL": 81.65988213608483
+  },
+  "stage_gains": [
+    {
+      "stage": "POR113",
+      "target": "POR",
+      "actual_target_gain": 0.22567326465978965,
+      "actual_TOTAL_contribution": 0.06770197939793689,
+      "previous_target_score": 79.05605643154057,
+      "selected_target_score": 79.28172969620036,
+      "optimizer_gain": 0.23848605030769932,
+      "best_epoch": 4,
+      "stopped_epoch": 18,
+      "strata": {
+        "DEFAULT": {
+          "rows": 97152,
+          "before": 98.00930500658761,
+          "after": 98.03194993412386,
+          "delta": 0.02264492753624836
+        },
+        "CONT": {
+          "rows": 47515,
+          "before": 40.303115137992116,
+          "after": 40.9439122374027,
+          "delta": 0.6407970994105838
+        }
+      },
+      "process_wall_seconds": 128.20625162124634,
+      "concurrency": "solo after user requested serial"
+    },
+    {
+      "stage": "POR151",
+      "target": "POR",
+      "actual_target_gain": 0.030148732352728302,
+      "actual_TOTAL_contribution": 0.00904461970581849,
+      "previous_target_score": 79.28172969620036,
+      "selected_target_score": 79.31187842855309,
+      "optimizer_gain": 0.030148732352728302,
+      "best_epoch": 3,
+      "stopped_epoch": 17,
+      "strata": {
+        "DEFAULT": {
+          "rows": 97152,
+          "before": 98.03194993412386,
+          "after": 98.02886198945981,
+          "delta": -0.0030879446640454944
+        },
+        "CONT": {
+          "rows": 47515,
+          "before": 40.9439122374027,
+          "after": 41.0420186598645,
+          "delta": 0.09810642246180379
+        }
+      },
+      "process_wall_seconds": 181.22311973571777,
+      "concurrency": "solo after user requested serial"
+    },
+    {
+      "stage": "PERM154",
+      "target": "PERM",
+      "actual_target_gain": 0.042317162311491074,
+      "actual_TOTAL_contribution": 0.014811006809021875,
+      "previous_target_score": 90.52438800229126,
+      "selected_target_score": 90.56670516460275,
+      "optimizer_gain": 0.042317162311491074,
+      "best_epoch": 2,
+      "stopped_epoch": 16,
+      "strata": {
+        "DEFAULT": {
+          "rows": 98822,
+          "before": 97.07781474189487,
+          "after": 97.05754224113392,
+          "delta": -0.020272500760952994
+        },
+        "CONT": {
+          "rows": 45845,
+          "before": 76.39803317055106,
+          "after": 76.57526658729097,
+          "delta": 0.17723341673990944
+        }
+      },
+      "process_wall_seconds": 148.78517055511475,
+      "concurrency": "solo after user requested serial"
+    },
+    {
+      "stage": "SW104",
+      "target": "SW",
+      "actual_target_gain": -0.18762578766350657,
+      "actual_TOTAL_contribution": -0.0656690256822273,
+      "previous_target_score": 74.94652012820983,
+      "selected_target_score": 74.75889434054632,
+      "optimizer_gain": 2.1285664943175107,
+      "best_epoch": 30,
+      "stopped_epoch": 44,
+      "strata": {
+        "DEFAULT": {
+          "rows": 103168,
+          "before": 98.84783610637948,
+          "after": 98.66326871574515,
+          "delta": -0.18456739063432792
+        },
+        "CONT": {
+          "rows": 41499,
+          "before": 15.52699274596439,
+          "after": 15.331763673770185,
+          "delta": -0.1952290721942056
+        }
+      },
+      "process_wall_seconds": 601.318772315979,
+      "concurrency": "solo after user requested serial"
+    },
+    {
+      "stage": "POR341",
+      "target": "POR",
+      "actual_target_gain": 0.007862602389110407,
+      "actual_TOTAL_contribution": 0.002358780716733122,
+      "previous_target_score": 79.31187842855309,
+      "selected_target_score": 79.3197410309422,
+      "optimizer_gain": 0.007862602389110407,
+      "best_epoch": 8,
+      "stopped_epoch": 22,
+      "strata": {
+        "DEFAULT": {
+          "rows": 97152,
+          "before": 98.02886198945981,
+          "after": 98.24604743083005,
+          "delta": 0.21718544137023343
+        },
+        "CONT": {
+          "rows": 47515,
+          "before": 41.0420186598645,
+          "after": 40.621887313969935,
+          "delta": -0.4201313458945677
+        }
+      },
+      "process_wall_seconds": 288.3050186634064,
+      "concurrency": "solo after user requested serial"
+    }
+  ],
+  "checkpoint_sha256": "0741d86c557e7e3a9449fae44ff3b833cc30c4484db946b8ba85ccb062cbc4bf",
+  "score_scope": "actually assembled completed-stage prefix; not complete8stage model or fullOOF",
+  "complete8stage_single_fold": false,
+  "CPU_only": true
+}

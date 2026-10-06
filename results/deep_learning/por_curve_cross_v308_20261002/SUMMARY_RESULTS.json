@@ -1,0 +1,116 @@
+{
+  "project": "por_curve_cross_v308_20261002",
+  "scope": "obsolete-study",
+  "weights_retained": false,
+  "cleanup": "Obsolete artifacts removed by explicit user request. These are historical scores, not newly verified training.",
+  "results": [
+    {
+      "source": "PAIRED_FINAL.json",
+      "result": {
+        "reports": {
+          "cross": {
+            "stage": "cross",
+            "target": "POR",
+            "target_score": 78.02134559660777,
+            "initial_score": 77.92638076072386,
+            "against_initial": 0.09496483588391413,
+            "against_v97_target": 0.4694087947227672,
+            "best_epoch": 11,
+            "stopped_epoch": 25,
+            "validation_rows": 144665,
+            "predictions_reproduced_exactly": true,
+            "frozen_parameters_exact": true,
+            "seconds": 643.2169180000201,
+            "peak_MiB": 1814.01123046875,
+            "complete_five_folds": false,
+            "early_terminated": false
+          },
+          "additive": {
+            "stage": "additive",
+            "target": "POR",
+            "target_score": 78.02830846058242,
+            "initial_score": 77.92638076072386,
+            "against_initial": 0.10192769985856387,
+            "against_v97_target": 0.47637165869741693,
+            "best_epoch": 29,
+            "stopped_epoch": 43,
+            "validation_rows": 144665,
+            "predictions_reproduced_exactly": true,
+            "frozen_parameters_exact": true,
+            "seconds": 976.5726931000245,
+            "peak_MiB": 1813.39404296875,
+            "complete_five_folds": false,
+            "early_terminated": false
+          }
+        },
+        "strata": {
+          "cross": {
+            "default": 97.42149496062825,
+            "continuous": 41.634689527177926
+          },
+          "additive": {
+            "default": 97.41407632714055,
+            "continuous": 41.6686261320301
+          }
+        },
+        "cross_minus_additive": -0.006962863974649736,
+        "whole_best_module_norms": {
+          "cross": {
+            "conditional_cross.up.0.weight": 1.1113982200622559,
+            "conditional_cross.up.1.weight": 1.1954692602157593,
+            "conditional_cross.bias.0": 0.22701145708560944,
+            "conditional_cross.bias.1": 0.2318749725818634
+          },
+          "additive": {
+            "conditional_cross.up.0.weight": 1.4855625629425049,
+            "conditional_cross.up.1.weight": 1.544439673423767,
+            "conditional_cross.bias.0": 0.11713281273841858,
+            "conditional_cross.bias.1": 0.1322098821401596
+          }
+        },
+        "selected_arm": "additive",
+        "adopted_absolute": false,
+        "capacity78320": true,
+        "only_pair_variable": "normalized anchorproduct with fullcurve preserved",
+        "same_initialization": true,
+        "not_same_effective_function_family": true,
+        "screening_fold": 5,
+        "complete_five_folds": false,
+        "remaining_folds_started": false,
+        "timing": {
+          "terminal": true,
+          "maximum_concurrency": 2,
+          "includes": "data initial training best restore",
+          "starts": [
+            {
+              "start_epoch": 1790879892.91,
+              "pid": 44656,
+              "explicit_launch": true,
+              "stage": "cross"
+            },
+            {
+              "start_epoch": 1790879894.037,
+              "pid": 76968,
+              "explicit_launch": true,
+              "stage": "additive"
+            }
+          ],
+          "excludes": "code preparation CPU record",
+          "end_epochs": {
+            "cross": 1790880541.4024236,
+            "additive": 1790880875.97619
+          },
+          "individual_seconds": {
+            "cross": 643.2169180000201,
+            "additive": 976.5726931000245
+          },
+          "same_work_pair_wall_seconds": 983.0661900043488,
+          "interpretation": "Two arms concurrent with different starts; includes data/initial/train/best restore. Codeprep and CPUrecord excluded; no serialspeedranking."
+        }
+      }
+    }
+  ],
+  "cleanup_completed": true,
+  "deleted_files": 11,
+  "deleted_bytes": 6956156
+}

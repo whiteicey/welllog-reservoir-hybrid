@@ -1,0 +1,50 @@
+﻿[
+    {
+        "provider":  "Microsoft-Windows-Kernel-General",
+        "time":  "2026-09-30T08:51:03.2508251+08:00",
+        "summary":  "The system time has changed to ‎2026‎-‎09‎-‎30T00:51:03.250464100Z from ‎2026‎-‎09‎-‎30T00:51:03.249823000Z.\r",
+        "id":  1
+    },
+    {
+        "provider":  "Microsoft-Windows-Kernel-General",
+        "time":  "2026-09-30T08:51:03.2498583+08:00",
+        "summary":  "The system time has changed to ‎2026‎-‎09‎-‎30T00:51:03.249453500Z from ‎2026‎-‎09‎-‎30T00:51:03.249351400Z.\r",
+        "id":  1
+    },
+    {
+        "provider":  "Microsoft-Windows-Kernel-General",
+        "time":  "2026-09-30T08:51:03.2479292+08:00",
+        "summary":  "The system time has changed to ‎2026‎-‎09‎-‎30T00:51:03.247291200Z from ‎2026‎-‎09‎-‎30T00:51:01.714406500Z.\r",
+        "id":  1
+    },
+    {
+        "provider":  "Microsoft-Windows-Power-Troubleshooter",
+        "time":  "2026-09-30T08:45:57.3388865+08:00",
+        "summary":  "The system has returned from a low power state.\r",
+        "id":  1
+    },
+    {
+        "provider":  "Microsoft-Windows-Kernel-General",
+        "time":  "2026-09-30T08:45:52.5005869+08:00",
+        "summary":  "The system time has changed to ‎2026‎-‎09‎-‎30T00:45:52.500000000Z from ‎2026‎-‎09‎-‎29T17:40:09.198448300Z.\r",
+        "id":  1
+    },
+    {
+        "provider":  "Microsoft-Windows-Kernel-Power",
+        "time":  "2026-09-30T01:40:09.1985916+08:00",
+        "summary":  "The system has resumed from sleep.",
+        "id":  107
+    },
+    {
+        "provider":  "Microsoft-Windows-Kernel-General",
+        "time":  "2026-09-30T01:39:51.2489206+08:00",
+        "summary":  "The system time has changed to ‎2026‎-‎09‎-‎29T17:39:49.500000000Z from ‎2026‎-‎09‎-‎29T17:39:51.248021700Z.\r",
+        "id":  1
+    },
+    {
+        "provider":  "Microsoft-Windows-Kernel-Power",
+        "time":  "2026-09-30T01:39:49.1182076+08:00",
+        "summary":  "The system is entering sleep.\r",
+        "id":  42
+    }
+]

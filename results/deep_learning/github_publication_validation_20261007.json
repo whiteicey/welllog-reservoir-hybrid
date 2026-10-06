@@ -1,0 +1,10 @@
+{
+  "staged_files": 5172,
+  "readme_utf8_and_links": true,
+  "all_score_rows_exact": true,
+  "six_frozen_runtime_mirrors_exact": true,
+  "all_staged_python_parse": true,
+  "no_weights_or_row_data": true,
+  "secrets_pattern_scan": true,
+  "scope": "Documentation/source publication; no retraining or unchanged inference rerun"
+}

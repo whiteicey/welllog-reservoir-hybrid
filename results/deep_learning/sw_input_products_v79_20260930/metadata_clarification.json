@@ -1,0 +1,8 @@
+{
+  "immutable_original_configs": true,
+  "source_hashes_preserved": true,
+  "actual_comparison": "matched 45-dimensional input feature basis; 4320 new stem adapter parameters; all original weights frozen and eval",
+  "template_metadata_corrections": {
+    "matched_key_dropout_comparison": "historical field name copied from template; this is NOT a key-dropout experiment, both actual training key-drop probabilities are zero"
+  }
+}

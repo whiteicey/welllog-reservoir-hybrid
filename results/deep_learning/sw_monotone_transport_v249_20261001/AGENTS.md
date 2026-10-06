@@ -1,0 +1,1 @@
+Maintain PROJECTS/README. Originalfold5/Q50/normalGPU/80-14/max2. Frozen104/defaultgate; no repairweights. One selectedSWphase/sixalone/whole<=8. Train-only grid domain, monotone mass/CDF supervision, originaldecoder. Initialmathematicalidentity/numericalscoreseparate. Atomicstates/nootherfolds below808+gain.

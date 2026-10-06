@@ -1,0 +1,1 @@
+Fixed originalfold5/9curves206+relative/Q/officialgrid score unchanged. max80/pat14/min10/b64/64steps normalGPU max2. OneaddedSWphase; prior104 only no275/278weights. Maintain PROJECTS/README/EXPLORATIONS/atlas. No otherfolds before strict80.8 and cleargain.

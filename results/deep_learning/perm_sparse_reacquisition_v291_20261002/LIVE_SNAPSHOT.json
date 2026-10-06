@@ -1,0 +1,26 @@
+{
+  "actual_processes_verified": true,
+  "states": {
+    "point": {
+      "status": "running",
+      "pid": 22664,
+      "stage": "point",
+      "epoch": 15,
+      "best": 89.5155547932572,
+      "best_epoch": 5,
+      "bad": 10,
+      "peak_MiB": 788.69775390625
+    },
+    "window": {
+      "status": "running",
+      "pid": 77772,
+      "stage": "window",
+      "epoch": 9,
+      "best": 89.51032306691626,
+      "best_epoch": 5,
+      "bad": 4,
+      "peak_MiB": 788.69775390625
+    }
+  },
+  "not_final_gain": true
+}

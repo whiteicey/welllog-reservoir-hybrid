@@ -1,0 +1,21 @@
+{
+  "nodes": 324,
+  "edges": 648,
+  "experiments": 316,
+  "deadends": 8,
+  "unresolved_parents": 47,
+  "missing_evidence": [],
+  "cycles": [],
+  "with_numeric_result": 307,
+  "remaining_states": {
+    "pure_dl_dual_evidence_sequence": "unscored",
+    "pure_dl_inner_earlystop": "diagnostic",
+    "pure_dl_parallel_depth_sequence": "unscored",
+    "pure_dl_por_student3_sequence": "unscored",
+    "pure_dl_sequence_pair": "diagnostic",
+    "pure_dl_tabm32_aligned": "stopped",
+    "pure_dl_transition_loss_sequence": "unscored",
+    "pure_dl_paired_curve_filter_sequence/failed_config_guard_20260926_152722": "unscored",
+    "pure_dl_paired_curve_filter_sequence/failed_dtype_20260926_152643": "unscored"
+  }
+}

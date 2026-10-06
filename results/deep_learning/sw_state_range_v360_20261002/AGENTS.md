@@ -1,0 +1,1 @@
+Maintain PROJECTS/README/EXPLORATIONS/atlas. Original104only/fresh351allpositivecode, bound8only/full92841jointoneSWphase/max8/no trainedrepairchains. Nativeownloss/Q50/originalsplit9/206/max80min10/pat10strictSOTAthen14/max2. Explicitlaunch/noqueue/strict808beforeotherfolds. Sourcesimmutable afterlaunch/atomicexplicitresume.

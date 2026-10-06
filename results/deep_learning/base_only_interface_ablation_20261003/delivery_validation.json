@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "full_OOF": {
+    "POR": 79.48913124510835,
+    "PERM": 90.52738796526987,
+    "SW": 75.44687796367991,
+    "TOTAL": 81.93773244866492
+  },
+  "wells": 10,
+  "rows": 95948,
+  "test_perwell": true,
+  "base_only": true,
+  "models": 15,
+  "code_zip_crc_manifest": true,
+  "result_sha256": "5d2d6360a2bc8bf52183ef93194bdeaf25b5457c783ac97f25dc2820df612bb2",
+  "test_accuracy": "unknown"
+}

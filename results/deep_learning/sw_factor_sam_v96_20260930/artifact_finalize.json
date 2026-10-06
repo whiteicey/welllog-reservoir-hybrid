@@ -1,0 +1,22 @@
+{
+  "scores": {
+    "POR": 77.551936801885,
+    "PERM": 89.39672404936582,
+    "SW": 74.1421799046667,
+    "TOTAL": 80.50419742447689
+  },
+  "fixed_original_fold5": true,
+  "rows": 144665,
+  "raw_disk_replay_exact": true,
+  "checkpoint_sha256": "6777b229a333818f3bae7a46bac3d780faebb0325a19a150399cad0b7307d83b",
+  "strict805_passed": true,
+  "complete_five_folds": false,
+  "remaining_folds_started": false,
+  "active_gpu_jobs": 0,
+  "atlas_nodes": 651,
+  "atlas_deadends": 93,
+  "cleanup_manifest_and_absence_verified": true,
+  "first_launch_to_records_and_atlas_seconds": 1029.693548,
+  "scope": "includes actual serial training/explicit gaps/finalization/replay/cleanup/documentation/atlas; authoring before first launch excluded",
+  "finished_at": "2026-09-30T16:42:28.976184+08:00"
+}

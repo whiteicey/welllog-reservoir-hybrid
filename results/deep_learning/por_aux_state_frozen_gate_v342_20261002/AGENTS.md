@@ -1,0 +1,2 @@
+# Scope
+One fresh335encoder/density+49auxstate branch, mainRPS and prediction gate alwaysoriginal151. ReplaceconstantBCE withauxtrueDEFAULTBCE, no doubleweight/teacher. Onlyoriginal151weights/no340/341trainedrepairchain. OnePORaddition/max8, originalfold5/Q50/score/80pat14/min10/b64/64steps/globalmax2GPU. Preparedonly/noqueue;341active. MaintainPROJECTS/READMEactualgain/closure, nootherfoldsbeforestrict80.8+gain/fullOOF82unmet, priorartifactsimmutable.

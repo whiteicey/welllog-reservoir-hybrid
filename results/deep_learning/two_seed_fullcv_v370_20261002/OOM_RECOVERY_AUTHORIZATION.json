@@ -1,0 +1,9 @@
+{
+  "explicit_user_approved": true,
+  "user_reply": "???????????",
+  "maximum_GPU_jobs": 1,
+  "prepared_sha256": "0297f4f18a0b7056a27bdcd5bc676e5d8bddfb930b2423149474610c72e9cee1",
+  "controller_sha256": "80425c57340792a27a78817ed3b2c2862d1a81f0b6d81d2f7b61edd3e4b42e02",
+  "authorized_epoch": 1790931556.0158787,
+  "scope": "Resume exact two failed complete-epoch states, continue unchanged finite two-model folds1-4 and native scans; one GPU task, no new optimizer routes/no future automatic failure retries"
+}

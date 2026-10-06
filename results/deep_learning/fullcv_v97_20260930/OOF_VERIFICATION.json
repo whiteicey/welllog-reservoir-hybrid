@@ -1,0 +1,24 @@
+{
+  "complete_five_folds": true,
+  "rows": 723556,
+  "wells": 80,
+  "original_row_order": true,
+  "all_four_disk_replays_passed": true,
+  "fifth_reused_exact": true,
+  "source_recipe_sha256": "126b4ef9aca25c837bab22c56d10e76b7a46098342f2b00937f31c54eb3a1221",
+  "oof_sha256": "c542dcb7a6fa69e9106f83e9df91ad0a7056e0d735d7c39456a156b70486397b",
+  "oof_scores": {
+    "POR": 79.33058096543338,
+    "PERM": 90.44127043721572,
+    "SW": 75.53542958448546,
+    "TOTAL": 81.89101929722543
+  },
+  "strict_oof82_passed": false,
+  "fold_proof_files": [
+    "outputs\\pure_dl_fullcv_v97\\fold_1\\disk_replay_proof.json",
+    "outputs\\pure_dl_fullcv_v97\\fold_2\\disk_replay_proof.json",
+    "outputs\\pure_dl_fullcv_v97\\fold_3\\disk_replay_proof.json",
+    "outputs\\pure_dl_fullcv_v97\\fold_4\\disk_replay_proof.json"
+  ],
+  "verified_at": "2026-09-30T23:17:46.699896+08:00"
+}

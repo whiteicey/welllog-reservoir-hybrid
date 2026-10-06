@@ -1,0 +1,19 @@
+{
+  "deleted": [
+    {
+      "path": "outputs\\pure_dl_sw_full_utility_v81_SW_likelihood_fold5\\model_best.pt",
+      "bytes": 3450347,
+      "sha256": "3d4248f7de6b470ad7012ba24ab6aa9cab1b4f9d6bc00d7690a3f32d1aa616c3"
+    },
+    {
+      "path": "outputs\\pure_dl_sw_full_utility_v81_SW_likelihood_fold5\\last_state.pt",
+      "bytes": 15600731,
+      "sha256": "138556b52f40bdecc5175857a4eec83b5ea0eccd86aa56e3e4c07b57bfd6a443"
+    }
+  ],
+  "bytes": 19051078,
+  "status": "complete",
+  "retained": [
+    "joint"
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "explicit_user_approved": true,
+  "maximum_GPU_jobs": 2,
+  "user_reply": "可以加入另外一个并发线程",
+  "authorized_epoch": 1790934988.481584,
+  "controller_sha256": "d1b6649dc816357ebad3419dcca692f8da77f46ec4b8836aef6b097ea1055eb0",
+  "scope": "Unchanged finite original+seed13 folds1-4/native scans, preserve current GPU worker; no new experiments or failure retries"
+}

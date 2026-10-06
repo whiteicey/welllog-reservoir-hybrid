@@ -1,0 +1,269 @@
+{
+  "completed_seeds": 5,
+  "planned_seeds": 5,
+  "complete": true,
+  "ranking": [
+    {
+      "seed": 20261010,
+      "scores": {
+        "POR": 77.5520561792274,
+        "PERM": 89.49625487509155,
+        "SW": 74.03612889675152,
+        "TOTAL": 80.5019511739133
+      },
+      "strata": {
+        "POR": {
+          "DEFAULT": {
+            "rows": 94357,
+            "score": 97.58258528779
+          },
+          "CONT": {
+            "rows": 50308,
+            "score": 39.98306844175757
+          },
+          "CONT_delta_vs_historical": -1.7535718502375772
+        },
+        "PERM": {
+          "DEFAULT": {
+            "rows": 95533,
+            "score": 97.60194013451068
+          },
+          "CONT": {
+            "rows": 49132,
+            "score": 73.73543850514635
+          },
+          "CONT_delta_vs_historical": -0.274198578050715
+        },
+        "SW": {
+          "DEFAULT": {
+            "rows": 100786,
+            "score": 98.8824389156295
+          },
+          "CONT": {
+            "rows": 43879,
+            "score": 16.966455441053746
+          },
+          "CONT_delta_vs_historical": -1.0129437089928857
+        }
+      },
+      "own_five_stage_prefix_scores": {
+        "POR": 77.42544665121915,
+        "PERM": 89.35243145677488,
+        "SW": 74.03612875776867,
+        "TOTAL": 80.41363007045598
+      },
+      "added_three_phases_gain": 0.08832110345731792,
+      "full_model_wall_seconds": 3098.602507829666
+    },
+    {
+      "seed": 20261014,
+      "scores": {
+        "POR": 77.42032846923811,
+        "PERM": 89.44922714148387,
+        "SW": 73.79607662428037,
+        "TOTAL": 80.36195485878892
+      },
+      "strata": {
+        "POR": {
+          "DEFAULT": {
+            "rows": 94357,
+            "score": 97.46812637112244
+          },
+          "CONT": {
+            "rows": 50308,
+            "score": 39.81895161807891
+          },
+          "CONT_delta_vs_historical": -1.9176886739162313
+        },
+        "PERM": {
+          "DEFAULT": {
+            "rows": 95533,
+            "score": 97.36533191096261
+          },
+          "CONT": {
+            "rows": 49132,
+            "score": 74.05703392845406
+          },
+          "CONT_delta_vs_historical": 0.04739684525699772
+        },
+        "SW": {
+          "DEFAULT": {
+            "rows": 100786,
+            "score": 98.45092906211529
+          },
+          "CONT": {
+            "rows": 43879,
+            "score": 17.16616350411972
+          },
+          "CONT_delta_vs_historical": -0.8132356459269126
+        }
+      },
+      "own_five_stage_prefix_scores": {
+        "POR": 77.29412438388195,
+        "PERM": 89.30441589327997,
+        "SW": 73.79497059371414,
+        "TOTAL": 80.27302258561252
+      },
+      "added_three_phases_gain": 0.08893227317639685,
+      "full_model_wall_seconds": 2903.285534143448
+    },
+    {
+      "seed": 20261013,
+      "scores": {
+        "POR": 77.38833330639497,
+        "PERM": 89.52127968635101,
+        "SW": 73.63533098562274,
+        "TOTAL": 80.3213137271093
+      },
+      "strata": {
+        "POR": {
+          "DEFAULT": {
+            "rows": 94357,
+            "score": 97.85071589813157
+          },
+          "CONT": {
+            "rows": 50308,
+            "score": 39.00936705433838
+          },
+          "CONT_delta_vs_historical": -2.7272732376567674
+        },
+        "PERM": {
+          "DEFAULT": {
+            "rows": 95533,
+            "score": 97.61256100043289
+          },
+          "CONT": {
+            "rows": 49132,
+            "score": 73.78847056443072
+          },
+          "CONT_delta_vs_historical": -0.22116651876633853
+        },
+        "SW": {
+          "DEFAULT": {
+            "rows": 100786,
+            "score": 99.07798628905687
+          },
+          "CONT": {
+            "rows": 43879,
+            "score": 15.195907630216185
+          },
+          "CONT_delta_vs_historical": -2.783491519830447
+        }
+      },
+      "own_five_stage_prefix_scores": {
+        "POR": 77.27542879912328,
+        "PERM": 89.29058665900838,
+        "SW": 73.63533098562274,
+        "TOTAL": 80.20669981535788
+      },
+      "added_three_phases_gain": 0.11461391175141955,
+      "full_model_wall_seconds": 2338.551753282547
+    },
+    {
+      "seed": 20261012,
+      "scores": {
+        "POR": 76.81520301795747,
+        "PERM": 89.46897371901133,
+        "SW": 73.84783722739398,
+        "TOTAL": 80.2054447366291
+      },
+      "strata": {
+        "POR": {
+          "DEFAULT": {
+            "rows": 94357,
+            "score": 97.43527242281972
+          },
+          "CONT": {
+            "rows": 50308,
+            "score": 38.14048152565952
+          },
+          "CONT_delta_vs_historical": -3.596158766335627
+        },
+        "PERM": {
+          "DEFAULT": {
+            "rows": 95533,
+            "score": 97.26682888824921
+          },
+          "CONT": {
+            "rows": 49132,
+            "score": 74.30670680777787
+          },
+          "CONT_delta_vs_historical": 0.29706972458080827
+        },
+        "SW": {
+          "DEFAULT": {
+            "rows": 100786,
+            "score": 98.91531584853269
+          },
+          "CONT": {
+            "rows": 43879,
+            "score": 16.270159971531623
+          },
+          "CONT_delta_vs_historical": -1.7092391785150092
+        }
+      },
+      "own_five_stage_prefix_scores": {
+        "POR": 76.59180097270605,
+        "PERM": 89.29139192003413,
+        "SW": 73.84783722739398,
+        "TOTAL": 80.07627049341166
+      },
+      "added_three_phases_gain": 0.12917424321744875,
+      "full_model_wall_seconds": 2487.8816318511963
+    },
+    {
+      "seed": 20261011,
+      "scores": {
+        "POR": 76.72694269202935,
+        "PERM": 89.38299330747085,
+        "SW": 73.74686202568397,
+        "TOTAL": 80.11353217421299
+      },
+      "strata": {
+        "POR": {
+          "DEFAULT": {
+            "rows": 94357,
+            "score": 97.72035990970464
+          },
+          "CONT": {
+            "rows": 50308,
+            "score": 37.35197512408402
+          },
+          "CONT_delta_vs_historical": -4.384665167911123
+        },
+        "PERM": {
+          "DEFAULT": {
+            "rows": 95533,
+            "score": 97.60021958228207
+          },
+          "CONT": {
+            "rows": 49132,
+            "score": 73.40529490904598
+          },
+          "CONT_delta_vs_historical": -0.6043421741510855
+        },
+        "SW": {
+          "DEFAULT": {
+            "rows": 100786,
+            "score": 99.11579579638719
+          },
+          "CONT": {
+            "rows": 43879,
+            "score": 15.47677020467434
+          },
+          "CONT_delta_vs_historical": -2.502628945372292
+        }
+      },
+      "own_five_stage_prefix_scores": {
+        "POR": 76.59083162289573,
+        "PERM": 89.27064029934503,
+        "SW": 73.74686202568397,
+        "TOTAL": 80.03337530062886
+      },
+      "added_three_phases_gain": 0.08015687358413004,
+      "full_model_wall_seconds": 2500.617421388626
+    }
+  ],
+  "complete_five_folds": false,
+  "remaining_folds_started": false
+}

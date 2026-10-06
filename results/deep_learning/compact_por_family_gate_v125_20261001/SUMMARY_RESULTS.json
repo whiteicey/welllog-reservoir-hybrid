@@ -1,0 +1,198 @@
+{
+  "project": "compact_por_family_gate_v125_20261001",
+  "scope": "obsolete-study",
+  "weights_retained": false,
+  "cleanup": "Obsolete artifacts removed by explicit user request. These are historical scores, not newly verified training.",
+  "results": [
+    {
+      "source": "ablation_report.json",
+      "result": {
+        "fixed": {
+          "stage": "fixed",
+          "target": "POR",
+          "target_score": 77.55181337141987,
+          "initial_score": 77.53915967750713,
+          "against_initial": 0.012653693912739072,
+          "against_v97_target": -0.00012343046513763056,
+          "best_epoch": 13,
+          "stopped_epoch": 31,
+          "validation_rows": 144665,
+          "predictions_reproduced_exactly": true,
+          "frozen_parameters_exact": true,
+          "seconds": 237.98260540000047,
+          "peak_MiB": 920.8486328125,
+          "complete_five_folds": false,
+          "early_terminated": false,
+          "final_t3_probabilities": [
+            0.949999988079071,
+            0.949999988079071,
+            0.949999988079071,
+            0.949999988079071,
+            0.949999988079071,
+            0.949999988079071,
+            0.949999988079071,
+            0.949999988079071,
+            0.05000000074505806,
+            0.05000000074505806,
+            0.05000000074505806,
+            0.05000000074505806,
+            0.05000000074505806,
+            0.05000000074505806,
+            0.05000000074505806,
+            0.05000000074505806
+          ]
+        },
+        "learned": {
+          "stage": "learned",
+          "target": "POR",
+          "target_score": 77.54509394060871,
+          "initial_score": 77.53915967750713,
+          "against_initial": 0.005934263101579518,
+          "against_v97_target": -0.006842861276297185,
+          "best_epoch": 13,
+          "stopped_epoch": 31,
+          "validation_rows": 144665,
+          "predictions_reproduced_exactly": true,
+          "frozen_parameters_exact": true,
+          "seconds": 240.30304889997933,
+          "peak_MiB": 920.85009765625,
+          "complete_five_folds": false,
+          "early_terminated": false,
+          "final_t3_probabilities": [
+            0.9890385866165161,
+            0.9817520380020142,
+            0.9879910349845886,
+            0.9854493737220764,
+            0.9854385852813721,
+            0.9868323802947998,
+            0.9869785308837891,
+            0.9848418235778809,
+            0.543447732925415,
+            0.2621921896934509,
+            0.4267403483390808,
+            0.4143560230731964,
+            0.45676764845848083,
+            0.4580385088920593,
+            0.46477845311164856,
+            0.516633927822113
+          ]
+        },
+        "learned_minus_fixed_POR": -0.006719430811159555,
+        "same_initial_function": true,
+        "equal_trainable_capacity": false,
+        "extra_trainable_family_logits": 16,
+        "original_fold": 5,
+        "complete_five_folds": false
+      }
+    },
+    {
+      "source": "CURRENT_RECIPE.json",
+      "result": {
+        "scores": {
+          "POR": 77.55181337141987,
+          "PERM": 89.37839421114361,
+          "SW": 74.12175282815758,
+          "TOTAL": 80.49059547518138
+        },
+        "total_training_stages": 5,
+        "source_stage_counted": true,
+        "dependencies": [
+          "original source",
+          "v113 forward",
+          "v125 fixed",
+          "v100 PERM",
+          "v104 SW"
+        ],
+        "POR": {
+          "checkpoint": "outputs\\pure_dl_compact_por_family_gate_v125_fold5\\fixed\\model_best.pt",
+          "module": "compact_por_family_gate_v125",
+          "stage": "fixed"
+        },
+        "PERM": {
+          "checkpoint": "outputs/pure_dl_compact_v100_fold5/perm/model_best.pt"
+        },
+        "SW": {
+          "checkpoint": "outputs/pure_dl_compact_frequency_v104_fold5/local/model_best.pt"
+        },
+        "screening_fold": 5,
+        "complete_five_folds": false,
+        "strict_808_passed": false,
+        "strict_channel_gain_025": false,
+        "previous_recipe": {
+          "format": "compact_independent_target_recipe",
+          "scores": {
+            "POR": 77.54806949489308,
+            "PERM": 89.37839421114361,
+            "SW": 74.12175282815758,
+            "TOTAL": 80.48947231222334
+          },
+          "screening_fold": 5,
+          "complete_five_folds": false,
+          "strict_808_passed": false,
+          "source_pretraining_counted": true,
+          "total_training_stages": 5,
+          "source_checkpoint": "outputs/pure_dl_paired_local_context_router80_sequence/fold_5.pt",
+          "models": {
+            "POR": {
+              "checkpoint": "outputs\\pure_dl_compact_por_scale_v114_fold5\\location_only\\model_best.pt",
+              "module": "compact_por_scale_v114",
+              "mode": "location_only",
+              "density_family": "expert0 first8 Student-t3; expert1 next8 Cauchy; fixed IQR scale conversion",
+              "best_epoch": 13,
+              "stopped_epoch": 31,
+              "training_seconds": 201.47776360000717,
+              "target_score": 77.54806949489308
+            },
+            "PERM": {
+              "checkpoint": "outputs\\pure_dl_compact_v100_fold5\\perm\\model_best.pt",
+              "module": "compact_five_stage_v100",
+              "density_family": "Gaussian",
+              "best_epoch": 2,
+              "stopped_epoch": 20,
+              "training_seconds": 147.8027762999991,
+              "target_score": 89.37839421114361
+            },
+            "SW": {
+              "checkpoint": "outputs\\pure_dl_compact_frequency_v104_fold5\\local\\model_best.pt",
+              "module": "compact_frequency_v104",
+              "density_family": "Gaussian",
+              "best_epoch": 37,
+              "stopped_epoch": 55,
+              "training_seconds": 785.6777900999878,
+              "target_score": 74.12175282815758
+            }
+          },
+          "source_training_seconds": 1289.1515023999964,
+          "dependency_training_seconds_sum": 2947.4977877999772,
+          "timing_scope": "historical source/shared and observed candidate timing sum; candidate partially concurrent, not fresh serial pipeline wall",
+          "gain_vs_previous_compact": 0.0022845504462338795,
+          "gain_vs_old_18_stage": -0.01472511225354367,
+          "validation_rows": 144665,
+          "original_splits_labels_score_and_population": true,
+          "remaining_folds_started": false,
+          "old_delivery_unchanged": true,
+          "parent_POR_training_phase": {
+            "checkpoint": "outputs\\pure_dl_compact_por_mixed_family_v113_fold5\\t3_cauchy\\model_best.pt",
+            "module": "compact_por_mixed_family_v113",
+            "mode": "t3_cauchy",
+            "density_family": "expert0 first8 Student-t3; expert1 next8 Cauchy; fixed IQR scale conversion",
+            "best_epoch": 69,
+            "stopped_epoch": 80,
+            "training_seconds": 523.3879553999868,
+            "target_score": 77.54045432673898
+          },
+          "dependency_stages": [
+            "original_source",
+            "v113_initial_POR",
+            "v114_refinement_location_only",
+            "v100_PERM",
+            "v104_SW"
+          ]
+        }
+      }
+    }
+  ],
+  "cleanup_completed": true,
+  "deleted_files": 16,
+  "deleted_bytes": 6973898
+}

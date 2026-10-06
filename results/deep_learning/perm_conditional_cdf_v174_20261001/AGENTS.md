@@ -1,0 +1,1 @@
+维护PROJECTS和独立README四项、EXPLORATIONS、图谱。固定原第五折/原9曲线/Q50/ownPERM/80-14/max2GPU；只替换PERM阶段，总5含来源；不加载171已训练头。原子last、无自动恢复补折，旧交付不改。

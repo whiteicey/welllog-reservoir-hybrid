@@ -1,0 +1,48 @@
+{
+  "shared_input_same": true,
+  "shared_input_sha256": "8302281cf0a823d04048c7bf162ca325d27e1d55deb3c3dbcda2452d662c103a",
+  "different_learned_sources": true,
+  "original_source_sha256": "6c9dfa2c8d11b0504d179ec8dea90914a5e18c9642262f2487ff0904c27c414e",
+  "new_source_sha256": "42d79d2f3d3d3de6d087921f876cf05bac60387462cd9aec3cda8a3ab5c6993d",
+  "original_Q": {
+    "status": "ready",
+    "epoch": 54,
+    "sha256": "cb8534af95c64e6d018aaeb72b862c81c059bcef110b3a57b7add39d2e3ffd02",
+    "dynamic_updates": false,
+    "rule": "last original training-only source Q observation strictly before this fold best epoch; Q0=1 before first observation",
+    "minimum": 0.10000000149011612,
+    "maximum": 1.0,
+    "downweighted_training_rows": 1670
+  },
+  "new_Q": {
+    "status": "ready",
+    "epoch": 40,
+    "sha256": "b0145d9dcf00fee8e6fec55b08203561b332c4df6502b5f5a31420a08bfbc4dd",
+    "dynamic_updates": false,
+    "rule": "last original training-only source Q observation strictly before this fold best epoch; Q0=1 before first observation",
+    "minimum": 0.10000000149011612,
+    "maximum": 1.0,
+    "downweighted_training_rows": 1170
+  },
+  "rows": 144621,
+  "new_SOURCE_TOTAL": 82.47320927972198,
+  "delta_vs_original_SOURCE": -0.022828479154455295,
+  "score_scope": "same original fold1 SOURCE prerequisites only; not complete models or fullOOF",
+  "new_best_epoch": 42,
+  "new_stopped_epoch": 56,
+  "solo_benchmark": false,
+  "new_SOURCE_process_wall_seconds": 1625.6200218200684,
+  "normalization_keys": [
+    "feature_median",
+    "feature_scale",
+    "regression_median",
+    "regression_scale",
+    "absolute_depth_median",
+    "absolute_depth_scale",
+    "selected_feature_names"
+  ],
+  "both_SOURCE_normalization_exact_to_shared_cache": true,
+  "normalization_sha256": "6a1c5043edc9849269c218ca977163e24d4a6be42cb4ec423cfd9831bc5a1056",
+  "shared_cache_has_no_learned_weights": true,
+  "own_Q_strictly_before_best": true
+}

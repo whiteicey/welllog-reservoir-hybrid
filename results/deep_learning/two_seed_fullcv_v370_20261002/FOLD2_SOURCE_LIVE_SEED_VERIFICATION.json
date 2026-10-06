@@ -1,0 +1,30 @@
+{
+  "observed_epoch": 1790934373.5900729,
+  "pid": 52616,
+  "create_time": 1790933647.9944928,
+  "command": [
+    "C:\\Users\\z5364\\.conda\\envs\\normal\\python.exe",
+    "-u",
+    "experiments/pure_dl/train_pair_fullcv_source_v370.py",
+    "--out",
+    "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_two_seed_fullcv_v370\\fold_2\\original\\SOURCE",
+    "--learning-rate",
+    ".0006",
+    "--schedule",
+    "cosine",
+    "--fold",
+    "2",
+    "--seed",
+    "20261007"
+  ],
+  "fold": 2,
+  "configuration_base_seed": 20261006,
+  "actual_fold_seed": 20261007,
+  "fold_offset_applied_once": true,
+  "latest_epoch": 40,
+  "best_score": 81.09405175499991,
+  "best_epoch": 33,
+  "effective_patience": 14,
+  "maximum_epochs": 80,
+  "scope": "Live SOURCE snapshot; not final eight-stage model or fullOOF"
+}

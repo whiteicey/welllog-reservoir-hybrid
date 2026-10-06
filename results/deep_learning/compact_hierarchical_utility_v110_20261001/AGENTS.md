@@ -1,0 +1,1 @@
+维护PROJECTS、README四项和DL图谱。仅hierarchical一项，复用已真实完成的v104/local平坦损失对照，不重复基线训练。相同845913参数/随机初始化/原206/Q50/原第五/own SW/80-18/SAM.1/DropKey.4，只改训练reward分组。验证原801左右动作argmax/256bins/stride128完全不改，无验证标签入损失。源/POR/PERM/新SW共4阶段，来源计入，normal max2GPU且SW串行。无自动队列/其他折/旧交付覆盖；原子last状态、实际best恢复，已训练源码冻结。

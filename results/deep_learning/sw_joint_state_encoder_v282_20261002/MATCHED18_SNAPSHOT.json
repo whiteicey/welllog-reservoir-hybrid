@@ -1,0 +1,9 @@
+{
+  "target_score": 74.14311967451198,
+  "best_epoch": 17,
+  "comparison_epochs": 18,
+  "observed_actual_epochs": 23,
+  "declared_cap_overrun": true,
+  "matchedprefix_recovered_from_identical_current_best": true,
+  "comparison_not_fullconvergence": true
+}

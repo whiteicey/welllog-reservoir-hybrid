@@ -1,0 +1,1 @@
+Maintain PROJECTS and README with actual evidence. Original151 checkpoint only; fresh joint raw encoder/tokenizer/attention/normalizer/readout in one added POR phase. Max2 GPU, 80/14, original inputs/Q/splits/scoring; no automatic queue/remaining folds, preserve prior artifacts.

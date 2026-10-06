@@ -1,0 +1,1 @@
+One wide128PORdensityhead;frozenv113, no trainedv131loads,5phases inclsource,max2total. OriginalownPORlabels/Q/scoring; maintainPROJECTS/README/atlas, atomicstate/explicitlaunch/resume, no queues/deliveryedits/otherfolds below80.8+gain.

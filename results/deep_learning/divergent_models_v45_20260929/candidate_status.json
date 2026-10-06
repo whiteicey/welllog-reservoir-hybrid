@@ -1,0 +1,18 @@
+﻿{
+    "development_candidate_total":  80.33696669147119,
+    "reference_total":  80.336513436816489,
+    "SW_channel_gain":  0.001295013299142056,
+    "gain_status":  "numerical-only, no clear generalization gain established",
+    "SW_wells_improved":  8,
+    "SW_wells_worse":  8,
+    "SW_TOTAL_well_bootstrap_interval":  [
+                                             -0.30400380774155078,
+                                             0.27349669970258544
+                                         ],
+    "bootstrap_scope":  "exploratory and unadjusted for development selection",
+    "strict805_qualified":  false,
+    "new_SW_disk_replay_passed":  true,
+    "POR_actual_stop":  "patience18 at epoch55; external request arrived after completion",
+    "remaining_folds_started":  false,
+    "active_training":  false
+}

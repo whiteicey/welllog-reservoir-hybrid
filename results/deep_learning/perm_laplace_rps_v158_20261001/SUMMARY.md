@@ -1,0 +1,66 @@
+# Historical summary
+
+Focus and explored conditions: see retained README/FINAL and SUMMARY_RESULTS.json.
+
+Gain: scores and original comparison deltas are retained; incomplete folds remain incomplete.
+
+Not worth extending: original negative conclusions are retained below where available.
+
+Detailed logs, weights and caches were removed by the user request; rerunning requires retraining.
+
+## README.md
+
+# v158 主攻PERM：Laplace条件分布读出
+
+探索重点：采用不同于POR门控增补的PERM专属分布机制。PERM评分在log10误差上呈线性衰减，预定义Laplace混合可能更合适其尖峰/尾部结构，但仅作为假设。保留有效128位置/权重头及RPS1，原Gaussian正控制v15489.405564856919。
+
+已经探索与验证：实现完成，尚未启动、无成绩。同SOURCE/82720参数/原头初始化，16分量改为Laplace，尺度b=原参考sigma/sqrt(2)匹配标准差。properNLL=abs(y-mu)/b+log(2b)，CDF与jointRPS同步；尾部指数先clamp避免未选分支溢出，∞解码边界先安全替换再强制0/1。默认atom/log10/训练标准化/原区间和动作保持。族改变导致初始预测函数不同，必须报告初始与训练后成绩，不能将初始族替换算成学习增益。
+
+收益：尚未证实。最终恢复比较Gaussian RPS1和自身初始函数，实际固定POR151/SW104合并。未加载v154训练头，source+POR113+POR151+PERM158+SW104共5阶段，无第六阶段隐藏成本。
+
+不值得继续：PERM256扩宽负，POR大门控/系数2负不泛化为PERM族无效。PERM156系数2在第8轮后因CUDA非法内存访问失败，未完成且不作为机制负证据，不自动重启；原last和错误日志保留。此次是新机制，源码/config独立，不修改失败来源。无额外族/尺度/阈值网格。
+
+约束：原9曲线/206+63/64训练井统计/Q50/原第五折/seed20261010、自身PERM真实标签、旧骨干/门控/尺度参数冻结；normal最多2GPU，80/18/min10/b64/64步/lr3e-4/cos80*64，1024行RPS梯度checkpoint、原子完整last/显式恢复/进程级防睡眠。严格第五TOTAL>80.8且收益后补折，完整OOF>82未完成。正控制/交付不改。
+
+待完成：与POR157显式双并发，观察实际初始/训练/失败；最佳144665恢复/冻结完整性/真实合并，记录单项/并发墙钟/显存/预热，最终增益或负证据，必要SHA清理及图谱。
+
+
+## 实际启动快照
+
+已核验PID3580正常训练，normal GPU，TEMPORARY_SYSTEM_REQUIRED=True，与POR157并行。Laplace初始PERM89.332375289863，Gaussian初始89.344760174753，初始函数不同；第11轮仍未改善初始值。训练中，不构成最终机制结论。
+未完成：最佳磁盘重载、实际三通道组合、最终差值及耗时记录。
+
+V158 final PERM=89.332375289863, compactcontrolgain=-0.046018921280; actualTOTAL=80.586859069525, fivephases inclsource;strict808=False, no otherfolds. best/stop=0/18, seconds=251.808, peakMiB=786.465; all144665replay/frozen exact.
+
+
+## 最终结论与关闭
+
+
+# v158 主攻PERM：Laplace条件分布读出
+
+探索重点：采用不同于POR门控增补的PERM专属分布机制。PERM评分在log10误差上呈线性衰减，预定义Laplace混合可能更合适其尖峰/尾部结构，但仅作为假设。保留有效128位置/权重头及RPS1，原Gaussian正控制v15489.405564856919。
+
+已经探索与验证：实现完成，尚未启动、无成绩。同SOURCE/82720参数/原头初始化，16分量改为Laplace，尺度b=原参考sigma/sqrt(2)匹配标准差。properNLL=abs(y-mu)/b+log(2b)，CDF与jointRPS同步；尾部指数先clamp避免未选分支溢出，∞解码边界先安全替换再强制0/1。默认atom/log10/训练标准化/原区间和动作保持。族改变导致初始预测函数不同，必须报告初始与训练后成绩，不能将初始族替换算成学习增益。
+
+收益：尚未证实。最终恢复比较Gaussian RPS1和自身初始函数，实际固定POR151/SW104合并。未加载v154训练头，source+POR113+POR151+PERM158+SW104共5阶段，无第六阶段隐藏成本。
+
+不值得继续：PERM256扩宽负，POR大门控/系数2负不泛化为PERM族无效。PERM156系数2在第8轮后因CUDA非法内存访问失败，未完成且不作为机制负证据，不自动重启；原last和错误日志保留。此次是新机制，源码/config独立，不修改失败来源。无额外族/尺度/阈值网格。
+
+约束：原9曲线/206+63/64训练井统计/Q50/原第五折/seed20261010、自身PERM真实标签、旧骨干/门控/尺度参数冻结；normal最多2GPU，80/18/min10/b64/64步/lr3e-4/cos80*64，1024行RPS梯度checkpoint、原子完整last/显式恢复/进程级防睡眠。严格第五TOTAL>80.8且收益后补折，完整OOF>82未完成。正控制/交付不改。
+
+待完成：与POR157显式双并发，观察实际初始/训练/失败；最佳144665恢复/冻结完整性/真实合并，记录单项/并发墙钟/显存/预热，最终增益或负证据，必要SHA清理及图谱。
+
+
+## 实际启动快照
+
+已核验PID3580正常训练，normal GPU，TEMPORARY_SYSTEM_REQUIRED=True，与POR157并行。Laplace初始PERM89.332375289863，Gaussian初始89.344760174753，初始函数不同；第11轮仍未改善初始值。训练中，不构成最终机制结论。
+未完成：最佳磁盘重载、实际三通道组合、最终差值及耗时记录。
+
+V158 final PERM=89.332375289863, compactcontrolgain=-0.046018921280; actualTOTAL=80.586859069525, fivephases inclsource;strict808=False, no otherfolds. best/stop=0/18, seconds=251.808, peakMiB=786.465; all144665replay/frozen exact.
+
+
+## 最终结论与关闭
+
+Laplace PERM89.332375289863，Gaussian/RPS对照差值−0.073189567056；第0轮最佳，第18轮早停，无学习改善。实际三通道TOTAL80.58685906952451；磁盘最佳重载和冻结完整性、144665行实际组合已验证。关闭本配置，不泛化所有Laplace机制无效。负权重已按SHA/路径清单删除，来源/配置/预测/日志/结果保留。训练251.808秒，与POR157并发，单项时间不能作串行速度结论。
+
+

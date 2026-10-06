@@ -1,0 +1,98 @@
+{
+  "arms": {
+    "mix": {
+      "scores": {
+        "POR": 77.92638076072386,
+        "PERM": 89.40556485691894,
+        "SW": 74.13723635928496,
+        "TOTAL": 80.61789465388851
+      },
+      "screening_fold": 5,
+      "validation_rows": 144665,
+      "complete_five_folds": false,
+      "remaining_folds_started": false,
+      "total_training_stages": 6,
+      "added_head_stages": {
+        "POR": 0,
+        "PERM": 0,
+        "SW": 1
+      },
+      "source_stage_counted": true,
+      "gain_vs104_SW": 0.015483531127372885,
+      "gain_vs211_SW": -0.010386263342113011,
+      "learned_gain_vs_initial": 0.015483669516186183,
+      "checkpoint_sha256": "dd69ed8c85de7bfa0fdc6e25107826c2319fb4081ae5be315e07e8e33033eb62",
+      "report": {
+        "stage": "mix",
+        "target": "SW",
+        "target_score": 74.13723635928496,
+        "initial_score": 74.12175268976877,
+        "against_initial": 0.015483669516186183,
+        "against_v97_target": -0.004943545381749459,
+        "best_epoch": 34,
+        "stopped_epoch": 48,
+        "validation_rows": 144665,
+        "predictions_reproduced_exactly": true,
+        "frozen_parameters_exact": true,
+        "gradient_groups": {
+          "SW_new_raw_feature_backbone": 0.08836192637681961,
+          "SW_direct_categorical_readout": 0.06906402856111526
+        },
+        "seconds": 454.2949586000177,
+        "peak_MiB": 1242.0146484375,
+        "complete_five_folds": false,
+        "early_terminated": false
+      }
+    },
+    "tilt": {
+      "scores": {
+        "POR": 77.92638076072386,
+        "PERM": 89.40556485691894,
+        "SW": 74.12175268976877,
+        "TOTAL": 80.61247536955786
+      },
+      "screening_fold": 5,
+      "validation_rows": 144665,
+      "complete_five_folds": false,
+      "remaining_folds_started": false,
+      "total_training_stages": 6,
+      "added_head_stages": {
+        "POR": 0,
+        "PERM": 0,
+        "SW": 1
+      },
+      "source_stage_counted": true,
+      "gain_vs104_SW": -1.3838881329775177e-07,
+      "gain_vs211_SW": -0.025869932858299194,
+      "learned_gain_vs_initial": 0.0,
+      "checkpoint_sha256": "7ed5f4229cac4000278726d55f12814369c9f13a9761b6537d13c7f69ff14e07",
+      "report": {
+        "stage": "tilt",
+        "target": "SW",
+        "target_score": 74.12175268976877,
+        "initial_score": 74.12175268976877,
+        "against_initial": 0.0,
+        "against_v97_target": -0.02042721489793564,
+        "best_epoch": 0,
+        "stopped_epoch": 14,
+        "validation_rows": 144665,
+        "predictions_reproduced_exactly": true,
+        "frozen_parameters_exact": true,
+        "gradient_groups": {
+          "SW_new_raw_feature_backbone": 0.08847663551568985,
+          "SW_direct_categorical_readout": 0.06910034269094467
+        },
+        "seconds": 214.1242837999598,
+        "peak_MiB": 1241.76513671875,
+        "complete_five_folds": false,
+        "early_terminated": false
+      }
+    }
+  },
+  "mix_minus_tilt": 0.015483669516186183,
+  "mix_minus_retained252": -0.0119918485271171,
+  "mix_gain_positive": true,
+  "adopted": false,
+  "keep_mix_positive_and_tilt_control": true,
+  "no_independent_disk_reload": true
+}

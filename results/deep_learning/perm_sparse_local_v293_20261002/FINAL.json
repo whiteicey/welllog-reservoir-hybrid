@@ -1,0 +1,29 @@
+{
+  "report": {
+    "stage": "local",
+    "target": "PERM",
+    "target_score": 89.51421991225618,
+    "initial_score": 89.4055666268939,
+    "against_initial": 0.10865328536227992,
+    "against_v97_target": 0.11749586289036529,
+    "best_epoch": 5,
+    "stopped_epoch": 19,
+    "validation_rows": 144665,
+    "predictions_reproduced_exactly": true,
+    "frozen_parameters_exact": true,
+    "gradient_groups": {
+      "PERM_sparse_reacquisition_body": 0.04730689898133278,
+      "PERM_direct_categorical_readout": 0.0298467967659235
+    },
+    "seconds": 180.87382520001847,
+    "peak_MiB": 788.69775390625,
+    "complete_five_folds": false,
+    "early_terminated": false
+  },
+  "versus291point": -0.0013348810010143097,
+  "adopted": false,
+  "close_local_selector_range": true,
+  "no_auto_window_grid": true,
+  "independent_disk_reload": false,
+  "remaining_folds_started": false
+}

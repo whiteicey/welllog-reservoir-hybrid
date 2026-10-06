@@ -1,0 +1,57 @@
+{
+  "source_terminal": {
+    "fold": 5,
+    "best_epoch": 52,
+    "stopped_epoch": 62,
+    "best_checkpoint_predictions_reproduced": true,
+    "scores": {
+      "POR": 77.09029723727674,
+      "PERM": 89.35243145677488,
+      "SW": 73.65984026430232,
+      "TOTAL": 80.18138427356004
+    },
+    "seconds": 1299.184347100032,
+    "all_validation_rows_covered_once": true,
+    "peak_gpu_allocated_mib": 815.75390625,
+    "source_role": "prerequisite_only",
+    "complete_five_folds": false
+  },
+  "source_timing": {
+    "seed": 20261010,
+    "stage": "SOURCE",
+    "pid": 24596,
+    "started_epoch": 1790913400.506968,
+    "terminal": true,
+    "exit_code": 0,
+    "process_wall_seconds": 1310.2443144321442,
+    "concurrency": "solo",
+    "includes": "preprocessing warmup training best restoration"
+  },
+  "source_pid_missing": true,
+  "next_actual_live_pid": 77552,
+  "next_stage": "POR113",
+  "source_sha256": "7ce54c5a19dcdd61ef89ce21b2aaac621ee171e51ad7250059addc95f6230556",
+  "quality": {
+    "status": "ready",
+    "epoch": 50,
+    "sha256": "f75294cae5747e11a7f72dbb2879b4fcc9d394a8b8a5a587bf25cba02c639e4a",
+    "dynamic_updates": false,
+    "rule": "last original training-only source Q observation strictly before this fold best epoch; Q0=1 before first observation",
+    "minimum": 0.10000000149011612,
+    "maximum": 1.0,
+    "downweighted_training_rows": 1736
+  },
+  "actual_checkpoint_loads": [
+    {
+      "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261010\\SOURCE\\prepared_data.pt",
+      "sha256": "07bf3356b59a2473fb1384e7b3a68e2bf5c081c476c42cfd3b0eebd2f2590165"
+    },
+    {
+      "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261010\\SOURCE\\fold_5.pt",
+      "sha256": "7ce54c5a19dcdd61ef89ce21b2aaac621ee171e51ad7250059addc95f6230556"
+    }
+  ],
+  "complete_seed_model": false,
+  "complete_five_folds": false,
+  "remaining_folds_started": false
+}

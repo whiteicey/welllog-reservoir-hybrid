@@ -1,0 +1,125 @@
+{
+  "project": "sw_adaptive_share_v315_20261002",
+  "scope": "obsolete-study",
+  "weights_retained": false,
+  "cleanup": "Obsolete artifacts removed by explicit user request. These are historical scores, not newly verified training.",
+  "results": [
+    {
+      "source": "PAIRED_FINAL.json",
+      "result": {
+        "reports": {
+          "scalar": {
+            "stage": "scalar",
+            "target": "SW",
+            "target_score": 74.14209008848303,
+            "initial_score": 74.12175268976877,
+            "against_initial": 0.020337398714261212,
+            "against_v97_target": -8.981618367442934e-05,
+            "best_epoch": 26,
+            "stopped_epoch": 34,
+            "validation_rows": 144665,
+            "predictions_reproduced_exactly": true,
+            "frozen_parameters_exact": true,
+            "seconds": 552.5619130000123,
+            "peak_MiB": 1318.21875,
+            "complete_five_folds": false,
+            "early_terminated": true
+          },
+          "conditional": {
+            "stage": "conditional",
+            "target": "SW",
+            "target_score": 74.13184936400198,
+            "initial_score": 74.12175268976877,
+            "against_initial": 0.010096674233210479,
+            "against_v97_target": -0.010330540664725163,
+            "best_epoch": 17,
+            "stopped_epoch": 18,
+            "validation_rows": 144665,
+            "predictions_reproduced_exactly": true,
+            "frozen_parameters_exact": true,
+            "seconds": 335.2558713000035,
+            "peak_MiB": 1318.2197265625,
+            "complete_five_folds": false,
+            "early_terminated": true
+          }
+        },
+        "strata": {
+          "scalar": {
+            "default": 98.73361820152378,
+            "continuous": 17.657627078824376
+          },
+          "conditional": {
+            "default": 98.74490269587389,
+            "continuous": 17.597944919827714
+          }
+        },
+        "best_allocation_norms": {
+          "scalar": {
+            "share.weight": 0.0,
+            "share.bias": 0.347011923789978
+          },
+          "conditional": {
+            "share.weight": 0.20692656934261322,
+            "share.bias": 0.022917596623301506
+          }
+        },
+        "conditional_minus_scalar": -0.010240724481050734,
+        "conditional_minus_scalar_CONT": -0.05968215899666163,
+        "gain_vs_retained297": {
+          "scalar": -0.01794013453671539,
+          "conditional": -0.028180859017766124
+        },
+        "CONT_vs_retained297": {
+          "scalar": 0.15487431147719377,
+          "conditional": 0.09519215248053214
+        },
+        "CONT_vs_strong252": {
+          "scalar": -0.22724106108579534,
+          "conditional": -0.28692322008245696
+        },
+        "timing": {
+          "started_epoch": 1790885165.63,
+          "started_UTC": "2026-10-01T20:06:05.6342091+00:00",
+          "maximum_parallelism": 2,
+          "status": "complete_early_terminated",
+          "jobs": [
+            {
+              "stage": "scalar",
+              "pid": 65240,
+              "start_epoch": 1790885165.653
+            },
+            {
+              "stage": "conditional",
+              "pid": 63596,
+              "start_epoch": 1790885165.661
+            }
+          ],
+          "terminal": true,
+          "same_work_pair_wall_seconds": 557.7202212810516,
+          "individual_seconds": {
+            "scalar": 552.5619130000123,
+            "conditional": 335.2558713000035
+          },
+          "peak_MiB": {
+            "scalar": 1318.21875,
+            "conditional": 1318.2197265625
+          },
+          "interpretation": "Near-simultaneous pair launch; both overlap until conditional18, scalar later overlaps316actual. Wall includes preparation inside interval/data/initial/train/restore, excludes workbeforefirstlaunch and CPUfinalization. Variable overlap, not isolatedspeedranking."
+        },
+        "screening_fold": 5,
+        "complete_five_folds": false,
+        "remaining_folds_started": false,
+        "independent_disk_reload": false,
+        "automatic_adoption": false,
+        "best_scalar_alpha": 0.045009106397628784,
+        "adopted": false,
+        "retained_as_CONT_tradeoff_control": true,
+        "early_stop_comparison_scope": "Both ownwholebest restored, unequal evidence-based truncation34/18; scalar1 versus conditional49 active allocation parameters. Not capacity/epoch-matched proof of general conditional-allocation failure.",
+        "closure": "Conditional below scalar whole-.01024072448/CONT-.059682159; both below retained297 whole. Scalar CONT+.1548743 and conditional+.0951922 versus297 but belowstrong252; retain tradeoff evidence, no bestrecipe change or allocation bound/temperature sweep."
+      }
+    }
+  ],
+  "cleanup_completed": true,
+  "deleted_files": 11,
+  "deleted_bytes": 6956753
+}

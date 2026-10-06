@@ -1,0 +1,61 @@
+{
+  "scores": {
+    "POR": 77.54716852689732,
+    "PERM": 89.39672404936582,
+    "SW": 73.6630827970656,
+    "TOTAL": 80.33508295432019
+  },
+  "choices": [
+    {
+      "target": "POR",
+      "key": "v29_POR_split",
+      "architecture": "coupled_or_split_residual_routes",
+      "target_score": 77.54716852689732,
+      "best_epoch": 23,
+      "checkpoint": "outputs\\pure_dl_split_route_v29_POR_fold5\\split\\model_best.pt",
+      "model_module": "champion_split_route_v29",
+      "builder": "Network(target,master,modes=(mode,)); heads[mode].load_state_dict(checkpoint[delta_state])",
+      "mode": "split",
+      "factor": "atom_conditional_routing",
+      "parent_recipe": "results\\deep_learning\\champion_route_v28_20260929\\CURRENT_RECIPE.json",
+      "retained_v28_checkpoint": "outputs\\pure_dl_champion_route_v28_POR_fold5\\conditional\\model_best.pt"
+    },
+    {
+      "target": "PERM",
+      "key": "v29_PERM_coupled",
+      "architecture": "coupled_or_split_residual_routes",
+      "target_score": 89.39672404936582,
+      "best_epoch": 2,
+      "checkpoint": "outputs\\pure_dl_split_route_v29_PERM_fold5\\coupled\\model_best.pt",
+      "factor": "atom_conditional_routing",
+      "source_checkpoint": "outputs\\pure_dl_independent_v8_PERM_dual80_fold5\\model_best.pt",
+      "model_module": "champion_split_route_v29",
+      "builder": "Network(target,master,modes=(mode,)); heads[mode].load_state_dict(checkpoint[delta_state])",
+      "mode": "coupled",
+      "parent_recipe": "results\\deep_learning\\champion_route_v28_20260929\\CURRENT_RECIPE.json",
+      "retained_v28_checkpoint": "outputs\\pure_dl_champion_route_v28_PERM_fold5\\joint\\model_best.pt"
+    },
+    {
+      "target": "SW",
+      "key": "v29_SW_coupled",
+      "architecture": "coupled_or_split_residual_routes",
+      "target_score": 73.6630827970656,
+      "best_epoch": 3,
+      "checkpoint": "outputs\\pure_dl_split_route_v29_SW_fold5\\coupled\\model_best.pt",
+      "factor": "atom_conditional_routing",
+      "source_checkpoint": "outputs\\pure_dl_independent_v8_SW_dual80_fold5\\model_best.pt",
+      "model_module": "champion_split_route_v29",
+      "builder": "Network(target,master,modes=(mode,)); heads[mode].load_state_dict(checkpoint[delta_state])",
+      "mode": "coupled",
+      "parent_recipe": "results\\deep_learning\\champion_route_v28_20260929\\CURRENT_RECIPE.json",
+      "retained_v28_checkpoint": "outputs\\pure_dl_champion_route_v28_SW_fold5\\conditional\\model_best.pt"
+    }
+  ],
+  "source_preprocessing": "results/deep_learning/champion_scaling_v21_20260928/data_manifest.json",
+  "amplitude_metadata": "results/deep_learning/feature_structure_v20_20260928/feature_manifest.json",
+  "reference_recipe": "results\\deep_learning\\champion_route_v28_20260929\\CURRENT_RECIPE.json",
+  "original_fifth_development_selection": true,
+  "complete_five_folds": false,
+  "remaining_folds_started": false,
+  "old_delivery_unchanged": true
+}

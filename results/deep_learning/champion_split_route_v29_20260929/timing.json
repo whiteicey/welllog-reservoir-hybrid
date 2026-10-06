@@ -1,0 +1,26 @@
+{
+  "max_parallel_target_jobs": 2,
+  "first_launch_to_last_finish_seconds": 395.716092,
+  "targets": {
+    "POR": {
+      "process_seconds": 272.6725670999949,
+      "peak_allocated_MiB": 717.47998046875,
+      "epoch_median_seconds": 6.115026600004057,
+      "scope": "one target process shares only frozen inference between candidates"
+    },
+    "PERM": {
+      "process_seconds": 153.990123399999,
+      "peak_allocated_MiB": 718.146484375,
+      "epoch_median_seconds": 7.1798567499972705,
+      "scope": "one target process shares only frozen inference between candidates"
+    },
+    "SW": {
+      "process_seconds": 148.7354636999953,
+      "peak_allocated_MiB": 718.05078125,
+      "epoch_median_seconds": 5.702028750001773,
+      "scope": "one target process shares only frozen inference between candidates"
+    }
+  },
+  "final_replay_seconds": 7.700943700001517,
+  "scope": "process times include imports, setup, training, restoration; overall time includes explicit launch gaps; source implementation excluded"
+}

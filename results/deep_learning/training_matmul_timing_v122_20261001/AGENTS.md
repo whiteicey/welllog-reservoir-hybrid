@@ -1,0 +1,1 @@
+Maintain PROJECTS/README/EXPLORATIONS/atlas. Synthetic utility operation benchmark only, normal/max2GPU and short bounded runtime; no model updates/checkpoints/labels or active source edits, no epoch-speed or accuracy gain claims from isolated timing.

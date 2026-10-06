@@ -1,0 +1,34 @@
+{
+  "pid": 45756,
+  "started_epoch": 1790931900.9036906,
+  "pending": [
+    [
+      "original",
+      2
+    ],
+    [
+      "original",
+      3
+    ],
+    [
+      "original",
+      4
+    ],
+    [
+      "seed_20261013",
+      2
+    ],
+    [
+      "seed_20261013",
+      3
+    ],
+    [
+      "seed_20261013",
+      4
+    ]
+  ],
+  "CPU_only": true,
+  "launch_training": false,
+  "checkpoint_deletions": 0,
+  "authorization": "Existing user cleanup scope, resumed finite training batch explicitly authorized"
+}

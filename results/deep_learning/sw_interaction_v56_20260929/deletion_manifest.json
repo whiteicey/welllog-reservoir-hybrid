@@ -1,0 +1,19 @@
+{
+  "deleted": [
+    {
+      "path": "outputs\\pure_dl_sw_interaction_v56_SW_multiplicative_fold5\\model_best.pt",
+      "bytes": 3448619,
+      "sha256": "28d04de2bbb8ae6aae6e475ad7d69b097babe83b5731fc1124e2ca2f3c298f53"
+    },
+    {
+      "path": "outputs\\pure_dl_sw_interaction_v56_SW_multiplicative_fold5\\last_state.pt",
+      "bytes": 15602907,
+      "sha256": "563ec78972bfc996d8464546f647ddb019f75f9e4701a53eee049b301a16c05a"
+    }
+  ],
+  "bytes": 19051526,
+  "retained": [
+    "additive"
+  ],
+  "training_active": false
+}

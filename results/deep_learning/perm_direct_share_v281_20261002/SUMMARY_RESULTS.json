@@ -1,0 +1,60 @@
+{
+  "project": "perm_direct_share_v281_20261002",
+  "scope": "obsolete-study",
+  "weights_retained": false,
+  "cleanup": "Obsolete artifacts removed by explicit user request. These are historical scores, not newly verified training.",
+  "results": [
+    {
+      "source": "CURRENT_SEVEN_STAGE_RECIPE.json",
+      "result": {
+        "scores": {
+          "POR": 77.92638076072386,
+          "PERM": 89.498908539006,
+          "SW": 74.14922820781207,
+          "TOTAL": 80.65476208960348
+        },
+        "screening_fold": 5,
+        "validation_rows": 144665,
+        "strict_808_qualified": false,
+        "complete_five_folds": false,
+        "remaining_folds_started": false,
+        "total_training_stages": 7,
+        "stages": [
+          "SOURCE",
+          "POR113",
+          "POR151",
+          "PERM154",
+          "SW104",
+          "PERM281alpha50_best3",
+          "SW252conditional"
+        ],
+        "added_head_stages": {
+          "POR": 0,
+          "PERM": 1,
+          "SW": 1
+        },
+        "heads": {
+          "POR": {
+            "checkpoint": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_por_ranked_probability_v151_fold5\\joint_rps\\model_best.pt"
+          },
+          "PERM": {
+            "checkpoint": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_perm_direct_share_v281_fold5\\alpha50\\model_best.pt"
+          },
+          "SW": {
+            "checkpoint": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_sw_mass_cdf_v252_fold5\\conditional\\model_best.pt"
+          }
+        },
+        "gain_vs_previous_optional7": 0.005652521692667278,
+        "not_material_improvement": true,
+        "default_five_stage_unchanged": true,
+        "verification": "RestoredRAM-best frozen/actual144665 composition; no independent disk reload",
+        "mechanism": "Joint rawencoder/directdensity new training schedule ramp5 to.5; actualbestepoch3 storesalpha.3, not final.5 performance.",
+        "selected_checkpoint_alpha": 0.30000001192092896,
+        "schedule_maximum_alpha": 0.5
+      }
+    }
+  ],
+  "cleanup_completed": true,
+  "deleted_files": 9,
+  "deleted_bytes": 6950308
+}

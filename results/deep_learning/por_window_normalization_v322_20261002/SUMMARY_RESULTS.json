@@ -1,0 +1,109 @@
+{
+  "project": "por_window_normalization_v322_20261002",
+  "scope": "obsolete-study",
+  "weights_retained": false,
+  "cleanup": "Obsolete artifacts removed by explicit user request. These are historical scores, not newly verified training.",
+  "results": [
+    {
+      "source": "PAIRED_FINAL.json",
+      "result": {
+        "reports": {
+          "adaptive": {
+            "stage": "adaptive",
+            "target": "POR",
+            "target_score": 78.02922410702564,
+            "initial_score": 77.92638076072386,
+            "against_initial": 0.10284334630178193,
+            "against_v97_target": 0.477287305140635,
+            "best_epoch": 29,
+            "stopped_epoch": 43,
+            "validation_rows": 144665,
+            "predictions_reproduced_exactly": true,
+            "frozen_parameters_exact": true,
+            "seconds": 1000.9735730999964,
+            "peak_MiB": 1815.19580078125,
+            "complete_five_folds": false,
+            "early_terminated": false
+          },
+          "reference": {
+            "stage": "reference",
+            "target": "POR",
+            "target_score": 78.02739942868787,
+            "initial_score": 77.92638076072386,
+            "against_initial": 0.10101866796401282,
+            "against_v97_target": 0.4754626268028659,
+            "best_epoch": 29,
+            "stopped_epoch": 43,
+            "validation_rows": 144665,
+            "predictions_reproduced_exactly": true,
+            "frozen_parameters_exact": true,
+            "seconds": 998.8179488999886,
+            "peak_MiB": 1814.88330078125,
+            "complete_five_folds": false,
+            "early_terminated": false
+          }
+        },
+        "strata": {
+          "adaptive": {
+            "default": 97.41407632714055,
+            "continuous": 41.671259152478534
+          },
+          "reference": {
+            "default": 97.41619593670846,
+            "continuous": 41.66203662143521
+          }
+        },
+        "best_normalizer_delta_norms": {
+          "adaptive": {
+            "shift": 0.6328858137130737,
+            "scale": 0.8447343707084656
+          },
+          "reference": {
+            "shift": 0.7044362425804138,
+            "scale": 0.36006098985671997
+          }
+        },
+        "adaptive_minus_reference": 0.0018246783377691145,
+        "adaptive_minus_reference_CONT": 0.009222531043320714,
+        "gain_vs302": {
+          "adaptive": -0.001328687118999028,
+          "reference": -0.0031533654567681424
+        },
+        "CONT_vs302": {
+          "adaptive": -0.0038207545928656828,
+          "reference": -0.013043285636186397
+        },
+        "timing": {
+          "started_epoch": 1790889678.453,
+          "launch_epochs": {
+            "adaptive": 1790889678.453,
+            "reference": 1790889732.806
+          },
+          "launch_stagger_seconds": 54.353,
+          "start_evidence": "Live Win32_Process.CreationDate4512/73100",
+          "terminal": true,
+          "concurrency": "two after stagger; adaptive initial321CPUfinalization overlap",
+          "prelaunch_preparation_included": false,
+          "same_work_pair_wall_seconds": 1058.971774816513,
+          "individual_seconds": {
+            "adaptive": 1000.9735730999964,
+            "reference": 998.8179488999886
+          },
+          "peak_MiB": {
+            "adaptive": 1815.19580078125,
+            "reference": 1814.88330078125
+          },
+          "interpretation": "Concurrentpair54.353s stagger, adaptive firstbrief321CPUfinalization overlap. Includes data/initial/train/bestrestore; pair process-to-lastterminal excludesprelaunch/CPUfinalization. No isolatedspeedranking."
+        },
+        "screening_fold": 5,
+        "complete_five_folds": false,
+        "remaining_folds_started": false,
+        "independent_disk_reload": false,
+        "adopted": false
+      }
+    }
+  ],
+  "cleanup_completed": true,
+  "deleted_files": 16,
+  "deleted_bytes": 6993082
+}

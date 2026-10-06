@@ -1,0 +1,121 @@
+{
+  "passed": true,
+  "records": [
+    {
+      "fold": 1,
+      "target": "POR",
+      "base_class": "por_ranked_probability_v151.Network",
+      "removed_observation_hooks": [],
+      "parameter_tensors": 335
+    },
+    {
+      "fold": 1,
+      "target": "PERM",
+      "base_class": "perm_ranked_probability_v154.Network",
+      "removed_observation_hooks": [],
+      "parameter_tensors": 323
+    },
+    {
+      "fold": 1,
+      "target": "SW",
+      "base_class": "compact_frequency_v104.Network",
+      "removed_observation_hooks": [
+        "capture_own_latent"
+      ],
+      "parameter_tensors": 117
+    },
+    {
+      "fold": 2,
+      "target": "POR",
+      "base_class": "por_ranked_probability_v151.Network",
+      "removed_observation_hooks": [],
+      "parameter_tensors": 335
+    },
+    {
+      "fold": 2,
+      "target": "PERM",
+      "base_class": "perm_ranked_probability_v154.Network",
+      "removed_observation_hooks": [],
+      "parameter_tensors": 323
+    },
+    {
+      "fold": 2,
+      "target": "SW",
+      "base_class": "compact_frequency_v104.Network",
+      "removed_observation_hooks": [
+        "capture_own_latent"
+      ],
+      "parameter_tensors": 117
+    },
+    {
+      "fold": 3,
+      "target": "POR",
+      "base_class": "por_ranked_probability_v151.Network",
+      "removed_observation_hooks": [],
+      "parameter_tensors": 335
+    },
+    {
+      "fold": 3,
+      "target": "PERM",
+      "base_class": "perm_ranked_probability_v154.Network",
+      "removed_observation_hooks": [],
+      "parameter_tensors": 323
+    },
+    {
+      "fold": 3,
+      "target": "SW",
+      "base_class": "compact_frequency_v104.Network",
+      "removed_observation_hooks": [
+        "capture_own_latent"
+      ],
+      "parameter_tensors": 117
+    },
+    {
+      "fold": 4,
+      "target": "POR",
+      "base_class": "por_ranked_probability_v151.Network",
+      "removed_observation_hooks": [],
+      "parameter_tensors": 335
+    },
+    {
+      "fold": 4,
+      "target": "PERM",
+      "base_class": "perm_ranked_probability_v154.Network",
+      "removed_observation_hooks": [],
+      "parameter_tensors": 323
+    },
+    {
+      "fold": 4,
+      "target": "SW",
+      "base_class": "compact_frequency_v104.Network",
+      "removed_observation_hooks": [
+        "capture_own_latent"
+      ],
+      "parameter_tensors": 117
+    },
+    {
+      "fold": 5,
+      "target": "POR",
+      "base_class": "por_ranked_probability_v151.Network",
+      "removed_observation_hooks": [],
+      "parameter_tensors": 335
+    },
+    {
+      "fold": 5,
+      "target": "PERM",
+      "base_class": "perm_ranked_probability_v154.Network",
+      "removed_observation_hooks": [],
+      "parameter_tensors": 323
+    },
+    {
+      "fold": 5,
+      "target": "SW",
+      "base_class": "compact_frequency_v104.Network",
+      "removed_observation_hooks": [
+        "capture_own_latent"
+      ],
+      "parameter_tensors": 117
+    }
+  ],
+  "scope": "Extract frozen prior from final current original-seed graph; exact state save/load; remove only discarded-branch observation hooks"
+}

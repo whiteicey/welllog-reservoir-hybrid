@@ -1,0 +1,472 @@
+{
+  "recorded_at": "2026-09-30T23:06:56.577973+08:00",
+  "final": false,
+  "authorized_batch_elapsed_seconds": 20665.786124,
+  "overlap_controller_elapsed_seconds": 9279.416662,
+  "observed_scheduler_task_count_seconds": {
+    "0": 344.060641,
+    "1": 5756.159481,
+    "2": 3179.1965400000004
+  },
+  "currently_live_processes": [
+    {
+      "label": "fold4_sw_density",
+      "pid": 48600,
+      "creation_time_matches": true
+    }
+  ],
+  "completed_item_timings": [
+    {
+      "fold": 1,
+      "report": "outputs\\pure_dl_fullcv_v97\\fold_1\\perm_factor\\report.json",
+      "seconds": 68.55548110001837,
+      "peak_allocated_MiB": 786.46533203125
+    },
+    {
+      "fold": 1,
+      "report": "outputs\\pure_dl_fullcv_v97\\fold_1\\perm_gate\\report.json",
+      "seconds": 90.49195070000133,
+      "peak_allocated_MiB": 648.54296875
+    },
+    {
+      "fold": 1,
+      "report": "outputs\\pure_dl_fullcv_v97\\fold_1\\perm_route\\report.json",
+      "seconds": 69.00670130000799,
+      "peak_allocated_MiB": 786.46533203125
+    },
+    {
+      "fold": 1,
+      "report": "outputs\\pure_dl_fullcv_v97\\fold_1\\perm_split\\report.json",
+      "seconds": 73.58652219999931,
+      "peak_allocated_MiB": 786.46533203125
+    },
+    {
+      "fold": 1,
+      "report": "outputs\\pure_dl_fullcv_v97\\fold_1\\por_amplitude\\report.json",
+      "seconds": 69.86165700000129,
+      "peak_allocated_MiB": 786.46533203125
+    },
+    {
+      "fold": 1,
+      "report": "outputs\\pure_dl_fullcv_v97\\fold_1\\por_anchored\\report.json",
+      "seconds": 100.73141720000422,
+      "peak_allocated_MiB": 786.46533203125
+    },
+    {
+      "fold": 1,
+      "report": "outputs\\pure_dl_fullcv_v97\\fold_1\\por_coadapt\\report.json",
+      "seconds": 89.69643999999971,
+      "peak_allocated_MiB": 786.46533203125
+    },
+    {
+      "fold": 1,
+      "report": "outputs\\pure_dl_fullcv_v97\\fold_1\\por_density\\report.json",
+      "seconds": 85.59596179999062,
+      "peak_allocated_MiB": 648.3369140625
+    },
+    {
+      "fold": 1,
+      "report": "outputs\\pure_dl_fullcv_v97\\fold_1\\por_mean\\report.json",
+      "seconds": 86.69156269999803,
+      "peak_allocated_MiB": 647.98388671875
+    },
+    {
+      "fold": 1,
+      "report": "outputs\\pure_dl_fullcv_v97\\fold_1\\por_point\\report.json",
+      "seconds": 88.52651719999267,
+      "peak_allocated_MiB": 648.3671875
+    },
+    {
+      "fold": 1,
+      "report": "outputs\\pure_dl_fullcv_v97\\fold_1\\por_route\\report.json",
+      "seconds": 109.11434339999687,
+      "peak_allocated_MiB": 786.46533203125
+    },
+    {
+      "fold": 1,
+      "report": "outputs\\pure_dl_fullcv_v97\\fold_1\\por_split\\report.json",
+      "seconds": 91.00594460000866,
+      "peak_allocated_MiB": 786.46533203125
+    },
+    {
+      "fold": 1,
+      "report": "outputs\\pure_dl_fullcv_v97\\fold_1\\sw_additive\\report.json",
+      "seconds": 111.56798309998703,
+      "peak_allocated_MiB": 1267.13525390625
+    },
+    {
+      "fold": 1,
+      "report": "outputs\\pure_dl_fullcv_v97\\fold_1\\sw_density\\report.json",
+      "seconds": 674.8378230000089,
+      "peak_allocated_MiB": 1693.31591796875
+    },
+    {
+      "fold": 1,
+      "report": "outputs\\pure_dl_fullcv_v97\\fold_1\\sw_sam\\report.json",
+      "seconds": 590.3983828999917,
+      "peak_allocated_MiB": 1683.92919921875
+    },
+    {
+      "fold": 1,
+      "report": "outputs\\pure_dl_fullcv_v97\\fold_1\\sw_scratch\\report.json",
+      "seconds": 121.82864060002612,
+      "peak_allocated_MiB": 1195.201171875
+    },
+    {
+      "fold": 1,
+      "report": "outputs\\pure_dl_fullcv_v97\\fold_1\\sw_utility\\report.json",
+      "seconds": 207.8472151000169,
+      "peak_allocated_MiB": 1680.71240234375
+    },
+    {
+      "fold": 1,
+      "report": "outputs\\pure_dl_fullcv_v97\\fold_1\\sw_well\\report.json",
+      "seconds": 92.61608849998447,
+      "peak_allocated_MiB": 1252.51220703125
+    },
+    {
+      "fold": 1,
+      "report": "outputs\\pure_dl_fullcv_v97\\root\\fold_1_report.json",
+      "seconds": 5462.790999099991,
+      "peak_allocated_MiB": 776.681640625
+    },
+    {
+      "fold": 2,
+      "report": "outputs\\pure_dl_fullcv_v97\\fold_2\\perm_factor\\report.json",
+      "seconds": 155.65038320000167,
+      "peak_allocated_MiB": 786.46533203125
+    },
+    {
+      "fold": 2,
+      "report": "outputs\\pure_dl_fullcv_v97\\fold_2\\perm_gate\\report.json",
+      "seconds": 83.13821360000293,
+      "peak_allocated_MiB": 649.03564453125
+    },
+    {
+      "fold": 2,
+      "report": "outputs\\pure_dl_fullcv_v97\\fold_2\\perm_route\\report.json",
+      "seconds": 150.86906060000183,
+      "peak_allocated_MiB": 786.46533203125
+    },
+    {
+      "fold": 2,
+      "report": "outputs\\pure_dl_fullcv_v97\\fold_2\\perm_split\\report.json",
+      "seconds": 145.94730270002037,
+      "peak_allocated_MiB": 786.46533203125
+    },
+    {
+      "fold": 2,
+      "report": "outputs\\pure_dl_fullcv_v97\\fold_2\\por_amplitude\\report.json",
+      "seconds": 70.07118800000171,
+      "peak_allocated_MiB": 786.46533203125
+    },
+    {
+      "fold": 2,
+      "report": "outputs\\pure_dl_fullcv_v97\\fold_2\\por_anchored\\report.json",
+      "seconds": 100.62325899998541,
+      "peak_allocated_MiB": 786.46533203125
+    },
+    {
+      "fold": 2,
+      "report": "outputs\\pure_dl_fullcv_v97\\fold_2\\por_coadapt\\report.json",
+      "seconds": 91.29717309999978,
+      "peak_allocated_MiB": 786.46533203125
+    },
+    {
+      "fold": 2,
+      "report": "outputs\\pure_dl_fullcv_v97\\fold_2\\por_density\\report.json",
+      "seconds": 71.52600850001909,
+      "peak_allocated_MiB": 648.21484375
+    },
+    {
+      "fold": 2,
+      "report": "outputs\\pure_dl_fullcv_v97\\fold_2\\por_mean\\report.json",
+      "seconds": 140.1367635000206,
+      "peak_allocated_MiB": 648.41455078125
+    },
+    {
+      "fold": 2,
+      "report": "outputs\\pure_dl_fullcv_v97\\fold_2\\por_point\\report.json",
+      "seconds": 71.67669390002266,
+      "peak_allocated_MiB": 648.15234375
+    },
+    {
+      "fold": 2,
+      "report": "outputs\\pure_dl_fullcv_v97\\fold_2\\por_route\\report.json",
+      "seconds": 101.84997039998416,
+      "peak_allocated_MiB": 786.46533203125
+    },
+    {
+      "fold": 2,
+      "report": "outputs\\pure_dl_fullcv_v97\\fold_2\\por_split\\report.json",
+      "seconds": 111.01022500000545,
+      "peak_allocated_MiB": 786.46533203125
+    },
+    {
+      "fold": 2,
+      "report": "outputs\\pure_dl_fullcv_v97\\fold_2\\sw_additive\\report.json",
+      "seconds": 182.59330710000359,
+      "peak_allocated_MiB": 1268.66650390625
+    },
+    {
+      "fold": 2,
+      "report": "outputs\\pure_dl_fullcv_v97\\fold_2\\sw_density\\report.json",
+      "seconds": 695.3660128000192,
+      "peak_allocated_MiB": 1693.31591796875
+    },
+    {
+      "fold": 2,
+      "report": "outputs\\pure_dl_fullcv_v97\\fold_2\\sw_sam\\report.json",
+      "seconds": 740.5060728999961,
+      "peak_allocated_MiB": 1685.46044921875
+    },
+    {
+      "fold": 2,
+      "report": "outputs\\pure_dl_fullcv_v97\\fold_2\\sw_scratch\\report.json",
+      "seconds": 99.58474600000773,
+      "peak_allocated_MiB": 1195.201171875
+    },
+    {
+      "fold": 2,
+      "report": "outputs\\pure_dl_fullcv_v97\\fold_2\\sw_utility\\report.json",
+      "seconds": 179.90405689997715,
+      "peak_allocated_MiB": 1682.24365234375
+    },
+    {
+      "fold": 2,
+      "report": "outputs\\pure_dl_fullcv_v97\\fold_2\\sw_well\\report.json",
+      "seconds": 88.638497500011,
+      "peak_allocated_MiB": 1253.51220703125
+    },
+    {
+      "fold": 2,
+      "report": "outputs\\pure_dl_fullcv_v97\\fold_2\\root\\fold_2_report.json",
+      "seconds": 872.7761828999792,
+      "peak_allocated_MiB": 776.244140625
+    },
+    {
+      "fold": 3,
+      "report": "outputs\\pure_dl_fullcv_v97\\fold_3\\perm_factor\\report.json",
+      "seconds": 104.3325010999979,
+      "peak_allocated_MiB": 786.4619140625
+    },
+    {
+      "fold": 3,
+      "report": "outputs\\pure_dl_fullcv_v97\\fold_3\\perm_gate\\report.json",
+      "seconds": 165.47847950001596,
+      "peak_allocated_MiB": 648.98876953125
+    },
+    {
+      "fold": 3,
+      "report": "outputs\\pure_dl_fullcv_v97\\fold_3\\perm_route\\report.json",
+      "seconds": 106.2361804000102,
+      "peak_allocated_MiB": 786.4619140625
+    },
+    {
+      "fold": 3,
+      "report": "outputs\\pure_dl_fullcv_v97\\fold_3\\perm_split\\report.json",
+      "seconds": 79.05457229999593,
+      "peak_allocated_MiB": 786.4619140625
+    },
+    {
+      "fold": 3,
+      "report": "outputs\\pure_dl_fullcv_v97\\fold_3\\por_amplitude\\report.json",
+      "seconds": 176.97655870000017,
+      "peak_allocated_MiB": 786.4619140625
+    },
+    {
+      "fold": 3,
+      "report": "outputs\\pure_dl_fullcv_v97\\fold_3\\por_anchored\\report.json",
+      "seconds": 98.9994206999836,
+      "peak_allocated_MiB": 786.4619140625
+    },
+    {
+      "fold": 3,
+      "report": "outputs\\pure_dl_fullcv_v97\\fold_3\\por_coadapt\\report.json",
+      "seconds": 91.62099969998235,
+      "peak_allocated_MiB": 786.4619140625
+    },
+    {
+      "fold": 3,
+      "report": "outputs\\pure_dl_fullcv_v97\\fold_3\\por_density\\report.json",
+      "seconds": 112.39233760000207,
+      "peak_allocated_MiB": 648.33740234375
+    },
+    {
+      "fold": 3,
+      "report": "outputs\\pure_dl_fullcv_v97\\fold_3\\por_mean\\report.json",
+      "seconds": 225.21558439999353,
+      "peak_allocated_MiB": 648.52001953125
+    },
+    {
+      "fold": 3,
+      "report": "outputs\\pure_dl_fullcv_v97\\fold_3\\por_point\\report.json",
+      "seconds": 103.45072439999785,
+      "peak_allocated_MiB": 648.03466796875
+    },
+    {
+      "fold": 3,
+      "report": "outputs\\pure_dl_fullcv_v97\\fold_3\\por_route\\report.json",
+      "seconds": 116.82178120000754,
+      "peak_allocated_MiB": 786.4619140625
+    },
+    {
+      "fold": 3,
+      "report": "outputs\\pure_dl_fullcv_v97\\fold_3\\por_split\\report.json",
+      "seconds": 383.18007699999725,
+      "peak_allocated_MiB": 786.4619140625
+    },
+    {
+      "fold": 3,
+      "report": "outputs\\pure_dl_fullcv_v97\\fold_3\\sw_additive\\report.json",
+      "seconds": 177.05225449998397,
+      "peak_allocated_MiB": 1267.13525390625
+    },
+    {
+      "fold": 3,
+      "report": "outputs\\pure_dl_fullcv_v97\\fold_3\\sw_density\\report.json",
+      "seconds": 681.6747401999892,
+      "peak_allocated_MiB": 1693.31103515625
+    },
+    {
+      "fold": 3,
+      "report": "outputs\\pure_dl_fullcv_v97\\fold_3\\sw_sam\\report.json",
+      "seconds": 621.3850141000003,
+      "peak_allocated_MiB": 1683.92919921875
+    },
+    {
+      "fold": 3,
+      "report": "outputs\\pure_dl_fullcv_v97\\fold_3\\sw_scratch\\report.json",
+      "seconds": 185.88118700002087,
+      "peak_allocated_MiB": 1195.201171875
+    },
+    {
+      "fold": 3,
+      "report": "outputs\\pure_dl_fullcv_v97\\fold_3\\sw_utility\\report.json",
+      "seconds": 152.97303230001125,
+      "peak_allocated_MiB": 1680.71240234375
+    },
+    {
+      "fold": 3,
+      "report": "outputs\\pure_dl_fullcv_v97\\fold_3\\sw_well\\report.json",
+      "seconds": 85.90835979999974,
+      "peak_allocated_MiB": 1252.51220703125
+    },
+    {
+      "fold": 3,
+      "report": "outputs\\pure_dl_fullcv_v97\\fold_3\\root\\fold_3_report.json",
+      "seconds": 1773.3072893999924,
+      "peak_allocated_MiB": 776.681640625
+    },
+    {
+      "fold": 4,
+      "report": "outputs\\pure_dl_fullcv_v97\\fold_4\\perm_factor\\report.json",
+      "seconds": 88.15986519999569,
+      "peak_allocated_MiB": 786.46630859375
+    },
+    {
+      "fold": 4,
+      "report": "outputs\\pure_dl_fullcv_v97\\fold_4\\perm_gate\\report.json",
+      "seconds": 81.00938319999841,
+      "peak_allocated_MiB": 648.87744140625
+    },
+    {
+      "fold": 4,
+      "report": "outputs\\pure_dl_fullcv_v97\\fold_4\\perm_route\\report.json",
+      "seconds": 83.36895659999573,
+      "peak_allocated_MiB": 786.46630859375
+    },
+    {
+      "fold": 4,
+      "report": "outputs\\pure_dl_fullcv_v97\\fold_4\\perm_split\\report.json",
+      "seconds": 89.02690199998324,
+      "peak_allocated_MiB": 786.46630859375
+    },
+    {
+      "fold": 4,
+      "report": "outputs\\pure_dl_fullcv_v97\\fold_4\\por_amplitude\\report.json",
+      "seconds": 119.64194109998061,
+      "peak_allocated_MiB": 786.46630859375
+    },
+    {
+      "fold": 4,
+      "report": "outputs\\pure_dl_fullcv_v97\\fold_4\\por_anchored\\report.json",
+      "seconds": 100.89341290001175,
+      "peak_allocated_MiB": 786.46630859375
+    },
+    {
+      "fold": 4,
+      "report": "outputs\\pure_dl_fullcv_v97\\fold_4\\por_coadapt\\report.json",
+      "seconds": 119.59505029997672,
+      "peak_allocated_MiB": 786.46630859375
+    },
+    {
+      "fold": 4,
+      "report": "outputs\\pure_dl_fullcv_v97\\fold_4\\por_density\\report.json",
+      "seconds": 103.19984449999174,
+      "peak_allocated_MiB": 649.07177734375
+    },
+    {
+      "fold": 4,
+      "report": "outputs\\pure_dl_fullcv_v97\\fold_4\\por_mean\\report.json",
+      "seconds": 124.46956769999815,
+      "peak_allocated_MiB": 648.4521484375
+    },
+    {
+      "fold": 4,
+      "report": "outputs\\pure_dl_fullcv_v97\\fold_4\\por_point\\report.json",
+      "seconds": 149.17781779999495,
+      "peak_allocated_MiB": 648.1943359375
+    },
+    {
+      "fold": 4,
+      "report": "outputs\\pure_dl_fullcv_v97\\fold_4\\por_route\\report.json",
+      "seconds": 101.56361370001105,
+      "peak_allocated_MiB": 786.46630859375
+    },
+    {
+      "fold": 4,
+      "report": "outputs\\pure_dl_fullcv_v97\\fold_4\\por_split\\report.json",
+      "seconds": 98.31324389998917,
+      "peak_allocated_MiB": 786.46630859375
+    },
+    {
+      "fold": 4,
+      "report": "outputs\\pure_dl_fullcv_v97\\fold_4\\sw_additive\\report.json",
+      "seconds": 118.73462209998979,
+      "peak_allocated_MiB": 1267.13525390625
+    },
+    {
+      "fold": 4,
+      "report": "outputs\\pure_dl_fullcv_v97\\fold_4\\sw_sam\\report.json",
+      "seconds": 513.853302500007,
+      "peak_allocated_MiB": 1683.92919921875
+    },
+    {
+      "fold": 4,
+      "report": "outputs\\pure_dl_fullcv_v97\\fold_4\\sw_scratch\\report.json",
+      "seconds": 228.0325179999927,
+      "peak_allocated_MiB": 1195.201171875
+    },
+    {
+      "fold": 4,
+      "report": "outputs\\pure_dl_fullcv_v97\\fold_4\\sw_utility\\report.json",
+      "seconds": 173.5087407999963,
+      "peak_allocated_MiB": 1680.71240234375
+    },
+    {
+      "fold": 4,
+      "report": "outputs\\pure_dl_fullcv_v97\\fold_4\\sw_well\\report.json",
+      "seconds": 121.36087060000864,
+      "peak_allocated_MiB": 1252.51220703125
+    },
+    {
+      "fold": 4,
+      "report": "outputs\\pure_dl_fullcv_v97\\fold_4\\root\\fold_4_report.json",
+      "seconds": 1683.2606542999856,
+      "peak_allocated_MiB": 776.681640625
+    }
+  ],
+  "scope": "Scheduling intervals include loading, warmup, training, validation, checkpoint IO, and controller observation lag. Item timers cover their own recorded scope; do not sum them as batch wall time.",
+  "limitation": "Task overlap is not simultaneous GPU compute. Folds and stopping epochs differ; there is no equivalent-work serial control, so speedup is unproven."
+}

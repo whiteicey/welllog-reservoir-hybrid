@@ -1,0 +1,40 @@
+# v49 平滑分位密度的直接分位监督
+
+## 探索重点与预先固定对照
+v48 RQS相对同容量linear有局部SW+1.082068，但其绝对SW73.428509530063仍低v46的73.680963725271。按用户接受消融收益的规则，本批携带RQS机制，研究其训练监督，不扫描节点数或尾概率。
+两项likelihood/quantile_aux从同一个v48第4轮完整模型出发，同838211参数、原函数和初始状态。两组均保留原默认BCE与RQS密度NLL；quantile_aux额外加0.5×pinball，likelihood系数为0。pinball定义为33个固定概率点(.005至.995)的分位损失均值乘2，仅非默认训练行参与。此为有限分位点监督，不称为精确CRPS，也不使用验证标签、旧预测或其他通道标签作为训练目标。
+假设密度NLL主要约束落入标签附近的局部分位区间，而直接分位损失能给整条分位曲线提供监督；是否有实际收益以同容量完成对照为准。骨干、FiLM、默认头、分位头全部训练，没有新增学习模块或冻结小头。两组推理都是同一个RQS CDF与指数尾，默认概率与连续概率共同走原官方动作解码。
+
+## 数据、初始化与预算
+当前全局配方仍是v46 TOTAL80.342771761689，不能把v48热启动源的低分当作新SOTA；同时分别报告本批相对热启动、匹配对照及当前最优的差值。原第五折144665点、64训练井/16验证井、9曲线206输入、Q50、1024窗口/中心128、原256支持点与800动作加默认值保持。输入井库没有标签或井编号特征，验证井库仅用于该井推理。
+新优化器共同lr3e-5、AdamWwd.01/clip2、cosine80*64至1e-5；80轮上限/patience18/min10/b64/64步，seed20261010。较v48降低微调学习率但两组完全相同，这不是原优化器轨迹续跑，不重训选定轮数。初始完整144665点应精确复现v48训练后保留预测；不重新拟合新密度经验先验。
+最大2GPU，显式启动无自动队列，原子last_state保存当前/最佳权重、优化器、调度器、RNG及早停状态；显式恢复。若显著落后可基于真实曲线提前结束。CUDA注意力/插值反向warn_only，不声称重新训练逐位确定。
+
+## 已做、待做与收益边界
+已实现两个损失和训练器，开始前无新成绩。直接训练，记录真实梯度、初始与训练快照；结束恢复最佳/实际三列评分。若新候选有保留价值才追加必要的磁盘重建；不重跑v48已通过且未改的CDF公式检查。
+待做两项实际训练、同容量对照、热启动与当前最优差值区分、负权重清理、PROJECTS/README/EXPLORATIONS/atlas更新。耗时分别报告单项和双并发总墙钟；加载、输入库、预热计入，编写与最终重载另计。无未完成结果冒称最终收益。
+如果直接分位项没有同容量正收益，不继续扫描其权重或分位点数。只关闭当前配置，不推断所有分位监督都无效。有局部收益可携带到独立机制，但原第五严格>80.5且明确收益才考虑其他折；完整OOF>82未完成。无其他折/旧队列/交付覆盖；目标达成后的独立井确认和新目录交付尚未开始。
+
+
+## v49 likelihood显式启动
+{"pid": 25840, "mode": "likelihood", "started_at": "2026-09-29T17:43:16.576259+08:00", "command": ["C:\\Users\\z5364\\.conda\\envs\\normal\\python.exe", "-X", "utf8", "-u", "D:\\match_predict\\welllog-reservoir-hybrid\\experiments\\pure_dl\\train_quantile_supervision_v49.py", "--mode", "likelihood", "--out", "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_quantile_supervision_v49_SW_likelihood_fold5"], "automatic_queue": false}
+
+
+## v49 quantile_aux显式启动
+{"pid": 66852, "mode": "quantile_aux", "started_at": "2026-09-29T17:43:38.295986+08:00", "command": ["C:\\Users\\z5364\\.conda\\envs\\normal\\python.exe", "-X", "utf8", "-u", "D:\\match_predict\\welllog-reservoir-hybrid\\experiments\\pure_dl\\train_quantile_supervision_v49.py", "--mode", "quantile_aux", "--out", "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_quantile_supervision_v49_SW_quantile_aux_fold5"], "automatic_queue": false}
+
+
+## v49任务查询对照完成
+两项完成，实际TOTAL=80.342771761689，采用None，训练后aux-likelihood=+0.007017394414。详见quantile_supervision_v49_20260929/FINAL.md；无其他折或交付修改。
+
+## v49最终结果与清理
+likelihood训练后最佳第1轮SW73.191339565226；quantile_aux训练后最佳第1轮73.198356959640。训练后辅助项较对照仅+0.007017394414，但两者都低于同起点73.428509530063，均第18轮patience18停止、最佳选择回退第0轮。按预定义包含起点的选择规则，辅助监督最终收益=0；不能把最佳回退或训练后微小差写成新有效模型。
+当前原三列组合TOTAL80.342771761689保持，新采用=False，第五严格>80.5及完整OOF>82均未完成。原v48平滑插值对照收益仍有效，其RQS权重继续保留；本轮关闭当前辅助分位项系数/节点数扫描，不否定其他分位训练方法。
+初始完整144665点与v48源预测一致、两个初始状态哈希相同、结束最佳恢复一致，来源哈希与实际三列评分已核验；真实训练中骨干、FiLM、密度与默认头梯度均非零。新候选没有被保留，因此不重复执行原样条密度公式或原父模型磁盘验证。
+单项166.8964/167.2358秒，两项总墙钟193.43774秒，max2GPU，各峰值1261.56MiB；含加载/预热/输入库及启动间隔，编写与最终收尾另计。已删除两项best/last四个冗余权重，保留源码/配置/曲线/预测/成绩与删除哈希清单。v48 RQS和当前v46、所有父依赖及旧交付保留。
+本批已全部结束，无训练进程、队列或其他折。下一批需切换当前辅助损失的思路，不继续0.5附近扫描；下一项尚未实施，不能算作进展或收益。独立新井确认/完整OOF和新目录交付仍未完成。
+
+
+## 2026-10-02 user-authorized artifact cleanup
+
+Obsolete artifacts have been removed; SUMMARY_RESULTS.json and SUMMARY.md retain historical scores and conclusions. Detailed logs/caches/weights are unavailable for these obsolete trials. Current V370 original + seed20261013, retained-model dependency closure, reusable source, original data and deliveries are preserved. See D:/match_predict/maintenance_cleanup_20261002/VERIFICATION.json.

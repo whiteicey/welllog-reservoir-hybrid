@@ -1,0 +1,15 @@
+{
+  "scope": "v26 execution events, separate from model-training failures",
+  "events": [
+    {
+      "operation": "finish_all_heads_v26.py initial finalization",
+      "result": "Model replay and score assertions completed, but writing assembled_report.json failed: TypeError: Object of type int32 is not JSON serializable.",
+      "cause": "NumPy-derived diagnostic counts were not converted to JSON primitive types.",
+      "fix": "Added recursive native() conversion in the final reporting script only. Model/training code, trained weights and candidate predictions were not modified.",
+      "rerun_scope": "Explicit repeat of final diagnostics/replay/report generation; no training rerun. timing.json reports the successful finalization pass, not combined failed-plus-successful reporting time."
+    }
+  ],
+  "model_training_failures_observed": [],
+  "all_training_completed_before_report_fix": true,
+  "historical_models_or_deliveries_changed": false
+}

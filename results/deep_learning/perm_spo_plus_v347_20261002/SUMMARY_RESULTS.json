@@ -1,0 +1,150 @@
+{
+  "project": "perm_spo_plus_v347_20261002",
+  "scope": "obsolete-study",
+  "weights_retained": false,
+  "cleanup": "Obsolete artifacts removed by explicit user request. These are historical scores, not newly verified training.",
+  "results": [
+    {
+      "source": "PAIRED_FINAL.json",
+      "result": {
+        "arms": {
+          "reference": {
+            "report": {
+              "stage": "reference",
+              "target": "PERM",
+              "target_score": 89.51838939879066,
+              "initial_score": 89.4055666268939,
+              "against_initial": 0.11282277189675938,
+              "against_v97_target": 0.12166534942484475,
+              "best_epoch": 5,
+              "stopped_epoch": 19,
+              "validation_rows": 144665,
+              "predictions_reproduced_exactly": true,
+              "frozen_parameters_exact": true,
+              "seconds": 169.79372849996435,
+              "peak_MiB": 907.65283203125,
+              "complete_five_folds": false,
+              "early_terminated": false
+            },
+            "strata": {
+              "default": 97.49443975594247,
+              "continuous": 74.00963708319706
+            },
+            "whole_vs336": 0.0,
+            "CONT_vs336": 0.0,
+            "CONT_vs154": -0.08727486061948753,
+            "predefined19": {
+              "through_epoch": 19,
+              "best_epoch": 5,
+              "target_score": 89.51838939879066,
+              "control_actual_epochs": 19,
+              "nominal_budget": 80,
+              "comparison": "Predefined bestthrough19 vs historical336cross natural19; samecapacity/init historical not concurrent replicate; laterbest not equalwork",
+              "strata": {
+                "default": 97.49443975594247,
+                "continuous": 74.00963708319706
+              }
+            },
+            "full_best_after19_not_equalwork": false,
+            "decision_loss_diagnostics": {
+              "actual_trainable_parameters": 37386,
+              "SPO_coefficient": 0.0,
+              "action_count": 800,
+              "training_truth_rows": 578891,
+              "last_SPO_loss": 0.4465319514274597,
+              "last_loss_augmented_disagreement": 0.12980946898460388,
+              "own_whole_best_epoch": 5,
+              "SPO_loss_is_not_official_regret": true
+            },
+            "timing": {
+              "includes": "training-only truth transfer preprocessing warmup training best restoration",
+              "concurrency": "solo after346pairterminal",
+              "pid": 70228,
+              "started_epoch": 1790906139.815,
+              "global_GPU_jobs_before": 0,
+              "terminal": true,
+              "individual_seconds": 169.79372849996435,
+              "peak_MiB": 907.65283203125,
+              "process_creation_to_terminal_seconds": 174.43761444091797
+            }
+          },
+          "spo": {
+            "report": {
+              "stage": "spo",
+              "target": "PERM",
+              "target_score": 89.51834740430108,
+              "initial_score": 89.4055666268939,
+              "against_initial": 0.11278077740718118,
+              "against_v97_target": 0.12162335493526655,
+              "best_epoch": 5,
+              "stopped_epoch": 19,
+              "validation_rows": 144665,
+              "predictions_reproduced_exactly": true,
+              "frozen_parameters_exact": true,
+              "seconds": 171.0905115000205,
+              "peak_MiB": 907.65283203125,
+              "complete_five_folds": false,
+              "early_terminated": false
+            },
+            "strata": {
+              "default": 97.494767488904,
+              "continuous": 74.00887618508916
+            },
+            "whole_vs336": -4.1994489578200955e-05,
+            "CONT_vs336": -0.0007608981078988108,
+            "CONT_vs154": -0.08803575872738634,
+            "predefined19": {
+              "through_epoch": 19,
+              "best_epoch": 5,
+              "target_score": 89.51834740430108,
+              "control_actual_epochs": 19,
+              "nominal_budget": 80,
+              "comparison": "Predefined bestthrough19 vs historical336cross natural19; samecapacity/init historical not concurrent replicate; laterbest not equalwork",
+              "strata": {
+                "default": 97.494767488904,
+                "continuous": 74.00887618508916
+              }
+            },
+            "full_best_after19_not_equalwork": false,
+            "decision_loss_diagnostics": {
+              "actual_trainable_parameters": 37386,
+              "SPO_coefficient": 0.1,
+              "action_count": 800,
+              "training_truth_rows": 578891,
+              "last_SPO_loss": 0.44650185108184814,
+              "last_loss_augmented_disagreement": 0.12980946898460388,
+              "own_whole_best_epoch": 5,
+              "SPO_loss_is_not_official_regret": true
+            },
+            "timing": {
+              "includes": "training-only truth transfer preprocessing warmup training best restoration",
+              "concurrency": "solo after347referenceterminal",
+              "pid": 58256,
+              "started_epoch": 1790906361.74,
+              "global_GPU_jobs_before": 0,
+              "terminal": true,
+              "individual_seconds": 171.0905115000205,
+              "peak_MiB": 907.65283203125,
+              "process_creation_to_terminal_seconds": 176.1966187953949
+            }
+          }
+        },
+        "spo_minus_reference_whole": -4.1994489578200955e-05,
+        "spo_minus_reference_CONT": -0.0007608981078988108,
+        "comparison_limits": "Same37386 parameters/init, sameactionkernel/decoder, onlyfixedSPO coefficient0 vs.1; freshreference computesadditionalzero-coefficient term for faircompute/RNG. Historical336samecapacity not concurrent repeat, single seed not robustness.",
+        "adopted": false,
+        "screening_fold": 5,
+        "complete_five_folds": false,
+        "remaining_folds_started": false,
+        "independent_disk_reload": false,
+        "pair_wall_process_seconds": 398.1216187477112,
+        "launch_stagger_seconds": 221.92499995231628,
+        "pair_timing_limits": "Process start through last report includes explicit serial launch gaps; individual includes prep/warmup/restoration, no-original336-speedranking because bothcomputeadditionaldiagnostics",
+        "closed_setting": "fixed.1 finalmixtureSPO+ both whole/CONT below matchedreference; no lambda/temperature/decoder/LRgrid"
+      }
+    }
+  ],
+  "cleanup_completed": true,
+  "deleted_files": 16,
+  "deleted_bytes": 6990076
+}

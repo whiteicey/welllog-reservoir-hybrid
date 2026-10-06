@@ -1,0 +1,59 @@
+{
+  "fold": 1,
+  "rows": 144621,
+  "fixed_weights": {
+    "POR": 0.56,
+    "PERM": 0.44,
+    "SW": 0.68
+  },
+  "fixed_scores": {
+    "POR": 80.53030337518445,
+    "PERM": 91.02663620495527,
+    "SW": 77.02355166122501,
+    "TOTAL": 82.97665676571843
+  },
+  "diagnostic_scores": {
+    "POR": 80.53637241360478,
+    "PERM": 91.06448763386392,
+    "SW": 77.02872063594612,
+    "TOTAL": 82.99353461851494
+  },
+  "per_head_best_weights": {
+    "POR": {
+      "weight_original": 0.53,
+      "weight_seed13": 0.47,
+      "score": 80.53637241360478,
+      "fixed_weight_score": 80.53030337518445
+    },
+    "PERM": {
+      "weight_original": 0.7,
+      "weight_seed13": 0.30000000000000004,
+      "score": 91.06448763386392,
+      "fixed_weight_score": 91.02663620495527
+    },
+    "SW": {
+      "weight_original": 0.69,
+      "weight_seed13": 0.31000000000000005,
+      "score": 77.02872063594612,
+      "fixed_weight_score": 77.02355166122501
+    }
+  },
+  "standalone_scores": {
+    "original": {
+      "POR": 80.25441098530335,
+      "PERM": 90.98904518265655,
+      "SW": 76.9677842865412,
+      "TOTAL": 82.86121360981022
+    },
+    "seed13": {
+      "POR": 80.07054527363273,
+      "PERM": 90.82622318971067,
+      "SW": 76.93384368027814,
+      "TOTAL": 82.73718698658591
+    }
+  },
+  "native_replay_exact": true,
+  "prediction_disk_readback_exact": true,
+  "diagnostic_scope": "This fold labels selected each head weight; tuning diagnostic, not independent validation",
+  "fixed_scope": "Fifth-selected fixed ratios applied unchanged; fifth itself remains selection-contaminated"
+}

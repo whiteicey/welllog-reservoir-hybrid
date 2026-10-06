@@ -1,0 +1,36 @@
+{
+  "full_gap": -0.5925975490250721,
+  "source_gap": -0.5454319210492997,
+  "downstream_gain_gap": -0.047165627975772395,
+  "stage_gain_differences": [
+    {
+      "stage": "POR113",
+      "delta_total": -0.04463783502580582
+    },
+    {
+      "stage": "POR151",
+      "delta_total": 0.07618147112878546
+    },
+    {
+      "stage": "PERM154",
+      "delta_total": -0.021281638758112818
+    },
+    {
+      "stage": "SW104",
+      "delta_total": -0.04393019366064549
+    },
+    {
+      "stage": "POR341",
+      "delta_total": 0.004818333577546241
+    },
+    {
+      "stage": "PERM336",
+      "delta_total": -0.00016503681106314755
+    },
+    {
+      "stage": "SW351",
+      "delta_total": -0.01815072842648959
+    }
+  ],
+  "limit": "Arithmetic decomposition; source/Q/patience differ, not seed-only causality"
+}

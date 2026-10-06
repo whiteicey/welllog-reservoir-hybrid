@@ -1,0 +1,602 @@
+{
+  "cases": [
+    {
+      "fold": 1,
+      "identity": "original",
+      "stage": "POR341",
+      "target": "POR",
+      "actual_target_gain": 0.0,
+      "CONT_delta": 0.0,
+      "CONT_rows": 45390,
+      "predicted_DEFAULT_before": 7856,
+      "predicted_DEFAULT_after": 7856,
+      "groups": [
+        {
+          "predicted_action_transition": "CONT_to_CONT",
+          "rows": 37534,
+          "group_target_delta": 0.0,
+          "weighted_CONT_delta": 0.0
+        },
+        {
+          "predicted_action_transition": "CONT_to_DEFAULT",
+          "rows": 0,
+          "group_target_delta": 0.0,
+          "weighted_CONT_delta": 0.0
+        },
+        {
+          "predicted_action_transition": "DEFAULT_to_CONT",
+          "rows": 0,
+          "group_target_delta": 0.0,
+          "weighted_CONT_delta": 0.0
+        },
+        {
+          "predicted_action_transition": "DEFAULT_to_DEFAULT",
+          "rows": 7856,
+          "group_target_delta": 0.0,
+          "weighted_CONT_delta": 0.0
+        }
+      ]
+    },
+    {
+      "fold": 1,
+      "identity": "original",
+      "stage": "PERM336",
+      "target": "PERM",
+      "actual_target_gain": -7.525097757365984e-06,
+      "CONT_delta": -3.7185210572943106e-05,
+      "CONT_rows": 43900,
+      "predicted_DEFAULT_before": 5379,
+      "predicted_DEFAULT_after": 5379,
+      "groups": [
+        {
+          "predicted_action_transition": "CONT_to_CONT",
+          "rows": 38521,
+          "group_target_delta": -4.2377683456606974e-05,
+          "weighted_CONT_delta": -3.718521057931565e-05
+        },
+        {
+          "predicted_action_transition": "CONT_to_DEFAULT",
+          "rows": 0,
+          "group_target_delta": 0.0,
+          "weighted_CONT_delta": 0.0
+        },
+        {
+          "predicted_action_transition": "DEFAULT_to_CONT",
+          "rows": 0,
+          "group_target_delta": 0.0,
+          "weighted_CONT_delta": 0.0
+        },
+        {
+          "predicted_action_transition": "DEFAULT_to_DEFAULT",
+          "rows": 5379,
+          "group_target_delta": 0.0,
+          "weighted_CONT_delta": 0.0
+        }
+      ]
+    },
+    {
+      "fold": 1,
+      "identity": "seed_20261013",
+      "stage": "POR341",
+      "target": "POR",
+      "actual_target_gain": 0.06077140913880896,
+      "CONT_delta": -0.36596558799119805,
+      "CONT_rows": 45390,
+      "predicted_DEFAULT_before": 7981,
+      "predicted_DEFAULT_after": 8415,
+      "groups": [
+        {
+          "predicted_action_transition": "CONT_to_CONT",
+          "rows": 36953,
+          "group_target_delta": -0.042796986972000184,
+          "weighted_CONT_delta": -0.034841970909370405
+        },
+        {
+          "predicted_action_transition": "CONT_to_DEFAULT",
+          "rows": 456,
+          "group_target_delta": -32.95987056873352,
+          "weighted_CONT_delta": -0.33112361708179083
+        },
+        {
+          "predicted_action_transition": "DEFAULT_to_CONT",
+          "rows": 22,
+          "group_target_delta": 0.0,
+          "weighted_CONT_delta": 0.0
+        },
+        {
+          "predicted_action_transition": "DEFAULT_to_DEFAULT",
+          "rows": 7959,
+          "group_target_delta": 0.0,
+          "weighted_CONT_delta": 0.0
+        }
+      ]
+    },
+    {
+      "fold": 1,
+      "identity": "seed_20261013",
+      "stage": "PERM336",
+      "target": "PERM",
+      "actual_target_gain": 0.002811864872498404,
+      "CONT_delta": -0.15411638095523017,
+      "CONT_rows": 43900,
+      "predicted_DEFAULT_before": 5229,
+      "predicted_DEFAULT_after": 5361,
+      "groups": [
+        {
+          "predicted_action_transition": "CONT_to_CONT",
+          "rows": 38539,
+          "group_target_delta": -0.0550629755188794,
+          "weighted_CONT_delta": -0.048338770239683214
+        },
+        {
+          "predicted_action_transition": "CONT_to_DEFAULT",
+          "rows": 132,
+          "group_target_delta": -35.179069018264755,
+          "weighted_CONT_delta": -0.10577761071551134
+        },
+        {
+          "predicted_action_transition": "DEFAULT_to_CONT",
+          "rows": 0,
+          "group_target_delta": 0.0,
+          "weighted_CONT_delta": 0.0
+        },
+        {
+          "predicted_action_transition": "DEFAULT_to_DEFAULT",
+          "rows": 5229,
+          "group_target_delta": 0.0,
+          "weighted_CONT_delta": 0.0
+        }
+      ]
+    },
+    {
+      "fold": 2,
+      "identity": "original",
+      "stage": "POR341",
+      "target": "POR",
+      "actual_target_gain": 0.03687986480923655,
+      "CONT_delta": -0.41175840466424773,
+      "CONT_rows": 47515,
+      "predicted_DEFAULT_before": 8404,
+      "predicted_DEFAULT_after": 8994,
+      "groups": [
+        {
+          "predicted_action_transition": "CONT_to_CONT",
+          "rows": 38518,
+          "group_target_delta": 0.00998096728994824,
+          "weighted_CONT_delta": 0.00809106383403612
+        },
+        {
+          "predicted_action_transition": "CONT_to_DEFAULT",
+          "rows": 593,
+          "group_target_delta": -33.66303503526945,
+          "weighted_CONT_delta": -0.42012374567851807
+        },
+        {
+          "predicted_action_transition": "DEFAULT_to_CONT",
+          "rows": 3,
+          "group_target_delta": 4.344093406064642,
+          "weighted_CONT_delta": 0.000274277180220855
+        },
+        {
+          "predicted_action_transition": "DEFAULT_to_DEFAULT",
+          "rows": 8401,
+          "group_target_delta": 0.0,
+          "weighted_CONT_delta": 0.0
+        }
+      ]
+    },
+    {
+      "fold": 2,
+      "identity": "original",
+      "stage": "PERM336",
+      "target": "PERM",
+      "actual_target_gain": 0.12247821344371346,
+      "CONT_delta": -0.06511738685749435,
+      "CONT_rows": 45845,
+      "predicted_DEFAULT_before": 4655,
+      "predicted_DEFAULT_after": 4827,
+      "groups": [
+        {
+          "predicted_action_transition": "CONT_to_CONT",
+          "rows": 40990,
+          "group_target_delta": 0.18488263374625546,
+          "weighted_CONT_delta": 0.16530350435726932
+        },
+        {
+          "predicted_action_transition": "CONT_to_DEFAULT",
+          "rows": 200,
+          "group_target_delta": -56.239579204014596,
+          "weighted_CONT_delta": -0.245346621023076
+        },
+        {
+          "predicted_action_transition": "DEFAULT_to_CONT",
+          "rows": 28,
+          "group_target_delta": 24.438217252201042,
+          "weighted_CONT_delta": 0.014925729808302523
+        },
+        {
+          "predicted_action_transition": "DEFAULT_to_DEFAULT",
+          "rows": 4627,
+          "group_target_delta": 0.0,
+          "weighted_CONT_delta": 0.0
+        }
+      ]
+    },
+    {
+      "fold": 2,
+      "identity": "seed_20261013",
+      "stage": "POR341",
+      "target": "POR",
+      "actual_target_gain": 0.007862602389110407,
+      "CONT_delta": -0.4201313458945677,
+      "CONT_rows": 47515,
+      "predicted_DEFAULT_before": 7993,
+      "predicted_DEFAULT_after": 8708,
+      "groups": [
+        {
+          "predicted_action_transition": "CONT_to_CONT",
+          "rows": 38806,
+          "group_target_delta": 0.06953074822296657,
+          "weighted_CONT_delta": 0.05678649301358393
+        },
+        {
+          "predicted_action_transition": "CONT_to_DEFAULT",
+          "rows": 716,
+          "group_target_delta": -31.649093737044808,
+          "weighted_CONT_delta": -0.4769178389082202
+        },
+        {
+          "predicted_action_transition": "DEFAULT_to_CONT",
+          "rows": 1,
+          "group_target_delta": 0.0,
+          "weighted_CONT_delta": 0.0
+        },
+        {
+          "predicted_action_transition": "DEFAULT_to_DEFAULT",
+          "rows": 7992,
+          "group_target_delta": 0.0,
+          "weighted_CONT_delta": 0.0
+        }
+      ]
+    },
+    {
+      "fold": 2,
+      "identity": "seed_20261013",
+      "stage": "PERM336",
+      "target": "PERM",
+      "actual_target_gain": 0.10015791630313231,
+      "CONT_delta": -0.1201090045824742,
+      "CONT_rows": 45845,
+      "predicted_DEFAULT_before": 4649,
+      "predicted_DEFAULT_after": 4778,
+      "groups": [
+        {
+          "predicted_action_transition": "CONT_to_CONT",
+          "rows": 41033,
+          "group_target_delta": 0.06158726238184897,
+          "weighted_CONT_delta": 0.055122917162491195
+        },
+        {
+          "predicted_action_transition": "CONT_to_DEFAULT",
+          "rows": 163,
+          "group_target_delta": -52.3582915296533,
+          "weighted_CONT_delta": -0.18615773845203376
+        },
+        {
+          "predicted_action_transition": "DEFAULT_to_CONT",
+          "rows": 34,
+          "group_target_delta": 14.732178438766816,
+          "weighted_CONT_delta": 0.010925816706687136
+        },
+        {
+          "predicted_action_transition": "DEFAULT_to_DEFAULT",
+          "rows": 4615,
+          "group_target_delta": 0.0,
+          "weighted_CONT_delta": 0.0
+        }
+      ]
+    },
+    {
+      "fold": 3,
+      "identity": "original",
+      "stage": "POR341",
+      "target": "POR",
+      "actual_target_gain": 0.08637430997988815,
+      "CONT_delta": -0.2366705397016915,
+      "CONT_rows": 43385,
+      "predicted_DEFAULT_before": 8984,
+      "predicted_DEFAULT_after": 9379,
+      "groups": [
+        {
+          "predicted_action_transition": "CONT_to_CONT",
+          "rows": 34001,
+          "group_target_delta": 0.1764619334307298,
+          "weighted_CONT_delta": 0.13829393104940058
+        },
+        {
+          "predicted_action_transition": "CONT_to_DEFAULT",
+          "rows": 400,
+          "group_target_delta": -41.18388443813596,
+          "weighted_CONT_delta": -0.3797062066441025
+        },
+        {
+          "predicted_action_transition": "DEFAULT_to_CONT",
+          "rows": 5,
+          "group_target_delta": 41.14404234399374,
+          "weighted_CONT_delta": 0.004741735893049871
+        },
+        {
+          "predicted_action_transition": "DEFAULT_to_DEFAULT",
+          "rows": 8979,
+          "group_target_delta": 0.0,
+          "weighted_CONT_delta": 0.0
+        }
+      ]
+    },
+    {
+      "fold": 3,
+      "identity": "original",
+      "stage": "PERM336",
+      "target": "PERM",
+      "actual_target_gain": 0.05502368797510826,
+      "CONT_delta": -0.25858249002469336,
+      "CONT_rows": 42154,
+      "predicted_DEFAULT_before": 6328,
+      "predicted_DEFAULT_after": 6507,
+      "groups": [
+        {
+          "predicted_action_transition": "CONT_to_CONT",
+          "rows": 35631,
+          "group_target_delta": 0.00024404465405325482,
+          "weighted_CONT_delta": 0.00020628066301113827
+        },
+        {
+          "predicted_action_transition": "CONT_to_DEFAULT",
+          "rows": 195,
+          "group_target_delta": -57.345487190388326,
+          "weighted_CONT_delta": -0.2652742326262211
+        },
+        {
+          "predicted_action_transition": "DEFAULT_to_CONT",
+          "rows": 16,
+          "group_target_delta": 17.08676015968145,
+          "weighted_CONT_delta": 0.006485461938485155
+        },
+        {
+          "predicted_action_transition": "DEFAULT_to_DEFAULT",
+          "rows": 6312,
+          "group_target_delta": 0.0,
+          "weighted_CONT_delta": 0.0
+        }
+      ]
+    },
+    {
+      "fold": 3,
+      "identity": "seed_20261013",
+      "stage": "POR341",
+      "target": "POR",
+      "actual_target_gain": 0.0035721377905133522,
+      "CONT_delta": -0.4052487847863375,
+      "CONT_rows": 43385,
+      "predicted_DEFAULT_before": 9036,
+      "predicted_DEFAULT_after": 9531,
+      "groups": [
+        {
+          "predicted_action_transition": "CONT_to_CONT",
+          "rows": 33852,
+          "group_target_delta": 0.09747587092341092,
+          "weighted_CONT_delta": 0.07605746646304729
+        },
+        {
+          "predicted_action_transition": "CONT_to_DEFAULT",
+          "rows": 497,
+          "group_target_delta": -42.18311304604608,
+          "weighted_CONT_delta": -0.48323169721988946
+        },
+        {
+          "predicted_action_transition": "DEFAULT_to_CONT",
+          "rows": 2,
+          "group_target_delta": 41.76773671412067,
+          "weighted_CONT_delta": 0.0019254459704561794
+        },
+        {
+          "predicted_action_transition": "DEFAULT_to_DEFAULT",
+          "rows": 9034,
+          "group_target_delta": 0.0,
+          "weighted_CONT_delta": 0.0
+        }
+      ]
+    },
+    {
+      "fold": 3,
+      "identity": "seed_20261013",
+      "stage": "PERM336",
+      "target": "PERM",
+      "actual_target_gain": 0.12841949952515108,
+      "CONT_delta": 0.22952813565808583,
+      "CONT_rows": 42154,
+      "predicted_DEFAULT_before": 6902,
+      "predicted_DEFAULT_after": 7025,
+      "groups": [
+        {
+          "predicted_action_transition": "CONT_to_CONT",
+          "rows": 35117,
+          "group_target_delta": 0.45154162389040664,
+          "weighted_CONT_delta": 0.3761632871414198
+        },
+        {
+          "predicted_action_transition": "CONT_to_DEFAULT",
+          "rows": 135,
+          "group_target_delta": -49.46592664303071,
+          "weighted_CONT_delta": -0.15841675989963339
+        },
+        {
+          "predicted_action_transition": "DEFAULT_to_CONT",
+          "rows": 12,
+          "group_target_delta": 41.38682676499839,
+          "weighted_CONT_delta": 0.011781608416282693
+        },
+        {
+          "predicted_action_transition": "DEFAULT_to_DEFAULT",
+          "rows": 6890,
+          "group_target_delta": 0.0,
+          "weighted_CONT_delta": 0.0
+        }
+      ]
+    },
+    {
+      "fold": 4,
+      "identity": "original",
+      "stage": "POR341",
+      "target": "POR",
+      "actual_target_gain": 0.022506208293179952,
+      "CONT_delta": -0.3471095791771788,
+      "CONT_rows": 49401,
+      "predicted_DEFAULT_before": 7327,
+      "predicted_DEFAULT_after": 7835,
+      "groups": [
+        {
+          "predicted_action_transition": "CONT_to_CONT",
+          "rows": 41566,
+          "group_target_delta": 0.07756013104667403,
+          "weighted_CONT_delta": 0.06525909206465563
+        },
+        {
+          "predicted_action_transition": "CONT_to_DEFAULT",
+          "rows": 508,
+          "group_target_delta": -40.10122977956374,
+          "weighted_CONT_delta": -0.41236867124184484
+        },
+        {
+          "predicted_action_transition": "DEFAULT_to_CONT",
+          "rows": 0,
+          "group_target_delta": 0.0,
+          "weighted_CONT_delta": 0.0
+        },
+        {
+          "predicted_action_transition": "DEFAULT_to_DEFAULT",
+          "rows": 7327,
+          "group_target_delta": 0.0,
+          "weighted_CONT_delta": 0.0
+        }
+      ]
+    },
+    {
+      "fold": 4,
+      "identity": "original",
+      "stage": "PERM336",
+      "target": "PERM",
+      "actual_target_gain": 2.0018245550090796e-05,
+      "CONT_delta": 6.0359220498185095e-05,
+      "CONT_rows": 47928,
+      "predicted_DEFAULT_before": 4639,
+      "predicted_DEFAULT_after": 4639,
+      "groups": [
+        {
+          "predicted_action_transition": "CONT_to_CONT",
+          "rows": 43289,
+          "group_target_delta": 6.68275247761585e-05,
+          "weighted_CONT_delta": 6.035922049814566e-05
+        },
+        {
+          "predicted_action_transition": "CONT_to_DEFAULT",
+          "rows": 0,
+          "group_target_delta": 0.0,
+          "weighted_CONT_delta": 0.0
+        },
+        {
+          "predicted_action_transition": "DEFAULT_to_CONT",
+          "rows": 0,
+          "group_target_delta": 0.0,
+          "weighted_CONT_delta": 0.0
+        },
+        {
+          "predicted_action_transition": "DEFAULT_to_DEFAULT",
+          "rows": 4639,
+          "group_target_delta": 0.0,
+          "weighted_CONT_delta": 0.0
+        }
+      ]
+    },
+    {
+      "fold": 4,
+      "identity": "seed_20261013",
+      "stage": "POR341",
+      "target": "POR",
+      "actual_target_gain": 0.03001699831742144,
+      "CONT_delta": -0.31704122430977577,
+      "CONT_rows": 49401,
+      "predicted_DEFAULT_before": 7654,
+      "predicted_DEFAULT_after": 8135,
+      "groups": [
+        {
+          "predicted_action_transition": "CONT_to_CONT",
+          "rows": 41263,
+          "group_target_delta": 0.07789811697495708,
+          "weighted_CONT_delta": 0.06506568694434635
+        },
+        {
+          "predicted_action_transition": "CONT_to_DEFAULT",
+          "rows": 484,
+          "group_target_delta": -39.00095769187245,
+          "weighted_CONT_delta": -0.38210691125415003
+        },
+        {
+          "predicted_action_transition": "DEFAULT_to_CONT",
+          "rows": 3,
+          "group_target_delta": 0.0,
+          "weighted_CONT_delta": 0.0
+        },
+        {
+          "predicted_action_transition": "DEFAULT_to_DEFAULT",
+          "rows": 7651,
+          "group_target_delta": 0.0,
+          "weighted_CONT_delta": 0.0
+        }
+      ]
+    },
+    {
+      "fold": 4,
+      "identity": "seed_20261013",
+      "stage": "PERM336",
+      "target": "PERM",
+      "actual_target_gain": -7.706343296831619e-07,
+      "CONT_delta": 1.0923660283879144e-05,
+      "CONT_rows": 47928,
+      "predicted_DEFAULT_before": 4911,
+      "predicted_DEFAULT_after": 4911,
+      "groups": [
+        {
+          "predicted_action_transition": "CONT_to_CONT",
+          "rows": 43017,
+          "group_target_delta": 1.2170750864015645e-05,
+          "weighted_CONT_delta": 1.0923660280365568e-05
+        },
+        {
+          "predicted_action_transition": "CONT_to_DEFAULT",
+          "rows": 0,
+          "group_target_delta": 0.0,
+          "weighted_CONT_delta": 0.0
+        },
+        {
+          "predicted_action_transition": "DEFAULT_to_CONT",
+          "rows": 0,
+          "group_target_delta": 0.0,
+          "weighted_CONT_delta": 0.0
+        },
+        {
+          "predicted_action_transition": "DEFAULT_to_DEFAULT",
+          "rows": 4911,
+          "group_target_delta": 0.0,
+          "weighted_CONT_delta": 0.0
+        }
+      ]
+    }
+  ],
+  "CPU_only": true,
+  "extra_training_stages": 0,
+  "scope": "Completed8-stage cases only; historical fifth excluded; identical saved predictions and original score",
+  "action_class_definition": "Original dmask applied to predictions: POR<=0.1, PERM<=0.01, SW>=99.9",
+  "caution": "Transition groups use validation truth for diagnosis only; no rowwise model selection, weight changes, or inference rule",
+  "causal_gate_explanation_proven": false
+}

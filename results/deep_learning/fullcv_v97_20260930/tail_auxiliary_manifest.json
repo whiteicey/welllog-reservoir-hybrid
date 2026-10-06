@@ -1,0 +1,6 @@
+{
+  "scope": "auxiliary documentation recorder only; training sources unchanged",
+  "recording_source_sha256": "d43933b135b3e43674fdb2f98fd698aeb1b0764de08ca64c4363cdff66c4b36e",
+  "tail_admission_source_sha256": "83c04d695cd8e86f735ab518a173d6e4afbf14990f2f10e70c61d428ab92762c",
+  "reason": "record actual deployed single-tail memory admission instead of stale four GiB default"
+}

@@ -1,0 +1,13 @@
+{
+  "reason": "Best74.122510 at14 remains below25274.149228 and27574.137236; larger state update swings downward, savebest then balancedcontrol.",
+  "observed": {
+    "status": "running",
+    "pid": 67912,
+    "stage": "ordinary",
+    "epoch": 17,
+    "best": 74.12251011928676,
+    "best_epoch": 14,
+    "bad": 3,
+    "peak_MiB": 1241.642578125
+  }
+}

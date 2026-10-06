@@ -1,0 +1,166 @@
+{
+  "project": "sw_phase_coherency_v352_20261002",
+  "scope": "obsolete-study",
+  "weights_retained": false,
+  "cleanup": "Obsolete artifacts removed by explicit user request. These are historical scores, not newly verified training.",
+  "results": [
+    {
+      "source": "PAIRED_FINAL.json",
+      "result": {
+        "arms": {
+          "phase": {
+            "report": {
+              "stage": "phase",
+              "target": "SW",
+              "target_score": 74.1722124145395,
+              "initial_score": 74.12175268976877,
+              "against_initial": 0.05045972477073235,
+              "against_v97_target": 0.03003250987279671,
+              "best_epoch": 13,
+              "stopped_epoch": 27,
+              "validation_rows": 144665,
+              "predictions_reproduced_exactly": true,
+              "frozen_parameters_exact": true,
+              "seconds": 250.45614449999994,
+              "peak_MiB": 1803.537109375,
+              "complete_five_folds": false,
+              "early_terminated": false
+            },
+            "strata": {
+              "default": 98.64050787861405,
+              "continuous": 17.970803388760466
+            },
+            "whole_vs326": 0.0026693824646031317,
+            "CONT_vs326": 0.007361300512116031,
+            "CONT_vs_native104": 0.33891432828037793,
+            "diagnostic_eight_stage_scores": {
+              "POR": 78.04643071793232,
+              "PERM": 89.51838939879066,
+              "SW": 74.1722124145395,
+              "TOTAL": 80.70563985004524
+            },
+            "TOTAL_vs_retained341": 0.0009342838626054117,
+            "spectrum_parameter_norms": {
+              "cross_spectrum.mixing": 0.3848325312137604,
+              "cross_spectrum.bridge.weight": 0.5432115793228149,
+              "cross_spectrum.bridge.bias": 0.20166580379009247
+            },
+            "whole_vs351": -0.0013996376937654986,
+            "CONT_vs351": -0.008595761286166237,
+            "TOTAL_vs_retained351": -0.0004898731928193456,
+            "timing": {
+              "includes": "preprocessing warmup training best restoration",
+              "concurrency": "solo after351pairterminal",
+              "pid": 68788,
+              "terminal": true,
+              "global_GPU_jobs_before": 0,
+              "started_epoch": 1790908755.343,
+              "individual_seconds": 250.45614449999994,
+              "peak_MiB": 1803.537109375,
+              "process_creation_to_terminal_seconds": 254.71222591400146
+            },
+            "predefined27": {
+              "through_epoch": 27,
+              "best_epoch": 13,
+              "target_score": 74.1722124145395,
+              "control_actual_epochs": 27,
+              "nominal_budget": 80,
+              "comparison": "Predefined bestthrough27 vs historical326depth natural27; same92841 vs351historical, smoothing/coherency descriptor changed; no matchedphase gain from history, laterbest not equalwork"
+            },
+            "adopted": false,
+            "screening_fold": 5,
+            "complete_five_folds": false,
+            "remaining_folds_started": false,
+            "independent_disk_reload": false,
+            "strict_808_passed": false,
+            "comparison_limits": "Same92841params/init between phase/magnitude, real rho vs abs rho functions differ; magnitude includes phase cancellation, not pureamplitude control; historical326capacity92289 differs/nonconcurrent; single seed and whole-selected strata, no CONToracle. Norms not importance proof."
+          },
+          "magnitude": {
+            "report": {
+              "stage": "magnitude",
+              "target": "SW",
+              "target_score": 74.17294885570288,
+              "initial_score": 74.12175268976877,
+              "against_initial": 0.051196165934115356,
+              "against_v97_target": 0.030768951036179715,
+              "best_epoch": 13,
+              "stopped_epoch": 27,
+              "validation_rows": 144665,
+              "predictions_reproduced_exactly": true,
+              "frozen_parameters_exact": true,
+              "seconds": 245.60118850000435,
+              "peak_MiB": 1803.037109375,
+              "complete_five_folds": false,
+              "early_terminated": false
+            },
+            "strata": {
+              "default": 98.63837460092753,
+              "continuous": 17.978131308398886
+            },
+            "whole_vs326": 0.0034058236279861376,
+            "CONT_vs326": 0.014689220150536642,
+            "CONT_vs_native104": 0.34624224791879854,
+            "diagnostic_eight_stage_scores": {
+              "POR": 78.04643071793232,
+              "PERM": 89.51838939879066,
+              "SW": 74.17294885570288,
+              "TOTAL": 80.70589760445243
+            },
+            "TOTAL_vs_retained341": 0.001192038269792306,
+            "spectrum_parameter_norms": {
+              "cross_spectrum.mixing": 0.3740871250629425,
+              "cross_spectrum.bridge.weight": 0.5459522008895874,
+              "cross_spectrum.bridge.bias": 0.2017972469329834
+            },
+            "whole_vs351": -0.0006631965303824927,
+            "CONT_vs351": -0.0012678416477456267,
+            "TOTAL_vs_retained351": -0.00023211878563245136,
+            "timing": {
+              "includes": "preprocessing warmup training best restoration",
+              "concurrency": "solo after352phase terminal",
+              "pid": 41428,
+              "terminal": true,
+              "global_GPU_jobs_before": 0,
+              "started_epoch": 1790909170.095,
+              "individual_seconds": 245.60118850000435,
+              "peak_MiB": 1803.037109375,
+              "process_creation_to_terminal_seconds": 249.7348988056183
+            },
+            "predefined27": {
+              "through_epoch": 27,
+              "best_epoch": 13,
+              "target_score": 74.17294885570288,
+              "control_actual_epochs": 27,
+              "nominal_budget": 80,
+              "comparison": "Predefined bestthrough27 vs historical326depth natural27; same92841 vs351historical, smoothing/coherency descriptor changed; no matchedphase gain from history, laterbest not equalwork"
+            },
+            "adopted": false,
+            "screening_fold": 5,
+            "complete_five_folds": false,
+            "remaining_folds_started": false,
+            "independent_disk_reload": false,
+            "strict_808_passed": false,
+            "comparison_limits": "Same92841params/init between phase/magnitude, real rho vs abs rho functions differ; magnitude includes phase cancellation, not pureamplitude control; historical326capacity92289 differs/nonconcurrent; single seed and whole-selected strata, no CONToracle. Norms not importance proof."
+          }
+        },
+        "phase_minus_magnitude_whole": -0.0007364411633830059,
+        "phase_minus_magnitude_CONT": -0.00732791963842061,
+        "phase_minus_magnitude_DEFAULT": 0.002133277686510837,
+        "adopted": false,
+        "screening_fold": 5,
+        "complete_five_folds": false,
+        "remaining_folds_started": false,
+        "independent_disk_reload": false,
+        "closed_setting": "Both realrho/absrho current5frequency/.25descriptor below351whole; close descriptor setting/no smoothing-coefficient-LR grid. Not all phase/spectrum invalid; positive351 retained.",
+        "comparison_limits": "Same92841/init/loss, onlyrealrho vsabsrho; functionclassesdiffer andmagnitude alsoincludesphasecancellation. Bothnatural27/best13, sameprefix/singleseed notrobustness; historical351samecapacity notconcurrent. Wholebest strata/noCONToracle.",
+        "mechanism_positive": false,
+        "pair_wall_process_seconds": 664.4868988990784,
+        "launch_stagger_seconds": 414.7520000934601,
+        "pair_timing_limits": "Solo serial pairwall includes explicit gaps; individual prep/warmup/train/restoration andpeaks reported separately"
+      }
+    }
+  ],
+  "cleanup_completed": true,
+  "deleted_files": 16,
+  "deleted_bytes": 13932068
+}

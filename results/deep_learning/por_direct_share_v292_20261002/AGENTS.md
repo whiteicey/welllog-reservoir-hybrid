@@ -1,0 +1,1 @@
+Maintain PROJECTS/README/atlas. Original151 frozen prior only; jointly train newraw encoder/readout, one added POR phase. No290weights. max2GPU/80-14, no otherfolds below80.8 meaningfulgain; oldsource/deliveries frozen.

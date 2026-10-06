@@ -1,0 +1,1 @@
+Maintain PROJECTS/README. Fixedoriginalfold5/Q50/normalGPU/80-14/max2. Original206features+relative only, no extra curves. Allpositive104frozen. Raw/repeat sibling, one selectedSWaddition/sixalone/whole<=8,no repairstack. Owntrainlabels only. Atomicstates, originalscoring/population, no otherfolds below808+gain.

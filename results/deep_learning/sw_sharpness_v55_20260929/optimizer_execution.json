@@ -1,0 +1,22 @@
+{
+  "adamw": {
+    "epochs": 18,
+    "optimizer_updates": 1152,
+    "training_forward_backward_passes": 1152,
+    "post_update_best_epoch": 1,
+    "post_update_best_score": 73.48902287696937,
+    "initial_recovered": true,
+    "first_actual_perturbation_L2": null,
+    "last_epoch_mean_perturbed_minus_base": 0.0
+  },
+  "sam": {
+    "epochs": 18,
+    "optimizer_updates": 1152,
+    "training_forward_backward_passes": 2304,
+    "post_update_best_epoch": 17,
+    "post_update_best_score": 73.593073936855,
+    "initial_recovered": true,
+    "first_actual_perturbation_L2": 0.05000000074505806,
+    "last_epoch_mean_perturbed_minus_base": 0.024398546491283923
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "arms": {
+    "depth": {
+      "observed_through_epoch": 33,
+      "best_epoch": 28,
+      "whole": 78.0458220539967,
+      "strata": {
+        "default": 97.40559788886887,
+        "continuous": 41.73489002626708
+      },
+      "whole_vs335": 0.0036094189946425104,
+      "CONT_vs335": 0.01037919612884508,
+      "CONT_vs_original151": -0.21907102863698213
+    },
+    "control": {
+      "observed_through_epoch": 25,
+      "best_epoch": 20,
+      "whole": 78.03125037336724,
+      "strata": {
+        "default": 97.40771749843678,
+        "continuous": 41.68901238894759
+      },
+      "whole_vs335": -0.010962261634816173,
+      "CONT_vs335": -0.035498441190647156,
+      "CONT_vs_original151": -0.26494866595647437
+    }
+  },
+  "preliminary": true,
+  "not_final_pair_or_gain": true,
+  "saved_best_predictions_only": true,
+  "no_independent_model_disk_reload": true,
+  "no_epoch_selection_by_CONT": true
+}

@@ -1,0 +1,54 @@
+{
+  "project": "independent_sw_tolerance_v13_20260928",
+  "scope": "obsolete-study",
+  "weights_retained": false,
+  "cleanup": "Obsolete artifacts removed by explicit user request. These are historical scores, not newly verified training.",
+  "results": [
+    {
+      "source": "CURRENT_RECIPE.json",
+      "result": {
+        "selected_new_SW": false,
+        "reference_scores": {
+          "POR": 77.44891570750882,
+          "PERM": 89.3475027344081,
+          "SW": 73.62238476712884,
+          "TOTAL": 80.27413533779057
+        },
+        "choices": [
+          {
+            "target": "POR",
+            "key": "POR_dual",
+            "architecture": "dual",
+            "target_score": 77.44891570750882,
+            "best_epoch": 0,
+            "checkpoint": "outputs/pure_dl_independent_v8_POR_dual80_fold5/model_best.pt"
+          },
+          {
+            "target": "PERM",
+            "key": "PERM_dual",
+            "architecture": "dual",
+            "target_score": 89.3475027344081,
+            "best_epoch": 0,
+            "checkpoint": "outputs/pure_dl_independent_v8_PERM_dual80_fold5/model_best.pt"
+          },
+          {
+            "target": "SW",
+            "key": "SW_dual",
+            "architecture": "dual",
+            "target_score": 73.62238476712884,
+            "best_epoch": 0,
+            "checkpoint": "outputs/pure_dl_independent_v8_SW_dual80_fold5/model_best.pt"
+          }
+        ],
+        "three_private_models_retained": true,
+        "reference_assembly_report": "outputs/pure_dl_independent_v8_selected_fold5/fold_5_report.json",
+        "new_three_model_gpu_replay_this_turn": false,
+        "remaining_folds_started": false,
+        "note": "No new model is substituted unless independently reloaded and actually assembled. Old validation evidence is referenced, not claimed to be repeated."
+      }
+    }
+  ],
+  "cleanup_completed": true,
+  "deleted_files": 3,
+  "deleted_bytes": 28786
+}

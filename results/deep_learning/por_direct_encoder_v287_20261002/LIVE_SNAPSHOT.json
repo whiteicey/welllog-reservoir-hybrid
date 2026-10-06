@@ -1,0 +1,13 @@
+{
+  "process_live": true,
+  "state": {
+    "status": "running",
+    "pid": 90284,
+    "stage": "raw",
+    "epoch": 8,
+    "best": 77.95085361757371,
+    "best_epoch": 7,
+    "bad": 1,
+    "peak_MiB": 981.986328125
+  }
+}

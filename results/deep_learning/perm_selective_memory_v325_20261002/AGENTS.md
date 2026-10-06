@@ -1,0 +1,1 @@
+Maintain PROJECTS/README actual evidence. Original154 only/fresh291+312rational+selective memory alljoint withreadout inoneaddedPERMphase; no repaircheckpoint chaining. Originalinput/Q/split/score/80-14/max2GPU, no automaticqueue/otherfolds. Preserve active/key/delivered artifacts.

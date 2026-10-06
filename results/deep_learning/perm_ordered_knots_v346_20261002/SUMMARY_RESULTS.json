@@ -1,0 +1,518 @@
+{
+  "project": "perm_ordered_knots_v346_20261002",
+  "scope": "obsolete-study",
+  "weights_retained": false,
+  "cleanup": "Obsolete artifacts removed by explicit user request. These are historical scores, not newly verified training.",
+  "results": [
+    {
+      "source": "PAIRED_FINAL.json",
+      "result": {
+        "arms": {
+          "learned": {
+            "report": {
+              "stage": "learned",
+              "target": "PERM",
+              "target_score": 89.50638755301595,
+              "initial_score": 89.4055666268939,
+              "against_initial": 0.10082092612205429,
+              "against_v97_target": 0.10966350365013966,
+              "best_epoch": 5,
+              "stopped_epoch": 19,
+              "validation_rows": 144665,
+              "predictions_reproduced_exactly": true,
+              "frozen_parameters_exact": true,
+              "seconds": 153.53546270000516,
+              "peak_MiB": 914.30908203125,
+              "complete_five_folds": false,
+              "early_terminated": false
+            },
+            "strata": {
+              "default": 97.47816891474996,
+              "continuous": 74.00593593634079
+            },
+            "whole_vs336": -0.012001845774705089,
+            "CONT_vs336": -0.0037011468562724303,
+            "CONT_vs154": -0.09097600747575996,
+            "predefined19": {
+              "through_epoch": 19,
+              "best_epoch": 5,
+              "target_score": 89.50638755301595,
+              "control_actual_epochs": 19,
+              "nominal_budget": 80,
+              "comparison": "Predefined bestthrough19 vs historical336cross natural19; added numeric capacity not matched; laterbest not equalwork",
+              "strata": {
+                "default": 97.47816891474996,
+                "continuous": 74.00593593634079
+              }
+            },
+            "full_best_after19_not_equalwork": false,
+            "numeric_diagnostics": {
+              "width_logit_norm": 0.7600829005241394,
+              "width_min_fraction": 0.10709833353757858,
+              "width_max_fraction": 0.14244648814201355,
+              "ordered_knots": [
+                [
+                  -1.2548828125,
+                  -0.9998029470443726,
+                  -0.7457253932952881,
+                  -0.48779499530792236,
+                  -0.1757371425628662,
+                  0.1448301076889038,
+                  0.4659590721130371,
+                  0.7871584892272949,
+                  1.108398675918579
+                ],
+                [
+                  -1.4287109375,
+                  -1.1394481658935547,
+                  -0.8517782688140869,
+                  -0.5666059255599976,
+                  -0.2746206521987915,
+                  0.05339324474334717,
+                  0.39225244522094727,
+                  0.7321012020111084,
+                  1.072265625
+                ],
+                [
+                  -1.89599609375,
+                  -1.5073591470718384,
+                  -1.1180646419525146,
+                  -0.7290586233139038,
+                  -0.33405089378356934,
+                  0.12811851501464844,
+                  0.5947568416595459,
+                  1.0619561672210693,
+                  1.529296875
+                ],
+                [
+                  -0.9794921875,
+                  -0.5289535522460938,
+                  -0.07519453763961792,
+                  0.4243600368499756,
+                  0.960313081741333,
+                  1.501786708831787,
+                  2.0454764366149902,
+                  2.5899617671966553,
+                  3.134765625
+                ],
+                [
+                  -1.0341796875,
+                  -0.6635314226150513,
+                  -0.2924172878265381,
+                  0.07393503189086914,
+                  0.46344614028930664,
+                  0.8843357563018799,
+                  1.3118970394134521,
+                  1.740692138671875,
+                  2.169921875
+                ],
+                [
+                  -2.357421875,
+                  -1.983548641204834,
+                  -1.6101354360580444,
+                  -1.2414162158966064,
+                  -0.886355996131897,
+                  -0.5435618162155151,
+                  -0.19331073760986328,
+                  0.18927764892578125,
+                  0.6123046875
+                ],
+                [
+                  -0.91357421875,
+                  -0.5804084539413452,
+                  -0.24407386779785156,
+                  0.14458715915679932,
+                  0.5522105693817139,
+                  0.9626777172088623,
+                  1.373826503753662,
+                  1.7854492664337158,
+                  2.197265625
+                ],
+                [
+                  -0.8466796875,
+                  -0.3714461028575897,
+                  0.10347700119018555,
+                  0.6049395799636841,
+                  1.1774134635925293,
+                  1.755211353302002,
+                  2.3353264331817627,
+                  2.9159765243530273,
+                  3.49609375
+                ],
+                [
+                  -0.86572265625,
+                  -0.32406944036483765,
+                  0.22411584854125977,
+                  0.8373539447784424,
+                  1.4968414306640625,
+                  2.162902355194092,
+                  2.830859661102295,
+                  3.4981632232666016,
+                  4.1640625
+                ]
+              ],
+              "all_widths_positive": true,
+              "projection_norm": 2.225332021713257,
+              "active_numeric_dimensions": 72,
+              "actual_trainable_parameters": 40914,
+              "numeric_fit_info": [
+                {
+                  "curve": "GR",
+                  "low": -1.2548828125,
+                  "high": 1.1083984375,
+                  "full_span": 10.1328125,
+                  "tolerance": 1.01328125e-05,
+                  "fullrange_fallback": false,
+                  "active": true
+                },
+                {
+                  "curve": "PE",
+                  "low": -1.4287109375,
+                  "high": 1.072265625,
+                  "full_span": 10.0,
+                  "tolerance": 9.999999999999999e-06,
+                  "fullrange_fallback": false,
+                  "active": true
+                },
+                {
+                  "curve": "SP",
+                  "low": -1.89599609375,
+                  "high": 1.529296875,
+                  "full_span": 11.109375,
+                  "tolerance": 1.1109374999999999e-05,
+                  "fullrange_fallback": false,
+                  "active": true
+                },
+                {
+                  "curve": "CAL",
+                  "low": -0.9794921875,
+                  "high": 3.134765625,
+                  "full_span": 10.96875,
+                  "tolerance": 1.0968749999999999e-05,
+                  "fullrange_fallback": false,
+                  "active": true
+                },
+                {
+                  "curve": "AC",
+                  "low": -1.0341796875,
+                  "high": 2.169921875,
+                  "full_span": 10.75,
+                  "tolerance": 1.0749999999999999e-05,
+                  "fullrange_fallback": false,
+                  "active": true
+                },
+                {
+                  "curve": "DEN",
+                  "low": -2.357421875,
+                  "high": 0.6123046875,
+                  "full_span": 9.6015625,
+                  "tolerance": 9.601562499999999e-06,
+                  "fullrange_fallback": false,
+                  "active": true
+                },
+                {
+                  "curve": "CNL",
+                  "low": -0.91357421875,
+                  "high": 2.197265625,
+                  "full_span": 10.328125,
+                  "tolerance": 1.0328125e-05,
+                  "fullrange_fallback": false,
+                  "active": true
+                },
+                {
+                  "curve": "RXO",
+                  "low": -0.8466796875,
+                  "high": 3.49609375,
+                  "full_span": 9.3203125,
+                  "tolerance": 9.3203125e-06,
+                  "fullrange_fallback": false,
+                  "active": true
+                },
+                {
+                  "curve": "RT",
+                  "low": -0.86572265625,
+                  "high": 4.1640625,
+                  "full_span": 9.2734375,
+                  "tolerance": 9.2734375e-06,
+                  "fullrange_fallback": false,
+                  "active": true
+                }
+              ]
+            },
+            "timing": {
+              "includes": "train-only numeric fit preprocessing warmup training best restoration",
+              "concurrency": "solo after345pairterminal",
+              "pid": 50464,
+              "started_epoch": 1790905618.565,
+              "global_GPU_jobs_before": 0,
+              "terminal": true,
+              "individual_seconds": 153.53546270000516,
+              "peak_MiB": 914.30908203125,
+              "process_creation_to_terminal_seconds": 158.5882110595703
+            }
+          },
+          "fixed": {
+            "report": {
+              "stage": "fixed",
+              "target": "PERM",
+              "target_score": 89.50639376263283,
+              "initial_score": 89.4055666268939,
+              "against_initial": 0.10082713573892477,
+              "against_v97_target": 0.10966971326701014,
+              "best_epoch": 5,
+              "stopped_epoch": 19,
+              "validation_rows": 144665,
+              "predictions_reproduced_exactly": true,
+              "frozen_parameters_exact": true,
+              "seconds": 151.7293852000148,
+              "peak_MiB": 903.087890625,
+              "complete_five_folds": false,
+              "early_terminated": false
+            },
+            "strata": {
+              "default": 97.47789517349177,
+              "continuous": 74.00648648665073
+            },
+            "whole_vs336": -0.01199563615783461,
+            "CONT_vs336": -0.0031505965463338725,
+            "CONT_vs154": -0.0904254571658214,
+            "predefined19": {
+              "through_epoch": 19,
+              "best_epoch": 5,
+              "target_score": 89.50639376263283,
+              "control_actual_epochs": 19,
+              "nominal_budget": 80,
+              "comparison": "Predefined bestthrough19 vs historical336cross natural19; added numeric capacity not matched; laterbest not equalwork",
+              "strata": {
+                "default": 97.47789517349177,
+                "continuous": 74.00648648665073
+              }
+            },
+            "full_best_after19_not_equalwork": false,
+            "numeric_diagnostics": {
+              "width_logit_norm": 0.0,
+              "width_min_fraction": 0.125,
+              "width_max_fraction": 0.125,
+              "ordered_knots": [
+                [
+                  -1.2548828125,
+                  -0.95947265625,
+                  -0.6640625,
+                  -0.36865234375,
+                  -0.0732421875,
+                  0.22216796875,
+                  0.517578125,
+                  0.81298828125,
+                  1.1083984375
+                ],
+                [
+                  -1.4287109375,
+                  -1.1160888671875,
+                  -0.803466796875,
+                  -0.4908447265625,
+                  -0.17822265625,
+                  0.1343994140625,
+                  0.447021484375,
+                  0.7596435546875,
+                  1.072265625
+                ],
+                [
+                  -1.89599609375,
+                  -1.46783447265625,
+                  -1.0396728515625,
+                  -0.61151123046875,
+                  -0.183349609375,
+                  0.24481201171875,
+                  0.6729736328125,
+                  1.10113525390625,
+                  1.529296875
+                ],
+                [
+                  -0.9794921875,
+                  -0.4652099609375,
+                  0.049072265625,
+                  0.5633544921875,
+                  1.07763671875,
+                  1.5919189453125,
+                  2.106201171875,
+                  2.6204833984375,
+                  3.134765625
+                ],
+                [
+                  -1.0341796875,
+                  -0.6336669921875,
+                  -0.233154296875,
+                  0.1673583984375,
+                  0.56787109375,
+                  0.9683837890625,
+                  1.368896484375,
+                  1.7694091796875,
+                  2.169921875
+                ],
+                [
+                  -2.357421875,
+                  -1.9862060546875,
+                  -1.614990234375,
+                  -1.2437744140625,
+                  -0.87255859375,
+                  -0.5013427734375,
+                  -0.130126953125,
+                  0.2410888671875,
+                  0.6123046875
+                ],
+                [
+                  -0.91357421875,
+                  -0.52471923828125,
+                  -0.1358642578125,
+                  0.25299072265625,
+                  0.641845703125,
+                  1.03070068359375,
+                  1.4195556640625,
+                  1.80841064453125,
+                  2.197265625
+                ],
+                [
+                  -0.8466796875,
+                  -0.3038330078125,
+                  0.239013671875,
+                  0.7818603515625,
+                  1.32470703125,
+                  1.8675537109375,
+                  2.410400390625,
+                  2.9532470703125,
+                  3.49609375
+                ],
+                [
+                  -0.86572265625,
+                  -0.23699951171875,
+                  0.3917236328125,
+                  1.02044677734375,
+                  1.649169921875,
+                  2.27789306640625,
+                  2.9066162109375,
+                  3.53533935546875,
+                  4.1640625
+                ]
+              ],
+              "all_widths_positive": true,
+              "projection_norm": 2.218276262283325,
+              "active_numeric_dimensions": 72,
+              "actual_trainable_parameters": 40842,
+              "numeric_fit_info": [
+                {
+                  "curve": "GR",
+                  "low": -1.2548828125,
+                  "high": 1.1083984375,
+                  "full_span": 10.1328125,
+                  "tolerance": 1.01328125e-05,
+                  "fullrange_fallback": false,
+                  "active": true
+                },
+                {
+                  "curve": "PE",
+                  "low": -1.4287109375,
+                  "high": 1.072265625,
+                  "full_span": 10.0,
+                  "tolerance": 9.999999999999999e-06,
+                  "fullrange_fallback": false,
+                  "active": true
+                },
+                {
+                  "curve": "SP",
+                  "low": -1.89599609375,
+                  "high": 1.529296875,
+                  "full_span": 11.109375,
+                  "tolerance": 1.1109374999999999e-05,
+                  "fullrange_fallback": false,
+                  "active": true
+                },
+                {
+                  "curve": "CAL",
+                  "low": -0.9794921875,
+                  "high": 3.134765625,
+                  "full_span": 10.96875,
+                  "tolerance": 1.0968749999999999e-05,
+                  "fullrange_fallback": false,
+                  "active": true
+                },
+                {
+                  "curve": "AC",
+                  "low": -1.0341796875,
+                  "high": 2.169921875,
+                  "full_span": 10.75,
+                  "tolerance": 1.0749999999999999e-05,
+                  "fullrange_fallback": false,
+                  "active": true
+                },
+                {
+                  "curve": "DEN",
+                  "low": -2.357421875,
+                  "high": 0.6123046875,
+                  "full_span": 9.6015625,
+                  "tolerance": 9.601562499999999e-06,
+                  "fullrange_fallback": false,
+                  "active": true
+                },
+                {
+                  "curve": "CNL",
+                  "low": -0.91357421875,
+                  "high": 2.197265625,
+                  "full_span": 10.328125,
+                  "tolerance": 1.0328125e-05,
+                  "fullrange_fallback": false,
+                  "active": true
+                },
+                {
+                  "curve": "RXO",
+                  "low": -0.8466796875,
+                  "high": 3.49609375,
+                  "full_span": 9.3203125,
+                  "tolerance": 9.3203125e-06,
+                  "fullrange_fallback": false,
+                  "active": true
+                },
+                {
+                  "curve": "RT",
+                  "low": -0.86572265625,
+                  "high": 4.1640625,
+                  "full_span": 9.2734375,
+                  "tolerance": 9.2734375e-06,
+                  "fullrange_fallback": false,
+                  "active": true
+                }
+              ],
+              "fixed_initial_logits_remain_zero": true
+            },
+            "timing": {
+              "includes": "train-only numeric fit preprocessing warmup training best restoration",
+              "concurrency": "solo after346learnedterminal",
+              "pid": 56572,
+              "started_epoch": 1790905860.369,
+              "global_GPU_jobs_before": 0,
+              "terminal": true,
+              "individual_seconds": 151.7293852000148,
+              "peak_MiB": 903.087890625,
+              "process_creation_to_terminal_seconds": 156.82608604431152
+            }
+          }
+        },
+        "learned_minus_fixed_whole": -6.209616870478385e-06,
+        "learned_minus_fixed_CONT": -0.0005505503099385578,
+        "comparison_limits": "Same uniform initialknots/projection/baseparameter init, learned addsS<=72 trainable logitparameters, not matched trainablecapacity. Historical336 lacksbasis andcapacitydiffers. Single seed notrobustness.",
+        "adopted": false,
+        "screening_fold": 5,
+        "complete_five_folds": false,
+        "remaining_folds_started": false,
+        "independent_disk_reload": false,
+        "pair_wall_process_seconds": 398.6300859451294,
+        "launch_stagger_seconds": 241.80399990081787,
+        "pair_timing_limits": "Process start through last report includes explicit serial launch gaps; individual includes prep/warmup/restoration, not isolated architecture speed ranking",
+        "local_knots_gain_verified": false,
+        "closed_setting": "uniform8 orderedknots beforestemGELU: bothbelow336 whole+CONT andlearnedbelowfixed, no K-family-LRgrid"
+      }
+    }
+  ],
+  "cleanup_completed": true,
+  "deleted_files": 16,
+  "deleted_bytes": 7003358
+}

@@ -1,0 +1,88 @@
+{
+  "local": {
+    "live": false,
+    "state": {
+      "status": "complete",
+      "pid": 74048,
+      "stage": "local",
+      "target": "SW",
+      "target_score": 74.12175282815758,
+      "initial_score": 71.19711508147167,
+      "against_initial": 2.9246377466859173,
+      "against_v97_target": -0.020427076509122344,
+      "best_epoch": 37,
+      "stopped_epoch": 55,
+      "validation_rows": 144665,
+      "predictions_reproduced_exactly": true,
+      "frozen_parameters_exact": true,
+      "gradient_groups": {
+        "private_SW": 0.978633463382721
+      },
+      "seconds": 785.6777900999878,
+      "peak_MiB": 1722.197265625,
+      "complete_five_folds": false
+    },
+    "report": {
+      "stage": "local",
+      "target": "SW",
+      "target_score": 74.12175282815758,
+      "initial_score": 71.19711508147167,
+      "against_initial": 2.9246377466859173,
+      "against_v97_target": -0.020427076509122344,
+      "best_epoch": 37,
+      "stopped_epoch": 55,
+      "validation_rows": 144665,
+      "predictions_reproduced_exactly": true,
+      "frozen_parameters_exact": true,
+      "gradient_groups": {
+        "private_SW": 0.978633463382721
+      },
+      "seconds": 785.6777900999878,
+      "peak_MiB": 1722.197265625,
+      "complete_five_folds": false
+    }
+  },
+  "spectral": {
+    "live": false,
+    "state": {
+      "status": "complete",
+      "pid": 63332,
+      "stage": "spectral",
+      "target": "SW",
+      "target_score": 73.97448063513094,
+      "initial_score": 71.19711508147167,
+      "against_initial": 2.77736555365928,
+      "against_v97_target": -0.16769926953575975,
+      "best_epoch": 38,
+      "stopped_epoch": 56,
+      "validation_rows": 144665,
+      "predictions_reproduced_exactly": true,
+      "frozen_parameters_exact": true,
+      "gradient_groups": {
+        "private_SW": 0.9789863228797913
+      },
+      "seconds": 805.619317100005,
+      "peak_MiB": 1805.7216796875,
+      "complete_five_folds": false
+    },
+    "report": {
+      "stage": "spectral",
+      "target": "SW",
+      "target_score": 73.97448063513094,
+      "initial_score": 71.19711508147167,
+      "against_initial": 2.77736555365928,
+      "against_v97_target": -0.16769926953575975,
+      "best_epoch": 38,
+      "stopped_epoch": 56,
+      "validation_rows": 144665,
+      "predictions_reproduced_exactly": true,
+      "frozen_parameters_exact": true,
+      "gradient_groups": {
+        "private_SW": 0.9789863228797913
+      },
+      "seconds": 805.619317100005,
+      "peak_MiB": 1805.7216796875,
+      "complete_five_folds": false
+    }
+  }
+}

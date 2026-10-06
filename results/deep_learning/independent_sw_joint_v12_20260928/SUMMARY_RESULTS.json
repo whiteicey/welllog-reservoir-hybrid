@@ -1,0 +1,10 @@
+{
+  "project": "independent_sw_joint_v12_20260928",
+  "scope": "obsolete-study",
+  "weights_retained": false,
+  "cleanup": "Obsolete artifacts removed by explicit user request. These are historical scores, not newly verified training.",
+  "results": [],
+  "cleanup_completed": true,
+  "deleted_files": 2,
+  "deleted_bytes": 4557
+}

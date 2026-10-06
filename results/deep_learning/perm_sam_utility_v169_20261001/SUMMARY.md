@@ -1,0 +1,34 @@
+# Historical summary
+
+Focus and explored conditions: see retained README/FINAL and SUMMARY_RESULTS.json.
+
+Gain: scores and original comparison deltas are retained; incomplete folds remain incomplete.
+
+Not worth extending: original negative conclusions are retained below where available.
+
+Detailed logs, weights and caches were removed by the user request; rerunning requires retraining.
+
+## README.md
+
+# v169 PERM有限探索
+
+## 探索重点
+SAM/RPS加PERM log10误差三角效用，系数0.1。
+假设：改善PERM连续低估/分布质量；固定来源初始化、分折、种子、Q50、评分解码；对照v165 SAM PERM89.35224836888084，绝对对照v15489.40556485691894。
+
+## 已探索与验证
+已实现，尚未训练；没有成绩。只替换PERM阶段，固定POR151/SW104。最大80/patience14/min10，bs64/64步，cos80*64。各自优化器和最佳官方PERM恢复；完成后实际组合144665点。
+
+## 收益
+尚未证实；SAM新增效用只有训练侧标签，效用代理不等于解码argmax。新TCN与旧读出容量及输入不同，不能把分差归因于单一因子。
+
+## 不继续的点
+若无收益不扫描本轮效用系数/TCN宽度或膨胀率。无第六阶段、其他折或交付覆盖。
+
+耗时：待实测；并发最多2，记录单项与同等工作总墙钟、显存、数据及预热边界。
+
+入口失败：默认GBK读取UTF8 PLAN时报UnicodeDecodeError；未训练、无成绩、不是机制负结果。原源码/日志/配置保持；新v171显式UTF8读取，不续跑失败输出。
+
+
+
+

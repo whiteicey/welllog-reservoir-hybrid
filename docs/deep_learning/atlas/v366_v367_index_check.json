@@ -1,0 +1,29 @@
+{
+  "nodes": 2,
+  "edges": 3,
+  "finite": true,
+  "backwards": 0,
+  "geometry": [
+    {
+      "id": "stage_gain_analysis_v366_20261002",
+      "x": 230,
+      "y": 70,
+      "w": 260,
+      "h": 110,
+      "rank": 0,
+      "theme": "backbone"
+    },
+    {
+      "id": "continuous_aux_readout_idea_v367_20261002",
+      "x": 580,
+      "y": 70,
+      "w": 260,
+      "h": 110,
+      "rank": 1,
+      "theme": "backbone"
+    }
+  ],
+  "scope": "V366 to held V367 hypothesis relations only; legacy atlas not reaudited",
+  "offline": true,
+  "pageerrors": []
+}

@@ -1,0 +1,105 @@
+{
+  "screening_fold": 5,
+  "complete_five_folds": false,
+  "rows": 144665,
+  "same_capacity_and_initialization": true,
+  "evidence": {
+    "likelihood": {
+      "PERM": 89.38793609578403,
+      "best_epoch": 38,
+      "source": "outputs\\pure_dl_perm_joint_density_v136_fold5\\perm_conditional\\channel_pred.npy"
+    },
+    "joint_rps": {
+      "PERM": 89.40556485691894,
+      "best_epoch": 31,
+      "source": "outputs\\pure_dl_perm_ranked_probability_v154_fold5\\perm_conditional\\channel_pred.npy"
+    }
+  },
+  "delta": 0.01762876113463549,
+  "default_delta": -0.001962329657240846,
+  "nondefault_delta": 0.05572197282193343,
+  "positive_wells": 7,
+  "per_well": [
+    {
+      "well": 7,
+      "rows": 10219,
+      "delta": -0.0696431476963393
+    },
+    {
+      "well": 8,
+      "rows": 9011,
+      "delta": 0.08276025912374131
+    },
+    {
+      "well": 14,
+      "rows": 12078,
+      "delta": 0.20704492756249426
+    },
+    {
+      "well": 16,
+      "rows": 8149,
+      "delta": -0.0052156167943507355
+    },
+    {
+      "well": 25,
+      "rows": 7739,
+      "delta": -0.02896676934975243
+    },
+    {
+      "well": 34,
+      "rows": 10913,
+      "delta": -0.09634065266056609
+    },
+    {
+      "well": 35,
+      "rows": 8348,
+      "delta": -0.11462150473744998
+    },
+    {
+      "well": 37,
+      "rows": 9939,
+      "delta": -0.06313100339705009
+    },
+    {
+      "well": 50,
+      "rows": 11874,
+      "delta": -0.23080125417909947
+    },
+    {
+      "well": 54,
+      "rows": 9630,
+      "delta": 0.2988727491858204
+    },
+    {
+      "well": 63,
+      "rows": 5639,
+      "delta": -0.00685232983174964
+    },
+    {
+      "well": 69,
+      "rows": 9120,
+      "delta": -0.06665648731963154
+    },
+    {
+      "well": 71,
+      "rows": 4709,
+      "delta": 0.0113721318245964
+    },
+    {
+      "well": 72,
+      "rows": 9559,
+      "delta": 0.17560461264956156
+    },
+    {
+      "well": 76,
+      "rows": 7109,
+      "delta": 0.007641201619644979
+    },
+    {
+      "well": 79,
+      "rows": 10629,
+      "delta": 0.1543256494669751
+    }
+  ],
+  "scope": "Descriptive frozen paired predictions only; no fit, label-derived inputs, thresholds or row/well selection"
+}

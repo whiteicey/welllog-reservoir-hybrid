@@ -1,0 +1,44 @@
+{
+  "scores": {
+    "POR": 77.92638076072386,
+    "PERM": 89.40556485691894,
+    "SW": 74.1332301875417,
+    "TOTAL": 80.61649249377838
+  },
+  "screening_fold": 5,
+  "validation_rows": 144665,
+  "complete_five_folds": false,
+  "remaining_folds_started": false,
+  "total_training_stages": 6,
+  "added_head_stages": {
+    "POR": 0,
+    "PERM": 0,
+    "SW": 1
+  },
+  "source_stage_counted": true,
+  "gain_vs104_SW": 0.011477359384116426,
+  "gain_vs211_SW": -0.01439243508536947,
+  "learned_gain_vs_initial": 0.011528606867145186,
+  "checkpoint_sha256": "f7e83a0009bba24a01a486b9027498771c230509d9d0d6ed5d9d0c1af07a20ab",
+  "report": {
+    "stage": "control",
+    "target": "SW",
+    "target_score": 74.1332301875417,
+    "initial_score": 74.12170158067455,
+    "against_initial": 0.011528606867145186,
+    "against_v97_target": -0.008949717125005918,
+    "best_epoch": 5,
+    "stopped_epoch": 19,
+    "validation_rows": 144665,
+    "predictions_reproduced_exactly": true,
+    "frozen_parameters_exact": true,
+    "gradient_groups": {
+      "SW_mass": 0.005438841413706541,
+      "SW_default_state": 0.00816567987203598
+    },
+    "seconds": 449.07091000000946,
+    "peak_MiB": 1119.82763671875,
+    "complete_five_folds": false,
+    "early_terminated": false
+  }
+}

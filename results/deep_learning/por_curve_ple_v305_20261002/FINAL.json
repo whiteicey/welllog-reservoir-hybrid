@@ -1,0 +1,65 @@
+{
+  "report": {
+    "stage": "ple",
+    "target": "POR",
+    "target_score": 78.0216515683269,
+    "initial_score": 77.92638076072386,
+    "against_initial": 0.0952708076030433,
+    "against_v97_target": 0.46971476644189636,
+    "best_epoch": 6,
+    "stopped_epoch": 20,
+    "validation_rows": 144665,
+    "predictions_reproduced_exactly": true,
+    "frozen_parameters_exact": true,
+    "gradient_groups": {
+      "POR_new_raw_feature_backbone": 0.06636380404233932,
+      "POR_direct_categorical_readout": 0.04900120198726654,
+      "POR_curve_interaction_backbone": 0.045792438089847565
+    },
+    "seconds": 232.1261794999591,
+    "peak_MiB": 1817.208984375,
+    "complete_five_folds": false,
+    "early_terminated": false
+  },
+  "strata": {
+    "POR290": {
+      "POR": 78.0235265552551,
+      "default_POR": 97.43421261803576,
+      "continuous_POR": 41.617107997057474
+    },
+    "POR302": {
+      "POR": 78.03055279414464,
+      "default_POR": 97.41407632714055,
+      "continuous_POR": 41.6750799070714
+    },
+    "POR305": {
+      "POR": 78.0216515683269,
+      "default_POR": 97.43421261803576,
+      "continuous_POR": 41.61171631016949
+    }
+  },
+  "gain_vs302": -0.008901225817737668,
+  "gain_vs290": -0.0018749869282004283,
+  "adopted": false,
+  "capacity_difference224": true,
+  "single_seed": true,
+  "complete_five_folds": false,
+  "remaining_folds_started": false,
+  "timing": {
+    "terminal": true,
+    "maximum_concurrency": 2,
+    "includes": "data train-only-quantiles initial training best restore",
+    "starts": [
+      {
+        "start_epoch": 1790878738.419,
+        "pid": 60056,
+        "stage": "ple"
+      }
+    ],
+    "excludes": "code preparation CPU record",
+    "individual_seconds": 232.1261794999591,
+    "observed_launch_to_report_seconds": 237.9839231967926,
+    "peak_MiB": 1817.208984375,
+    "concurrency": "Brief initial overlap with304 finalepoch, then singleGPU. Not historical302 speedranking."
+  }
+}

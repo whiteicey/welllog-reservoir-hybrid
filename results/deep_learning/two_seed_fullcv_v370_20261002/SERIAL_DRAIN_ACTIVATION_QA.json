@@ -1,0 +1,87 @@
+{
+  "observed_epoch": 1790936151.6188095,
+  "controller_pid": 68704,
+  "maximum_future_GPU_jobs": 1,
+  "existing_overlapping_jobs_allowed_to_finish": true,
+  "no_new_overlap_gate_verified": true,
+  "GPU_workers_stopped": 0,
+  "frozen_code_hash_checks": {
+    "experiments/pure_dl/fullcv_pair_context_v370.py": true,
+    "experiments/pure_dl/pair_fullcv_models_v370.py": true,
+    "experiments/pure_dl/train_pair_fullcv_source_v370.py": true,
+    "experiments/pure_dl/train_pair_fullcv_stage_v370.py": true,
+    "experiments/pure_dl/evaluate_pair_fullcv_v370.py": true,
+    "experiments/pure_dl/record_pair_fullcv_v370.py": true,
+    "experiments/pure_dl/run_pair_fullcv_v370.py": true
+  },
+  "active_jobs": [
+    {
+      "identity": "seed_20261013",
+      "fold": 2,
+      "stage": "SOURCE",
+      "pid": 75188,
+      "create_time": 1790934993.989125,
+      "preserved_exactly": true,
+      "runtime": {
+        "epoch": 32,
+        "first_lr": 0.00040710453183785906,
+        "last_lr": 0.0003963321466551919,
+        "next_lr": 0.00039616001334060797,
+        "expert_train_loss": 0.02600290558348206,
+        "router_train_loss": -0.0014896780339768156,
+        "router_next_lr": 0.00039616001334060797,
+        "official_total": 81.14777876682257,
+        "official_scores": {
+          "POR": 78.18868404931013,
+          "PERM": 90.23260302672523,
+          "SW": 74.59932140764488,
+          "TOTAL": 81.14777876682257
+        },
+        "best_epoch": 29,
+        "best_score": 81.18616992942071,
+        "bad_epochs": 3,
+        "effective_patience": 14,
+        "SOTA_broken": true
+      },
+      "score_scope": "training snapshot, not terminal model or OOF"
+    },
+    {
+      "identity": "original",
+      "fold": 2,
+      "stage": "POR341",
+      "pid": 56476,
+      "create_time": 1790935913.3471491,
+      "preserved_exactly": true,
+      "runtime": {
+        "status": "running",
+        "pid": 56476,
+        "stage": "POR341",
+        "epoch": 11,
+        "best": 79.2222399867954,
+        "best_epoch": 6,
+        "bad": 5,
+        "effective_patience": 14,
+        "SOTA_broken": true,
+        "peak_MiB": 2212.4833984375
+      },
+      "score_scope": "training snapshot, not terminal model or OOF"
+    }
+  ],
+  "fold2_original_completed_prefix": {
+    "stages": [
+      "SOURCE",
+      "POR113",
+      "POR151",
+      "PERM154",
+      "SW104"
+    ],
+    "scores": {
+      "POR": 79.18536012198616,
+      "PERM": 90.41513889231291,
+      "SW": 74.82606500865796,
+      "TOTAL": 81.59002940193565
+    },
+    "scope": "actually assembled completed-stage prefix; not complete8stage model or fullOOF"
+  },
+  "complete_five_fold_OOF": false
+}

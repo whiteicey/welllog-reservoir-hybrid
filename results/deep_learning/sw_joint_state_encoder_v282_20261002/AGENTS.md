@@ -1,0 +1,1 @@
+Originalfold5/9curves/Q/scoring/80-14/min10/b64/64steps normalGPU max2. Newrawencoder+state+densityreadoutsjoint; prior104 only/no275/269repairweights. OneaddedSWphase, nootherfolds beforestrict808+gain. MaintainPROJECTS/README/EXPLORATIONS/atlas.

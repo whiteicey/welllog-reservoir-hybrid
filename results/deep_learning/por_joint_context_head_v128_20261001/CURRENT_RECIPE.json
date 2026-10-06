@@ -1,0 +1,34 @@
+{
+  "scores": {
+    "POR": 77.56050447331172,
+    "PERM": 89.37839421114361,
+    "SW": 74.12175282815758,
+    "TOTAL": 80.49320280574894
+  },
+  "total_training_stages": 5,
+  "source_stage_counted": true,
+  "dependencies": [
+    "original source",
+    "v113 forward",
+    "v128 joint-context head",
+    "v100 PERM",
+    "v104 SW"
+  ],
+  "POR": {
+    "checkpoint": "outputs\\pure_dl_por_joint_context_head_v128_fold5\\local_joint\\model_best.pt",
+    "sha256": "591903c7e32a3ca58a11031c85d6ebeaf7199dcbe8afdb4d9091b8af04223179",
+    "module": "por_joint_context_head_v128",
+    "stage": "local_joint"
+  },
+  "PERM": {
+    "checkpoint": "outputs/pure_dl_compact_v100_fold5/perm/model_best.pt"
+  },
+  "SW": {
+    "checkpoint": "outputs/pure_dl_compact_frequency_v104_fold5/local/model_best.pt"
+  },
+  "screening_fold": 5,
+  "complete_five_folds": false,
+  "strict_808_passed": false,
+  "strict_channel_gain_025": false,
+  "previous_recipe_path": "results/deep_learning/compact_por_family_gate_v125_20261001/CURRENT_RECIPE.json"
+}

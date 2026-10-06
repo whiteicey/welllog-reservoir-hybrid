@@ -1,0 +1,12 @@
+{
+  "identity": "original",
+  "fold": 2,
+  "stage": "SCAN_POR",
+  "pid": 23092,
+  "terminal": true,
+  "exit_code": 0,
+  "process_wall_seconds": 22.365957975387573,
+  "concurrency": "solo after user requested serial",
+  "includes": "load/preprocess/warmup/training or scan/restore/write",
+  "attached_without_training_restart": false
+}

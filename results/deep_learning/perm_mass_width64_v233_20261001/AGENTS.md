@@ -1,0 +1,1 @@
+Only new64width conditional mass head trainable;154/SOURCE frozen. No230 weights loaded,onePERMextra phase/six total. Originalfold5/Q50/score/80-14/max2GPU,no stacking/otherfolds. MaintainPROJECTS/evidence.

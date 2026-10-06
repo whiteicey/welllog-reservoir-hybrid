@@ -1,0 +1,126 @@
+{
+  "project": "sw_sparse_reacquisition_v294_20261002",
+  "scope": "obsolete-study",
+  "weights_retained": false,
+  "cleanup": "Obsolete artifacts removed by explicit user request. These are historical scores, not newly verified training.",
+  "results": [
+    {
+      "source": "PAIRED_FINAL.json",
+      "result": {
+        "reports": {
+          "point": {
+            "stage": "point",
+            "target": "SW",
+            "target_score": 74.15181714457486,
+            "initial_score": 74.12175268976877,
+            "against_initial": 0.03006445480609443,
+            "against_v97_target": 0.00963723990815879,
+            "best_epoch": 6,
+            "stopped_epoch": 20,
+            "validation_rows": 144665,
+            "predictions_reproduced_exactly": true,
+            "frozen_parameters_exact": true,
+            "seconds": 256.6073596000206,
+            "peak_MiB": 1147.96630859375,
+            "complete_five_folds": false,
+            "early_terminated": false
+          },
+          "window": {
+            "stage": "window",
+            "target": "SW",
+            "target_score": 74.14546381349975,
+            "initial_score": 74.12175268976877,
+            "against_initial": 0.02371112373097617,
+            "against_v97_target": 0.0032839088330405275,
+            "best_epoch": 14,
+            "stopped_epoch": 28,
+            "validation_rows": 144665,
+            "predictions_reproduced_exactly": true,
+            "frozen_parameters_exact": true,
+            "seconds": 383.6069831000059,
+            "peak_MiB": 1145.0009765625,
+            "complete_five_folds": false,
+            "early_terminated": false
+          }
+        },
+        "same_initial_prediction": true,
+        "same_capacity": 36515,
+        "paired_delta": 0.0063533310751182626,
+        "adopted": false,
+        "versus_retained289": -0.0019092844244426033,
+        "strata": {
+          "SW252": {
+            "default": 98.64493054166336,
+            "continuous": 17.88486813991017,
+            "overall": 74.14922820781207
+          },
+          "SW289": {
+            "default": 98.72311025198368,
+            "continuous": 17.72012680313723,
+            "overall": 74.1537264289993
+          },
+          "SW294point": {
+            "default": 98.86811932865155,
+            "continuous": 17.380759647269663,
+            "overall": 74.15181714457486
+          },
+          "SW294window": {
+            "default": 98.77535448509161,
+            "continuous": 17.572885559050093,
+            "overall": 74.14546381349975
+          }
+        },
+        "no_continuous_breakthrough": true,
+        "independent_disk_reload": false,
+        "remaining_folds_started": false,
+        "positive_granularity_control_checkpoints_kept": true
+      }
+    },
+    {
+      "source": "point_FINAL.json",
+      "result": {
+        "report": {
+          "stage": "point",
+          "target": "SW",
+          "target_score": 74.15181714457486,
+          "initial_score": 74.12175268976877,
+          "against_initial": 0.03006445480609443,
+          "against_v97_target": 0.00963723990815879,
+          "best_epoch": 6,
+          "stopped_epoch": 20,
+          "validation_rows": 144665,
+          "predictions_reproduced_exactly": true,
+          "frozen_parameters_exact": true,
+          "seconds": 256.6073596000206,
+          "peak_MiB": 1147.96630859375,
+          "complete_five_folds": false,
+          "early_terminated": false
+        },
+        "versus289": -0.0019092844244426033,
+        "strata": {
+          "SW252": {
+            "default": 98.64493054166336,
+            "continuous": 17.88486813991017,
+            "overall": 74.14922820781207
+          },
+          "SW289": {
+            "default": 98.72311025198368,
+            "continuous": 17.72012680313723,
+            "overall": 74.1537264289993
+          },
+          "SW294point": {
+            "default": 98.86811932865155,
+            "continuous": 17.380759647269663,
+            "overall": 74.15181714457486
+          }
+        },
+        "paired_final_pending": true,
+        "independent_disk_reload": false,
+        "remaining_folds_started": false
+      }
+    }
+  ],
+  "cleanup_completed": true,
+  "deleted_files": 12,
+  "deleted_bytes": 6955089
+}

@@ -1,0 +1,22 @@
+{
+  "excludes_code_preparation": true,
+  "arms": {
+    "memory": {
+      "process_creation_utc_seconds": 1790866953.592,
+      "pid": 68720
+    },
+    "mlp": {
+      "process_creation_utc_seconds": 1790866953.568,
+      "pid": 88004
+    }
+  },
+  "pair_wallclock_pending": false,
+  "maximum_GPU_jobs": 2,
+  "concurrent": true,
+  "includes_startup_model_data_initial_eval": true,
+  "pair_wallclock_seconds": 243.54235410690308,
+  "individual_seconds": {
+    "mlp": 227.0183592000394,
+    "memory": 236.02518949995283
+  }
+}

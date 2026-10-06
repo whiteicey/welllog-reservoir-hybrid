@@ -1,0 +1,1 @@
+Jointnew rawencoder/density/state/bankcondition, original104 prior only, oneaddedSWphase/max8. Prioractualbank sameinbotharms; onlynew conditionactualbank vs64trainreference. Original9/206/splits/Q/score/max2GPU/80-14, no labels/IDs inbank or referencefit. MaintainPROJECTS/README/atlas, noautoqueue/otherfolds belowstrict80.8meaningfulgain.

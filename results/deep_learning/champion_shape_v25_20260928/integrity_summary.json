@@ -1,0 +1,9 @@
+{
+  "training_failures": [],
+  "original_parameters_frozen": true,
+  "post_update_disk_replays_exact": true,
+  "other_targets_unchanged": true,
+  "cold_scaling_routes_not_restarted": true,
+  "remaining_folds_started": false,
+  "old_deliveries_changed": false
+}

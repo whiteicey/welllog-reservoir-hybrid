@@ -1,0 +1,1 @@
+Maintain PROJECTS.md and README.md. Original fold5/data/score/Q only; normal GPU max2. One joint extra SW phase; freeze104 and gate. Original positive models/deliveries immutable. Record actual initial/final/matched deltas and timing. No remaining folds below strict80.8.

@@ -1,0 +1,59 @@
+{
+  "project": "sw_encoder_checkpoint_v278_20261001",
+  "scope": "obsolete-study",
+  "weights_retained": false,
+  "cleanup": "Obsolete artifacts removed by explicit user request. These are historical scores, not newly verified training.",
+  "results": [
+    {
+      "source": "PAIRED_FINAL.json",
+      "result": {
+        "late": {
+          "stage": "late",
+          "target": "SW",
+          "target_score": 74.1231236298602,
+          "initial_score": 74.12175268976877,
+          "against_initial": 0.0013709400914336811,
+          "against_v97_target": -0.01905627480650196,
+          "best_epoch": 2,
+          "stopped_epoch": 16,
+          "validation_rows": 144665,
+          "predictions_reproduced_exactly": true,
+          "frozen_parameters_exact": true,
+          "seconds": 262.86917469999753,
+          "peak_MiB": 1343.3193359375,
+          "complete_five_folds": false,
+          "early_terminated": false
+        },
+        "full_checkpointed": {
+          "stage": "full",
+          "target": "SW",
+          "target_score": 74.1233306382582,
+          "initial_score": 74.12175268976877,
+          "against_initial": 0.001577948489426717,
+          "against_v97_target": -0.018849266408508925,
+          "best_epoch": 2,
+          "stopped_epoch": 13,
+          "validation_rows": 144665,
+          "predictions_reproduced_exactly": true,
+          "frozen_parameters_exact": true,
+          "seconds": 255.5588108000229,
+          "peak_MiB": 1505.5302734375,
+          "complete_five_folds": false,
+          "early_terminated": true
+        },
+        "full_minus_late": 0.00020700839799303594,
+        "full_minus_retained252": -0.025897569553876565,
+        "adopted": false,
+        "full_bounded_early_stop": true,
+        "not_equal_completed_training_budget": true,
+        "initial_failed_full277": "CUDA OOM before epoch1; no algorithm score",
+        "independent_disk_reload": false,
+        "remaining_folds_started": false,
+        "close_current_scope": true
+      }
+    }
+  ],
+  "cleanup_completed": true,
+  "deleted_files": 10,
+  "deleted_bytes": 3480835
+}

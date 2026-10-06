@@ -1,0 +1,57 @@
+{
+  "observed_epoch": 1790927325.8967588,
+  "batch_state": {
+    "status": "running",
+    "controller_pid": 30132,
+    "active_pid": 27184,
+    "identity": "original",
+    "fold": 1,
+    "stage": "SOURCE",
+    "started_epoch": 1790927179.8455744,
+    "batch_started_epoch": 1790927178.5526347,
+    "concurrency": "serial",
+    "maximum_GPU_jobs": 2
+  },
+  "actual_process_create_time": 1790927179.8475451,
+  "actual_cmdline": [
+    "C:\\Users\\z5364\\.conda\\envs\\normal\\python.exe",
+    "-u",
+    "experiments/pure_dl/train_pair_fullcv_source_v370.py",
+    "--out",
+    "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_two_seed_fullcv_v370\\fold_1\\original\\SOURCE",
+    "--learning-rate",
+    ".0006",
+    "--schedule",
+    "cosine",
+    "--fold",
+    "1",
+    "--seed",
+    "20261006"
+  ],
+  "latest_training_validation": {
+    "epoch": 6,
+    "first_lr": 0.0005943316577189532,
+    "last_lr": 0.000591891328398933,
+    "next_lr": 0.0005918491265173149,
+    "expert_train_loss": 0.2703064719680697,
+    "router_train_loss": 0.19122015696484596,
+    "router_next_lr": 0.0005918491265173149,
+    "official_total": 79.81061750670989,
+    "official_scores": {
+      "POR": 74.28404847456214,
+      "PERM": 88.69604519032522,
+      "SW": 75.66224899350694,
+      "TOTAL": 79.81061750670989
+    },
+    "best_epoch": 6,
+    "best_score": 79.81061750670989,
+    "bad_epochs": 0,
+    "effective_patience": 10,
+    "SOTA_broken": false
+  },
+  "training_started_verified": true,
+  "historical_sources_unchanged": true,
+  "current_GPU_training_tasks": 1,
+  "prepared_routes_held": true,
+  "fixed_fifth_reuse_verified": true
+}

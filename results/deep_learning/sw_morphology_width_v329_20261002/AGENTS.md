@@ -1,0 +1,1 @@
+MaintainPROJECTS/README actualevidence. OnefreshSWwidth96candidate original104only, priorfrozen/allnewencoder+readoutjoint inonephase/max8; no repairweights. Originalinputs/Q/split/score/80-14/max2GPU/no automaticqueue/otherfolds. Preserveoldrecipes/active/deliveries.

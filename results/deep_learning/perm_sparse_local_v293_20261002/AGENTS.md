@@ -1,0 +1,1 @@
+Jointnew sparse encoder/readout, original154 frozenprior only/no291weights. OneaddedPERMphase/max8/original9curves/splits/Q/scoring/80-14/max2GPU. MaintainPROJECTS/README/atlas. No automaticremainingfolds.

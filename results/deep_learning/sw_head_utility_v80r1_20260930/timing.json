@@ -1,0 +1,28 @@
+{
+  "candidates": [
+    {
+      "mode": "likelihood",
+      "start": "2026-09-30T10:00:15.914655+08:00",
+      "end": "2026-09-30T10:01:52.778200+08:00",
+      "seconds": 92.1206939999829,
+      "peak_allocated_MiB": 1129.14306640625
+    },
+    {
+      "mode": "joint",
+      "start": "2026-09-30T10:01:41.775650+08:00",
+      "end": "2026-09-30T10:03:19.361573+08:00",
+      "seconds": 92.81716240002424,
+      "peak_allocated_MiB": 1129.14306640625
+    }
+  ],
+  "first_launch_to_last_completion_seconds": 183.446918,
+  "first_launch_to_verified_wall_seconds": 333.910498,
+  "last_training_completion_to_verified_wall_seconds": 150.46358,
+  "peak_process_concurrency": 2,
+  "finalization_seconds": 0.39132499997504056,
+  "scope": "loading/preprocessing/warmup/training/evaluation/persistence/launch gap included; authoring before launch and atlas after verification separate",
+  "first_failed_launch_to_corrected_verified_wall_seconds": 565.454078,
+  "failed_original_launch_to_failure_file_wall_seconds": 13.774927,
+  "family_timing_note": "includes first implementation failure, diagnosis/repair/relaunch gap, corrected two runs and result verification; authoring before first launch and atlas after verification excluded",
+  "corrected_process_overlap_seconds": 11.00255
+}

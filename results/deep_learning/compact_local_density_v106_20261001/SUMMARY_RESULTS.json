@@ -1,0 +1,50 @@
+{
+  "project": "compact_local_density_v106_20261001",
+  "scope": "obsolete-study",
+  "weights_retained": false,
+  "cleanup": "Obsolete artifacts removed by explicit user request. These are historical scores, not newly verified training.",
+  "results": [
+    {
+      "source": "assembled_report.json",
+      "result": {
+        "scores": {
+          "POR": 77.50036838764457,
+          "PERM": 89.37839421114361,
+          "SW": 74.12175282815758,
+          "TOTAL": 80.47516198004878
+        },
+        "original_fold": 5,
+        "complete_five_folds": false,
+        "executed_recipe_training_stages": 5,
+        "selected_effective_training_dependencies": 4,
+        "source_pretraining_included": true,
+        "best_density_epoch": 0,
+        "density_gain": 0.0,
+        "density_not_adopted_as_new_gain": true,
+        "remaining_folds_started": false,
+        "strict_808_passed": false,
+        "sum_executed_dependency_seconds": 2623.0132920999604,
+        "timing_scope": "includes historical source/shared stages plus unsuccessful density; sum not total wall",
+        "report": {
+          "stage": "density",
+          "target": "SW",
+          "target_score": 74.12175282815758,
+          "initial_score": 74.12175282815758,
+          "against_initial": 0.0,
+          "against_v97_target": -0.020427076509122344,
+          "best_epoch": 0,
+          "stopped_epoch": 18,
+          "validation_rows": 144665,
+          "predictions_reproduced_exactly": true,
+          "frozen_parameters_exact": true,
+          "seconds": 221.03776829998242,
+          "peak_MiB": 1324.49560546875,
+          "complete_five_folds": false
+        }
+      }
+    }
+  ],
+  "cleanup_completed": true,
+  "deleted_files": 7,
+  "deleted_bytes": 3480863
+}

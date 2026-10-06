@@ -1,0 +1,28 @@
+{
+  "target_processes": {
+    "POR": {
+      "seconds": 145.5551132000037,
+      "peak_allocated_MiB": 767.7138671875,
+      "median_epoch_seconds": 7.610844700000598,
+      "scope": "one target process includes two candidates sharing frozen forward, not two independent run times"
+    },
+    "PERM": {
+      "seconds": 98.8816313999996,
+      "peak_allocated_MiB": 765.29052734375,
+      "median_epoch_seconds": 4.994060199998785,
+      "scope": "one target process includes two candidates sharing frozen forward, not two independent run times"
+    },
+    "SW": {
+      "seconds": 132.79813540000032,
+      "peak_allocated_MiB": 767.0625,
+      "median_epoch_seconds": 6.794719900000928,
+      "scope": "one target process includes two candidates sharing frozen forward, not two independent run times"
+    }
+  },
+  "actual_peak_launch_interval_concurrency": 2,
+  "maximum_allowed_training_jobs": 2,
+  "feature_preparation_seconds": 5.595035500002268,
+  "first_launch_to_last_completion_seconds": 300.156571,
+  "final_replay_seconds": 0.06309030000556959,
+  "scope": "training launch interval includes explicit staging gaps; coding, feature preparation and final replay listed separately"
+}

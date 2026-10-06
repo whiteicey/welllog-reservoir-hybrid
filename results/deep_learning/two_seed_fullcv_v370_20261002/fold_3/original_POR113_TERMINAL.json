@@ -1,0 +1,101 @@
+{
+  "identity": "original",
+  "fold": 3,
+  "stage": "POR113",
+  "observed_epoch": 1790940279.554396,
+  "report": {
+    "stage": "POR113",
+    "target": "POR",
+    "target_score": 80.60605445308767,
+    "initial_score": 80.40895217982442,
+    "against_initial": 0.1971022732632406,
+    "best_epoch": 12,
+    "stopped_epoch": 26,
+    "validation_rows": 145090,
+    "predictions_reproduced_exactly": true,
+    "frozen_parameters_exact": true,
+    "gradient_groups": {
+      "original_target_locations": 1.1960334777832031,
+      "combined_new_heads_routes": 0.3409929573535919
+    },
+    "effective_patience": 14,
+    "SOTA_broken": true,
+    "seconds": 141.72720769996522,
+    "peak_MiB": 920.93017578125,
+    "complete_five_folds": false,
+    "early_terminated": false
+  },
+  "timing": {
+    "identity": "original",
+    "fold": 3,
+    "stage": "POR113",
+    "pid": 91656,
+    "terminal": true,
+    "exit_code": 0,
+    "process_wall_seconds": 154.59273648262024,
+    "concurrency": "solo after user requested serial",
+    "includes": "load/preprocess/warmup/training or scan/restore/write",
+    "attached_without_training_restart": false
+  },
+  "rows": 145090,
+  "source_scores": {
+    "POR": 80.42572005691339,
+    "PERM": 90.62186752824304,
+    "SW": 76.60895040981836,
+    "TOTAL": 82.65850229539551
+  },
+  "source_sha256": "253ad2f5058729f331fec392204093986a69a6c17ac6c7eb44f2e432f8fa57ef",
+  "own_source_Q": {
+    "status": "ready",
+    "epoch": 46,
+    "sha256": "66602658642f850d7455fb32c0fcaa2304bfdc19d85777530e2edc511eee36d5",
+    "dynamic_updates": false,
+    "rule": "last original training-only source Q observation strictly before this fold best epoch; Q0=1 before first observation",
+    "minimum": 0.10000000149011612,
+    "maximum": 1.0,
+    "downweighted_training_rows": 1466
+  },
+  "completed_prefix": [
+    "SOURCE",
+    "POR113"
+  ],
+  "prefix_scores": {
+    "POR": 80.60605445308767,
+    "PERM": 90.62186752824304,
+    "SW": 76.60895040981836,
+    "TOTAL": 82.71260261424779
+  },
+  "stage_gains": [
+    {
+      "stage": "POR113",
+      "target": "POR",
+      "actual_target_gain": 0.18033439617427405,
+      "actual_TOTAL_contribution": 0.05410031885228221,
+      "previous_target_score": 80.42572005691339,
+      "selected_target_score": 80.60605445308767,
+      "optimizer_gain": 0.1971022732632406,
+      "best_epoch": 12,
+      "stopped_epoch": 26,
+      "strata": {
+        "DEFAULT": {
+          "rows": 101705,
+          "before": 97.73659112138047,
+          "after": 97.75920554545007,
+          "delta": 0.02261442406960157
+        },
+        "CONT": {
+          "rows": 43385,
+          "before": 39.844824779475,
+          "after": 40.39489317963443,
+          "delta": 0.5500684001594323
+        }
+      },
+      "process_wall_seconds": 154.59273648262024,
+      "concurrency": "solo after user requested serial"
+    }
+  ],
+  "checkpoint_sha256": "df7be500bee70b6670b10acab81a82d8a7dc4c843ff5d8b1891ef7bc2a0e3c4e",
+  "score_scope": "actually assembled completed-stage prefix; not complete8stage model or fullOOF",
+  "complete8stage_single_fold": false,
+  "CPU_only": true
+}

@@ -1,0 +1,73 @@
+{
+  "seed": 20261011,
+  "stage": "PERM154",
+  "report": {
+    "stage": "PERM154",
+    "target": "PERM",
+    "target_score": 89.27064029934503,
+    "initial_score": 89.27064029934503,
+    "against_initial": 0.0,
+    "against_v97_target": -0.12608375002078276,
+    "best_epoch": 0,
+    "stopped_epoch": 10,
+    "validation_rows": 144665,
+    "predictions_reproduced_exactly": true,
+    "frozen_parameters_exact": true,
+    "gradient_groups": {
+      "private_PERM_joint_location_weight_head": 0.19518646597862244
+    },
+    "effective_patience": 10,
+    "SOTA_broken": false,
+    "seconds": 78.99966349999886,
+    "peak_MiB": 786.46533203125,
+    "complete_five_folds": false,
+    "early_terminated": false
+  },
+  "timing": {
+    "seed": 20261011,
+    "stage": "PERM154",
+    "pid": 27472,
+    "started_epoch": 1790917931.3120854,
+    "terminal": true,
+    "exit_code": 0,
+    "process_wall_seconds": 88.02066588401794,
+    "concurrency": "solo",
+    "includes": "preprocessing warmup training best restoration"
+  },
+  "terminal_pid_missing": true,
+  "observed_epoch": 1790918204.0995357,
+  "next_batch_snapshot": {
+    "status": "running",
+    "controller_pid": 74228,
+    "active_pid": 87280,
+    "seed": 20261011,
+    "stage": "SW104",
+    "started_epoch": 1790918019.3921115,
+    "batch_started_epoch": 1790916379.5213826,
+    "concurrency": "serial",
+    "maximum_GPU_jobs": 2,
+    "completed_models": 1
+  },
+  "next_actual_cmdline": [
+    "C:\\Users\\z5364\\.conda\\envs\\normal\\python.exe",
+    "-u",
+    "experiments/pure_dl/train_complete_seed_stage_v362r1.py",
+    "--stage",
+    "SW104"
+  ],
+  "next_actual_checkpoint_loads": [
+    {
+      "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261011\\SOURCE\\prepared_data.pt",
+      "sha256": "b0dc567d307905ae405db841b73f1772ac00ed1860a4c03b3a70edd4f109ae0f"
+    },
+    {
+      "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261011\\SOURCE\\fold_5.pt",
+      "sha256": "6f13e1ced8e0ee6b50eb9248e07f9ee2a72f9aec35b221c97a782e65b3e81471"
+    }
+  ],
+  "completed_stages": 4,
+  "total_stages": 8,
+  "complete_seed_model": false,
+  "complete_five_folds": false,
+  "remaining_folds_started": false
+}

@@ -1,0 +1,52 @@
+{
+  "report": {
+    "stage": "balanced",
+    "target": "SW",
+    "target_score": 74.1537264289993,
+    "initial_score": 74.12175268976877,
+    "against_initial": 0.031973739230537035,
+    "against_v97_target": 0.011546524332601393,
+    "best_epoch": 32,
+    "stopped_epoch": 46,
+    "validation_rows": 144665,
+    "predictions_reproduced_exactly": true,
+    "frozen_parameters_exact": true,
+    "gradient_groups": {
+      "SW_new_raw_feature_backbone": 0.08836733549833298,
+      "SW_direct_categorical_readout": 0.06910170614719391,
+      "SW_new_state_readout": 0.006067464128136635
+    },
+    "seconds": 577.0999061000184,
+    "peak_MiB": 1241.642578125,
+    "complete_five_folds": false,
+    "early_terminated": false
+  },
+  "versus285": 0.001349683147992664,
+  "matched_budget80_14": true,
+  "only_state_bound2_to4_changed": true,
+  "actual_optional8": {
+    "POR": 78.0235265552551,
+    "PERM": 89.498908539006,
+    "SW": 74.1537264289993,
+    "TOTAL": 80.68548020537838
+  },
+  "strata": {
+    "SW252": {
+      "default": 98.64493054166336,
+      "continuous": 17.88486813991017,
+      "overall": 74.14922820781207
+    },
+    "SW285": {
+      "default": 98.72446679129287,
+      "continuous": 17.71256117758909,
+      "overall": 74.15237674585131
+    },
+    "SW289": {
+      "default": 98.72311025198368,
+      "continuous": 17.72012680313723,
+      "overall": 74.1537264289993
+    }
+  },
+  "independent_disk_reload": false,
+  "remaining_folds_started": false
+}

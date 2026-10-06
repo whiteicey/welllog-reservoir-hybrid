@@ -1,0 +1,30 @@
+{
+  "classification": "verified_wait",
+  "observed_epoch": 1790925813.7952232,
+  "actual_pid": 91072,
+  "actual_create_time": 1790925543.0844288,
+  "actual_cmdline": [
+    "C:\\Users\\z5364\\.conda\\envs\\normal\\python.exe",
+    "-u",
+    "experiments/pure_dl/train_complete_seed_stage_v362r1.py",
+    "--stage",
+    "SW104"
+  ],
+  "runtime": {
+    "status": "running",
+    "pid": 91072,
+    "stage": "SW104",
+    "epoch": 19,
+    "best": 73.44667830705075,
+    "best_epoch": 17,
+    "bad": 2,
+    "effective_patience": 10,
+    "SOTA_broken": false,
+    "peak_MiB": 1722.197265625
+  },
+  "completed_stages": 4,
+  "scope": "Four-stage prefix only; no complete-model score",
+  "atlas_partial_score_absent": true,
+  "no_restart": true,
+  "complete_five_folds": false
+}

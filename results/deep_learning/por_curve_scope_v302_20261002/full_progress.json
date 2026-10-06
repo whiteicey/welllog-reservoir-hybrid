@@ -1,0 +1,49 @@
+{
+  "live": false,
+  "state": {
+    "status": "complete",
+    "pid": 69896,
+    "stage": "full",
+    "target": "POR",
+    "target_score": 78.03055279414464,
+    "initial_score": 77.92638076072386,
+    "against_initial": 0.10417203342078096,
+    "against_v97_target": 0.478615992259634,
+    "best_epoch": 29,
+    "stopped_epoch": 43,
+    "validation_rows": 144665,
+    "predictions_reproduced_exactly": true,
+    "frozen_parameters_exact": true,
+    "gradient_groups": {
+      "POR_new_raw_feature_backbone": 0.06631897389888763,
+      "POR_direct_categorical_readout": 0.04902603104710579,
+      "POR_curve_interaction_backbone": 0.04680663347244263
+    },
+    "seconds": 811.1775710000074,
+    "peak_MiB": 1813.37841796875,
+    "complete_five_folds": false,
+    "early_terminated": false
+  },
+  "report": {
+    "stage": "full",
+    "target": "POR",
+    "target_score": 78.03055279414464,
+    "initial_score": 77.92638076072386,
+    "against_initial": 0.10417203342078096,
+    "against_v97_target": 0.478615992259634,
+    "best_epoch": 29,
+    "stopped_epoch": 43,
+    "validation_rows": 144665,
+    "predictions_reproduced_exactly": true,
+    "frozen_parameters_exact": true,
+    "gradient_groups": {
+      "POR_new_raw_feature_backbone": 0.06631897389888763,
+      "POR_direct_categorical_readout": 0.04902603104710579,
+      "POR_curve_interaction_backbone": 0.04680663347244263
+    },
+    "seconds": 811.1775710000074,
+    "peak_MiB": 1813.37841796875,
+    "complete_five_folds": false,
+    "early_terminated": false
+  }
+}

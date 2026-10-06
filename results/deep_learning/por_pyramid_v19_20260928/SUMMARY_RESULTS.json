@@ -1,0 +1,463 @@
+{
+  "project": "por_pyramid_v19_20260928",
+  "scope": "obsolete-study",
+  "weights_retained": false,
+  "cleanup": "Obsolete artifacts removed by explicit user request. These are historical scores, not newly verified training.",
+  "results": [
+    {
+      "source": "assembled_report.json",
+      "result": {
+        "fold": 5,
+        "rows": 144665,
+        "reference_scores": {
+          "POR": 77.44891570750882,
+          "PERM": 89.3475027344081,
+          "SW": 73.62238476712884,
+          "TOTAL": 80.27413533779057
+        },
+        "candidates": [
+          {
+            "mode": "regional",
+            "scores": {
+              "POR": 75.03896307625891,
+              "PERM": 89.3475027344081,
+              "SW": 73.62238476712884,
+              "TOTAL": 79.5511495484156
+            },
+            "delta_v5_TOTAL": -0.7229857893749738,
+            "delta_old_POR": -2.409952631249908,
+            "best_epoch": 65,
+            "stopped_epoch": 80,
+            "trainable_parameters": 413241,
+            "new_POR_reloaded_from_disk": true,
+            "all144665POR_predictions_exact": true,
+            "fixed_PERM_SW_arrays_reused": true,
+            "fixed_PERM_SW_fresh_GPU_replay": false,
+            "PERM_SW_exactly_unchanged": true,
+            "parameter_sharing_between_targets": false,
+            "verification": {
+              "training_input_windows": 2,
+              "padding_max_error": 0.0,
+              "empty_outputs_finite_zero": true,
+              "NLL_vs_torch_StudentT_max_error": 9.5367431640625e-07,
+              "context": {
+                "training_windows": 2,
+                "gate_mean": 0.16148243844509125,
+                "gate_min": 0.007354736328125,
+                "gate_max": 0.82421875,
+                "allowed_read_process_write_pairs": [
+                  240,
+                  46,
+                  240
+                ],
+                "disabled_gate_logit_mean_change": 0.8671362400054932,
+                "disabled_distribution_raw_mean_change": 0.49953216314315796,
+                "interpretation": "Small train-input forward dependency probe; no retraining or scored extra candidate"
+              }
+            },
+            "replay_and_checks_seconds": 1.5807006000004549,
+            "populations": {
+              "default_points": 94357,
+              "numeric_points": 50308,
+              "default_POR": 96.36804900537321,
+              "numeric_POR": 35.03441984231103,
+              "default_delta": -0.8870566041735113,
+              "numeric_delta": -5.266275689747414
+            },
+            "well_wins": 3,
+            "well_losses": 13,
+            "per_well": [
+              {
+                "well": 7,
+                "n": 10219,
+                "POR_delta": -2.4761809070949483
+              },
+              {
+                "well": 8,
+                "n": 9011,
+                "POR_delta": -1.440078918128477
+              },
+              {
+                "well": 14,
+                "n": 12078,
+                "POR_delta": -3.030201006753618
+              },
+              {
+                "well": 16,
+                "n": 8149,
+                "POR_delta": -1.5643512696506752
+              },
+              {
+                "well": 25,
+                "n": 7739,
+                "POR_delta": 0.33466172357973184
+              },
+              {
+                "well": 34,
+                "n": 10913,
+                "POR_delta": -6.691987868326842
+              },
+              {
+                "well": 35,
+                "n": 8348,
+                "POR_delta": 0.5321328952278214
+              },
+              {
+                "well": 37,
+                "n": 9939,
+                "POR_delta": -2.4259087540645563
+              },
+              {
+                "well": 50,
+                "n": 11874,
+                "POR_delta": -2.8245418900897308
+              },
+              {
+                "well": 54,
+                "n": 9630,
+                "POR_delta": -1.9153454291618934
+              },
+              {
+                "well": 63,
+                "n": 5639,
+                "POR_delta": -1.8064507217427597
+              },
+              {
+                "well": 69,
+                "n": 9120,
+                "POR_delta": 2.9186685209534713
+              },
+              {
+                "well": 71,
+                "n": 4709,
+                "POR_delta": -2.086380354293017
+              },
+              {
+                "well": 72,
+                "n": 9559,
+                "POR_delta": -10.374953351431486
+              },
+              {
+                "well": 76,
+                "n": 7109,
+                "POR_delta": -2.717176871957175
+              },
+              {
+                "well": 79,
+                "n": 10629,
+                "POR_delta": -0.6616660970400022
+              }
+            ],
+            "checkpoint": "outputs/pure_dl_por_pyramid_v19_regional_fold5/model_best.pt"
+          },
+          {
+            "mode": "global",
+            "scores": {
+              "POR": 75.05419903984179,
+              "PERM": 89.3475027344081,
+              "SW": 73.62238476712884,
+              "TOTAL": 79.55572033749046
+            },
+            "delta_v5_TOTAL": -0.7184150003001122,
+            "delta_old_POR": -2.3947166676670264,
+            "best_epoch": 52,
+            "stopped_epoch": 70,
+            "trainable_parameters": 413241,
+            "new_POR_reloaded_from_disk": true,
+            "all144665POR_predictions_exact": true,
+            "fixed_PERM_SW_arrays_reused": true,
+            "fixed_PERM_SW_fresh_GPU_replay": false,
+            "PERM_SW_exactly_unchanged": true,
+            "parameter_sharing_between_targets": false,
+            "verification": {
+              "training_input_windows": 2,
+              "padding_max_error": 0.0,
+              "empty_outputs_finite_zero": true,
+              "NLL_vs_torch_StudentT_max_error": 9.5367431640625e-07,
+              "context": {
+                "training_windows": 2,
+                "gate_mean": 0.17387740314006805,
+                "gate_min": 0.004913330078125,
+                "gate_max": 0.8203125,
+                "allowed_read_process_write_pairs": [
+                  1024,
+                  256,
+                  1024
+                ],
+                "disabled_gate_logit_mean_change": 0.8618025183677673,
+                "disabled_distribution_raw_mean_change": 0.754612147808075,
+                "interpretation": "Small train-input forward dependency probe; no retraining or scored extra candidate"
+              }
+            },
+            "replay_and_checks_seconds": 0.984592399999201,
+            "populations": {
+              "default_points": 94357,
+              "numeric_points": 50308,
+              "default_POR": 96.98061617050139,
+              "numeric_POR": 33.9293095352373,
+              "default_delta": -0.27448943904532785,
+              "numeric_delta": -6.371385996821143
+            },
+            "well_wins": 3,
+            "well_losses": 13,
+            "per_well": [
+              {
+                "well": 7,
+                "n": 10219,
+                "POR_delta": -2.54692765605258
+              },
+              {
+                "well": 8,
+                "n": 9011,
+                "POR_delta": -0.8514008248805627
+              },
+              {
+                "well": 14,
+                "n": 12078,
+                "POR_delta": -2.2979131655530693
+              },
+              {
+                "well": 16,
+                "n": 8149,
+                "POR_delta": -0.26607560305408856
+              },
+              {
+                "well": 25,
+                "n": 7739,
+                "POR_delta": 1.2904202580735455
+              },
+              {
+                "well": 34,
+                "n": 10913,
+                "POR_delta": -8.207694922141153
+              },
+              {
+                "well": 35,
+                "n": 8348,
+                "POR_delta": 0.4049564963644373
+              },
+              {
+                "well": 37,
+                "n": 9939,
+                "POR_delta": -1.4501174269148052
+              },
+              {
+                "well": 50,
+                "n": 11874,
+                "POR_delta": -5.521217421704396
+              },
+              {
+                "well": 54,
+                "n": 9630,
+                "POR_delta": -0.8912514071899016
+              },
+              {
+                "well": 63,
+                "n": 5639,
+                "POR_delta": -2.6807453844301388
+              },
+              {
+                "well": 69,
+                "n": 9120,
+                "POR_delta": 0.3725203977621109
+              },
+              {
+                "well": 71,
+                "n": 4709,
+                "POR_delta": -2.9700209109206135
+              },
+              {
+                "well": 72,
+                "n": 9559,
+                "POR_delta": -5.6924175828974155
+              },
+              {
+                "well": 76,
+                "n": 7109,
+                "POR_delta": -4.416313742295256
+              },
+              {
+                "well": 79,
+                "n": 10629,
+                "POR_delta": -0.6150922798290273
+              }
+            ],
+            "checkpoint": "outputs/pure_dl_por_pyramid_v19_global_fold5/model_best.pt"
+          }
+        ],
+        "comparison": {
+          "global_minus_regional_POR": 0.015235963583001168,
+          "global_minus_regional_TOTAL": 0.00457078907490035,
+          "default_POR_delta": 0.6125671651281834,
+          "numeric_POR_delta": -1.1051103070737285,
+          "default_TOTAL_contribution": 0.11986313206373345,
+          "numeric_TOTAL_contribution": -0.11529234298883309,
+          "well_wins": 8,
+          "well_losses": 8,
+          "per_well": [
+            {
+              "well": 7,
+              "n": 10219,
+              "POR_delta": -0.07074674895763217
+            },
+            {
+              "well": 8,
+              "n": 9011,
+              "POR_delta": 0.5886780932479142
+            },
+            {
+              "well": 14,
+              "n": 12078,
+              "POR_delta": 0.732287841200548
+            },
+            {
+              "well": 16,
+              "n": 8149,
+              "POR_delta": 1.2982756665965862
+            },
+            {
+              "well": 25,
+              "n": 7739,
+              "POR_delta": 0.9557585344938135
+            },
+            {
+              "well": 34,
+              "n": 10913,
+              "POR_delta": -1.5157070538143116
+            },
+            {
+              "well": 35,
+              "n": 8348,
+              "POR_delta": -0.12717639886338483
+            },
+            {
+              "well": 37,
+              "n": 9939,
+              "POR_delta": 0.9757913271497509
+            },
+            {
+              "well": 50,
+              "n": 11874,
+              "POR_delta": -2.6966755316146656
+            },
+            {
+              "well": 54,
+              "n": 9630,
+              "POR_delta": 1.0240940219719916
+            },
+            {
+              "well": 63,
+              "n": 5639,
+              "POR_delta": -0.8742946626873791
+            },
+            {
+              "well": 69,
+              "n": 9120,
+              "POR_delta": -2.5461481231913607
+            },
+            {
+              "well": 71,
+              "n": 4709,
+              "POR_delta": -0.8836405566275967
+            },
+            {
+              "well": 72,
+              "n": 9559,
+              "POR_delta": 4.682535768534071
+            },
+            {
+              "well": 76,
+              "n": 7109,
+              "POR_delta": -1.6991368703380805
+            },
+            {
+              "well": 79,
+              "n": 10629,
+              "POR_delta": 0.04657381721097485
+            }
+          ],
+          "exploratory_selection_unadjusted_TOTAL_95": [
+            -0.25913938868872327,
+            0.29002791765029295
+          ]
+        },
+        "versus_v18": [
+          {
+            "mode": "regional",
+            "TOTAL_delta_vs_v18_tcn": 0.0004198801018873155,
+            "note": "Architecture and parameter count both differ; not matched module attribution"
+          },
+          {
+            "mode": "global",
+            "TOTAL_delta_vs_v18_tcn": 0.004990669176748952,
+            "note": "Architecture and parameter count both differ; not matched module attribution"
+          }
+        ],
+        "selected_scores": {
+          "POR": 77.44891570750882,
+          "PERM": 89.3475027344081,
+          "SW": 73.62238476712884,
+          "TOTAL": 80.27413533779057
+        },
+        "selected_new_POR": false,
+        "all_new_POR_reloaded": true,
+        "fixed_other_predictions_reused": true,
+        "fixed_other_replay_evidence": [
+          "results/deep_learning/latent_gate_v17_20260928/assembled_report.json",
+          "results/deep_learning/latent_fold5_v16_20260928/assembled_report.json"
+        ],
+        "row_order_verified": true,
+        "seconds": 3.0197800999994797,
+        "finished_at": "2026-09-28T20:34:45.491138+08:00",
+        "complete_five_folds": false,
+        "remaining_folds_started": false
+      }
+    },
+    {
+      "source": "CURRENT_RECIPE.json",
+      "result": {
+        "scores": {
+          "POR": 77.44891570750882,
+          "PERM": 89.3475027344081,
+          "SW": 73.62238476712884,
+          "TOTAL": 80.27413533779057
+        },
+        "choices": [
+          {
+            "target": "POR",
+            "key": "POR_dual",
+            "architecture": "dual",
+            "target_score": 77.44891570750882,
+            "best_epoch": 0,
+            "checkpoint": "outputs/pure_dl_independent_v8_POR_dual80_fold5/model_best.pt"
+          },
+          {
+            "target": "PERM",
+            "key": "PERM_dual",
+            "architecture": "dual",
+            "target_score": 89.3475027344081,
+            "best_epoch": 0,
+            "checkpoint": "outputs/pure_dl_independent_v8_PERM_dual80_fold5/model_best.pt"
+          },
+          {
+            "target": "SW",
+            "key": "SW_dual",
+            "architecture": "dual",
+            "target_score": 73.62238476712884,
+            "best_epoch": 0,
+            "checkpoint": "outputs/pure_dl_independent_v8_SW_dual80_fold5/model_best.pt"
+          }
+        ],
+        "selected_new_POR": false,
+        "best_new_candidate": "global",
+        "original_fifth_development_selection": true,
+        "complete_five_folds": false,
+        "remaining_folds_started": false,
+        "old_delivery_unchanged": true
+      }
+    }
+  ],
+  "cleanup_completed": true,
+  "deleted_files": 8,
+  "deleted_bytes": 6967963
+}

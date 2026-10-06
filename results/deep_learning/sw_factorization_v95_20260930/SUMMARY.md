@@ -1,0 +1,76 @@
+# Historical summary
+
+Focus and explored conditions: see retained README/FINAL and SUMMARY_RESULTS.json.
+
+Gain: scores and original comparison deltas are retained; incomplete folds remain incomplete.
+
+Not worth extending: original negative conclusions are retained below where available.
+
+Detailed logs, weights and caches were removed by the user request; rerunning requires retraining.
+
+## README.md
+
+# v95 SW固定概率分解
+
+探索重点：当前r100 TOTAL80.442433883814，SW73.965712645631。相对r05，默认得分98.089848→98.450578（+0.360731），数值18.323113→17.726243（-0.596870）。旧v82 Gaussian数值19.383959；但不同密度也会改变默认与数值动作竞争，不能假设保住默认收益。
+
+启动前假设与对照：固定r100默认atom，把它自身和旧v82a100分别作为条件密度。same/separate两个相同1678962总参数、零可训练参数；所有点都用提前固定的同一公式P(default)=sigmoid(g)，P(numeric)=(1-g)p(y|numeric)。原256支持/800动作+default99.9/官方效用argmax不变，不平均点预测，不按验证真值或井选择来源。两來源均由原64训练井训练，原16验证井只按既有规约评分。
+
+原9曲线206+相对深度、原训练侧128全井输入bank、Q50、训练578891/验证144665、train-only统计保持。POR/PERM固定当前配方。无需训练预算或新优化器；本批实际验证两种固定结构，未训练、不是完整OOF。
+
+已经探索与验证：建立时尚未评价，尚无新分数/收益。已有v94原始输入磁盘重载，旧v82正控制保留。新结构实际全144665点评价，same必须与原r100逐点一致；核对来源/预处理/评分哈希。无数值预检、独立审查或重复不变Q验证。
+
+收益：尚未证实。报告separate-same的总SW/组合TOTAL、默认/数值/每井变化；初步假设不能冒称收益。静态结构比较不是新训练收益，开发折不是独立泛化。
+
+不值得继续的点与证据：旧v84r1固定旧Gaussian gate并训练私有密度，两项best0/stop18无增益，已关闭。这里改变gate来源且零更新密度，并不重启该负路线。若此次固定来源分解无收益，关闭这两个来源直接拼接的结构，不继续扫描多个来源/权重。
+
+计划：显式串行完成same/separate、评分、记录与图谱。未做：本批评价、新训练、其余折/独立泛化。无新增权重复制，来源正模型及交付保留；原第五严格>80.5且有收益后才考虑补折，不自动启动。完整原OOF>82未完成，目标后独立确认/新目录交付。
+
+成本：记录两项原始输入推理单项与整批墙钟，加载/预热/保存计入；一次一个GPU进程，不声称双并发或速度基准。
+
+
+## 最终结果
+# v95 固定概率分解结果
+
+原第五TOTAL 80.442433883814 → 80.472576222471；采用=separate。
+
+|固定密度来源|SW|TOTAL|对r100 SW|
+|---|---:|---:|---:|
+|same|73.965712645631|80.442433883814|+0.000000000000|
+|separate|74.051833613221|80.472576222471|+0.086120967590|
+
+探索重点：r100改善默认而数值退步，预先固定r100默认atom+自身/旧v82条件密度的两项同1678962容量消融；所有权重冻结，未训练。
+实际验证：两个fold-lo
+
+入评价，同来源重复分支与r100逐点相同。原概率公式和动作argmax，模型前向无验证标签、按点挑模型或预测投票。PERM/POR原两列固定。开发折机制消融不等于独立泛化或完整OOF。
+收益：separate相对same SW=0.08612096759006249；默认/数值/井诊断={"scores": {"POR": 77.551936801885, "PERM": 89.39672404936582, "SW": 74.05183361322108, "TOTAL": 80.4725762224709}, "channel_delta": 0.08612096759006249, "TOTAL_delta": 0.03014233865651761, "populations": {"default": {"n": 100786, "reference": 98.45057848806643, "candidate": 97.99250476187036, "channel_delta": -0.4580737261960621, "TOTAL_contribution": -0.11169665433199953}, "numeric": {"n": 43879, "reference": 17.726242995100986, "candidate": 19.06232878431191, "channel_delta": 1.336085789210923, "TOTAL_contribution": 0.14183899298845698}}, "well_wins": 7, "well_losses": 9, "per_well": [{"well": 7, "n": 10219, "channel_delta": -0.19734447294429458}, {"well": 8, "n": 9011, "channel_delta": 0.6893414511690139}, {"well": 14, "n": 12078, "channel_delta": -0.4788646883792609}, {"well": 16, "n": 8149, "channel_delta": -0.2931756625087303}, {"well": 25, "n": 7739, "channel_delta": 0.461190122361387}, {"well": 34, "n": 10913, "channel_delta": -0.0518393898189089}, {"well": 35, "n": 8348, "channel_delta": 2.0295073731362265}, {"well": 37, "n": 9939, "channel_delta": -0.6393305447997051}, {"well": 50, "n": 11874, "channel_delta": 0.819757462626086}, {"well": 54, "n": 9630, "channel_delta": 0.708406095439372}, {"well": 63, "n": 5639, "channel_delta": -0.9521693103723123}, {"well": 69, "n": 9120, "channel_delta": -1.0792803736472507}, {"well": 71, "n": 4709, "channel_delta": -0.08720162817995458}, {"well": 72, "n": 9559, "channel_delta": 0.10985075663464272}, {"well": 76, "n": 7109, "channel_delta": 0.7734814079279602}, {"well": 79, "n": 10629, "channel_delta": -0.4362100253159724}], "exploratory_selection_unadjusted_TOTAL_95": [-0.0958218812329302, 0.16261901873112136]}
+不继续：若负，关闭这两个固定来源直接拼接的结构；不扫多个来源或比例。旧v84r1是旧gate/私有密度热启动训练best0负结果，本批新SAM gate+已有固定density零更新对照，结论范围不同。
+已做：固定两项结构、原始输入评价、实际三列、来源保留。未做：新训练、其他折、独立井泛化。第五严格>80.5且有收益后才考虑补折，原完整OOF>82未完成，不自动启动。目标后独立确认与新目录交付。
+成本：{"candidates": [{"mode": "same", "seconds": 3.696581900003366, "peak_allocated_MiB": 436.56396484375, "peak_reserved_MiB": 502.0}, {"mode": "separate", "seconds": 2.6655303000006825, "peak_allocated_MiB": 436.56396484375, "peak_reserved_MiB": 502.0}], "total_wall_seconds": 7.497336500004167, "actual_gpu_process_concurrency": 1, "scope": "train-only cache/input bank loading, both frozen two-network original raw-input evaluations and persistence included; no training/warmup exclusion; authoring/atlas separate"}
+未新增/复制checkpoint；两来源仍是当前/正控制依赖，保留。没有负权重大文件需要删除。
+
+
+
+## FINAL.md
+
+# v95 固定概率分解结果
+
+原第五TOTAL 80.442433883814 → 80.472576222471；采用=separate。
+
+|固定密度来源|SW|TOTAL|对r100 SW|
+|---|---:|---:|---:|
+|same|73.965712645631|80.442433883814|+0.000000000000|
+|separate|74.051833613221|80.472576222471|+0.086120967590|
+
+探索重点：r100改善默认而数值退步，预先固定r100默认atom+自身/旧v82条件密度的两项同1678962容量消融；所有权重冻结，未训练。
+实际验证：两个fold-local来源/源码/训练侧预处理/Q/原评分hash，原144665点原始输入评价，同来源重复分支与r100逐点相同。原概率公式和动作argmax，模型前向无验证标签、按点挑模型或预测投票。PERM/POR原两列固定。开发折机制消融不等于独立泛化或完整OOF。
+收益：separate相对same SW=0.08612096759006249；默认/数值/井诊断={"scores": {"POR": 77.551936801885, "PERM": 89.39672404936582, "SW": 74.05183361322108, "TOTAL": 80.4725762224709}, "channel_delta": 0.08612096759006249, "TOTAL_delta": 0.03014233865651761, "populations": {"default": {"n": 100786, "reference": 98.45057848806643, "candidate": 97.99250476187036, "channel_delta": -0.4580737261960621, "TOTAL_contribution": -0.11169665433199953}, "numeric": {"n": 43879, "reference": 17.726242995100986, "candidate": 19.06232878431191, "channel_delta": 1.336085789210923, "TOTAL_contribution": 0.14183899298845698}}, "well_wins": 7, "well_losses": 9, "per_well": [{"well": 7, "n": 10219, "channel_delta": -0.19734447294429458}, {"well": 8, "n": 9011, "channel_delta": 0.6893414511690139}, {"well": 14, "n": 12078, "channel_delta": -0.4788646883792609}, {"well": 16, "n": 8149, "channel_delta": -0.2931756625087303}, {"well": 25, "n": 7739, "channel_delta": 0.461190
+
+输入评价，同来源重复分支与r100逐点相同。原概率公式和动作argmax，模型前向无验证标签、按点挑模型或预测投票。PERM/POR原两列固定。开发折机制消融不等于独立泛化或完整OOF。
+收益：separate相对same SW=0.08612096759006249；默认/数值/井诊断={"scores": {"POR": 77.551936801885, "PERM": 89.39672404936582, "SW": 74.05183361322108, "TOTAL": 80.4725762224709}, "channel_delta": 0.08612096759006249, "TOTAL_delta": 0.03014233865651761, "populations": {"default": {"n": 100786, "reference": 98.45057848806643, "candidate": 97.99250476187036, "channel_delta": -0.4580737261960621, "TOTAL_contribution": -0.11169665433199953}, "numeric": {"n": 43879, "reference": 17.726242995100986, "candidate": 19.06232878431191, "channel_delta": 1.336085789210923, "TOTAL_contribution": 0.14183899298845698}}, "well_wins": 7, "well_losses": 9, "per_well": [{"well": 7, "n": 10219, "channel_delta": -0.19734447294429458}, {"well": 8, "n": 9011, "channel_delta": 0.6893414511690139}, {"well": 14, "n": 12078, "channel_delta": -0.4788646883792609}, {"well": 16, "n": 8149, "channel_delta": -0.2931756625087303}, {"well": 25, "n": 7739, "channel_delta": 0.461190122361387}, {"well": 34, "n": 10913, "channel_delta": -0.0518393898189089}, {"well": 35, "n": 8348, "channel_delta": 2.0295073731362265}, {"well": 37, "n": 9939, "channel_delta": -0.6393305447997051}, {"well": 50, "n": 11874, "channel_delta": 0.819757462626086}, {"well": 54, "n": 9630, "channel_delta": 0.708406095439372}, {"well": 63, "n": 5639, "channel_delta": -0.9521693103723123}, {"well": 69, "n": 9120, "channel_delta": -1.0792803736472507}, {"well": 71, "n": 4709, "channel_delta": -0.08720162817995458}, {"well": 72, "n": 9559, "channel_delta": 0.10985075663464272}, {"well": 76, "n": 7109, "channel_delta": 0.7734814079279602}, {"well": 79, "n": 10629, "channel_delta": -0.4362100253159724}], "exploratory_selection_unadjusted_TOTAL_95": [-0.0958218812329302, 0.16261901873112136]}
+不继续：若负，关闭这两个固定来源直接拼接的结构；不扫多个来源或比例。旧v84r1是旧gate/私有密度热启动训练best0负结果，本批新SAM gate+已有固定density零更新对照，结论范围不同。
+已做：固定两项结构、原始输入评价、实际三列、来源保留。未做：新训练、其他折、独立井泛化。第五严格>80.5且有收益后才考虑补折，原完整OOF>82未完成，不自动启动。目标后独立确认与新目录交付。
+成本：{"candidates": [{"mode": "same", "seconds": 3.696581900003366, "peak_allocated_MiB": 436.56396484375, "peak_reserved_MiB": 502.0}, {"mode": "separate", "seconds": 2.6655303000006825, "peak_allocated_MiB": 436.56396484375, "peak_reserved_MiB": 502.0}], "total_wall_seconds": 7.497336500004167, "actual_gpu_process_concurrency": 1, "scope": "train-only cache/input bank loading, both frozen two-network original raw-input evaluations and persistence included; no training/warmup exclusion; authoring/atlas separate"}
+未新增/复制checkpoint；两来源仍是当前/正控制依赖，保留。没有负权重大文件需要删除。
+
+

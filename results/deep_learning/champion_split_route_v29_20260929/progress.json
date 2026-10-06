@@ -1,0 +1,1094 @@
+{
+  "observed_at": "2026-09-29T10:11:34.969149+08:00",
+  "rows": [
+    {
+      "target": "POR",
+      "id": "pure_dl_split_route_v29_POR_fold5",
+      "state": {
+        "status": "complete",
+        "target": "POR",
+        "pid": 47372,
+        "modes": {
+          "coupled": {
+            "best": 77.5418119610383,
+            "best_epoch": 3,
+            "bad": 18,
+            "done": true,
+            "last_epoch": 21,
+            "stop_reason": "patience18"
+          },
+          "split": {
+            "best": 77.54716852689732,
+            "best_epoch": 23,
+            "bad": 18,
+            "done": true,
+            "last_epoch": 41,
+            "stop_reason": "patience18"
+          }
+        },
+        "atlas_current_trial": false
+      },
+      "report": {
+        "target": "POR",
+        "factor": "atom_conditional_routing",
+        "screening_fold": 5,
+        "arms": [
+          {
+            "target": "POR",
+            "mode": "coupled",
+            "factor": "atom_conditional_routing",
+            "screening_fold": 5,
+            "target_score": 77.5418119610383,
+            "reference_replacement_total": 80.3261437866984,
+            "delta_reference_target": 0.0058216934134947,
+            "best_epoch": 3,
+            "stopped_epoch": 21,
+            "stop_reason": "patience18",
+            "best_after_update": {
+              "epoch": 3,
+              "target_score": 77.5418119610383,
+              "reference_replacement_total": 80.3261437866984
+            },
+            "trainable_parameters": 20546,
+            "all144665_selected_predictions_restored_exactly": true,
+            "all_frozen_state_unchanged": true,
+            "gradient_scope": {
+              "input_gradient_norm": 2.599078470666427e-05,
+              "output_gradient_norm": 0.0035016597248613834,
+              "frozen_gradients_none": true,
+              "target_only": "POR",
+              "second_step": true
+            },
+            "factor_scope": {
+              "mode": "coupled",
+              "means_and_scales_exact": true,
+              "atom_increment_max": 0.11874863505363464,
+              "density_increment_max": 0.11874863505363464,
+              "increment_difference_mean": 0.0,
+              "default_probability_max_change": 0.01259872317314148,
+              "conditional_share_mean_change": 0.0014070316683501005,
+              "scope": "two training windows; increments relative to selected v28 paths"
+            },
+            "gradient_isolation": {
+              "atom_to_branch0": 1.630454659461975,
+              "atom_to_branch1": 1.8136417865753174,
+              "density_to_branch0": 8999.271484375,
+              "density_to_branch1": 7868.2841796875
+            },
+            "last_delta_parameter_change_L2": 3.3746800207572316,
+            "checkpoint": "outputs\\pure_dl_split_route_v29_POR_fold5\\coupled\\model_best.pt",
+            "complete_five_folds": false,
+            "remaining_folds_started": false
+          },
+          {
+            "target": "POR",
+            "mode": "split",
+            "factor": "atom_conditional_routing",
+            "screening_fold": 5,
+            "target_score": 77.54716852689732,
+            "reference_replacement_total": 80.3277507564561,
+            "delta_reference_target": 0.011178259272512037,
+            "best_epoch": 23,
+            "stopped_epoch": 41,
+            "stop_reason": "patience18",
+            "best_after_update": {
+              "epoch": 23,
+              "target_score": 77.54716852689732,
+              "reference_replacement_total": 80.3277507564561
+            },
+            "trainable_parameters": 20546,
+            "all144665_selected_predictions_restored_exactly": true,
+            "all_frozen_state_unchanged": true,
+            "gradient_scope": {
+              "input_gradient_norm": 3.090450627496466e-05,
+              "output_gradient_norm": 0.003663189709186554,
+              "frozen_gradients_none": true,
+              "target_only": "POR",
+              "second_step": true
+            },
+            "factor_scope": {
+              "mode": "split",
+              "means_and_scales_exact": true,
+              "atom_increment_max": 0.125,
+              "density_increment_max": 0.125,
+              "increment_difference_mean": 0.0715537965297699,
+              "default_probability_max_change": 0.019940733909606934,
+              "conditional_share_mean_change": 0.0024039431009441614,
+              "scope": "two training windows; increments relative to selected v28 paths"
+            },
+            "gradient_isolation": {
+              "atom_to_branch0": 0.5409156084060669,
+              "atom_to_branch1": 0.0,
+              "density_to_branch0": 0.0,
+              "density_to_branch1": 2553.192626953125
+            },
+            "last_delta_parameter_change_L2": 4.409438202833864,
+            "checkpoint": "outputs\\pure_dl_split_route_v29_POR_fold5\\split\\model_best.pt",
+            "complete_five_folds": false,
+            "remaining_folds_started": false
+          }
+        ],
+        "reference_scores": {
+          "POR": 77.53599026762481,
+          "PERM": 89.38243919006807,
+          "SW": 73.6564185196088,
+          "TOTAL": 80.32439727867435
+        },
+        "seconds": 272.6725670999949,
+        "peak_allocated_MiB": 717.47998046875,
+        "epoch_timing": [
+          {
+            "epoch": 1,
+            "active_modes": [
+              "coupled",
+              "split"
+            ],
+            "seconds": 7.729411300002539
+          },
+          {
+            "epoch": 2,
+            "active_modes": [
+              "coupled",
+              "split"
+            ],
+            "seconds": 7.513611199996376
+          },
+          {
+            "epoch": 3,
+            "active_modes": [
+              "coupled",
+              "split"
+            ],
+            "seconds": 7.6387050000048475
+          },
+          {
+            "epoch": 4,
+            "active_modes": [
+              "coupled",
+              "split"
+            ],
+            "seconds": 7.573197300000174
+          },
+          {
+            "epoch": 5,
+            "active_modes": [
+              "coupled",
+              "split"
+            ],
+            "seconds": 7.594241899998451
+          },
+          {
+            "epoch": 6,
+            "active_modes": [
+              "coupled",
+              "split"
+            ],
+            "seconds": 7.559876500003156
+          },
+          {
+            "epoch": 7,
+            "active_modes": [
+              "coupled",
+              "split"
+            ],
+            "seconds": 7.670740899993689
+          },
+          {
+            "epoch": 8,
+            "active_modes": [
+              "coupled",
+              "split"
+            ],
+            "seconds": 7.637691299998551
+          },
+          {
+            "epoch": 9,
+            "active_modes": [
+              "coupled",
+              "split"
+            ],
+            "seconds": 7.567934499995317
+          },
+          {
+            "epoch": 10,
+            "active_modes": [
+              "coupled",
+              "split"
+            ],
+            "seconds": 7.5425182999970275
+          },
+          {
+            "epoch": 11,
+            "active_modes": [
+              "coupled",
+              "split"
+            ],
+            "seconds": 7.617414299995289
+          },
+          {
+            "epoch": 12,
+            "active_modes": [
+              "coupled",
+              "split"
+            ],
+            "seconds": 7.56089449999854
+          },
+          {
+            "epoch": 13,
+            "active_modes": [
+              "coupled",
+              "split"
+            ],
+            "seconds": 7.597898899999564
+          },
+          {
+            "epoch": 14,
+            "active_modes": [
+              "coupled",
+              "split"
+            ],
+            "seconds": 7.495697400001518
+          },
+          {
+            "epoch": 15,
+            "active_modes": [
+              "coupled",
+              "split"
+            ],
+            "seconds": 7.507474599995476
+          },
+          {
+            "epoch": 16,
+            "active_modes": [
+              "coupled",
+              "split"
+            ],
+            "seconds": 7.401598700002069
+          },
+          {
+            "epoch": 17,
+            "active_modes": [
+              "coupled",
+              "split"
+            ],
+            "seconds": 7.533332099999825
+          },
+          {
+            "epoch": 18,
+            "active_modes": [
+              "coupled",
+              "split"
+            ],
+            "seconds": 7.51270089999889
+          },
+          {
+            "epoch": 19,
+            "active_modes": [
+              "coupled",
+              "split"
+            ],
+            "seconds": 7.570422700002382
+          },
+          {
+            "epoch": 20,
+            "active_modes": [
+              "coupled",
+              "split"
+            ],
+            "seconds": 6.339362299993809
+          },
+          {
+            "epoch": 21,
+            "active_modes": [
+              "coupled",
+              "split"
+            ],
+            "seconds": 6.02426579999883
+          },
+          {
+            "epoch": 22,
+            "active_modes": [
+              "split"
+            ],
+            "seconds": 4.929817999996885
+          },
+          {
+            "epoch": 23,
+            "active_modes": [
+              "split"
+            ],
+            "seconds": 4.887926600000355
+          },
+          {
+            "epoch": 24,
+            "active_modes": [
+              "split"
+            ],
+            "seconds": 4.851812100001553
+          },
+          {
+            "epoch": 25,
+            "active_modes": [
+              "split"
+            ],
+            "seconds": 4.9446613999971305
+          },
+          {
+            "epoch": 26,
+            "active_modes": [
+              "split"
+            ],
+            "seconds": 4.879090800000995
+          },
+          {
+            "epoch": 27,
+            "active_modes": [
+              "split"
+            ],
+            "seconds": 4.930413200003386
+          },
+          {
+            "epoch": 28,
+            "active_modes": [
+              "split"
+            ],
+            "seconds": 4.859252899994317
+          },
+          {
+            "epoch": 29,
+            "active_modes": [
+              "split"
+            ],
+            "seconds": 4.892886200002977
+          },
+          {
+            "epoch": 30,
+            "active_modes": [
+              "split"
+            ],
+            "seconds": 4.863810300004843
+          },
+          {
+            "epoch": 31,
+            "active_modes": [
+              "split"
+            ],
+            "seconds": 4.912291699998605
+          },
+          {
+            "epoch": 32,
+            "active_modes": [
+              "split"
+            ],
+            "seconds": 4.956134299995028
+          },
+          {
+            "epoch": 33,
+            "active_modes": [
+              "split"
+            ],
+            "seconds": 4.921561099996325
+          },
+          {
+            "epoch": 34,
+            "active_modes": [
+              "split"
+            ],
+            "seconds": 4.885456600000907
+          },
+          {
+            "epoch": 35,
+            "active_modes": [
+              "split"
+            ],
+            "seconds": 4.886887200002093
+          },
+          {
+            "epoch": 36,
+            "active_modes": [
+              "split"
+            ],
+            "seconds": 4.940591400001722
+          },
+          {
+            "epoch": 37,
+            "active_modes": [
+              "split"
+            ],
+            "seconds": 5.449197099995217
+          },
+          {
+            "epoch": 38,
+            "active_modes": [
+              "split"
+            ],
+            "seconds": 6.115026600004057
+          },
+          {
+            "epoch": 39,
+            "active_modes": [
+              "split"
+            ],
+            "seconds": 5.991027099997154
+          },
+          {
+            "epoch": 40,
+            "active_modes": [
+              "split"
+            ],
+            "seconds": 5.988410199999635
+          },
+          {
+            "epoch": 41,
+            "active_modes": [
+              "split"
+            ],
+            "seconds": 5.976731399998243
+          }
+        ],
+        "finished_at": "2026-09-29T10:09:17.474132+08:00",
+        "complete_five_folds": false,
+        "remaining_folds_started": false
+      }
+    },
+    {
+      "target": "PERM",
+      "id": "pure_dl_split_route_v29_PERM_fold5",
+      "state": {
+        "status": "complete",
+        "target": "PERM",
+        "pid": 47596,
+        "modes": {
+          "coupled": {
+            "best": 89.39672404936582,
+            "best_epoch": 2,
+            "bad": 18,
+            "done": true,
+            "last_epoch": 20,
+            "stop_reason": "patience18"
+          },
+          "split": {
+            "best": 89.38544866608686,
+            "best_epoch": 1,
+            "bad": 18,
+            "done": true,
+            "last_epoch": 19,
+            "stop_reason": "patience18"
+          }
+        },
+        "atlas_current_trial": false
+      },
+      "report": {
+        "target": "PERM",
+        "factor": "atom_conditional_routing",
+        "screening_fold": 5,
+        "arms": [
+          {
+            "target": "PERM",
+            "mode": "coupled",
+            "factor": "atom_conditional_routing",
+            "screening_fold": 5,
+            "target_score": 89.39672404936582,
+            "reference_replacement_total": 80.32939697942855,
+            "delta_reference_target": 0.014284859297745811,
+            "best_epoch": 2,
+            "stopped_epoch": 20,
+            "stop_reason": "patience18",
+            "best_after_update": {
+              "epoch": 2,
+              "target_score": 89.39672404936582,
+              "reference_replacement_total": 80.32939697942855
+            },
+            "trainable_parameters": 20546,
+            "all144665_selected_predictions_restored_exactly": true,
+            "all_frozen_state_unchanged": true,
+            "gradient_scope": {
+              "input_gradient_norm": 1.9849743694067e-05,
+              "output_gradient_norm": 0.002664960455149412,
+              "frozen_gradients_none": true,
+              "target_only": "PERM",
+              "second_step": true
+            },
+            "factor_scope": {
+              "mode": "coupled",
+              "means_and_scales_exact": true,
+              "atom_increment_max": 0.1245000883936882,
+              "density_increment_max": 0.1245000883936882,
+              "increment_difference_mean": 0.0,
+              "default_probability_max_change": 0.016237080097198486,
+              "conditional_share_mean_change": 0.012384300120174885,
+              "scope": "two training windows; increments relative to selected v28 paths"
+            },
+            "gradient_isolation": {
+              "atom_to_branch0": 0.5281606912612915,
+              "atom_to_branch1": 0.5837399363517761,
+              "density_to_branch0": 4695.22265625,
+              "density_to_branch1": 6911.97607421875
+            },
+            "last_delta_parameter_change_L2": 3.511243750653108,
+            "checkpoint": "outputs\\pure_dl_split_route_v29_PERM_fold5\\coupled\\model_best.pt",
+            "complete_five_folds": false,
+            "remaining_folds_started": false
+          },
+          {
+            "target": "PERM",
+            "mode": "split",
+            "factor": "atom_conditional_routing",
+            "screening_fold": 5,
+            "target_score": 89.38544866608686,
+            "reference_replacement_total": 80.32545059528093,
+            "delta_reference_target": 0.0030094760187893144,
+            "best_epoch": 1,
+            "stopped_epoch": 19,
+            "stop_reason": "patience18",
+            "best_after_update": {
+              "epoch": 1,
+              "target_score": 89.38544866608686,
+              "reference_replacement_total": 80.32545059528093
+            },
+            "trainable_parameters": 20546,
+            "all144665_selected_predictions_restored_exactly": true,
+            "all_frozen_state_unchanged": true,
+            "gradient_scope": {
+              "input_gradient_norm": 2.965164640045259e-05,
+              "output_gradient_norm": 0.003340218449011445,
+              "frozen_gradients_none": true,
+              "target_only": "PERM",
+              "second_step": true
+            },
+            "factor_scope": {
+              "mode": "split",
+              "means_and_scales_exact": true,
+              "atom_increment_max": 0.12126073241233826,
+              "density_increment_max": 0.11164916306734085,
+              "increment_difference_mean": 0.1269001066684723,
+              "default_probability_max_change": 0.004214972257614136,
+              "conditional_share_mean_change": -0.004179812502115965,
+              "scope": "two training windows; increments relative to selected v28 paths"
+            },
+            "gradient_isolation": {
+              "atom_to_branch0": 1.6328625679016113,
+              "atom_to_branch1": 0.0,
+              "density_to_branch0": 0.0,
+              "density_to_branch1": 9581.7255859375
+            },
+            "last_delta_parameter_change_L2": 3.4895042080906116,
+            "checkpoint": "outputs\\pure_dl_split_route_v29_PERM_fold5\\split\\model_best.pt",
+            "complete_five_folds": false,
+            "remaining_folds_started": false
+          }
+        ],
+        "reference_scores": {
+          "POR": 77.53599026762481,
+          "PERM": 89.38243919006807,
+          "SW": 73.6564185196088,
+          "TOTAL": 80.32439727867435
+        },
+        "seconds": 153.990123399999,
+        "peak_allocated_MiB": 718.146484375,
+        "epoch_timing": [
+          {
+            "epoch": 1,
+            "active_modes": [
+              "coupled",
+              "split"
+            ],
+            "seconds": 7.6273460000011255
+          },
+          {
+            "epoch": 2,
+            "active_modes": [
+              "coupled",
+              "split"
+            ],
+            "seconds": 7.154662600005395
+          },
+          {
+            "epoch": 3,
+            "active_modes": [
+              "coupled",
+              "split"
+            ],
+            "seconds": 7.195779499998025
+          },
+          {
+            "epoch": 4,
+            "active_modes": [
+              "coupled",
+              "split"
+            ],
+            "seconds": 7.237376299999596
+          },
+          {
+            "epoch": 5,
+            "active_modes": [
+              "coupled",
+              "split"
+            ],
+            "seconds": 7.179729899995436
+          },
+          {
+            "epoch": 6,
+            "active_modes": [
+              "coupled",
+              "split"
+            ],
+            "seconds": 7.105838999996195
+          },
+          {
+            "epoch": 7,
+            "active_modes": [
+              "coupled",
+              "split"
+            ],
+            "seconds": 7.15742489999684
+          },
+          {
+            "epoch": 8,
+            "active_modes": [
+              "coupled",
+              "split"
+            ],
+            "seconds": 7.273000100001809
+          },
+          {
+            "epoch": 9,
+            "active_modes": [
+              "coupled",
+              "split"
+            ],
+            "seconds": 7.182190299994545
+          },
+          {
+            "epoch": 10,
+            "active_modes": [
+              "coupled",
+              "split"
+            ],
+            "seconds": 7.194598299996869
+          },
+          {
+            "epoch": 11,
+            "active_modes": [
+              "coupled",
+              "split"
+            ],
+            "seconds": 7.075836099997105
+          },
+          {
+            "epoch": 12,
+            "active_modes": [
+              "coupled",
+              "split"
+            ],
+            "seconds": 7.214284300003783
+          },
+          {
+            "epoch": 13,
+            "active_modes": [
+              "coupled",
+              "split"
+            ],
+            "seconds": 7.1470736999981455
+          },
+          {
+            "epoch": 14,
+            "active_modes": [
+              "coupled",
+              "split"
+            ],
+            "seconds": 7.148986499996681
+          },
+          {
+            "epoch": 15,
+            "active_modes": [
+              "coupled",
+              "split"
+            ],
+            "seconds": 7.179983599999105
+          },
+          {
+            "epoch": 16,
+            "active_modes": [
+              "coupled",
+              "split"
+            ],
+            "seconds": 7.158531299995957
+          },
+          {
+            "epoch": 17,
+            "active_modes": [
+              "coupled",
+              "split"
+            ],
+            "seconds": 7.151707099998021
+          },
+          {
+            "epoch": 18,
+            "active_modes": [
+              "coupled",
+              "split"
+            ],
+            "seconds": 7.242515399993863
+          },
+          {
+            "epoch": 19,
+            "active_modes": [
+              "coupled",
+              "split"
+            ],
+            "seconds": 7.23112179999589
+          },
+          {
+            "epoch": 20,
+            "active_modes": [
+              "coupled"
+            ],
+            "seconds": 5.663710799999535
+          }
+        ],
+        "finished_at": "2026-09-29T10:07:18.794755+08:00",
+        "complete_five_folds": false,
+        "remaining_folds_started": false
+      }
+    },
+    {
+      "target": "SW",
+      "id": "pure_dl_split_route_v29_SW_fold5",
+      "state": {
+        "status": "complete",
+        "target": "SW",
+        "pid": 46916,
+        "modes": {
+          "coupled": {
+            "best": 73.6630827970656,
+            "best_epoch": 3,
+            "bad": 18,
+            "done": true,
+            "last_epoch": 21,
+            "stop_reason": "patience18"
+          },
+          "split": {
+            "best": 73.66244638047156,
+            "best_epoch": 6,
+            "bad": 18,
+            "done": true,
+            "last_epoch": 24,
+            "stop_reason": "patience18"
+          }
+        },
+        "atlas_current_trial": false
+      },
+      "report": {
+        "target": "SW",
+        "factor": "atom_conditional_routing",
+        "screening_fold": 5,
+        "arms": [
+          {
+            "target": "SW",
+            "mode": "coupled",
+            "factor": "atom_conditional_routing",
+            "screening_fold": 5,
+            "target_score": 73.6630827970656,
+            "reference_replacement_total": 80.32672977578423,
+            "delta_reference_target": 0.0066642774567924334,
+            "best_epoch": 3,
+            "stopped_epoch": 21,
+            "stop_reason": "patience18",
+            "best_after_update": {
+              "epoch": 3,
+              "target_score": 73.6630827970656,
+              "reference_replacement_total": 80.32672977578423
+            },
+            "trainable_parameters": 20546,
+            "all144665_selected_predictions_restored_exactly": true,
+            "all_frozen_state_unchanged": true,
+            "gradient_scope": {
+              "input_gradient_norm": 1.589391104062088e-05,
+              "output_gradient_norm": 0.0018631404964253306,
+              "frozen_gradients_none": true,
+              "target_only": "SW",
+              "second_step": true
+            },
+            "factor_scope": {
+              "mode": "coupled",
+              "means_and_scales_exact": true,
+              "atom_increment_max": 0.12458828091621399,
+              "density_increment_max": 0.12458828091621399,
+              "increment_difference_mean": 0.0,
+              "default_probability_max_change": 0.007218450307846069,
+              "conditional_share_mean_change": -0.011234553530812263,
+              "scope": "two training windows; increments relative to selected v28 paths"
+            },
+            "gradient_isolation": {
+              "atom_to_branch0": 1.904414176940918,
+              "atom_to_branch1": 2.2364614009857178,
+              "density_to_branch0": 8991.609375,
+              "density_to_branch1": 9843.52734375
+            },
+            "last_delta_parameter_change_L2": 3.53643368038776,
+            "checkpoint": "outputs\\pure_dl_split_route_v29_SW_fold5\\coupled\\model_best.pt",
+            "complete_five_folds": false,
+            "remaining_folds_started": false
+          },
+          {
+            "target": "SW",
+            "mode": "split",
+            "factor": "atom_conditional_routing",
+            "screening_fold": 5,
+            "target_score": 73.66244638047156,
+            "reference_replacement_total": 80.32650702997631,
+            "delta_reference_target": 0.006027860862758416,
+            "best_epoch": 6,
+            "stopped_epoch": 24,
+            "stop_reason": "patience18",
+            "best_after_update": {
+              "epoch": 6,
+              "target_score": 73.66244638047156,
+              "reference_replacement_total": 80.32650702997631
+            },
+            "trainable_parameters": 20546,
+            "all144665_selected_predictions_restored_exactly": true,
+            "all_frozen_state_unchanged": true,
+            "gradient_scope": {
+              "input_gradient_norm": 2.228563607786782e-05,
+              "output_gradient_norm": 0.002213879721239209,
+              "frozen_gradients_none": true,
+              "target_only": "SW",
+              "second_step": true
+            },
+            "factor_scope": {
+              "mode": "split",
+              "means_and_scales_exact": true,
+              "atom_increment_max": 0.12499713152647018,
+              "density_increment_max": 0.12461280822753906,
+              "increment_difference_mean": 0.09060004353523254,
+              "default_probability_max_change": 0.01841115951538086,
+              "conditional_share_mean_change": -0.009687995538115501,
+              "scope": "two training windows; increments relative to selected v28 paths"
+            },
+            "gradient_isolation": {
+              "atom_to_branch0": 1.3246428966522217,
+              "atom_to_branch1": 0.0,
+              "density_to_branch0": 0.0,
+              "density_to_branch1": 5360.93701171875
+            },
+            "last_delta_parameter_change_L2": 3.7643274578240904,
+            "checkpoint": "outputs\\pure_dl_split_route_v29_SW_fold5\\split\\model_best.pt",
+            "complete_five_folds": false,
+            "remaining_folds_started": false
+          }
+        ],
+        "reference_scores": {
+          "POR": 77.53599026762481,
+          "PERM": 89.38243919006807,
+          "SW": 73.6564185196088,
+          "TOTAL": 80.32439727867435
+        },
+        "seconds": 148.7354636999953,
+        "peak_allocated_MiB": 718.05078125,
+        "epoch_timing": [
+          {
+            "epoch": 1,
+            "active_modes": [
+              "coupled",
+              "split"
+            ],
+            "seconds": 7.1978488999957335
+          },
+          {
+            "epoch": 2,
+            "active_modes": [
+              "coupled",
+              "split"
+            ],
+            "seconds": 7.137923799993587
+          },
+          {
+            "epoch": 3,
+            "active_modes": [
+              "coupled",
+              "split"
+            ],
+            "seconds": 7.047437299996091
+          },
+          {
+            "epoch": 4,
+            "active_modes": [
+              "coupled",
+              "split"
+            ],
+            "seconds": 7.183244399995601
+          },
+          {
+            "epoch": 5,
+            "active_modes": [
+              "coupled",
+              "split"
+            ],
+            "seconds": 5.6703401999984635
+          },
+          {
+            "epoch": 6,
+            "active_modes": [
+              "coupled",
+              "split"
+            ],
+            "seconds": 5.723346500002663
+          },
+          {
+            "epoch": 7,
+            "active_modes": [
+              "coupled",
+              "split"
+            ],
+            "seconds": 5.60940909999772
+          },
+          {
+            "epoch": 8,
+            "active_modes": [
+              "coupled",
+              "split"
+            ],
+            "seconds": 5.74492370000371
+          },
+          {
+            "epoch": 9,
+            "active_modes": [
+              "coupled",
+              "split"
+            ],
+            "seconds": 5.685793500000727
+          },
+          {
+            "epoch": 10,
+            "active_modes": [
+              "coupled",
+              "split"
+            ],
+            "seconds": 5.724466600004234
+          },
+          {
+            "epoch": 11,
+            "active_modes": [
+              "coupled",
+              "split"
+            ],
+            "seconds": 5.749144800000067
+          },
+          {
+            "epoch": 12,
+            "active_modes": [
+              "coupled",
+              "split"
+            ],
+            "seconds": 5.66965099999652
+          },
+          {
+            "epoch": 13,
+            "active_modes": [
+              "coupled",
+              "split"
+            ],
+            "seconds": 5.599287200006074
+          },
+          {
+            "epoch": 14,
+            "active_modes": [
+              "coupled",
+              "split"
+            ],
+            "seconds": 5.704679800001031
+          },
+          {
+            "epoch": 15,
+            "active_modes": [
+              "coupled",
+              "split"
+            ],
+            "seconds": 5.727907200001937
+          },
+          {
+            "epoch": 16,
+            "active_modes": [
+              "coupled",
+              "split"
+            ],
+            "seconds": 5.634620500000892
+          },
+          {
+            "epoch": 17,
+            "active_modes": [
+              "coupled",
+              "split"
+            ],
+            "seconds": 5.762541800002509
+          },
+          {
+            "epoch": 18,
+            "active_modes": [
+              "coupled",
+              "split"
+            ],
+            "seconds": 5.690777399999206
+          },
+          {
+            "epoch": 19,
+            "active_modes": [
+              "coupled",
+              "split"
+            ],
+            "seconds": 5.799707099999068
+          },
+          {
+            "epoch": 20,
+            "active_modes": [
+              "coupled",
+              "split"
+            ],
+            "seconds": 5.699377700002515
+          },
+          {
+            "epoch": 21,
+            "active_modes": [
+              "coupled",
+              "split"
+            ],
+            "seconds": 5.675432800002454
+          },
+          {
+            "epoch": 22,
+            "active_modes": [
+              "split"
+            ],
+            "seconds": 4.53413630000432
+          },
+          {
+            "epoch": 23,
+            "active_modes": [
+              "split"
+            ],
+            "seconds": 4.658666999996058
+          },
+          {
+            "epoch": 24,
+            "active_modes": [
+              "split"
+            ],
+            "seconds": 4.74835709999752
+          }
+        ],
+        "finished_at": "2026-09-29T10:11:12.390859+08:00",
+        "complete_five_folds": false,
+        "remaining_folds_started": false
+      }
+    }
+  ],
+  "all_complete": true,
+  "reference_scores": {
+    "POR": 77.53599026762481,
+    "PERM": 89.38243919006807,
+    "SW": 73.6564185196088,
+    "TOTAL": 80.32439727867435
+  }
+}

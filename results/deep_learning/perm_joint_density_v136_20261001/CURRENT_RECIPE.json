@@ -1,0 +1,37 @@
+{
+  "scores": {
+    "POR": 77.86909037191316,
+    "PERM": 89.38793609578403,
+    "SW": 74.12175282815758,
+    "TOTAL": 80.5891182349535
+  },
+  "total_training_stages": 5,
+  "source_stage_counted": true,
+  "dependencies": [
+    "original source",
+    "v113 forward",
+    "v134 wide128 conditional density POR",
+    "v136 private PERM conditional density",
+    "v104 SW"
+  ],
+  "POR": {
+    "checkpoint": "outputs/pure_dl_por_joint_density_width_v134_fold5/wide128/model_best.pt",
+    "sha256": "b00af2b166e76cec244ed90a86dc9815a19ad79c658c77885477a31d32513df1",
+    "module": "por_joint_density_width_v134",
+    "stage": "wide128"
+  },
+  "PERM": {
+    "checkpoint": "outputs/pure_dl_perm_joint_density_v136_fold5/perm_conditional/model_best.pt",
+    "sha256": "ff2bd7c10b7f704d25a67989b881cb6643eee0bfd19ae322e5d58d5956ac1a84",
+    "module": "perm_joint_density_v136",
+    "stage": "perm_conditional"
+  },
+  "SW": {
+    "checkpoint": "outputs/pure_dl_compact_frequency_v104_fold5/local/model_best.pt"
+  },
+  "screening_fold": 5,
+  "complete_five_folds": false,
+  "strict_808_passed": false,
+  "strict_channel_gain_025": true,
+  "previous_recipe_path": "results/deep_learning/por_joint_density_width_v134_20261001/CURRENT_RECIPE.json"
+}

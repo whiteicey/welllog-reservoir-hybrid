@@ -1,0 +1,9 @@
+{
+  "pid": 79892,
+  "command": [
+    "C:\\Users\\z5364\\.conda\\envs\\normal\\python.exe",
+    "-u",
+    "experiments/pure_dl/run_overlap_fullcv_v97.py",
+    "--takeover"
+  ]
+}

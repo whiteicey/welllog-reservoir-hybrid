@@ -1,0 +1,61 @@
+{
+  "project": "sw_value_coordinate_v280_20261002",
+  "scope": "obsolete-study",
+  "weights_retained": false,
+  "cleanup": "Obsolete artifacts removed by explicit user request. These are historical scores, not newly verified training.",
+  "results": [
+    {
+      "source": "PAIRED_FINAL.json",
+      "result": {
+        "reports": {
+          "ordered": {
+            "stage": "ordered",
+            "target": "SW",
+            "target_score": 74.13072684071312,
+            "initial_score": 74.12175268976877,
+            "against_initial": 0.008974150944354164,
+            "against_v97_target": -0.011453063953581477,
+            "best_epoch": 5,
+            "stopped_epoch": 19,
+            "validation_rows": 144665,
+            "predictions_reproduced_exactly": true,
+            "frozen_parameters_exact": true,
+            "seconds": 249.53685360000236,
+            "peak_MiB": 1141.03125,
+            "complete_five_folds": false,
+            "early_terminated": false
+          },
+          "shuffled": {
+            "stage": "shuffled",
+            "target": "SW",
+            "target_score": 74.12870529524258,
+            "initial_score": 74.12175268976877,
+            "against_initial": 0.006952605473813378,
+            "against_v97_target": -0.013474609424122264,
+            "best_epoch": 4,
+            "stopped_epoch": 18,
+            "validation_rows": 144665,
+            "predictions_reproduced_exactly": true,
+            "frozen_parameters_exact": true,
+            "seconds": 243.3948336999747,
+            "peak_MiB": 1141.03125,
+            "complete_five_folds": false,
+            "early_terminated": false
+          }
+        },
+        "paired_delta": 0.0020215454705407865,
+        "ordered_minus_retained252": -0.018501367098949117,
+        "adopted": false,
+        "reason": "Smallpairgain comes from defaultstratum; orderedcontinuous17.47528 beloworiginal17.63189 andshuffled17.48033; no useful continuousreadout gain, closeconfig.",
+        "complete_five_folds": false,
+        "independent_disk_reload": false,
+        "remaining_folds_started": false,
+        "keep_positive_and_control_pending_mechanism_interpretation": false,
+        "checkpoint_cleanup": "CLEANUP_MANIFEST.json"
+      }
+    }
+  ],
+  "cleanup_completed": true,
+  "deleted_files": 11,
+  "deleted_bytes": 6954307
+}

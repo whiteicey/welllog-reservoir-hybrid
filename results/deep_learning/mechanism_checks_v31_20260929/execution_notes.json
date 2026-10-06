@@ -1,0 +1,16 @@
+{
+  "observed_at": "2026-09-29T11:12:27.340579+08:00",
+  "training_failures": [],
+  "active_jobs": [],
+  "all_four_complete": true,
+  "adopted_disk_replays": [
+    "POR"
+  ],
+  "atlas_values_checked": true,
+  "historical_sources_unchanged": true,
+  "tool_notes": [
+    "One bounded text read had an insufficient file-size cap; reissued successfully. No training impact."
+  ],
+  "no_remaining_folds": true,
+  "old_delivery_unchanged": true
+}

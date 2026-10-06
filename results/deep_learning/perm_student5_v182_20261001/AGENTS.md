@@ -1,0 +1,1 @@
+维护PROJECTS/README四项/EXPLORATIONS/图谱。原第五折/9曲线/Q50/ownPERM/80-14/max2GPU。t5 PDF/CDF/utility/decoder一致，原网格动作不变，明确初始函数不同、log空间矩匹配不是物理矩匹配。无174训练权重，总5阶段；原子last、显式恢复、无自动补折，旧产物保留。

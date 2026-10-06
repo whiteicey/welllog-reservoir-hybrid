@@ -1,0 +1,115 @@
+"""Finalize the predefined DropKey rates and historical controls and retain only demonstrated gains."""
+import gc,hashlib,json,time
+from datetime import datetime
+import numpy as np
+import torch
+from sw_dropout_rate_v76 import ROOT,STUDY,PREVIOUS,MODES,Network,Evaluator,load_data,reference_prediction,CONTROL,ZERO
+from run_retrieval_smooth_v36 import jobs,append
+from finish_all_heads_v26 import diagnostics,native
+from train_dual8222_heads80 import atomic_json,atomic_array
+from train import metric
+
+def read(p):return json.loads(p.read_text(encoding='utf-8-sig'))
+
+def main():
+    if jobs():raise RuntimeError('Training active')
+    start=time.perf_counter();old=read(PREVIOUS/'CURRENT_RECIPE.json');reference=reference_prediction()
+    with np.load(ROOT/'outputs/pure_dl_independent_v8_selected_fold5/oof.npz') as z:
+        truth=z['truth'][z['fold']==4].copy();wells=z['well'][z['fold']==4].copy()
+    refs=metric(truth,reference);assert truth.shape==reference.shape==(144665,3)
+    assert all(abs(refs[k]-v)<1e-9 for k,v in old['scores'].items())
+    historical=[]
+    for name,directory in (('p00',ZERO),('p10',CONTROL)):
+        hcfg=read(directory/'config.json');hrep=read(directory/'fold_5_report.json');hini=read(directory/'initial.json')
+        for n,h in hcfg['source_hashes'].items():assert hashlib.sha256((ROOT/'experiments/pure_dl'/n).read_bytes()).hexdigest()==h,n
+        hp=np.load(directory/'channel_pred.npy');tmp=reference.copy();tmp[:,2]=hp
+        assert abs(metric(truth,tmp)['SW']-hrep['target_score'])<1e-9
+        historical.append(dict(mode=name,report=hrep,initial=hini,config=hcfg))
+    hcontrol=historical[1];control_pred=np.load(CONTROL/'channel_pred.npy');zero_pred=np.load(ZERO/'channel_pred.npy')
+    compared_fields=('trainable_parameters','input_features','window_length','central_supervised_points','validation_stride','validation_batch','quality','decoder','density_components','epochs','patience','minimum_epochs','batch_size','steps_per_epoch','seed','lr','eta_min','weight_decay','clip_norm','training_rows','validation_rows','bank_manifest')
+    rows=[];preds={};times=[];hashes=[]
+    for mode in MODES:
+        out=ROOT/f'outputs/pure_dl_sw_dropout_rate_v76_SW_{mode}_fold5'
+        cfg=read(out/'config.json');rep=read(out/'fold_5_report.json');initial=read(out/'initial.json')
+        for n,h in cfg['source_hashes'].items():assert hashlib.sha256((ROOT/'experiments/pure_dl'/n).read_bytes()).hexdigest()==h,n
+        assert all(cfg[k]==hcontrol['config'][k] for k in compared_fields)
+        assert cfg['initialization']['sha256']==hcontrol['config']['initialization']['sha256']
+        assert len(cfg['bank_manifest']['train_wells'])==64 and not cfg['bank_manifest']['validation_fit']
+        assert initial['initial_head_prior_only'] and not initial['all144665_parent_exact'] and rep['all144665_selected_predictions_restored_exactly']
+        assert all(v>0 for v in rep['gradient_scope']['gradient_norms'].values())
+        pred=np.load(out/'channel_pred.npy');diag=diagnostics(truth,reference,pred,wells,'SW')
+        assert abs(diag['scores']['SW']-rep['target_score'])<1e-9
+        history=read(out/'validation_history.json');cp=reference.copy();cp[:,2]=control_pred;zp=reference.copy();zp[:,2]=zero_pred
+        rows.append(dict(mode=mode,report=rep,initial=initial,diagnostics=diag,versus_p10=diagnostics(truth,cp,pred,wells,'SW'),versus_p00=diagnostics(truth,zp,pred,wells,'SW'),best_after_update=max(history,key=lambda x:x['target_score'])))
+        hashes.append((cfg['initial_state_sha256'],initial['initial_prediction_sha256']));preds[mode]=pred
+        launch=read(out/'launch.json');times.append(dict(mode=mode,start=launch['started_at'],end=rep['finished_at'],seconds=rep['seconds'],peak_allocated_MiB=rep['peak_allocated_MiB']))
+    assert hashes[0]==hashes[1]==(hcontrol['config']['initial_state_sha256'],hcontrol['initial']['initial_prediction_sha256'])
+    assert hashes[0]==(historical[0]['config']['initial_state_sha256'],historical[0]['initial']['initial_prediction_sha256'])
+    best=max(rows,key=lambda x:x['report']['target_score']);adopt=best['report']['target_score']>refs['SW']+1e-9
+    control=reference.copy();control[:,2]=control_pred;contrast=diagnostics(truth,control,preds[best['mode']],wells,'SW')
+    retained={best['mode']} if adopt else set()
+    retained.update(row['mode'] for row in rows if row['versus_p10']['channel_delta']>0)
+    combined=reference.copy();choices=[dict(c) for c in old['choices']];verification=[]
+    if retained:
+        torch.set_num_threads(3);torch.backends.cudnn.benchmark=False;torch.use_deterministic_algorithms(True,warn_only=True)
+        data,meta=load_data()
+        for mode in sorted(retained):
+            rep=next(r['report'] for r in rows if r['mode']==mode);file=ROOT/rep['checkpoint']
+            model=Network(mode,meta).cuda();saved=torch.load(file,map_location='cpu',weights_only=False);model.load_state_dict(saved['state_dict'],strict=True)
+            pred,score,_=Evaluator(data,meta,2,reference)(model)
+            assert np.array_equal(pred,preds[mode]) and abs(score-rep['target_score'])<1e-9
+            verification.append(dict(mode=mode,rows=len(pred),raw_disk_replay_exact=True,checkpoint_sha256=hashlib.sha256(file.read_bytes()).hexdigest()))
+            if adopt and mode==best['mode']:
+                combined[:,2]=pred
+                choice=dict(target='SW',mode=mode,key='v76_SW_'+mode,model_module='sw_dropout_rate_v76',checkpoint=rep['checkpoint'],target_score=score,best_epoch=rep['best_epoch'],builder='load_data; Network(mode,metadata); saved state_dict; Evaluator c=2; unchanged Gaussian decoding',parent_recipe=str((PREVIOUS/'CURRENT_RECIPE.json').relative_to(ROOT)))
+                choices=[choice if c['target']=='SW' else c for c in choices]
+            del model,saved;gc.collect();torch.cuda.empty_cache()
+    scores=metric(truth,combined)
+    result=native(dict(reference_scores=refs,selected_scores=scores,delta_reference_TOTAL=scores['TOTAL']-refs['TOTAL'],candidates=rows,adopted=adopt,selected_mode=best['mode'] if adopt else None,
+        best_new_minus_p10=contrast,best_new_mode=best['mode'],historical_controls=[dict(mode=h['mode'],report=h['report'],initial=h['initial'],configuration_path=str((directory/'config.json').relative_to(ROOT)),configuration_sha256=hashlib.sha256((directory/'config.json').read_bytes()).hexdigest()) for h,directory in zip(historical,(ZERO,CONTROL))],historical_matched_fields=list(compared_fields),post_update_best_new_minus_p10=best['best_after_update']['target_score']-hcontrol['report']['target_score'],
+        initial_state_and_prediction_equal=True,retained=sorted(retained),verification=verification,actual_fixed_three_column_scoring=True,rows=144665,screening_fold=5,
+        strict805_qualified=scores['TOTAL']>80.5,complete_five_folds=False,remaining_folds_started=False,finished_at=datetime.now().astimezone().isoformat()))
+    atomic_array(STUDY/'assembled_pred.npy',combined);atomic_json(STUDY/'assembled_report.json',result)
+    recipe=dict(old);recipe.update(scores=native(scores),choices=choices,reference_recipe=str((PREVIOUS/'CURRENT_RECIPE.json').relative_to(ROOT)));atomic_json(STUDY/'CURRENT_RECIPE.json',recipe)
+    events=[]
+    for t in times:events.extend([(datetime.fromisoformat(t['start']),1),(datetime.fromisoformat(t['end']),-1)])
+    live=peak=0
+    for _,d in sorted(events):live+=d;peak=max(peak,live)
+    timing=dict(candidates=times,first_launch_to_last_completion_seconds=(max(t for t,_ in events)-min(t for t,_ in events)).total_seconds(),peak_process_concurrency=peak,finalization_seconds=time.perf_counter()-start,scope='loading/preprocessing/warmup/training/evaluation/launch gap included; authoring and finalization separate')
+    atomic_json(STUDY/'timing.json',timing)
+    deleted=[];manifest=STUDY/'deletion_manifest.json'
+    if manifest.exists():deleted=read(manifest)['deleted']
+    for mode in MODES:
+        out=(ROOT/f'outputs/pure_dl_sw_dropout_rate_v76_SW_{mode}_fold5').resolve()
+        assert out.parent==(ROOT/'outputs').resolve() and read(out/'runtime_status.json')['status']=='complete'
+        if mode not in retained:
+            for name in ('model_best.pt','last_state.pt'):
+                file=(out/name).resolve();assert file.parent==out
+                if file.exists():
+                    deleted.append(dict(path=str(file.relative_to(ROOT)),bytes=file.stat().st_size,sha256=hashlib.sha256(file.read_bytes()).hexdigest()))
+                    atomic_json(manifest,dict(deleted=deleted,status='planned'));file.unlink()
+        atomic_json(out/'candidate_status.json',dict(retained=mode in retained,no_automatic_resume=True,reason='absolute or matched gain' if mode in retained else 'no demonstrated gain; original v56 preserved'))
+    atomic_json(manifest,dict(deleted=deleted,bytes=sum(x['bytes'] for x in deleted),status='complete',retained=sorted(retained)))
+    lines=['# v76 SW失活强度结果','',f"固定第五折TOTAL {refs['TOTAL']:.12f} → {scores['TOTAL']:.12f}。",'',
+        '|模式|初始SW|训练后最高SW|含起点SW|最佳/停止轮|','|---|---:|---:|---:|---|']
+    for row in rows:
+        r=row['report'];lines.append(f"|{row['mode']}|{row['initial']['target_score']:.12f}|{row['best_after_update']['target_score']:.12f}|{r['target_score']:.12f}|{r['best_epoch']}/{r['stopped_epoch']}|")
+    for h in historical:
+        r=h['report'];lines.append(f"|{h['mode']}历史|{h['initial']['target_score']:.12f}|{r['target_score']:.12f}|{r['target_score']:.12f}|{r['best_epoch']}/{r['stopped_epoch']}|")
+    lines+=['','## 探索与验证','同v56 additive第11轮骨干/FiLM及重置训练先验，同839481参数。仅单前向DropKey概率5%/20%不同，历史10%/0%已完成控制不重跑；参数、初始全点预测、原数据/Q50/预算/优化与源checkpoint核对一致。4层同随机抽样次数，验证完整上下文，无新数据/标签输入/解码改变。',
+        '实际骨干/FF/FiLM/输出梯度、最佳全点恢复、源码哈希、真实三列评分已核验。新正候选原始输入磁盘重建：'+str(verification),
+        '', '## 收益与不继续',f"最佳新候选{best['mode']}-历史10%含起点差{contrast['channel_delta']:+.12f}；相对0%与当前冠军的每项差见assembled_report。采用={result['selected_mode']}；保留={sorted(retained)}。",
+        f"子群实测：默认SW差{contrast['populations']['default']['channel_delta']:+.12f}，数值SW差{contrast['populations']['numeric']['channel_delta']:+.12f}，井胜/负{contrast['well_wins']}/{contrast['well_losses']}。整体配对收益不代表数值预测也改善，不把开发折调参诊断当独立显著性证明。",
+        '若两项均不优于历史10%，停止本概率细扫并保留原v74正候选，不泛化全部正则化。局部收益与当前冠军绝对收益区分，反复开发折不是独立泛化证明。',
+        '', '## 耗时与未完成',json.dumps(timing,ensure_ascii=False,indent=2),f"删除{len(deleted)}负检查点共{sum(x['bytes'] for x in deleted)}字节，清单先写后删，原v56正控制和交付不改。",
+        'max80/pat18，早停实际轮数见表；未启动其他折/旧队列。严格第五>80.5与完整原五折OOF>82仍待达成；后续换思路，目标完成后独立井验证和新目录交付。']
+    (STUDY/'FINAL.md').write_text('\n'.join(lines)+'\n',encoding='utf-8')
+    marker='## v76最终结果';note=marker+f"\n两项完成，TOTAL={scores['TOTAL']:.12f}；最佳新候选-历史10% SW={contrast['channel_delta']:+.12f}，最佳新模式={best['mode']}；采用={result['selected_mode']}，保留={sorted(retained)}。负权重已清理，原模型/交付保持，无其他折，目标未完成。详见sw_dropout_rate_v76_20260930/FINAL.md。"
+    for path in (ROOT.parent/'PROJECTS.md',ROOT/'PROJECTS.md',STUDY/'PROJECTS.md',STUDY/'README.md',ROOT/'docs/deep_learning/atlas/PROJECTS.md'):append(path,marker,note)
+    for mode in MODES:
+        for name in ('PROJECTS.md','README.md'):append(ROOT/f'outputs/pure_dl_sw_dropout_rate_v76_SW_{mode}_fold5'/name,marker,note)
+    append(ROOT.parent/'AGENTS.md','## v76完成状态',note.replace(marker,'## v76完成状态'))
+    append(ROOT/'EXPLORATIONS.md','v76完成：','- v76完成：'+note+' [结果](results/deep_learning/sw_dropout_rate_v76_20260930/FINAL.md)')
+    print(json.dumps(result|dict(candidates='see assembled_report.json',historical_controls='see assembled_report.json',timing=timing)),flush=True)
+
+if __name__=='__main__':main()

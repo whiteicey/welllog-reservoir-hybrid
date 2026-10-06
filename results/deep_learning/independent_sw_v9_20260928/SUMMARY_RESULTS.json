@@ -1,0 +1,329 @@
+{
+  "project": "independent_sw_v9_20260928",
+  "scope": "obsolete-study",
+  "weights_retained": false,
+  "cleanup": "Obsolete artifacts removed by explicit user request. These are historical scores, not newly verified training.",
+  "results": [
+    {
+      "source": "assembled_report.json",
+      "result": {
+        "fold": 5,
+        "screening_fold": 5,
+        "scores": {
+          "POR": 77.44891570750882,
+          "PERM": 89.3475027344081,
+          "SW": 73.62238476712884,
+          "TOTAL": 80.27413533779057
+        },
+        "reference_scores": {
+          "POR": 77.44891570750882,
+          "PERM": 89.3475027344081,
+          "SW": 73.62238476712884,
+          "TOTAL": 80.27413533779057
+        },
+        "delta_reference": 0.0,
+        "selected_new_SW": false,
+        "choices": [
+          {
+            "target": "POR",
+            "key": "POR_dual",
+            "architecture": "dual",
+            "target_score": 77.44891570750882,
+            "best_epoch": 0,
+            "checkpoint": "outputs/pure_dl_independent_v8_POR_dual80_fold5/model_best.pt",
+            "model_module": "independent_channels_v8"
+          },
+          {
+            "target": "PERM",
+            "key": "PERM_dual",
+            "architecture": "dual",
+            "target_score": 89.3475027344081,
+            "best_epoch": 0,
+            "checkpoint": "outputs/pure_dl_independent_v8_PERM_dual80_fold5/model_best.pt",
+            "model_module": "independent_channels_v8"
+          },
+          {
+            "target": "SW",
+            "key": "SW_dual",
+            "architecture": "dual",
+            "target_score": 73.62238476712884,
+            "best_epoch": 0,
+            "checkpoint": "outputs/pure_dl_independent_v8_SW_dual80_fold5/model_best.pt",
+            "model_module": "independent_channels_v8"
+          }
+        ],
+        "three_private_models": true,
+        "no_shared_parameter_storage": true,
+        "all144665rows_reloaded_exactly": true,
+        "POR_PERM_unchanged_exactly": true,
+        "per_well": [
+          {
+            "well": 7,
+            "n": 10219,
+            "TOTAL_delta": 0.0,
+            "SW_delta": 0.0
+          },
+          {
+            "well": 8,
+            "n": 9011,
+            "TOTAL_delta": 0.0,
+            "SW_delta": 0.0
+          },
+          {
+            "well": 14,
+            "n": 12078,
+            "TOTAL_delta": 0.0,
+            "SW_delta": 0.0
+          },
+          {
+            "well": 16,
+            "n": 8149,
+            "TOTAL_delta": 0.0,
+            "SW_delta": 0.0
+          },
+          {
+            "well": 25,
+            "n": 7739,
+            "TOTAL_delta": 0.0,
+            "SW_delta": 0.0
+          },
+          {
+            "well": 34,
+            "n": 10913,
+            "TOTAL_delta": 0.0,
+            "SW_delta": 0.0
+          },
+          {
+            "well": 35,
+            "n": 8348,
+            "TOTAL_delta": 0.0,
+            "SW_delta": 0.0
+          },
+          {
+            "well": 37,
+            "n": 9939,
+            "TOTAL_delta": 0.0,
+            "SW_delta": 0.0
+          },
+          {
+            "well": 50,
+            "n": 11874,
+            "TOTAL_delta": 0.0,
+            "SW_delta": 0.0
+          },
+          {
+            "well": 54,
+            "n": 9630,
+            "TOTAL_delta": 0.0,
+            "SW_delta": 0.0
+          },
+          {
+            "well": 63,
+            "n": 5639,
+            "TOTAL_delta": 0.0,
+            "SW_delta": 0.0
+          },
+          {
+            "well": 69,
+            "n": 9120,
+            "TOTAL_delta": 0.0,
+            "SW_delta": 0.0
+          },
+          {
+            "well": 71,
+            "n": 4709,
+            "TOTAL_delta": 0.0,
+            "SW_delta": 0.0
+          },
+          {
+            "well": 72,
+            "n": 9559,
+            "TOTAL_delta": 0.0,
+            "SW_delta": 0.0
+          },
+          {
+            "well": 76,
+            "n": 7109,
+            "TOTAL_delta": 0.0,
+            "SW_delta": 0.0
+          },
+          {
+            "well": 79,
+            "n": 10629,
+            "TOTAL_delta": 0.0,
+            "SW_delta": 0.0
+          }
+        ],
+        "well_wins": 0,
+        "well_losses": 0,
+        "exploratory_selection_unadjusted_95": [
+          0.0,
+          0.0
+        ],
+        "matched_difference": {
+          "SW": 0.0,
+          "TOTAL_equivalent": 0.0
+        },
+        "candidate_diagnostics": [
+          {
+            "mode": "ce",
+            "report": {
+              "fold": 5,
+              "screening_fold": 5,
+              "target": "SW",
+              "mode": "ce",
+              "scores": {
+                "SW": 73.62238476712884
+              },
+              "target_score": 73.62238476712884,
+              "initial_target_score": 73.62238476712884,
+              "delta_initial": 0.0,
+              "delta_prior_SW": 0.0,
+              "reference_replacement_total": 80.27413533779057,
+              "TOTAL_scope": "fixed validated v8 POR/PERM plus currentSW;final disk replay pending",
+              "best_epoch": 0,
+              "stopped_epoch": 18,
+              "trainable_parameters": 82048,
+              "new_TCN_backbone_parameter_change_L2_before_best_restore": 6.964140681483168,
+              "frozen_prior_exactly_unchanged": true,
+              "all144665target_predictions_restored_exactly": true,
+              "other_target_models_unchanged": true,
+              "strict805_passed_diagnostic": false,
+              "complete_five_folds": false,
+              "remaining_folds_started": false,
+              "seconds": 215.1587924999767,
+              "peak_gpu_allocated_mib": 980.95703125,
+              "finished_at": "2026-09-28T11:58:16.745353+08:00"
+            },
+            "population_decomposition": {
+              "true_default": {
+                "n": 100786,
+                "SW_delta": 0.0,
+                "TOTAL_contribution": 0.0
+              },
+              "true_nondefault": {
+                "n": 43879,
+                "SW_delta": 0.0,
+                "TOTAL_contribution": 0.0
+              }
+            }
+          },
+          {
+            "mode": "ce_utility",
+            "report": {
+              "fold": 5,
+              "screening_fold": 5,
+              "target": "SW",
+              "mode": "ce_utility",
+              "scores": {
+                "SW": 73.62238476712884
+              },
+              "target_score": 73.62238476712884,
+              "initial_target_score": 73.62238476712884,
+              "delta_initial": 0.0,
+              "delta_prior_SW": 0.0,
+              "reference_replacement_total": 80.27413533779057,
+              "TOTAL_scope": "fixed validated v8 POR/PERM plus currentSW;final disk replay pending",
+              "best_epoch": 0,
+              "stopped_epoch": 18,
+              "trainable_parameters": 82048,
+              "new_TCN_backbone_parameter_change_L2_before_best_restore": 6.909001423286553,
+              "frozen_prior_exactly_unchanged": true,
+              "all144665target_predictions_restored_exactly": true,
+              "other_target_models_unchanged": true,
+              "strict805_passed_diagnostic": false,
+              "complete_five_folds": false,
+              "remaining_folds_started": false,
+              "seconds": 215.2854225000483,
+              "peak_gpu_allocated_mib": 980.95703125,
+              "finished_at": "2026-09-28T11:58:16.870328+08:00"
+            },
+            "population_decomposition": {
+              "true_default": {
+                "n": 100786,
+                "SW_delta": 0.0,
+                "TOTAL_contribution": 0.0
+              },
+              "true_nondefault": {
+                "n": 43879,
+                "SW_delta": 0.0,
+                "TOTAL_contribution": 0.0
+              }
+            }
+          }
+        ],
+        "timing": [
+          {
+            "target": "POR",
+            "seconds_full_validation": 2.25197860004846
+          },
+          {
+            "target": "PERM",
+            "seconds_full_validation": 1.158801499987021
+          },
+          {
+            "target": "SW",
+            "seconds_full_validation": 1.0695115000125952
+          }
+        ],
+        "setup_and_replay_seconds": 44.17370869999286,
+        "completed_five_folds": false,
+        "remaining_folds_started": false,
+        "screening_threshold": 80.5,
+        "screening_passed": false,
+        "development_selection": true,
+        "limitations": "Repeated development fifth; pretrained prior;SW bound and KL not separately ablated;no training-resume equivalence test.",
+        "finished_at": "2026-09-28T12:02:17.041218+08:00"
+      }
+    },
+    {
+      "source": "CURRENT_RECIPE.json",
+      "result": {
+        "scores": {
+          "POR": 77.44891570750882,
+          "PERM": 89.3475027344081,
+          "SW": 73.62238476712884,
+          "TOTAL": 80.27413533779057
+        },
+        "choices": [
+          {
+            "target": "POR",
+            "key": "POR_dual",
+            "architecture": "dual",
+            "target_score": 77.44891570750882,
+            "best_epoch": 0,
+            "checkpoint": "outputs/pure_dl_independent_v8_POR_dual80_fold5/model_best.pt",
+            "model_module": "independent_channels_v8"
+          },
+          {
+            "target": "PERM",
+            "key": "PERM_dual",
+            "architecture": "dual",
+            "target_score": 89.3475027344081,
+            "best_epoch": 0,
+            "checkpoint": "outputs/pure_dl_independent_v8_PERM_dual80_fold5/model_best.pt",
+            "model_module": "independent_channels_v8"
+          },
+          {
+            "target": "SW",
+            "key": "SW_dual",
+            "architecture": "dual",
+            "target_score": 73.62238476712884,
+            "best_epoch": 0,
+            "checkpoint": "outputs/pure_dl_independent_v8_SW_dual80_fold5/model_best.pt",
+            "model_module": "independent_channels_v8"
+          }
+        ],
+        "shared_parameters_across_targets": false,
+        "reference_model_construction": "outputs\\pure_dl_dual8222_v5_location_point3280_fold5\\readout_checkpoint.pt",
+        "preprocessing_source": "outputs\\pure_dl_paired_local_context_router80_sequence\\fold_5.pt",
+        "old_delivery_unchanged": true,
+        "complete_five_folds": false,
+        "no_automatic_promotion": true
+      }
+    }
+  ],
+  "cleanup_completed": true,
+  "deleted_files": 4,
+  "deleted_bytes": 23851
+}

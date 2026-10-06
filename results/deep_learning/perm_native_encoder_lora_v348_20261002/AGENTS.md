@@ -1,0 +1,1 @@
+Original fifth pureDL native encoder study. Maintain PROJECTS.md and README four fields. Original154only; one addedPERMstage/max8,80/14,max2GPU. Freeze old parameter values; native function may change via new enc2 LoRA. No automatic otherfolds or queues.

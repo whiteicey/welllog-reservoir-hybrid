@@ -1,0 +1,18 @@
+{
+  "observed_at": "2026-09-29T09:39:03.449198+08:00",
+  "all_six_completed": true,
+  "adopted_targets_disk_reloaded": [
+    "POR",
+    "PERM",
+    "SW"
+  ],
+  "atlas_values_verified": true,
+  "active_jobs": [],
+  "new_training_launched_this_closeout": false,
+  "training_source_changed": false,
+  "tool_notes": [
+    "Bounded read retried with adequate byte cap.",
+    "Original curate.py edit: exact snippet mismatch then content-protection block. Original unchanged. Used separate curate_champion_route_v28.py and build_atlas.py.",
+    "One final metadata inspection had shell quoting failure before execution; rerun via encoded Python. No training impact."
+  ]
+}

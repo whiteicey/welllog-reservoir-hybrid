@@ -1,0 +1,20 @@
+{
+  "total_training_stages": 5,
+  "source_sha256": "45a09476e3126820688420579c100c86e0e4f45df335904380a298cf5f66b9a9",
+  "parent_sha256": "94f56aa91b2e56073aa496826f9666f269b35e88545723b9d22d7aba2e12673d",
+  "parent_POR": 77.54045432673898,
+  "candidates": [
+    "joint_rps"
+  ],
+  "stages": [
+    "original source",
+    "v113 mixed POR",
+    "v151 jointRPS head",
+    "v136 PERM",
+    "v104 SW"
+  ],
+  "absolute_control_POR": 77.9121028885816,
+  "remaining_folds_started": false,
+  "same_capacity_as_v140": true,
+  "rps_coefficient": 1.0
+}

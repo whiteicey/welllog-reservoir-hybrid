@@ -1,0 +1,149 @@
+{
+  "observed_at": "2026-09-27T23:29:39.327479+08:00",
+  "completed_A6": {
+    "fold": 5,
+    "screening_fold": 5,
+    "scores": {
+      "POR": 77.80898049649085,
+      "PERM": 89.74176994439831,
+      "SW": 73.56925252552108,
+      "TOTAL": 80.50155201341903
+    },
+    "solo_scores": {
+      "POR": 71.90412583091914,
+      "PERM": 88.06325532205939,
+      "SW": 72.3933247145076,
+      "TOTAL": 77.73104076207419
+    },
+    "best_epochs": [
+      4,
+      0,
+      11
+    ],
+    "stopped_epochs": [
+      22,
+      18,
+      29
+    ],
+    "initial_scores": {
+      "POR": 77.80660319068642,
+      "PERM": 89.74176994439831,
+      "SW": 73.54488028023577,
+      "TOTAL": 80.49230853582785
+    },
+    "delta_initial": 0.009243477591184046,
+    "delta_reference": 0.009243477591184046,
+    "complete_five_folds": false,
+    "assembled_heads_exactly_reproduce_selected_predictions": true,
+    "frozen_backbone_routes_companions_unchanged": true,
+    "all_validation_rows_covered_exactly_four_times": true,
+    "seconds": 874.1332360999659,
+    "peak_gpu_allocated_mib": 1730.9052734375
+  },
+  "feature_status": {
+    "status": "running",
+    "pid": 78432,
+    "atlas_current_trial": true
+  },
+  "feature_pid_alive": true,
+  "feature_latest": {
+    "epoch": 21,
+    "official_scores": {
+      "POR": 74.74397042172683,
+      "PERM": 89.08592647712702,
+      "SW": 73.1922654125029,
+      "TOTAL": 79.22055828788852
+    },
+    "official_total": 79.22055828788852,
+    "solo_scores": {
+      "POR": 74.74397042172683,
+      "PERM": 89.08592647712702,
+      "SW": 73.1922654125029,
+      "TOTAL": 79.22055828788852
+    },
+    "channel_train_loss": [
+      -0.16851314835366793,
+      -0.2300130263902247,
+      0.2344647184945643
+    ],
+    "channel_gate_bce": [
+      0.09725884872023016,
+      0.09660104557406157,
+      0.12215680978260934
+    ],
+    "channel_continuous_nll": [
+      -0.26577199646271765,
+      -0.3266140727791935,
+      0.11230790778063238
+    ],
+    "best_channel_scores": [
+      75.67210450859208,
+      89.13768677188969,
+      73.45514809234209
+    ],
+    "best_epochs": [
+      18,
+      8,
+      20
+    ],
+    "bad_epochs": [
+      3,
+      13,
+      1
+    ],
+    "active_next_epoch": [
+      true,
+      true,
+      true
+    ],
+    "best_assembled_total": 79.60912355505874,
+    "seconds": 41.10590580001008
+  },
+  "feature_final_report": null,
+  "feature_gap_original": 0.8831849807691015,
+  "feature_gap_completed_A6": 0.8924284583602855,
+  "live_training_processes": [
+    {
+      "cmdline": [
+        "C:\\Users\\z5364\\.conda\\envs\\normal\\python.exe",
+        "-u",
+        "experiments/pure_dl/train_abd_feature_heads80.py",
+        "--out",
+        "outputs/pure_dl_abd_feature_heads80_fold5"
+      ],
+      "pid": 78432,
+      "name": "python.exe"
+    }
+  ],
+  "completed_A6_cpu_gain_diagnostic": {
+    "rows": 144665,
+    "score_recomputed": 80.50155201341903,
+    "well_wins": 9,
+    "well_losses": 7,
+    "channel_delta": {
+      "POR": 0.0023773058044298523,
+      "PERM": 0.0,
+      "SW": 0.02437224528530635
+    },
+    "weighted_delta": {
+      "POR": 0.0007131917413332444,
+      "PERM": 0.0,
+      "SW": 0.008530285849949058
+    },
+    "note": "Computed from existing predictions, no fitting. Epoch23 snapshot already includes independently restored POR/PERM heads; not a matched common-stop ablation."
+  },
+  "scope": "Fixed fifth only; running best_assembled_total is channel-best candidate, not final restored score.",
+  "actions": {
+    "started_jobs": 0,
+    "stopped_jobs": 0,
+    "modified_trainers": 0,
+    "remaining_folds_started": 0
+  },
+  "sources": [
+    "outputs/pure_dl_a6_channel_heads_own80_fold5/fold_5_report.json",
+    "outputs/pure_dl_a6_channel_heads_own80_fold5/fold_5_pred.npy",
+    "outputs/pure_dl_abd_scratch_control80_fold5/oof.npz",
+    "outputs/pure_dl_abd_scratch_control80_fold5/fold_5_pred.npy",
+    "outputs/pure_dl_abd_feature_heads80_fold5/fold_5_validation_history.json"
+  ]
+}

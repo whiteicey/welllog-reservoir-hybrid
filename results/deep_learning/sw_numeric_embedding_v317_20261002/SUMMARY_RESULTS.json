@@ -1,0 +1,125 @@
+{
+  "project": "sw_numeric_embedding_v317_20261002",
+  "scope": "obsolete-study",
+  "weights_retained": false,
+  "cleanup": "Obsolete artifacts removed by explicit user request. These are historical scores, not newly verified training.",
+  "results": [
+    {
+      "source": "PAIRED_FINAL.json",
+      "result": {
+        "reports": {
+          "linear": {
+            "stage": "linear",
+            "target": "SW",
+            "target_score": 74.16204929073999,
+            "initial_score": 74.12175268976877,
+            "against_initial": 0.040296600971217345,
+            "against_v97_target": 0.019869386073281703,
+            "best_epoch": 26,
+            "stopped_epoch": 40,
+            "validation_rows": 144665,
+            "predictions_reproduced_exactly": true,
+            "frozen_parameters_exact": true,
+            "seconds": 542.5339781999937,
+            "peak_MiB": 1297.4765625,
+            "complete_five_folds": false,
+            "early_terminated": false
+          },
+          "relu": {
+            "stage": "relu",
+            "target": "SW",
+            "target_score": 74.1669496554495,
+            "initial_score": 74.12175268976877,
+            "against_initial": 0.04519696568073073,
+            "against_v97_target": 0.024769750782795086,
+            "best_epoch": 17,
+            "stopped_epoch": 31,
+            "validation_rows": 144665,
+            "predictions_reproduced_exactly": true,
+            "frozen_parameters_exact": true,
+            "seconds": 504.7536333000171,
+            "peak_MiB": 1315.6015625,
+            "complete_five_folds": false,
+            "early_terminated": false
+          }
+        },
+        "strata": {
+          "linear": {
+            "default": 98.84062637352038,
+            "continuous": 17.47764285793554
+          },
+          "relu": {
+            "default": 98.85108586849975,
+            "continuous": 17.46977441516435
+          }
+        },
+        "best_numeric_delta_norms": {
+          "linear": {
+            "numeric.weight": 0.26031339168548584,
+            "numeric.bias": 0.3242514729499817,
+            "numeric.out.weight": 1.598897099494934
+          },
+          "relu": {
+            "numeric.weight": 0.7002342343330383,
+            "numeric.bias": 0.7166813611984253,
+            "numeric.out.weight": 2.9991908073425293
+          }
+        },
+        "relu_minus_linear": 0.004900364709513383,
+        "relu_minus_linear_CONT": -0.007868442771190587,
+        "gain_vs_retained297": {
+          "linear": 0.0020190677202407414,
+          "relu": 0.006919432429754124
+        },
+        "CONT_vs_retained297": {
+          "linear": -0.025109909411643372,
+          "relu": -0.03297835218283396
+        },
+        "CONT_vs_strong252": {
+          "linear": -0.4072252819746325,
+          "relu": -0.41509372474582307
+        },
+        "timing": {
+          "started_epoch": 1790886141.746,
+          "started_UTC": "2026-10-01T20:22:21.7612563+00:00",
+          "maximum_parallelism": 2,
+          "status": "complete",
+          "jobs": [
+            {
+              "stage": "relu",
+              "pid": 34568,
+              "start_epoch": 1790886141.746
+            },
+            {
+              "stage": "linear",
+              "pid": 52776,
+              "start_epoch": 1790886232.028
+            }
+          ],
+          "overlap": "relu first overlaps316reference, then relu/linear overlap; variable gap, not isolated speed comparison",
+          "terminal": true,
+          "same_work_pair_wall_seconds": 638.1510324478149,
+          "individual_seconds": {
+            "linear": 542.5339781999937,
+            "relu": 504.7536333000171
+          },
+          "peak_MiB": {
+            "linear": 1297.4765625,
+            "relu": 1315.6015625
+          },
+          "interpretation": "Staggered launches with partial overlap; wall includes gap/data/initial/train/best restore, excludes work beforefirstlaunch and CPUfinalization after. Not isolatedspeedranking."
+        },
+        "screening_fold": 5,
+        "complete_five_folds": false,
+        "remaining_folds_started": false,
+        "independent_disk_reload": false,
+        "automatic_adoption": false,
+        "adopted": false,
+        "closure": "FinalLR-Lwhole+.00490036471/CONT-.00786844277; earlier best17pairedCONTpositive didnotpersist afterLbest26. BothabsoluteCONTbelow297/252, wholeimprovementsdefaultdominated. Close8-dimensionalpreGELUnumericReLU placement, retainwholepositive/control evidence; no width/threshold/periodicgrid or317modulecarryinto318. Not allnumericembeddingmethodsineffective."
+      }
+    }
+  ],
+  "cleanup_completed": true,
+  "deleted_files": 10,
+  "deleted_bytes": 6955506
+}

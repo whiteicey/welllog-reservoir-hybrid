@@ -1,0 +1,11 @@
+{
+  "scope": "V370 and V371 only",
+  "nodes_present": [
+    "two_seed_fullcv_v370_20261002",
+    "original_last_seed_fusion_v371_20261002"
+  ],
+  "V370_no_fullOOF_score_yet": true,
+  "V371_primary_kind": "diagnostic",
+  "V371_primary_value": 80.84958263762879,
+  "whole_legacy_atlas_UI_claim": false
+}

@@ -1,0 +1,94 @@
+{
+  "project": "perm_backbone_residual_v357_20261002",
+  "scope": "obsolete-study",
+  "weights_retained": false,
+  "cleanup": "Obsolete artifacts removed by explicit user request. These are historical scores, not newly verified training.",
+  "results": [
+    {
+      "source": "FINAL.json",
+      "result": {
+        "report": {
+          "stage": "local",
+          "target": "PERM",
+          "target_score": 89.40556485691894,
+          "initial_score": 89.40556485691894,
+          "against_initial": 0.0,
+          "against_v97_target": 0.00884080755312766,
+          "best_epoch": 0,
+          "stopped_epoch": 13,
+          "validation_rows": 144665,
+          "predictions_reproduced_exactly": true,
+          "frozen_parameters_exact": true,
+          "residual_parameter_norms": {
+            "residual_branches.0.down.weight": 3.2706642150878906,
+            "residual_branches.0.down.bias": 0.30207735300064087,
+            "residual_branches.0.norm.weight": 5.656854152679443,
+            "residual_branches.0.norm.bias": 0.0,
+            "residual_branches.0.depth.weight": 3.183403253555298,
+            "residual_branches.0.depth.bias": 0.6948413252830505,
+            "residual_branches.0.expand.weight": 4.552340984344482,
+            "residual_branches.0.expand.bias": 0.8035740852355957,
+            "residual_branches.0.up.weight": 0.0,
+            "residual_branches.0.up.bias": 0.0,
+            "residual_branches.1.down.weight": 3.293905019760132,
+            "residual_branches.1.down.bias": 0.28711530566215515,
+            "residual_branches.1.norm.weight": 5.656854152679443,
+            "residual_branches.1.norm.bias": 0.0,
+            "residual_branches.1.depth.weight": 3.17657732963562,
+            "residual_branches.1.depth.bias": 0.7844030261039734,
+            "residual_branches.1.expand.weight": 4.648634910583496,
+            "residual_branches.1.expand.bias": 0.7975549101829529,
+            "residual_branches.1.up.weight": 0.0,
+            "residual_branches.1.up.bias": 0.0
+          },
+          "seconds": 111.41831959999399,
+          "peak_MiB": 854.9150390625,
+          "complete_five_folds": false,
+          "early_terminated": true
+        },
+        "strata": {
+          "default": 97.27870539397452,
+          "continuous": 74.09691194381553
+        },
+        "current_exit_norms": {
+          "residual_branches.0.up.weight": 1.7500327825546265,
+          "residual_branches.0.up.bias": 0.2155779004096985,
+          "residual_branches.1.up.weight": 1.8259357213974,
+          "residual_branches.1.up.bias": 0.22815413773059845
+        },
+        "adopted": false,
+        "point_trained": false,
+        "independent_disk_reload": false,
+        "complete_five_folds": false,
+        "remaining_folds_started": false,
+        "patience_control": {
+          "guard_pid": 63112,
+          "training_pid": 46896,
+          "training_live": true,
+          "threshold_target_SOTA": 89.51838939879066,
+          "threshold_basis": "PERM336 with fixedPOR341/SW351, equivalent to retainedassembledTOTAL80.706129723238",
+          "strict": true,
+          "SOTA_broken": false,
+          "effective_patience": 10,
+          "snapshot": {
+            "status": "running",
+            "pid": 46896,
+            "stage": "local",
+            "epoch": 12,
+            "best": 89.40556485691894,
+            "best_epoch": 0,
+            "bad": 12,
+            "peak_MiB": 854.9150390625
+          },
+          "reason": "Latestuser patience10 untilstrictSOTA, then14; existing epoch-boundary request/bestrestoration",
+          "stop_request_written": true
+        },
+        "actual_stop_note": "Userpolicy arrived after bad10; guardobserved bad12, existingepoch-boundary stop restoredbest after13, not claim10epoch run",
+        "closed_setting": "native154 enc2 nonlinear32width17tap parallelfeaturebranch pluswarmreadout no gain; no widthkernelLRgrid"
+      }
+    }
+  ],
+  "cleanup_completed": true,
+  "deleted_files": 8,
+  "deleted_bytes": 9500
+}

@@ -1,0 +1,644 @@
+{
+  "project": "cross_target_v34_20260929",
+  "scope": "obsolete-study",
+  "weights_retained": false,
+  "cleanup": "Obsolete artifacts removed by explicit user request. These are historical scores, not newly verified training.",
+  "results": [
+    {
+      "source": "assembled_report.json",
+      "result": {
+        "finished_at": "2026-09-29T13:31:08.938650+08:00",
+        "reference_scores": {
+          "POR": 77.551936801885,
+          "PERM": 89.39672404936582,
+          "SW": 73.6630827970656,
+          "TOTAL": 80.33651343681649
+        },
+        "selected_scores": {
+          "POR": 77.551936801885,
+          "PERM": 89.39672404936582,
+          "SW": 73.6630827970656,
+          "TOTAL": 80.33651343681649
+        },
+        "delta_reference_TOTAL": 0.0,
+        "candidates": [
+          {
+            "mode": "self",
+            "report": {
+              "target": "SW",
+              "mode": "self",
+              "screening_fold": 5,
+              "target_score": 73.6630827970656,
+              "reference_replacement_total": 80.33651343681649,
+              "best_epoch": 0,
+              "stopped_epoch": 18,
+              "stop_reason": "patience18",
+              "best_after_update": {
+                "epoch": 1,
+                "target_score": 73.65807647116335,
+                "reference_replacement_total": 80.3347612227507
+              },
+              "trainable_parameters": 11152,
+              "all_frozen_state_unchanged": true,
+              "all144665_selected_predictions_restored_exactly": true,
+              "last_parameter_change_L2": 3.300804450471376,
+              "mechanism_scope": {
+                "mode": "self",
+                "factor": "weight",
+                "unchanged_factors": {
+                  "gate": true,
+                  "location": true,
+                  "scale": true
+                },
+                "max_bound_ratio": 0.0,
+                "scope": "two fixed training windows; parent input path excludes both additional views"
+              },
+              "checkpoint": "outputs\\pure_dl_cross_target_v34_SW_fold5\\self\\model_best.pt",
+              "complete_five_folds": false,
+              "remaining_folds_started": false
+            },
+            "selected_scores": {
+              "POR": 77.551936801885,
+              "PERM": 89.39672404936582,
+              "SW": 73.6630827970656,
+              "TOTAL": 80.33651343681649
+            },
+            "post_update_scores": {
+              "POR": 77.551936801885,
+              "PERM": 89.39672404936582,
+              "SW": 73.65807647116335,
+              "TOTAL": 80.3347612227507
+            },
+            "post_update_populations": {
+              "default": {
+                "n": 100786,
+                "SW_delta": -0.0019524991529784755,
+                "TOTAL_contribution": -0.000476097209907241
+              },
+              "numeric": {
+                "n": 43879,
+                "SW_delta": -0.012020683174416888,
+                "TOTAL_contribution": -0.001276116855864124
+              }
+            },
+            "checkpoint": "outputs\\pure_dl_cross_target_v34_SW_fold5\\self\\model_best.pt",
+            "deployable": true
+          },
+          {
+            "mode": "cross",
+            "report": {
+              "target": "SW",
+              "mode": "cross",
+              "screening_fold": 5,
+              "target_score": 73.6630827970656,
+              "reference_replacement_total": 80.33651343681649,
+              "best_epoch": 0,
+              "stopped_epoch": 18,
+              "stop_reason": "patience18",
+              "best_after_update": {
+                "epoch": 1,
+                "target_score": 73.65614810964377,
+                "reference_replacement_total": 80.33408629621886
+              },
+              "trainable_parameters": 11152,
+              "all_frozen_state_unchanged": true,
+              "all144665_selected_predictions_restored_exactly": true,
+              "last_parameter_change_L2": 3.282239506738114,
+              "mechanism_scope": {
+                "mode": "cross",
+                "factor": "weight",
+                "unchanged_factors": {
+                  "gate": true,
+                  "location": true,
+                  "scale": true
+                },
+                "max_bound_ratio": 0.0,
+                "scope": "two fixed training windows; parent input path excludes both additional views"
+              },
+              "checkpoint": "outputs\\pure_dl_cross_target_v34_SW_fold5\\cross\\model_best.pt",
+              "complete_five_folds": false,
+              "remaining_folds_started": false
+            },
+            "selected_scores": {
+              "POR": 77.551936801885,
+              "PERM": 89.39672404936582,
+              "SW": 73.6630827970656,
+              "TOTAL": 80.33651343681649
+            },
+            "post_update_scores": {
+              "POR": 77.551936801885,
+              "PERM": 89.39672404936582,
+              "SW": 73.65614810964377,
+              "TOTAL": 80.33408629621886
+            },
+            "post_update_populations": {
+              "default": {
+                "n": 100786,
+                "SW_delta": -0.0031395150708881394,
+                "TOTAL_contribution": -0.0007655390597386114
+              },
+              "numeric": {
+                "n": 43879,
+                "SW_delta": -0.01565184689587507,
+                "TOTAL_contribution": -0.001661601537900914
+              }
+            },
+            "checkpoint": "outputs\\pure_dl_cross_target_v34_SW_fold5\\cross\\model_best.pt",
+            "deployable": true
+          },
+          {
+            "mode": "shuffled",
+            "report": {
+              "target": "SW",
+              "mode": "shuffled",
+              "screening_fold": 5,
+              "target_score": 73.6630827970656,
+              "reference_replacement_total": 80.33651343681649,
+              "best_epoch": 0,
+              "stopped_epoch": 18,
+              "stop_reason": "patience18",
+              "best_after_update": {
+                "epoch": 1,
+                "target_score": 73.65664962374686,
+                "reference_replacement_total": 80.33426182615493
+              },
+              "trainable_parameters": 11152,
+              "all_frozen_state_unchanged": true,
+              "all144665_selected_predictions_restored_exactly": true,
+              "last_parameter_change_L2": 3.297863722622578,
+              "mechanism_scope": {
+                "mode": "shuffled",
+                "factor": "weight",
+                "unchanged_factors": {
+                  "gate": true,
+                  "location": true,
+                  "scale": true
+                },
+                "max_bound_ratio": 0.0,
+                "scope": "two fixed training windows; parent input path excludes both additional views"
+              },
+              "checkpoint": "outputs\\pure_dl_cross_target_v34_SW_fold5\\shuffled\\model_best.pt",
+              "complete_five_folds": false,
+              "remaining_folds_started": false
+            },
+            "selected_scores": {
+              "POR": 77.551936801885,
+              "PERM": 89.39672404936582,
+              "SW": 73.6630827970656,
+              "TOTAL": 80.33651343681649
+            },
+            "post_update_scores": {
+              "POR": 77.551936801885,
+              "PERM": 89.39672404936582,
+              "SW": 73.65664962374686,
+              "TOTAL": 80.33426182615493
+            },
+            "post_update_populations": {
+              "default": {
+                "n": 100786,
+                "SW_delta": -0.0031167439451758017,
+                "TOTAL_contribution": -0.0007599865505856353
+              },
+              "numeric": {
+                "n": 43879,
+                "SW_delta": -0.014050704503185744,
+                "TOTAL_contribution": -0.0014916241109691392
+              }
+            },
+            "checkpoint": "outputs\\pure_dl_cross_target_v34_SW_fold5\\shuffled\\model_best.pt",
+            "deployable": false
+          }
+        ],
+        "comparisons": {
+          "cross_minus_self": 0.0,
+          "cross_minus_shuffled": 0.0,
+          "post_update_cross_minus_self": -0.0019283615195888615,
+          "post_update_cross_minus_shuffled": -0.0005015141030924042
+        },
+        "adopted": false,
+        "cross_target_mechanism_positive": false,
+        "all_three_heads_complete": true,
+        "all_twelve_auxiliary_models_complete": true,
+        "negative_control_not_deployed": true,
+        "auxiliary_models": [
+          {
+            "group": 0,
+            "stop_wells": [
+              2,
+              21,
+              28,
+              30,
+              32,
+              33,
+              58,
+              66
+            ],
+            "oof_wells": [
+              4,
+              6,
+              9,
+              12,
+              19,
+              20,
+              29,
+              40,
+              41,
+              46,
+              56,
+              59,
+              60,
+              61,
+              62,
+              74
+            ],
+            "models": [
+              {
+                "target": "POR",
+                "parameters": 9881,
+                "best_epoch": 16,
+                "stopped_epoch": 34,
+                "stop_NLL": 0.12454892378303004
+              },
+              {
+                "target": "PERM",
+                "parameters": 9881,
+                "best_epoch": 23,
+                "stopped_epoch": 41,
+                "stop_NLL": 0.10349376482800726
+              },
+              {
+                "target": "SW",
+                "parameters": 9881,
+                "best_epoch": 35,
+                "stopped_epoch": 53,
+                "stop_NLL": 0.39166526926284045
+              }
+            ],
+            "seconds": 54.82492210000055,
+            "peak_allocated_MiB": 189.22705078125
+          },
+          {
+            "group": 1,
+            "stop_wells": [
+              4,
+              9,
+              21,
+              22,
+              31,
+              56,
+              68,
+              70
+            ],
+            "oof_wells": [
+              0,
+              3,
+              5,
+              17,
+              27,
+              28,
+              32,
+              42,
+              47,
+              49,
+              51,
+              65,
+              66,
+              75,
+              77,
+              78
+            ],
+            "models": [
+              {
+                "target": "POR",
+                "parameters": 9881,
+                "best_epoch": 58,
+                "stopped_epoch": 76,
+                "stop_NLL": 0.08810849421355856
+              },
+              {
+                "target": "PERM",
+                "parameters": 9881,
+                "best_epoch": 29,
+                "stopped_epoch": 47,
+                "stop_NLL": 0.056992635940548375
+              },
+              {
+                "target": "SW",
+                "parameters": 9881,
+                "best_epoch": 32,
+                "stopped_epoch": 50,
+                "stop_NLL": 0.3737967654642971
+              }
+            ],
+            "seconds": 71.63129430000117,
+            "peak_allocated_MiB": 189.2265625
+          },
+          {
+            "group": 2,
+            "stop_wells": [
+              9,
+              28,
+              31,
+              39,
+              42,
+              47,
+              49,
+              56
+            ],
+            "oof_wells": [
+              1,
+              2,
+              15,
+              18,
+              21,
+              22,
+              23,
+              24,
+              26,
+              33,
+              38,
+              52,
+              55,
+              57,
+              67,
+              68
+            ],
+            "models": [
+              {
+                "target": "POR",
+                "parameters": 9881,
+                "best_epoch": 54,
+                "stopped_epoch": 72,
+                "stop_NLL": 0.13081374233734328
+              },
+              {
+                "target": "PERM",
+                "parameters": 9881,
+                "best_epoch": 26,
+                "stopped_epoch": 44,
+                "stop_NLL": 0.13784490997787807
+              },
+              {
+                "target": "SW",
+                "parameters": 9881,
+                "best_epoch": 23,
+                "stopped_epoch": 41,
+                "stop_NLL": 0.43092365274179245
+              }
+            ],
+            "seconds": 64.19524749999982,
+            "peak_allocated_MiB": 189.22314453125
+          },
+          {
+            "group": 3,
+            "stop_wells": [
+              2,
+              9,
+              21,
+              47,
+              49,
+              56,
+              66,
+              77
+            ],
+            "oof_wells": [
+              10,
+              11,
+              13,
+              30,
+              31,
+              36,
+              39,
+              43,
+              44,
+              45,
+              48,
+              53,
+              58,
+              64,
+              70,
+              73
+            ],
+            "models": [
+              {
+                "target": "POR",
+                "parameters": 9881,
+                "best_epoch": 22,
+                "stopped_epoch": 40,
+                "stop_NLL": 0.169695814052844
+              },
+              {
+                "target": "PERM",
+                "parameters": 9881,
+                "best_epoch": 10,
+                "stopped_epoch": 28,
+                "stop_NLL": 0.12801067392587306
+              },
+              {
+                "target": "SW",
+                "parameters": 9881,
+                "best_epoch": 20,
+                "stopped_epoch": 38,
+                "stop_NLL": 0.3792080336266279
+              }
+            ],
+            "seconds": 40.93437249999988,
+            "peak_allocated_MiB": 189.2275390625
+          }
+        ],
+        "auxiliary_quality": [
+          {
+            "target": "POR",
+            "OOF_rows": 578891,
+            "numeric_n": 185691,
+            "gate_brier": 0.05591554567217827,
+            "numeric_mean_spearman": 0.9182675867606863,
+            "predictive_interval_coverage": 0.7322164240593244,
+            "scope": "Original64 auxiliary OOF descriptive diagnostics; not a new total score; not used to select feature variants"
+          },
+          {
+            "target": "PERM",
+            "OOF_rows": 578891,
+            "numeric_n": 179827,
+            "gate_brier": 0.05570795387029648,
+            "numeric_mean_spearman": 0.9357647299672738,
+            "predictive_interval_coverage": 0.7412235092616792,
+            "scope": "Original64 auxiliary OOF descriptive diagnostics; not a new total score; not used to select feature variants"
+          },
+          {
+            "target": "SW",
+            "OOF_rows": 578891,
+            "numeric_n": 161423,
+            "gate_brier": 0.06129360571503639,
+            "numeric_mean_spearman": 0.6427152066548336,
+            "predictive_interval_coverage": 0.739894562732696,
+            "scope": "Original64 auxiliary OOF descriptive diagnostics; not a new total score; not used to select feature variants"
+          }
+        ],
+        "new_target_full_disk_replays": [],
+        "actual_combined_prediction_scored": true,
+        "per_well": [
+          {
+            "well": 7,
+            "n": 10219,
+            "TOTAL_delta": 0.0
+          },
+          {
+            "well": 8,
+            "n": 9011,
+            "TOTAL_delta": 0.0
+          },
+          {
+            "well": 14,
+            "n": 12078,
+            "TOTAL_delta": 0.0
+          },
+          {
+            "well": 16,
+            "n": 8149,
+            "TOTAL_delta": 0.0
+          },
+          {
+            "well": 25,
+            "n": 7739,
+            "TOTAL_delta": 0.0
+          },
+          {
+            "well": 34,
+            "n": 10913,
+            "TOTAL_delta": 0.0
+          },
+          {
+            "well": 35,
+            "n": 8348,
+            "TOTAL_delta": 0.0
+          },
+          {
+            "well": 37,
+            "n": 9939,
+            "TOTAL_delta": 0.0
+          },
+          {
+            "well": 50,
+            "n": 11874,
+            "TOTAL_delta": 0.0
+          },
+          {
+            "well": 54,
+            "n": 9630,
+            "TOTAL_delta": 0.0
+          },
+          {
+            "well": 63,
+            "n": 5639,
+            "TOTAL_delta": 0.0
+          },
+          {
+            "well": 69,
+            "n": 9120,
+            "TOTAL_delta": 0.0
+          },
+          {
+            "well": 71,
+            "n": 4709,
+            "TOTAL_delta": 0.0
+          },
+          {
+            "well": 72,
+            "n": 9559,
+            "TOTAL_delta": 0.0
+          },
+          {
+            "well": 76,
+            "n": 7109,
+            "TOTAL_delta": 0.0
+          },
+          {
+            "well": 79,
+            "n": 10629,
+            "TOTAL_delta": 0.0
+          }
+        ],
+        "well_wins": 0,
+        "well_losses": 0,
+        "exploratory_selection_unadjusted_TOTAL_95": [
+          0.0,
+          0.0
+        ],
+        "rows": 144665,
+        "screening_fold": 5,
+        "original_other_folds_started": false,
+        "independent_full_pipeline_OOF": false,
+        "old_delivery_unchanged": true
+      }
+    },
+    {
+      "source": "CURRENT_RECIPE.json",
+      "result": {
+        "scores": {
+          "POR": 77.551936801885,
+          "PERM": 89.39672404936582,
+          "SW": 73.6630827970656,
+          "TOTAL": 80.33651343681649
+        },
+        "choices": [
+          {
+            "target": "POR",
+            "key": "v31_POR_anchored",
+            "architecture": "same_bound_reparameterized_routes",
+            "target_score": 77.551936801885,
+            "best_epoch": 7,
+            "checkpoint": "outputs\\pure_dl_mechanism_v31_POR_fold5\\anchored\\model_best.pt",
+            "model_module": "por_reparam_v31",
+            "builder": "Network(target,master,modes=(mode,)); heads[mode].load_state_dict(checkpoint[delta_state]); SW master[v31_knots] from checkpoint config metadata",
+            "mode": "anchored",
+            "factor": "route_parameterization",
+            "parent_recipe": "results\\deep_learning\\champion_coadapt_v30_20260929\\CURRENT_RECIPE.json",
+            "retained_v28_checkpoint": "outputs\\pure_dl_champion_route_v28_POR_fold5\\conditional\\model_best.pt",
+            "retained_v29_checkpoint": "outputs\\pure_dl_split_route_v29_POR_fold5\\split\\model_best.pt"
+          },
+          {
+            "target": "PERM",
+            "key": "v29_PERM_coupled",
+            "architecture": "coupled_or_split_residual_routes",
+            "target_score": 89.39672404936582,
+            "best_epoch": 2,
+            "checkpoint": "outputs\\pure_dl_split_route_v29_PERM_fold5\\coupled\\model_best.pt",
+            "factor": "atom_conditional_routing",
+            "source_checkpoint": "outputs\\pure_dl_independent_v8_PERM_dual80_fold5\\model_best.pt",
+            "model_module": "champion_split_route_v29",
+            "builder": "Network(target,master,modes=(mode,)); heads[mode].load_state_dict(checkpoint[delta_state])",
+            "mode": "coupled",
+            "parent_recipe": "results\\deep_learning\\champion_route_v28_20260929\\CURRENT_RECIPE.json",
+            "retained_v28_checkpoint": "outputs\\pure_dl_champion_route_v28_PERM_fold5\\joint\\model_best.pt"
+          },
+          {
+            "target": "SW",
+            "key": "v29_SW_coupled",
+            "architecture": "coupled_or_split_residual_routes",
+            "target_score": 73.6630827970656,
+            "best_epoch": 3,
+            "checkpoint": "outputs\\pure_dl_split_route_v29_SW_fold5\\coupled\\model_best.pt",
+            "factor": "atom_conditional_routing",
+            "source_checkpoint": "outputs\\pure_dl_independent_v8_SW_dual80_fold5\\model_best.pt",
+            "model_module": "champion_split_route_v29",
+            "builder": "Network(target,master,modes=(mode,)); heads[mode].load_state_dict(checkpoint[delta_state])",
+            "mode": "coupled",
+            "parent_recipe": "results\\deep_learning\\champion_route_v28_20260929\\CURRENT_RECIPE.json",
+            "retained_v28_checkpoint": "outputs\\pure_dl_champion_route_v28_SW_fold5\\conditional\\model_best.pt"
+          }
+        ],
+        "source_preprocessing": "results/deep_learning/champion_scaling_v21_20260928/data_manifest.json",
+        "amplitude_metadata": "results/deep_learning/feature_structure_v20_20260928/feature_manifest.json",
+        "reference_recipe": "results\\deep_learning\\mechanism_checks_v31_20260929\\CURRENT_RECIPE.json",
+        "original_fifth_development_selection": true,
+        "complete_five_folds": false,
+        "remaining_folds_started": false,
+        "old_delivery_unchanged": true
+      }
+    }
+  ],
+  "cleanup_completed": true,
+  "deleted_files": 18,
+  "deleted_bytes": 571716738
+}

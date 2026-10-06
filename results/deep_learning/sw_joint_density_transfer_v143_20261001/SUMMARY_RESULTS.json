@@ -1,0 +1,10 @@
+{
+  "project": "sw_joint_density_transfer_v143_20261001",
+  "scope": "obsolete-study",
+  "weights_retained": false,
+  "cleanup": "Obsolete artifacts removed by explicit user request. These are historical scores, not newly verified training.",
+  "results": [],
+  "cleanup_completed": true,
+  "deleted_files": 9,
+  "deleted_bytes": 3481645
+}

@@ -1,0 +1,30 @@
+{
+  "terminal": true,
+  "maximum_concurrency": 2,
+  "includes_prep_initial_train_final": true,
+  "starts": [
+    {
+      "stage": "grouped",
+      "pid": 33468,
+      "start_epoch": 1790877459.194,
+      "status": "launched_unproved"
+    },
+    {
+      "stage": "full",
+      "pid": 69896,
+      "start_epoch": 1790877460.308,
+      "status": "launched_unproved"
+    }
+  ],
+  "codeprep_CPUassembly_excluded": true,
+  "end_epochs": {
+    "grouped": 1790878197.458397,
+    "full": 1790878276.799539
+  },
+  "individual_seconds": {
+    "grouped": 733.2480718000443,
+    "full": 811.1775710000074
+  },
+  "paired_same_work_wall_seconds": 817.6055390834808,
+  "interpretation": "Concurrent two-arm wall includes load/initial evaluation/train/own-best restore and report, excludes CPU record/code prep; no serial speed ranking."
+}

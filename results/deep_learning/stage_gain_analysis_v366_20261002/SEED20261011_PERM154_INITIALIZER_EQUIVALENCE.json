@@ -1,0 +1,51 @@
+{
+  "seed": 20261011,
+  "stage": "PERM154",
+  "selected_best_epoch": 0,
+  "initializer_state_exact": true,
+  "state_tensors": 323,
+  "missing": [],
+  "extra": [],
+  "differing_tensors": [],
+  "fresh_state_sha256": "949a51d6e47cfc7a0552717a681e0e3593686468812f626a97cc60f3c4c0958f",
+  "selected_state_sha256": "949a51d6e47cfc7a0552717a681e0e3593686468812f626a97cc60f3c4c0958f",
+  "initialization": {
+    "parent_checkpoint": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261011\\SOURCE\\fold_5.pt",
+    "same_initial_predictive_function": true,
+    "old_predictor_fully_frozen": true,
+    "own_new_locations_only": false,
+    "new_component_logweight_correction": true,
+    "logweight_bound": 1.0,
+    "branch_bound_reference_sd": 1.0,
+    "bound_only_new_branch": true,
+    "input_hidden": 256,
+    "input_side": 63,
+    "depth_kernel": 1,
+    "stored_kernel": 33,
+    "effective_point_kernel_is_sum": true,
+    "width": 128,
+    "family_mode": "Gaussian",
+    "conditional_finite_moments": true,
+    "executed_training_stages_including_source": 5,
+    "joint_ranked_probability_loss": true,
+    "rps_coefficient": 1.0,
+    "original_finite_edges": 255,
+    "own_PERM_default_and_continuous_labels": true,
+    "same_capacity_as_v136": true,
+    "original_transform": "log10",
+    "default_physical": 0.01,
+    "trained_v136_weights_not_loaded": true
+  },
+  "construction_dependencies": [
+    {
+      "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261011\\SOURCE\\fold_5.pt",
+      "sha256": "6f13e1ced8e0ee6b50eb9248e07f9ee2a72f9aec35b221c97a782e65b3e81471"
+    }
+  ],
+  "CPU_only": true,
+  "optimizer_steps": 0,
+  "model_forward_calls": 0,
+  "extra_training_stages": 0,
+  "historical_executed_stage_count_unchanged": 8,
+  "conclusion_scope": "Initializer equivalence only. Supports future omission of this optimizer phase while retaining its untrained architecture; existing historical training cost remains eight phases. No descendant retraining or GPU predictive replay performed."
+}

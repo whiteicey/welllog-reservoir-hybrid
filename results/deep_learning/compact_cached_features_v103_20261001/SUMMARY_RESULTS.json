@@ -1,0 +1,80 @@
+{
+  "project": "compact_cached_features_v103_20261001",
+  "scope": "obsolete-study",
+  "weights_retained": false,
+  "cleanup": "Obsolete artifacts removed by explicit user request. These are historical scores, not newly verified training.",
+  "results": [
+    {
+      "source": "ablation_report.json",
+      "result": {
+        "original_fold": 5,
+        "control": {
+          "stage": "random",
+          "target": "SW",
+          "target_score": 73.98957592699578,
+          "initial_score": 71.19711508147167,
+          "against_initial": 2.7924608455241184,
+          "against_v97_target": -0.15260397767092115,
+          "best_epoch": 34,
+          "stopped_epoch": 52,
+          "validation_rows": 144665,
+          "predictions_reproduced_exactly": true,
+          "frozen_parameters_exact": true,
+          "seconds": 1191.2041601000237,
+          "peak_MiB": 2074.24658203125,
+          "complete_five_folds": false
+        },
+        "candidate": {
+          "stage": "pretrained",
+          "target": "SW",
+          "target_score": 73.82315224190842,
+          "initial_score": 71.19711508147167,
+          "against_initial": 2.626037160436752,
+          "against_v97_target": -0.31902766275828753,
+          "best_epoch": 15,
+          "stopped_epoch": 33,
+          "validation_rows": 144665,
+          "predictions_reproduced_exactly": true,
+          "frozen_parameters_exact": true,
+          "seconds": 892.4756054999889,
+          "peak_MiB": 2074.24658203125,
+          "complete_five_folds": false
+        },
+        "predefined_source_feature_delta": -0.16642368508736638,
+        "same_capacity": true,
+        "same_initial_official_score": true,
+        "source_preprocessing_buffers_shared": true,
+        "source_feature_window": 256,
+        "source_stride": 128,
+        "source_core": [
+          64,
+          192
+        ],
+        "SW_context_window": 1024,
+        "predictions_and_frozen_parameters_verified": true,
+        "complete_five_folds": false,
+        "remaining_folds_started": false
+      }
+    },
+    {
+      "source": "FINAL_TIMING.json",
+      "result": {
+        "actual_pair_launch_to_both_reports_seconds": 1230.8455946445465,
+        "sum_report_stage_seconds": 2083.6797656000126,
+        "source_pretrain_seconds": 1289.1515023999964,
+        "cache_seconds": {
+          "random": 10.114447500003735,
+          "pretrained": 12.79260789998807
+        },
+        "first_trial_started_before_second": true,
+        "concurrency": "initial random solo then two SW jobs; cache preprocess partly overlaps prior v102; explicit host gaps included",
+        "equal_work_serial_baseline_available": false,
+        "speedup_proven": false,
+        "source_and_shared_dependencies_counted_in_assembled_reports": true
+      }
+    }
+  ],
+  "cleanup_completed": true,
+  "deleted_files": 24,
+  "deleted_bytes": 6988257
+}

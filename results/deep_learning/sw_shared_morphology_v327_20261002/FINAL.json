@@ -1,0 +1,81 @@
+{
+  "report": {
+    "stage": "all",
+    "target": "SW",
+    "target_score": 74.16188245244537,
+    "initial_score": 74.12175268976877,
+    "against_initial": 0.04012976267659951,
+    "against_v97_target": 0.01970254777866387,
+    "best_epoch": 13,
+    "stopped_epoch": 27,
+    "validation_rows": 144665,
+    "predictions_reproduced_exactly": true,
+    "frozen_parameters_exact": true,
+    "gradient_groups": {
+      "SW_new_raw_feature_backbone": 0.08813637495040894,
+      "SW_direct_categorical_readout": 0.06878150999546051,
+      "SW_new_state_readout": 0.006062263157218695,
+      "SW_new_raw_well_condition": 0.0059792534448206425,
+      "SW_joint_own_latent_early_fusion": 0.00700758583843708,
+      "SW_joint_latent_morphology_backbone": 0.034540385007858276
+    },
+    "seconds": 634.152106900001,
+    "peak_MiB": 2452.44677734375,
+    "complete_five_folds": false,
+    "early_terminated": false
+  },
+  "strata": {
+    "default": 98.63139476829721,
+    "continuous": 17.957678430809107
+  },
+  "actual_best_morphology_parameter_deltas": {
+    "dilation": 0.49978572130203247,
+    "erosion": 0.4988453686237335,
+    "norm.weight": 0.5571346282958984,
+    "norm.bias": 0.1546633392572403,
+    "projection.weight": 2.2381865978240967,
+    "projection.bias": 0.1146443784236908
+  },
+  "whole_vs_historical_reference": -0.007660579629529707,
+  "CONT_vs_historical_reference": -0.005763657439242564,
+  "reference_whole": 74.1695430320749,
+  "reference_CONT": 17.96344208824835,
+  "independent_disk_reload": false,
+  "adopted": false,
+  "complete_five_folds": false,
+  "remaining_folds_started": false,
+  "screening_fold": 5,
+  "predefined_equal_epoch27": {
+    "cap": {
+      "through_epoch": 27,
+      "best_epoch": 13,
+      "target_score": 74.16188245244537,
+      "control_actual_epochs": 27,
+      "nominal_budget": 80,
+      "comparison": "Predefined best through27 against historical326depth natural27; laterbest not equalwork gain"
+    },
+    "strata": {
+      "default": 98.63139476829721,
+      "continuous": 17.957678430809107
+    },
+    "whole_vs_historical326": -0.007660579629529707,
+    "CONT_vs_historical326": -0.005763657439242564,
+    "scope": "Predefined bestthrough27 vs historical326first27; samecapacity but gradientpaths/compute differ, not simultaneousrepeat"
+  },
+  "stopped_before27": false,
+  "full_best_after27_not_equalwork_gain": false,
+  "comparison_limits": "Historicalsame92289capacity, sharedgradientone-to-three/compute differs; missing27snapshot means unequalactualwork, not an equalworkpositive claim",
+  "timing": {
+    "started_epoch": 1790893161.564,
+    "pid": 15640,
+    "terminal": true,
+    "concurrent_gpu_jobs_at_launch": 1,
+    "includes": "prep initial training bestrestore",
+    "excludes": "implementation CPUfinalization",
+    "individual_seconds": 634.152106900001,
+    "peak_MiB": 2452.44677734375,
+    "process_creation_to_terminal_seconds": 638.3678977489471,
+    "interpretation": "Actualconcurrencyrecorded; includesprep/initial/train/bestrestore, excludes implementation/CPUfinalization; notisolatedspeedranking"
+  },
+  "closure": "No adoption: whole/default/CONTallbelowretained326first atsamepredefined27ceiling; close sharedcoverage no hooksubset/LR grid."
+}

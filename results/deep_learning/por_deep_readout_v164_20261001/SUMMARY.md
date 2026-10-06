@@ -1,0 +1,90 @@
+# Historical summary
+
+Focus and explored conditions: see retained README/FINAL and SUMMARY_RESULTS.json.
+
+Gain: scores and original comparison deltas are retained; incomplete folds remain incomplete.
+
+Not worth extending: original negative conclusions are retained below where available.
+
+Detailed logs, weights and caches were removed by the user request; rerunning requires retraining.
+
+## README.md
+
+# POR v164：有效读出内部深度的匹配消融
+
+## 探索重点
+
+宽度收益不单调，保持有效256位置/权重/RPS1，不继续扩宽；在读出内部增加256→128→256残差。linear与nonlinear只差中间GELU，同参数296864、原头公共初始化保持，残差输出零初始化，初始函数一致。增量逐点受隐藏RMS的0.1界约束。
+
+## 已探索内容与验证
+
+实现完成，两项尚未启动/无成绩。来自冻结v113，不加载已训151。只训练新读出全部参数，原gate/尺度/家族/骨干冻结，旧206+63幅值特征保持；own properNLL/RPS1，80/14。同容量两项是预定义公平机制对照，历史151为80/18且容量更小，不冒称历史严格消融。固定PERM154/SW104实际合并，source计入五阶段。
+
+## 收益
+
+尚未证实。分别报告非线性−线性匹配差值和对正控制POR77.926380760724绝对差值、实际TOTAL。
+
+## 不值得继续的点及证据
+
+门控157负，宽度384/512负，不再扩大这些设置；容差160仍训练，尚无最终结论。本项无收益不继续深度/瓶颈网格，不将单折泛化全OOF。
+
+
+## 实际双并发启动
+
+linear PID40840、nonlinear PID67592均核验存活、normalGPU/临时SYSTEM_REQUIRED。初始两项POR77.540454326739，与同父函数一致；296864参数、max80/pat14均确认，stderr无错误。快照：{"linear": {"pid": 40840, "epoch": 6, "best": 77.54045432673898, "best_epoch": 0, "bad": 6}, "nonlinear": {"pid": 67592, "epoch": 2, "best": 77.54045432673898, "best_epoch": 0, "bad": 2}}。无最终收益结论，待两项恢复/实际组合/公平差值；图谱已更新。
+
+
+## 真实中期快照
+
+{"linear": {"status": "running", "epoch": 16, "best": 77.58681772050492, "best_epoch": 12, "bad": 4}, "nonlinear": {"status": "running", "epoch": 11, "best": 77.54045432673898, "best_epoch": 0, "bad": 11}}。两项进程实际核验存活；线性版本已改善初始但仍未超正控制，非线性暂无增益。匹配消融尚未结束，不声称最终机制收益。已准备PERM165 AdamW/SAM0.05同预算两项，未启动、无第三GPU任务。图谱已更新。
+
+
+## 同轮前缀诊断（非最终消融）
+
+两项共同完成19轮：线性前缀最佳77.808192160603，非线性77.833969698770，非线性−线性+0.025777538167；均未达到正控制77.926380760724。两进程已核验live，无stderr错误。只作训练中快照，未完成不能声称最终机制增益。
+
+V164 linear: restored POR=77.8918447
+
+# POR v164：有效读出内部深度的匹配消融
+
+## 探索重点
+
+宽度收益不单调，保持有效256位置/权重/RPS1，不继续扩宽；在读出内部增加256→128→256残差。linear与nonlinear只差中间GELU，同参数296864、原头公共初始化保持，残差输出零初始化，初始函数一致。增量逐点受隐藏RMS的0.1界约束。
+
+## 已探索内容与验证
+
+实现完成，两项尚未启动/无成绩。来自冻结v113，不加载已训151。只训练新读出全部参数，原gate/尺度/家族/骨干冻结，旧206+63幅值特征保持；own properNLL/RPS1，80/14。同容量两项是预定义公平机制对照，历史151为80/18且容量更小，不冒称历史严格消融。固定PERM154/SW104实际合并，source计入五阶段。
+
+## 收益
+
+尚未证实。分别报告非线性−线性匹配差值和对正控制POR77.926380760724绝对差值、实际TOTAL。
+
+## 不值得继续的点及证据
+
+门控157负，宽度384/512负，不再扩大这些设置；容差160仍训练，尚无最终结论。本项无收益不继续深度/瓶颈网格，不将单折泛化全OOF。
+
+
+## 实际双并发启动
+
+linear PID40840、nonlinear PID67592均核验存活、normalGPU/临时SYSTEM_REQUIRED。初始两项POR77.540454326739，与同父函数一致；296864参数、max80/pat14均确认，stderr无错误。快照：{"linear": {"pid": 40840, "epoch": 6, "best": 77.54045432673898, "best_epoch": 0, "bad": 6}, "nonlinear": {"pid": 67592, "epoch": 2, "best": 77.54045432673898, "best_epoch": 0, "bad": 2}}。无最终收益结论，待两项恢复/实际组合/公平差值；图谱已更新。
+
+
+## 真实中期快照
+
+{"linear": {"status": "running", "epoch": 16, "best": 77.58681772050492, "best_epoch": 12, "bad": 4}, "nonlinear": {"status": "running", "epoch": 11, "best": 77.54045432673898, "best_epoch": 0, "bad": 11}}。两项进程实际核验存活；线性版本已改善初始但仍未超正控制，非线性暂无增益。匹配消融尚未结束，不声称最终机制收益。已准备PERM165 AdamW/SAM0.05同预算两项，未启动、无第三GPU任务。图谱已更新。
+
+
+## 同轮前缀诊断（非最终消融）
+
+两项共同完成19轮：线性前缀最佳77.808192160603，非线性77.833969698770，非线性−线性+0.025777538167；均未达到正控制77.926380760724。两进程已核验live，无stderr错误。只作训练中快照，未完成不能声称最终机制增益。
+
+V164 linear: restored POR=77.891844743355; delta vs v114=+0.343775248462, vs historical=+0.339907941470; actual fifth TOTAL=80.602114612783;5 phases incl source; channel gain>0.25=True; strict808=False; no otherfolds. best/stop=30/44, seconds=670.027, peakMiB=925.553.
+
+V164 nonlinear: restored POR=77.885830334051; delta vs v114=+0.337760839158, vs historical=+0.333893532166; actual fifth TOTAL=80.600310289992;5 phases incl source; channel gain>0.25=True; strict808=False; no otherfolds. best/stop=30/44, seconds=697.551, peakMiB=925.399.
+
+
+## 最终配对结论
+
+线性POR77.891844743355，非线性77.885830334051；同容量/初始化/80-14非线性−线性-0.006014409304，无非线性收益，两者也低于正RPS控制77.926380760724。两项最佳30/停止44，全144665恢复和实际三头合并、冻结精确。早期前缀正差值不是最终增益，已被最终结果推翻。关闭此65920参数/界0.1残差结构，不泛化全部深头无效。四个负权重按SHA清单删除，证据保留。两项总体启动到最后报告墙钟739.384秒，单项训练/显存见timing.json；错开启动双并发，含数据/预热/评估，不当作完整五阶段训练时长。
+
+

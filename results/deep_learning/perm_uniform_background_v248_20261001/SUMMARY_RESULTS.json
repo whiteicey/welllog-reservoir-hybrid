@@ -1,0 +1,57 @@
+{
+  "project": "perm_uniform_background_v248_20261001",
+  "scope": "obsolete-study",
+  "weights_retained": false,
+  "cleanup": "Obsolete artifacts removed by explicit user request. These are historical scores, not newly verified training.",
+  "results": [
+    {
+      "source": "MICRO_GAIN_SEVEN_STAGE_RECIPE.json",
+      "result": {
+        "scores": {
+          "POR": 77.92638076072386,
+          "PERM": 89.41346559538779,
+          "SW": 74.14914525406216,
+          "TOTAL": 80.62482802552464
+        },
+        "screening_fold": 5,
+        "validation_rows": 144665,
+        "total_training_stages": 7,
+        "stages": [
+          "SOURCE",
+          "POR113",
+          "POR151",
+          "PERM154",
+          "SW104",
+          "PERM248",
+          "SW246_multiplicative"
+        ],
+        "added_head_stages": {
+          "POR": 0,
+          "PERM": 1,
+          "SW": 1
+        },
+        "complete_five_folds": false,
+        "remaining_folds_started": false,
+        "strict_808_passed": false,
+        "gain_vs_previous_optional7": 6.679592416958258e-07,
+        "not_material_improvement": true,
+        "default_five_stage_unchanged": true,
+        "channels": {
+          "POR": {
+            "directory": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_por_ranked_probability_v151_fold5\\joint_rps"
+          },
+          "PERM": {
+            "directory": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_perm_uniform_background_v248_fold5\\mass"
+          },
+          "SW": {
+            "directory": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_sw_additive_distribution_v246_fold5\\multiplicative"
+          }
+        },
+        "validation_mode": "actual144665 fixed arrays, restoredRAM replay; no independent diskreload claim"
+      }
+    }
+  ],
+  "cleanup_completed": true,
+  "deleted_files": 9,
+  "deleted_bytes": 6957287
+}

@@ -1,0 +1,16 @@
+{
+  "pid": 5916,
+  "status": "complete",
+  "updated_at": "2026-09-30T23:18:07.816289+08:00",
+  "oof_scores": {
+    "POR": 79.33058096543338,
+    "PERM": 90.44127043721572,
+    "SW": 75.53542958448546,
+    "TOTAL": 81.89101929722543
+  },
+  "strict_oof82_passed": false,
+  "all_four_disk_replays_verified": true,
+  "maximum_gpu_jobs": 2,
+  "maximum_SW_stages": 1,
+  "execution": "fixed stages; prior root overlap and measured single-tail admission"
+}

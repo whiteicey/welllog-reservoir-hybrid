@@ -1,0 +1,27 @@
+{
+  "deleted": [
+    {
+      "path": "outputs\\pure_dl_sw_head_utility_v80r1_SW_likelihood_fold5\\model_best.pt",
+      "bytes": 3449515,
+      "sha256": "faf1a0f82f382fa9698e1f8d6691856757f748d0b154f87055f9cd813758c7c8"
+    },
+    {
+      "path": "outputs\\pure_dl_sw_head_utility_v80r1_SW_likelihood_fold5\\last_state.pt",
+      "bytes": 8805275,
+      "sha256": "065e7d2ced5c40fee254e36179d36992e129aa063b8442039351db7f3767aa96"
+    },
+    {
+      "path": "outputs\\pure_dl_sw_head_utility_v80r1_SW_joint_fold5\\model_best.pt",
+      "bytes": 3449515,
+      "sha256": "77e1fef6ba7770cb120fcb95e1be6f46b35a10940b5f61a68706e9b914833474"
+    },
+    {
+      "path": "outputs\\pure_dl_sw_head_utility_v80r1_SW_joint_fold5\\last_state.pt",
+      "bytes": 8805275,
+      "sha256": "e19a612552c48c14a00d85874cab4e75bcb940df10de589de87c195dc7275c60"
+    }
+  ],
+  "bytes": 24509580,
+  "status": "complete",
+  "retained": []
+}

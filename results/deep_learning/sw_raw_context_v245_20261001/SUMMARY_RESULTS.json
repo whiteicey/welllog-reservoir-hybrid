@@ -1,0 +1,33 @@
+{
+  "project": "sw_raw_context_v245_20261001",
+  "scope": "obsolete-study",
+  "weights_retained": false,
+  "cleanup": "Obsolete artifacts removed by explicit user request. These are historical scores, not newly verified training.",
+  "results": [
+    {
+      "source": "PAIRED_FINAL.json",
+      "result": {
+        "raw": 74.13869578852605,
+        "repeat": 74.13986870536024,
+        "raw_minus_repeat": -0.0011729168341929608,
+        "same_stopped_epoch": 15,
+        "early_terminated": true,
+        "not_convergence_claim": true,
+        "initial_scores_equal": true,
+        "feature_gain_not_confirmed": true,
+        "individual_trainer_seconds": {
+          "raw": 429.5179875000031,
+          "repeat": 429.730051099963
+        },
+        "pair_wall_clock_process_creation_to_last_report_seconds": 438.49807834625244,
+        "concurrent": true,
+        "includes_python_startup_data_model_initial_eval": true,
+        "excludes_preparation_and_cpu_assembly": true,
+        "serial_equivalent_work_not_measured": true
+      }
+    }
+  ],
+  "cleanup_completed": true,
+  "deleted_files": 14,
+  "deleted_bytes": 6958768
+}

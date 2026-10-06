@@ -1,0 +1,38 @@
+{
+  "total_training_stages": 6,
+  "source_sha256": "45a09476e3126820688420579c100c86e0e4f45df335904380a298cf5f66b9a9",
+  "parent_sha256": "2b355bb8c3736990b05e2726373a4343c574a93ab6ab1a3eda0ef796ac70cf11",
+  "candidates": [
+    "rational",
+    "polynomial"
+  ],
+  "epochs": 80,
+  "patience": 14,
+  "maximum_GPU_jobs": 2,
+  "added_head_stages": {
+    "POR": 0,
+    "PERM": 1,
+    "SW": 0
+  },
+  "remaining_folds_started": false,
+  "prepared_not_launched": true,
+  "primary_control": "Anchored grouped rational versus polynomial with same104 shape parameters and identity initial function",
+  "reference_best": 89.5155547932572,
+  "alpha": 0.3,
+  "alpha_ramp": 5,
+  "gamma": 1.3,
+  "selector_blocks": 2,
+  "auxiliary_direct_CE": 1.0,
+  "no_other_repair_weights": true,
+  "trainable_parameters": 36570,
+  "new_shape_parameters": 104,
+  "degree_numerator": 5,
+  "degree_denominator": 4,
+  "groups_per_bank": 8,
+  "new_feature_bound": 0.25,
+  "input_scale": 3.0,
+  "no_automatic_queue": true,
+  "original154_only": true,
+  "no291_weights_loaded": true,
+  "new_backbone_readout_and_shapes_jointly_trained": true
+}

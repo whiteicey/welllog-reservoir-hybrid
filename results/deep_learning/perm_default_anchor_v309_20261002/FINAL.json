@@ -1,0 +1,76 @@
+{
+  "report": {
+    "stage": "anchor",
+    "target": "PERM",
+    "target_score": 89.50671570071248,
+    "initial_score": 89.4055666268939,
+    "against_initial": 0.10114907381857563,
+    "against_v97_target": 0.109991651346661,
+    "best_epoch": 6,
+    "stopped_epoch": 20,
+    "validation_rows": 144665,
+    "predictions_reproduced_exactly": true,
+    "frozen_parameters_exact": true,
+    "gradient_groups": {
+      "PERM_sparse_reacquisition_body": 0.04970218241214752,
+      "PERM_direct_categorical_readout": 0.036735594272613525,
+      "PERM_curve_interaction_backbone": 0.03429205343127251
+    },
+    "seconds": 331.89841000002343,
+    "peak_MiB": 1813.56201171875,
+    "complete_five_folds": false,
+    "early_terminated": false
+  },
+  "strata": {
+    "retained291": {
+      "PERM": 89.5155547932572,
+      "default_PERM": 97.4945552087921,
+      "continuous_PERM": 74.0010663397606
+    },
+    "control307full": {
+      "PERM": 89.4888569594735,
+      "default_PERM": 97.41821292481609,
+      "continuous_PERM": 74.07089792183862
+    },
+    "candidate309": {
+      "PERM": 89.50671570071248,
+      "default_PERM": 97.4810168778348,
+      "continuous_PERM": 74.00136451708208
+    }
+  },
+  "gain_vs_control307": {
+    "PERM": 0.01785874123898168,
+    "default_PERM": 0.06280395301871522,
+    "continuous_PERM": -0.06953340475654102
+  },
+  "gain_vs_retained291": {
+    "PERM": -0.008839092544718596,
+    "default_PERM": -0.013538330957288736,
+    "continuous_PERM": 0.0002981773214827399
+  },
+  "adopted": false,
+  "same_capacity55490": true,
+  "default_auxiliary_CE_coefficient": 0.05,
+  "reference_historical": true,
+  "conditional_density_semantic_regularizer": true,
+  "complete_five_folds": false,
+  "remaining_folds_started": false,
+  "timing": {
+    "terminal": true,
+    "maximum_concurrency": 2,
+    "includes": "data train-only-default-bin diagnostic initial training best restore",
+    "starts": [
+      {
+        "start_epoch": 1790880604.888,
+        "pid": 87620,
+        "explicit_launch": true,
+        "stage": "anchor"
+      }
+    ],
+    "excludes": "code preparation CPU record",
+    "individual_seconds": 331.89841000002343,
+    "launch_to_report_seconds": 337.5765619277954,
+    "peak_MiB": 1813.56201171875,
+    "interpretation": "Individual time includes data/initial/train/best restoration. Actual overlap from launch records; different historical contention, no speedranking."
+  }
+}

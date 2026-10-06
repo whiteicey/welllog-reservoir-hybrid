@@ -1,0 +1,123 @@
+{
+  "project": "sw_prior_offset_aux_v318_20261002",
+  "scope": "obsolete-study",
+  "weights_retained": false,
+  "cleanup": "Obsolete artifacts removed by explicit user request. These are historical scores, not newly verified training.",
+  "results": [
+    {
+      "source": "PAIRED_FINAL.json",
+      "result": {
+        "reports": {
+          "neutral": {
+            "stage": "neutral",
+            "target": "SW",
+            "target_score": 74.12175268976877,
+            "initial_score": 74.12175268976877,
+            "against_initial": 0.0,
+            "against_v97_target": -0.02042721489793564,
+            "best_epoch": 0,
+            "stopped_epoch": 14,
+            "validation_rows": 144665,
+            "predictions_reproduced_exactly": true,
+            "frozen_parameters_exact": true,
+            "seconds": 239.7933385000215,
+            "peak_MiB": 1203.341796875,
+            "complete_five_folds": false,
+            "early_terminated": false
+          },
+          "offset": {
+            "stage": "offset",
+            "target": "SW",
+            "target_score": 74.12175268976877,
+            "initial_score": 74.12175268976877,
+            "against_initial": 0.0,
+            "against_v97_target": -0.02042721489793564,
+            "best_epoch": 0,
+            "stopped_epoch": 14,
+            "validation_rows": 144665,
+            "predictions_reproduced_exactly": true,
+            "frozen_parameters_exact": true,
+            "seconds": 239.10740639996948,
+            "peak_MiB": 1203.091796875,
+            "complete_five_folds": false,
+            "early_terminated": false
+          }
+        },
+        "strata": {
+          "neutral": {
+            "default": 98.71563205981698,
+            "continuous": 17.63188906048012
+          },
+          "offset": {
+            "default": 98.71563205981698,
+            "continuous": 17.63188906048012
+          }
+        },
+        "best_readout_delta_norms": {
+          "neutral": {
+            "readout.weight": 0.0,
+            "readout.bias": 0.0
+          },
+          "offset": {
+            "readout.weight": 0.0,
+            "readout.bias": 0.0
+          }
+        },
+        "offset_minus_neutral": 0.0,
+        "offset_minus_neutral_CONT": 0.0,
+        "gain_vs_retained297": {
+          "neutral": -0.0382775332509766,
+          "offset": -0.0382775332509766
+        },
+        "CONT_vs_retained297": {
+          "neutral": 0.1291362931329374,
+          "offset": 0.1291362931329374
+        },
+        "CONT_vs_strong252": {
+          "neutral": -0.2529790794300517,
+          "offset": -0.2529790794300517
+        },
+        "timing": {
+          "started_epoch": 1790886940.917,
+          "started_UTC": "2026-10-01T20:35:40.9209233+00:00",
+          "maximum_parallelism": 2,
+          "status": "pair_launched",
+          "jobs": [
+            {
+              "stage": "neutral",
+              "pid": 91028,
+              "start_epoch": 1790886940.938
+            },
+            {
+              "stage": "offset",
+              "pid": 79268,
+              "start_epoch": 1790886940.944
+            }
+          ],
+          "terminal": true,
+          "same_work_pair_wall_seconds": 244.6860682964325,
+          "individual_seconds": {
+            "neutral": 239.7933385000215,
+            "offset": 239.10740639996948
+          },
+          "peak_MiB": {
+            "neutral": 1203.341796875,
+            "offset": 1203.091796875
+          },
+          "interpretation": "Near-simultaneous concurrent pair; wall includes data/initial/train/bestrestore, excludes preparation beforefirstlaunch and CPUfinalization after. No isolated serial-versus-parallel speed comparison."
+        },
+        "screening_fold": 5,
+        "complete_five_folds": false,
+        "remaining_folds_started": false,
+        "independent_disk_reload": false,
+        "automatic_adoption": false,
+        "adopted": false,
+        "closure": "both best0; no learned gain; no bound/loss weight sweep",
+        "timing_status": "complete"
+      }
+    }
+  ],
+  "cleanup_completed": true,
+  "deleted_files": 7,
+  "deleted_bytes": 6953183
+}

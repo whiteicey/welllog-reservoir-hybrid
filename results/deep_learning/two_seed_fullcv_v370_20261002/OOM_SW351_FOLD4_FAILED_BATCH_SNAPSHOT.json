@@ -1,0 +1,90 @@
+{
+  "status": "failed_or_stopped",
+  "controller_pid": 68704,
+  "active_pid": null,
+  "identity": null,
+  "fold": null,
+  "stage": null,
+  "started_epoch": null,
+  "batch_started_epoch": 1790927178.5526347,
+  "concurrency": "existing workers drain, thereafter serial; no new overlap",
+  "maximum_GPU_jobs": 1,
+  "maximum_existing_GPU_jobs": 2,
+  "draining_existing_overlap": false,
+  "no_new_overlap": true,
+  "active_jobs": [],
+  "completed_model_folds": 7,
+  "events": [
+    {
+      "event": "launch",
+      "pid": 24812,
+      "identity": "seed_20261013",
+      "fold": 4,
+      "stage": "SW104",
+      "epoch": 1790949429.4975026
+    },
+    {
+      "event": "terminal",
+      "pid": 24812,
+      "stage": "SW104",
+      "fold": 4,
+      "identity": "seed_20261013",
+      "epoch": 1790950131.27768,
+      "exit_code": 0
+    },
+    {
+      "event": "launch",
+      "pid": 78160,
+      "identity": "seed_20261013",
+      "fold": 4,
+      "stage": "POR341",
+      "epoch": 1790950131.5461729
+    },
+    {
+      "event": "terminal",
+      "pid": 78160,
+      "stage": "POR341",
+      "fold": 4,
+      "identity": "seed_20261013",
+      "epoch": 1790950672.39593,
+      "exit_code": 0
+    },
+    {
+      "event": "launch",
+      "pid": 42332,
+      "identity": "seed_20261013",
+      "fold": 4,
+      "stage": "PERM336",
+      "epoch": 1790950672.6381142
+    },
+    {
+      "event": "terminal",
+      "pid": 42332,
+      "stage": "PERM336",
+      "fold": 4,
+      "identity": "seed_20261013",
+      "epoch": 1790950804.5455296,
+      "exit_code": 0
+    },
+    {
+      "event": "launch",
+      "pid": 60132,
+      "identity": "seed_20261013",
+      "fold": 4,
+      "stage": "SW351",
+      "epoch": 1790950804.755399
+    },
+    {
+      "event": "terminal",
+      "pid": 60132,
+      "stage": "SW351",
+      "fold": 4,
+      "identity": "seed_20261013",
+      "epoch": 1790950945.2235832,
+      "exit_code": 1
+    }
+  ],
+  "error": "({'fold': 4, 'identity': 'seed_20261013', 'stage': 'SW351', 'role': 'SW', 'dest': 'D:\\\\match_predict\\\\welllog-reservoir-hybrid\\\\outputs\\\\pure_dl_two_seed_fullcv_v370\\\\fold_4\\\\seed_20261013\\\\SW351', 'expected': 'D:\\\\match_predict\\\\welllog-reservoir-hybrid\\\\outputs\\\\pure_dl_two_seed_fullcv_v370\\\\fold_4\\\\seed_20261013\\\\SW351\\\\report.json', 'command': ['C:\\\\Users\\\\z5364\\\\.conda\\\\envs\\\\normal\\\\python.exe', '-u', 'experiments/pure_dl/train_pair_fullcv_stage_v370.py', '--stage', 'SW351'], 'pid': 60132, 'create_time': 1790950804.7571063, 'started_epoch': 1790950804.755399, 'attached': False, 'overlap_observed': False, 'other_GPU_pids_at_launch': []}, 1)",
+  "explicit_resume_only": true,
+  "no_retry": true
+}

@@ -1,0 +1,85 @@
+{
+  "project": "sw_morphology_width_v329_20261002",
+  "scope": "obsolete-study",
+  "weights_retained": false,
+  "cleanup": "Obsolete artifacts removed by explicit user request. These are historical scores, not newly verified training.",
+  "results": [
+    {
+      "source": "FINAL.json",
+      "result": {
+        "report": {
+          "stage": "wide",
+          "target": "SW",
+          "target_score": 74.131552954773,
+          "initial_score": 74.12175268976877,
+          "against_initial": 0.009800265004230369,
+          "against_v97_target": -0.010626949893705273,
+          "best_epoch": 1,
+          "stopped_epoch": 15,
+          "validation_rows": 144665,
+          "predictions_reproduced_exactly": true,
+          "frozen_parameters_exact": true,
+          "seconds": 394.46742389997235,
+          "peak_MiB": 2336.9970703125,
+          "complete_five_folds": false,
+          "early_terminated": false
+        },
+        "strata": {
+          "default": 98.7675379664636,
+          "continuous": 17.54497656542636
+        },
+        "actual_best_morphology_parameter_deltas": {
+          "dilation": 0.33575162291526794,
+          "erosion": 0.34246826171875,
+          "norm.weight": 0.13121947646141052,
+          "norm.bias": 0.11606539040803909,
+          "projection.weight": 1.1746577024459839,
+          "projection.bias": 0.09768412262201309
+        },
+        "whole_vs_historical_reference": -0.03799007730189885,
+        "CONT_vs_historical_reference": -0.41846552282198957,
+        "reference_whole": 74.1695430320749,
+        "reference_CONT": 17.96344208824835,
+        "independent_disk_reload": false,
+        "adopted": false,
+        "complete_five_folds": false,
+        "remaining_folds_started": false,
+        "screening_fold": 5,
+        "stopped_before27": true,
+        "full_best_after27_not_equalwork_gain": false,
+        "comparison_limits": "Historical92289vsnew262017capacity and initialencoderfunctions/compute differ; missing27snapshot means unequalactualwork, not an equalworkpositive claim",
+        "timing": {
+          "started_epoch": 1790893852.296,
+          "pid": 75584,
+          "terminal": true,
+          "concurrent_gpu_jobs_at_launch": 2,
+          "concurrent_route": "POR328",
+          "includes": "prep initial training bestrestore",
+          "excludes": "implementation CPUfinalization",
+          "individual_seconds": 394.46742389997235,
+          "peak_MiB": 2336.9970703125,
+          "process_creation_to_terminal_seconds": 399.44104528427124,
+          "interpretation": "Actualconcurrencyrecorded; includesprep/initial/train/bestrestore, excludes implementation/CPUfinalization; notisolatedspeedranking"
+        }
+      }
+    },
+    {
+      "source": "LIVE_SCORE_SNAPSHOT.json",
+      "result": {
+        "epoch": 9,
+        "best_epoch": 1,
+        "whole": 74.131552954773,
+        "strata": {
+          "default": 98.7675379664636,
+          "continuous": 17.54497656542636
+        },
+        "whole_vs_reference": -0.03799007730189885,
+        "CONT_vs_reference": -0.41846552282198957,
+        "scope": "Live atomic ownbest snapshot, not terminalgain or independentdiskreload"
+      }
+    }
+  ],
+  "cleanup_completed": true,
+  "deleted_files": 8,
+  "deleted_bytes": 3487443
+}

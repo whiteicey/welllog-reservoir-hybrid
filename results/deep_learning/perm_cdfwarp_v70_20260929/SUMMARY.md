@@ -1,0 +1,122 @@
+# Historical summary
+
+Focus and explored conditions: see retained README/FINAL and SUMMARY_RESULTS.json.
+
+Gain: scores and original comparison deltas are retained; incomplete folds remain incomplete.
+
+Not worth extending: original negative conclusions are retained below where available.
+
+Detailed logs, weights and caches were removed by the user request; rerunning requires retraining.
+
+## README.md
+
+# v70 当前冠军PERM条件CDF校准
+
+## 探索重点与固定对照
+转回当前冠军PERM v29 coupled89.396724049366，冻结全部双专家/原读出/路由，不继续RQS负优化设置。仅新增10306参数小头，读取两个128维隐藏及已有63幅值侧特征；Conv319→32→2，affine中间恒等，nonlinear中间GELU，同参数张量与零输出初始化。两组原始完整预测相同。
+头产生u/v=0.25*tanh(output)，变换G(F)=F+uF(1-F)+vF(1-F)(1-2F)。端点G(0)=0/G(1)=1；导数1+u(1-2F)+v(1-6F+6F²)，因两个基导数绝对值≤1且|u|/|v|≤.25，导数≥.5。训练新连续密度logpdf=原Gaussian mixture logpdf+log G'(F)；默认门控原值冻结。不是验证分数校准或标签作输入，两个神经头仅训练64井PERM似然/Q50。
+验证沿原256格概率累计作G变换，并以原概率+校正CDF差的残差形式保持零头逐位一致；原800动作/default/评分不变。端点校正为0、总质量守恒，浮点误差clamp非负，不再次归一化破坏零头身份。无需改变原混合分量位置或尺度。
+
+## 训练边界与已做
+原9曲线/206输入及已有63侧特征/原64训练井和第五16井144665点/seed20261010/Q50/256随机窗口中心128不变，无额外特征数据或其他模型投票。原模型完全冻结eval，新增头AdamW3e-4/wd.01/clip2、cosine80*64至1e-5、max80/pat18/min10/b64/64steps。初始模型纳入选择，回退不算新收益；完整原子last_state保存头/优化器/调度/RNG/停止，仅显式恢复。
+已实现，启动时无成绩，直接训练。实际新头梯度/原模型状态不变、初始/最佳144665点、来源哈希和三列评分作为结果证据；保留正候选前原始输入磁盘重建，不做独立数值预检/审查。
+
+## 收益、待做与不继续
+待两项实测/配对差/当前绝对差、负权重清理、PROJECTS/EXPLORATIONS/图谱。若非线性无最终配对收益，不扫本头宽度/激活；若两者都无收益，不扫当前多项式阶数/幅度。结论只限这个条件CDF变换，不泛化全部分布校准。第0轮回退不算学习收益，开发折仍需独立确认。
+最多2GPU，显存允许时双跑，无自动队列；分别记录单项及两项实际总墙钟、并发与显存，含加载/预热/训练/评估，代码/收尾另计。先清单后删负权重，保留所有既有正候选/交付。第五严格>80.5且明显收益后才考虑其他折，完整原五折OOF>82未完成；无其他折/旧任务/交付覆盖。目标后独立确认、新目录交付。
+
+
+## v70最终结果
+两项完成，TOTAL=80.354325927816，nonlinear-affine PERM=+0.000000000000（训练后差+0.000421751979）。采用=None，保留[]，负权重已清理。原模型/交付不变，无其他折/队列；目标未完成，见perm_cdfwarp_v70_20260929/FINAL.md。
+
+
+
+
+## FINAL.md
+
+# v70 PERM条件CDF校准结果
+
+第五折TOTAL 80.354325927816 → 80.354325927816。
+
+|模式|训练后最高PERM|含起点PERM|最佳/停止轮|
+|---|---:|---:|---|
+|affine|89.389428728467|89.396724049366|0/18|
+|nonlinear|89.389850480446|89.396724049366|0/18|
+
+## 探索重点与验证
+同10306新参数、319→32→2条件CDF小头，affine中间恒等/nonlinear GELU，相同张量与零输出。原v29 coupled PERM全冻结。G(F)=F+uF(1-F)+vF(1-F)(1-2F)，u/v各界±0.25，端点固定且导数≥0.5；训练原混合Gaussian logpdf加log导数，原门控不更新。验证原256格概率累计+校正差保持零头逐位一致，原800动作/评分不变。
+原9曲线/206+已有63侧特征/Q50/原第五/256中心128/80-18保持，新增头统一3e-4。实际新参数梯度有效、原参数无梯度且状态不变，初始及最佳144665点、来源哈希和实际三列评分核验。
+保留者原始输入磁盘重建：[]。
+
+## 收益与不继续
+nonlinear-affine含起点PERM=+0.000000000000，训练后最佳差=+0.000421751979；采用=None，保留=[]。
+起点回退不是学习收益。若nonlinear无配对收益，不扫头宽度/激活；若两组均无收益，不扫当前多项式阶数/幅度；仅限本条件CDF变换，不泛化全部分布校准。重复开发折仍无独立新井确认。
+
+## 耗时、清理和未完成
+{
+  "candidates": [
+    {
+      "mode": "affine",
+      "start": "2026-09-29T23:10:50.457158+08:00",
+      "end": "2026-09-29T23:12:27.142413+08:00",
+      "seconds": 92.68321890001243,
+      "peak_allocated_MiB": 715.7578125
+    },
+    {
+      "mode": "nonlinear",
+      "start": "2026-09-29T23:13:28.380994+08:00",
+      "end": "2026-09-29T23:15:04.277001+08:00",
+      "seconds": 91.52735109999776,
+      "peak_allocated_MiB": 715.7578125
+    }
+  ],
+  "first_launch_to_last_completion_seconds": 253.819843,
+  "peak_process_concurrency": 1,
+  "finalization_and_replay_seconds": 0.5844341999909375,
+  "scope": "individual includes load/warmup/train/eval; ac
+
+# v70 PERM条件CDF校准结果
+
+第五折TOTAL 80.354325927816 → 80.354325927816。
+
+|模式|训练后最高PERM|含起点PERM|最佳/停止轮|
+|---|---:|---:|---|
+|affine|89.389428728467|89.396724049366|0/18|
+|nonlinear|89.389850480446|89.396724049366|0/18|
+
+## 探索重点与验证
+同10306新参数、319→32→2条件CDF小头，affine中间恒等/nonlinear GELU，相同张量与零输出。原v29 coupled PERM全冻结。G(F)=F+uF(1-F)+vF(1-F)(1-2F)，u/v各界±0.25，端点固定且导数≥0.5；训练原混合Gaussian logpdf加log导数，原门控不更新。验证原256格概率累计+校正差保持零头逐位一致，原800动作/评分不变。
+原9曲线/206+已有63侧特征/Q50/原第五/256中心128/80-18保持，新增头统一3e-4。实际新参数梯度有效、原参数无梯度且状态不变，初始及最佳144665点、来源哈希和实际三列评分核验。
+保留者原始输入磁盘重建：[]。
+
+## 收益与不继续
+nonlinear-affine含起点PERM=+0.000000000000，训练后最佳差=+0.000421751979；采用=None，保留=[]。
+起点回退不是学习收益。若nonlinear无配对收益，不扫头宽度/激活；若两组均无收益，不扫当前多项式阶数/幅度；仅限本条件CDF变换，不泛化全部分布校准。重复开发折仍无独立新井确认。
+
+## 耗时、清理和未完成
+{
+  "candidates": [
+    {
+      "mode": "affine",
+      "start": "2026-09-29T23:10:50.457158+08:00",
+      "end": "2026-09-29T23:12:27.142413+08:00",
+      "seconds": 92.68321890001243,
+      "peak_allocated_MiB": 715.7578125
+    },
+    {
+      "mode": "nonlinear",
+      "start": "2026-09-29T23:13:28.380994+08:00",
+      "end": "2026-09-29T23:15:04.277001+08:00",
+      "seconds": 91.52735109999776,
+      "peak_allocated_MiB": 715.7578125
+    }
+  ],
+  "first_launch_to_last_completion_seconds": 253.819843,
+  "peak_process_concurrency": 1,
+  "finalization_and_replay_seconds": 0.5844341999909375,
+  "scope": "individual includes load/warmup/train/eval; actual batch includes launch gaps; authoring/finalization separate"
+}
+本轮删除4个负检查点，共6982218字节，清单先写后删；源/配置/日志/预测保留。
+实际并发峰值见timing；单项与总墙钟含加载/预热/训练/评估和启动间隔，代码和收尾另计。第五严格>80.5与完整原五折OOF>82未完成，无其他折/旧队列/交付修改；目标后独立确认及新目录交付。
+
+

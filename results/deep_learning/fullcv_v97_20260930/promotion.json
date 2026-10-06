@@ -1,0 +1,23 @@
+{
+  "passed": true,
+  "screening_fold": 5,
+  "strict_threshold": 80.5,
+  "scores": {
+    "POR": 77.551936801885,
+    "PERM": 89.39672404936582,
+    "SW": 74.1421799046667,
+    "TOTAL": 80.50419742447689
+  },
+  "rows": 144665,
+  "recipe_sha256": "126b4ef9aca25c837bab22c56d10e76b7a46098342f2b00937f31c54eb3a1221",
+  "fifth_prediction_sha256": "110a9cfa5f6308e4a582b83583ccaf855ffe1286321dba276db7b695503f7933",
+  "partial_oof_sha256": "799dbb1b729ef24bf144239adcf646eb98f438abdba6f65ac23b02592217ebd4",
+  "source_trace_sha256": "130d8f17b4fe83f4bcbf868ca5686e6b380bd5cbe605fa528fb7cd7c7baa3897",
+  "protocol_sha256": "b8ca541fa8849a8760b2ac3e192f2446e08796798d28600e3b9df59044d8056e",
+  "complete_five_folds": false,
+  "remaining_folds_started": false,
+  "training_launch_authorized": false,
+  "remaining_training_implementation_complete": false,
+  "seconds": 3.97590340001625,
+  "finished_at": "2026-09-30T17:03:20.064478+08:00"
+}

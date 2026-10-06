@@ -1,0 +1,33 @@
+{
+  "parent": "experiments\\pure_dl\\train_mechanism_v31.py",
+  "parent_sha256": "495efe7e33deed2f61484462ba9b82a388d69e8600c5144ca866501c5c04372e",
+  "created": "experiments\\pure_dl\\train_crosscurve_v32.py",
+  "created_sha256": "20e2458cfcbeade5ad478eef382d645746434123071af5f8de3749cb94eb5fe4",
+  "changes": [
+    [
+      "Two finite mechanism checks on the retained v30; independent candidate states.",
+      "Matched redundant/cross-curve feature corrections on retained v31."
+    ],
+    [
+      "choices=('POR','SW')",
+      "choices=('POR','PERM','SW')"
+    ],
+    [
+      "module_name='por_reparam_v31' if target=='POR' else 'sw_warp_v31'",
+      "module_name='crosscurve_v32'"
+    ],
+    [
+      "('champion_coadapt_v30.py','champion_split_route_v29.py'",
+      "('prepare_crosscurve_v32.py','por_reparam_v31.py','champion_coadapt_v30.py','champion_split_route_v29.py'"
+    ],
+    [
+      "feature_count=206,amplitude_side=63,train_points=578891",
+      "feature_count=206,amplitude_side=63,extra_view_features=18,cached_views=2,train_points=578891"
+    ],
+    [
+      "v31_candidate_state_plus_documented_frozen_dependencies",
+      "v32_feature_head_plus_frozen_v31_dependencies"
+    ]
+  ],
+  "historical_source_modified": false
+}

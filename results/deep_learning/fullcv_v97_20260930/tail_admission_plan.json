@@ -1,0 +1,18 @@
+{
+  "status": "deployed",
+  "old_source_sha256": "2d694e30903a4f00ac8059d3b758535270ba37da063989bc7e80434003a755a4",
+  "new_source_sha256": "83c04d695cd8e86f735ab518a173d6e4afbf14990f2f10e70c61d428ab92762c",
+  "old_controller_pid": 79892,
+  "scope": "only fold4 sw_additive/sw_utility/sw_sam/sw_density with no GPU worker live",
+  "physical_minimum_gib": 3.0,
+  "cuda_minimum_gib": 4.0,
+  "measured_SW_peak_MiB": 1693.316,
+  "observed_physical_free_gib": 3.4423828125,
+  "observed_cuda_free_gib": 10.8037109375,
+  "training_source_manifest_unchanged": true,
+  "termination": "CPU controller only; no training process active",
+  "remaining_folds_authorization": "authorization.json",
+  "new_controller_pid": 5916,
+  "actual_first_tail_worker": 85676,
+  "deployed_at": "2026-09-30T22:51:46.251165+08:00"
+}

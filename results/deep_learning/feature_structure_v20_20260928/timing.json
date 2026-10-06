@@ -1,0 +1,18 @@
+{
+  "max_concurrent_jobs": 2,
+  "execution": "first two concurrent; third explicitly started after slots available",
+  "first_launch_to_last_finish_seconds": 362.856643,
+  "run_seconds": {
+    "amplitude_early": 170.78718110000045,
+    "shape_early": 189.99419430000034,
+    "shape_late": 136.17499570000018
+  },
+  "peak_allocated_MiB": {
+    "amplitude_early": 626.3798828125,
+    "shape_early": 626.3798828125,
+    "shape_late": 626.3642578125
+  },
+  "feature_preparation_seconds": 7.304683099999238,
+  "final_replay_setup_seconds": 3.9451120000003357,
+  "scope": "Wall includes launches/import/data loading/train/validation/restore and gap before third explicit launch; excludes implementation, feature preparation, final replay. No concurrency speedup claim."
+}

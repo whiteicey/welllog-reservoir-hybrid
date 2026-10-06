@@ -1,0 +1,47 @@
+{
+  "report": {
+    "stage": "balanced",
+    "target": "SW",
+    "target_score": 74.15237674585131,
+    "initial_score": 74.12175268976877,
+    "against_initial": 0.03062405608254437,
+    "against_v97_target": 0.01019684118460873,
+    "best_epoch": 32,
+    "stopped_epoch": 46,
+    "validation_rows": 144665,
+    "predictions_reproduced_exactly": true,
+    "frozen_parameters_exact": true,
+    "gradient_groups": {
+      "SW_new_raw_feature_backbone": 0.08836733549833298,
+      "SW_direct_categorical_readout": 0.06910170614719391,
+      "SW_new_state_readout": 0.006067464128136635
+    },
+    "seconds": 487.8969279000303,
+    "peak_MiB": 1241.642578125,
+    "complete_five_folds": false,
+    "early_terminated": false
+  },
+  "absolute_gain_vs252": 0.003148538039241089,
+  "matched18_training_history_best": {
+    "epoch": 17,
+    "target_score": 74.14960383755867,
+    "best": 74.14960383755867,
+    "best_epoch": 17,
+    "bad": 0,
+    "loss": 1.6572278160601854,
+    "mix_alpha": 0.25,
+    "training_direct_CE": 4.058871269226074,
+    "training_group_risk": 0.0,
+    "training_group_count": 0,
+    "max_training_group_weight": 0.0,
+    "seconds": 6.6585374000133015
+  },
+  "matched18_minus282": 0.00648416304669297,
+  "matched18_not_checkpoint_reproduced": true,
+  "full_budget_vs_bounded_control_not_causal_ablation": true,
+  "adopted_optional7": true,
+  "strict808_qualified": false,
+  "complete_five_folds": false,
+  "remaining_folds_started": false,
+  "independent_disk_reload": false
+}

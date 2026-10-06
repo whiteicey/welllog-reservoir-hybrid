@@ -1,0 +1,34 @@
+{
+  "deleted": [
+    {
+      "path": "outputs\\pure_dl_sw_factor_sam_v96_SW_likelihood_fold5\\model_best_updated.pt",
+      "bytes": 6846467,
+      "sha256": "2a93f397ecf49e6e346e4608c18eca3bb760cec7db526aab1bbd6e5b552dc558"
+    },
+    {
+      "path": "outputs\\pure_dl_sw_factor_sam_v96_SW_likelihood_fold5\\last_state.pt",
+      "bytes": 22399787,
+      "sha256": "6a84cd51648bf391dc4cae30d0a3ded5883ac1b80960a86bb467ce7f793269db"
+    },
+    {
+      "path": "outputs\\pure_dl_sw_factor_sam_v96_SW_joint_fold5\\model_best.pt",
+      "bytes": 6844531,
+      "sha256": "8a914d3cb2176128caccb9d4476d8edaaadeffe1836e9733ccd31b03eddffc1f"
+    },
+    {
+      "path": "outputs\\pure_dl_sw_factor_sam_v96_SW_joint_fold5\\model_best_updated.pt",
+      "bytes": 6846467,
+      "sha256": "49001f1f5ba7c11bdb1517119c4c4cffe5169d62d35f6ac24c78c5bc89871b84"
+    },
+    {
+      "path": "outputs\\pure_dl_sw_factor_sam_v96_SW_joint_fold5\\last_state.pt",
+      "bytes": 22388459,
+      "sha256": "ec326d5f35638d619f792893647a346ba9c1cc90a7dc357a339d096946d5c17f"
+    }
+  ],
+  "bytes": 65325711,
+  "status": "complete",
+  "retained": {
+    "likelihood": "model_best.pt"
+  }
+}

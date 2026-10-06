@@ -1,0 +1,127 @@
+{
+  "created_epoch": 1790934988.5451863,
+  "old_controller": {
+    "pid": 27968,
+    "create_time": 1790931556.0205936,
+    "cmdline": [
+      "C:\\Users\\z5364\\.conda\\envs\\normal\\python.exe",
+      "-u",
+      "D:\\match_predict\\welllog-reservoir-hybrid\\results\\deep_learning\\two_seed_fullcv_v370_20261002\\resume_pair_serial_v370r2.py"
+    ]
+  },
+  "batch": {
+    "status": "running",
+    "controller_pid": 27968,
+    "active_pid": 74592,
+    "identity": "original",
+    "fold": 2,
+    "stage": "PERM154",
+    "started_epoch": 1790934941.077257,
+    "batch_started_epoch": 1790927178.5526347,
+    "concurrency": "serial after explicit OOM recovery",
+    "maximum_GPU_jobs": 1,
+    "active_jobs": [
+      {
+        "fold": 2,
+        "identity": "original",
+        "stage": "PERM154",
+        "role": "head",
+        "dest": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_two_seed_fullcv_v370\\fold_2\\original\\PERM154",
+        "expected": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_two_seed_fullcv_v370\\fold_2\\original\\PERM154\\report.json",
+        "command": [
+          "C:\\Users\\z5364\\.conda\\envs\\normal\\python.exe",
+          "-u",
+          "experiments/pure_dl/train_pair_fullcv_stage_v370.py",
+          "--stage",
+          "PERM154"
+        ],
+        "pid": 74592,
+        "create_time": 1790934941.0796938,
+        "started_epoch": 1790934941.077257,
+        "resumed": false,
+        "attached": false
+      }
+    ],
+    "completed_model_folds": 2,
+    "events": [
+      {
+        "event": "terminal",
+        "pid": 90796,
+        "identity": "original",
+        "fold": 1,
+        "stage": "SCAN_SW",
+        "exit_code": 0
+      },
+      {
+        "event": "launch",
+        "pid": 52616,
+        "identity": "original",
+        "fold": 2,
+        "stage": "SOURCE"
+      },
+      {
+        "event": "terminal",
+        "pid": 52616,
+        "identity": "original",
+        "fold": 2,
+        "stage": "SOURCE",
+        "exit_code": 0
+      },
+      {
+        "event": "launch",
+        "pid": 74532,
+        "identity": "original",
+        "fold": 2,
+        "stage": "POR113"
+      },
+      {
+        "event": "terminal",
+        "pid": 74532,
+        "identity": "original",
+        "fold": 2,
+        "stage": "POR113",
+        "exit_code": 0
+      },
+      {
+        "event": "launch",
+        "pid": 42180,
+        "identity": "original",
+        "fold": 2,
+        "stage": "POR151"
+      },
+      {
+        "event": "terminal",
+        "pid": 42180,
+        "identity": "original",
+        "fold": 2,
+        "stage": "POR151",
+        "exit_code": 0
+      },
+      {
+        "event": "launch",
+        "pid": 74592,
+        "identity": "original",
+        "fold": 2,
+        "stage": "PERM154"
+      }
+    ]
+  },
+  "attached_child": {
+    "pid": 74592,
+    "create_time": 1790934941.0796938,
+    "cmdline": [
+      "C:\\Users\\z5364\\.conda\\envs\\normal\\python.exe",
+      "-u",
+      "experiments/pure_dl/train_pair_fullcv_stage_v370.py",
+      "--stage",
+      "PERM154"
+    ]
+  },
+  "GPU_child_preserved": true,
+  "no_model_training_changes": true,
+  "overlap_controller_sha256": "d1b6649dc816357ebad3419dcca692f8da77f46ec4b8836aef6b097ea1055eb0",
+  "latest_user_authorization": "可以加入另外一个并发线程",
+  "maximum_GPU_jobs": 2,
+  "maximum_PERM_jobs": 1,
+  "minimum_driver_free_MiB": 7168
+}

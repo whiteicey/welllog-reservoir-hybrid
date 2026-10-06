@@ -1,0 +1,122 @@
+{
+  "project": "perm_mixstyle_coadapt_v267_20261001",
+  "scope": "obsolete-study",
+  "weights_retained": false,
+  "cleanup": "Obsolete artifacts removed by explicit user request. These are historical scores, not newly verified training.",
+  "results": [
+    {
+      "source": "PAIRED_FINAL.json",
+      "result": {
+        "arms": {
+          "control": {
+            "scores": {
+              "POR": 77.92638076072386,
+              "PERM": 89.4043983346458,
+              "SW": 74.12175282815758,
+              "TOTAL": 80.61206713519834
+            },
+            "screening_fold": 5,
+            "validation_rows": 144665,
+            "complete_five_folds": false,
+            "strict_808_passed": false,
+            "remaining_folds_started": false,
+            "total_training_stages": 6,
+            "stage_upper_bound": 8,
+            "added_head_stages": {
+              "POR": 0,
+              "PERM": 1,
+              "SW": 0
+            },
+            "source_stage_counted": true,
+            "gain_vs_original_PERM": -0.0011665222731380709,
+            "gain_vs_original_TOTAL": -0.0004082827955897983,
+            "report": {
+              "stage": "control",
+              "target": "PERM",
+              "target_score": 89.4043983346458,
+              "initial_score": 89.4043983346458,
+              "against_initial": 0.0,
+              "against_v97_target": 0.00767428527998959,
+              "best_epoch": 0,
+              "stopped_epoch": 14,
+              "validation_rows": 144665,
+              "predictions_reproduced_exactly": true,
+              "frozen_parameters_exact": true,
+              "seconds": 241.30017770000268,
+              "peak_MiB": 786.46533203125,
+              "complete_five_folds": false,
+              "early_terminated": false
+            }
+          },
+          "mixstyle": {
+            "scores": {
+              "POR": 77.92638076072386,
+              "PERM": 89.4043983346458,
+              "SW": 74.12175282815758,
+              "TOTAL": 80.61206713519834
+            },
+            "screening_fold": 5,
+            "validation_rows": 144665,
+            "complete_five_folds": false,
+            "strict_808_passed": false,
+            "remaining_folds_started": false,
+            "total_training_stages": 6,
+            "stage_upper_bound": 8,
+            "added_head_stages": {
+              "POR": 0,
+              "PERM": 1,
+              "SW": 0
+            },
+            "source_stage_counted": true,
+            "gain_vs_original_PERM": -0.0011665222731380709,
+            "gain_vs_original_TOTAL": -0.0004082827955897983,
+            "report": {
+              "stage": "mixstyle",
+              "target": "PERM",
+              "target_score": 89.4043983346458,
+              "initial_score": 89.4043983346458,
+              "against_initial": 0.0,
+              "against_v97_target": 0.00767428527998959,
+              "best_epoch": 0,
+              "stopped_epoch": 14,
+              "validation_rows": 144665,
+              "predictions_reproduced_exactly": true,
+              "frozen_parameters_exact": true,
+              "seconds": 237.49355389998527,
+              "peak_MiB": 786.46533203125,
+              "complete_five_folds": false,
+              "early_terminated": false
+            }
+          }
+        },
+        "mixstyle_minus_control": 0.0,
+        "timing": {
+          "excludes_code_preparation": true,
+          "arms": {
+            "mixstyle": {
+              "process_creation_utc_seconds": 1790866645.101,
+              "pid": 36084
+            },
+            "control": {
+              "process_creation_utc_seconds": 1790866645.081,
+              "pid": 84480
+            }
+          },
+          "pair_wallclock_pending": false,
+          "maximum_GPU_jobs": 2,
+          "concurrent": true,
+          "includes_startup_model_data_initial_eval": true,
+          "pair_wallclock_seconds": 246.88150119781494,
+          "includes_final_restore_and_report": true
+        },
+        "independent_disk_reload": false,
+        "strict_808_passed": false,
+        "remaining_folds_started": false,
+        "conclusion": "Both bestinitial0/natural14stop/no learnedgain. Close coadapt context/mass and hiddenstyle p.25/strength.1 here, not allaugmentations failure."
+      }
+    }
+  ],
+  "cleanup_completed": true,
+  "deleted_files": 11,
+  "deleted_bytes": 6957536
+}

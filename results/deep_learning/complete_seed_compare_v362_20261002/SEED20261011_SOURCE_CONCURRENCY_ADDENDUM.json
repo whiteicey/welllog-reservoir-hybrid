@@ -1,0 +1,106 @@
+{
+  "seed": 20261011,
+  "stage": "SOURCE",
+  "actual_training_pid": 32596,
+  "training_tasks": 1,
+  "additional_readonly_GPU_evaluation_overlap": true,
+  "max_GPU_jobs": 2,
+  "training_stage_execution": "Serial within seed batch; original controller TIMING solo refers to trainer count and omits temporary read-only GPU evaluations.",
+  "overlap_evidence": {
+    "original_seed_pair_v363_20261002": {
+      "POR": {
+        "seconds": 11.738712500024121,
+        "peak_MiB": 1362.8662109375,
+        "admission": {
+          "maximum_concurrent_jobs": 2,
+          "other_jobs": [
+            {
+              "pid": 32596,
+              "script": "train_complete_seed_source_v362.py"
+            }
+          ],
+          "free_gib": 10.8037109375,
+          "total_gib": 11.99365234375
+        }
+      },
+      "PERM": {
+        "seconds": 10.580043199995998,
+        "peak_MiB": 1166.623046875,
+        "admission": {
+          "maximum_concurrent_jobs": 2,
+          "other_jobs": [
+            {
+              "pid": 32596,
+              "script": "train_complete_seed_source_v362.py"
+            }
+          ],
+          "free_gib": 10.8037109375,
+          "total_gib": 11.99365234375
+        }
+      },
+      "SW": {
+        "seconds": 15.240805099951103,
+        "peak_MiB": 877.1455078125,
+        "admission": {
+          "maximum_concurrent_jobs": 2,
+          "other_jobs": [
+            {
+              "pid": 32596,
+              "script": "train_complete_seed_source_v362.py"
+            }
+          ],
+          "free_gib": 10.8037109375,
+          "total_gib": 11.99365234375
+        }
+      }
+    },
+    "original_seed_weight_grid_v364_20261002": {
+      "POR": {
+        "seconds": 15.536385499988683,
+        "peak_MiB": 1362.8662109375,
+        "admission": {
+          "maximum_concurrent_jobs": 2,
+          "other_jobs": [
+            {
+              "pid": 32596,
+              "script": "train_complete_seed_source_v362.py"
+            }
+          ],
+          "free_gib": 10.8037109375,
+          "total_gib": 11.99365234375
+        }
+      },
+      "PERM": {
+        "seconds": 15.742436000029556,
+        "peak_MiB": 1166.623046875,
+        "admission": {
+          "maximum_concurrent_jobs": 2,
+          "other_jobs": [
+            {
+              "pid": 32596,
+              "script": "train_complete_seed_source_v362.py"
+            }
+          ],
+          "free_gib": 10.8037109375,
+          "total_gib": 11.99365234375
+        }
+      },
+      "SW": {
+        "seconds": 14.977015499956906,
+        "peak_MiB": 877.1455078125,
+        "admission": {
+          "maximum_concurrent_jobs": 2,
+          "other_jobs": [
+            {
+              "pid": 32596,
+              "script": "train_complete_seed_source_v362.py"
+            }
+          ],
+          "free_gib": 10.8037109375,
+          "total_gib": 11.99365234375
+        }
+      }
+    }
+  },
+  "timing_limit": "SOURCE processwall1051.897459s includes overlapping read-only evaluations and must not be called an isolated GPU benchmark. Original TIMING and frozen checkpoints preserved."
+}

@@ -1,0 +1,11 @@
+{
+  "includes": "preprocessing warmup training best restoration",
+  "concurrency": "solo at launch after both338terminal",
+  "pid": 36304,
+  "terminal": true,
+  "global_GPU_jobs_before": 0,
+  "started_epoch": 1790900351.48,
+  "individual_seconds": 506.3543631999637,
+  "peak_MiB": 2074.64794921875,
+  "process_creation_to_terminal_seconds": 511.13813638687134
+}

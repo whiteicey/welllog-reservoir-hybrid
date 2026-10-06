@@ -1,0 +1,32 @@
+# Historical summary
+
+Focus and explored conditions: see retained README/FINAL and SUMMARY_RESULTS.json.
+
+Gain: scores and original comparison deltas are retained; incomplete folds remain incomplete.
+
+Not worth extending: original negative conclusions are retained below where available.
+
+Detailed logs, weights and caches were removed by the user request; rerunning requires retraining.
+
+## README.md
+
+# v125 POR component tail-family probabilities
+Focus: extend positive v113 proper Student-t3/Cauchy mixture with per-component learned family probabilities instead of a hard expert-family assignment. Each of16 locations/reference widths shares two proper density families; initialize expert0 t3 probability0.95, expert1 probability0.05. Both arms identical initial functions, deliberately different from v113/v114. Fixed versus learned16 logits is an update-scope ablation, NOT equal trainable capacity.
+Explored/verified: implemented fixed/learned two-arm study. Both warm from the exact retained v113 forward checkpoint, preserve original heads/routes LR3e-5 and own POR BCE+proper mixtureNLL. Learned family logits LR3e-3; fixed control same parameters frozen. Original locations/side/routes remain active54483; learned+16=54499. Backbones/gate/original density weights/reference widths stay frozen. Density uses logaddexp of weighted family logpdfs; evaluator uses identical weighted CDF, original edges/actions/argmax/population. No utility/extra labels/output votes.
+Gain: untrained, not established. Compare learned versus fixed at identical initialization, then each versus retained v114 POR77.54806949489308/currentTOTAL80.48947231222334. Initial smoothing is NOT claimed as learning gain. Mixture has Cauchy mass and no finite whole mean/variance.
+Not worth continuing: previous CDF loss, l
+
+boundaries with evidence, min10.
+Pending: explicitly launch two small POR jobs(max2), max80/pat18/min10/b64/64steps/Q50/original64trainingwells/fixed fifth/normalGPU unchanged. Atomic complete state, restore/replay144665 original validation rows, assemble fixedPERMv100/SWv104. Five total dependency phases incl source/v113/newPOR/PERM/SW; no v114 trained state loaded. Strict fifth>80.8+gain before any remaining folds. Original fullOOF>82 unmet. Record singles/concurrent wall/peak; temporary SYSTEM_REQUIRED only during new processes.
+Optional after measured gain: carry learned families into bounded follow-up within five-stage dependency count; no automatic queues or delivery overwrite.
+
+## Latest user focus: one target until gain exceeds0.25
+Concentrate subsequent bounded exploration on POR; keep PERM(v100) and SW(v104) fixed. Compact control POR77.54806949489308; also preserve historical original-fifth POR77.551936801885. Require POR>77.801936801885 (strict gain>0.25 against stronger historical reference), not just improved TOTAL or partial snapshot. Mechanism-positive ablations can guide continued POR work below this milestone. No switching to PERM/SW before this milestone absent new user direction. Original fullOOF>82 and strict original fifth TOTAL>80.8+gain promotion gate unchanged; five recipe training phases incl source. No automatic remaining folds. Maintain PROJECTS/exploration/atlas, max2GPU and frozen history/deliveries.
+
+V125 fixed: restored POR=77.551813371420; delta vs v114=+0.003743876527, vs historical=-0.000123430465; actual fifth TOTAL=80.490595475181;5 phases incl source; channel gain>0.25=False; strict808=False; no otherfolds. best/stop=13/31, seconds=237.983, peakMiB=920.849.
+
+V125 learned: restored POR=77.545093940609; delta vs v114=-0.002975554284, vs historical=-0.006842861276; actual fifth TOTAL=80.488579645938;5 phases incl source; channel gain>0.25=False; strict808=False; no otherfolds. best/stop=13/31, seconds=240.303, peakMiB=920.850.
+
+V125 final: fixed POR77.551813371420, TOTAL80.490595475181, gain vs compactv114 +0.003743876527, versus historical -0.000123430465; retained fixed positive checkpoint. Learned POR77.545093940609, matched learned-minus-fixed -0.006719430811: learning16 tail logits has no gain here, do not sweep itsLR. Both best13/stop31, all144665 replay exact. Pair wall280.473s, overlap206.979s, singles{'fixed': 237.98260540000047, 'learned': 240.30304889997933}; no measured serial equal-work speedup. Cleanup 31.972MiB recorded. Historical POR>77.8019368 milestone and TOTAL>80.8 not met; continue exclusivelyPOR.
+
+

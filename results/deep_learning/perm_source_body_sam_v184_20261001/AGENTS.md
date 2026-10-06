@@ -1,0 +1,1 @@
+维护PROJECTS/README四项/EXPLORATIONS/图谱。原第五折/9曲线/Q50/ownPERM/80-14/max2GPU。原本折SOURCE为唯一起点，不加载166/174训练头；仅本私有PERM副本body更新，原main/aux输出行与router参数冻结，旧其他目标/交付不改。总5阶段；原子last、显式恢复，不自动队列补折。

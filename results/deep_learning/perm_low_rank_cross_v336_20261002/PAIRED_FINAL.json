@@ -1,0 +1,124 @@
+{
+  "arms": {
+    "additive": {
+      "report": {
+        "stage": "additive",
+        "target": "PERM",
+        "target_score": 89.51590922149897,
+        "initial_score": 89.4055666268939,
+        "against_initial": 0.11034259460507201,
+        "against_v97_target": 0.11918517213315738,
+        "best_epoch": 5,
+        "stopped_epoch": 19,
+        "validation_rows": 144665,
+        "predictions_reproduced_exactly": true,
+        "frozen_parameters_exact": true,
+        "gradient_groups": {
+          "PERM_sparse_reacquisition_body": 0.047377537935972214,
+          "PERM_direct_categorical_readout": 0.02984479069709778,
+          "PERM_joint_body_readout_shape": 0.003536822972819209,
+          "PERM_joint_low_rank_feature_adapter": 0.001916585024446249
+        },
+        "seconds": 203.70632100000512,
+        "peak_MiB": 893.296875,
+        "complete_five_folds": false,
+        "early_terminated": false
+      },
+      "strata": {
+        "default": 97.48826516289701,
+        "continuous": 74.01434038347962
+      },
+      "zero_initialized_adapter_up_norm": {
+        "feature_adapter.up.weight": 1.1521389484405518,
+        "feature_adapter.up.bias": 0.3889501392841339
+      },
+      "whole_vs312": 0.00010481662013717141,
+      "CONT_vs312": 0.01145197946689791,
+      "predefined27": null,
+      "stopped_before27": true,
+      "timing": {
+        "includes": "prep initial training bestrestore",
+        "terminal": true,
+        "concurrent_route": "POR335 if still live",
+        "pid": 16068,
+        "excludes": "implementation CPUfinalization",
+        "concurrent_gpu_tasks_at_launch": 2,
+        "started_epoch": 1790897985.426,
+        "individual_seconds": 203.70632100000512,
+        "peak_MiB": 893.296875,
+        "terminal_epoch": 1790898194.6067991,
+        "process_creation_to_terminal_seconds": 209.18079900741577
+      },
+      "independent_disk_reload": false
+    },
+    "cross": {
+      "report": {
+        "stage": "cross",
+        "target": "PERM",
+        "target_score": 89.51838939879066,
+        "initial_score": 89.4055666268939,
+        "against_initial": 0.11282277189675938,
+        "against_v97_target": 0.12166534942484475,
+        "best_epoch": 5,
+        "stopped_epoch": 19,
+        "validation_rows": 144665,
+        "predictions_reproduced_exactly": true,
+        "frozen_parameters_exact": true,
+        "gradient_groups": {
+          "PERM_sparse_reacquisition_body": 0.047377388924360275,
+          "PERM_direct_categorical_readout": 0.029844604432582855,
+          "PERM_joint_body_readout_shape": 0.0035367682576179504,
+          "PERM_joint_low_rank_feature_adapter": 0.0013840565225109458
+        },
+        "seconds": 335.84209619998,
+        "peak_MiB": 896.34375,
+        "complete_five_folds": false,
+        "early_terminated": false
+      },
+      "strata": {
+        "default": 97.49443975594247,
+        "continuous": 74.00963708319706
+      },
+      "zero_initialized_adapter_up_norm": {
+        "feature_adapter.up.weight": 0.9860442876815796,
+        "feature_adapter.up.bias": 0.35739797353744507
+      },
+      "whole_vs312": 0.00258499391182454,
+      "CONT_vs312": 0.0067486791843407445,
+      "predefined27": null,
+      "stopped_before27": true,
+      "timing": {
+        "includes": "prep initial training bestrestore",
+        "terminal": true,
+        "concurrent_route": "POR335 if still live",
+        "pid": 80612,
+        "excludes": "implementation CPUfinalization",
+        "concurrent_gpu_tasks_at_launch": 2,
+        "started_epoch": 1790897603.419,
+        "individual_seconds": 335.84209619998,
+        "peak_MiB": 896.34375,
+        "terminal_epoch": 1790897944.8534958,
+        "process_creation_to_terminal_seconds": 341.4344959259033
+      },
+      "independent_disk_reload": false
+    }
+  },
+  "cross_minus_additive_whole": 0.0024801772916873688,
+  "cross_minus_additive_CONT": -0.004703300282557166,
+  "comparison_limits": "Same37386 parameters/zero-up initialization/rank8, multiplicative versus additive functionfamilies/gradient geometry differ. Pointstem featureadaptation before firstselector, original154only. Historical312 not concurrent repeat, mixed actualconcurrency/stagger recorded. Inheritednull27fields notapplicable.",
+  "pair_wall_seconds": 591.1877992153168,
+  "stagger_seconds": 382.007000207901,
+  "adopted": true,
+  "screening_fold": 5,
+  "complete_five_folds": false,
+  "remaining_folds_started": false,
+  "adopted_arm": "cross",
+  "actual_eight_stage_recipe": "D:\\match_predict\\welllog-reservoir-hybrid\\results\\deep_learning\\perm_low_rank_cross_v336_20261002\\CURRENT_EIGHT_STAGE_RECIPE.json",
+  "actual_eight_stage_scores": {
+    "POR": 78.04221263500206,
+    "PERM": 89.51838939879066,
+    "SW": 74.1695430320749,
+    "TOTAL": 80.70344014130356
+  },
+  "single_seed_small_gain_not_robustness": true
+}

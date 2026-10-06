@@ -1,0 +1,47 @@
+{
+  "wide256": {
+    "live": false,
+    "state": {
+      "status": "complete",
+      "pid": 88516,
+      "stage": "wide256",
+      "target": "POR",
+      "target_score": 77.9121028885816,
+      "initial_score": 77.54045432673898,
+      "against_initial": 0.3716485618426191,
+      "against_v97_target": 0.36016608669659433,
+      "best_epoch": 30,
+      "stopped_epoch": 48,
+      "validation_rows": 144665,
+      "predictions_reproduced_exactly": true,
+      "frozen_parameters_exact": true,
+      "gradient_groups": {
+        "wide256_joint_location_weight_POR_head": 0.3129398822784424
+      },
+      "seconds": 350.7687219000072,
+      "peak_MiB": 924.5458984375,
+      "complete_five_folds": false,
+      "early_terminated": false
+    },
+    "report": {
+      "stage": "wide256",
+      "target": "POR",
+      "target_score": 77.9121028885816,
+      "initial_score": 77.54045432673898,
+      "against_initial": 0.3716485618426191,
+      "against_v97_target": 0.36016608669659433,
+      "best_epoch": 30,
+      "stopped_epoch": 48,
+      "validation_rows": 144665,
+      "predictions_reproduced_exactly": true,
+      "frozen_parameters_exact": true,
+      "gradient_groups": {
+        "wide256_joint_location_weight_POR_head": 0.3129398822784424
+      },
+      "seconds": 350.7687219000072,
+      "peak_MiB": 924.5458984375,
+      "complete_five_folds": false,
+      "early_terminated": false
+    }
+  }
+}

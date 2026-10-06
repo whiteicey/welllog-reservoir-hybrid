@@ -1,0 +1,8 @@
+Goal: answer original80.70613 plus new80.50195 joint-prediction score. Done: fixed equal arithmetic averaging gives80.42438746, both artifactSHA/native scores verified. Planned/pending: native equal probability mixture with original utility decoder, independent disk-reload singleton equality, actual timing and final report. Preserve five-seed training, existing models/deliveries and original split. After completion optional other finished-seed pair comparisons only with user direction; no weight grid or extra training.
+
+Terminal fixed1:1 distribution mixture: {"POR": 77.93964020763568, "PERM": 89.56537181009944, "SW": 74.17086138314515, "TOTAL": 80.68957367992631}; vs original -0.016556043312, vsnew +0.187622506013. Both models independently reloaded/native predictions exact on all144665 rows. CONT={"POR": 41.22282838987248, "PERM": 74.01305415036849, "SW": 17.52288214309329}. Channel evaluations sum37.560s/peak1362.866MiB; sequential channels concurrently with existing SOURCE32596, no training interruption/max2. No weight grid or followup launch; original retained/notadopted. Two models8stages each/16historical phases/noaddedtraining. Five-seed study continues; no otherfolds/fullOOF claim. Final artifact FINAL.json.
+
+
+## 2026-10-02 user-authorized artifact cleanup
+
+Obsolete artifacts have been removed; SUMMARY_RESULTS.json and SUMMARY.md retain historical scores and conclusions. Detailed logs/caches/weights are unavailable for these obsolete trials. Current V370 original + seed20261013, retained-model dependency closure, reusable source, original data and deliveries are preserved. See D:/match_predict/maintenance_cleanup_20261002/VERIFICATION.json.

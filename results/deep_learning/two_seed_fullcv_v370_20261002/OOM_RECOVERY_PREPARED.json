@@ -1,0 +1,220 @@
+{
+  "prepared_epoch": 1790930986.530019,
+  "authorization_pending": true,
+  "reason": "Two PERM workers failed with CUDA OOM during validation",
+  "failed_jobs": [
+    {
+      "identity": "original",
+      "fold": 1,
+      "stage": "PERM336",
+      "old_pid": 18788,
+      "last_completed_epoch": 9,
+      "bad": 9,
+      "best_epoch": 0,
+      "best_score": 90.98904518265655,
+      "last_state_path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_two_seed_fullcv_v370\\fold_1\\original\\PERM336\\last_state.pt",
+      "last_state_sha256": "603a327f7df5f3cb89f0bb16d2a7c7f6ecc65d2c2e1a6d4a87556a0250c2ba94",
+      "config_sha256": "a7bdcde050e8e2b6c8ba60f104afde247c3c59374abaaf0b216bd106dc772a1d",
+      "full_optimizer_scheduler_RNG_window_states_present": true,
+      "command": [
+        "C:/Users/z5364/.conda/envs/normal/python.exe",
+        "-u",
+        "experiments/pure_dl/train_pair_fullcv_stage_v370.py",
+        "--stage",
+        "PERM336",
+        "--resume"
+      ]
+    },
+    {
+      "identity": "seed_20261013",
+      "fold": 1,
+      "stage": "PERM154",
+      "old_pid": 49708,
+      "last_completed_epoch": 7,
+      "bad": 7,
+      "best_epoch": 0,
+      "best_score": 90.82341132483818,
+      "last_state_path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_two_seed_fullcv_v370\\fold_1\\seed_20261013\\PERM154\\last_state.pt",
+      "last_state_sha256": "f29d8a49c40cdffd8345d8d503161e55955b2fb72b894f88f51954c76b6caea7",
+      "config_sha256": "e6011193cef7d9ebb1c9fe4afae1d1377ae88ffa8c7e86680b5f1bf7f0ea9c0d",
+      "full_optimizer_scheduler_RNG_window_states_present": true,
+      "command": [
+        "C:/Users/z5364/.conda/envs/normal/python.exe",
+        "-u",
+        "experiments/pure_dl/train_pair_fullcv_stage_v370.py",
+        "--stage",
+        "PERM154",
+        "--resume"
+      ]
+    }
+  ],
+  "recovery_mode": "one GPU task at a time; at least6GiB free before launch",
+  "no_training_source_or_recipe_changes": true,
+  "training_batch64_unchanged": true,
+  "validation_batch_unchanged": true,
+  "epoch_budget80_and_patience10_to14_unchanged": true,
+  "restore_complete_current_optimizer_scheduler_RNG_state": true,
+  "replays_only_work_after_last_complete_epoch": true,
+  "rerun_completed_stages": false,
+  "no_unattended_retry": true,
+  "user_confirmation_required_by": "study AGENTS.md: 中止/失败不得自动重试或恢复",
+  "old_batch_state": {
+    "status": "failed_or_stopped",
+    "controller_pid": 86104,
+    "active_pid": null,
+    "identity": null,
+    "fold": null,
+    "stage": null,
+    "started_epoch": null,
+    "batch_started_epoch": 1790927178.5526347,
+    "concurrency": "overlap up to2; maximum one SOURCE/SW/scan each",
+    "maximum_GPU_jobs": 2,
+    "active_jobs": [],
+    "completed_model_folds": 0,
+    "events": [
+      {
+        "event": "terminal",
+        "pid": 46888,
+        "stage": "POR113",
+        "fold": 1,
+        "identity": "seed_20261013",
+        "epoch": 1790930291.529907,
+        "exit_code": 0
+      },
+      {
+        "event": "launch",
+        "pid": 69104,
+        "identity": "seed_20261013",
+        "fold": 1,
+        "stage": "POR151",
+        "epoch": 1790930291.5951707
+      },
+      {
+        "event": "terminal",
+        "pid": 77132,
+        "stage": "POR341",
+        "fold": 1,
+        "identity": "original",
+        "epoch": 1790930507.2374685,
+        "exit_code": 0
+      },
+      {
+        "event": "launch",
+        "pid": 18788,
+        "identity": "original",
+        "fold": 1,
+        "stage": "PERM336",
+        "epoch": 1790930507.305513
+      },
+      {
+        "event": "terminal",
+        "pid": 69104,
+        "stage": "POR151",
+        "fold": 1,
+        "identity": "seed_20261013",
+        "epoch": 1790930525.4325173,
+        "exit_code": 0
+      },
+      {
+        "event": "launch",
+        "pid": 49708,
+        "identity": "seed_20261013",
+        "fold": 1,
+        "stage": "PERM154",
+        "epoch": 1790930525.4828699
+      },
+      {
+        "event": "terminal",
+        "pid": 49708,
+        "stage": "PERM154",
+        "fold": 1,
+        "identity": "seed_20261013",
+        "epoch": 1790930632.2351635,
+        "exit_code": 1
+      },
+      {
+        "event": "terminal",
+        "pid": 18788,
+        "stage": "PERM336",
+        "fold": 1,
+        "identity": "original",
+        "epoch": 1790930636.2643855,
+        "exit_code": 1
+      }
+    ],
+    "error": "({'fold': 1, 'identity': 'original', 'stage': 'PERM336', 'role': 'head', 'dest': 'D:\\\\match_predict\\\\welllog-reservoir-hybrid\\\\outputs\\\\pure_dl_two_seed_fullcv_v370\\\\fold_1\\\\original\\\\PERM336', 'expected': 'D:\\\\match_predict\\\\welllog-reservoir-hybrid\\\\outputs\\\\pure_dl_two_seed_fullcv_v370\\\\fold_1\\\\original\\\\PERM336\\\\report.json', 'command': ['C:\\\\Users\\\\z5364\\\\.conda\\\\envs\\\\normal\\\\python.exe', '-u', 'experiments/pure_dl/train_pair_fullcv_stage_v370.py', '--stage', 'PERM336'], 'pid': 18788, 'create_time': 1790930507.309353, 'started_epoch': 1790930507.305513, 'attached': False, 'overlap_observed': True, 'other_GPU_pids_at_launch': [69104]}, 1)",
+    "explicit_resume_only": true,
+    "no_retry": true
+  },
+  "read_only_verification": {
+    "original": {
+      "identity": "original",
+      "stage": "PERM336",
+      "fold": 1,
+      "last_completed_epoch": 9,
+      "best_epoch": 0,
+      "best_score": 90.98904518265655,
+      "rows": 144621,
+      "best_prediction_exact": true,
+      "current_frozen_state_exact": true,
+      "GPU_tasks": 1,
+      "training_steps": 0,
+      "original_validation_batch": 32,
+      "peak_allocated_MiB": 736.39501953125,
+      "peak_reserved_MiB": 812.0,
+      "seconds": 3.623496900021564,
+      "admission": {
+        "maximum_concurrent_jobs": 2,
+        "other_jobs": [],
+        "free_gib": 10.8037109375,
+        "total_gib": 11.99365234375
+      },
+      "checkpoint_written": false,
+      "scope": "read-only sequential best checkpoint replay; not resumed training or a guarantee against future external GPU memory changes"
+    },
+    "seed_20261013": {
+      "identity": "seed_20261013",
+      "stage": "PERM154",
+      "fold": 1,
+      "last_completed_epoch": 7,
+      "best_epoch": 0,
+      "best_score": 90.82341132483818,
+      "rows": 144621,
+      "best_prediction_exact": true,
+      "current_frozen_state_exact": true,
+      "GPU_tasks": 1,
+      "training_steps": 0,
+      "original_validation_batch": 32,
+      "peak_allocated_MiB": 720.69970703125,
+      "peak_reserved_MiB": 812.0,
+      "seconds": 3.1130436999956146,
+      "admission": {
+        "maximum_concurrent_jobs": 2,
+        "other_jobs": [],
+        "free_gib": 10.8037109375,
+        "total_gib": 11.99365234375
+      },
+      "checkpoint_written": false,
+      "scope": "read-only sequential best checkpoint replay; not resumed training or a guarantee against future external GPU memory changes"
+    }
+  },
+  "controller_path": "D:\\match_predict\\welllog-reservoir-hybrid\\results\\deep_learning\\two_seed_fullcv_v370_20261002\\resume_pair_serial_v370r2.py",
+  "controller_sha256": "80425c57340792a27a78817ed3b2c2862d1a81f0b6d81d2f7b61edd3e4b42e02",
+  "previous_failed_outputs_copied_and_SHA_exact": [
+    "results\\deep_learning\\two_seed_fullcv_v370_20261002\\oom_recovery_v1\\original_PERM336\\last_state.pt",
+    "results\\deep_learning\\two_seed_fullcv_v370_20261002\\oom_recovery_v1\\original_PERM336\\config.json",
+    "results\\deep_learning\\two_seed_fullcv_v370_20261002\\oom_recovery_v1\\original_PERM336\\runtime_status.json",
+    "results\\deep_learning\\two_seed_fullcv_v370_20261002\\oom_recovery_v1\\original_PERM336\\PERM336_TIMING.json",
+    "results\\deep_learning\\two_seed_fullcv_v370_20261002\\oom_recovery_v1\\original_PERM336\\PERM336_stdout.log",
+    "results\\deep_learning\\two_seed_fullcv_v370_20261002\\oom_recovery_v1\\original_PERM336\\PERM336_stderr.log",
+    "results\\deep_learning\\two_seed_fullcv_v370_20261002\\oom_recovery_v1\\seed_20261013_PERM154\\last_state.pt",
+    "results\\deep_learning\\two_seed_fullcv_v370_20261002\\oom_recovery_v1\\seed_20261013_PERM154\\config.json",
+    "results\\deep_learning\\two_seed_fullcv_v370_20261002\\oom_recovery_v1\\seed_20261013_PERM154\\runtime_status.json",
+    "results\\deep_learning\\two_seed_fullcv_v370_20261002\\oom_recovery_v1\\seed_20261013_PERM154\\PERM154_TIMING.json",
+    "results\\deep_learning\\two_seed_fullcv_v370_20261002\\oom_recovery_v1\\seed_20261013_PERM154\\PERM154_stdout.log",
+    "results\\deep_learning\\two_seed_fullcv_v370_20261002\\oom_recovery_v1\\seed_20261013_PERM154\\PERM154_stderr.log"
+  ],
+  "syntax_checked": true,
+  "approval_file_exists": false,
+  "training_resumed": false
+}

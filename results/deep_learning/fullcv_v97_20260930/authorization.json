@@ -1,0 +1,16 @@
+{
+  "remaining_folds_authorized": true,
+  "user_instruction": "恢复其余四折训练",
+  "recipe_sha256": "126b4ef9aca25c837bab22c56d10e76b7a46098342f2b00937f31c54eb3a1221",
+  "authorized_at": "2026-09-30T17:22:30.791849+08:00",
+  "fold_order": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "reuse_verified_fifth": true,
+  "maximum_gpu_jobs": 2,
+  "initial_execution": "serial",
+  "old_pause_superseded": true
+}

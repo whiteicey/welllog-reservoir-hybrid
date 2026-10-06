@@ -1,0 +1,48 @@
+{
+  "scores": {
+    "POR": 77.92638076072386,
+    "PERM": 89.43939135949043,
+    "SW": 74.14922820781207,
+    "TOTAL": 80.63393107677304
+  },
+  "screening_fold": 5,
+  "validation_rows": 144665,
+  "strict_808_qualified": false,
+  "complete_five_folds": false,
+  "remaining_folds_started": false,
+  "total_training_stages": 7,
+  "stages": [
+    "SOURCE",
+    "POR113",
+    "POR151",
+    "PERM154",
+    "SW104",
+    "PERM271repeat",
+    "SW252conditional"
+  ],
+  "added_head_stages": {
+    "POR": 0,
+    "PERM": 1,
+    "SW": 1
+  },
+  "heads": {
+    "POR": {
+      "checkpoint": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_por_ranked_probability_v151_fold5\\joint_rps\\model_best.pt",
+      "sha256": "39f2255b8fe61fa74607af027ece1dd352e5e2d0729b9bce95d1424c1b227603"
+    },
+    "PERM": {
+      "checkpoint": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_perm_direct_multiscale_v271_fold5\\repeat\\model_best.pt",
+      "sha256": "17e710b2c2d51dbb213097e69e7f5c126b452a8ba559a14cb57c792c3e0dc730"
+    },
+    "SW": {
+      "checkpoint": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_sw_mass_cdf_v252_fold5\\conditional\\model_best.pt",
+      "sha256": "258d41da36559f1ca0b87ea740686991d5488c6af4c03ea69fa27390a58fef17"
+    }
+  },
+  "pred_sha256": "e07d0904c27fcfcfe062ae30ad5bba23978aab5d21bc2c0bbe82e8ee0633b8be",
+  "gain_vs_previous_optional7": 0.008242954793985291,
+  "not_material_improvement": true,
+  "default_five_stage_unchanged": true,
+  "verification": "RestoredRAM-best frozen/actual144665 composition; no independent disk reload",
+  "mechanism": "joint new raw-input feature encoding/direct component supervision; scale benefit not proven"
+}

@@ -1,0 +1,28 @@
+{
+  "candidates": [
+    {
+      "mode": "likelihood",
+      "start": "2026-09-30T10:15:10.912282+08:00",
+      "end": "2026-09-30T10:21:19.054224+08:00",
+      "seconds": 363.8191786999814,
+      "peak_allocated_MiB": 1870.50390625,
+      "launch_to_completion_seconds": 368.141942
+    },
+    {
+      "mode": "joint",
+      "start": "2026-09-30T10:18:13.559182+08:00",
+      "end": "2026-09-30T10:24:17.496890+08:00",
+      "seconds": 359.39152939998894,
+      "peak_allocated_MiB": 1870.50390625,
+      "launch_to_completion_seconds": 363.937708
+    }
+  ],
+  "first_launch_to_last_completion_seconds": 546.584608,
+  "first_launch_to_verified_wall_seconds": 579.349273,
+  "last_training_completion_to_verified_wall_seconds": 32.764665,
+  "peak_process_concurrency": 2,
+  "process_overlap_seconds": 185.495042,
+  "sum_individual_launch_to_completion_seconds": 732.0796499999999,
+  "finalization_seconds": 2.6205762999888975,
+  "scope": "individual seconds: trainer loading/preprocessing/warmup/training/evaluation/persistence; wall additionally includes process start and launch gap; authoring before launch and atlas after verification separate; no serial baseline, so no concurrency speedup claim"
+}

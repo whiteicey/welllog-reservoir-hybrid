@@ -1,0 +1,13 @@
+{
+  "reason": "Declared comparison cap18; observation reached20, stopnow, save matched18 priorbest prefix separately. Full score and matchedbudget score separated.",
+  "observed": {
+    "status": "running",
+    "pid": 48848,
+    "stage": "balanced",
+    "epoch": 23,
+    "best": 74.14311967451198,
+    "best_epoch": 17,
+    "bad": 6,
+    "peak_MiB": 1241.642578125
+  }
+}

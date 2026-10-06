@@ -1,0 +1,1 @@
+MaintainPROJECTS/README. Originalfold5/9curves/Q/scoring/max80pat14/normalGPUmax2. Freeze104/no253or252repairweights. OneSWphase mass/newgate jointly. Stateprior/weights TRAINraw only, traininglogitoffset not inference thresholdfit. RealownSWlabels/no teacher/extra data/testlabels, currentpositives/deliverykeep, no otherfolds below808.

@@ -1,0 +1,92 @@
+{
+  "t3_cauchy": {
+    "live": false,
+    "state": {
+      "status": "complete",
+      "pid": 28188,
+      "stage": "t3_cauchy",
+      "target": "POR",
+      "target_score": 77.54045432673898,
+      "initial_score": 77.26429369346035,
+      "against_initial": 0.2761606332786357,
+      "against_v97_target": -0.01148247514602474,
+      "best_epoch": 69,
+      "stopped_epoch": 80,
+      "validation_rows": 144665,
+      "predictions_reproduced_exactly": true,
+      "frozen_parameters_exact": true,
+      "gradient_groups": {
+        "original_target_locations": 2.1291797161102295,
+        "combined_new_heads_routes": 0.5190233588218689
+      },
+      "seconds": 523.3879553999868,
+      "peak_MiB": 920.84765625,
+      "complete_five_folds": false
+    },
+    "report": {
+      "stage": "t3_cauchy",
+      "target": "POR",
+      "target_score": 77.54045432673898,
+      "initial_score": 77.26429369346035,
+      "against_initial": 0.2761606332786357,
+      "against_v97_target": -0.01148247514602474,
+      "best_epoch": 69,
+      "stopped_epoch": 80,
+      "validation_rows": 144665,
+      "predictions_reproduced_exactly": true,
+      "frozen_parameters_exact": true,
+      "gradient_groups": {
+        "original_target_locations": 2.1291797161102295,
+        "combined_new_heads_routes": 0.5190233588218689
+      },
+      "seconds": 523.3879553999868,
+      "peak_MiB": 920.84765625,
+      "complete_five_folds": false
+    }
+  },
+  "cauchy_t3": {
+    "live": false,
+    "state": {
+      "status": "complete",
+      "pid": 30432,
+      "stage": "cauchy_t3",
+      "target": "POR",
+      "target_score": 77.52067079869578,
+      "initial_score": 77.28683674922492,
+      "against_initial": 0.2338340494708575,
+      "against_v97_target": -0.03126600318923067,
+      "best_epoch": 41,
+      "stopped_epoch": 59,
+      "validation_rows": 144665,
+      "predictions_reproduced_exactly": true,
+      "frozen_parameters_exact": true,
+      "gradient_groups": {
+        "original_target_locations": 2.3039121627807617,
+        "combined_new_heads_routes": 0.5610562562942505
+      },
+      "seconds": 409.4949958999932,
+      "peak_MiB": 920.84765625,
+      "complete_five_folds": false
+    },
+    "report": {
+      "stage": "cauchy_t3",
+      "target": "POR",
+      "target_score": 77.52067079869578,
+      "initial_score": 77.28683674922492,
+      "against_initial": 0.2338340494708575,
+      "against_v97_target": -0.03126600318923067,
+      "best_epoch": 41,
+      "stopped_epoch": 59,
+      "validation_rows": 144665,
+      "predictions_reproduced_exactly": true,
+      "frozen_parameters_exact": true,
+      "gradient_groups": {
+        "original_target_locations": 2.3039121627807617,
+        "combined_new_heads_routes": 0.5610562562942505
+      },
+      "seconds": 409.4949958999932,
+      "peak_MiB": 920.84765625,
+      "complete_five_folds": false
+    }
+  }
+}

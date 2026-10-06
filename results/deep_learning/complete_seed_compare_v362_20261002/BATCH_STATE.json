@@ -1,0 +1,8 @@
+{
+  "status": "complete",
+  "completed_models": 5,
+  "total_wall_seconds": 13329.315927267075,
+  "corrected_controller_wall_seconds": 10350.206624031067,
+  "complete_five_folds": false,
+  "remaining_folds_started": false
+}

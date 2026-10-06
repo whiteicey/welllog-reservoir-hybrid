@@ -1,0 +1,51 @@
+{
+  "parent": "experiments\\pure_dl\\train_independent_channels_v8.py",
+  "sha256": "7c566491e9be82e6ba74c64aa3623aae72e2ffb3ac88fa3ae970db0565650a78",
+  "changes": [
+    {
+      "old": "from independent_channels_v8 import Network,TARGETS,ARCHITECTURES",
+      "new": "from independent_channels_v8 import TARGETS,ARCHITECTURES\nfrom champion_scaling_v21 import make_model,load_data,MODES"
+    },
+    {
+      "old": "ap.add_argument('--resume',action='store_true');a=ap.parse_args()",
+      "new": "ap.add_argument('--mode',choices=tuple(MODES),required=True)\n    ap.add_argument('--resume',action='store_true');a=ap.parse_args()\n    assert a.target=='POR' and a.architecture=='dual'"
+    },
+    {
+      "old": "data=prepare_data(master)",
+      "new": "data,_cached_master=load_data();del _cached_master"
+    },
+    {
+      "old": "model=Network(master,previous,a.target,a.architecture).cuda()",
+      "new": "model=make_model(a.mode,master).cuda()"
+    },
+    {
+      "old": "'model_module':'independent_channels_v8',",
+      "new": "'model_module':'champion_scaling_v21','mode':a.mode,'scaling':model.scaling_manifest,"
+    },
+    {
+      "old": "'dropout_during_finetuning':True,",
+      "new": "'dropout_during_finetuning':'actual unchanged module behavior; see scaling manifest',"
+    },
+    {
+      "old": "Path(__file__).with_name('independent_channels_v8.py')]",
+      "new": "Path(__file__).with_name('independent_channels_v8.py'),Path(__file__).with_name('champion_scaling_v21.py')]"
+    },
+    {
+      "old": "'private_process_pid':os.getpid(),'other_target_losses_computed':False}",
+      "new": "'private_process_pid':os.getpid(),'other_target_losses_computed':False,\n                     'extra_output_gradient_norm':float(sum(p.grad.detach().float().square().sum() for n,p in model.named_parameters() if '.extra_' in n and p.grad is not None).sqrt()) if a.mode!='base1' else 0.}"
+    },
+    {
+      "old": "'scope':'one target only; independent model from raw input; no shared backbone'",
+      "new": "'scope':'POR champion function-preserving internal-width scaling; PERM/SW frozen'"
+    },
+    {
+      "old": "'scores':{a.target:score},'target_score':score,",
+      "new": "'scores':{a.target:score},'target_score':score,'mode':a.mode,'scaling':model.scaling_manifest,\n         'best_after_update':max(history,key=lambda r:r['target_score']) if history else None,"
+    },
+    {
+      "old": "'architecture':a.architecture,'last_completed_epoch':epoch,",
+      "new": "'architecture':a.architecture,'mode':a.mode,'last_completed_epoch':epoch,"
+    }
+  ],
+  "old_source_unchanged": true
+}

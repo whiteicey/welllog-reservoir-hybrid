@@ -1,0 +1,188 @@
+"""Equal predictive-distribution vote of three independently trained neural models."""
+import hashlib
+import json
+import time
+from pathlib import Path
+
+import numpy as np
+import torch
+from torch.nn import functional as F
+from sklearn.model_selection import GroupKFold
+
+import train_invariant as base
+from multiscale_sequence import window_indices
+from paired_posterior_router_sequence import Network, retained_indices, calibration_indices
+from por_t3_patch_loss import probability
+from paired_calibrated_view_sequence import Network as CalibratedNetwork
+from global_cosine_sequence import Network as SingleNetwork
+
+
+ROOT = base.ROOT
+SOURCE_OUT = ROOT/'outputs/pure_dl_posterior_three_seed_equal80'
+OUT = ROOT/'outputs/pure_dl_five_model_geometric_fold5'
+SOURCES = [
+    (20261006, ROOT/'outputs/pure_dl_paired_posterior_router80_sequence'),
+    (20261007, SOURCE_OUT/'seed_20261007'),
+    (20261008, SOURCE_OUT/'seed_20261008'),
+    (20261006, ROOT/'outputs/pure_dl_paired_calibrated_view_sequence'),
+    (20261006, ROOT/'outputs/pure_dl_global_cosine_sequence'),
+]
+
+
+def main():
+    torch.set_num_threads(3)
+    started = time.perf_counter()
+    checkpoints = []
+    for seed, folder in SOURCES:
+        path = folder/'fold_5.pt'
+        checkpoint = torch.load(path, map_location='cpu', weights_only=False)
+        assert checkpoint['config']['seed'] == seed
+        report = json.loads((folder/'fold_5_report.json').read_text(encoding='utf-8'))
+        assert report['best_checkpoint_predictions_reproduced']
+        assert abs(report['scores']['TOTAL']-checkpoint['best_validation_score']) < 1e-10
+        checkpoints.append((seed, folder, checkpoint, hashlib.sha256(path.read_bytes()).hexdigest()))
+    master = checkpoints[0][2]
+    for _, _, checkpoint, _ in checkpoints[1:]:
+        for field in ['selected_feature_names', 'selected_feature_indices',
+                      'feature_median', 'feature_scale', 'regression_median',
+                      'regression_scale', 'absolute_depth_median', 'absolute_depth_scale']:
+            assert np.array_equal(checkpoint[field], master[field]), field
+        for field in ['centers', 'density_edges']:
+            for left, right in zip(checkpoint[field], master[field]):
+                assert np.array_equal(left, right), field
+        assert np.array_equal(checkpoint['validation_raw_rows'], master['validation_raw_rows'])
+    rec = base.load_split(ROOT.parent/'data', 'train')
+    ys = [frame[base.TS].to_numpy(np.float64) for _, frame in rec]
+    valid = [np.isfinite(y).all(1) for y in ys]
+    truth = np.concatenate([y[m] for y, m in zip(ys, valid)])
+    wells = np.concatenate([np.full(m.sum(), i, np.int32) for i, m in enumerate(valid)])
+    assert len(rec) == 80 and truth.shape == (723556, 3)
+    fold = np.full(len(truth), -1, np.int8)
+    for f, (_, ix) in enumerate(GroupKFold(5).split(truth, groups=wells)):
+        fold[ix] = f
+    validation = np.flatnonzero(fold == 4)
+    assert len(validation) == 144665
+    row_ids = [np.flatnonzero(wells == i) for i in range(80)]
+    tr_wells = [i for i in range(80) if fold[row_ids[i][0]] != 4]
+    starts = np.r_[0, np.cumsum([len(frame) for _, frame in rec])]
+    nraw = int(starts[-1])
+    valid_to_raw = np.concatenate([np.flatnonzero(m)+starts[i] for i, m in enumerate(valid)])
+    assert np.array_equal(valid_to_raw[validation], master['validation_raw_rows'])
+    raw_to_valid = np.full(nraw, -1, np.int64)
+    raw_to_valid[valid_to_raw] = np.arange(len(truth))
+    valid_x, builder, fm, fs, _ = base.prepare_features(rec, tr_wells, valid, row_ids)
+    assert np.array_equal(fm, master['feature_median'])
+    assert np.array_equal(fs, master['feature_scale'])
+    contract = base.feature_contract()
+    assert contract['whitelist'] == master['selected_feature_names']
+    view_indices = retained_indices(contract['whitelist'])
+    numeric_indices, conditioning_indices = calibration_indices(contract['whitelist'])
+    x = torch.empty(nraw, 206, dtype=torch.float16, device='cuda')
+    for i, (_, frame) in enumerate(rec):
+        value = builder.transform(frame).enhanced[:, contract['selected_indices']]
+        value = np.clip((value-fm)/fs, -8, 8).astype(np.float16)
+        x[starts[i]:starts[i+1]] = torch.from_numpy(value).cuda()
+    assert torch.equal(x[torch.as_tensor(valid_to_raw, device='cuda')], valid_x)
+    del valid_x
+    depth = torch.tensor(np.concatenate([frame['DEPTH'].to_numpy(np.float32)
+                                         for _, frame in rec]), device='cuda')
+    lower = torch.tensor(np.concatenate([np.full(len(frame), starts[i])
+                                         for i, (_, frame) in enumerate(rec)]), device='cuda')
+    upper = torch.tensor(np.concatenate([np.full(len(frame), starts[i+1])
+                                         for i, (_, frame) in enumerate(rec)]), device='cuda')
+    absolute = ((depth-master['absolute_depth_median'])/
+                master['absolute_depth_scale']).clamp(-8, 8)
+    models = []
+    for seed, folder, checkpoint, sha in checkpoints:
+        model_class = CalibratedNetwork if 'calibrated_view' in folder.name else Network
+        model = (SingleNetwork() if folder.name == 'pure_dl_global_cosine_sequence' else model_class(retain_indices=view_indices, numeric_indices=numeric_indices,
+                        conditioning_indices=conditioning_indices)).cuda()
+        model.load_state_dict(checkpoint['state_dict'], strict=True)
+        models.append(model.eval())
+    actions, utilities, edges = [], [], []
+    for j, name in enumerate(base.TS):
+        ct = np.asarray(master['centers'][j])
+        action = np.linspace(ct[0], ct[-1], 800) if j == 2 else np.geomspace(max(ct[0]*.9, .001), ct[-1]*1.1, 800)
+        fine_action = np.linspace(ct[0], ct[-1], 3197) if j == 2 else np.geomspace(max(ct[0]*.9, .001), ct[-1]*1.1, 3197)
+        action = np.unique(np.r_[base.DEFAULTS[name], np.clip(action, *base.BOUNDS[name]), np.clip(fine_action, *base.BOUNDS[name])])
+        actions.append(action)
+        transformed_support = np.linspace(base.TRANSFORM[j](ct[0]), base.TRANSFORM[j](ct[-1]), 1024)
+        fine_centers = base.INVERSE[j](transformed_support)
+        fine_edges = (np.r_[-np.inf, (transformed_support[:-1]+transformed_support[1:])/2, np.inf]-master['regression_median'][j])/master['regression_scale'][j]
+        utilities.append(torch.tensor(base.kernel_matrix(action,
+                          np.r_[base.DEFAULTS[name], fine_centers], name).T,
+                          device='cuda', dtype=torch.float32))
+        edges.append(torch.tensor(fine_edges, device='cuda', dtype=torch.float32))
+    local = np.full(len(truth), -1, np.int64)
+    local[validation] = np.arange(len(validation))
+    covered = np.zeros(len(validation), np.int8)
+    joint_sum = torch.zeros((len(validation),3,1025),device='cuda',dtype=torch.float32)
+    window_weight_sum = torch.zeros(len(validation),device='cuda')
+    core_weights = torch.sin(torch.pi*(torch.arange(128,device='cuda')+.5)/128).square()
+    ensemble = np.empty((len(validation),3),np.float64)
+    eval_centers, eval_anchors = [], []
+    for wi in range(80):
+        if fold[row_ids[wi][0]] != 4:
+            continue
+        cc = np.arange(starts[wi]-32, starts[wi+1]+64, 32)
+        eval_centers.extend(cc)
+        eval_anchors.extend(np.clip(cc, starts[wi], starts[wi+1]-1))
+    torch.cuda.reset_peak_memory_stats()
+    with torch.no_grad():
+        for begin in range(0, len(eval_centers), 32):
+            cc = torch.tensor(eval_centers[begin:begin+32], device='cuda')
+            anchor = torch.tensor(eval_anchors[begin:begin+32], device='cuda')
+            ix, exists = window_indices(cc, lower, upper, anchors=anchor)
+            relative = torch.tanh((depth[ix]-depth[anchor, None])/10)
+            with torch.autocast('cuda', dtype=torch.bfloat16):
+                outputs = [model(x[ix], relative, exists, absolute_depth=absolute[ix])
+                           for model in models]
+            original = ix[:, 64:192].cpu().numpy()
+            global_rows = raw_to_valid[original]
+            use = exists[:, 64:192].cpu().numpy() & (global_rows >= 0)
+            ids = global_rows[use]
+            loc = local[ids]
+            assert (loc >= 0).all()
+            np.add.at(covered,loc,1)
+            select = torch.from_numpy(use).cuda()
+            position_weight = core_weights[None,:].expand(len(cc),-1)[select]
+            window_weight_sum.index_add_(0,torch.as_tensor(loc,device='cuda'),position_weight)
+            for j in range(3):
+                joints = []
+                for member, (gate_logits, raw) in enumerate(outputs):
+                    gate = gate_logits[:, 64:192][select][:, j].float().sigmoid()
+                    r = raw[:, 64:192][select][:, j].float()
+                    weight = r[:, 0].softmax(-1)
+                    mu = r[:, 1]
+                    sd = F.softplus(r[:, 2]) + .025
+                    cp = probability(j, weight, mu, sd, edges[j])
+                    joint = torch.cat([gate[:, None], (1-gate[:, None])*cp], -1)
+                    joints.append(joint)
+
+                mixed = torch.stack(joints).clamp_min(1e-12).log().mean(0).softmax(-1)
+                joint_sum[:,j].index_add_(0,torch.as_tensor(loc,device='cuda'),mixed*position_weight[:,None])
+    assert (covered == 4).all(), np.unique(covered,return_counts=True)
+    assert torch.allclose(window_weight_sum,torch.full_like(window_weight_sum,2.),atol=1e-5)
+    with torch.no_grad():
+        for begin in range(0,len(validation),2048):
+            end=min(begin+2048,len(validation))
+            for j in range(3):
+                ensemble[begin:end,j]=actions[j][((joint_sum[begin:end,j]/window_weight_sum[begin:end,None])@utilities[j]).argmax(-1).cpu().numpy()]
+    assert np.isfinite(ensemble).all()
+    scores=base.metric(truth[validation],ensemble)
+    baseline=json.loads((ROOT/'outputs/pure_dl_five_model_cosine_window_fold5/ensemble_verification.json').read_text())
+    proof={'screening_fold':5,'screening_scores':scores,'passed':bool(scores['TOTAL']>80.4),'threshold_strict_gt':80.4,
+           'seed_bases':[seed for seed,_,_,_ in checkpoints],
+           'source_checks':[{'folder':str(folder.relative_to(ROOT)),'checkpoint_sha256':sha} for _,folder,_,sha in checkpoints],
+           'rows':len(validation),'all_rows_covered_exactly_four_times':True,
+           'method':'stride32 central128 predictions, fixed sine-squared normalized four-window and normalized equal-log-weight five-model geometric posterior pool (floor1e-12) including calibrated75 and single global-cosine;1024 bins and original800 union3197 actions',
+           'label_scope':'fixed label-independent windows and weights; validation labels used only for scoring',
+           'arithmetic_five_model_scores':baseline['screening_scores'],
+           'peak_gpu_allocated_mib':torch.cuda.max_memory_allocated()/1024**2,'wall_seconds':time.perf_counter()-started}
+    OUT.mkdir(parents=True,exist_ok=True)
+    np.save(OUT/'fold_5_pred.npy',ensemble)
+    (OUT/'ensemble_verification.json').write_text(json.dumps(proof,indent=2),encoding='utf-8')
+    print(json.dumps(proof,indent=2),flush=True)
+
+if __name__=='__main__':
+    main()

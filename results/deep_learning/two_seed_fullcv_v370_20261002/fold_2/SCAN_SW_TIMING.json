@@ -1,0 +1,12 @@
+{
+  "identity": "original",
+  "fold": 2,
+  "stage": "SCAN_SW",
+  "pid": 86316,
+  "terminal": true,
+  "exit_code": 0,
+  "process_wall_seconds": 20.330989837646484,
+  "concurrency": "solo after user requested serial",
+  "includes": "load/preprocess/warmup/training or scan/restore/write",
+  "attached_without_training_restart": false
+}

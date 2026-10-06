@@ -1,0 +1,39 @@
+# v71 SW深度关系注意力
+
+## 探索重点和预定义对照
+本轮先核对旧特征：原206已有差分/导数，directional_depth_features.py及已关闭试验覆盖1m/4m物理深度方向统计，故不重复该输入特征。改在当前v56 SW注意力内部学习深度关系，冻结全部原模型，仅4层×4头×8系数=128新参数。
+symmetric仅用物理深度差绝对值，directional保留上下方向。均先以10m尺度tanh压缩，8个固定归一化RBF基（各自[0,1]/[-1,1]等距，带宽为一个基间距），偏置是0.5*tanh系数的凸组合，绝对值≤.5。只差关系几何；同参数值/数量及零偏置完整起点，不声称函数空间相同。
+原始深度仅用于窗口中心化后的token均值与两两差，平移不改变偏置；不恢复绝对深度、DEVI/AZIM/BIT/CASE输入或井ID。无跨井token，原valid key掩码保留。原注意力加上带偏置与零偏置两次相同浮点mask实现之差，零偏置时差为0，避免改变原布尔mask实现的初始数值函数。此实现每块三次attention，真实开销需记录，不能宣传为免费。
+
+## 数据训练边界与已做
+原9曲线/206输入/训练64井预处理/Q50/第五16井144665点/seed20261010/1024窗口中心128/原Gaussian SW损失/官方解码评分保持。原v56全部参数冻结eval，但新偏置经原冻结网络的输入梯度保持；仅128系数AdamW3e-3/wd.01/clip2、cosine80*64至1e-5，max80/pat18/min10/b64/64steps。零系数不重置原预测，回退不是学习收益。POR/PERM不改。
+已实现，未训练/无成绩。直接运行真实四组系数梯度、原权重不变、初始与最佳144665点及三列评分验证，源哈希固定；正候选保留前磁盘重建，无独立数值预检/审查。原子完整last_state包含优化器/调度/RNG/停止，仅显式恢复。
+
+## 收益、待做与不继续
+两项训练/配对及绝对差、清理/PROJECTS/EXPLORATIONS/图谱待完成。若directional无最终配对收益，不扫距离尺度/RBF数量；若两者都无当前收益，不继续偏置幅度扫描。仅限当前粗token物理关系，不泛化全部位置编码。
+最多2GPU，按实际显存决定第二项启动，不自动队列；记录单项与实际总墙钟、并发和显存，包含加载/预热/三次attention训练/评估，代码和收尾另计。负检查点先清单后删，保留原正模型/交付。第五严格>80.5且明显收益后才考虑其他折，完整原五折OOF>82未完成，无其他折/旧任务/交付修改。目标后独立确认、新目录交付。
+
+
+## v71 symmetric显式启动
+{"pid": 63048, "mode": "symmetric", "started_at": "2026-09-29T23:21:37.402870+08:00", "command": ["C:\\Users\\z5364\\.conda\\envs\\normal\\python.exe", "-X", "utf8", "-u", "D:\\match_predict\\welllog-reservoir-hybrid\\experiments\\pure_dl\\train_sw_depth_attention_v71.py", "--mode", "symmetric", "--out", "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_sw_depth_attention_v71_SW_symmetric_fold5"], "automatic_queue": false}
+
+
+## v71实际后端失败与修复
+原symmetric首次反向失败：RuntimeError: LSE is not correctly aligned (strideH)，已完成初始144665点一致但无训练轮次。原源码、配置、failure/status保留且不改；math新版本改新增两支为显式FP32矩阵注意力，原注意力保持，重新随机状态同零初始化启动，不声称旧轨迹续跑。
+
+
+## v71 math symmetric显式启动
+{"pid": 18732, "mode": "symmetric", "started_at": "2026-09-29T23:23:05.377250+08:00", "command": ["C:\\Users\\z5364\\.conda\\envs\\normal\\python.exe", "-X", "utf8", "-u", "D:\\match_predict\\welllog-reservoir-hybrid\\experiments\\pure_dl\\train_sw_depth_attention_v71_math.py", "--mode", "symmetric", "--out", "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_sw_depth_attention_v71_math_SW_symmetric_fold5"], "automatic_queue": false}
+
+
+## v71 math directional显式启动
+{"pid": 58456, "mode": "directional", "started_at": "2026-09-29T23:24:25.110008+08:00", "command": ["C:\\Users\\z5364\\.conda\\envs\\normal\\python.exe", "-X", "utf8", "-u", "D:\\match_predict\\welllog-reservoir-hybrid\\experiments\\pure_dl\\train_sw_depth_attention_v71_math.py", "--mode", "directional", "--out", "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_sw_depth_attention_v71_math_SW_directional_fold5"], "automatic_queue": false}
+
+
+## v71最终结果
+两项完成，TOTAL=80.354325927816；directional-symmetric SW=+0.000000000000，训练后差=-0.018606844709；采用=None。负权重清理，源/交付不改，无其他折；目标未完成，见sw_depth_attention_v71_20260929/FINAL.md。
+
+
+## 2026-10-02 user-authorized artifact cleanup
+
+Obsolete artifacts have been removed; SUMMARY_RESULTS.json and SUMMARY.md retain historical scores and conclusions. Detailed logs/caches/weights are unavailable for these obsolete trials. Current V370 original + seed20261013, retained-model dependency closure, reusable source, original data and deliveries are preserved. See D:/match_predict/maintenance_cleanup_20261002/VERIFICATION.json.

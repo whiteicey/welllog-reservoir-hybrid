@@ -1,0 +1,26 @@
+{
+  "fold": 4,
+  "identity": "seed_20261013",
+  "stage": "SW351",
+  "last_completed_epoch": 11,
+  "best_epoch": 3,
+  "best_score": 74.67464367240689,
+  "rows": 144513,
+  "best_prediction_exact": true,
+  "current_frozen_state_exact": true,
+  "last_state_sha256": "9ad2fe5a70e3d14fa7ef5dec3e9e86801029f28e3fd28a69e1bf956069f35b3a",
+  "checkpoint_unchanged": true,
+  "training_steps": 0,
+  "GPU_tasks": 1,
+  "original_validation_batch": 16,
+  "peak_allocated_MiB": 543.27685546875,
+  "peak_reserved_MiB": 636.0,
+  "seconds": 4.926088400010485,
+  "admission": {
+    "maximum_concurrent_jobs": 2,
+    "other_jobs": [],
+    "free_gib": 10.8037109375,
+    "total_gib": 11.99365234375
+  },
+  "scope": "Read-only best checkpoint replay; training recovery not authorized or started"
+}

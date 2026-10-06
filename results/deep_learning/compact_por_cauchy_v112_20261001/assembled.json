@@ -1,0 +1,71 @@
+{
+  "scores": {
+    "POR": 77.52509448033057,
+    "PERM": 89.37839421114361,
+    "SW": 74.12175282815758,
+    "TOTAL": 80.48257980785458
+  },
+  "original_fold": 5,
+  "complete_five_folds": false,
+  "total_training_stages": 4,
+  "source_stage_counted": true,
+  "dependency_stages": [
+    "original_source",
+    "v112_POR_cauchy",
+    "v100_PERM",
+    "v104_SW"
+  ],
+  "remaining_folds_started": false,
+  "strict_808_passed": false,
+  "predefined_cauchy_minus_t3_POR": 0.024726092685995127,
+  "historical_t3_control_reused": true,
+  "same_architecture_raw_initialization_and_budget": true,
+  "density_NLL_and_predictive_CDF_changed_together": true,
+  "initial_predictive_function_differs": true,
+  "component_IQR_matching_not_variance": true,
+  "action_grid_metric_population_unchanged": true,
+  "gain_vs_old_best": -0.021617616622307878,
+  "checkpoint_sha256": "c20b4183eccfe86d36738bf7b1f5fff8eecd1fed5b47cc3d047ecc5f2bd56d78",
+  "sum_dependency_seconds": 2452.619304699969,
+  "timing_scope": "source/shared historical training and candidate sum; not parallel wall",
+  "report": {
+    "stage": "cauchy",
+    "target": "POR",
+    "target_score": 77.52509448033057,
+    "initial_score": 77.27475569284373,
+    "against_initial": 0.25033878748683946,
+    "against_v97_target": -0.02684232155444022,
+    "best_epoch": 25,
+    "stopped_epoch": 43,
+    "validation_rows": 144665,
+    "predictions_reproduced_exactly": true,
+    "frozen_parameters_exact": true,
+    "gradient_groups": {
+      "original_target_locations": 2.526235342025757,
+      "combined_new_heads_routes": 0.6050649285316467
+    },
+    "seconds": 229.98723589998554,
+    "peak_MiB": 786.46533203125,
+    "complete_five_folds": false
+  },
+  "control_report": {
+    "stage": "por",
+    "target": "POR",
+    "target_score": 77.50036838764457,
+    "initial_score": 77.27786784460355,
+    "against_initial": 0.22250054304102207,
+    "against_v97_target": -0.051568414240435345,
+    "best_epoch": 12,
+    "stopped_epoch": 30,
+    "validation_rows": 144665,
+    "predictions_reproduced_exactly": true,
+    "frozen_parameters_exact": true,
+    "gradient_groups": {
+      "original_target_locations": 1.8906623125076294,
+      "combined_new_heads_routes": 0.4732763469219208
+    },
+    "seconds": 179.34345499999472,
+    "peak_MiB": 786.46533203125,
+    "complete_five_folds": false
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "report": {
+    "stage": "aligned",
+    "target": "POR",
+    "target_score": 78.04357779977842,
+    "initial_score": 77.92638076072386,
+    "against_initial": 0.11719703905455958,
+    "against_v97_target": 0.49164099789341265,
+    "best_epoch": 28,
+    "stopped_epoch": 42,
+    "validation_rows": 144665,
+    "predictions_reproduced_exactly": true,
+    "frozen_parameters_exact": true,
+    "gradient_groups": {
+      "POR_new_raw_feature_backbone": 0.06618275493383408,
+      "POR_direct_categorical_readout": 0.04905828833580017,
+      "POR_curve_interaction_backbone": 0.0691266655921936,
+      "POR_dynamic_cross_spectrum_backbone": 0.002881850814446807
+    },
+    "seconds": 523.3101248000166,
+    "peak_MiB": 2222.54248046875,
+    "complete_five_folds": false,
+    "early_terminated": false
+  },
+  "strata": {
+    "default": 97.40559788886887,
+    "continuous": 41.72843647938606
+  },
+  "whole_vs_serial345": -0.0017124389843985455,
+  "CONT_vs_serial345": -0.0088997770868815,
+  "whole_vs341": -0.002852918153905648,
+  "CONT_vs341": -0.008203812609082206,
+  "CONT_vs_native151": -0.2255245755180013,
+  "diagnostic_eight_stage_scores": {
+    "POR": 78.04357779977842,
+    "PERM": 89.51838939879066,
+    "SW": 74.17361205223327,
+    "TOTAL": 80.7052738477919
+  },
+  "TOTAL_vs_retained351": -0.0008558754461631679,
+  "timing": {
+    "includes": "preprocessing warmup training best restoration",
+    "concurrency": "solo after352pairterminal",
+    "pid": 30716,
+    "terminal": true,
+    "global_GPU_jobs_before": 0,
+    "started_epoch": 1790909563.138,
+    "individual_seconds": 523.3101248000166,
+    "peak_MiB": 2222.54248046875,
+    "process_creation_to_terminal_seconds": 528.4262909889221
+  },
+  "predefined42": {
+    "through_epoch": 42,
+    "best_epoch": 28,
+    "target_score": 78.04357779977842,
+    "control_actual_epochs": 42,
+    "nominal_budget": 80,
+    "comparison": "Predefined bestthrough42 vs historical341 natural42; +552 spectrumcapacity not causalfilter gain; pairedaligned/permuted same135304physicalparams/init functionclassesdiffer; laterbest not equalwork"
+  },
+  "adopted": false,
+  "screening_fold": 5,
+  "complete_five_folds": false,
+  "independent_disk_reload": false,
+  "remaining_folds_started": false,
+  "permuted_control_launched": false,
+  "comparison_limits": "135304params vs341134752 historical/nonconcurrent; extra552capacity/transfermodule, no matchedpermuted claim. Wholecheckpoint selected/singleseed/no CONToracle. SW351positive remains separate.",
+  "closed_setting": "POR351 amplitude-spectrum transfer below retained341whole; permuted not trained/no matchedgain claim, close transfer configuration no grid; SW351positive preserved"
+}

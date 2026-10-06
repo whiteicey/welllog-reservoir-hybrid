@@ -1,0 +1,77 @@
+{
+  "records": [
+    {
+      "seed": 20261010,
+      "stage": "PERM154",
+      "state_tensors": 323,
+      "initializer_state_exact": true,
+      "fresh_state_sha256": "db602b35511d76a04778dd6eb1f0f81b84381a46dacb448dea1df68c843dc0b7",
+      "selected_state_sha256": "db602b35511d76a04778dd6eb1f0f81b84381a46dacb448dea1df68c843dc0b7",
+      "construction_dependencies": [
+        {
+          "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261010\\SOURCE\\fold_5.pt",
+          "sha256": "7ce54c5a19dcdd61ef89ce21b2aaac621ee171e51ad7250059addc95f6230556"
+        }
+      ]
+    },
+    {
+      "seed": 20261011,
+      "stage": "PERM154",
+      "state_tensors": 323,
+      "initializer_state_exact": true,
+      "fresh_state_sha256": "949a51d6e47cfc7a0552717a681e0e3593686468812f626a97cc60f3c4c0958f",
+      "selected_state_sha256": "949a51d6e47cfc7a0552717a681e0e3593686468812f626a97cc60f3c4c0958f",
+      "construction_dependencies": [
+        {
+          "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261011\\SOURCE\\fold_5.pt",
+          "sha256": "6f13e1ced8e0ee6b50eb9248e07f9ee2a72f9aec35b221c97a782e65b3e81471"
+        }
+      ]
+    },
+    {
+      "seed": 20261010,
+      "stage": "POR151",
+      "state_tensors": 335,
+      "initializer_state_exact": true,
+      "fresh_state_sha256": "579fa09261461899c99b5489123fd1f7ab30a90c59c230e224f4dd8b40f26b0f",
+      "selected_state_sha256": "579fa09261461899c99b5489123fd1f7ab30a90c59c230e224f4dd8b40f26b0f",
+      "construction_dependencies": [
+        {
+          "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261010\\SOURCE\\fold_5.pt",
+          "sha256": "7ce54c5a19dcdd61ef89ce21b2aaac621ee171e51ad7250059addc95f6230556"
+        },
+        {
+          "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261010\\POR113\\model_best.pt",
+          "sha256": "58ed13b4f8d60b8d7e1e26a16aaca8c4fac3c09db315a836f61b78aa05b54861"
+        }
+      ]
+    }
+  ],
+  "timing_work_estimates": {
+    "20261010": {
+      "omission_candidates": [
+        "POR151",
+        "PERM154",
+        "SW351"
+      ],
+      "sum_reported_phase_seconds": 303.2470854000421,
+      "hypothetical_future_learned_phases": 5,
+      "actual_historical_executed_phases": 8,
+      "not_a_measured_new_pipeline": true
+    },
+    "20261011": {
+      "omission_candidates": [
+        "PERM154",
+        "SW351"
+      ],
+      "sum_reported_phase_seconds": 183.43965070002014,
+      "hypothetical_future_learned_phases": 6,
+      "actual_historical_executed_phases": 8,
+      "not_a_measured_new_pipeline": true
+    }
+  },
+  "CPU_only": true,
+  "new_training": false,
+  "no_checkpoint_deletion": true,
+  "scope": "Initializer equivalence plus previously observed SW leaf deletion. Future five/six-phase reconstruction candidates, not newly trained shorter pipelines or a universal recipe change."
+}

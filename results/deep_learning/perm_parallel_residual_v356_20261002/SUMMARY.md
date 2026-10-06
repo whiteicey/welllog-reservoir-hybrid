@@ -1,0 +1,30 @@
+# Historical summary
+
+Focus and explored conditions: see retained README/FINAL and SUMMARY_RESULTS.json.
+
+Gain: scores and original comparison deltas are retained; incomplete folds remain incomplete.
+
+Not worth extending: original negative conclusions are retained below where available.
+
+Detailed logs, weights and caches were removed by the user request; rerunning requires retraining.
+
+## README.md
+
+# V356 native predictor plus parallel backbone residual
+
+## Focus
+Latest explicit user requests retaining existing branches plus residual backbone/prediction branch. Keep FULL native154 predictor frozen (originalexpert backbone AND effective native location/logweight head/RPS function), add parallel new22592parameter encoder/readout predicting distribution residual. Original154only; never load336/349trainedrepairs, never append a second repair stage. Existing341/336/351optional8 unchanged.
+
+## Explored and verification
+Prepared/noGPU/no score. Native154 context input (two128expertfeatures+63originalside=319) feeds a fresh48width encoder with actual17tap depthwise convolution/LN/gated96expand. New32output residual readout initialized zero; final16means add .25*originalcomponentSD*tanh(delta),16logweights add .25*tanh(delta). Oldgate/scales/weights/context/backbone fully frozen; no teacher loss/distillation/pseudo/extra labels. Own nativeGaussian16 NLL/BCE/RPS1 and decoder unchanged; labels train64wells only. Main native pretrained predictions retained as base, residualbackbone and readout jointly learn, onePERMphase. Local17 versus same stored17kernel point-sum control: same22592params/init but function/receptivecapacity differ. Old136context is pointwise despite stored33kernel; old349rank4enc2+warmcontext negative acknowledged. This is a parallel nonlinear local residual predic
+
+o not chain trainedrepaircheckpoints/hide ninthstage. If no matched whole/continuous gain close this local residual config; no bound/width/kernel/LRgrid by default. One negative does not invalidate all residualbackbones. Existing positive models/deliveries unchanged.
+
+## Timing and next
+Preparedlocal/point, no queue. Solo preferred measuredcontention/max2cap. Record individual inclprep/warmup/restoration and pairwall inclgaps; RAMbestreplay notindependentdiskreload. Original sources immutable afterlaunch; atomiclaststate/explicitresume.
+
+Explicitlocal solo launchPID90652 after355terminal/globalGPU0. Pointprepared/notlaunched/noqueue. Old154allparametersfixed, newencoder+zeroresidualreadoutjoint. Initialscorepending.
+
+V356 natural14/best0 {"report": {"stage": "local", "target": "PERM", "target_score": 89.40556485691894, "initial_score": 89.40556485691894, "against_initial": 0.0, "against_v97_target": 0.00884080755312766, "best_epoch": 0, "stopped_epoch": 14, "validation_rows": 144665, "predictions_reproduced_exactly": true, "frozen_parameters_exact": true, "gradient_groups": {"PERM_parallel_residual_feature_encoder": 2.9405848181340843e-05, "PERM_new_distribution_residual_readout": 0.0036415986251085997}, "residual_parameter_norms": {"residual_encoder.stem.weight": 3.9845287799835205, "residual_encoder.stem.bias": 0.2519529461860657, "residual_encoder.norm.weight": 6.928203105926514, "residual_encoder.norm.bias": 0.0, "residual_encoder.depth.weight": 4.029961109161377, "residual_encoder.depth.bias": 1.0131064653396606, "residual_encoder.expand.weight": 5.741763114929199, "residual_encoder.expand.bias": 0.8430691957473755, "residual_readout.weight": 0.0, "residual_readout.bias": 0.0}, "seconds": 101.61426489998121, "peak_MiB": 786.46533203125, "complete_five_folds": false, "early_terminated": false}, "strata": {"default": 97.27870539397452, "continuous": 74.09691194381553}, "current_readout_norms": {"residual_readout.weight": 1.040154218673706, "residual_readout.bias": 0.059016741812229156}, "whole_vs154": 0.0, "whole_vs336": -0.11282454187171709, "CONT_vs336": 0.08727486061846434, "adopted": false, "point_trained": false, "independent_disk_reload": false, "complete_five_folds": false, "remaining_folds_started": false, "closed_setting": "parallel native319-to48 local17 predictor distribution residual .25; natural14/best0, no parameter grid"}. Backbone/readout gradients positive and currentreadoutnonzero; restoredzero isbest0, not gradientblocking. Pointnottrained/no matchedclaim. Close outputresidualsetting; 357newbonebranch original154only/not356weights.
+
+

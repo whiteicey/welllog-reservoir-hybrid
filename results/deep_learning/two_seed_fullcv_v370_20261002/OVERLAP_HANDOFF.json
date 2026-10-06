@@ -1,0 +1,52 @@
+{
+  "batch": {
+    "status": "running",
+    "controller_pid": 30132,
+    "active_pid": 27184,
+    "identity": "original",
+    "fold": 1,
+    "stage": "SOURCE",
+    "started_epoch": 1790927179.8455744,
+    "batch_started_epoch": 1790927178.5526347,
+    "concurrency": "serial",
+    "maximum_GPU_jobs": 2
+  },
+  "old_controller": {
+    "pid": 30132,
+    "create_time": 1790927175.7078009,
+    "cmdline": [
+      "C:\\Users\\z5364\\.conda\\envs\\normal\\python.exe",
+      "-u",
+      "experiments/pure_dl/run_pair_fullcv_v370.py"
+    ]
+  },
+  "attached_child": {
+    "pid": 27184,
+    "create_time": 1790927179.8475451,
+    "cmdline": [
+      "C:\\Users\\z5364\\.conda\\envs\\normal\\python.exe",
+      "-u",
+      "experiments/pure_dl/train_pair_fullcv_source_v370.py",
+      "--out",
+      "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_two_seed_fullcv_v370\\fold_1\\original\\SOURCE",
+      "--learning-rate",
+      ".0006",
+      "--schedule",
+      "cosine",
+      "--fold",
+      "1",
+      "--seed",
+      "20261006"
+    ]
+  },
+  "GPU_child_preserved": true,
+  "no_model_training_changes": true,
+  "maximum_GPU_jobs": 2,
+  "one_SOURCE_only": true,
+  "overlap_controller_sha256": "b5354d3c05211fae3f3fcd31fec5c70031b5d3620ea717c232954a06208ff343",
+  "prepared_epoch": 1790928223.148384,
+  "reason": "Overlap next SOURCE with downstream heads, preserve active worker and all frozen training code; finite same8 model-folds, no retry",
+  "old_CPU_controller_exited": true,
+  "GPU_child_preserved_after_controller_exit": true,
+  "handoff_epoch": 1790928223.180922
+}

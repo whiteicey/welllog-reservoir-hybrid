@@ -1,0 +1,10 @@
+{
+  "scope": "auxiliary progress recorder only; all training sources and recipe unchanged",
+  "reason": "overlapped root writes validation_history non-atomically; bounded coherent reads prevent transient JSON truncation failing controller",
+  "previous_sha256": "fda4c20eded5c9bfde810bd310531df0c216380e94abdac53d6e6941c35711d5",
+  "current_sha256": "f7ce0010394b35c2c710a6e26ae912c6fe6ef0675809a365cce402fe943c0980",
+  "validation": "partial JSON publication read succeeded; Path.read_text restored afterward",
+  "maximum_wait_seconds": 3,
+  "does_not_retry_training": true,
+  "workspace_and_repository_records": "both receive authoritative overlap summary"
+}

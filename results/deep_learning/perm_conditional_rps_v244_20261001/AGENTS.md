@@ -1,0 +1,1 @@
+Maintain PROJECTS/README. Originalfold5/Q50/score/normalGPU/80-14/max2. Oneheadaddition/sixalone/whole<=8; original104/154 only, no trainedrepairweights. Alloldweights frozen. Train-onlylabels,no test/validation-supervisedtraining. Atomicstates; no otherfolds before808+gain.

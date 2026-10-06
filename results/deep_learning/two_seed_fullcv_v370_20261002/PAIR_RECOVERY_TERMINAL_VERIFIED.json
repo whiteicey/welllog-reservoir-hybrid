@@ -1,0 +1,120 @@
+{
+  "passed": true,
+  "observed_epoch": 1790932500.2948678,
+  "both_authorized_recoveries_completed": true,
+  "recoveries": [
+    {
+      "identity": "original",
+      "stage": "PERM336",
+      "last_complete_epoch": 9,
+      "first_resumed_epoch": 10,
+      "report": {
+        "stage": "PERM336",
+        "target": "PERM",
+        "target_score": 90.98904518265655,
+        "initial_score": 90.98904518265655,
+        "against_initial": 0.0,
+        "best_epoch": 0,
+        "stopped_epoch": 14,
+        "validation_rows": 144621,
+        "predictions_reproduced_exactly": true,
+        "frozen_parameters_exact": true,
+        "gradient_groups": {
+          "PERM_sparse_reacquisition_body": 0.05439119413495064,
+          "PERM_direct_categorical_readout": 0.03051077388226986,
+          "PERM_joint_body_readout_shape": 0.0018712249584496021,
+          "PERM_joint_low_rank_feature_adapter": 0.0015718088252469897
+        },
+        "effective_patience": 14,
+        "SOTA_broken": true,
+        "seconds": 154.04309779999312,
+        "peak_MiB": 896.34375,
+        "complete_five_folds": false,
+        "early_terminated": false
+      },
+      "timing": {
+        "identity": "original",
+        "fold": 1,
+        "stage": "PERM336",
+        "pid": 65812,
+        "terminal": true,
+        "exit_code": 0,
+        "process_wall_seconds": 191.17065811157227,
+        "serial_invocation_seconds": 62.21329617500305,
+        "previous_failed_invocation_seconds": 128.9573619365692,
+        "concurrency": "failed overlap plus explicit serial recovery",
+        "resumed": true,
+        "includes": "load/preprocess/warmup/training or scan/restore/write; sums invocations, excludes approval waiting; whole batch wall includes waiting"
+      }
+    },
+    {
+      "identity": "seed_20261013",
+      "stage": "PERM154",
+      "last_complete_epoch": 7,
+      "first_resumed_epoch": 8,
+      "report": {
+        "stage": "PERM154",
+        "target": "PERM",
+        "target_score": 90.82341132483818,
+        "initial_score": 90.82341132483818,
+        "against_initial": 0.0,
+        "best_epoch": 0,
+        "stopped_epoch": 14,
+        "validation_rows": 144621,
+        "predictions_reproduced_exactly": true,
+        "frozen_parameters_exact": true,
+        "gradient_groups": {
+          "private_PERM_joint_location_weight_head": 0.21340925991535187
+        },
+        "effective_patience": 14,
+        "SOTA_broken": true,
+        "seconds": 134.91826200007927,
+        "peak_MiB": 786.46533203125,
+        "complete_five_folds": false,
+        "early_terminated": false
+      },
+      "timing": {
+        "identity": "seed_20261013",
+        "fold": 1,
+        "stage": "PERM154",
+        "pid": 78092,
+        "terminal": true,
+        "exit_code": 0,
+        "process_wall_seconds": 175.01366305351257,
+        "serial_invocation_seconds": 68.26588559150696,
+        "previous_failed_invocation_seconds": 106.74777746200562,
+        "concurrency": "failed overlap plus explicit serial recovery",
+        "resumed": true,
+        "includes": "load/preprocess/warmup/training or scan/restore/write; sums invocations, excludes approval waiting; whole batch wall includes waiting"
+      }
+    }
+  ],
+  "active_job": {
+    "fold": 1,
+    "identity": "seed_20261013",
+    "stage": "SW104",
+    "role": "SW",
+    "dest": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_two_seed_fullcv_v370\\fold_1\\seed_20261013\\SW104",
+    "expected": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_two_seed_fullcv_v370\\fold_1\\seed_20261013\\SW104\\report.json",
+    "command": [
+      "C:\\Users\\z5364\\.conda\\envs\\normal\\python.exe",
+      "-u",
+      "experiments/pure_dl/train_pair_fullcv_stage_v370.py",
+      "--stage",
+      "SW104"
+    ],
+    "pid": 62148,
+    "create_time": 1790932442.758022,
+    "started_epoch": 1790932442.7502992,
+    "resumed": false,
+    "attached": false
+  },
+  "maximum_GPU_jobs": 1,
+  "original_fold1_scores": {
+    "POR": 80.25441098530335,
+    "PERM": 90.98904518265655,
+    "SW": 76.9677842865412,
+    "TOTAL": 82.86121360981022
+  },
+  "complete_five_fold_OOF": false
+}

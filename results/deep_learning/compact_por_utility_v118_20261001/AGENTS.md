@@ -1,0 +1,1 @@
+Maintain PROJECTS, README/EXPLORATIONS and atlas. Only alpha.25/.5 own-POR utility refinement, original scoring and truth isolation,5 total stages including source/parent. normal/max2GPU,80/18, atomic full last explicit resume. No other folds/old source or delivery mutation.

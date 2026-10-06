@@ -1,0 +1,7 @@
+Goal fullOOF82/fifth808. Done sources/fixedpairedhypothesis. Pending270terminal thenexplicitlaunch undermax2, results/actualassembly/atlas. Gainunproved; no extra stage chaining.
+
+V271 final PERM89.439391359490, gain+0.033826502571, actualTOTAL80.624314693894; sixphases inclsource/one addedPERMstage, strict808=False; all144665replay/frozenexact, best/stop8/22, trainingseconds237.511100/peakMiB788.226562. No otherfolds.
+
+V271 final PERM89.438759265115, gain+0.033194408196, actualTOTAL80.624093460863; sixphases inclsource/one addedPERMstage, strict808=False; all144665replay/frozenexact, best/stop8/22, trainingseconds239.721348/peakMiB787.983398. No otherfolds.
+
+V271 FINAL repeatPERM89.439391359490/multiscale89.438759265115 bothbest8/natural22; multiscale-minus-repeat-0.000632094375, repeatvs268+0.023551299411. Original154 retained, directrepresentation+readout learning gain; extra poolscale notproven. Actual144665/RAM/frozenproof/no independentdiskreload. Sevenphase actualTOTAL80.633931076773, previous7delta+0.008242954794, stillbelow808/nootherfolds/fullOOF82unmet; default5/delivery unchanged. Bothpositive/controlweights retained. Individual237.511100/239.721348s/788.227and787.983MiB, concurrentwall247.236s inclstartup/data/initialeval/finalrestore/excludesprep. V272fullcopiedexpertencoder+directreadout live; v273fresh96temporalbackbone+directreadout launched besideit, max2/80-14/onePERMphase/nomutatedhistoricsource/norepairedweightschain.

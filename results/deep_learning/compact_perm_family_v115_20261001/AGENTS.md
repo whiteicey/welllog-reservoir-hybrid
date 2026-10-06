@@ -1,0 +1,1 @@
+Maintain PROJECTS/README/EXPLORATIONS/atlas. Only t3/cauchy PERM family scope; original data/score/train-only fitting, five total stages including source, normal/max2GPU,80/18. Atomic states; no auto remaining folds, old source edits or delivery overwrite.

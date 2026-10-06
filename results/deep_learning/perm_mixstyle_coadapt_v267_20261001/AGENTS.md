@@ -1,0 +1,1 @@
+MaintainPROJECTS/README. Originalfold5/9curves/Q/score/80-14/normalGPUmax2. OnePERMaddition from154/no264or248weights. OriginalSOURCEfrozen, current154context+newmass jointly update. TrainwellIDs only loss/augmentationmatching metadata, no inference ID or heldoutfitting. evalstyleidentity, no teachers/testlabels/otherfolds below808. Preservecurrentpositives/delivery.

@@ -1,0 +1,1 @@
+MaintainPROJECTS/README. Fixedoriginalfold5/ninecurves/Q/score normalGPUmax2. OnejointSWphase from104only/no trainedrepairs. Freeze original atom network, owntrainingcontinuouslabels only for auxiliary. No labels/IDs enter inferencefeatures; no below808otherfolds. Preservepositive/deliveries.

@@ -1,0 +1,1 @@
+Maintain PROJECTS.md/README/EXPLORATIONS and atlas. Original104only/freshjointencoderreadout oneSWphase, no trainedrepairweights/teacher/pseudo/testlabels. Fixedfifth/original9/206/Q50/80-14/max2GPU/strict808 beforeotherfolds. Preparedjoint/detached explicitlaunchonly/noqueue. Preserve sources and best/deliveries.

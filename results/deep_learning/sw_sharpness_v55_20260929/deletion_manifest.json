@@ -1,0 +1,27 @@
+{
+  "deleted": [
+    {
+      "path": "outputs\\pure_dl_sw_sharpness_v55_SW_adamw_fold5\\model_best.pt",
+      "bytes": 3435211,
+      "sha256": "a8e467f4a99d979a26e264bef16b091ee092cf3e5abd33f3d522f267a1a57197"
+    },
+    {
+      "path": "outputs\\pure_dl_sw_sharpness_v55_SW_adamw_fold5\\last_state.pt",
+      "bytes": 15540539,
+      "sha256": "f14639347799499bfd03d15de212725cb2f52febdc4a7c8ed33998d2113fa459"
+    },
+    {
+      "path": "outputs\\pure_dl_sw_sharpness_v55_SW_sam_fold5\\model_best.pt",
+      "bytes": 3435211,
+      "sha256": "2243f12fabc95c0a51408257e390dc3a937f9ee5ee4711ad4626e7aad72ed965"
+    },
+    {
+      "path": "outputs\\pure_dl_sw_sharpness_v55_SW_sam_fold5\\last_state.pt",
+      "bytes": 15540539,
+      "sha256": "3e58ef32dc56a03aa62fd92619de0184f10a611dd982caf22702012c5b4d80bf"
+    }
+  ],
+  "bytes": 37951500,
+  "retained": [],
+  "training_active": false
+}

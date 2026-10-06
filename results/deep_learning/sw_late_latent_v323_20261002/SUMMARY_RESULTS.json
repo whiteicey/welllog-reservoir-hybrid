@@ -1,0 +1,83 @@
+{
+  "project": "sw_late_latent_v323_20261002",
+  "scope": "obsolete-study",
+  "weights_retained": false,
+  "cleanup": "Obsolete artifacts removed by explicit user request. These are historical scores, not newly verified training.",
+  "results": [
+    {
+      "source": "FINAL.json",
+      "result": {
+        "report": {
+          "stage": "late",
+          "target": "SW",
+          "target_score": 74.13793586698321,
+          "initial_score": 74.12175268976877,
+          "against_initial": 0.016183177214443845,
+          "against_v97_target": -0.004244037683491797,
+          "best_epoch": 17,
+          "stopped_epoch": 29,
+          "validation_rows": 144665,
+          "predictions_reproduced_exactly": true,
+          "frozen_parameters_exact": true,
+          "seconds": 352.15510350000113,
+          "peak_MiB": 1356.091796875,
+          "complete_five_folds": false,
+          "early_terminated": true
+        },
+        "strata": {
+          "default": 98.74462410636205,
+          "continuous": 17.618651450884784
+        },
+        "best_latent_fusion_delta_norms": {
+          "0.weight": 1.372330665588379,
+          "0.bias": 0.6904589533805847,
+          "1.weight": 5.9743876457214355,
+          "1.bias": 0.23948229849338531,
+          "3.weight": 2.4267914295196533,
+          "3.bias": 0.13569456338882446
+        },
+        "predefined_equal_epoch22": {
+          "cap": {
+            "through_epoch": 22,
+            "best_epoch": 17,
+            "target_score": 74.13793586698321,
+            "control_actual_epochs": 22,
+            "nominal_budget": 80,
+            "comparison": "Predefined equal epoch ceiling22, historical321own control; not independentdiskreload"
+          },
+          "strata": {
+            "default": 98.74462410636205,
+            "continuous": 17.618651450884784
+          },
+          "delta_whole_vs321_own": -0.028094313508475466,
+          "delta_CONT_vs321_own": -0.2927039768051607,
+          "scope": "Predefined best through22 vs historical321own22; removednonfunctionalwork/auxgradientpaths limits remain"
+        },
+        "full_absolute_whole_vs321_own": -0.028094313508475466,
+        "full_absolute_CONT_vs321_own": -0.2927039768051607,
+        "full_best_after22_is_not_equal_work_gain": false,
+        "independent_disk_reload": false,
+        "adopted": false,
+        "complete_five_folds": false,
+        "remaining_folds_started": false,
+        "screening_fold": 5,
+        "timing": {
+          "pid": 37044,
+          "started_utc": "2026-10-01T21:40:33.8370467Z",
+          "started_unix": 1790890833.839,
+          "concurrent_gpu_jobs_at_launch": 1,
+          "includes": "process startup, data preparation, initial evaluation, training and best restoration",
+          "excludes": "prelaunch implementation and CPU finalization",
+          "terminal": true,
+          "individual_seconds": 352.15510350000113,
+          "peak_MiB": 1356.091796875,
+          "process_creation_to_terminal_seconds": 356.2433133125305,
+          "interpretation": "Includes prep/initial/train/bestrestore, concurrentdifferentPOR exploration disclosed; excludes prelaunch/CPUfinalization. Not isolatedspeed comparison versus321donorwork."
+        }
+      }
+    }
+  ],
+  "cleanup_completed": true,
+  "deleted_files": 8,
+  "deleted_bytes": 3489501
+}

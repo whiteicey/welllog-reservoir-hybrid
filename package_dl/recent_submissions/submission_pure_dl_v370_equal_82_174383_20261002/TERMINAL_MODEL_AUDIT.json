@@ -1,0 +1,286 @@
+{
+  "passed": true,
+  "models": 30,
+  "all_packaged_parameters_exact_to_terminal_selected_checkpoint": true,
+  "records": [
+    {
+      "fold": 1,
+      "identity": "original",
+      "target": "POR",
+      "checkpoint": "outputs\\pure_dl_two_seed_fullcv_v370\\fold_1\\original\\POR341\\model_best.pt",
+      "best_epoch": 0,
+      "tensors": 397,
+      "exact": true
+    },
+    {
+      "fold": 1,
+      "identity": "original",
+      "target": "PERM",
+      "checkpoint": "outputs\\pure_dl_two_seed_fullcv_v370\\fold_1\\original\\PERM336\\model_best.pt",
+      "best_epoch": 0,
+      "tensors": 353,
+      "exact": true
+    },
+    {
+      "fold": 1,
+      "identity": "original",
+      "target": "SW",
+      "checkpoint": "outputs\\pure_dl_two_seed_fullcv_v370\\fold_1\\original\\SW351\\model_best.pt",
+      "best_epoch": 62,
+      "tensors": 166,
+      "exact": true
+    },
+    {
+      "fold": 1,
+      "identity": "seed_20261013",
+      "target": "POR",
+      "checkpoint": "outputs\\pure_dl_two_seed_fullcv_v370\\fold_1\\seed_20261013\\POR341\\model_best.pt",
+      "best_epoch": 4,
+      "tensors": 397,
+      "exact": true
+    },
+    {
+      "fold": 1,
+      "identity": "seed_20261013",
+      "target": "PERM",
+      "checkpoint": "outputs\\pure_dl_two_seed_fullcv_v370\\fold_1\\seed_20261013\\PERM336\\model_best.pt",
+      "best_epoch": 1,
+      "tensors": 353,
+      "exact": true
+    },
+    {
+      "fold": 1,
+      "identity": "seed_20261013",
+      "target": "SW",
+      "checkpoint": "outputs\\pure_dl_two_seed_fullcv_v370\\fold_1\\seed_20261013\\SW351\\model_best.pt",
+      "best_epoch": 0,
+      "tensors": 166,
+      "exact": true
+    },
+    {
+      "fold": 2,
+      "identity": "original",
+      "target": "POR",
+      "checkpoint": "outputs\\pure_dl_two_seed_fullcv_v370\\fold_2\\original\\POR341\\model_best.pt",
+      "best_epoch": 6,
+      "tensors": 397,
+      "exact": true
+    },
+    {
+      "fold": 2,
+      "identity": "original",
+      "target": "PERM",
+      "checkpoint": "outputs\\pure_dl_two_seed_fullcv_v370\\fold_2\\original\\PERM336\\model_best.pt",
+      "best_epoch": 5,
+      "tensors": 353,
+      "exact": true
+    },
+    {
+      "fold": 2,
+      "identity": "original",
+      "target": "SW",
+      "checkpoint": "outputs\\pure_dl_two_seed_fullcv_v370\\fold_2\\original\\SW351\\model_best.pt",
+      "best_epoch": 8,
+      "tensors": 166,
+      "exact": true
+    },
+    {
+      "fold": 2,
+      "identity": "seed_20261013",
+      "target": "POR",
+      "checkpoint": "outputs\\pure_dl_two_seed_fullcv_v370\\fold_2\\seed_20261013\\POR341\\model_best.pt",
+      "best_epoch": 8,
+      "tensors": 397,
+      "exact": true
+    },
+    {
+      "fold": 2,
+      "identity": "seed_20261013",
+      "target": "PERM",
+      "checkpoint": "outputs\\pure_dl_two_seed_fullcv_v370\\fold_2\\seed_20261013\\PERM336\\model_best.pt",
+      "best_epoch": 6,
+      "tensors": 353,
+      "exact": true
+    },
+    {
+      "fold": 2,
+      "identity": "seed_20261013",
+      "target": "SW",
+      "checkpoint": "outputs\\pure_dl_two_seed_fullcv_v370\\fold_2\\seed_20261013\\SW351\\model_best.pt",
+      "best_epoch": 3,
+      "tensors": 166,
+      "exact": true
+    },
+    {
+      "fold": 3,
+      "identity": "original",
+      "target": "POR",
+      "checkpoint": "outputs\\pure_dl_two_seed_fullcv_v370\\fold_3\\original\\POR341\\model_best.pt",
+      "best_epoch": 24,
+      "tensors": 397,
+      "exact": true
+    },
+    {
+      "fold": 3,
+      "identity": "original",
+      "target": "PERM",
+      "checkpoint": "outputs\\pure_dl_two_seed_fullcv_v370\\fold_3\\original\\PERM336\\model_best.pt",
+      "best_epoch": 5,
+      "tensors": 353,
+      "exact": true
+    },
+    {
+      "fold": 3,
+      "identity": "original",
+      "target": "SW",
+      "checkpoint": "outputs\\pure_dl_two_seed_fullcv_v370\\fold_3\\original\\SW351\\model_best.pt",
+      "best_epoch": 0,
+      "tensors": 166,
+      "exact": true
+    },
+    {
+      "fold": 3,
+      "identity": "seed_20261013",
+      "target": "POR",
+      "checkpoint": "outputs\\pure_dl_two_seed_fullcv_v370\\fold_3\\seed_20261013\\POR341\\model_best.pt",
+      "best_epoch": 9,
+      "tensors": 397,
+      "exact": true
+    },
+    {
+      "fold": 3,
+      "identity": "seed_20261013",
+      "target": "PERM",
+      "checkpoint": "outputs\\pure_dl_two_seed_fullcv_v370\\fold_3\\seed_20261013\\PERM336\\model_best.pt",
+      "best_epoch": 10,
+      "tensors": 353,
+      "exact": true
+    },
+    {
+      "fold": 3,
+      "identity": "seed_20261013",
+      "target": "SW",
+      "checkpoint": "outputs\\pure_dl_two_seed_fullcv_v370\\fold_3\\seed_20261013\\SW351\\model_best.pt",
+      "best_epoch": 13,
+      "tensors": 166,
+      "exact": true
+    },
+    {
+      "fold": 4,
+      "identity": "original",
+      "target": "POR",
+      "checkpoint": "outputs\\pure_dl_two_seed_fullcv_v370\\fold_4\\original\\POR341\\model_best.pt",
+      "best_epoch": 4,
+      "tensors": 397,
+      "exact": true
+    },
+    {
+      "fold": 4,
+      "identity": "original",
+      "target": "PERM",
+      "checkpoint": "outputs\\pure_dl_two_seed_fullcv_v370\\fold_4\\original\\PERM336\\model_best.pt",
+      "best_epoch": 0,
+      "tensors": 353,
+      "exact": true
+    },
+    {
+      "fold": 4,
+      "identity": "original",
+      "target": "SW",
+      "checkpoint": "outputs\\pure_dl_two_seed_fullcv_v370\\fold_4\\original\\SW351\\model_best.pt",
+      "best_epoch": 2,
+      "tensors": 166,
+      "exact": true
+    },
+    {
+      "fold": 4,
+      "identity": "seed_20261013",
+      "target": "POR",
+      "checkpoint": "outputs\\pure_dl_two_seed_fullcv_v370\\fold_4\\seed_20261013\\POR341\\model_best.pt",
+      "best_epoch": 29,
+      "tensors": 397,
+      "exact": true
+    },
+    {
+      "fold": 4,
+      "identity": "seed_20261013",
+      "target": "PERM",
+      "checkpoint": "outputs\\pure_dl_two_seed_fullcv_v370\\fold_4\\seed_20261013\\PERM336\\model_best.pt",
+      "best_epoch": 0,
+      "tensors": 353,
+      "exact": true
+    },
+    {
+      "fold": 4,
+      "identity": "seed_20261013",
+      "target": "SW",
+      "checkpoint": "outputs\\pure_dl_two_seed_fullcv_v370\\fold_4\\seed_20261013\\SW351\\model_best.pt",
+      "best_epoch": 3,
+      "tensors": 166,
+      "exact": true
+    },
+    {
+      "fold": 5,
+      "identity": "original",
+      "target": "POR",
+      "checkpoint": "outputs\\pure_dl_por_coupling_conditional_rps_v341_fold5\\conditional\\model_best.pt",
+      "best_epoch": 28,
+      "tensors": 397,
+      "exact": true
+    },
+    {
+      "fold": 5,
+      "identity": "original",
+      "target": "PERM",
+      "checkpoint": "outputs\\pure_dl_perm_low_rank_cross_v336_fold5\\cross\\model_best.pt",
+      "best_epoch": 5,
+      "tensors": 353,
+      "exact": true
+    },
+    {
+      "fold": 5,
+      "identity": "original",
+      "target": "SW",
+      "checkpoint": "outputs\\pure_dl_sw_dynamic_cross_spectrum_v351_fold5\\aligned\\model_best.pt",
+      "best_epoch": 13,
+      "tensors": 166,
+      "exact": true
+    },
+    {
+      "fold": 5,
+      "identity": "seed_20261013",
+      "target": "POR",
+      "checkpoint": "outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261013\\POR341\\model_best.pt",
+      "best_epoch": 11,
+      "tensors": 397,
+      "exact": true
+    },
+    {
+      "fold": 5,
+      "identity": "seed_20261013",
+      "target": "PERM",
+      "checkpoint": "outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261013\\PERM336\\model_best.pt",
+      "best_epoch": 5,
+      "tensors": 353,
+      "exact": true
+    },
+    {
+      "fold": 5,
+      "identity": "seed_20261013",
+      "target": "SW",
+      "checkpoint": "outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261013\\SW351_fixed\\model_best.pt",
+      "best_epoch": 0,
+      "tensors": 166,
+      "exact": true
+    }
+  ],
+  "test_full_replay_bytes_exact": true,
+  "test_wells": 10,
+  "test_rows": 95948,
+  "result_sha256": "72b102fdf1c1753afaf31d12ee35bbe98b7a86c28b76f4c1c84381ba56a114b6",
+  "user_reported_A_board": {
+    "old_v97": 83.93,
+    "new_equal_v370": 83.61,
+    "delta": -0.32
+  }
+}

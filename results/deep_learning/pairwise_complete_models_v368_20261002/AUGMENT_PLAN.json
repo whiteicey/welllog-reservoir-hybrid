@@ -1,0 +1,269 @@
+{
+  "models": [
+    {
+      "id": "original",
+      "seed": null,
+      "scores": {
+        "POR": 78.04643071793232,
+        "PERM": 89.51838939879066,
+        "SW": 74.17361205223327,
+        "TOTAL": 80.70612972323806
+      },
+      "heads": {
+        "POR": {
+          "checkpoint": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_por_coupling_conditional_rps_v341_fold5\\conditional\\model_best.pt",
+          "sha256": "878444dafeb7e8205d44315715ca3ac6870386b28741c7669e965977195d5af2"
+        },
+        "PERM": {
+          "checkpoint": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_perm_low_rank_cross_v336_fold5\\cross\\model_best.pt",
+          "sha256": "e61bce6f693b86380c98dbb0ecfdd6bd7d53d281cad92d3fe9295917f22ea0f0"
+        },
+        "SW": {
+          "checkpoint": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_sw_dynamic_cross_spectrum_v351_fold5\\aligned\\model_best.pt",
+          "sha256": "48ea1314a9cf9e3d4f30d92b939bc8cf9da3fa1769c15431f53d297566cf4206"
+        }
+      },
+      "stage_count": 8
+    },
+    {
+      "id": "seed_20261010",
+      "seed": 20261010,
+      "scores": {
+        "POR": 77.5520561792274,
+        "PERM": 89.49625487509155,
+        "SW": 74.03612889675152,
+        "TOTAL": 80.5019511739133
+      },
+      "heads": {
+        "POR": {
+          "checkpoint": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261010\\POR341\\model_best.pt",
+          "sha256": "68fe9da472b729853888efdf4d847054871d75c31f70f082b17627612a07d273"
+        },
+        "PERM": {
+          "checkpoint": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261010\\PERM336\\model_best.pt",
+          "sha256": "ad99e9846f046fa7e4add6f8643bd495fac1fc85793244ef91533d72671cdfee"
+        },
+        "SW": {
+          "checkpoint": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261010\\SW351_fixed\\model_best.pt",
+          "sha256": "e97d76e8b2d11168407dee1ac9b5b7a34504d18eb073d7efdac1fb8b504c78be"
+        }
+      },
+      "stage_count": 8
+    },
+    {
+      "id": "seed_20261011",
+      "seed": 20261011,
+      "scores": {
+        "POR": 76.72694269202935,
+        "PERM": 89.38299330747085,
+        "SW": 73.74686202568397,
+        "TOTAL": 80.11353217421299
+      },
+      "heads": {
+        "POR": {
+          "checkpoint": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261011\\POR341\\model_best.pt",
+          "sha256": "00c1bfc7f0578b2405ece9a58eaf21163780f754c3e3ffeb808c00a071bed272"
+        },
+        "PERM": {
+          "checkpoint": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261011\\PERM336\\model_best.pt",
+          "sha256": "1d927662b78027bc55f8f5caa9a5af0b60406838f31266d45d75af7159a506bf"
+        },
+        "SW": {
+          "checkpoint": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261011\\SW351_fixed\\model_best.pt",
+          "sha256": "35ba5c14b78aaf7de5c7cb1a04893c094644617b087acc422d893199745c3795"
+        }
+      },
+      "stage_count": 8
+    },
+    {
+      "id": "seed_20261012",
+      "seed": 20261012,
+      "scores": {
+        "POR": 76.81520301795747,
+        "PERM": 89.46897371901133,
+        "SW": 73.84783722739398,
+        "TOTAL": 80.2054447366291
+      },
+      "heads": {
+        "POR": {
+          "checkpoint": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261012\\POR341\\model_best.pt",
+          "sha256": "cf207f90e5b0041bc48086f042f1a2a2b0e2aaf11435c780e7ae1bc803efc170"
+        },
+        "PERM": {
+          "checkpoint": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261012\\PERM336\\model_best.pt",
+          "sha256": "4da7e778c7b60d686127f8601d647d4f1fd7993a22fb52e23de2db7740caba0d"
+        },
+        "SW": {
+          "checkpoint": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261012\\SW351_fixed\\model_best.pt",
+          "sha256": "989ca000583a1740421e31b809dfccd00e58e12a39aa790a424bc2674a3fdd38"
+        }
+      },
+      "stage_count": 8
+    },
+    {
+      "id": "seed_20261013",
+      "seed": 20261013,
+      "scores": {
+        "POR": 77.38833330639497,
+        "PERM": 89.52127968635101,
+        "SW": 73.63533098562274,
+        "TOTAL": 80.3213137271093
+      },
+      "stage_count": 8,
+      "heads": {
+        "POR": {
+          "checkpoint": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261013\\POR341\\model_best.pt",
+          "sha256": "4979216f2196ac701da12712ea0632da9d0a2f527708bf38342ad34454677061"
+        },
+        "PERM": {
+          "checkpoint": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261013\\PERM336\\model_best.pt",
+          "sha256": "3ef4eaf7dea84c889888c37cda1fa0545894340614e357ce1a930a40d99410b4"
+        },
+        "SW": {
+          "checkpoint": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261013\\SW351_fixed\\model_best.pt",
+          "sha256": "8dfcd82728e8432a26bb495ae354d7a2806e589850312f30cc0052878f8e5caf"
+        }
+      }
+    }
+  ],
+  "pairs": [
+    {
+      "id": "original__seed_20261013",
+      "A": "original",
+      "B": "seed_20261013"
+    },
+    {
+      "id": "seed_20261010__seed_20261013",
+      "A": "seed_20261010",
+      "B": "seed_20261013"
+    },
+    {
+      "id": "seed_20261011__seed_20261013",
+      "A": "seed_20261011",
+      "B": "seed_20261013"
+    },
+    {
+      "id": "seed_20261012__seed_20261013",
+      "A": "seed_20261012",
+      "B": "seed_20261013"
+    }
+  ],
+  "started_epoch": 1790923477.991384,
+  "weights": [
+    0.0,
+    0.01,
+    0.02,
+    0.03,
+    0.04,
+    0.05,
+    0.06,
+    0.07,
+    0.08,
+    0.09,
+    0.1,
+    0.11,
+    0.12,
+    0.13,
+    0.14,
+    0.15,
+    0.16,
+    0.17,
+    0.18,
+    0.19,
+    0.2,
+    0.21,
+    0.22,
+    0.23,
+    0.24,
+    0.25,
+    0.26,
+    0.27,
+    0.28,
+    0.29,
+    0.3,
+    0.31,
+    0.32,
+    0.33,
+    0.34,
+    0.35,
+    0.36,
+    0.37,
+    0.38,
+    0.39,
+    0.4,
+    0.41,
+    0.42,
+    0.43,
+    0.44,
+    0.45,
+    0.46,
+    0.47,
+    0.48,
+    0.49,
+    0.5,
+    0.51,
+    0.52,
+    0.53,
+    0.54,
+    0.55,
+    0.56,
+    0.57,
+    0.58,
+    0.59,
+    0.6,
+    0.61,
+    0.62,
+    0.63,
+    0.64,
+    0.65,
+    0.66,
+    0.67,
+    0.68,
+    0.69,
+    0.7,
+    0.71,
+    0.72,
+    0.73,
+    0.74,
+    0.75,
+    0.76,
+    0.77,
+    0.78,
+    0.79,
+    0.8,
+    0.81,
+    0.82,
+    0.83,
+    0.84,
+    0.85,
+    0.86,
+    0.87,
+    0.88,
+    0.89,
+    0.9,
+    0.91,
+    0.92,
+    0.93,
+    0.94,
+    0.95,
+    0.96,
+    0.97,
+    0.98,
+    0.99,
+    1.0
+  ],
+  "weight_A_orientation": true,
+  "per_head_fixed_ratio": true,
+  "target_TOTAL_strictly_above": 80.74,
+  "prior_per_head_reference": 80.73516623772511,
+  "reused_pair": null,
+  "reused_cache": "results/deep_learning/original_seed_weight_grid_v364_20261002",
+  "maximum_GPU_jobs": 2,
+  "extra_training_stages": 0,
+  "prior_training_stages_per_pair": 16,
+  "complete_five_folds": false,
+  "remaining_folds_started": false,
+  "automatic_adoption": false,
+  "extension_started_epoch": 1790923877.255606,
+  "scope_reason": "Seed13 completed during original six-pair evaluation; include all currently complete models, preserve initial results and add exactly four pairs. Seed14 incomplete, excluded."
+}

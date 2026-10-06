@@ -1,0 +1,115 @@
+{
+  "project": "perm_bin_topology_v320_20261002",
+  "scope": "obsolete-study",
+  "weights_retained": false,
+  "cleanup": "Obsolete artifacts removed by explicit user request. These are historical scores, not newly verified training.",
+  "results": [
+    {
+      "source": "PAIRED_FINAL.json",
+      "result": {
+        "reports": {
+          "ordered": {
+            "stage": "ordered",
+            "target": "PERM",
+            "target_score": 89.50635690124827,
+            "initial_score": 89.4055666268939,
+            "against_initial": 0.10079027435436672,
+            "against_v97_target": 0.10963285188245209,
+            "best_epoch": 5,
+            "stopped_epoch": 14,
+            "validation_rows": 144665,
+            "predictions_reproduced_exactly": true,
+            "frozen_parameters_exact": true,
+            "seconds": 240.58177799999248,
+            "peak_MiB": 966.646484375,
+            "complete_five_folds": false,
+            "early_terminated": true
+          },
+          "shuffled": {
+            "stage": "shuffled",
+            "target": "PERM",
+            "target_score": 89.51161807152464,
+            "initial_score": 89.4055666268939,
+            "against_initial": 0.10605144463073657,
+            "against_v97_target": 0.11489402215882194,
+            "best_epoch": 5,
+            "stopped_epoch": 12,
+            "validation_rows": 144665,
+            "predictions_reproduced_exactly": true,
+            "frozen_parameters_exact": true,
+            "seconds": 222.29953040002147,
+            "peak_MiB": 966.646484375,
+            "complete_five_folds": false,
+            "early_terminated": true
+          }
+        },
+        "strata": {
+          "ordered": {
+            "default": 97.47694023698261,
+            "continuous": 74.00823474435154
+          },
+          "shuffled": {
+            "default": 97.48497698988302,
+            "continuous": 74.00809903001606
+          }
+        },
+        "best_bin_module_delta_norms": {
+          "ordered": {
+            "conv.0.weight": 0.2946547567844391,
+            "conv.0.bias": 0.16555742919445038,
+            "conv.2.weight": 0.2739887237548828,
+            "conv.2.bias": 0.10714256018400192
+          },
+          "shuffled": {
+            "conv.0.weight": 0.4034358561038971,
+            "conv.0.bias": 0.2588399052619934,
+            "conv.2.weight": 0.3421841561794281,
+            "conv.2.bias": 0.04772059619426727
+          }
+        },
+        "ordered_minus_shuffled": -0.005261170276369853,
+        "ordered_minus_shuffled_CONT": 0.00013571433548520417,
+        "gain_vs312": {
+          "ordered": -0.009447503630568121,
+          "shuffled": -0.004186333354198268
+        },
+        "CONT_vs312": {
+          "ordered": 0.005346340338817868,
+          "shuffled": 0.0052106260033326635
+        },
+        "timing": {
+          "started_epoch": 1790888195.432,
+          "launch_epochs": {
+            "ordered": 1790888195.432,
+            "shuffled": 1790888220.119
+          },
+          "launch_stagger_seconds": 24.687,
+          "start_evidence": "Live Win32_Process.CreationDate17508/82892",
+          "terminal": true,
+          "prelaunch_preparation_included": false,
+          "concurrency": "two after stagger, ordered briefly overlaps terminal319adapter",
+          "same_work_pair_wall_seconds": 252.87393164634705,
+          "individual_seconds": {
+            "ordered": 240.58177799999248,
+            "shuffled": 222.29953040002147
+          },
+          "peak_MiB": {
+            "ordered": 966.646484375,
+            "shuffled": 966.646484375
+          },
+          "interpretation": "Concurrent pair24.687s stagger; ordered brief319terminal overlap. Individual includes prep/initial/train/bestrestore; pair creation-to-lastterminal excludes prelaunch/CPUfinalization; no isolatedspeed comparison."
+        },
+        "screening_fold": 5,
+        "complete_five_folds": false,
+        "remaining_folds_started": false,
+        "independent_disk_reload": false,
+        "adopted": false,
+        "early_truncation_disclosed": true,
+        "closure": "Ordered topology loses whole with only0.000135714 CONT advantage; both wholebelow312. No adoption, no kernelwidth/lossweight grid. Small CONTtradeoff not robust useful mechanism evidence."
+      }
+    }
+  ],
+  "cleanup_completed": true,
+  "deleted_files": 17,
+  "deleted_bytes": 6977541
+}

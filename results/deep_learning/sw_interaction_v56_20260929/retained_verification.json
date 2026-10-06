@@ -1,0 +1,20 @@
+{
+  "candidates": [
+    {
+      "mode": "additive",
+      "rows": 144665,
+      "exact_disk_replay": true,
+      "score": 73.713975628494,
+      "replacement_scores": {
+        "POR": 77.551936801885,
+        "PERM": 89.39672404936582,
+        "SW": 73.713975628494,
+        "TOTAL": 80.35432592781643
+      },
+      "proof_source": "assembled_report.json: new_target_full_disk_replay",
+      "checkpoint_sha256": "87e018ac32aded98a27868b7e77c8c777e3b4745d31883174830dafe8912fd23"
+    }
+  ],
+  "seconds": 0.0028965999954380095,
+  "unchanged_finalizer_replay_reused": true
+}

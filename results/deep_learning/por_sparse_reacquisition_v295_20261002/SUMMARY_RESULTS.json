@@ -1,0 +1,87 @@
+{
+  "project": "por_sparse_reacquisition_v295_20261002",
+  "scope": "obsolete-study",
+  "weights_retained": false,
+  "cleanup": "Obsolete artifacts removed by explicit user request. These are historical scores, not newly verified training.",
+  "results": [
+    {
+      "source": "PAIRED_FINAL.json",
+      "result": {
+        "reports": {
+          "point": {
+            "stage": "point",
+            "target": "POR",
+            "target_score": 78.00686788471917,
+            "initial_score": 77.92638076072386,
+            "against_initial": 0.08048712399531155,
+            "against_v97_target": 0.4549310828341646,
+            "best_epoch": 11,
+            "stopped_epoch": 25,
+            "validation_rows": 144665,
+            "predictions_reproduced_exactly": true,
+            "frozen_parameters_exact": true,
+            "seconds": 364.6076627000002,
+            "peak_MiB": 981.82470703125,
+            "complete_five_folds": false,
+            "early_terminated": false
+          },
+          "window": {
+            "stage": "window",
+            "target": "POR",
+            "target_score": 78.0064338068444,
+            "initial_score": 77.92638076072386,
+            "against_initial": 0.08005304612053976,
+            "against_v97_target": 0.4544970049593928,
+            "best_epoch": 11,
+            "stopped_epoch": 25,
+            "validation_rows": 144665,
+            "predictions_reproduced_exactly": true,
+            "frozen_parameters_exact": true,
+            "seconds": 538.6995268999599,
+            "peak_MiB": 981.82470703125,
+            "complete_five_folds": false,
+            "early_terminated": false
+          }
+        },
+        "paired_delta": 0.0004340778747717877,
+        "same_parameter_count": 36466,
+        "same_initial_prediction": true,
+        "adopted": false,
+        "both_below290": true,
+        "close_transferred_POR_sparse_setting": true,
+        "independent_disk_reload": false,
+        "remaining_folds_started": false
+      }
+    },
+    {
+      "source": "point_FINAL.json",
+      "result": {
+        "report": {
+          "stage": "point",
+          "target": "POR",
+          "target_score": 78.00686788471917,
+          "initial_score": 77.92638076072386,
+          "against_initial": 0.08048712399531155,
+          "against_v97_target": 0.4549310828341646,
+          "best_epoch": 11,
+          "stopped_epoch": 25,
+          "validation_rows": 144665,
+          "predictions_reproduced_exactly": true,
+          "frozen_parameters_exact": true,
+          "seconds": 364.6076627000002,
+          "peak_MiB": 981.82470703125,
+          "complete_five_folds": false,
+          "early_terminated": false
+        },
+        "versus290": -0.016658670535932174,
+        "paired_window_final_pending": true,
+        "adopted": false,
+        "independent_disk_reload": false,
+        "remaining_folds_started": false
+      }
+    }
+  ],
+  "cleanup_completed": true,
+  "deleted_files": 13,
+  "deleted_bytes": 6956176
+}

@@ -1,0 +1,109 @@
+{
+  "reports": {
+    "well": {
+      "stage": "well",
+      "target": "SW",
+      "target_score": 74.16003022301975,
+      "initial_score": 74.12175268976877,
+      "against_initial": 0.0382775332509766,
+      "against_v97_target": 0.01785031835304096,
+      "best_epoch": 17,
+      "stopped_epoch": 31,
+      "validation_rows": 144665,
+      "predictions_reproduced_exactly": true,
+      "frozen_parameters_exact": true,
+      "gradient_groups": {
+        "SW_new_raw_feature_backbone": 0.08836138993501663,
+        "SW_direct_categorical_readout": 0.06909146159887314,
+        "SW_new_state_readout": 0.006066960748285055,
+        "SW_new_raw_well_condition": 0.00599883496761322
+      },
+      "seconds": 563.8717269999906,
+      "peak_MiB": 1280.80224609375,
+      "complete_five_folds": false,
+      "early_terminated": false
+    },
+    "reference": {
+      "stage": "reference",
+      "target": "SW",
+      "target_score": 74.15411427286024,
+      "initial_score": 74.12175268976877,
+      "against_initial": 0.03236158309147186,
+      "against_v97_target": 0.011934368193536216,
+      "best_epoch": 17,
+      "stopped_epoch": 31,
+      "validation_rows": 144665,
+      "predictions_reproduced_exactly": true,
+      "frozen_parameters_exact": true,
+      "gradient_groups": {
+        "SW_new_raw_feature_backbone": 0.08836197108030319,
+        "SW_direct_categorical_readout": 0.06909971684217453,
+        "SW_new_state_readout": 0.006066926289349794,
+        "SW_new_raw_well_condition": 0.004476259928196669
+      },
+      "seconds": 366.62952859996585,
+      "peak_MiB": 1280.80224609375,
+      "complete_five_folds": false,
+      "early_terminated": false
+    }
+  },
+  "strata": {
+    "SW252": {
+      "SW": 74.14922820781207,
+      "default_SW": 98.64493054166336,
+      "continuous_SW": 17.88486813991017,
+      "default_rows": 100786,
+      "continuous_rows": 43879,
+      "source": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_sw_mass_cdf_v252_fold5\\conditional\\channel_pred.npy"
+    },
+    "SW289": {
+      "SW": 74.1537264289993,
+      "default_SW": 98.72311025198368,
+      "continuous_SW": 17.72012680313723,
+      "default_rows": 100786,
+      "continuous_rows": 43879,
+      "source": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_sw_state_bound_v289_fold5\\balanced\\channel_pred.npy"
+    },
+    "v297_well": {
+      "SW": 74.16003022301975,
+      "default_SW": 98.82679621708131,
+      "continuous_SW": 17.502752767347182,
+      "default_rows": 100786,
+      "continuous_rows": 43879,
+      "source": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_sw_raw_well_condition_v297_fold5\\well\\channel_pred.npy"
+    },
+    "v297_reference": {
+      "SW": 74.15411427286024,
+      "default_SW": 98.83518401113288,
+      "continuous_SW": 17.463982441198,
+      "default_rows": 100786,
+      "continuous_rows": 43879,
+      "source": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_sw_raw_well_condition_v297_fold5\\reference\\channel_pred.npy"
+    }
+  },
+  "well_minus_reference": 0.005915950159504746,
+  "well_minus_reference_continuous": 0.03877032614918363,
+  "gain_vs289": 0.006303794020439568,
+  "timing": {
+    "well_start_epoch": 1790874862.7989817,
+    "terminal": true,
+    "concurrency": 2,
+    "includes_prep_initial_train_final": true,
+    "codeprep_CPUassembly_excluded": true,
+    "reference_start_epoch": 1790875454.441,
+    "well_seconds": 563.8717269999906,
+    "total_paired_wall_seconds": 969.3812670707703,
+    "individual_seconds": {
+      "well": 563.8717269999906,
+      "reference": 366.62952859996585
+    },
+    "peak_MiB": {
+      "well": 1280.80224609375,
+      "reference": 1280.80224609375
+    },
+    "measurement_scope": "Staggered sequential arms with different overlap against296, includes data/initial/train/finalrestore and launch gap, excludes codeprep/CPUassembly; not isolated speed comparison"
+  },
+  "remaining_folds_started": false,
+  "complete_five_folds": false,
+  "conclusion": "Small matched overall whole-well condition gain; continuous absolute score still below retained289 and252. Preserve overall positive as separate candidate, do not claim continuous breakthrough or sweep bank descriptors/bounds."
+}

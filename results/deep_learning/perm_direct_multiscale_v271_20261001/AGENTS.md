@@ -1,0 +1,1 @@
+Goal: PERM raw-input directly supervised scale-distribution study; original154 preserved/frozen, no trainedrepairweights. Original9/206/Q/splits/score/decoder, max2GPU/80/pat14/onePERMphase/total<=8. No teacher/new labels/voting/otherfolds. Immutable launched source/config; atomicfullstate explicitresume. Maintain PROJECTS/README/EXPLORATIONS/atlas.

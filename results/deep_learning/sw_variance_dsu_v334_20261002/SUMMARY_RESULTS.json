@@ -1,0 +1,134 @@
+{
+  "project": "sw_variance_dsu_v334_20261002",
+  "scope": "obsolete-study",
+  "weights_retained": false,
+  "cleanup": "Obsolete artifacts removed by explicit user request. These are historical scores, not newly verified training.",
+  "results": [
+    {
+      "source": "LIVE_SCORE_SNAPSHOT.json",
+      "result": {
+        "identity": {
+          "epoch": 24,
+          "best_epoch": 13,
+          "whole": 74.1695430320749,
+          "default": 98.63988120716091,
+          "continuous": 17.96344208824835,
+          "scope": "Live whole-target best atomic snapshot, not independent diskreload"
+        },
+        "noise": {
+          "epoch": 24,
+          "best_epoch": 13,
+          "whole": 74.16347572471956,
+          "default": 98.63999486415061,
+          "continuous": 17.943177678122417,
+          "scope": "Live whole-target best atomic snapshot, not independent diskreload"
+        }
+      }
+    },
+    {
+      "source": "PAIRED_FINAL.json",
+      "result": {
+        "arms": {
+          "identity": {
+            "report": {
+              "stage": "identity",
+              "target": "SW",
+              "target_score": 74.1695430320749,
+              "initial_score": 74.12175268976877,
+              "against_initial": 0.04779034230612922,
+              "against_v97_target": 0.027363127408193577,
+              "best_epoch": 13,
+              "stopped_epoch": 25,
+              "validation_rows": 144665,
+              "predictions_reproduced_exactly": true,
+              "frozen_parameters_exact": true,
+              "seconds": 585.0066986000165,
+              "peak_MiB": 1779.21240234375,
+              "complete_five_folds": false,
+              "early_terminated": true
+            },
+            "strata": {
+              "default": 98.63988120716091,
+              "continuous": 17.96344208824835
+            },
+            "zero_initialized_morph_projection_norm": {
+              "morphology.projection.weight": 2.1781506538391113,
+              "morphology.projection.bias": 0.11281725019216537
+            },
+            "whole_vs326": 0.0,
+            "CONT_vs326": 0.0,
+            "stopped_before27": true,
+            "timing": {
+              "includes": "prep initial training bestrestore",
+              "terminal": true,
+              "pid": 47368,
+              "excludes": "implementation CPUfinalization",
+              "concurrent_gpu_tasks_at_launch": 1,
+              "started_epoch": 1790896744.553,
+              "individual_seconds": 585.0066986000165,
+              "peak_MiB": 1779.21240234375,
+              "terminal_epoch": 1790897334.0715556,
+              "process_creation_to_terminal_seconds": 589.5185556411743
+            },
+            "independent_disk_reload": false
+          },
+          "noise": {
+            "report": {
+              "stage": "noise",
+              "target": "SW",
+              "target_score": 74.16347572471956,
+              "initial_score": 74.12175268976877,
+              "against_initial": 0.04172303495079177,
+              "against_v97_target": 0.02129582005285613,
+              "best_epoch": 13,
+              "stopped_epoch": 25,
+              "validation_rows": 144665,
+              "predictions_reproduced_exactly": true,
+              "frozen_parameters_exact": true,
+              "seconds": 583.5247586999903,
+              "peak_MiB": 1779.99755859375,
+              "complete_five_folds": false,
+              "early_terminated": true
+            },
+            "strata": {
+              "default": 98.63999486415061,
+              "continuous": 17.943177678122417
+            },
+            "zero_initialized_morph_projection_norm": {
+              "morphology.projection.weight": 2.178220272064209,
+              "morphology.projection.bias": 0.11294450610876083
+            },
+            "whole_vs326": -0.006067307355337448,
+            "CONT_vs326": -0.020264410125932386,
+            "stopped_before27": true,
+            "timing": {
+              "includes": "prep initial training bestrestore",
+              "terminal": true,
+              "pid": 36948,
+              "excludes": "implementation CPUfinalization",
+              "concurrent_gpu_tasks_at_launch": 2,
+              "started_epoch": 1790896745.655,
+              "individual_seconds": 583.5247586999903,
+              "peak_MiB": 1779.99755859375,
+              "terminal_epoch": 1790897333.5519657,
+              "process_creation_to_terminal_seconds": 587.8969657421112
+            },
+            "independent_disk_reload": false
+          }
+        },
+        "noise_minus_identity_whole": -0.006067307355337448,
+        "noise_minus_identity_CONT": -0.020264410125932386,
+        "comparison_limits": "Same92289 parameters/init and identity/noise random draws; only training boundedvarianceDSU differs. Allfreshencoder/readoutjoint, original104only. Predeclared27 control snapshots exist ifreached; laterbest not equalwork evidence. Historical326 not simultaneous repeat; traininputstats uncertainty not proven domainuncertainty.",
+        "pair_wall_seconds": 589.5185556411743,
+        "stagger_seconds": 1.1019999980926514,
+        "adopted": false,
+        "screening_fold": 5,
+        "complete_five_folds": false,
+        "remaining_folds_started": false
+      }
+    }
+  ],
+  "cleanup_completed": true,
+  "deleted_files": 16,
+  "deleted_bytes": 6982331
+}

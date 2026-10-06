@@ -1,0 +1,1 @@
+Maintain PROJECTS and README four fields, register EXPLORATIONS and atlas. Original fold5/9 curves/Q50/scoring unchanged; normal GPU max2;80/pat14. Only explicit add/multiply launches, no queue/resume. Freeze trained source/config. Own PERM loss; fixed POR151/SW104 actual assembly. Preserve controls/delivery; atomic last state. Five total source-counted phases.

@@ -1,0 +1,85 @@
+{
+  "project": "por_ffn_dropout_v343_20261002",
+  "scope": "obsolete-study",
+  "weights_retained": false,
+  "cleanup": "Obsolete artifacts removed by explicit user request. These are historical scores, not newly verified training.",
+  "results": [
+    {
+      "source": "FINAL.json",
+      "result": {
+        "report": {
+          "stage": "dropout",
+          "target": "POR",
+          "target_score": 78.0448477676768,
+          "initial_score": 77.92638076072386,
+          "against_initial": 0.11846700695294032,
+          "against_v97_target": 0.4929109657917934,
+          "best_epoch": 28,
+          "stopped_epoch": 42,
+          "validation_rows": 144665,
+          "predictions_reproduced_exactly": true,
+          "frozen_parameters_exact": true,
+          "seconds": 487.4411909999908,
+          "peak_MiB": 2229.88134765625,
+          "complete_five_folds": false,
+          "early_terminated": false
+        },
+        "strata": {
+          "default": 97.40559788886887,
+          "continuous": 41.73208838178773
+        },
+        "bridge_zero_initialized_parameter_norms": {
+          "curve_interaction.bridge.weight": 0.8570271730422974,
+          "curve_interaction.bridge.bias": 0.09264969080686569,
+          "curve_interaction.temporal.up.weight": 0.8094095587730408,
+          "curve_interaction.temporal.up.bias": 0.06868065893650055
+        },
+        "whole_vs341": -0.0015829502555249064,
+        "CONT_vs341": -0.00455191020741097,
+        "CONT_vs_original151": -0.22187267311633008,
+        "predefined42": {
+          "through_epoch": 42,
+          "best_epoch": 28,
+          "target_score": 78.0448477676768,
+          "control_actual_epochs": 42,
+          "nominal_budget": 80,
+          "comparison": "Predefined bestthrough42 vs historical341 no-dropout natural42; same capacity and parameter init, stochastic trajectories differ; laterbest not equalwork evidence",
+          "strata": {
+            "default": 97.40559788886887,
+            "continuous": 41.73208838178773
+          }
+        },
+        "stopped_before42": false,
+        "full_best_after42_not_equalwork": false,
+        "adopted": false,
+        "screening_fold": 5,
+        "complete_five_folds": false,
+        "remaining_folds_started": false,
+        "independent_disk_reload": false,
+        "comparison_limits": "Same134752 parameter initialization and conditionalRPS as historical341; only two FFN hidden p.1 dropout layers, disabled in eval. Historical p0 not a concurrent replicate; random trajectories differ, single seed not robustness.",
+        "timing": {
+          "includes": "preprocessing warmup training best restoration",
+          "concurrency": "solo after341terminal",
+          "pid": 4160,
+          "started_epoch": 1790902329.1,
+          "global_GPU_jobs_before": 0,
+          "terminal": true,
+          "individual_seconds": 487.4411909999908,
+          "peak_MiB": 2229.88134765625,
+          "process_creation_to_terminal_seconds": 491.9176125526428
+        },
+        "actual_fixed_other_heads_diagnostic_scores": {
+          "POR": 78.0448477676768,
+          "PERM": 89.51838939879066,
+          "SW": 74.1695430320749,
+          "TOTAL": 80.70423068110598
+        },
+        "TOTAL_vs_retained341": -0.00047488507665605084,
+        "closed_setting": "two FFN hidden dropout p0.1; no gain whole or CONT, no probability grid; not all dropout methods invalid"
+      }
+    }
+  ],
+  "cleanup_completed": true,
+  "deleted_files": 8,
+  "deleted_bytes": 3497794
+}

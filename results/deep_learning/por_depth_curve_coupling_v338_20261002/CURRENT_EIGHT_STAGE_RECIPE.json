@@ -1,0 +1,56 @@
+{
+  "scores": {
+    "POR": 78.0458220539967,
+    "PERM": 89.51838939879066,
+    "SW": 74.1695430320749,
+    "TOTAL": 80.70452296700195
+  },
+  "screening_fold": 5,
+  "validation_rows": 144665,
+  "strict_808_qualified": false,
+  "complete_five_folds": false,
+  "remaining_folds_started": false,
+  "fullOOF_verified": false,
+  "total_training_stages": 8,
+  "stages": [
+    "SOURCE",
+    "POR113",
+    "POR151",
+    "PERM154",
+    "SW104",
+    "POR338depth",
+    "PERM336cross",
+    "SW326depth"
+  ],
+  "added_head_stages": {
+    "POR": 1,
+    "PERM": 1,
+    "SW": 1
+  },
+  "heads": {
+    "POR": {
+      "checkpoint": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_por_depth_curve_coupling_v338_fold5\\depth\\model_best.pt",
+      "sha256": "8d673511c2a61a00e05e785733a532256be0d65b083e4e350ec50c4b88642e26"
+    },
+    "PERM": {
+      "checkpoint": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_perm_low_rank_cross_v336_fold5\\cross\\model_best.pt",
+      "sha256": "e61bce6f693b86380c98dbb0ecfdd6bd7d53d281cad92d3fe9295917f22ea0f0"
+    },
+    "SW": {
+      "checkpoint": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_sw_latent_morphology_v326_fold5\\depth\\model_best.pt",
+      "sha256": "e03aaba7fdd6d95870d293d64d5ebc2bc41ab6671e7698f43dc682339a6c2023"
+    }
+  },
+  "pred_sha256": "9abc7cf7e402e3104e9b88781d6a0fb3db2d00b1e9ae6a95834c88090b245da9",
+  "verification": "Actual144665fixedwhole-targetcolumns/terminalRAMbestreplay/frozenexact; notindependentdiskreload orfullOOF",
+  "independent_disk_reload": false,
+  "default_five_stage_unchanged": true,
+  "prior_optional8_artifacts_unchanged": true,
+  "gain_vs_prior336_recipe": 0.001082825698389911,
+  "gain_vs_default_five": 0.09204754900801504,
+  "POR_continuous": 41.73489002626708,
+  "PERM_continuous": 74.00963708319706,
+  "SW_continuous": 17.96344208824835,
+  "single_seed_small_gain_not_robustness": true,
+  "selection_reason": "Depth jointlytrained encoder/readout whole+CONT >335 and completedcontrol; onefreshPORphase nottrainedrepairchain"
+}

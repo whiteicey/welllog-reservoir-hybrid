@@ -1,0 +1,13 @@
+{
+  "launched_arms": [
+    "mix",
+    "tilt"
+  ],
+  "pids": [
+    45516,
+    55248
+  ],
+  "prepared_plan_flag_superseded": true,
+  "new_featurebackbones_and_readouts_jointly_train": true,
+  "gain_unproved": true
+}

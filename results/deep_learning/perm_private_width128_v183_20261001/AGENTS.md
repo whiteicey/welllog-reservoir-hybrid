@@ -1,0 +1,1 @@
+维护PROJECTS/README四项/EXPLORATIONS/图谱。固定原第五折/9曲线206+相对深度/Q50/ownPERM/80-14/max2GPU。只改骨干96→128，保持final128/16Gaussian、SAM/采样/loss，无teacher或井条件化、无177热启动，全方法5阶段。原子last、显式恢复、不自动队列补折、旧交付保留。

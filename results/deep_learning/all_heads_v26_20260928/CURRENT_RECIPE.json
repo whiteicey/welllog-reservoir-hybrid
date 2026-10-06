@@ -1,0 +1,52 @@
+{
+  "scores": {
+    "POR": 77.52040144246696,
+    "PERM": 89.34940782831941,
+    "SW": 73.63519268396395,
+    "TOTAL": 80.30073061203926
+  },
+  "choices": [
+    {
+      "target": "POR",
+      "key": "POR_v25_amplitude",
+      "architecture": "champion_location_side",
+      "target_score": 77.52040144246696,
+      "best_epoch": 36,
+      "checkpoint": "outputs\\pure_dl_champion_shape_v25_amplitude_fold5\\model_best.pt",
+      "model_module": "champion_shape_v25",
+      "builder": "make_model(mode,master)",
+      "mode": "amplitude"
+    },
+    {
+      "target": "PERM",
+      "key": "v26_PERM_gate",
+      "architecture": "private_frozen_factor_head",
+      "target_score": 89.34940782831941,
+      "best_epoch": 1,
+      "checkpoint": "outputs\\pure_dl_all_heads_v26_PERM_fold5\\gate\\model_best.pt",
+      "factor": "gate",
+      "source_checkpoint": "outputs\\pure_dl_independent_v8_PERM_dual80_fold5\\model_best.pt",
+      "model_module": "champion_all_heads_v26",
+      "builder": "Network(target,master,factors=(factor,)); heads[factor].load_state_dict(checkpoint[delta_state])"
+    },
+    {
+      "target": "SW",
+      "key": "v26_SW_weight",
+      "architecture": "private_frozen_factor_head",
+      "target_score": 73.63519268396395,
+      "best_epoch": 5,
+      "checkpoint": "outputs\\pure_dl_all_heads_v26_SW_fold5\\weight\\model_best.pt",
+      "factor": "weight",
+      "source_checkpoint": "outputs\\pure_dl_independent_v8_SW_dual80_fold5\\model_best.pt",
+      "model_module": "champion_all_heads_v26",
+      "builder": "Network(target,master,factors=(factor,)); heads[factor].load_state_dict(checkpoint[delta_state])"
+    }
+  ],
+  "source_preprocessing": "results/deep_learning/champion_scaling_v21_20260928/data_manifest.json",
+  "amplitude_metadata": "results/deep_learning/feature_structure_v20_20260928/feature_manifest.json",
+  "reference_recipe": "results/deep_learning/champion_shape_v25_20260928/CURRENT_RECIPE.json",
+  "original_fifth_development_selection": true,
+  "complete_five_folds": false,
+  "remaining_folds_started": false,
+  "old_delivery_unchanged": true
+}

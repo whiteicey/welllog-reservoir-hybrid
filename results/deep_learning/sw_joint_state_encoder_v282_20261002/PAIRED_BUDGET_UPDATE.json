@@ -1,0 +1,9 @@
+{
+  "ordinary_actual_epochs": 18,
+  "ordinary_bounded_early_stop": true,
+  "balanced_predeclared_comparison_epochs": 18,
+  "training_maximum_epochs": 80,
+  "cosine_horizon_epochs": 80,
+  "requires_observed_boundary_stop_at18": true,
+  "no_full_convergence_claim": true
+}

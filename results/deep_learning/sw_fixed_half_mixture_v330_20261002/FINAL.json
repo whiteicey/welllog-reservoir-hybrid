@@ -1,0 +1,80 @@
+{
+  "report": {
+    "stage": "half",
+    "target": "SW",
+    "target_score": 74.1422775454687,
+    "initial_score": 74.12175268976877,
+    "against_initial": 0.020524855699932232,
+    "against_v97_target": 9.76408019965902e-05,
+    "best_epoch": 13,
+    "stopped_epoch": 27,
+    "validation_rows": 144665,
+    "predictions_reproduced_exactly": true,
+    "frozen_parameters_exact": true,
+    "gradient_groups": {
+      "SW_new_raw_feature_backbone": 0.08830519020557404,
+      "SW_direct_categorical_readout": 0.06904488056898117,
+      "SW_new_state_readout": 0.006067745853215456,
+      "SW_new_raw_well_condition": 0.005993738770484924,
+      "SW_joint_own_latent_early_fusion": 0.007026497274637222,
+      "SW_joint_latent_morphology_backbone": 0.011883578263223171
+    },
+    "seconds": 255.73777040001005,
+    "peak_MiB": 1779.21240234375,
+    "complete_five_folds": false,
+    "early_terminated": false
+  },
+  "strata": {
+    "default": 98.5086222741472,
+    "continuous": 18.175039918709572
+  },
+  "actual_best_morphology_parameter_deltas": {
+    "dilation": 0.515195369720459,
+    "erosion": 0.5144422650337219,
+    "norm.weight": 0.5499969720840454,
+    "norm.bias": 0.14862434566020966,
+    "projection.weight": 2.1943016052246094,
+    "projection.bias": 0.11286631226539612
+  },
+  "whole_vs_historical_reference": -0.027265486606196987,
+  "CONT_vs_historical_reference": 0.2115978304612227,
+  "reference_whole": 74.1695430320749,
+  "reference_CONT": 17.96344208824835,
+  "independent_disk_reload": false,
+  "adopted": false,
+  "complete_five_folds": false,
+  "remaining_folds_started": false,
+  "screening_fold": 5,
+  "predefined_equal_epoch27": {
+    "cap": {
+      "through_epoch": 27,
+      "best_epoch": 13,
+      "target_score": 74.1422775454687,
+      "control_actual_epochs": 27,
+      "nominal_budget": 80,
+      "comparison": "Predefined best through27 against historical326alpha.25 natural27; laterbest not equalwork gain"
+    },
+    "strata": {
+      "default": 98.5086222741472,
+      "continuous": 18.175039918709572
+    },
+    "whole_vs_historical326": -0.027265486606196987,
+    "CONT_vs_historical326": 0.2115978304612227,
+    "scope": "Predefined bestthrough27 vs historical326first27; samecapacity but alpha/trainandinferenceprobabilities differ, not simultaneousrepeat"
+  },
+  "stopped_before27": false,
+  "full_best_after27_not_equalwork_gain": false,
+  "comparison_limits": "Historicalsame92289capacity, alpha.25versus.5 changestrainingandinference, notposthocmixing; missing27snapshot means unequalactualwork, not an equalworkpositive claim",
+  "timing": {
+    "includes": "preparation, initial evaluation, training, best restoration",
+    "terminal": true,
+    "pid": 76420,
+    "excludes": "implementation and CPU finalization",
+    "concurrent_gpu_tasks_at_launch": 1,
+    "started_epoch": 1790894475.792,
+    "individual_seconds": 255.73777040001005,
+    "peak_MiB": 1779.21240234375,
+    "process_creation_to_terminal_seconds": 260.306205034256,
+    "interpretation": "Actualconcurrencyrecorded; includesprep/initial/train/bestrestore, excludes implementation/CPUfinalization; notisolatedspeedranking"
+  }
+}

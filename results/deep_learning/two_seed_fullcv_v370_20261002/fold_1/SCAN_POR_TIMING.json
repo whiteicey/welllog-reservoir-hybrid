@@ -1,0 +1,14 @@
+{
+  "identity": "original",
+  "fold": 1,
+  "stage": "SCAN_POR",
+  "pid": 54088,
+  "terminal": true,
+  "exit_code": 0,
+  "process_wall_seconds": 24.08757185935974,
+  "serial_invocation_seconds": 24.08757185935974,
+  "previous_failed_invocation_seconds": 0.0,
+  "concurrency": "solo",
+  "resumed": false,
+  "includes": "load/preprocess/warmup/training or scan/restore/write; sums invocations, excludes approval waiting; whole batch wall includes waiting"
+}

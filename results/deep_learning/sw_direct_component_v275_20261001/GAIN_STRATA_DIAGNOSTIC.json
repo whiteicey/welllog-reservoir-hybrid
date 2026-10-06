@@ -1,0 +1,50 @@
+{
+  "diagnostic_only_not_training_or_row_selection": true,
+  "validation_rows": 144665,
+  "strata": {
+    "default": {
+      "rows": 100786,
+      "fraction": 0.6966854456848581,
+      "scores": {
+        "SW104": 98.71563225845625,
+        "SW252": 98.64493054166374,
+        "SW275mix": 98.74938483857242
+      },
+      "mix_minus104": 0.03375258011617177,
+      "weighted_mix_minus104": 0.02351493132124901
+    },
+    "continuous": {
+      "rows": 43879,
+      "fraction": 0.30331455431514187,
+      "scores": {
+        "SW104": 17.631889060480088,
+        "SW252": 17.884868139910104,
+        "SW275mix": 17.605410277712235
+      },
+      "mix_minus104": -0.026478782767853204,
+      "weighted_mix_minus104": -0.008031400194038854
+    }
+  },
+  "continuous": {
+    "SW104": {
+      "zero_score_fraction": 0.6661728845233483,
+      "final_default_action_fraction": 0.3045876159438456,
+      "not_raw_gate_classification_accuracy": true
+    },
+    "SW252": {
+      "zero_score_fraction": 0.6639166799608013,
+      "final_default_action_fraction": 0.30274163039267077,
+      "not_raw_gate_classification_accuracy": true
+    },
+    "SW275mix": {
+      "zero_score_fraction": 0.666446363864263,
+      "final_default_action_fraction": 0.3109232206750382,
+      "not_raw_gate_classification_accuracy": true
+    }
+  },
+  "overall": {
+    "SW104": 74.12175282815869,
+    "SW252": 74.14922820781278,
+    "SW275mix": 74.1372363592859
+  }
+}

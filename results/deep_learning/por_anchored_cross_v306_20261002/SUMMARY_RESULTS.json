@@ -1,0 +1,114 @@
+{
+  "project": "por_anchored_cross_v306_20261002",
+  "scope": "obsolete-study",
+  "weights_retained": false,
+  "cleanup": "Obsolete artifacts removed by explicit user request. These are historical scores, not newly verified training.",
+  "results": [
+    {
+      "source": "PAIRED_FINAL.json",
+      "result": {
+        "reports": {
+          "cross": {
+            "stage": "cross",
+            "target": "POR",
+            "target_score": 78.02502798419985,
+            "initial_score": 77.92638076072386,
+            "against_initial": 0.09864722347599297,
+            "against_v97_target": 0.47309118231484604,
+            "best_epoch": 11,
+            "stopped_epoch": 25,
+            "validation_rows": 144665,
+            "predictions_reproduced_exactly": true,
+            "frozen_parameters_exact": true,
+            "seconds": 421.50159800000256,
+            "peak_MiB": 982.318359375,
+            "complete_five_folds": false,
+            "early_terminated": false
+          },
+          "additive": {
+            "stage": "additive",
+            "target": "POR",
+            "target_score": 78.02023238992216,
+            "initial_score": 77.92638076072386,
+            "against_initial": 0.09385162919829781,
+            "against_v97_target": 0.4682955880371509,
+            "best_epoch": 11,
+            "stopped_epoch": 25,
+            "validation_rows": 144665,
+            "predictions_reproduced_exactly": true,
+            "frozen_parameters_exact": true,
+            "seconds": 421.0898638999788,
+            "peak_MiB": 982.427734375,
+            "complete_five_folds": false,
+            "early_terminated": false
+          }
+        },
+        "strata": {
+          "cross": {
+            "default": 97.43633222760367,
+            "continuous": 41.61744997484052
+          },
+          "additive": {
+            "default": 97.43633222760367,
+            "continuous": 41.60365982921398
+          }
+        },
+        "cross_minus_additive": 0.004795594277695159,
+        "whole_best_module_norms": {
+          "cross": {
+            "cross_blocks.0.bias": 0.49871349334716797,
+            "cross_blocks.0.up.weight": 2.5015971660614014,
+            "cross_blocks.1.bias": 0.3169432580471039,
+            "cross_blocks.1.up.weight": 1.7007756233215332
+          },
+          "additive": {
+            "cross_blocks.0.bias": 0.2205224484205246,
+            "cross_blocks.0.up.weight": 2.196010112762451,
+            "cross_blocks.1.bias": 0.20841312408447266,
+            "cross_blocks.1.up.weight": 1.3636937141418457
+          }
+        },
+        "selected_arm": "cross",
+        "adopted_absolute": false,
+        "capacity38272": true,
+        "only_pair_variable": "input-anchor product",
+        "same_initialization": true,
+        "not_same_effective_function_family": true,
+        "screening_fold": 5,
+        "complete_five_folds": false,
+        "remaining_folds_started": false,
+        "timing": {
+          "terminal": true,
+          "maximum_concurrency": 2,
+          "includes": "data initial training best restore",
+          "starts": [
+            {
+              "start_epoch": 1790878987.059,
+              "pid": 61712,
+              "stage": "cross"
+            },
+            {
+              "start_epoch": 1790879003.3,
+              "pid": 31260,
+              "stage": "additive"
+            }
+          ],
+          "excludes": "code preparation CPU record",
+          "end_epochs": {
+            "cross": 1790879413.4374847,
+            "additive": 1790879430.5275528
+          },
+          "individual_seconds": {
+            "cross": 421.50159800000256,
+            "additive": 421.0898638999788
+          },
+          "same_work_pair_wall_seconds": 443.4685528278351,
+          "interpretation": "Two arms concurrent with different starts; includes data/initial/train/best restore. Codeprep and CPUrecord excluded; no serialspeedranking."
+        }
+      }
+    }
+  ],
+  "cleanup_completed": true,
+  "deleted_files": 11,
+  "deleted_bytes": 6954904
+}

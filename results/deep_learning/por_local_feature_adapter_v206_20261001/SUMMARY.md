@@ -1,0 +1,34 @@
+# Historical summary
+
+Focus and explored conditions: see retained README/FINAL and SUMMARY_RESULTS.json.
+
+Gain: scores and original comparison deltas are retained; incomplete folds remain incomplete.
+
+Not worth extending: original negative conclusions are retained below where available.
+
+Detailed logs, weights and caches were removed by the user request; rerunning requires retraining.
+
+## README.md
+
+# POR local feature adapter
+Focus: preserve learned151 distribution readout and modify one small feature module before it. Original effective contextdepthkernel is pointwise; new bounded9point depthwise adapter can supply missing local structure.
+Explored: prepared/untrained. Load exact151 SHA then freeze every old parameter, wrap original319input contexthead, train only319->32->DW9->319 residual. Zero lastprojection retains initial function. Bounds0.1masked local inputRMS perchannel; RMS uses input only, no targets or fitted validation stats. Original gate/scale unchanged, own NLL/BCE/jointRPS1. NewLR1e-4/max80/pat14/min10/b64/64steps.
+Gain: unproved, primarycontrol POR77.92638076072386/TOTAL80.61247541799393. This is baseline-versus-addedmodule, not capacitymatched mechanism proof. Six stages alone, seven if combined with one positive PERM alternative; one extra perhead. Default remains5.
+Not worth continuing: stage-drop201 lost0.511035POR; scale-only203 best0/14 no gain, closed; no scale sweep or direct predictor replacement.206 changes input representation to the frozen learned readout, not its scale.
+Timing: record training/data/eval and actual overlap with205, memory, total sameworkload wall. No whole-recipe latency claims from single patch.
+
+V206 final POR77.926380760724, gain+0.000000000000, actualTOTAL80.612475417994; sixphases inclsource/one addedPORstage, strict808=F
+
+# POR local feature adapter
+Focus: preserve learned151 distribution readout and modify one small feature module before it. Original effective contextdepthkernel is pointwise; new bounded9point depthwise adapter can supply missing local structure.
+Explored: prepared/untrained. Load exact151 SHA then freeze every old parameter, wrap original319input contexthead, train only319->32->DW9->319 residual. Zero lastprojection retains initial function. Bounds0.1masked local inputRMS perchannel; RMS uses input only, no targets or fitted validation stats. Original gate/scale unchanged, own NLL/BCE/jointRPS1. NewLR1e-4/max80/pat14/min10/b64/64steps.
+Gain: unproved, primarycontrol POR77.92638076072386/TOTAL80.61247541799393. This is baseline-versus-addedmodule, not capacitymatched mechanism proof. Six stages alone, seven if combined with one positive PERM alternative; one extra perhead. Default remains5.
+Not worth continuing: stage-drop201 lost0.511035POR; scale-only203 best0/14 no gain, closed; no scale sweep or direct predictor replacement.206 changes input representation to the frozen learned readout, not its scale.
+Timing: record training/data/eval and actual overlap with205, memory, total sameworkload wall. No whole-recipe latency claims from single patch.
+
+V206 final POR77.926380760724, gain+0.000000000000, actualTOTAL80.612475417994; sixphases inclsource/one addedPORstage, strict808=False; all144665replay/frozenexact, best/stop0/14, trainingseconds206.650378/peakMiB922.250977. No otherfolds.
+
+V206 closed no gain POR77.926380760724 best0/14,206.650378s/922.251MiB; exactreplay/frozen/actualassembly done, negativebest/last removed withSHAmanifest. V207 restored PERM89.408649040241, matched205+0.000032809230 tiny; optional6 recipe retained, default5 unchanged and no morecontextLRsweep. V208 mistypedSHA failedbeforeinitial/epochs, preserved. V209 correctedmasssource explicitlylaunchPID37104, initSW74.121752689769 differs104 by-0.000000138389 fromfloor/normalization; initialreported separately, 12576newparams, no initialgainclaim. V210 localfeatureadapter explicitPID44400 independentlywarm104; alternatives209/210 neverstack, oneextraSWphase. Max2GPU, no originaleffectiveweight mutation, no remainingfolds/fullOOF>82 unachieved.
+
+
+

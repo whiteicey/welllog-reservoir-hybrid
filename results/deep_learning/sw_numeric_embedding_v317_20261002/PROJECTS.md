@@ -1,0 +1,24 @@
+# Goal and progress
+
+Prepared sameparameterL/LR scalar embedding pair; no GPUlaunch. Next slot-checked direct training, actualselectedbest updates/strata/composition/closure. No PLE/periodic grid/extra phase/otherfolds.
+
+V316 finalclosed: actual74.15415795130484/reference74.15413935754133, bothbest17/stop31 NATURALpatience14; referenceearlyrequesthadnoeffect, notearlyterminated. Actual-referencewhole+.000018593764/CONT-.001590054584, bothwhole/CONTbelow297/252, notadopted/no kernelgrid. AllU/V/routerselectedbestdelta normsfromexactseededinitialization nonzero, notdeadmodule. Pairwall656.925814s, individual497.601626/424.509887s/1284MiB,stagger227.14s/variableoverlap; noisolatedspeedclaim. Sourcefrozen/RAM144665replayexact, notindependentdiskreconstruction. V317 relu34568/linear52776 explicitlylaunched,90.282s gap, original104only/newbody/readoutjoint, no316weights. Retainedoptional8TOTAL80.695707958008 unchanged, nootherfolds.
+
+V317 live verified snapshot: ReLUPID34568 epoch14/best74.15449906167994@13; linearPID52776 epoch6/best74.1476292157653@5. Normal training realgroupgradient checks passed, original104init74.12175268976877/68865sameactiveparams, no stderr error/max2CIMconfirmed. Partial differingprogress, no finalpairedgain or adoption. Finalizer exactinitialparameter deltas prepared. Retainedoptional8TOTAL80.69570795800789 unchanged, fifthstrict808/fullOOF82 unmet; continue ownwholebest14patience and compareCONT/whole atterminal. Atlas refreshed with316closure and317nodes.
+
+V317 snapshot18/9 from savedownbest: LRbest17 whole74.1669496554495 (+.006919vs297), DEFAULT98.85108586849975/CONT17.46977441516435 (-.032978vs297); Lbest5 whole74.1476292157653/CONT17.56512866577589. Progressdiffers, notfinalpairedproof/adoption. LRwholegaincurrentlydefaultdominated; keep originalSW297. A code-evidence hypothesis for future research: oldv275prior-tilt primaryNLLreadsfinalposterior butdirect4branchauxCEreadsstandaloneq; requested history check for prior-aware auxiliary same-capacity control, not assertedbottleneck, no code/GPUlaunch. Existingactive317source/configimmutable; max2/originalfold/Q/80-14/oneextraSWphase unchanged.
+
+V317 relu: SW74.166949655449, actualTOTAL80.628294307546; fresh65313jointencoder/readout/state, original104prioronly; derivedproxy background, oneaddedSWphase. No fullOOF/otherfolds.
+
+V317 LRnatural31final74.1669496554495/best17/CONT17.46977441516435; actualsixTOTAL80.62829430754611. Llatestownbest26 whole74.16204929073999/CONT17.47764285793554 atobserved36, stilllive. LR-minuscurrentLwhole+.004900364710 butCONT-.007868442771: earlierbest17pairedCONTpositive hasnotpersisted; NOTfinalpositive trick/notadopted/no carrynumericLRinto318. Subsequentprior-offsetaux study should usefresh297 only, no317module/weights, pendinghistoryresearch final. Existingbest/default5/optional8TOTAL80.695707958008/delivery unchanged. FullLterminal/finalpair/deltanorms pending; sourcefrozen/RAMLR144665exact, notindependentdiskreconstruction.
+
+V317 linear: SW74.162049290740, actualTOTAL80.626579179898; fresh65313jointencoder/readout/state, original104prioronly; derivedproxy background, oneaddedSWphase. No fullOOF/otherfolds.
+
+Final317 whole scores {'linear': 74.16204929073999, 'relu': 74.1669496554495}; relu-linear +0.004900364710; CONT paired -0.007868442771; strata {'linear': {'default': 98.84062637352038, 'continuous': 17.47764285793554}, 'relu': {'default': 98.85108586849975, 'continuous': 17.46977441516435}}. Actual six-stage assemblies recorded; optional eight-stage adoption requires whole/continuous assessment, not automatic. Pair wall 638.151s; no fullOOF or remaining folds.
+
+V317 FINAL: LR74.1669496554495/best17/natural31, L74.16204929073999/best26/natural40; LR-Lwhole+.0049003647095/CONT-.0078684427712. BothCONTbelow297/252, notadopted/no widththresholdgrid. Realembeddingweight/bias/outdeltas nonzero (LR.700/.717/2.999,L.260/.324/1.599), notdeadmodule. Pairwall638.151032s, each504.753633/542.533978s,90.282s stagger/peaks1315.602/1297.477MiB/variableoverlap, notisolatedspeedranking. Sourcefrozen/RAM144665exact, noindependentdiskreconstruction. V318neutralPID91028/offsetPID79268explicitpairlaunched, fresh297rawbody/state/FiLM/readoutjoint65265, sameactualdelta/formula/ramp/params; onlyauxprioroffset0-vslogprior. No317module/weights or priorKL. Retainedoptional8TOTAL80.695707958008/default5/delivery unchanged, nootherfolds.
+
+
+## 2026-10-02 user-authorized artifact cleanup
+
+Obsolete artifacts have been removed; SUMMARY_RESULTS.json and SUMMARY.md retain historical scores and conclusions. Detailed logs/caches/weights are unavailable for these obsolete trials. Current V370 original + seed20261013, retained-model dependency closure, reusable source, original data and deliveries are preserved. See D:/match_predict/maintenance_cleanup_20261002/VERIFICATION.json.

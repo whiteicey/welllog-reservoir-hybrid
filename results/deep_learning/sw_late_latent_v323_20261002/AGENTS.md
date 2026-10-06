@@ -1,0 +1,1 @@
+Maintain PROJECTS/README evidence. Original104only, freshjointencoder/readout/ownlatent latefusion oneSWphase, no trained321weights. Historicalearlycontrol limits explicit. Max2GPU/noqueue/otherfolds. Preserve existinggains/artifacts.

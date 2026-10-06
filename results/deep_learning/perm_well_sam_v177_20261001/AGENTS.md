@@ -1,0 +1,1 @@
+维护PROJECTS/README四项/EXPLORATIONS/图谱。固定原第五折、原9曲线/Q50、ownPERM/80-14/max2GPU、相同175采样；仅SAM0.05优化器变化，随机完整私有骨干，无175热启动，无额外阶段/补折/交付改写；原子完整last、显式恢复。

@@ -1,0 +1,1 @@
+目标：原第五严格>80.8且有收益再补折，纯DL原完整OOF>82；含源最终≤5训练阶段。此轮dot/cosine同容量新SW joint，保留local65结构但不加载已训练SW，不借旧18阶段成品。原9曲线206/Q50/折/官方网格动作/80-18、own SW、SAM.1/utility1/DropKey.4保持。单SW串行，全局≤2GPU normal，完整原子状态显式恢复。维护PROJECTS、README四项、EXPLORATIONS、图谱，不改旧源码/交付。

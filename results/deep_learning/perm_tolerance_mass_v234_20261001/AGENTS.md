@@ -1,0 +1,1 @@
+Only newPERM masspatch trains;154 frozen,no230 weights. True train-label log10tolerance targets only,originalfold5/Q50/score/80-14/max2GPU,onePERMstage/no stacks/otherfolds. MaintainPROJECTS/evidence.

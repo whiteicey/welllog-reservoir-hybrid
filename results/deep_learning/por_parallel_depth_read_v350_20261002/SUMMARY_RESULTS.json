@@ -1,0 +1,77 @@
+{
+  "project": "por_parallel_depth_read_v350_20261002",
+  "scope": "obsolete-study",
+  "weights_retained": false,
+  "cleanup": "Obsolete artifacts removed by explicit user request. These are historical scores, not newly verified training.",
+  "results": [
+    {
+      "source": "FINAL.json",
+      "result": {
+        "report": {
+          "stage": "adaptive",
+          "target": "POR",
+          "target_score": 78.04504677153032,
+          "initial_score": 77.92638076072386,
+          "against_initial": 0.11866601080646433,
+          "against_v97_target": 0.4931099696453174,
+          "best_epoch": 28,
+          "stopped_epoch": 42,
+          "validation_rows": 144665,
+          "predictions_reproduced_exactly": true,
+          "frozen_parameters_exact": true,
+          "seconds": 591.6074435999617,
+          "peak_MiB": 2401.8046875,
+          "complete_five_folds": false,
+          "early_terminated": false
+        },
+        "strata": {
+          "default": 97.40347827930094,
+          "continuous": 41.7366361454133
+        },
+        "whole_vs_serial345": -0.0002434672324937992,
+        "CONT_vs_serial345": -0.0007001110596434046,
+        "whole_vs341": -0.0013839464020009018,
+        "CONT_vs341": -4.146581844111097e-06,
+        "CONT_vs_native151": -0.21732490949076322,
+        "diagnostic_eight_stage_scores": {
+          "POR": 78.04504677153032,
+          "PERM": 89.51838939879066,
+          "SW": 74.1695430320749,
+          "TOTAL": 80.70429038226204
+        },
+        "TOTAL_vs_retained341": -0.0004151839205945862,
+        "timing": {
+          "includes": "preprocessing warmup training best restoration",
+          "concurrency": "solo",
+          "pid": 69740,
+          "terminal": true,
+          "global_GPU_jobs_before": 0,
+          "started_epoch": 1790907396.157,
+          "individual_seconds": 591.6074435999617,
+          "peak_MiB": 2401.8046875,
+          "process_creation_to_terminal_seconds": 597.0782279968262
+        },
+        "predefined42": {
+          "through_epoch": 42,
+          "best_epoch": 28,
+          "target_score": 78.04504677153032,
+          "control_actual_epochs": 42,
+          "nominal_budget": 80,
+          "comparison": "Predefined bestthrough42 vs historical345 serial natural42, same136626physicalparams/init nonconcurrent; parallel adaptive/fixed roles differ; laterbest not equalwork"
+        },
+        "adopted": false,
+        "screening_fold": 5,
+        "complete_five_folds": false,
+        "independent_disk_reload": false,
+        "remaining_folds_started": false,
+        "fixed_control_launched": false,
+        "comparison_limits": "Same136626 module params/init as historical345serial, connectiononly change; historicalnonconcurrent/singleseed. No350fixed matchedarm claim. Original345 localadaptive gain remains separate. Whole checkpoint selected, no CONToracle.",
+        "connection_gain": false,
+        "closed_setting": "parallel connection only, no offset-width-LR grid; does not invalidate345localadaptivepositive"
+      }
+    }
+  ],
+  "cleanup_completed": true,
+  "deleted_files": 9,
+  "deleted_bytes": 6968023
+}

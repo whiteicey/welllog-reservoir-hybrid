@@ -1,0 +1,42 @@
+# Historical summary
+
+Focus and explored conditions: see retained README/FINAL and SUMMARY_RESULTS.json.
+
+Gain: scores and original comparison deltas are retained; incomplete folds remain incomplete.
+
+Not worth extending: original negative conclusions are retained below where available.
+
+Detailed logs, weights and caches were removed by the user request; rerunning requires retraining.
+
+## README.md
+
+# PERM v168：SAM有效基础上开放默认门控
+
+## 探索重点
+
+165同预算SAM−AdamW最终+0.007488194128，小幅单第五折收益；默认/连续动作错配占45.2%失分。将SAM0.05保留在有效128/RPS1结构，仅开放原两专家PERM gate行低LR3e-5，检验稳定优化是否改善161的早期退步。
+
+## 已探索内容与验证
+
+实现完成，准备未训练无分数。从原SOURCE独立开始，不加载161/165已训头；架构总参数不变，活跃82978比165+258，初始函数/预算80-14/数据/头LR3e-4/NLL-BCE-RPS1相同，仅原gate更新范围变化。骨干/router/尺度冻结，SAM双前后向rho0.05/RNG回放/clone回滚。固定POR151/SW104实际组合，来源计入五阶段。165小幅收益不是独立全OOF增益，不保证新门控有效。
+
+## 收益
+
+尚未证实。预定义对纯SAM89.352248368881、无SAM门控16189.344760174753、绝对正控制15489.405564856919三种差值；活跃范围不同，不称相同活跃参数容量消融。
+
+## 不值得继续的点及证据
+
+161无SAM的门控在14轮初始最佳，不能把新增SAM当成已经修复；此项若无收益，不继续门控LR/SAM半径网格。
+
+
+## 实际启动与训练验证
+
+normalGPU/临时SYSTEM_REQUIRED，已核验进程存活；原SOURCE初始PERM89.344760174753，活跃参数82978，配置80/14确认。实际快照：{"pid": 29440, "status": "running", "epoch": 11, "best": 89.35085035866882, "best_epoch": 10, "bad": 1}；峰值786.46533203125MiB，训练梯度和冻结签名检查已通过。尚未证实最终增益。骨干路径有PyTorch warn_only线性插值反传非确定性提示，不是运行失败；保持真实记录，不声称训练轨迹严格确定。
+
+V168 final PERM=89.350850358669, compactcontrolgain=-0.027543852475; actualTOTAL=80.593325343606, fivephases inclsource;strict808=False, no otherfolds. best/stop=10/24, seconds=346.955, peakMiB=786.465; all144665replay/frozen exact.
+
+最终结论：v168 PERM=89.350850358669，相对v165 -0.001398010212；实际三头TOTAL=80.593325343606。best/stop=10/24，80/14；144665点磁盘恢复预测及冻结参数核验通过。未超过有效v154，不替换配方、不补折。门控增补未扩大SAM收益；保留v165单独SAM小幅正收益，关闭本轮门控增补，不扫描门控学习率。
+
+
+
+

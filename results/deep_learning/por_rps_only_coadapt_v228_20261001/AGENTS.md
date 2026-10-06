@@ -1,0 +1,1 @@
+Only existing151contexthead trains;113/SOURCE/gate/scale/routes frozen. Own truePOR train-label CDF supervision,no teacher/pseudo labels. Originalfold5/Q50/score/80-14/max2GPU,onePORaddition/six total,no226/224weights loaded. Prepared/noqueue. MaintainPROJECTS.

@@ -1,0 +1,882 @@
+{
+  "models": {
+    "original": {
+      "source_scores": {
+        "POR": 77.27786784460355,
+        "PERM": 89.3447601747529,
+        "SW": 73.62238476712884,
+        "TOTAL": 80.22186108303967
+      },
+      "full_scores": {
+        "POR": 78.04643071793232,
+        "PERM": 89.51838939879066,
+        "SW": 74.17361205223327,
+        "TOTAL": 80.70612972323806
+      },
+      "stages": [
+        {
+          "stage": "POR113",
+          "target": "POR",
+          "predecessor": "SOURCE",
+          "before": 77.27786784460355,
+          "after": 77.54045432673898,
+          "actual_target_gain": 0.2625864821354327,
+          "actual_TOTAL_contribution": 0.0787759446406298,
+          "own_initialized_score": 77.26429369346035,
+          "optimizer_gain": 0.2761606332786357,
+          "best_epoch": 69,
+          "stop_epoch": 80,
+          "seconds_reported": 523.3879553999868,
+          "predictions_identical_to_predecessor": false,
+          "changed_prediction_rows": 28277,
+          "strata": {
+            "DEFAULT": {
+              "before": 97.29537819133715,
+              "after": 97.2763017052259,
+              "delta": -0.019076486111245572
+            },
+            "CONT": {
+              "before": 39.73329791960663,
+              "after": 40.52416763094753,
+              "delta": 0.7908697113409033
+            }
+          }
+        },
+        {
+          "stage": "POR151",
+          "target": "POR",
+          "predecessor": "POR113",
+          "before": 77.54045432673898,
+          "after": 77.92638076072386,
+          "actual_target_gain": 0.3859264339848778,
+          "actual_TOTAL_contribution": 0.11577793019546334,
+          "own_initialized_score": 77.54045432673898,
+          "optimizer_gain": 0.3859264339848778,
+          "best_epoch": 30,
+          "stop_epoch": 48,
+          "seconds_reported": 624.993935800012,
+          "predictions_identical_to_predecessor": false,
+          "changed_prediction_rows": 30105,
+          "strata": {
+            "DEFAULT": {
+              "before": 97.2763017052259,
+              "after": 97.10567313500853,
+              "delta": -0.17062857021737443
+            },
+            "CONT": {
+              "before": 40.52416763094753,
+              "after": 41.95396105490423,
+              "delta": 1.4297934239566956
+            }
+          }
+        },
+        {
+          "stage": "PERM154",
+          "target": "PERM",
+          "predecessor": "SOURCE",
+          "before": 89.3447601747529,
+          "after": 89.40556485691894,
+          "actual_target_gain": 0.06080468216603663,
+          "actual_TOTAL_contribution": 0.021281638758112818,
+          "own_initialized_score": 89.3447601747529,
+          "optimizer_gain": 0.06080468216603663,
+          "best_epoch": 31,
+          "stop_epoch": 49,
+          "seconds_reported": 561.8703381000087,
+          "predictions_identical_to_predecessor": false,
+          "changed_prediction_rows": 41411,
+          "strata": {
+            "DEFAULT": {
+              "before": 97.3904471069598,
+              "after": 97.27870539397452,
+              "delta": -0.11174171298527824
+            },
+            "CONT": {
+              "before": 73.70060545492707,
+              "after": 74.09691194381553,
+              "delta": 0.396306488888456
+            }
+          }
+        },
+        {
+          "stage": "SW104",
+          "target": "SW",
+          "predecessor": "SOURCE",
+          "before": 73.62238476712884,
+          "after": 74.12175282815758,
+          "actual_target_gain": 0.499368061028747,
+          "actual_TOTAL_contribution": 0.17477882136006143,
+          "own_initialized_score": 71.19711508147167,
+          "optimizer_gain": 2.9246377466859173,
+          "best_epoch": 37,
+          "stop_epoch": 55,
+          "seconds_reported": 785.6777900999878,
+          "predictions_identical_to_predecessor": false,
+          "changed_prediction_rows": 34545,
+          "strata": {
+            "DEFAULT": {
+              "before": 98.31297611667956,
+              "after": 98.71563225845586,
+              "delta": 0.4026561417762906
+            },
+            "CONT": {
+              "before": 16.910382676020124,
+              "after": 17.63188906048012,
+              "delta": 0.721506384459996
+            }
+          }
+        },
+        {
+          "stage": "POR341",
+          "target": "POR",
+          "predecessor": "POR151",
+          "before": 77.92638076072386,
+          "after": 78.04643071793232,
+          "actual_target_gain": 0.12004995720846523,
+          "actual_TOTAL_contribution": 0.03601498716253957,
+          "own_initialized_score": 77.92638076072386,
+          "optimizer_gain": 0.12004995720846523,
+          "best_epoch": 28,
+          "stop_epoch": 42,
+          "seconds_reported": 519.8483635999728,
+          "predictions_identical_to_predecessor": false,
+          "changed_prediction_rows": 8063,
+          "strata": {
+            "DEFAULT": {
+              "before": 97.10567313500853,
+              "after": 97.40559788886887,
+              "delta": 0.29992475386033846
+            },
+            "CONT": {
+              "before": 41.95396105490423,
+              "after": 41.736640291995144,
+              "delta": -0.21732076290908253
+            }
+          }
+        },
+        {
+          "stage": "PERM336",
+          "target": "PERM",
+          "predecessor": "PERM154",
+          "before": 89.40556485691894,
+          "after": 89.51838939879066,
+          "actual_target_gain": 0.11282454187171709,
+          "actual_TOTAL_contribution": 0.03948858965510098,
+          "own_initialized_score": 89.4055666268939,
+          "optimizer_gain": 0.11282277189675938,
+          "best_epoch": 5,
+          "stop_epoch": 19,
+          "seconds_reported": 335.84209619998,
+          "predictions_identical_to_predecessor": false,
+          "changed_prediction_rows": 36206,
+          "strata": {
+            "DEFAULT": {
+              "before": 97.27870539397452,
+              "after": 97.49443975594247,
+              "delta": 0.2157343619679466
+            },
+            "CONT": {
+              "before": 74.09691194381553,
+              "after": 74.00963708319706,
+              "delta": -0.08727486061846434
+            }
+          }
+        },
+        {
+          "stage": "SW351",
+          "target": "SW",
+          "predecessor": "SW104",
+          "before": 74.12175282815758,
+          "after": 74.17361205223327,
+          "actual_target_gain": 0.05185922407568455,
+          "actual_TOTAL_contribution": 0.01815072842648959,
+          "own_initialized_score": 74.12175268976877,
+          "optimizer_gain": 0.05185936246449785,
+          "best_epoch": 13,
+          "stop_epoch": 27,
+          "seconds_reported": 266.364304799994,
+          "predictions_identical_to_predecessor": false,
+          "changed_prediction_rows": 18046,
+          "strata": {
+            "DEFAULT": {
+              "before": 98.71563225845586,
+              "after": 98.63877455431792,
+              "delta": -0.07685770413793591
+            },
+            "CONT": {
+              "before": 17.63188906048012,
+              "after": 17.979399150046632,
+              "delta": 0.3475100895665122
+            }
+          }
+        }
+      ],
+      "leaf_deletions": [
+        {
+          "dropped": [],
+          "selected_heads": {
+            "POR": "POR341",
+            "PERM": "PERM336",
+            "SW": "SW351"
+          },
+          "training_stages": 8,
+          "scores": {
+            "POR": 78.04643071793232,
+            "PERM": 89.51838939879066,
+            "SW": 74.17361205223327,
+            "TOTAL": 80.70612972323806
+          },
+          "delta_vs_full": 0.0,
+          "interpretation": "Valid leaf deletion: use actual predecessor checkpoint for deleted final head; no descendant of the dropped phase is retained."
+        },
+        {
+          "dropped": [
+            "POR341"
+          ],
+          "selected_heads": {
+            "POR": "POR151",
+            "PERM": "PERM336",
+            "SW": "SW351"
+          },
+          "training_stages": 7,
+          "scores": {
+            "POR": 77.92638076072386,
+            "PERM": 89.51838939879066,
+            "SW": 74.17361205223327,
+            "TOTAL": 80.67011473607553
+          },
+          "delta_vs_full": -0.03601498716253104,
+          "interpretation": "Valid leaf deletion: use actual predecessor checkpoint for deleted final head; no descendant of the dropped phase is retained."
+        },
+        {
+          "dropped": [
+            "PERM336"
+          ],
+          "selected_heads": {
+            "POR": "POR341",
+            "PERM": "PERM154",
+            "SW": "SW351"
+          },
+          "training_stages": 7,
+          "scores": {
+            "POR": 78.04643071793232,
+            "PERM": 89.40556485691894,
+            "SW": 74.17361205223327,
+            "TOTAL": 80.66664113358297
+          },
+          "delta_vs_full": -0.039488589655093165,
+          "interpretation": "Valid leaf deletion: use actual predecessor checkpoint for deleted final head; no descendant of the dropped phase is retained."
+        },
+        {
+          "dropped": [
+            "SW351"
+          ],
+          "selected_heads": {
+            "POR": "POR341",
+            "PERM": "PERM336",
+            "SW": "SW104"
+          },
+          "training_stages": 7,
+          "scores": {
+            "POR": 78.04643071793232,
+            "PERM": 89.51838939879066,
+            "SW": 74.12175282815758,
+            "TOTAL": 80.68797899481157
+          },
+          "delta_vs_full": -0.018150728426491014,
+          "interpretation": "Valid leaf deletion: use actual predecessor checkpoint for deleted final head; no descendant of the dropped phase is retained."
+        },
+        {
+          "dropped": [
+            "POR341",
+            "PERM336"
+          ],
+          "selected_heads": {
+            "POR": "POR151",
+            "PERM": "PERM154",
+            "SW": "SW351"
+          },
+          "training_stages": 6,
+          "scores": {
+            "POR": 77.92638076072386,
+            "PERM": 89.40556485691894,
+            "SW": 74.17361205223327,
+            "TOTAL": 80.63062614642043
+          },
+          "delta_vs_full": -0.07550357681763842,
+          "interpretation": "Valid leaf deletion: use actual predecessor checkpoint for deleted final head; no descendant of the dropped phase is retained."
+        },
+        {
+          "dropped": [
+            "POR341",
+            "SW351"
+          ],
+          "selected_heads": {
+            "POR": "POR151",
+            "PERM": "PERM336",
+            "SW": "SW104"
+          },
+          "training_stages": 6,
+          "scores": {
+            "POR": 77.92638076072386,
+            "PERM": 89.51838939879066,
+            "SW": 74.12175282815758,
+            "TOTAL": 80.65196400764904
+          },
+          "delta_vs_full": -0.054165715589022057,
+          "interpretation": "Valid leaf deletion: use actual predecessor checkpoint for deleted final head; no descendant of the dropped phase is retained."
+        },
+        {
+          "dropped": [
+            "PERM336",
+            "SW351"
+          ],
+          "selected_heads": {
+            "POR": "POR341",
+            "PERM": "PERM154",
+            "SW": "SW104"
+          },
+          "training_stages": 6,
+          "scores": {
+            "POR": 78.04643071793232,
+            "PERM": 89.40556485691894,
+            "SW": 74.12175282815758,
+            "TOTAL": 80.64849040515648
+          },
+          "delta_vs_full": -0.05763931808158418,
+          "interpretation": "Valid leaf deletion: use actual predecessor checkpoint for deleted final head; no descendant of the dropped phase is retained."
+        },
+        {
+          "dropped": [
+            "POR341",
+            "PERM336",
+            "SW351"
+          ],
+          "selected_heads": {
+            "POR": "POR151",
+            "PERM": "PERM154",
+            "SW": "SW104"
+          },
+          "training_stages": 5,
+          "scores": {
+            "POR": 77.92638076072386,
+            "PERM": 89.40556485691894,
+            "SW": 74.12175282815758,
+            "TOTAL": 80.61247541799393
+          },
+          "delta_vs_full": -0.09365430524412943,
+          "interpretation": "Valid leaf deletion: use actual predecessor checkpoint for deleted final head; no descendant of the dropped phase is retained."
+        }
+      ],
+      "table_note": "Actual gain relative to preceding same-target prediction; optimizer_gain compares own stage initializer. SW104 is cold architecture replacement, not a fine-tune of SOURCE SW."
+    },
+    "new_seed20261010": {
+      "source_scores": {
+        "POR": 77.09029723727674,
+        "PERM": 89.35243145677488,
+        "SW": 73.65984026430232,
+        "TOTAL": 80.18138427356004
+      },
+      "full_scores": {
+        "POR": 77.5520561792274,
+        "PERM": 89.49625487509155,
+        "SW": 74.03612889675152,
+        "TOTAL": 80.5019511739133
+      },
+      "stages": [
+        {
+          "stage": "POR113",
+          "target": "POR",
+          "predecessor": "SOURCE",
+          "before": 77.09029723727674,
+          "after": 77.42544665121915,
+          "actual_target_gain": 0.3351494139424034,
+          "actual_TOTAL_contribution": 0.10054482418272101,
+          "own_initialized_score": 77.09053778381798,
+          "optimizer_gain": 0.3349088674011682,
+          "best_epoch": 18,
+          "stop_epoch": 28,
+          "seconds_reported": 181.39425710000796,
+          "predictions_identical_to_predecessor": false,
+          "changed_prediction_rows": 27705,
+          "strata": {
+            "DEFAULT": {
+              "before": 97.28689975306548,
+              "after": 97.26252424303443,
+              "delta": -0.02437551003104943
+            },
+            "CONT": {
+              "before": 39.209824477830225,
+              "after": 40.219293945270316,
+              "delta": 1.0094694674400913
+            }
+          }
+        },
+        {
+          "stage": "POR151",
+          "target": "POR",
+          "predecessor": "POR113",
+          "before": 77.42544665121915,
+          "after": 77.42544665121915,
+          "actual_target_gain": 0.0,
+          "actual_TOTAL_contribution": 0.0,
+          "own_initialized_score": 77.42544665121915,
+          "optimizer_gain": 0.0,
+          "best_epoch": 0,
+          "stop_epoch": 10,
+          "seconds_reported": 104.95979430002626,
+          "predictions_identical_to_predecessor": true,
+          "changed_prediction_rows": 0,
+          "strata": {
+            "DEFAULT": {
+              "before": 97.26252424303443,
+              "after": 97.26252424303443,
+              "delta": 0.0
+            },
+            "CONT": {
+              "before": 40.219293945270316,
+              "after": 40.219293945270316,
+              "delta": 0.0
+            }
+          }
+        },
+        {
+          "stage": "PERM154",
+          "target": "PERM",
+          "predecessor": "SOURCE",
+          "before": 89.35243145677488,
+          "after": 89.35243145677488,
+          "actual_target_gain": 0.0,
+          "actual_TOTAL_contribution": 0.0,
+          "own_initialized_score": 89.35243145677488,
+          "optimizer_gain": 0.0,
+          "best_epoch": 0,
+          "stop_epoch": 10,
+          "seconds_reported": 87.1822965000174,
+          "predictions_identical_to_predecessor": true,
+          "changed_prediction_rows": 0,
+          "strata": {
+            "DEFAULT": {
+              "before": 97.44412420798193,
+              "after": 97.44412420798193,
+              "delta": 0.0
+            },
+            "CONT": {
+              "before": 73.61882233031821,
+              "after": 73.61882233031821,
+              "delta": 0.0
+            }
+          }
+        },
+        {
+          "stage": "SW104",
+          "target": "SW",
+          "predecessor": "SOURCE",
+          "before": 73.65984026430232,
+          "after": 74.03612875776867,
+          "actual_target_gain": 0.3762884934663475,
+          "actual_TOTAL_contribution": 0.13170097271322162,
+          "own_initialized_score": 71.19711508147167,
+          "optimizer_gain": 2.839013676297,
+          "best_epoch": 34,
+          "stop_epoch": 44,
+          "seconds_reported": 638.196383500006,
+          "predictions_identical_to_predecessor": false,
+          "changed_prediction_rows": 34350,
+          "strata": {
+            "DEFAULT": {
+              "before": 98.2810661820008,
+              "after": 98.8824389156295,
+              "delta": 0.6013727336287076
+            },
+            "CONT": {
+              "before": 17.10716414722689,
+              "after": 16.966454982840105,
+              "delta": -0.14070916438678438
+            }
+          }
+        },
+        {
+          "stage": "POR341",
+          "target": "POR",
+          "predecessor": "POR151",
+          "before": 77.42544665121915,
+          "after": 77.5520561792274,
+          "actual_target_gain": 0.12660952800825953,
+          "actual_TOTAL_contribution": 0.03798285840247786,
+          "own_initialized_score": 77.42544665121915,
+          "optimizer_gain": 0.12660952800825953,
+          "best_epoch": 6,
+          "stop_epoch": 16,
+          "seconds_reported": 248.978074499988,
+          "predictions_identical_to_predecessor": false,
+          "changed_prediction_rows": 6791,
+          "strata": {
+            "DEFAULT": {
+              "before": 97.26252424303443,
+              "after": 97.58258528779,
+              "delta": 0.32006104475556185
+            },
+            "CONT": {
+              "before": 40.219293945270316,
+              "after": 39.98306844175757,
+              "delta": -0.23622550351274896
+            }
+          }
+        },
+        {
+          "stage": "PERM336",
+          "target": "PERM",
+          "predecessor": "PERM154",
+          "before": 89.35243145677488,
+          "after": 89.49625487509155,
+          "actual_target_gain": 0.14382341831667134,
+          "actual_TOTAL_contribution": 0.050338196410834965,
+          "own_initialized_score": 89.35243145677491,
+          "optimizer_gain": 0.14382341831664291,
+          "best_epoch": 5,
+          "stop_epoch": 15,
+          "seconds_reported": 157.01429090002785,
+          "predictions_identical_to_predecessor": false,
+          "changed_prediction_rows": 37498,
+          "strata": {
+            "DEFAULT": {
+              "before": 97.44412420798193,
+              "after": 97.60194013451068,
+              "delta": 0.1578159265287553
+            },
+            "CONT": {
+              "before": 73.61882233031821,
+              "after": 73.73543850514635,
+              "delta": 0.11661617482813824
+            }
+          }
+        },
+        {
+          "stage": "SW351",
+          "target": "SW",
+          "predecessor": "SW104",
+          "before": 74.03612875776867,
+          "after": 74.03612889675152,
+          "actual_target_gain": 1.3898285544655664e-07,
+          "actual_TOTAL_contribution": 4.864399940629482e-08,
+          "own_initialized_score": 74.03612889675152,
+          "optimizer_gain": 0.0,
+          "best_epoch": 0,
+          "stop_epoch": 10,
+          "seconds_reported": 111.10499459999846,
+          "predictions_identical_to_predecessor": false,
+          "changed_prediction_rows": 1,
+          "strata": {
+            "DEFAULT": {
+              "before": 98.8824389156295,
+              "after": 98.8824389156295,
+              "delta": 0.0
+            },
+            "CONT": {
+              "before": 16.966454982840105,
+              "after": 16.966455441053746,
+              "delta": 4.582136412523141e-07
+            }
+          }
+        }
+      ],
+      "leaf_deletions": [
+        {
+          "dropped": [],
+          "selected_heads": {
+            "POR": "POR341",
+            "PERM": "PERM336",
+            "SW": "SW351"
+          },
+          "training_stages": 8,
+          "scores": {
+            "POR": 77.5520561792274,
+            "PERM": 89.49625487509155,
+            "SW": 74.03612889675152,
+            "TOTAL": 80.5019511739133
+          },
+          "delta_vs_full": 0.0,
+          "interpretation": "Valid leaf deletion: use actual predecessor checkpoint for deleted final head; no descendant of the dropped phase is retained."
+        },
+        {
+          "dropped": [
+            "POR341"
+          ],
+          "selected_heads": {
+            "POR": "POR151",
+            "PERM": "PERM336",
+            "SW": "SW351"
+          },
+          "training_stages": 7,
+          "scores": {
+            "POR": 77.42544665121915,
+            "PERM": 89.49625487509155,
+            "SW": 74.03612889675152,
+            "TOTAL": 80.46396831551081
+          },
+          "delta_vs_full": -0.037982858402486386,
+          "interpretation": "Valid leaf deletion: use actual predecessor checkpoint for deleted final head; no descendant of the dropped phase is retained."
+        },
+        {
+          "dropped": [
+            "PERM336"
+          ],
+          "selected_heads": {
+            "POR": "POR341",
+            "PERM": "PERM154",
+            "SW": "SW351"
+          },
+          "training_stages": 7,
+          "scores": {
+            "POR": 77.5520561792274,
+            "PERM": 89.35243145677488,
+            "SW": 74.03612889675152,
+            "TOTAL": 80.45161297750246
+          },
+          "delta_vs_full": -0.05033819641083426,
+          "interpretation": "Valid leaf deletion: use actual predecessor checkpoint for deleted final head; no descendant of the dropped phase is retained."
+        },
+        {
+          "dropped": [
+            "SW351"
+          ],
+          "selected_heads": {
+            "POR": "POR341",
+            "PERM": "PERM336",
+            "SW": "SW104"
+          },
+          "training_stages": 7,
+          "scores": {
+            "POR": 77.5520561792274,
+            "PERM": 89.49625487509155,
+            "SW": 74.03612875776867,
+            "TOTAL": 80.50195112526929
+          },
+          "delta_vs_full": -4.864401148552133e-08,
+          "interpretation": "Valid leaf deletion: use actual predecessor checkpoint for deleted final head; no descendant of the dropped phase is retained."
+        },
+        {
+          "dropped": [
+            "POR341",
+            "PERM336"
+          ],
+          "selected_heads": {
+            "POR": "POR151",
+            "PERM": "PERM154",
+            "SW": "SW351"
+          },
+          "training_stages": 6,
+          "scores": {
+            "POR": 77.42544665121915,
+            "PERM": 89.35243145677488,
+            "SW": 74.03612889675152,
+            "TOTAL": 80.41363011909998
+          },
+          "delta_vs_full": -0.08832105481332064,
+          "interpretation": "Valid leaf deletion: use actual predecessor checkpoint for deleted final head; no descendant of the dropped phase is retained."
+        },
+        {
+          "dropped": [
+            "POR341",
+            "SW351"
+          ],
+          "selected_heads": {
+            "POR": "POR151",
+            "PERM": "PERM336",
+            "SW": "SW104"
+          },
+          "training_stages": 6,
+          "scores": {
+            "POR": 77.42544665121915,
+            "PERM": 89.49625487509155,
+            "SW": 74.03612875776867,
+            "TOTAL": 80.46396826686681
+          },
+          "delta_vs_full": -0.03798290704648366,
+          "interpretation": "Valid leaf deletion: use actual predecessor checkpoint for deleted final head; no descendant of the dropped phase is retained."
+        },
+        {
+          "dropped": [
+            "PERM336",
+            "SW351"
+          ],
+          "selected_heads": {
+            "POR": "POR341",
+            "PERM": "PERM154",
+            "SW": "SW104"
+          },
+          "training_stages": 6,
+          "scores": {
+            "POR": 77.5520561792274,
+            "PERM": 89.35243145677488,
+            "SW": 74.03612875776867,
+            "TOTAL": 80.45161292885845
+          },
+          "delta_vs_full": -0.05033824505484574,
+          "interpretation": "Valid leaf deletion: use actual predecessor checkpoint for deleted final head; no descendant of the dropped phase is retained."
+        },
+        {
+          "dropped": [
+            "POR341",
+            "PERM336",
+            "SW351"
+          ],
+          "selected_heads": {
+            "POR": "POR151",
+            "PERM": "PERM154",
+            "SW": "SW104"
+          },
+          "training_stages": 5,
+          "scores": {
+            "POR": 77.42544665121915,
+            "PERM": 89.35243145677488,
+            "SW": 74.03612875776867,
+            "TOTAL": 80.41363007045598
+          },
+          "delta_vs_full": -0.08832110345731792,
+          "interpretation": "Valid leaf deletion: use actual predecessor checkpoint for deleted final head; no descendant of the dropped phase is retained."
+        }
+      ],
+      "table_note": "Actual gain relative to preceding same-target prediction; optimizer_gain compares own stage initializer. SW104 is cold architecture replacement, not a fine-tune of SOURCE SW."
+    }
+  },
+  "original_POR_stage_ablation": {
+    "prefix": {
+      "screening_fold": 5,
+      "validation_rows": 144665,
+      "complete_five_folds": false,
+      "original_source_sha256": "45a09476e3126820688420579c100c86e0e4f45df335904380a298cf5f66b9a9",
+      "source_POR": 77.27786784460355,
+      "results": [
+        {
+          "name": "source_only",
+          "POR_training_stages": 1,
+          "total_training_stages": 3,
+          "scores": {
+            "POR": 77.27786784460355,
+            "PERM": 89.40556485691894,
+            "SW": 74.12175282815758,
+            "TOTAL": 80.41792154315785
+          },
+          "delta_vs_full_POR": -0.6485129161203105,
+          "delta_vs_full_TOTAL": -0.19455387483608888
+        },
+        {
+          "name": "source_113",
+          "POR_training_stages": 2,
+          "total_training_stages": 4,
+          "scores": {
+            "POR": 77.54045432673898,
+            "PERM": 89.40556485691894,
+            "SW": 74.12175282815758,
+            "TOTAL": 80.49669748779847
+          },
+          "delta_vs_full_POR": -0.3859264339848778,
+          "delta_vs_full_TOTAL": -0.11577793019546334
+        },
+        {
+          "name": "source_113_151",
+          "POR_training_stages": 3,
+          "total_training_stages": 5,
+          "scores": {
+            "POR": 77.92638076072386,
+            "PERM": 89.40556485691894,
+            "SW": 74.12175282815758,
+            "TOTAL": 80.61247541799393
+          },
+          "delta_vs_full_POR": 0.0,
+          "delta_vs_full_TOTAL": 0.0
+        }
+      ],
+      "seconds_including_loading": 3.2913385999854654,
+      "read_only_no_training": true,
+      "source_family": "original_all_T3",
+      "later_family": "8_T3_8_Cauchy",
+      "controls_reused_verified_predictions": true
+    },
+    "skip_middle": {
+      "scores": {
+        "POR": 77.4153459648521,
+        "PERM": 89.40556485691894,
+        "SW": 74.12175282815758,
+        "TOTAL": 80.45916497923241
+      },
+      "screening_fold": 5,
+      "validation_rows": 144665,
+      "complete_five_folds": false,
+      "strict_808_passed": false,
+      "remaining_folds_started": false,
+      "total_training_stages": 4,
+      "stage_upper_bound": 8,
+      "added_head_stages": {
+        "POR": 0,
+        "PERM": 0,
+        "SW": 0
+      },
+      "source_stage_counted": true,
+      "gain_vs_original_POR": -0.5110347958717654,
+      "gain_vs_original_TOTAL": -0.1533104387615225,
+      "checkpoint_sha256": "165ef4a4f71e4b2670c92ee519c8258667a367dc3ede6bed3309bcece9f156f9",
+      "report": {
+        "stage": "skip_middle",
+        "target": "POR",
+        "target_score": 77.4153459648521,
+        "initial_score": 77.26429369346035,
+        "against_initial": 0.15105227139174815,
+        "against_v97_target": -0.1365908370329123,
+        "best_epoch": 1,
+        "stopped_epoch": 15,
+        "validation_rows": 144665,
+        "predictions_reproduced_exactly": true,
+        "frozen_parameters_exact": true,
+        "gradient_groups": {
+          "POR_direct_final_head_no_middle_training": 0.38436612486839294
+        },
+        "seconds": 155.15498720001779,
+        "peak_MiB": 924.54736328125,
+        "complete_five_folds": false,
+        "early_terminated": false
+      }
+    }
+  },
+  "second_seed_POR151_snapshot": {
+    "stage": "POR151",
+    "target": "POR",
+    "target_score": 76.59083162289573,
+    "initial_score": 75.9509669518149,
+    "against_initial": 0.6398646710808293,
+    "against_v97_target": -0.9611051789892713,
+    "best_epoch": 22,
+    "stopped_epoch": 32,
+    "validation_rows": 144665,
+    "predictions_reproduced_exactly": true,
+    "frozen_parameters_exact": true,
+    "gradient_groups": {
+      "wide256_joint_location_weight_POR_head": 0.1953340619802475
+    },
+    "effective_patience": 10,
+    "SOTA_broken": false,
+    "seconds": 284.39620560000185,
+    "peak_MiB": 924.54736328125,
+    "complete_five_folds": false,
+    "early_terminated": false
+  },
+  "recommendations": [
+    "Original recipe: no final phase can currently be removed with zero score loss. Least damaging proven leaf deletion is SW351, yielding seven stages; true score delta is in leaf_deletions.",
+    "New first seed: SW351 best0/optimizergain0, leaf deletion is effectively score-neutral (tiny initializer numerical change), so seven-stage recipe is directly supported by saved predictions.",
+    "POR151/PERM154 new first seed best0: candidate redundant optimization phases in THIS seed. Do not generalize; original151 and154 positive, and current second-seed151 has positive gain. For intermediate removal, reconstruct an untrained adapter/initializer and verify selected state equivalence, or retrain downstream POR341/PERM336 from the retained earlier source. Existing trained descendants do not establish deletion.",
+    "Prior direct skip113 experiment V201 has final POR77.415345964852 vs retained15177.926380760724 (-0.511034795872); this evidence does not support deleting113. Historical patience18 vs skip14 disclosed.",
+    "If targeting six stages next, merge PERM154 and336 into one fresh joint encoder/readout phase from SOURCE first (not from trained154); this is untested and requires new matched fifth validation. Alternatively merge SW104/351 jointly from random SW body, also untested. Preserve existing original8 until gains are verified.",
+    "Do not remove SOURCE while still loading its trained weights; that retains SOURCE training cost. Removing it requires a separately cold-trained architecture/input-quality recipe.",
+    "Historical original stages use18/14 patience, newseeds10->14 plus their ownSOURCE/Q/parent checkpoints. Gain differences cannot be attributed to seed or patience alone; all current five-seed runs remain unchanged."
+  ],
+  "validation_rows": 144665,
+  "screening_fold": 5,
+  "CPU_only": true,
+  "extra_training_stages": 0,
+  "analysis_seconds": 1.4095658999867737,
+  "timing_limit": "Reported historic per-stage seconds reflect each experiment work/concurrency and are not a matched serial wall-time comparison.",
+  "complete_five_folds": false,
+  "remaining_folds_started": false
+}

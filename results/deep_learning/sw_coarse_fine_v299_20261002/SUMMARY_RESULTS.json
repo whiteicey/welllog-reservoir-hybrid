@@ -1,0 +1,103 @@
+{
+  "project": "sw_coarse_fine_v299_20261002",
+  "scope": "obsolete-study",
+  "weights_retained": false,
+  "cleanup": "Obsolete artifacts removed by explicit user request. These are historical scores, not newly verified training.",
+  "results": [
+    {
+      "source": "PAIRED_FINAL.json",
+      "result": {
+        "reports": {
+          "flat": {
+            "stage": "flat",
+            "target": "SW",
+            "target_score": 74.15348214637297,
+            "initial_score": 74.12175268976877,
+            "against_initial": 0.03172945660419657,
+            "against_v97_target": 0.01130224170626093,
+            "best_epoch": 6,
+            "stopped_epoch": 20,
+            "validation_rows": 144665,
+            "predictions_reproduced_exactly": true,
+            "frozen_parameters_exact": true,
+            "seconds": 374.75524969998514,
+            "peak_MiB": 1334.41357421875,
+            "complete_five_folds": false,
+            "early_terminated": false
+          },
+          "hierarchical": {
+            "stage": "hierarchical",
+            "target": "SW",
+            "target_score": 74.15577863529369,
+            "initial_score": 74.12175268976877,
+            "against_initial": 0.03402594552491678,
+            "against_v97_target": 0.013598730626981137,
+            "best_epoch": 6,
+            "stopped_epoch": 20,
+            "validation_rows": 144665,
+            "predictions_reproduced_exactly": true,
+            "frozen_parameters_exact": true,
+            "seconds": 371.26236649998464,
+            "peak_MiB": 1357.921875,
+            "complete_five_folds": false,
+            "early_terminated": false
+          }
+        },
+        "strata": {
+          "flat": {
+            "SW": 74.15348214637297,
+            "default_SW": 98.86987747266446,
+            "continuous_SW": 17.382210710024065
+          },
+          "hierarchical": {
+            "SW": 74.15577863529369,
+            "default_SW": 98.86363651580248,
+            "continuous_SW": 17.40411692137872
+          }
+        },
+        "hierarchical_minus_flat": 0.0022964889207202077,
+        "hierarchical_minus_flat_continuous": 0.021906211354654204,
+        "hierarchical_minus297": -0.0042515877260598245,
+        "continuous_reference252": 17.88486813991017,
+        "matched_group_boundaries": [
+          0,
+          202,
+          219,
+          228,
+          234,
+          239,
+          244,
+          249,
+          256
+        ],
+        "registered_and_active_capacity_same": true,
+        "initial_score_same": true,
+        "adopted": false,
+        "remaining_folds_started": false,
+        "complete_five_folds": false,
+        "timing": {
+          "terminal": true,
+          "includes_prep_initial_train_final": true,
+          "flat_start_epoch": 1790876129.272,
+          "maximum_concurrency": 2,
+          "codeprep_CPUassembly_excluded": true,
+          "hierarchical_start_epoch": 1790876171.24,
+          "total_paired_wall_seconds": 420.4506285190582,
+          "individual_seconds": {
+            "flat": 374.75524969998514,
+            "hierarchical": 371.26236649998464
+          },
+          "peak_MiB": {
+            "flat": 1334.41357421875,
+            "hierarchical": 1357.921875
+          },
+          "scope": "Partial overlap/stagger incldata/initial/train/finalrestore, codeprep/CPUassembly excluded; not speedbenchmark"
+        },
+        "conclusion": "Small matched overall normalization benefit below retained297; absolute continuous stratum still must exceed252 to claim substantial breakthrough. Close count/quantile/FiLM grid; preserve compact paired evidence, do not generalize to all coarse-to-fine methods."
+      }
+    }
+  ],
+  "cleanup_completed": true,
+  "deleted_files": 9,
+  "deleted_bytes": 6953285
+}

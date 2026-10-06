@@ -1,0 +1,34 @@
+{
+  "scores": {
+    "POR": 77.72901411274366,
+    "PERM": 89.37839421114361,
+    "SW": 74.12175282815758,
+    "TOTAL": 80.5437556975785
+  },
+  "total_training_stages": 5,
+  "source_stage_counted": true,
+  "dependencies": [
+    "original source",
+    "v113 forward",
+    "v131 joint point location/logweight head",
+    "v100 PERM",
+    "v104 SW"
+  ],
+  "POR": {
+    "checkpoint": "outputs/pure_dl_por_joint_density_head_v131_fold5/location_weight/model_best.pt",
+    "sha256": "b7389e8a442465e893dcdf92b7e7816fd100e976ead071fdc16c74ee649b5e7c",
+    "module": "por_joint_density_head_v131",
+    "stage": "location_weight"
+  },
+  "PERM": {
+    "checkpoint": "outputs/pure_dl_compact_v100_fold5/perm/model_best.pt"
+  },
+  "SW": {
+    "checkpoint": "outputs/pure_dl_compact_frequency_v104_fold5/local/model_best.pt"
+  },
+  "screening_fold": 5,
+  "complete_five_folds": false,
+  "strict_808_passed": false,
+  "strict_channel_gain_025": false,
+  "previous_recipe_path": "results/deep_learning/por_joint_point_ablation_v129_20261001/CURRENT_RECIPE.json"
+}

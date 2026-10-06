@@ -1,0 +1,34 @@
+{
+  "SW252": {
+    "SW": 74.14922820781207,
+    "default_SW": 98.64493054166336,
+    "continuous_SW": 17.88486813991017,
+    "default_rows": 100786,
+    "continuous_rows": 43879,
+    "source": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_sw_mass_cdf_v252_fold5\\conditional\\channel_pred.npy"
+  },
+  "SW289": {
+    "SW": 74.1537264289993,
+    "default_SW": 98.72311025198368,
+    "continuous_SW": 17.72012680313723,
+    "default_rows": 100786,
+    "continuous_rows": 43879,
+    "source": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_sw_state_bound_v289_fold5\\balanced\\channel_pred.npy"
+  },
+  "v297_well": {
+    "SW": 74.16003022301975,
+    "default_SW": 98.82679621708131,
+    "continuous_SW": 17.502752767347182,
+    "default_rows": 100786,
+    "continuous_rows": 43879,
+    "source": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_sw_raw_well_condition_v297_fold5\\well\\channel_pred.npy"
+  },
+  "v297_reference": {
+    "SW": 74.15411427286024,
+    "default_SW": 98.83518401113288,
+    "continuous_SW": 17.463982441198,
+    "default_rows": 100786,
+    "continuous_rows": 43879,
+    "source": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_sw_raw_well_condition_v297_fold5\\reference\\channel_pred.npy"
+  }
+}

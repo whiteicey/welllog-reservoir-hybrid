@@ -1,0 +1,8 @@
+{
+  "epoch": 11,
+  "best_epoch": 5,
+  "whole": 89.51838939879066,
+  "default": 97.49443975594247,
+  "continuous": 74.00963708319706,
+  "scope": "Live own whole-target best snapshot, additive control unlaunched/no paired gain or adoption"
+}

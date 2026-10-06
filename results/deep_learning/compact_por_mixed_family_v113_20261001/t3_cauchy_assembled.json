@@ -1,0 +1,45 @@
+{
+  "scores": {
+    "POR": 77.54045432673898,
+    "PERM": 89.37839421114361,
+    "SW": 74.12175282815758,
+    "TOTAL": 80.48718776177711
+  },
+  "original_fold": 5,
+  "complete_five_folds": false,
+  "executed_recipe_training_stages": 4,
+  "selected_effective_dependency_stages": 4,
+  "source_stage_counted": true,
+  "dependency_stages": [
+    "original_source",
+    "v113_POR_t3_cauchy",
+    "v100_PERM",
+    "v104_SW"
+  ],
+  "gain_vs_homogeneous_Cauchy_POR": 0.015359846408415478,
+  "strict_808_passed": false,
+  "remaining_folds_started": false,
+  "checkpoint_sha256": "94f56aa91b2e56073aa496826f9666f269b35e88545723b9d22d7aba2e12673d",
+  "report": {
+    "stage": "t3_cauchy",
+    "target": "POR",
+    "target_score": 77.54045432673898,
+    "initial_score": 77.26429369346035,
+    "against_initial": 0.2761606332786357,
+    "against_v97_target": -0.01148247514602474,
+    "best_epoch": 69,
+    "stopped_epoch": 80,
+    "validation_rows": 144665,
+    "predictions_reproduced_exactly": true,
+    "frozen_parameters_exact": true,
+    "gradient_groups": {
+      "original_target_locations": 2.1291797161102295,
+      "combined_new_heads_routes": 0.5190233588218689
+    },
+    "seconds": 523.3879553999868,
+    "peak_MiB": 920.84765625,
+    "complete_five_folds": false
+  },
+  "sum_executed_dependency_seconds": 2746.02002419997,
+  "timing_scope": "historical shared stages/source plus executed refinement sum; pair wall separate, not parallel speedup"
+}

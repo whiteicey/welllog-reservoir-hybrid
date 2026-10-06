@@ -1,0 +1,19 @@
+{
+  "deleted": [
+    {
+      "path": "outputs\\pure_dl_sw_dropout_extend_v77_SW_p30_fold5\\model_best.pt",
+      "bytes": 3449259,
+      "sha256": "bd983977decb1668029f641591301a08b4ac0ea4cdf2323e6e37ceb0fb44edeb"
+    },
+    {
+      "path": "outputs\\pure_dl_sw_dropout_extend_v77_SW_p30_fold5\\last_state.pt",
+      "bytes": 15592027,
+      "sha256": "1f802aca03cd30ecbc166e9b71551a4d1321e7285bc15c874ed57a08c4a80a37"
+    }
+  ],
+  "bytes": 19041286,
+  "status": "complete",
+  "retained": [
+    "p40"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "candidates": [
+    {
+      "mode": "a025",
+      "start": "2026-09-30T10:34:32.216290+08:00",
+      "end": "2026-09-30T10:39:20.228779+08:00",
+      "seconds": 283.9457384000125,
+      "peak_allocated_MiB": 1870.50390625,
+      "launch_to_completion_seconds": 288.012489
+    },
+    {
+      "mode": "a100",
+      "start": "2026-09-30T10:39:48.485742+08:00",
+      "end": "2026-09-30T10:44:43.805333+08:00",
+      "seconds": 291.19973299998674,
+      "peak_allocated_MiB": 1870.50390625,
+      "launch_to_completion_seconds": 295.319591
+    }
+  ],
+  "first_launch_to_last_completion_seconds": 611.589043,
+  "first_launch_to_verified_wall_seconds": 662.3909,
+  "peak_process_concurrency": 1,
+  "process_overlap_seconds": 0.0,
+  "sum_individual_launch_to_completion_seconds": 583.33208,
+  "finalization_seconds": 4.667254500003764,
+  "scope": "loading/preprocessing/warmup/training/evaluation/persistence and explicit launch gap included; authoring before first launch and atlas after score verification separate; observed admission may require serial runs; no throughput benchmark"
+}

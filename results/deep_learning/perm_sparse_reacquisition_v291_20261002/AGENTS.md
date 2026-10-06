@@ -1,0 +1,1 @@
+One added PERM phase, jointly train new sparse encoder and readout; original154 prior frozen. Original9/206/splits/Q/score unchanged, max2GPU/80-14. Maintain PROJECTS and README actual results. No automatic remaining folds or chained repair stages.

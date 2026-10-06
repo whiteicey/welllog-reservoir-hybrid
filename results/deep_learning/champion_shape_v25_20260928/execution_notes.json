@@ -1,0 +1,12 @@
+{
+  "scope": "v25 tool and documentation events, separate from training failures",
+  "events": [
+    {"operation": "read atlas/curate.py", "result": "Initial requested max_bytes=5000 was below file size; repeated read at100000 succeeded."},
+    {"operation": "edit atlas/curate.py", "result": "Multiline exact text not found; subsequent single-line edit rejected by content-protection check. Historical curate.py was not changed; no alternative write attempted."},
+    {"operation": "atlas metadata", "result": "v25 additions remain reproducibly maintained by run_champion_shape_v25.py status --record, with existing historical metadata preserved. build_atlas.py will refresh the generated snapshot at completion."}
+  ],
+  "historical_curate_modified": false,
+  "model_training_failures_observed": [],
+  "no_cold_start_or_scaling_jobs_launched": true,
+  "old_models_and_deliveries_unchanged": true
+}

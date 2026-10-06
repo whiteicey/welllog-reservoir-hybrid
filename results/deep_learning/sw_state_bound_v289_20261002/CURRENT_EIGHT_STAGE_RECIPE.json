@@ -1,0 +1,52 @@
+{
+  "scores": {
+    "POR": 78.0235265552551,
+    "PERM": 89.498908539006,
+    "SW": 74.1537264289993,
+    "TOTAL": 80.68548020537838
+  },
+  "screening_fold": 5,
+  "validation_rows": 144665,
+  "strict_808_qualified": false,
+  "complete_five_folds": false,
+  "remaining_folds_started": false,
+  "total_training_stages": 8,
+  "stages": [
+    "SOURCE",
+    "POR113",
+    "POR151",
+    "PERM154",
+    "SW104",
+    "POR290raw",
+    "PERM281alpha50_best3",
+    "SW289balanced"
+  ],
+  "added_head_stages": {
+    "POR": 1,
+    "PERM": 1,
+    "SW": 1
+  },
+  "heads": {
+    "POR": {
+      "checkpoint": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_por_direct_share_v290_fold5\\raw\\model_best.pt",
+      "sha256": "85fe1db75e0943b058dd082b36fc10faa5b7b22db6465f961726127010c3e66a"
+    },
+    "PERM": {
+      "checkpoint": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_perm_direct_share_v281_fold5\\alpha50\\model_best.pt",
+      "sha256": "1862554b2dbddd4084e946872efa794e0f1a67960ba64e9ad65be52c0e3a598f"
+    },
+    "SW": {
+      "checkpoint": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_sw_state_bound_v289_fold5\\balanced\\model_best.pt",
+      "sha256": "7f4c5e71f70aeb902a0c76be185ec2f9461a227a83da9038dbd9257515fce49a"
+    }
+  },
+  "pred_sha256": "97a228cea6742013458e9ee8cd47a35bd342d563648ea78269595e6c730e60aa",
+  "verification": "actual144665 composition; own-best RAM replay/frozen checks, not independent disk reload",
+  "default_five_stage_unchanged": true,
+  "previous_seven_stage_unchanged": true,
+  "gain_vs_default_five": 0.07300478738444838,
+  "selected_POR_alpha": 0.25,
+  "selected_PERM_alpha": 0.30000001192092896,
+  "selected_SW_alpha": 0.25,
+  "gain_vs_previous_optional8": 0.0004723891018016957
+}

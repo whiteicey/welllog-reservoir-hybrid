@@ -1,0 +1,1 @@
+Jointnew rankone sharedencoder/distribution/state, original104 prior only, oneSWphase/max8/max2GPU/80-14. All4internalmembers oneforward/optimizer/checkpoint, no posthocmemberselection or oldpredictionvote. Original9/206/splits/Q/score unchanged. MaintainPROJECTS/README/EXPLORATIONS/atlas; noqueue/fullCVbelowstrict80.8meaningfulgain.

@@ -1,0 +1,130 @@
+{
+  "reports": {
+    "rational": {
+      "stage": "rational",
+      "target": "PERM",
+      "target_score": 89.51580440487884,
+      "initial_score": 89.4055666268939,
+      "against_initial": 0.11023777798493484,
+      "against_v97_target": 0.11908035551302021,
+      "best_epoch": 5,
+      "stopped_epoch": 19,
+      "validation_rows": 144665,
+      "predictions_reproduced_exactly": true,
+      "frozen_parameters_exact": true,
+      "gradient_groups": {
+        "PERM_sparse_reacquisition_body": 0.047375015914440155,
+        "PERM_direct_categorical_readout": 0.029844285920262337,
+        "PERM_joint_body_readout_shape": 0.003536858595907688
+      },
+      "seconds": 230.11248739995062,
+      "peak_MiB": 881.83349609375,
+      "complete_five_folds": false,
+      "early_terminated": false
+    },
+    "polynomial": {
+      "stage": "polynomial",
+      "target": "PERM",
+      "target_score": 89.51509890085404,
+      "initial_score": 89.4055666268939,
+      "against_initial": 0.10953227396014142,
+      "against_v97_target": 0.1183748514882268,
+      "best_epoch": 5,
+      "stopped_epoch": 19,
+      "validation_rows": 144665,
+      "predictions_reproduced_exactly": true,
+      "frozen_parameters_exact": true,
+      "gradient_groups": {
+        "PERM_sparse_reacquisition_body": 0.047375015914440155,
+        "PERM_direct_categorical_readout": 0.029844285920262337,
+        "PERM_joint_body_readout_shape": 0.003564757527783513
+      },
+      "seconds": 144.50752689997898,
+      "peak_MiB": 847.80224609375,
+      "complete_five_folds": false,
+      "early_terminated": false
+    }
+  },
+  "strata": {
+    "rational": {
+      "default": 97.49399611826219,
+      "continuous": 74.00288840401272
+    },
+    "polynomial": {
+      "default": 97.49412903900604,
+      "continuous": 74.0005526542539
+    }
+  },
+  "best_shape_delta_norms": {
+    "rational": {
+      "body_shape.a": 0.45159706473350525,
+      "body_shape.b": 0.08534657955169678,
+      "readout_shape.a": 0.36323943734169006,
+      "readout_shape.b": 0.08184888958930969
+    },
+    "polynomial": {
+      "body_shape.a": 0.4494023621082306,
+      "body_shape.b": 0.08179910480976105,
+      "readout_shape.a": 0.36105990409851074,
+      "readout_shape.b": 0.06453556567430496
+    }
+  },
+  "rational_minus_polynomial": 0.000705504024793413,
+  "rational_minus_polynomial_CONT": 0.0023357497588278875,
+  "gain_vs_retained291": {
+    "rational": 0.0002496116216406108,
+    "polynomial": -0.0004558924031528022
+  },
+  "CONT_vs_retained291": {
+    "rational": 0.001822064252124278,
+    "polynomial": -0.0005136855067036095
+  },
+  "timing": {
+    "maximum_parallelism": 2,
+    "overlap_note": "rational starts while311shuffled active",
+    "gain": "unproved",
+    "jobs": [
+      {
+        "start_epoch": 1790882777.043,
+        "started_UTC": "2026-10-01T19:26:17.0433994+00:00",
+        "pid": 80048,
+        "stage": "rational"
+      },
+      {
+        "start_epoch": 1790883159.088,
+        "started_UTC": "2026-10-01T19:32:39.0881503+00:00",
+        "pid": 8380,
+        "stage": "polynomial"
+      }
+    ],
+    "started_UTC": "2026-10-01T19:26:17.0433994+00:00",
+    "status": "rational_terminal_polynomial_launched",
+    "started_epoch": 1790882777.043,
+    "terminal": true,
+    "same_work_pair_wall_seconds": 532.0466985702515,
+    "individual_seconds": {
+      "rational": 230.11248739995062,
+      "polynomial": 144.50752689997898
+    },
+    "peak_MiB": {
+      "rational": 881.83349609375,
+      "polynomial": 847.80224609375
+    },
+    "interpretation": "Sequential launches, rational overlaps311shuffled and polynomial mostly runs alone; wall includes launch gap and all environment elapsed work inside interval, excludes preparation beforefirstlaunch and CPUfinalization afterward. Not an isolated serial-versus-parallel speed ranking."
+  },
+  "screening_fold": 5,
+  "complete_five_folds": false,
+  "remaining_folds_started": false,
+  "independent_disk_reload": false,
+  "automatic_adoption": false,
+  "retained_as_optional_micro_positive": true,
+  "absolute_adopted_in_optional8": true,
+  "not_default_five": true,
+  "optional8_scores": {
+    "POR": 78.03055279414464,
+    "PERM": 89.51580440487884,
+    "SW": 74.16003022301975,
+    "TOTAL": 80.69570795800789
+  },
+  "closure": "Retain tiny single-seed matched whole/CONT gain without adding phase; do not claim substantive/robust improvement or start degree/group/bound/LR grid."
+}

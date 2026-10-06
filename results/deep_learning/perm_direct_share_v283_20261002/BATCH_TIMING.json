@@ -1,0 +1,16 @@
+{
+  "overlap_other_study": true,
+  "includes_startup_data_initial_final_eval": true,
+  "arms": {
+    "alpha30": {
+      "process_creation_utc_seconds": 1790871110.207,
+      "pid": 72020
+    }
+  },
+  "pair_wallclock_pending": false,
+  "excludes_code_preparation_CPUassembly": true,
+  "maximum_GPU_jobs": 2,
+  "individual_seconds": 307.5132636000053,
+  "wall_to_report": 313.1374201774597,
+  "peak_MiB": 788.2265625
+}

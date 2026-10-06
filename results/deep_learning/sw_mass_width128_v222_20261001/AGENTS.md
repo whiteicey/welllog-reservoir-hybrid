@@ -1,0 +1,1 @@
+Width128 SW mass patch only trains; original104 frozen. No211 trainedweights,oneSW extra stage/six total,max2GPU,originalfold5/Q50/scoring/80-14. Prepared only until explicit launch. Maintain PROJECTS/evidence.

@@ -1,0 +1,600 @@
+{
+  "observed_epoch": 1790951736.0689304,
+  "cases": [
+    {
+      "identity": "original",
+      "fold": 1
+    },
+    {
+      "identity": "seed_20261013",
+      "fold": 1
+    },
+    {
+      "identity": "original",
+      "fold": 2
+    },
+    {
+      "identity": "seed_20261013",
+      "fold": 2
+    },
+    {
+      "identity": "original",
+      "fold": 3
+    },
+    {
+      "identity": "seed_20261013",
+      "fold": 3
+    },
+    {
+      "identity": "original",
+      "fold": 4
+    },
+    {
+      "identity": "seed_20261013",
+      "fold": 4
+    }
+  ],
+  "summary": {
+    "POR113": {
+      "observations": 8,
+      "positive": 7,
+      "near_zero": 0,
+      "negative": 1,
+      "minimum": -0.011892496940347996,
+      "mean": 0.11570729843624683,
+      "maximum": 0.2773174568977481,
+      "mean_TOTAL": 0.034712189530874044,
+      "CONT_positive": 6,
+      "CONT_negative": 2,
+      "observations_by_case": [
+        {
+          "identity": "original",
+          "fold": 1,
+          "gain": 0.13396866602197122,
+          "TOTAL": 0.040190599806591364,
+          "DEFAULT": 0.004030998377530182,
+          "CONT": 0.41803662588171875
+        },
+        {
+          "identity": "seed_20261013",
+          "fold": 1,
+          "gain": 0.04758694813001796,
+          "TOTAL": 0.014276084439005387,
+          "DEFAULT": -0.010077495943804138,
+          "CONT": 0.1736521706438907
+        },
+        {
+          "identity": "original",
+          "fold": 2,
+          "gain": 0.2773174568977481,
+          "TOTAL": 0.08319523706932443,
+          "DEFAULT": 0.019556982872202866,
+          "CONT": 0.8043498797652333
+        },
+        {
+          "identity": "seed_20261013",
+          "fold": 2,
+          "gain": 0.22567326465978965,
+          "TOTAL": 0.06770197939793689,
+          "DEFAULT": 0.02264492753624836,
+          "CONT": 0.6407970994105838
+        },
+        {
+          "identity": "original",
+          "fold": 3,
+          "gain": 0.18033439617427405,
+          "TOTAL": 0.05410031885228221,
+          "DEFAULT": 0.02261442406960157,
+          "CONT": 0.5500684001594323
+        },
+        {
+          "identity": "seed_20261013",
+          "fold": 3,
+          "gain": -0.011892496940347996,
+          "TOTAL": -0.0035677490821043986,
+          "DEFAULT": 0.04227914065188543,
+          "CONT": -0.13888400094735687
+        },
+        {
+          "identity": "original",
+          "fold": 4,
+          "gain": 0.059105447436124336,
+          "TOTAL": 0.0177316342308373,
+          "DEFAULT": 0.0,
+          "CONT": 0.1729014701184397
+        },
+        {
+          "identity": "seed_20261013",
+          "fold": 4,
+          "gain": 0.013564705110397313,
+          "TOTAL": 0.004069411533119194,
+          "DEFAULT": 0.021027840861293612,
+          "CONT": -0.0008041086289480859
+        }
+      ]
+    },
+    "POR151": {
+      "observations": 8,
+      "positive": 3,
+      "near_zero": 5,
+      "negative": 0,
+      "minimum": 0.0,
+      "mean": 0.04283956553963897,
+      "maximum": 0.17205253824796785,
+      "mean_TOTAL": 0.01285186966189169,
+      "CONT_positive": 3,
+      "CONT_negative": 0,
+      "observations_by_case": [
+        {
+          "identity": "original",
+          "fold": 1,
+          "gain": 0.1405152537164156,
+          "TOTAL": 0.04215457611492468,
+          "DEFAULT": -0.09573621146618905,
+          "CONT": 0.6570049902556363
+        },
+        {
+          "identity": "seed_20261013",
+          "fold": 1,
+          "gain": 0.0,
+          "TOTAL": 0.0,
+          "DEFAULT": 0.0,
+          "CONT": 0.0
+        },
+        {
+          "identity": "original",
+          "fold": 2,
+          "gain": 0.0,
+          "TOTAL": 0.0,
+          "DEFAULT": 0.0,
+          "CONT": 0.0
+        },
+        {
+          "identity": "seed_20261013",
+          "fold": 2,
+          "gain": 0.030148732352728302,
+          "TOTAL": 0.00904461970581849,
+          "DEFAULT": -0.0030879446640454944,
+          "CONT": 0.09810642246180379
+        },
+        {
+          "identity": "original",
+          "fold": 3,
+          "gain": 0.0,
+          "TOTAL": 0.0,
+          "DEFAULT": 0.0,
+          "CONT": 0.0
+        },
+        {
+          "identity": "seed_20261013",
+          "fold": 3,
+          "gain": 0.0,
+          "TOTAL": 0.0,
+          "DEFAULT": 0.0,
+          "CONT": 0.0
+        },
+        {
+          "identity": "original",
+          "fold": 4,
+          "gain": 0.17205253824796785,
+          "TOTAL": 0.05161576147439035,
+          "DEFAULT": -0.02418201699049405,
+          "CONT": 0.5498639391890023
+        },
+        {
+          "identity": "seed_20261013",
+          "fold": 4,
+          "gain": 0.0,
+          "TOTAL": 0.0,
+          "DEFAULT": 0.0,
+          "CONT": 0.0
+        }
+      ]
+    },
+    "PERM154": {
+      "observations": 8,
+      "positive": 3,
+      "near_zero": 5,
+      "negative": 0,
+      "minimum": 0.0,
+      "mean": 0.01851774532362427,
+      "maximum": 0.07351554977078933,
+      "mean_TOTAL": 0.006481210863268493,
+      "CONT_positive": 3,
+      "CONT_negative": 0,
+      "observations_by_case": [
+        {
+          "identity": "original",
+          "fold": 1,
+          "gain": 0.0,
+          "TOTAL": 0.0,
+          "DEFAULT": 0.0,
+          "CONT": 0.0
+        },
+        {
+          "identity": "seed_20261013",
+          "fold": 1,
+          "gain": 0.0,
+          "TOTAL": 0.0,
+          "DEFAULT": 0.0,
+          "CONT": 0.0
+        },
+        {
+          "identity": "original",
+          "fold": 2,
+          "gain": 0.07351554977078933,
+          "TOTAL": 0.025730442419776265,
+          "DEFAULT": 0.006615535104742776,
+          "CONT": 0.21772305875518327
+        },
+        {
+          "identity": "seed_20261013",
+          "fold": 2,
+          "gain": 0.042317162311491074,
+          "TOTAL": 0.014811006809021875,
+          "DEFAULT": -0.020272500760952994,
+          "CONT": 0.17723341673990944
+        },
+        {
+          "identity": "original",
+          "fold": 3,
+          "gain": 0.0,
+          "TOTAL": 0.0,
+          "DEFAULT": 0.0,
+          "CONT": 0.0
+        },
+        {
+          "identity": "seed_20261013",
+          "fold": 3,
+          "gain": 0.0,
+          "TOTAL": 0.0,
+          "DEFAULT": 0.0,
+          "CONT": 0.0
+        },
+        {
+          "identity": "original",
+          "fold": 4,
+          "gain": 0.0,
+          "TOTAL": 0.0,
+          "DEFAULT": 0.0,
+          "CONT": 0.0
+        },
+        {
+          "identity": "seed_20261013",
+          "fold": 4,
+          "gain": 0.03230925050671374,
+          "TOTAL": 0.011308237677349807,
+          "DEFAULT": 0.028789448367319892,
+          "CONT": 0.0394023920854778
+        }
+      ]
+    },
+    "SW104": {
+      "observations": 8,
+      "positive": 6,
+      "near_zero": 0,
+      "negative": 2,
+      "minimum": -0.18762578766350657,
+      "mean": 0.3829336508579786,
+      "maximum": 0.7154370138016901,
+      "mean_TOTAL": 0.1340267778002925,
+      "CONT_positive": 7,
+      "CONT_negative": 1,
+      "observations_by_case": [
+        {
+          "identity": "original",
+          "fold": 1,
+          "gain": 0.7154370138016901,
+          "TOTAL": 0.25040295483059155,
+          "DEFAULT": 0.535845326923095,
+          "CONT": 1.2102514691164803
+        },
+        {
+          "identity": "seed_20261013",
+          "fold": 1,
+          "gain": 0.6585315627939963,
+          "TOTAL": 0.23048604697789868,
+          "DEFAULT": 0.08626692965233929,
+          "CONT": 2.235246040306766
+        },
+        {
+          "identity": "original",
+          "fold": 2,
+          "gain": 0.5302739517202326,
+          "TOTAL": 0.18559588310208142,
+          "DEFAULT": 0.2500604900727126,
+          "CONT": 1.226894651284688
+        },
+        {
+          "identity": "seed_20261013",
+          "fold": 2,
+          "gain": -0.18762578766350657,
+          "TOTAL": -0.0656690256822273,
+          "DEFAULT": -0.18456739063432792,
+          "CONT": -0.1952290721942056
+        },
+        {
+          "identity": "original",
+          "fold": 3,
+          "gain": 0.32505037226117395,
+          "TOTAL": 0.11376763029141088,
+          "DEFAULT": 0.18779837104281683,
+          "CONT": 0.7086545125118828
+        },
+        {
+          "identity": "seed_20261013",
+          "fold": 3,
+          "gain": -0.0745893844776333,
+          "TOTAL": -0.026106284567171654,
+          "DEFAULT": -0.1541970810890092,
+          "CONT": 0.1479053095497953
+        },
+        {
+          "identity": "original",
+          "fold": 4,
+          "gain": 0.4691525687578775,
+          "TOTAL": 0.1642033990652571,
+          "DEFAULT": 0.393498225044965,
+          "CONT": 0.6467008506957956
+        },
+        {
+          "identity": "seed_20261013",
+          "fold": 4,
+          "gain": 0.6272389096699982,
+          "TOTAL": 0.21953361838449933,
+          "DEFAULT": -0.04601940856015574,
+          "CONT": 2.2072652747910304
+        }
+      ]
+    },
+    "POR341": {
+      "observations": 8,
+      "positive": 7,
+      "near_zero": 1,
+      "negative": 0,
+      "minimum": 0.0,
+      "mean": 0.030997941339769852,
+      "maximum": 0.08637430997988815,
+      "mean_TOTAL": 0.009299382401930956,
+      "CONT_positive": 0,
+      "CONT_negative": 7,
+      "observations_by_case": [
+        {
+          "identity": "original",
+          "fold": 1,
+          "gain": 0.0,
+          "TOTAL": 0.0,
+          "DEFAULT": 0.0,
+          "CONT": 0.0
+        },
+        {
+          "identity": "seed_20261013",
+          "fold": 1,
+          "gain": 0.06077140913880896,
+          "TOTAL": 0.01823142274164269,
+          "DEFAULT": 0.2559683969727189,
+          "CONT": -0.36596558799119805
+        },
+        {
+          "identity": "original",
+          "fold": 2,
+          "gain": 0.03687986480923655,
+          "TOTAL": 0.011063959442770966,
+          "DEFAULT": 0.25629940711462496,
+          "CONT": -0.41175840466424773
+        },
+        {
+          "identity": "seed_20261013",
+          "fold": 2,
+          "gain": 0.007862602389110407,
+          "TOTAL": 0.002358780716733122,
+          "DEFAULT": 0.21718544137023343,
+          "CONT": -0.4201313458945677
+        },
+        {
+          "identity": "original",
+          "fold": 3,
+          "gain": 0.08637430997988815,
+          "TOTAL": 0.025912292993966444,
+          "DEFAULT": 0.2241777690379081,
+          "CONT": -0.2366705397016915
+        },
+        {
+          "identity": "seed_20261013",
+          "fold": 3,
+          "gain": 0.0035721377905133522,
+          "TOTAL": 0.0010716413371540056,
+          "DEFAULT": 0.1779656850695659,
+          "CONT": -0.4052487847863375
+        },
+        {
+          "identity": "original",
+          "fold": 4,
+          "gain": 0.022506208293179952,
+          "TOTAL": 0.006751862487953985,
+          "DEFAULT": 0.2144839767852602,
+          "CONT": -0.3471095791771788
+        },
+        {
+          "identity": "seed_20261013",
+          "fold": 4,
+          "gain": 0.03001699831742144,
+          "TOTAL": 0.009005099495226432,
+          "DEFAULT": 0.21027840861300717,
+          "CONT": -0.31704122430977577
+        }
+      ]
+    },
+    "PERM336": {
+      "observations": 8,
+      "positive": 5,
+      "near_zero": 3,
+      "negative": 0,
+      "minimum": -7.525097757365984e-06,
+      "mean": 0.05111286307913332,
+      "maximum": 0.12841949952515108,
+      "mean_TOTAL": 0.01788950207769666,
+      "CONT_positive": 1,
+      "CONT_negative": 4,
+      "observations_by_case": [
+        {
+          "identity": "original",
+          "fold": 1,
+          "gain": -7.525097757365984e-06,
+          "TOTAL": -2.633784215078094e-06,
+          "DEFAULT": 5.402483907346323e-06,
+          "CONT": -3.7185210572943106e-05
+        },
+        {
+          "identity": "seed_20261013",
+          "fold": 1,
+          "gain": 0.002811864872498404,
+          "TOTAL": 0.0009841527053744414,
+          "DEFAULT": 0.07121021270285155,
+          "CONT": -0.15411638095523017
+        },
+        {
+          "identity": "original",
+          "fold": 2,
+          "gain": 0.12247821344371346,
+          "TOTAL": 0.04286737470529971,
+          "DEFAULT": 0.20950661092345513,
+          "CONT": -0.06511738685749435
+        },
+        {
+          "identity": "seed_20261013",
+          "fold": 2,
+          "gain": 0.10015791630313231,
+          "TOTAL": 0.035055270706096306,
+          "DEFAULT": 0.20234302678387905,
+          "CONT": -0.1201090045824742
+        },
+        {
+          "identity": "original",
+          "fold": 3,
+          "gain": 0.05502368797510826,
+          "TOTAL": 0.01925829079128789,
+          "DEFAULT": 0.1834506214813132,
+          "CONT": -0.25858249002469336
+        },
+        {
+          "identity": "seed_20261013",
+          "fold": 3,
+          "gain": 0.12841949952515108,
+          "TOTAL": 0.04494682483380288,
+          "DEFAULT": 0.08701383535057516,
+          "CONT": 0.22952813565808583
+        },
+        {
+          "identity": "original",
+          "fold": 4,
+          "gain": 2.0018245550090796e-05,
+          "TOTAL": 7.006385942531778e-06,
+          "DEFAULT": 0.0,
+          "CONT": 6.0359220498185095e-05
+        },
+        {
+          "identity": "seed_20261013",
+          "fold": 4,
+          "gain": -7.706343296831619e-07,
+          "TOTAL": -2.6972201538910667e-07,
+          "DEFAULT": -6.57364881817557e-06,
+          "CONT": 1.0923660283879144e-05
+        }
+      ]
+    },
+    "SW351": {
+      "observations": 8,
+      "positive": 6,
+      "near_zero": 2,
+      "negative": 0,
+      "minimum": -1.3798343445614591e-07,
+      "mean": 0.023436981810958102,
+      "maximum": 0.09265815418822854,
+      "mean_TOTAL": 0.008202943633835336,
+      "CONT_positive": 5,
+      "CONT_negative": 1,
+      "observations_by_case": [
+        {
+          "identity": "original",
+          "fold": 1,
+          "gain": 0.09265815418822854,
+          "TOTAL": 0.03243035396587999,
+          "DEFAULT": -0.29140749221907924,
+          "CONT": 1.1508431789745597
+        },
+        {
+          "identity": "seed_20261013",
+          "fold": 1,
+          "gain": 0.0,
+          "TOTAL": 0.0,
+          "DEFAULT": 0.0,
+          "CONT": 0.0
+        },
+        {
+          "identity": "original",
+          "fold": 2,
+          "gain": 0.04461150003133696,
+          "TOTAL": 0.015614025010967935,
+          "DEFAULT": -0.14547280839533983,
+          "CONT": 0.5171678973371794
+        },
+        {
+          "identity": "seed_20261013",
+          "fold": 2,
+          "gain": 0.010508184779027374,
+          "TOTAL": 0.0036778646726595807,
+          "DEFAULT": -0.12366413650785546,
+          "CONT": 0.344065379953582
+        },
+        {
+          "identity": "original",
+          "fold": 3,
+          "gain": -1.3798343445614591e-07,
+          "TOTAL": -4.8294202059651065e-08,
+          "DEFAULT": -1.873533648222292e-07,
+          "CONT": 0.0
+        },
+        {
+          "identity": "seed_20261013",
+          "fold": 3,
+          "gain": 0.0027208089770738297,
+          "TOTAL": 0.0009522831419758403,
+          "DEFAULT": -0.216329456526978,
+          "CONT": 0.6149420372632282
+        },
+        {
+          "identity": "original",
+          "fold": 4,
+          "gain": 0.03292611003026025,
+          "TOTAL": 0.011524138510591087,
+          "DEFAULT": -0.1520058752546305,
+          "CONT": 0.46693101511998236
+        },
+        {
+          "identity": "seed_20261013",
+          "fold": 4,
+          "gain": 0.004071234465172324,
+          "TOTAL": 0.0014249320628103134,
+          "DEFAULT": 0.014259439604984436,
+          "CONT": -0.019838804665930354
+        }
+      ]
+    }
+  },
+  "near_zero_threshold": 0.0001,
+  "pending_stage_evidence": [],
+  "scope": "Actual adjacent-stage changes on completed single-fold models; folds[1, 2, 3, 4] and paired seeds are not independent replicates. Historical fifth has differing budgets and is not pooled here.",
+  "causal_pruning_ablation_completed": false,
+  "training_recipe_changed": false,
+  "new_GPU_job_started": false,
+  "conclusion": "No verified lossless8-to5-stage reduction follows from these changes. Subsequent stages depend on earlier trained states, and probability-mixture decoding is nonlinear.",
+  "next_fixed_fifth_priority": [
+    "POR151 controlled omission with downstream POR341 retrained from POR113, same source/budget/seed; first7-stage candidate only. Positive completed or pending-stage gains forbid assuming universal redundancy.",
+    "POR341 modification or omission: its observed benefit shifts DEFAULT/CONT; measure both and final native mixture, not solo score only.",
+    "PERM154 omission needs neutral adapter and PERM336 retraining; PERM336 has meaningful fold2 gains, not universally redundant.",
+    "SW104 source-preserving additive alternative within the existing stage slot; observed SOURCE regressions 2/8, positive cases 6; no method-wide failure claim.",
+    "SW351 cannot be assumed redundant: 6 of 8 current observations positive. Any5-stage claim needs an actual fixed-fifth controlled recipe."
+  ],
+  "launch_policy": "Complete already-authorized original+seed13 fullCV serially first. No new pruning/repair experiment launched."
+}

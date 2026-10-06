@@ -1,0 +1,96 @@
+{
+  "screening_fold": 5,
+  "diagnostic_only": true,
+  "no_oracle_selection_or_training_reweighting": true,
+  "remaining_folds_started": false,
+  "strict_gate_gap": 0.09655985869643757,
+  "channels": {
+    "POR": {
+      "weight": 0.3,
+      "strata": {
+        "default": {
+          "rows": 94357,
+          "fraction": 0.6522448415304324,
+          "score": 97.40559788886887,
+          "baseline_score": 97.10567313500853,
+          "gain": 0.29992475386033896,
+          "zero_utility_fraction": 0.025944021111311298,
+          "partial_utility_fraction": 0.0,
+          "weighted_total_gain_contribution": 0.05868731206580721
+        },
+        "continuous": {
+          "rows": 50308,
+          "fraction": 0.3477551584695676,
+          "score": 41.724510830138065,
+          "baseline_score": 41.95396105490406,
+          "gain": -0.2294502247659844,
+          "zero_utility_fraction": 0.40830484217221913,
+          "partial_utility_fraction": 0.5916951578277808,
+          "weighted_total_gain_contribution": -0.02393774978231184
+        }
+      },
+      "whole_score": 78.04221263500214,
+      "whole_gain": 0.11583187427831794,
+      "one_channel_whole_gain_to_gate": 0.3218661956547919,
+      "CONT_only_gain_to_gate_with_default_fixed": 0.9255540509342545
+    },
+    "PERM": {
+      "weight": 0.35,
+      "strata": {
+        "default": {
+          "rows": 95533,
+          "fraction": 0.6603739674420213,
+          "score": 97.49443975594228,
+          "baseline_score": 97.27870539397412,
+          "gain": 0.2157343619681509,
+          "zero_utility_fraction": 0.01433012676247998,
+          "partial_utility_fraction": 0.022055206054452388,
+          "weighted_total_gain_contribution": 0.04986287478426831
+        },
+        "continuous": {
+          "rows": 49132,
+          "fraction": 0.3396260325579788,
+          "score": 74.00963708319772,
+          "baseline_score": 74.09691194381655,
+          "gain": -0.08727486061884815,
+          "zero_utility_fraction": 0.06631116176829764,
+          "partial_utility_fraction": 0.9336888382317023,
+          "weighted_total_gain_contribution": -0.010374285128910492
+        }
+      },
+      "whole_score": 89.51838939879102,
+      "whole_gain": 0.11282454187245096,
+      "one_channel_whole_gain_to_gate": 0.2758853105612502,
+      "CONT_only_gain_to_gate_with_default_fixed": 0.8123208591619161
+    },
+    "SW": {
+      "weight": 0.35,
+      "strata": {
+        "default": {
+          "rows": 100786,
+          "fraction": 0.6966854456848581,
+          "score": 98.6398812071612,
+          "baseline_score": 98.71563225845625,
+          "gain": -0.07575105129503161,
+          "zero_utility_fraction": 0.01293830492330284,
+          "partial_utility_fraction": 0.005764689540213919,
+          "weighted_total_gain_contribution": -0.018471129226401473
+        },
+        "continuous": {
+          "rows": 43879,
+          "fraction": 0.30331455431514187,
+          "score": 17.963442088248332,
+          "baseline_score": 17.631889060480088,
+          "gain": 0.3315530277682416,
+          "zero_utility_fraction": 0.6628455525422183,
+          "partial_utility_fraction": 0.3371544474577816,
+          "weighted_total_gain_contribution": 0.03519770059727602
+        }
+      },
+      "whole_score": 74.16954303207547,
+      "whole_gain": 0.04779020391678442,
+      "one_channel_whole_gain_to_gate": 0.2758853105612502,
+      "CONT_only_gain_to_gate_with_default_fixed": 0.9095683231692442
+    }
+  }
+}

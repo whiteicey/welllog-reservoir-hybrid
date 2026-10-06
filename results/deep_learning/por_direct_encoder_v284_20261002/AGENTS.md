@@ -1,0 +1,1 @@
+Fixedoriginalfold5/9curves206/Q/scoring80-14/min10/b64/64steps normalGPU max2. Prior151 weightsfrozen; newrawencoder+distribution jointonePORphase, no subsequentrepairchain. MaintainPROJECTS/README/EXPLORATIONS/atlas. Nootherfolds beforestrict808+gain.

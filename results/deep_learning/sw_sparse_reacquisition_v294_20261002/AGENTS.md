@@ -1,0 +1,1 @@
+Original104 prior only, jointnew sparseencoder/state/density, oneaddedSWphase/max8. Original9/206/splits/Q/scoring unchanged/max2GPU/80-14. MaintainPROJECTS/README/EXPLORATIONS/atlas. No otherfolds beforestrict80.8meaningfulgain, no repairstagechaining.

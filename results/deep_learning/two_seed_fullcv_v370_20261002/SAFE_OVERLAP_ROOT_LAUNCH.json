@@ -1,0 +1,18 @@
+{
+  "controller_pid": 77612,
+  "create_time": 1790934988.5738857,
+  "preserved_GPU_child": {
+    "pid": 74592,
+    "create_time": 1790934941.0796938,
+    "cmdline": [
+      "C:\\Users\\z5364\\.conda\\envs\\normal\\python.exe",
+      "-u",
+      "experiments/pure_dl/train_pair_fullcv_stage_v370.py",
+      "--stage",
+      "PERM154"
+    ]
+  },
+  "old_CPU_controller_stopped": true,
+  "started_epoch": 1790934988.5774515,
+  "GPU_workers_stopped": 0
+}

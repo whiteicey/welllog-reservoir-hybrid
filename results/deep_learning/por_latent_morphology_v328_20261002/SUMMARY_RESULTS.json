@@ -1,0 +1,83 @@
+{
+  "project": "por_latent_morphology_v328_20261002",
+  "scope": "obsolete-study",
+  "weights_retained": false,
+  "cleanup": "Obsolete artifacts removed by explicit user request. These are historical scores, not newly verified training.",
+  "results": [
+    {
+      "source": "FINAL.json",
+      "result": {
+        "report": {
+          "stage": "depth",
+          "target": "POR",
+          "target_score": 78.03096804927905,
+          "initial_score": 77.92638076072386,
+          "against_initial": 0.10458728855519439,
+          "against_v97_target": 0.47903124739404745,
+          "best_epoch": 29,
+          "stopped_epoch": 43,
+          "validation_rows": 144665,
+          "predictions_reproduced_exactly": true,
+          "frozen_parameters_exact": true,
+          "seconds": 1045.6278689000173,
+          "peak_MiB": 1813.982421875,
+          "complete_five_folds": false,
+          "early_terminated": false
+        },
+        "strata": {
+          "default": 97.41619593670846,
+          "continuous": 41.672298498230326
+        },
+        "actual_best_morphology_parameter_deltas": {
+          "dilation": 0.7699455618858337,
+          "erosion": 0.8132949471473694,
+          "norm.weight": 0.8065964579582214,
+          "norm.bias": 0.11632584035396576,
+          "projection.weight": 2.6116578578948975,
+          "projection.bias": 0.13073642551898956
+        },
+        "whole_vs_historical_reference": 0.0004152551344134281,
+        "CONT_vs_historical_reference": -0.002781408841073585,
+        "reference_whole": 78.03055279414464,
+        "reference_CONT": 41.6750799070714,
+        "independent_disk_reload": false,
+        "adopted": false,
+        "complete_five_folds": false,
+        "remaining_folds_started": false,
+        "screening_fold": 5,
+        "comparison_limits": "Historical302capacity76592 vs32882016; one depthscreen only, no puredepthcausalclaim. Freshchannelcontrol onlyifwholeCONTpositive.",
+        "timing": {
+          "started_epoch": 1790893271.886,
+          "pid": 43860,
+          "terminal": true,
+          "concurrent_gpu_jobs_at_launch": 2,
+          "includes": "prep initial training bestrestore",
+          "excludes": "implementation CPUfinalization",
+          "concurrent_route": "SW327all",
+          "individual_seconds": 1045.6278689000173,
+          "peak_MiB": 1813.982421875,
+          "process_creation_to_terminal_seconds": 1051.2261521816254,
+          "interpretation": "Actualconcurrencyrecorded; includesprep/initial/train/bestrestore, excludes implementation/CPUfinalization; notisolatedspeedranking"
+        }
+      }
+    },
+    {
+      "source": "LIVE_SCORE_SNAPSHOT.json",
+      "result": {
+        "epoch": 32,
+        "best_epoch": 29,
+        "whole": 78.03096804927905,
+        "strata": {
+          "default": 97.41619593670846,
+          "continuous": 41.672298498230326
+        },
+        "whole_vs_reference": 0.0004152551344134281,
+        "CONT_vs_reference": -0.002781408841073585,
+        "scope": "Live atomic ownbest snapshot, not terminalgain or independentdiskreload"
+      }
+    }
+  ],
+  "cleanup_completed": true,
+  "deleted_files": 10,
+  "deleted_bytes": 3498383
+}

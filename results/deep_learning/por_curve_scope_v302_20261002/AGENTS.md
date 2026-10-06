@@ -1,0 +1,1 @@
+Original151 frozenprior only, fresh290rawbody/readout+new19024interaction jointlytrain, no oldrepairweights. Grouped3x3/full9token sameparams/init, no diagonalonly zero-QK control. 9curves206+relative/Q50/originalfold5/seed/80-14/min10/max2GPU, onePORaddedphase/max8. Maintain README/PROJECTS/EXPLORATIONS/atlas; no frozenfiles/deliveries/otherfolds changed.

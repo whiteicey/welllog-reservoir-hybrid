@@ -1,0 +1,1 @@
+Maintain PROJECTS/README. Originalfold5/9curves/Q/score/max80pat14/normalGPUmax2. One addedSWphase jointly learns newencoder/readout. Original104 frozen/no repairedweights/no teacher/extra data/testlabels. Keep currentbest/default5/delivery. No below80.8 otherfolds.

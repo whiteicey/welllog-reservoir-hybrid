@@ -1,0 +1,72 @@
+{
+  "seed": 20261013,
+  "stage": "SW104",
+  "report": {
+    "stage": "SW104",
+    "target": "SW",
+    "target_score": 73.63533098562274,
+    "initial_score": 71.19711508147167,
+    "against_initial": 2.438215904151079,
+    "against_v97_target": -0.5068489190439607,
+    "best_epoch": 23,
+    "stopped_epoch": 33,
+    "validation_rows": 144665,
+    "predictions_reproduced_exactly": true,
+    "frozen_parameters_exact": true,
+    "gradient_groups": {
+      "SW104_complete_body": 0.2571432590484619
+    },
+    "effective_patience": 10,
+    "SOTA_broken": false,
+    "seconds": 426.1139567999635,
+    "peak_MiB": 1722.197265625,
+    "complete_five_folds": false,
+    "early_terminated": false
+  },
+  "timing": {
+    "seed": 20261013,
+    "stage": "SW104",
+    "pid": 58220,
+    "started_epoch": 1790922819.8504553,
+    "terminal": true,
+    "exit_code": 0,
+    "process_wall_seconds": 433.3467466831207,
+    "concurrency": "solo",
+    "includes": "preprocessing warmup training best restoration"
+  },
+  "terminal_pid_missing": true,
+  "observed_epoch": 1790923922.5587611,
+  "next_batch_snapshot": {
+    "status": "running",
+    "controller_pid": 74228,
+    "active_pid": 39412,
+    "seed": 20261014,
+    "stage": "SOURCE",
+    "started_epoch": 1790923826.431861,
+    "batch_started_epoch": 1790916379.5213826,
+    "concurrency": "serial",
+    "maximum_GPU_jobs": 2,
+    "completed_models": 4
+  },
+  "next_actual_cmdline": [
+    "C:\\Users\\z5364\\.conda\\envs\\normal\\python.exe",
+    "-u",
+    "experiments/pure_dl/train_complete_seed_source_v362.py",
+    "--out",
+    "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261014\\SOURCE",
+    "--learning-rate",
+    ".0006",
+    "--schedule",
+    "cosine",
+    "--fold",
+    "5",
+    "--seed",
+    "20261014"
+  ],
+  "next_actual_checkpoint_loads": [],
+  "completed_stages": 5,
+  "total_stages": 8,
+  "complete_seed_model": true,
+  "complete_five_folds": false,
+  "remaining_folds_started": false
+}

@@ -1,0 +1,19 @@
+{
+  "scores": {
+    "POR": 77.43091294437887,
+    "PERM": 89.3475027344081,
+    "SW": 73.62238476712884,
+    "TOTAL": 80.26873450885158
+  },
+  "mode": "mean_only",
+  "heads_checkpoint": "outputs/pure_dl_dual8222_v4_por_mean_only80_fold5/selected_heads.pt",
+  "trainable_parameters_this_stage": 2064,
+  "added_training_best_epoch": 12,
+  "frozen_backbone": "outputs/pure_dl_paired_local_context_router80_sequence/fold_5.pt",
+  "previous_fixed_recipe": "pure_dl_dual8222_selected_round2_fold5",
+  "development_selection": true,
+  "not_a_submission_replacement": true,
+  "all_144665_predictions_reproduced": true,
+  "PERM_SW_unchanged": true,
+  "extra_folds_started": false
+}

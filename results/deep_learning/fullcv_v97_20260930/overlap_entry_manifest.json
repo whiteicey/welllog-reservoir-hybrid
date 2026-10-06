@@ -1,0 +1,17 @@
+{
+  "source_sha256": {
+    "run_overlap_fullcv_v97.py": "2d694e30903a4f00ac8059d3b758535270ba37da063989bc7e80434003a755a4",
+    "record_overlap_fullcv_v97.py": "fda4c20eded5c9bfde810bd310531df0c216380e94abdac53d6e6941c35711d5",
+    "verify_fullcv_v97.py": "869910e4b8aa277395b728f2cbadf1e9c1e1741ce7e1d9012e68c463f1f49a64",
+    "cleanup_fullcv_v97.py": "d076cd6ab8f7ed6e59b2f91d8acf55953e20d506b7f977e12ce4d3e479a247fb"
+  },
+  "recipe_unchanged": true,
+  "maximum_gpu_jobs": 2,
+  "maximum_SW_stages": 1,
+  "minimum_free_gib": {
+    "root": 6.8,
+    "stage": 4
+  },
+  "training_process_adoption": "existing child stays alive; only owned CPU controller replaced",
+  "failure_policy": "no retry; retain active children and last states"
+}

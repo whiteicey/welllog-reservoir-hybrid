@@ -1,0 +1,27 @@
+{
+  "observed_epoch": 1790951674.5315342,
+  "explicit_user_reply": "重试断点续训就好了",
+  "maximum_GPU_jobs": 1,
+  "controller_pid": 89216,
+  "controller_create_time": 1790951615.3149629,
+  "controller_command": [
+    "C:\\Users\\z5364\\.conda\\envs\\normal\\python.exe",
+    "-u",
+    "D:\\match_predict\\welllog-reservoir-hybrid\\results\\deep_learning\\two_seed_fullcv_v370_20261002\\resume_sw351_fold4_serial_v370r5.py"
+  ],
+  "worker_pid": 52244,
+  "worker_create_time": 1790951619.6153302,
+  "worker_command": [
+    "C:\\Users\\z5364\\.conda\\envs\\normal\\python.exe",
+    "-u",
+    "experiments/pure_dl/train_pair_fullcv_stage_v370.py",
+    "--stage",
+    "SW351",
+    "--resume"
+  ],
+  "completed_epoch_to_restore": 11,
+  "config_unchanged": true,
+  "frozen_seven_source_hashes_exact": true,
+  "checkpoint_sha_verified_by_controller_before_launch": true,
+  "scope": "Approved launch/process verification; terminal recovery and full OOF remain pending."
+}

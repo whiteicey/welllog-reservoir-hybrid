@@ -1,0 +1,30 @@
+# v68 PERM门控与密度梯度
+
+## 探索重点与诊断依据
+v67 RQS相对同容量linear最终+0.221226，已磁盘验证并保留；但PERM88.827250低于当前89.396724。现有诊断默认95533点分数-0.422583、数值49132点-0.855092，折算TOTAL贡献各约-0.098/-0.102，不能归因只有单侧出错。本轮验证两项监督在共享表征上的梯度冲突，仅作为机制假设，不把诊断当证明。
+固定sum/project两项，同v67 RQS最佳第24轮完整函数、838211参数，无密度重置。两组都分别计算g_class=grad(Q*BCE平均/3)、g_density=grad(Q*NLL平均/3)，因此计算路径和工作量匹配。sum直接相加；project仅在共享body/norm/FiLM全局点积d<0时，使用原梯度对称去除冲突投影：a'=a-d/(||b||²+1e-12)*b，b'=b-d/(||a||²+1e-12)*a，再相加；非冲突直接相加。gate/output私有参数不投影，保持原自身梯度。不是修改损失权重或逐点选模型。
+
+## 数据与训练边界、已做
+原9曲线/206输入、训练64井/第五16井144665点、Q50、seed20261010、1024窗口中心128、原RQS正确密度/门控/官方评分和解码保持，仅PERM训练标签。输入整井库无标签/ID；不使用验证标签计算梯度或投影。原参数全可训练，重置AdamW3e-5/wd.01/clip2，cosine80*64至1e-5，max80/pat18/min10/b64/64steps。初始源模型纳入最佳，回退不算新学习收益；各组独立停止和checkpoint。
+已实现，未训练/无新成绩。直接运行，实际梯度记录冲突比例/cosine与投影系数、原始初始和最佳144665点、同初始哈希/来源哈希/三列分数核验。正候选额外原始输入磁盘重建，不做独立预检/审查。原子完整last_state含当前/最佳、优化器/调度/RNG/停止状态，仅显式恢复。
+
+## 收益、待做与不继续
+待两项完整配对、实际绝对差、保留/清理和PROJECTS/EXPLORATIONS/图谱。若project无最终配对收益，不扫当前投影幅度/阈值；只限当前PERM的两项损失，不泛化所有梯度优化。保留原v67正候选，不因新负结果删除其依赖。正配对收益低于SOTA仍可保留；暂时领先不算最终收益。
+最多2GPU，观察显存后显式启动第二项，无自动队列。两次autograd开销计入单项与真实总墙钟，记录并发和显存；加载/预热/训练/评估计入，代码和最终重建另计。负权重先清单后删除。第五严格>80.5且明显收益后才考虑其他折，完整原五折OOF>82未完成；无旧任务/其他折/交付修改。目标后独立确认及新目录交付。
+
+
+## v68 sum显式启动
+{"pid": 32448, "mode": "sum", "started_at": "2026-09-29T22:51:37.573098+08:00", "command": ["C:\\Users\\z5364\\.conda\\envs\\normal\\python.exe", "-X", "utf8", "-u", "D:\\match_predict\\welllog-reservoir-hybrid\\experiments\\pure_dl\\train_perm_gradient_v68.py", "--mode", "sum", "--out", "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_perm_gradient_v68_PERM_sum_fold5"], "automatic_queue": false}
+
+
+## v68 project显式启动
+{"pid": 48816, "mode": "project", "started_at": "2026-09-29T22:52:54.171629+08:00", "command": ["C:\\Users\\z5364\\.conda\\envs\\normal\\python.exe", "-X", "utf8", "-u", "D:\\match_predict\\welllog-reservoir-hybrid\\experiments\\pure_dl\\train_perm_gradient_v68.py", "--mode", "project", "--out", "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_perm_gradient_v68_PERM_project_fold5"], "automatic_queue": false}
+
+
+## v68最终结果
+两项完成，TOTAL=80.354325927816；project-sum PERM=+0.000000000000，训练后差=+0.006571455767；采用=None，保留=[]。负权重清理，源/交付不改，无其他折；目标未完成，见perm_gradient_v68_20260929/FINAL.md。
+
+
+## 2026-10-02 user-authorized artifact cleanup
+
+Obsolete artifacts have been removed; SUMMARY_RESULTS.json and SUMMARY.md retain historical scores and conclusions. Detailed logs/caches/weights are unavailable for these obsolete trials. Current V370 original + seed20261013, retained-model dependency closure, reusable source, original data and deliveries are preserved. See D:/match_predict/maintenance_cleanup_20261002/VERIFICATION.json.

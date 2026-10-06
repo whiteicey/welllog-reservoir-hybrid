@@ -1,0 +1,1 @@
+Only newBiGRU and massreadout train,all104weights frozen. True ownSW labels,finite-edge Gaussian gradients,originalfold5/Q50/score/80-14/max2GPU. One jointSWphase,no211/219/232 trainedweights,no stacks/otherfolds. MaintainPROJECTS.

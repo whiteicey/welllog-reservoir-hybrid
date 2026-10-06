@@ -1,0 +1,154 @@
+{
+  "project": "sw_latent_task_routing_v331_20261002",
+  "scope": "obsolete-study",
+  "weights_retained": false,
+  "cleanup": "Obsolete artifacts removed by explicit user request. These are historical scores, not newly verified training.",
+  "results": [
+    {
+      "source": "LIVE_SCORE_SNAPSHOT.json",
+      "result": {
+        "shared": {
+          "epoch": 14,
+          "best_epoch": 13,
+          "whole": 74.15226869613926,
+          "default": 98.5920559057825,
+          "continuous": 18.016340491051338,
+          "scope": "Live own whole-target best snapshot, not terminal/independent reload"
+        },
+        "task": {
+          "epoch": 15,
+          "best_epoch": 13,
+          "whole": 74.15166061845294,
+          "default": 98.58104205350017,
+          "continuous": 18.039633514083548,
+          "scope": "Live own whole-target best snapshot, not terminal/independent reload"
+        }
+      }
+    },
+    {
+      "source": "PAIRED_FINAL.json",
+      "result": {
+        "arms": {
+          "shared": {
+            "report": {
+              "stage": "shared",
+              "target": "SW",
+              "target_score": 74.15226869613926,
+              "initial_score": 74.12175268976877,
+              "against_initial": 0.030516006370490345,
+              "against_v97_target": 0.010088791472554703,
+              "best_epoch": 13,
+              "stopped_epoch": 27,
+              "validation_rows": 144665,
+              "predictions_reproduced_exactly": true,
+              "frozen_parameters_exact": true,
+              "seconds": 633.7055064000306,
+              "peak_MiB": 1822.85498046875,
+              "complete_five_folds": false,
+              "early_terminated": false
+            },
+            "strata": {
+              "default": 98.5920559057825,
+              "continuous": 18.016340491051338
+            },
+            "router_parameter_norms": {
+              "task_routers.0.weight": 0.26899537444114685,
+              "task_routers.0.bias": 0.006670622620731592,
+              "task_routers.1.weight": 0.26899537444114685,
+              "task_routers.1.bias": 0.006670622620731592
+            },
+            "whole_vs326": -0.017274335935638874,
+            "CONT_vs326": 0.05289840280298819,
+            "predefined27": {
+              "through_epoch": 27,
+              "best_epoch": 13,
+              "target_score": 74.15226869613926,
+              "control_actual_epochs": 27,
+              "nominal_budget": 80,
+              "comparison": "Predefined best through27 against historical326first plus task/shared paired natural27; laterbest not equalwork gain"
+            },
+            "stopped_before27": false,
+            "timing": {
+              "includes": "prep initial training bestrestore",
+              "terminal": true,
+              "pid": 5788,
+              "excludes": "implementation CPUfinalization",
+              "concurrent_gpu_tasks_at_launch": 1,
+              "started_epoch": 1790895016.103,
+              "individual_seconds": 633.7055064000306,
+              "peak_MiB": 1822.85498046875,
+              "terminal_epoch": 1790895654.2573857,
+              "process_creation_to_terminal_seconds": 638.15438580513
+            },
+            "independent_disk_reload": false
+          },
+          "task": {
+            "report": {
+              "stage": "task",
+              "target": "SW",
+              "target_score": 74.15166061845294,
+              "initial_score": 74.12175268976877,
+              "against_initial": 0.029907928684167473,
+              "against_v97_target": 0.009480713786231831,
+              "best_epoch": 13,
+              "stopped_epoch": 27,
+              "validation_rows": 144665,
+              "predictions_reproduced_exactly": true,
+              "frozen_parameters_exact": true,
+              "seconds": 630.0885740000522,
+              "peak_MiB": 1822.85498046875,
+              "complete_five_folds": false,
+              "early_terminated": false
+            },
+            "strata": {
+              "default": 98.58104205350017,
+              "continuous": 18.039633514083548
+            },
+            "router_parameter_norms": {
+              "task_routers.0.weight": 0.2695057988166809,
+              "task_routers.0.bias": 0.008541585877537727,
+              "task_routers.1.weight": 0.2290639728307724,
+              "task_routers.1.bias": 0.0449129119515419
+            },
+            "whole_vs326": -0.017882413621961746,
+            "CONT_vs326": 0.07619142583519789,
+            "predefined27": {
+              "through_epoch": 27,
+              "best_epoch": 13,
+              "target_score": 74.15166061845294,
+              "control_actual_epochs": 27,
+              "nominal_budget": 80,
+              "comparison": "Predefined best through27 against historical326first plus task/shared paired natural27; laterbest not equalwork gain"
+            },
+            "stopped_before27": false,
+            "timing": {
+              "includes": "prep initial training bestrestore",
+              "terminal": true,
+              "pid": 26068,
+              "excludes": "implementation CPUfinalization",
+              "concurrent_gpu_tasks_at_launch": 2,
+              "started_epoch": 1790895017.298,
+              "individual_seconds": 630.0885740000522,
+              "peak_MiB": 1822.85498046875,
+              "terminal_epoch": 1790895651.790583,
+              "process_creation_to_terminal_seconds": 634.4925827980042
+            },
+            "independent_disk_reload": false
+          }
+        },
+        "task_minus_shared_whole": -0.0006080776863228721,
+        "task_minus_shared_CONT": 0.023293023032209703,
+        "comparison_limits": "Same93159 parameter count and zero/uniform initialization, shared average-router has lower effective function capacity; task state router first-step gradient delayed by zero gate. Historical326 not concurrent replay; no causal scaling claim.",
+        "pair_wall_seconds": 638.15438580513,
+        "stagger_seconds": 1.195000171661377,
+        "adopted": false,
+        "screening_fold": 5,
+        "complete_five_folds": false,
+        "remaining_folds_started": false
+      }
+    }
+  ],
+  "cleanup_completed": true,
+  "deleted_files": 15,
+  "deleted_bytes": 6983434
+}

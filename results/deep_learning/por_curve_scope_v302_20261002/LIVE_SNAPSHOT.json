@@ -1,0 +1,22 @@
+﻿{
+    "grouped":  {
+                    "status":  "running",
+                    "pid":  33468,
+                    "stage":  "grouped",
+                    "epoch":  17,
+                    "best":  78.01412164536517,
+                    "best_epoch":  6,
+                    "bad":  11,
+                    "peak_MiB":  1813.37939453125
+                },
+    "full":  {
+                 "status":  "running",
+                 "pid":  69896,
+                 "stage":  "full",
+                 "epoch":  17,
+                 "best":  78.01683286923063,
+                 "best_epoch":  11,
+                 "bad":  6,
+                 "peak_MiB":  1813.37841796875
+             }
+}

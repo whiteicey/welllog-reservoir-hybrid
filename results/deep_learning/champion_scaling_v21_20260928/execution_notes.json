@@ -1,0 +1,20 @@
+{
+  "tool_lookup_failures": [
+    {
+      "phase": "confirm_original_scoring_definition",
+      "attempted_path": "package/train.py",
+      "result": "ENOENT: no such file",
+      "resolution": "Targeted source search located experiments/pure_dl/train.py; lines21-25 were then read successfully",
+      "training_affected": false
+    }
+  ],
+  "recorded_training_failures": [],
+  "completed_modes": ["base1", "ffn2", "ffn4"],
+  "all_modes_initial_predictions_equal_champion": true,
+  "all_modes_stopped_epoch": 18,
+  "all_modes_selected_epoch": 0,
+  "selected_total": 80.27413533779057,
+  "old_delivery_unchanged": true,
+  "remaining_folds_started": false,
+  "atlas_method": "report_scaling_v21.py maintains curation.json; build_atlas.py generates the offline snapshot. Historical curate.py is unchanged."
+}

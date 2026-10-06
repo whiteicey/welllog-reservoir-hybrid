@@ -1,0 +1,37 @@
+{
+  "original_total": 80.70612972323806,
+  "new_total": 80.5019511739133,
+  "total_gap": -0.20417854932476587,
+  "source_gap": -0.04047680947962817,
+  "stage_gain_differences": [
+    {
+      "stage": "POR113",
+      "delta_total": 0.02176887954209121
+    },
+    {
+      "stage": "POR151",
+      "delta_total": -0.11577793019546334
+    },
+    {
+      "stage": "PERM154",
+      "delta_total": -0.021281638758112818
+    },
+    {
+      "stage": "SW104",
+      "delta_total": -0.043077848646839806
+    },
+    {
+      "stage": "POR341",
+      "delta_total": 0.0019678712399382875
+    },
+    {
+      "stage": "PERM336",
+      "delta_total": 0.010849606755733987
+    },
+    {
+      "stage": "SW351",
+      "delta_total": -0.018150679782490187
+    }
+  ],
+  "interpretation": "Arithmetic decomposition only, not causal seed/patience attribution; original and new training budget, SOURCE, and Q differ."
+}

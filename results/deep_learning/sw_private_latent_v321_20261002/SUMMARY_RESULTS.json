@@ -1,0 +1,196 @@
+{
+  "project": "sw_private_latent_v321_20261002",
+  "scope": "obsolete-study",
+  "weights_retained": false,
+  "cleanup": "Obsolete artifacts removed by explicit user request. These are historical scores, not newly verified training.",
+  "results": [
+    {
+      "source": "CURRENT_EIGHT_STAGE_RECIPE.json",
+      "result": {
+        "scores": {
+          "POR": 78.03055279414464,
+          "PERM": 89.51580440487884,
+          "SW": 74.16603018049169,
+          "TOTAL": 80.69780794312307
+        },
+        "screening_fold": 5,
+        "validation_rows": 144665,
+        "strict_808_qualified": false,
+        "complete_five_folds": false,
+        "remaining_folds_started": false,
+        "total_training_stages": 8,
+        "stages": [
+          "SOURCE",
+          "POR113",
+          "POR151",
+          "PERM154",
+          "SW104",
+          "POR302full",
+          "PERM312rational",
+          "SW321own"
+        ],
+        "added_head_stages": {
+          "POR": 1,
+          "PERM": 1,
+          "SW": 1
+        },
+        "heads": {
+          "POR": {
+            "checkpoint": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_por_curve_scope_v302_fold5\\full\\model_best.pt"
+          },
+          "PERM": {
+            "checkpoint": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_perm_group_shape_v312_fold5\\rational\\model_best.pt"
+          },
+          "SW": {
+            "checkpoint": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_sw_private_latent_v321_fold5_r1\\own\\model_best.pt"
+          }
+        },
+        "verification": "Actual144665 fixed-column composition, ownbestRAM replay/frozenexact; not independentdiskreload",
+        "default_five_stage_unchanged": true,
+        "prior_optional8_artifacts_unchanged": true,
+        "gain_vs_previous_optional8": 0.0020999851151799476,
+        "gain_vs_default_five": 0.08533252512913236,
+        "selected_SW_alpha": 0.25,
+        "SW_CONT_vs297": 0.40860266034276194,
+        "SW_CONT_vs252": 0.026487287779772828,
+        "SW_own_vs_cross_CONT": 0.2802247078699942,
+        "SW_own_vs_cross_whole": -0.0005611755438508226,
+        "selection_reason": "Retain ownSWlatent whole+CONTpositive over297; cross wholeextra.000561 costsCONT.280225, no stronger continuousrepresentation",
+        "single_seed_only": true,
+        "single_seed_micro_whole_gain_only": true,
+        "independent_disk_reload": false,
+        "fullOOF_verified": false,
+        "source_donors_computed_but_unused_in_own_output": true
+      }
+    },
+    {
+      "source": "PAIRED_FINAL.json",
+      "result": {
+        "reports": {
+          "own": {
+            "stage": "own",
+            "target": "SW",
+            "target_score": 74.16603018049169,
+            "initial_score": 74.12175268976877,
+            "against_initial": 0.04427749072291931,
+            "against_v97_target": 0.02385027582498367,
+            "best_epoch": 13,
+            "stopped_epoch": 22,
+            "validation_rows": 144665,
+            "predictions_reproduced_exactly": true,
+            "frozen_parameters_exact": true,
+            "seconds": 690.1569985999959,
+            "peak_MiB": 1560.1806640625,
+            "complete_five_folds": false,
+            "early_terminated": true
+          },
+          "cross": {
+            "stage": "cross",
+            "target": "SW",
+            "target_score": 74.16659135603554,
+            "initial_score": 74.12175268976877,
+            "against_initial": 0.04483866626677013,
+            "against_v97_target": 0.02441145136883449,
+            "best_epoch": 13,
+            "stopped_epoch": 25,
+            "validation_rows": 144665,
+            "predictions_reproduced_exactly": true,
+            "frozen_parameters_exact": true,
+            "seconds": 741.9806222000043,
+            "peak_MiB": 1560.1806640625,
+            "complete_five_folds": false,
+            "early_terminated": true
+          }
+        },
+        "strata": {
+          "own": {
+            "default": 98.65751583800618,
+            "continuous": 17.911355427689944
+          },
+          "cross": {
+            "default": 98.78032220413519,
+            "continuous": 17.63113071981995
+          }
+        },
+        "best_latent_fusion_delta_norms": {
+          "own": {
+            "0.weight": 0.8166476488113403,
+            "0.bias": 0.6591593623161316,
+            "1.weight": 4.427605628967285,
+            "1.bias": 0.22713764011859894,
+            "3.weight": 1.8952250480651855,
+            "3.bias": 0.10990913212299347
+          },
+          "cross": {
+            "0.weight": 0.85159832239151,
+            "0.bias": 0.6139662265777588,
+            "1.weight": 4.590020179748535,
+            "1.bias": 0.20100128650665283,
+            "3.weight": 2.335153102874756,
+            "3.bias": 0.11762034147977829
+          }
+        },
+        "cross_minus_own": 0.0005611755438508226,
+        "cross_minus_own_CONT": -0.2802247078699942,
+        "gain_vs297": {
+          "own": 0.005999957471942707,
+          "cross": 0.00656113301579353
+        },
+        "CONT_vs297": {
+          "own": 0.40860266034276194,
+          "cross": 0.12837795247276773
+        },
+        "CONT_vs252": {
+          "own": 0.026487287779772828,
+          "cross": -0.2537374200902214
+        },
+        "timing": {
+          "started_epoch": 1790888865.05,
+          "launch_epochs": {
+            "cross": 1790888865.05,
+            "own": 1790888913.176
+          },
+          "launch_stagger_seconds": 48.126,
+          "start_evidence": "Live Win32_Process.CreationDate89936/75612",
+          "terminal": true,
+          "prelaunch_preparation_included": false,
+          "failed_initialization_attempt_included": false,
+          "failed_attempt": "original321cross86524 preserved separately; noepochs",
+          "concurrency": "two after stagger",
+          "campaign_started_epoch_approx": 1790888818.4072406,
+          "campaign_start_evidence": "Original failed startup stdout Windows file creation time; approximate processlaunch",
+          "campaign_includes_failed_startup_and_fix": true,
+          "same_work_pair_wall_seconds": 746.5137190818787,
+          "individual_seconds": {
+            "own": 690.1569985999959,
+            "cross": 741.9806222000043
+          },
+          "peak_MiB": {
+            "own": 1560.1806640625,
+            "cross": 1560.1806640625
+          },
+          "interpretation": "Two overlapping jobs after48.126s stagger, both include donorforward/data/initial/train/bestrestore. Pair creation-to-lastterminal excludesprelaunch andfailedstartup/CPUfinalization. Not isolatedspeed comparison.",
+          "campaign_wall_seconds_including_failed_startup_fix": 793.1564784049988
+        },
+        "screening_fold": 5,
+        "complete_five_folds": false,
+        "remaining_folds_started": false,
+        "independent_disk_reload": false,
+        "adopted": true,
+        "feature_rank_and_context_differ": true,
+        "adopted_arm": "own",
+        "cross_adopted": false,
+        "closure": "Cross transfer no useful continuous pairedgain, no crosslatent expansion. Own latent absolutewhole/CONTpositive retainedoptional8; microwhole gain not robust/finalOOF.",
+        "actual_eight_stage_scores": {
+          "POR": 78.03055279414464,
+          "PERM": 89.51580440487884,
+          "SW": 74.16603018049169,
+          "TOTAL": 80.69780794312307
+        }
+      }
+    }
+  ],
+  "cleanup_completed": true,
+  "deleted_files": 18,
+  "deleted_bytes": 10453065
+}

@@ -1,0 +1,31 @@
+{
+  "total_training_stages": 6,
+  "source_sha256": "45a09476e3126820688420579c100c86e0e4f45df335904380a298cf5f66b9a9",
+  "parent_sha256": "39f2255b8fe61fa74607af027ece1dd352e5e2d0729b9bce95d1424c1b227603",
+  "candidates": [
+    "raw"
+  ],
+  "epochs": 80,
+  "patience": 14,
+  "maximum_GPU_jobs": 2,
+  "added_head_stages": {
+    "POR": 1,
+    "PERM": 0,
+    "SW": 0
+  },
+  "remaining_folds_started": false,
+  "prepared_not_launched": true,
+  "direct_aux_CE": 1.0,
+  "alpha_ramp_epochs": 5,
+  "final_alpha": 0.1,
+  "reference_final_alpha": null,
+  "primary_control": "POR151 retained77.926380760724",
+  "no274_weights_loaded": true,
+  "joint_RPS": true,
+  "physical_tolerance": 0.08,
+  "no_trained_repair_weights": true,
+  "failed284_wrong_eval_target": true,
+  "no284trained_weights_loaded": true,
+  "initial_target_score_check": "same ordinary initial evaluation assert POR151 within1e-3; no extraeval",
+  "scoring_column": "self.c=0/POR"
+}

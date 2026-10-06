@@ -1,0 +1,59 @@
+{
+  "scores": {
+    "POR": 77.551936801885,
+    "PERM": 89.39672404936582,
+    "SW": 73.713975628494,
+    "TOTAL": 80.35432592781643
+  },
+  "choices": [
+    {
+      "target": "POR",
+      "key": "v31_POR_anchored",
+      "architecture": "same_bound_reparameterized_routes",
+      "target_score": 77.551936801885,
+      "best_epoch": 7,
+      "checkpoint": "outputs\\pure_dl_mechanism_v31_POR_fold5\\anchored\\model_best.pt",
+      "model_module": "por_reparam_v31",
+      "builder": "Network(target,master,modes=(mode,)); heads[mode].load_state_dict(checkpoint[delta_state]); SW master[v31_knots] from checkpoint config metadata",
+      "mode": "anchored",
+      "factor": "route_parameterization",
+      "parent_recipe": "results\\deep_learning\\champion_coadapt_v30_20260929\\CURRENT_RECIPE.json",
+      "retained_v28_checkpoint": "outputs\\pure_dl_champion_route_v28_POR_fold5\\conditional\\model_best.pt",
+      "retained_v29_checkpoint": "outputs\\pure_dl_split_route_v29_POR_fold5\\split\\model_best.pt"
+    },
+    {
+      "target": "PERM",
+      "key": "v29_PERM_coupled",
+      "architecture": "coupled_or_split_residual_routes",
+      "target_score": 89.39672404936582,
+      "best_epoch": 2,
+      "checkpoint": "outputs\\pure_dl_split_route_v29_PERM_fold5\\coupled\\model_best.pt",
+      "factor": "atom_conditional_routing",
+      "source_checkpoint": "outputs\\pure_dl_independent_v8_PERM_dual80_fold5\\model_best.pt",
+      "model_module": "champion_split_route_v29",
+      "builder": "Network(target,master,modes=(mode,)); heads[mode].load_state_dict(checkpoint[delta_state])",
+      "mode": "coupled",
+      "parent_recipe": "results\\deep_learning\\champion_route_v28_20260929\\CURRENT_RECIPE.json",
+      "retained_v28_checkpoint": "outputs\\pure_dl_champion_route_v28_PERM_fold5\\joint\\model_best.pt"
+    },
+    {
+      "target": "SW",
+      "mode": "additive",
+      "key": "v56_SW_additive",
+      "architecture": "private_SW_internal_feedforward_interaction",
+      "model_module": "sw_interaction_v56",
+      "checkpoint": "outputs\\pure_dl_sw_interaction_v56_SW_additive_fold5\\model_best.pt",
+      "target_score": 73.713975628494,
+      "best_epoch": 11,
+      "builder": "load_data builds input-only banks and train64 reference; Network(mode,metadata); load_state_dict(state_dict); Evaluator supplies own-well bank",
+      "parent_recipe": "results\\deep_learning\\sw_sharpness_v55_20260929\\CURRENT_RECIPE.json"
+    }
+  ],
+  "source_preprocessing": "results/deep_learning/champion_scaling_v21_20260928/data_manifest.json",
+  "amplitude_metadata": "results/deep_learning/feature_structure_v20_20260928/feature_manifest.json",
+  "reference_recipe": "results\\deep_learning\\sw_density_private_v62_20260929\\CURRENT_RECIPE.json",
+  "original_fifth_development_selection": true,
+  "complete_five_folds": false,
+  "remaining_folds_started": false,
+  "old_delivery_unchanged": true
+}

@@ -1,0 +1,53 @@
+{
+  "scores": {
+    "POR": 78.03055279414464,
+    "PERM": 89.5155547932572,
+    "SW": 74.16003022301975,
+    "TOTAL": 80.69562059394032
+  },
+  "screening_fold": 5,
+  "validation_rows": 144665,
+  "strict_808_qualified": false,
+  "complete_five_folds": false,
+  "remaining_folds_started": false,
+  "total_training_stages": 8,
+  "stages": [
+    "SOURCE",
+    "POR113",
+    "POR151",
+    "PERM154",
+    "SW104",
+    "POR302full",
+    "PERM291point",
+    "SW297well"
+  ],
+  "added_head_stages": {
+    "POR": 1,
+    "PERM": 1,
+    "SW": 1
+  },
+  "heads": {
+    "POR": {
+      "checkpoint": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_por_curve_scope_v302_fold5\\full\\model_best.pt",
+      "sha256": "d7f916b56e739ec08434e9a487b8fb31b72aeb10eebb5f87a93f05e4c55fd441"
+    },
+    "PERM": {
+      "checkpoint": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_perm_sparse_reacquisition_v291_fold5\\point\\model_best.pt",
+      "sha256": "d6f002c6f2ac271919cc82861efcaa8b77d9816b0fb33aec7ec1258d82ba2654"
+    },
+    "SW": {
+      "checkpoint": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_sw_raw_well_condition_v297_fold5\\well\\model_best.pt",
+      "sha256": "c80fa560e83cdb052037e3b22afeaefe51ccbe8c7ce3c00d4101d21b48eb1481"
+    }
+  },
+  "pred_sha256": "a3c07c42536536d90b12faf7faac601a8904d09a9c97dc24e84ce5c34f76717f",
+  "verification": "Actual144665 composition; each trained own-best RAM replay/frozen exact. Not independent diskreload.",
+  "default_five_stage_unchanged": true,
+  "previous_seven_stage_unchanged": true,
+  "gain_vs_default_five": 0.0831451759463846,
+  "selected_POR_alpha": 0.25,
+  "selected_PERM_alpha": 0.3,
+  "selected_SW_alpha": 0.25,
+  "gain_vs_previous_optional8": 0.002107871666865435,
+  "single_seed_only": true
+}

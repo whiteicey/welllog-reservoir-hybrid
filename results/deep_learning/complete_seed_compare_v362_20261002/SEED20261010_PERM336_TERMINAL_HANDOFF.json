@@ -1,0 +1,80 @@
+{
+  "seed": 20261010,
+  "stage": "PERM336",
+  "report": {
+    "stage": "PERM336",
+    "target": "PERM",
+    "target_score": 89.49625487509155,
+    "initial_score": 89.35243145677491,
+    "against_initial": 0.14382341831664291,
+    "against_v97_target": 0.09953082572573635,
+    "best_epoch": 5,
+    "stopped_epoch": 15,
+    "validation_rows": 144665,
+    "predictions_reproduced_exactly": true,
+    "frozen_parameters_exact": true,
+    "gradient_groups": {
+      "PERM_sparse_reacquisition_body": 0.047186799347400665,
+      "PERM_direct_categorical_readout": 0.029826924204826355,
+      "PERM_joint_body_readout_shape": 0.0034715058282017708,
+      "PERM_joint_low_rank_feature_adapter": 0.001383201451972127
+    },
+    "effective_patience": 10,
+    "SOTA_broken": false,
+    "seconds": 157.01429090002785,
+    "peak_MiB": 896.34375,
+    "complete_five_folds": false,
+    "early_terminated": false
+  },
+  "timing": {
+    "seed": 20261010,
+    "stage": "PERM336",
+    "pid": 13648,
+    "started_epoch": 1790916018.031956,
+    "terminal": true,
+    "exit_code": 0,
+    "process_wall_seconds": 168.8382031917572,
+    "concurrency": "solo",
+    "includes": "preprocessing warmup training best restoration"
+  },
+  "terminal_pid_missing": true,
+  "observed_epoch": 1790916397.0111132,
+  "next_batch_snapshot": {
+    "status": "running",
+    "controller_pid": 74228,
+    "active_pid": 47572,
+    "seed": 20261010,
+    "stage": "SW351",
+    "started_epoch": 1790916379.5797179,
+    "batch_started_epoch": 1790916379.5213826,
+    "concurrency": "serial",
+    "maximum_GPU_jobs": 2,
+    "completed_models": 0
+  },
+  "next_actual_cmdline": [
+    "C:\\Users\\z5364\\.conda\\envs\\normal\\python.exe",
+    "-u",
+    "experiments/pure_dl/train_complete_seed_stage_v362r1.py",
+    "--stage",
+    "SW351"
+  ],
+  "next_actual_checkpoint_loads": [
+    {
+      "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261010\\SOURCE\\prepared_data.pt",
+      "sha256": "07bf3356b59a2473fb1384e7b3a68e2bf5c081c476c42cfd3b0eebd2f2590165"
+    },
+    {
+      "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261010\\SOURCE\\fold_5.pt",
+      "sha256": "7ce54c5a19dcdd61ef89ce21b2aaac621ee171e51ad7250059addc95f6230556"
+    },
+    {
+      "path": "D:\\match_predict\\welllog-reservoir-hybrid\\outputs\\pure_dl_complete_seeds_v362_fold5\\seed_20261010\\SW104\\model_best.pt",
+      "sha256": "408466bb2f38aadcf61d266da5ea8df08355b17604c5f6d26d0b09ab2967c0e9"
+    }
+  ],
+  "completed_stages": 7,
+  "total_stages": 8,
+  "complete_seed_model": false,
+  "complete_five_folds": false,
+  "remaining_folds_started": false
+}

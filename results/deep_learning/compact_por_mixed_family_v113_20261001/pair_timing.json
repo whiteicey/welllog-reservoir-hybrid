@@ -1,0 +1,14 @@
+{
+  "pair_wall_seconds": 528.4043786525726,
+  "launch_to_report_overlap_seconds": 414.47538471221924,
+  "actual_mode": "concurrent",
+  "single_training_seconds": {
+    "t3_cauchy": 523.3879553999868,
+    "cauchy_t3": 409.4949958999932
+  },
+  "peak_MiB": {
+    "t3_cauchy": 920.84765625,
+    "cauchy_t3": 920.84765625
+  },
+  "scope": "first launch to final report, loads/warmup/evaluation/IO included; each single timing includes its contention; no equivalent two-run serial benchmark or speedup claim"
+}

@@ -1,0 +1,1 @@
+MaintainPROJECTS/README actualevidence. Original151only/fresh302encoder/readout+326morphologycode(noSWweights) alljoint inonePORphase. Originalinputs/Q/split/score/80-14/max2GPU/no automaticqueue/otherfolds. Preserveactive/best/deliveries.

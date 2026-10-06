@@ -1,0 +1,10 @@
+{
+  "scope": "unstarted sw_density only; keep original SW joint source/config/hash frozen",
+  "parent_driver_sha256": "3d0f59751e28d16f270f0275798907277d6797afee795dea99176618e86593b2",
+  "new_entry": "train_compact_density_fast_v100.py",
+  "new_entry_sha256": "054e7e5974edcbbf36c73c054e0bce29fb9effa4401da1351981696f6bca58fc",
+  "loss": "same target Gaussian NLL+BCE and Q; utility coefficient zero, unnecessary utility branch omitted",
+  "training_stage_count_unchanged": 5,
+  "sam_rng_and_windows_unchanged": true,
+  "numerical_ablation_not_claimed": true
+}

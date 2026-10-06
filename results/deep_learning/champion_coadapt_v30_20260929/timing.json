@@ -1,0 +1,26 @@
+{
+  "max_parallel_target_jobs": 2,
+  "first_launch_to_last_finish_seconds": 329.174897,
+  "targets": {
+    "POR": {
+      "process_seconds": 170.71866459999728,
+      "peak_allocated_MiB": 718.45458984375,
+      "median_epoch_seconds": 8.56265600000188,
+      "scope": "one process for two alternatives with shared frozen backbone computation"
+    },
+    "PERM": {
+      "process_seconds": 153.8507716000022,
+      "peak_allocated_MiB": 717.8115234375,
+      "median_epoch_seconds": 7.929286200000206,
+      "scope": "one process for two alternatives with shared frozen backbone computation"
+    },
+    "SW": {
+      "process_seconds": 132.3902218000003,
+      "peak_allocated_MiB": 717.90966796875,
+      "median_epoch_seconds": 6.798551899999438,
+      "scope": "one process for two alternatives with shared frozen backbone computation"
+    }
+  },
+  "final_replay_seconds": 4.099970100003702,
+  "scope": "overall launch interval includes staged gaps and preparation, training and restoration; excludes code implementation/final replay"
+}

@@ -1,0 +1,77 @@
+{
+  "observed_epoch": 1790935811.06406,
+  "active_jobs": [
+    {
+      "identity": "seed_20261013",
+      "fold": 2,
+      "stage": "SOURCE",
+      "pid": 75188,
+      "actual_alive": true
+    },
+    {
+      "identity": "original",
+      "fold": 2,
+      "stage": "SW104",
+      "pid": 91432,
+      "actual_alive": true
+    }
+  ],
+  "SOURCE_epoch_intervals": [
+    {
+      "first_epoch": 5,
+      "last_epoch": 10,
+      "epochs": 5,
+      "serial_seconds": 73.69999999999999,
+      "parallel_seconds": 163.5,
+      "parallel_over_serial": 2.218453188602443
+    },
+    {
+      "first_epoch": 10,
+      "last_epoch": 15,
+      "epochs": 5,
+      "serial_seconds": 89.19999999999999,
+      "parallel_seconds": 184.40000000000003,
+      "parallel_over_serial": 2.0672645739910323
+    },
+    {
+      "first_epoch": 5,
+      "last_epoch": 15,
+      "epochs": 10,
+      "serial_seconds": 162.89999999999998,
+      "parallel_seconds": 347.90000000000003,
+      "parallel_over_serial": 2.135666052793125
+    }
+  ],
+  "SW_epoch_intervals": [
+    {
+      "fold": 1,
+      "identity": "seed_20261013",
+      "epochs": [
+        6,
+        15
+      ],
+      "mean_epoch_seconds": 12.60708385001053,
+      "total_epoch_seconds": 126.07083850010531,
+      "concurrency": "solo"
+    },
+    {
+      "fold": 2,
+      "identity": "original",
+      "epochs": [
+        6,
+        15
+      ],
+      "mean_epoch_seconds": 21.704543180007022,
+      "total_epoch_seconds": 217.04543180007022,
+      "concurrency": "safe overlap; actual peer verified"
+    }
+  ],
+  "SOURCE_comparison": "Same original fold2/source code/batch64/64steps; original and seed13 differ in RNG/learned Q. Observational, not matched-seed replay.",
+  "SW_comparison": "Same stage code; seed13/fold1 proven solo terminal compared with original/fold2 actual overlap. Different seeds/folds, observational not same-data replay. Original/fold1 SW104 was overlapped and is not a solo control.",
+  "included": "SOURCE cumulative timer includes initialization before epoch5, which cancels in intervals; interval includes training, validation, train-only Q probes and checkpoint work. SW records per-epoch wall only. Complete process wall also includes loading/preprocessing/warmup/restore/write.",
+  "driver_snapshot": "6965 MiB, 5031 MiB, 90 %",
+  "maximum_GPU_jobs": 2,
+  "training_changed": false,
+  "conclusion": "Individual tasks slow during overlap. Overall acceleration is unproven until complete same-work batch wall is measured; do not sum overlapping process times as wall time. No new benchmark/training launched.",
+  "pending": "Both seeds original folds2-4, full-stage terminal timings, native fusion scans and full OOF. Record serial/parallel periods and approval waiting separately in final timing report."
+}

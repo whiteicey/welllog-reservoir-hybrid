@@ -1,0 +1,10 @@
+{
+  "project": "perm_depth_residual_v369_20261002",
+  "scope": "obsolete-study",
+  "weights_retained": false,
+  "cleanup": "Obsolete artifacts removed by explicit user request. These are historical scores, not newly verified training.",
+  "results": [],
+  "cleanup_completed": true,
+  "deleted_files": 5,
+  "deleted_bytes": 31457
+}

@@ -1,0 +1,29 @@
+{
+  "overlap_other_study": true,
+  "includes_startup_data_initial_final_eval": true,
+  "arms": {
+    "ordinary": {
+      "process_creation_utc_seconds": 1790870771.769,
+      "pid": 67912
+    },
+    "balanced": {
+      "process_creation_utc_seconds": 1790871110.264,
+      "pid": 48848
+    }
+  },
+  "pair_wallclock_pending": false,
+  "excludes_code_preparation_CPUassembly": true,
+  "maximum_GPU_jobs": 2,
+  "staggered_sequential_pair_with_other_experiments_overlap": true,
+  "actual_pair_batch_wall_to_last_report": 660.5007493495941,
+  "individual_training_seconds": {
+    "ordinary": 230.58517959999153,
+    "balanced": 317.1741658000392
+  },
+  "actual_epochs": {
+    "ordinary": 18,
+    "balanced": 24
+  },
+  "matched_prefix_epochs": 18,
+  "endpoint": "lastreportwrite excludesprocess teardown"
+}

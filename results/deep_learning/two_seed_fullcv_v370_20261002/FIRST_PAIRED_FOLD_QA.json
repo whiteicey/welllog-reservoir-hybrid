@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "observed_epoch": 1790933949.5623002,
+  "paired_fold": 1,
+  "rows": 144621,
+  "all_native_scan_terminal_and_replay_coverage_endpoints_exact": true,
+  "fixed_ratios_unchanged": true,
+  "fixed_TOTAL": 82.97665676571843,
+  "diagnostic_TOTAL": 82.99353461851494,
+  "three_serial_scan_invocation_wall_seconds": 70.24950408935547,
+  "extra_training_stages": 0,
+  "atlas_preserves_single_fold_and_diagnostic_scopes": true,
+  "active_source": {
+    "pid": 52616,
+    "fold": 2,
+    "identity": "original"
+  },
+  "complete_five_fold_OOF": false
+}

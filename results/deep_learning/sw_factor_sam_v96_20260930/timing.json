@@ -1,0 +1,27 @@
+{
+  "candidates": [
+    {
+      "mode": "likelihood",
+      "start": "2026-09-30T16:25:19.282636+08:00",
+      "end": "2026-09-30T16:31:27.875094+08:00",
+      "seconds": 364.2359224999964,
+      "peak_allocated_MiB": 1875.16455078125,
+      "peak_reserved_MiB": 2068.0
+    },
+    {
+      "mode": "joint",
+      "start": "2026-09-30T16:32:18.465681+08:00",
+      "end": "2026-09-30T16:37:10.333777+08:00",
+      "seconds": 287.0620190000045,
+      "peak_allocated_MiB": 1875.16455078125,
+      "peak_reserved_MiB": 2068.0
+    }
+  ],
+  "first_launch_to_last_completion_seconds": 711.051141,
+  "sum_candidate_seconds": 651.2979415000009,
+  "first_launch_to_verified_seconds": 780.167812,
+  "actual_process_concurrency": 1,
+  "overlap_seconds": 0.0,
+  "finalization_seconds": 3.987836399988737,
+  "scope": "loading/warmup/train/eval/save included; explicit serial launch gap in total wall; authoring/atlas separate"
+}

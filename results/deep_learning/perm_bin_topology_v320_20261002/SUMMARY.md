@@ -1,0 +1,35 @@
+# Historical summary
+
+Focus and explored conditions: see retained README/FINAL and SUMMARY_RESULTS.json.
+
+Gain: scores and original comparison deltas are retained; incomplete folds remain incomplete.
+
+Not worth extending: original negative conclusions are retained below where available.
+
+Detailed logs, weights and caches were removed by the user request; rerunning requires retraining.
+
+## README.md
+
+# V320 PERM target-bin topology
+
+Focus: continuous value neighborhood in direct categorical readout. Fresh291point joint raw encoder/readout from original154 only; no291/312 trained repairs. Two arms share36555 activeparameters (36466+89), same seeded initialized direct logits and training, differ only fixed ordering fed to local bin-axis convolution. Ordered transformed target bins versus endpoint-preserving shuffled1..254 (seed20261320), inverse before prediction. Bin0/255 remain fixed. This tests local numerical adjacency, not depth convolution or density penalty.
+
+Mechanism: center direct256 logits; shared Conv1d1?8?1, kernel5 twice, reflectpadding2, GELU, final weight/bias zero. Add bounded0.5tanh(delta/0.5) to original directlogits. Effective9bin neighborhood. Main and auxiliary CE consume same logits; no new loss. First-convolution gradient delayed by zero output; final bias uniformshift initially cancels softmax but can become effective under nonlinear bound. Original prior206 remains unchanged. Joint new raw body/readout, source154 frozen. One added PERM phase (6 total standalone,?8 assembled), no trained repair chaining.
+
+Controls: originalfifth/Q50/source/scoring/seed20261010 unchanged; alpha0.3 ramp5, same auxiliaryCE1/RPS/AdamW3e-4/80-14/min10/b64/64steps. Mask/gate and all other targets fixed. Same active parameters/init. Shuffling changes local numeric adjacency 
+
+ature; per-stratum whole/CONT actual comparison after finish. Diskreload only promotion/final. StrictTOTAL>80.8 and useful gain before any remaining folds; completeOOF>82 unmet. Source historical255 value-coordinate scoring/268 prototypes/312 hiddenrational/191IQF differ; research note records bounded novelty.
+
+Results: prepared/untrained, gain unproven. No automatic queue or GPU launch while319 occupies two slots. If ordered does not improve CONT/whole over shuffled and retained312, close this localbin setup; no kernelwidth/loss smoothing grid. Timing must record individual and pairwall, overlapping/staggered process, GPU peak and data/warmup inclusion.
+
+Done: new source/trainer/plan/local syntax compilation. Next: launch only confirmed free slots then compare both best results. Unfinished: real gain, qualification, fullOOF. Optional after target: independent replication if meaningful.
+
+LIVE320 confirmed ordered PID17508/shuffled PID82892; same initialPERM89.4055666268939 (small priorprobability flooring numerical difference from15489.40556485691894, not learned gain). New rawencoder/readout jointly training; peak966.646MiB per process. {"ordered": {"status": "running", "pid": 17508, "stage": "ordered", "epoch": 5, "best": 89.50635690124827, "best_epoch": 5, "bad": 0, "peak_MiB": 966.646484375}, "shuffled": {"status": "running", "pid": 82892, "stage": "shuffled", "epoch": 2, "best": 89.4160403193998, "best_epoch": 2, "bad": 0, "peak_MiB": 966.646484375}}; early snapshot only, not mechanism gain/adoption. No fullOOF or otherfolds.
+
+V320 final PERM89.506356901248, gain+0.100792044329, actualTOTAL80.647752633509; sixphases inclsource/one addedPERMstage, strict808=False; all144665replay/frozenexact, best/stop5/14, trainingseconds240.581778/peakMiB966.646484. No otherfolds.
+
+V320 final PERM89.511618071525, gain+0.106053214606, actualTOTAL80.649594043106; sixphases inclsource/one addedPERMstage, strict808=False; all144665replay/frozenexact, best/stop5/12, trainingseconds222.299530/peakMiB966.646484. No otherfolds.
+
+FINAL320 CLOSED: ordered89.50635690124827/shuffled89.51161807152464, both best5; earlystop14/12. Ordered?shuffled whole?0.005261170276/CONT+0.000135714335. Bothwholebelow312 by0.0094475/0.00418633; CONTvs312+.00534634/+.00521063 is small tradeoff, not useful paired topology gain. Allnewmoduleweights/biases updated, not dead; own144665RAM replay/frozenexact, no independentdiskreload. Individual240.582/222.300s peak966.646MiB; concurrentpair252.874s/stagger24.687s. No adoption/kernelwidth/lossweight grid/otherfolds; default5 and optional8 unchanged.
+
+
