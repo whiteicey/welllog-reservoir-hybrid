@@ -1,0 +1,25 @@
+{
+ "detail": {
+  "POR": {
+   "alpha": 1.0,
+   "take_dl_on_disagree": true,
+   "score": 79.87834049372462
+  },
+  "PERM": {
+   "alpha": 1.0,
+   "take_dl_on_disagree": true,
+   "score": 90.76426687383042
+  },
+  "SW": {
+   "alpha": 0.75,
+   "take_dl_on_disagree": true,
+   "score": 75.64963292781653
+  }
+ },
+ "total": 82.20836707869381,
+ "per_target": {
+  "POR": 79.87834049372462,
+  "PERM": 90.76426687383042,
+  "SW": 75.64963292781653
+ }
+}

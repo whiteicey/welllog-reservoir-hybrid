@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "version": "v6b",
+  "feature_name": "原种子双骨架 U-Net / Original-Seed Dual-backbone U-Net",
+  "archived_on": "2026-10-09",
+  "method": "v370 纯深度学习 8 阶段链、单一 original 种子 × 5 折（predict_single.py --seed-identity original）。",
+  "source": {
+    "kind": "team_built_fusion_or_variant",
+    "parent_packages": {
+      "v3": "hybrid_build runtime (from outputs/submission_v3_structured/submission_code.zip sha 47f4ada4; A 83.2579)",
+      "v97": "dl_method/最高分/submission_code.zip (A 83.9329)",
+      "v370": "dl_method/双种子/submission_code.zip (A 83.6076)"
+    },
+    "vote_or_mix_scripts": "server experiment zone scripts (harness.py, fusion_* / vote_fusion / build_hybrid_*), documented by docs/paradox_dl_fusion_20261008.md and results/dl_fusion/"
+  },
+  "leaderboard": {
+    "board": "A",
+    "score": 83.5547,
+    "source": "user_reported_after_submission",
+    "independently_verified_on_platform": false,
+    "evaluated_test_wells": 5,
+    "total_test_wells": 10
+  },
+  "cross_validation": {
+    "score": 81.9896,
+    "status": "oof_from_teammate_delivery_verified_on_h20",
+    "reason": "reproduced OOF TOTAL 81.98955300312466 exactly on H20 (diagnostic scope 'historical development OOF, no new ratio tuning')"
+  },
+  "reproduction": {
+    "result_sha256": "d7b6c5d29d27de7f259a73637410c574230217a2747e6fed95fe19a20b236ca6",
+    "runtime_structure": "predict_single.py, five fold bundles with two seeds, single seed selected",
+    "device": "cuda",
+    "seconds": 29.43
+  },
+  "result_zip": {
+    "bytes": 580370,
+    "inner_result_json_sha256": "d7b6c5d29d27de7f259a73637410c574230217a2747e6fed95fe19a20b236ca6"
+  }
+}

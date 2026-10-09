@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "version": "v6",
+  "feature_name": "锐利 U-Net 融合 / Sharp U-Net Fusion",
+  "archived_on": "2026-10-09",
+  "method": "v97 基座 + 三模型默认态二票否决仲裁（仅当树-序列混合 v3 与 v370 同时反对 v97 的默认态判定时才翻案）；翻案至连续取 mean(v3,v370)、翻案至默认取默认原子；改动 2,144/95,948 行（2.23%），其余行 = v97 原封。无拟合参数。",
+  "source": {
+    "kind": "team_built_fusion_or_variant",
+    "parent_packages": {
+      "v3": "hybrid_build runtime (from outputs/submission_v3_structured/submission_code.zip sha 47f4ada4; A 83.2579)",
+      "v97": "dl_method/最高分/submission_code.zip (A 83.9329)",
+      "v370": "dl_method/双种子/submission_code.zip (A 83.6076)"
+    },
+    "vote_or_mix_scripts": "server experiment zone scripts (harness.py, fusion_* / vote_fusion / build_hybrid_*), documented by docs/paradox_dl_fusion_20261008.md and results/dl_fusion/"
+  },
+  "leaderboard": {
+    "board": "A",
+    "score": 83.9326,
+    "source": "user_reported_after_submission",
+    "independently_verified_on_platform": false,
+    "evaluated_test_wells": 5,
+    "total_test_wells": 10
+  },
+  "cross_validation": {
+    "score": 82.0361,
+    "status": "analytic_rule_oof_evaluated_no_fitted_params",
+    "reason": "a-priori rule; OOF +0.1451 vs v97, 5/5 folds positive"
+  },
+  "reproduction": {
+    "result_sha256": "58cfddb28100a29c481740516ddeeaa3ea8c6a1227c3b30d72522072d1dc8fed",
+    "runtime_structure": "predict.py -> runtime/v3 + runtime/v97 + runtime/v370 -> vote",
+    "independent_end_to_end_reproduced_on_h20": true,
+    "seconds": 85.47
+  },
+  "result_zip": {
+    "bytes": 584473,
+    "inner_result_json_sha256": "58cfddb28100a29c481740516ddeeaa3ea8c6a1227c3b30d72522072d1dc8fed"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "version": "v6c",
+  "feature_name": "折间调参双骨架 U-Net / Per-fold-Tuned Dual-backbone U-Net",
+  "archived_on": "2026-10-09",
+  "method": "v370 纯深度学习 8 阶段链、双种子 × 5 折、每折 head 比率分别选出（predict.py --weight-policy diagnostic）。",
+  "source": {
+    "kind": "team_built_fusion_or_variant",
+    "parent_packages": {
+      "v3": "hybrid_build runtime (from outputs/submission_v3_structured/submission_code.zip sha 47f4ada4; A 83.2579)",
+      "v97": "dl_method/最高分/submission_code.zip (A 83.9329)",
+      "v370": "dl_method/双种子/submission_code.zip (A 83.6076)"
+    },
+    "vote_or_mix_scripts": "server experiment zone scripts (harness.py, fusion_* / vote_fusion / build_hybrid_*), documented by docs/paradox_dl_fusion_20261008.md and results/dl_fusion/"
+  },
+  "leaderboard": {
+    "board": "A",
+    "score": 83.6044,
+    "source": "user_reported_after_submission",
+    "independently_verified_on_platform": false,
+    "evaluated_test_wells": 5,
+    "total_test_wells": 10
+  },
+  "cross_validation": {
+    "score": 82.1947,
+    "status": "diagnostic_per_fold_tuned_not_unbiased",
+    "reason": "teammate-flagged non-independent diagnostic ratio selection; A-board result confirmed gap to OOF gains"
+  },
+  "reproduction": {
+    "result_sha256": "fa4bced9be9d92fafeaef655c667b94f85fa09e0916ea219b5ec3a91c76dd363",
+    "device": "cuda",
+    "seconds": 37.28
+  },
+  "result_zip": {
+    "bytes": 579382,
+    "inner_result_json_sha256": "fa4bced9be9d92fafeaef655c667b94f85fa09e0916ea219b5ec3a91c76dd363"
+  }
+}

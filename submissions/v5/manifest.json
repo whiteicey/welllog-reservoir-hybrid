@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "version": "v5",
+  "feature_name": "双支DL级联·后验融合 / Dual-Cascade DL Posterior Fusion",
+  "archived_on": "2026-10-09",
+  "method": "v97 纯深度学习基座 + v370 per-fold-tuned：连续行按 α 混值（POR 1.00, PERM 1.00, SW 0.75）；默认态分歧行取 v370。",
+  "source": {
+    "kind": "team_built_fusion_or_variant",
+    "parent_packages": {
+      "v3": "hybrid_build runtime (from outputs/submission_v3_structured/submission_code.zip sha 47f4ada4; A 83.2579)",
+      "v97": "dl_method/最高分/submission_code.zip (A 83.9329)",
+      "v370": "dl_method/双种子/submission_code.zip (A 83.6076)"
+    },
+    "vote_or_mix_scripts": "server experiment zone scripts (harness.py, fusion_* / vote_fusion / build_hybrid_*), documented by docs/paradox_dl_fusion_20261008.md and results/dl_fusion/"
+  },
+  "leaderboard": {
+    "board": "A",
+    "score": 83.6394,
+    "source": "user_reported_after_submission",
+    "independently_verified_on_platform": false,
+    "evaluated_test_wells": 5,
+    "total_test_wells": 10
+  },
+  "cross_validation": {
+    "score": 82.1906,
+    "status": "nested_cv_computed_by_team"
+  },
+  "reproduction": {
+    "result_sha256": "9725d1c0b80ef46bbd433c43a3aba8e90bbacad3018cb58e79162d5ddfe1d927",
+    "runtime_structure": "predict.py -> runtime/v97 + runtime/v370 -> fuse",
+    "independent_end_to_end_reproduced_on_h20": true,
+    "seconds": 37.66
+  },
+  "result_zip": {
+    "bytes": 613219,
+    "inner_result_json_sha256": "9725d1c0b80ef46bbd433c43a3aba8e90bbacad3018cb58e79162d5ddfe1d927"
+  }
+}
