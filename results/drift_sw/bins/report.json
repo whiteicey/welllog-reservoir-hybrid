@@ -1,0 +1,33 @@
+{
+ "results": {
+  "noaug": {
+   "clean_oof": 74.7966,
+   "drift_oof": 74.2229,
+   "drift_delta": -0.5737,
+   "decode": {
+    "threshold": 0.09,
+    "scale": 1.02,
+    "offset": -1.0
+   },
+   "seconds": 1478.7
+  },
+  "aug": {
+   "clean_oof": 74.7241,
+   "drift_oof": 74.6954,
+   "drift_delta": -0.0287,
+   "decode": {
+    "threshold": 0.09,
+    "scale": 1.02,
+    "offset": -1.5
+   },
+   "seconds": 1981.8
+  }
+ },
+ "baselines": {
+  "v97_sw_clean": 75.5364,
+  "v97_sw_drift": 73.9284,
+  "v2recipe_aug_drift": 74.7058,
+  "v3_assembly_sw_clean": 75.2425
+ },
+ "total_seconds": 3499.2
+}

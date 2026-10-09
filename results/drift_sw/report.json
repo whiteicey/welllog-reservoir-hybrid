@@ -1,0 +1,51 @@
+{
+ "args": {
+  "data_dir": "data",
+  "cache_dir": "cache",
+  "out_dir": "outputs/drift_sw",
+  "arm": "both",
+  "copies": 2,
+  "sigma_lo": 0.03,
+  "sigma_hi": 0.2,
+  "seeds": "42,2026",
+  "gate_iters": 950,
+  "reg_iters": 500,
+  "calibrate_only": false,
+  "quick": false
+ },
+ "results": {
+  "noaug": {
+   "clean_oof": 74.8439,
+   "drift_oof": 74.1495,
+   "drift_delta": -0.6944,
+   "decode": {
+    "threshold": 0.09,
+    "scale": 1.05,
+    "offset": -3.0
+   },
+   "v2rule_clean_oof": 74.8396,
+   "seconds": 141.8
+  },
+  "aug": {
+   "clean_oof": 74.7392,
+   "drift_oof": 74.7058,
+   "drift_delta": -0.0334,
+   "decode": {
+    "threshold": 0.09,
+    "scale": 1.05,
+    "offset": -2.0
+   },
+   "v2rule_clean_oof": 74.7183,
+   "seconds": 216.4
+  }
+ },
+ "baselines": {
+  "v3_assembly_sw": 75.2425,
+  "v97_sw": 75.5354,
+  "cv_v2_recipe_sw": 74.8355
+ },
+ "calibration_summary": {
+  "eval_mean_ks_median": 0.231
+ },
+ "total_seconds": 497.5
+}

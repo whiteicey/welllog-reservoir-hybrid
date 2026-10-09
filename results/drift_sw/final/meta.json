@@ -1,0 +1,28 @@
+{
+ "name": "drift-augmented SW head (v2-recipe regressor, K=2 copies)",
+ "decode": {
+  "threshold": 0.09,
+  "scale": 1.05,
+  "offset": -3.0
+ },
+ "features": "cache enhanced (237 dims, FeatureBuilder fit on originals)",
+ "augmentation": {
+  "copies": 2,
+  "sigma_lo": 0.03,
+  "sigma_hi": 0.2,
+  "perturb_tag": "train{k}",
+  "label_preserving": true
+ },
+ "seeds": [
+  42,
+  2026
+ ],
+ "oof_evidence": {
+  "clean_oof": 74.7392,
+  "drift_oof": 74.7058,
+  "drift_delta": -0.0334,
+  "v97_sw_clean": 75.5364,
+  "v97_sw_drift": 73.9284,
+  "v97_drift_delta": -1.608
+ }
+}

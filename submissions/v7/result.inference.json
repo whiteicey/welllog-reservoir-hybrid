@@ -1,0 +1,18 @@
+{
+  "method": "Drift-Augmented Gate Transplant (B-prime): backbone POR/PERM + backbone SW values, SW default decisions from drift-augmented gate",
+  "decode": {
+    "threshold": 0.09,
+    "scale": 1.05,
+    "offset": -3.0
+  },
+  "rows": 95948,
+  "wells": 10,
+  "stats": {
+    "rows": 95948,
+    "sw_changed": 5880,
+    "to_default": 4760,
+    "to_cont_head": 1120
+  },
+  "final_result_sha256": "d935fcfb024a0eb84bab8b25637d1f2d631cc4bfe207bea10f0157fb2e6e2004",
+  "seconds": 34.6
+}

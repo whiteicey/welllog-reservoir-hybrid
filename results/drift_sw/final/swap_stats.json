@@ -1,0 +1,9 @@
+{
+ "rows": 95948,
+ "sw_changed_vs_v97": 19199,
+ "sw_default_flips": 5882,
+ "sw_band_crossings": 5807,
+ "sw_default_frac_new": 0.8495,
+ "sw_default_frac_v97": 0.8116,
+ "total_seconds": 75.5
+}

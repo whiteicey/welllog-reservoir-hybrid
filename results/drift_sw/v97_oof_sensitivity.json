@@ -1,0 +1,9 @@
+{
+ "v97_sw_oof_clean": 75.5364,
+ "v97_sw_oof_drift": 73.9284,
+ "drift_delta": -1.608,
+ "npz_reproduction_max_dev": 65.68731038798498,
+ "reference_v97_sw_clean_oof": 75.5354,
+ "note": "honest per-fold OOF (single held-out bundle per well); same eval perturbations as drift_sw_train",
+ "seconds": 78.8
+}

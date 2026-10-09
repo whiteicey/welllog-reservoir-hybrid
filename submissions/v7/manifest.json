@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "version": "v7",
+  "feature_name": "漂移增强门控移植 / Drift-Augmented Gate Transplant",
+  "archived_on": "2026-10-09",
+  "method": "十八级联骨干网基座（原封其 POR/PERM/连续值）+ 新训漂移增强 SW 门控（CatBoost Logloss 950 轮 x 双种子，80 训练井 + 每井 2 份标签保持漂移增强副本）做 SW 门控判定替换；仅当新门控判连续而骨干判默认时取门控头回归连续值（x1.05 - 3.0，裁 [8.305, 99.9]）。改动 5,880/95,948 行（6.1%）。",
+  "source": {
+    "kind": "team_built_new_component",
+    "parent_packages": {
+      "backbone": "dl_method/最高分/submission_code.zip（十八级联骨干网）",
+      "feature_stack": "树-序列混合 v3 runtime 的 FeatureBuilder（237 维增强特征）"
+    },
+    "new_component": "sw_head/（4 个 CatBoost cbm + decode meta）"
+  },
+  "leaderboard": {
+    "board": "A",
+    "score": 83.8506,
+    "source": "user_reported_after_submission",
+    "independently_verified_on_platform": false,
+    "evaluated_test_wells": 5,
+    "total_test_wells": 10
+  },
+  "cross_validation": {
+    "sw_head_oof": {
+      "clean": 75.3101,
+      "pseudo_drift": 75.2853,
+      "drift_delta": -0.03,
+      "backbone_sw_head_drift_sensitivity": -1.61
+    },
+    "pseudo_drift_margin_vs_backbone_sw": "+1.36",
+    "expected_gain_from_oof": "+0.13 to +0.48 总分（未传导，实际 A 榜 -0.082）"
+  },
+  "reproduction": {
+    "package_layout": "runtime/backbone (18-stage cascading backbone) + feature/ (FeatureBuilder 237-dim) + sw_head/ (4 cbm + meta)",
+    "result_json_sha256": "d935fcfb024a0eb84bab8b25637d1f2d631cc4bfe207bea10f0157fb2e6e2004",
+    "end_to_end_seconds_h20": 34.6,
+    "runtime_size_bytes": {
+      "submission_code_zip": 90431608,
+      "result_zip": 579388
+    },
+    "cross_gpu_bf16_noise_documented": true
+  },
+  "a_board_outcome": {
+    "strategy": "B-prime gate transplant (keep backbone continuous values, replace ONLY the SW default/non-default decisions)",
+    "evidence_from_pseudo_drift_oof": "+1.36 SW, expected +0.13 to +0.48 total",
+    "actual_a_board": "-0.082 (relative to backbone 83.9329)",
+    "verdict": "OOF-side gain did NOT transfer; 7th consecutive observation of this pattern"
+  }
+}

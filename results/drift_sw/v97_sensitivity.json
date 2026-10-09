@@ -1,0 +1,7 @@
+{
+ "v97_sw_orig_train": 80.2066,
+ "v97_sw_drift_train": 76.4009,
+ "drift_delta": -3.8057,
+ "note": "predictions fold-contaminated; delta isolates sensitivity",
+ "seconds": 446.3
+}
