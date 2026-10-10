@@ -1,12 +1,12 @@
 # ROADMAP · 队友阅读指南
 
-目的：让接手的人 30 分钟内知道**做过什么、什么有效、什么无效、还能做什么**。第 1–2 节保留原 v3 实验：按井 5 折（80 口井，723,556 完整三标签行），节号指向 `docs/report_v3_optimization.md`。
+目的：让接手的人 30 分钟内知道**做过什么、什么有效、什么无效、还能做什么**。§0 是当前状态；第 1–2 节保留 v1–v3 已验证证据为历史遗留层（80 训练井 × 5 折、723,556 完整三标签行；图号指向 `docs/report_v3_optimization.md`）；当前主线为 v7（[docs/drift_augmented_gate_transplant_20261009.md](docs/drift_augmented_gate_transplant_20261009.md)）与论文 v2（[docs/paper/main_v2.pdf](docs/paper/main_v2.pdf)）。
 
 ## 0. 当前优先事项（2026-10-10，取代 10-09 版）
 
 **当前现役 A 榜最强：DL v97 83.9329**（dl_method/最高分，队友）。七连提交（v4–v7）全部实测后：**基座预测在那 5 口隐藏井上已接近运气上限；一切改动的期望值都为负**；OOF 侧取得的增益从 +0.05 到 +0.58 全部在 5 口盲井上蒸发；改动越小越稳（v6 2.23% 打平）。后续只有两条路：**新锚模型**（从源头就是新的，天级时间成本、无保证）、或 **83.9329 收束转攻 B 榜**（10 井全评、方差减半）。
 
-- **漂移增强 SW 头修复已完成（v7，A 83.8506 = −0.082）**：CatBoost 新门控 + 80 训练井 ×3 漂移增强（扰动模型按基础漂移实测定标）+ B′ 换位组合；伪漂移 OOF 上表现为漂移敏感度 −0.69 → −0.03（塌 95%）、B′ 偎蛙 SW +1.36 vs 基座；**A 榜不传导，是第 7 次系统性观测**。[docs/drift_augmented_gate_transplant_20261009.md](docs/drift_augmented_gate_transplant_20261009.md) 有完整证据 + 三大科学发现（漂移 = 井间自然变异 · 伤害在门不在值 · 扰动打掉 95%）。
+- **漂移增强 SW 头修复已完成（v7，A 83.8506 = −0.082）**：CatBoost 新门控 + 80 训练井 ×3 漂移增强（扰动模型按基础漂移实测定标）+ B′ 换位组合；伪漂移 OOF 上表现为漂移敏感度 −0.69 → −0.03（塌 95%）、B′ 净拿 SW +1.36 vs 基座；**A 榜不传导，是第 7 次系统性观测**。[docs/drift_augmented_gate_transplant_20261009.md](docs/drift_augmented_gate_transplant_20261009.md) 有完整证据 + 三大科学发现（漂移 = 井间自然变异 · 伤害在门不在值 · 扰动打掉 95%）。
 - **悖论诊断全套**：[docs/paradox_dl_fusion_20261008.md](docs/paradox_dl_fusion_20261008.md) + 机读证据（[results/dl_fusion/](results/dl_fusion/) + [results/drift_sw/](results/drift_sw/)）。
 - **论文 v2 完成**：[docs/paper/main_v2.pdf](docs/paper/main_v2.pdf)（29 页、13 图统一新样）+ [main_v2.tex](docs/paper/main_v2.tex) + Markdown 镜像；附投前清单：作者信息、DOI 校验、主题分类、cover letter。
 - **v3.5 归档**：只收到源码+结果 ZIP（a83.2960），无匹配权重/OOF，修复（128 行异常标签、NN 分箱语义混用）改用独立 v3.6 修复版，不动原归档。
@@ -14,15 +14,14 @@
 **后续方向终审**（按优先级）：
 
 1. **新锚模型**（A 榜突破 84.0 的唯一可行路径）：重训 DL 链的 SW/POR 关键阶段，从源头引入 v7 定型的漂移增强扰动；SW 阶段起点 8–24 GPU 小时/夜。是否实施由团队议定；结果无保证。
-2. **A 榜抽签续**：剩余额度只用于极低改动变体（~10–25% 一过线率）。
-   停损线：合计 ≤3–4 发即收。
-3. **转攻 B 榜**：若 83.9329 收束，重心转 B 榜（10 井全评、方差减半）；v97 形态在全部 10 井上的表现优度保留得最好。
+2. **A 榜抽签**（如有剩余额度）：只用于极低改动变体（~10–25% 一过线率）。停损线：合计 ≤3–4 发即收。
+3. **转攻 B 榜**：若 83.9329 收束，重心转 B 榜（10 井全评、方差减半）；v97 形态在全部 10 井上的表现强度保留得最好。
 4. **若都不实施**：v97 83.9329 收束为 A 榜成绩主力，其他资源整体移向论文与开源准备。
 - v3 的“嵌套”是固定 OOF 上的决策交叉拟合；队友有重复第五折筛选及按验证折选 epoch，两者均非完全无偏的全流程 nested CV。
 
 详见 [综合评估与证据](docs/report_v35_and_deep_learning.md)、[v3.5 源码归档](experiments/v3.5/README.md)、[队友证据快照](results/comparison/README.md)。
 
-## 1. 已验证有效（进入 v3 最终版本）
+## 1. v1–v3 已验证有效（历史版本结构层；当前主线为 v7）
 
 | 方向 | 增益（5 折嵌套总分） | 报告 |
 | --- | ---: | --- |
@@ -51,9 +50,11 @@
 
 **历史观察**：当时围绕 v3 的这些扩展总分集中在 81.61～81.64（D = 81.632）。这说明当时搜索空间收益趋小，不证明数据的模型无关上限；队友新路线的完整 OOF 81.713 已要求缩小“饱和”的适用范围。
 
-## 3. 历史未验证假设（候选池，不是当前执行优先级）
+## 3. 历史未验证假设（候选池；当前顺序以 §0 四项为准）
 
-当前顺序以 [optimization_plan_v36.md](docs/optimization_plan_v36.md) 为准。以下保留历史研究想法，未量化验证收益，不因列在这里就启动实验：
+以下保留 v3 中后期遗留的研究设想；未做收益量化验证的条目不因列在这里就启动实验。
+
+v7 之后三个已知事实给本节全部划硬门槛：一切 OOF 增益在 A 榜蒸发；基座形态在 5 口隐藏井上是运气上限；漂移敏感度已修复但 A 榜仍不传导。重启本节假设的前提 = 必须先设计一个与 PERM 探针同级的受控对比，展示盲榜上能超越 ±0.078 噪声地板的增益。
 
 1. **软概率蒸馏式转导**（§16 结论）：用融合后的门控/分布**概率**而不是硬决策作为测试井伪标签训练网络。原硬标签实验未获稳定融合增益，软标签版本仍属待验证假设；暂不与校准/融合主线同时引入。
 2. **边界感知的门控训练**：原诊断显示边界与薄层仍难（§3.2）。可试边界距离回归头、薄层加权损失或分割损失，但需要固定数据、结构和预算做单因素验证，当前无可信涨分幅度。
@@ -62,21 +63,20 @@
 
 ## 4. 不建议的投入方式
 
-- 在 A 榜 5 口井上手工调阈值或权重；不能用反复榜单反馈代替独立验证，也不应把缺乏统计依据的固定噪声幅度当事实。
+- 在 A 榜 5 口井上手工调阈值或权重；不能用反复榜单反馈代替独立验证，也不应把缺乏统计依据的固定噪声幅度当事实。A 榜噪声地板已由 PERM 单变量对照实测为 ±0.04–0.08。
 - 没有明确新假设就继续堆 CatBoost 变体/种子；原 v3 的这类扩展收益很小。
 - 原样重复已失败的类型井、DTW 对齐和整井后处理校准。它们不等同于队友的**逐点条件输入校准**，不能以旧负结果否定所有井内自适应机制。
+- 已证该策略：行变化 ≤2.2% 只能打平 v97（v6=83.9326）；行变化 ≥30% 必降 ≥0.29（v5=83.6394）。后续变体都按这份经验校准。
 
 ## 5. 数据可追溯性
 
-- 每个实验一个目录（服务器 `outputs/<name>/`，含 `oof.npz`、`test.npz`、`report.json`）；报告 JSON 已同步到 `results/`。
-- `docs/supplement/experiment_registry.csv`：38 个实验的配置、关键指标、GPU 秒数。
-- `docs/supplement/per_well_scores_by_generation.csv`：80 口井 × 三代的逐井得分。
-- 原 v3 提交校验和：`submissions/v3/checksums.json`；v3.5 来源/哈希/缺失项：[manifest.json](submissions/v3.5/manifest.json)。
-- v3.5 本地报告为 [results/v3.5/](results/v3.5/README.md)，不是服务器 CV；队友证据固定在 [results/comparison/](results/comparison/README.md)，不覆盖旧实验登记表。
+- v1–v3 主线：每个实验一个目录（服务器 `outputs/<name>/`，含 `oof.npz`、`test.npz`、`report.json`）；报告 JSON 已同步到 `results/`。登记表：`docs/supplement/experiment_registry.csv`（38 个实验）与 `docs/supplement/per_well_scores_by_generation.csv`（80 井 × 三代逐井得分）。原 v3 提交校验和：`submissions/v3/checksums.json`；v3.5 来源/哈希/缺失项：[manifest.json](submissions/v3.5/manifest.json)。
+- DL 主线 + v4–v7（2026-10-08/09/10 全部完成并入库）：机读证据集中于 `results/dl_fusion/`（权重网格、嵌套 CV、逐行 OOF）· `results/dl_fusion/drift/`（测试井 vs 训练池漂移刻画）· `results/drift_sw/`（漂移增强消融、敏感度、B′ 移植统计）。提交档案（manifest + result.zip + inference 报告）集中于 [submissions/](submissions/)（v6–v7）；实验脚本集中于 [experiments/v7/](experiments/v7/)（9 个 + README）。
+- 队友证据（保留冻结）：[results/comparison/](results/comparison/README.md)，不覆盖旧实验登记表。
 
 ## 6. 服务器
 
-本次整理未访问服务器。已有实验在运行时，不启动本文或原文档中的训练/同步脚本；本地审计见根 README。
+当前状态（2026-10-10）：v7 与论文 v2 已全部完成；H20 空闲独占，无任何训练任务进行中。新实验（新锚模型或 A 榜抽签）须由团队口头确认后再启动。
 
 历史环境：`ubuntu-server`（H20 96 GB）：v3 目录 `/home/ubuntu/kunlun_welllog_v3_20260919`（venv `.venv`，含 catboost 1.2.10 / torch 2.14+cu126 / lightgbm 4.7 / dtaidistance），
 v2 `/home/ubuntu/kunlun_welllog_v2_20260919`，v1 `/home/ubuntu/kunlun_welllog_20260918`。`outputs/`（13 GB）请勿删除。

@@ -86,28 +86,67 @@ uv run --no-project --offline --python 3.14 python -m unittest discover -s tools
 
 只读取原数据 ZIP 和已归档文件，不连接 SSH、不加载权重；`--check` 不改报告。已通过 10 井/95,948 行校验及源码字节一致性检查。缺少模型与 OOF 时，只能核对产物，不能重算榜分。
 
-## 原 v3 复现路径（历史服务器流程，不属于本次本地操作）
+## 全链条复现路径（按版本分）
 
-H20 环境：`/home/ubuntu/kunlun_welllog_v3_20260919`。以下仅适用于原 v3；服务器仍有其他实验时请勿直接启动。
+H20 环境：`ubuntu-server-tls`（H20 96 GB），工作目录 `/home/ubuntu/kunlun_welllog_v3_20260919`（venv `.venv`：catboost 1.2.10 · torch 2.14+cu126 · lightgbm 4.7 · dtaidistance）。
+
+### v1–v3（树序列混合线，历史版本）
 
 1. 准备 `data/train`、`data/test`（赛事原始数据，两行表头，`-99999` 缺失）。
-2. `python src/cv_v2.py` 复现 v2 的 5 折 OOF（所有后续实验的共同基准，≈45 min）。
+2. `python src/cv_v2.py` 复现 v2 的 5 折 OOF（≈45 min）。
 3. 按 `src/README.md` 的顺序运行诊断（`diag_*.py`）、变体（`exp_variant.py`）、序列网络（`nn_seq.py`）、状态模型（`exp_states.py`）。
 4. `python src/assemble.py --config src/assemble_cfg_D.json --out outputs/assembly_D` 得到嵌套融合与最终决策配置。
-5. `python src/train_final.py --config src/final_cfg_v3.json --out-dir outputs/final_v3` 全量训练；`python src/build_submission_v3.py` 打包并从 zip 独立复现校验。
+5. `python src/train_final.py --config src/final_cfg_v3.json --out-dir outputs/final_v3` 全量训练；`python src/build_submission_v3.py` 打包。
 6. 推理只需 `package/`：`python predict.py --data_dir ./data --output ./result.json`（不读训练数据）。
 
-原 v3 历史记录：从带权重代码包独立解压重新推理，`result.json` 与提交文件逐字节一致（SHA256 `afcaad76…`）。本次没有重跑；这一证明不适用于 v3.5。
+历史记录：权重代码包独立解压重新推理，v3 `result.json` 与提交文件逐字节一致（SHA256 `afcaad76…`）；本次没有重跑；这一证明不适用于 v3.5（该版本只有源码+结果 ZIP，无对齐权重/OOF，修复交 v3.6 级独立实验）。
 
-## 原 v3 的三条经验（限定于当时实验，详见历史报告 §3、§4）
+### v4–v5（后验融合类）
 
-1. **连续标签预测困难**：当时同井上半段训练、下半段测试，POR 约 0.18、SW 0.11（跨井 0.32 / 0.13）；线性滞后诊断仅解释部分逐点变化。这是诊断结果，不是所有模型的可达上限证明。
-2. **当时最有效的分工是树回归、网络判层**：旧序列模型单独约 77.6，但门控融合贡献显著（A 榜门控消融约 +0.72）。队友新 DL 方案已取得完整 OOF 81.713，不能继续把旧模型负结果推广为纯 DL 整体无效。
-3. **决策层要跟指标走**：容差核用 Bayes 动作（PERM +0.35 分），RMSE 用均值（Volve 迁移实验复现）。
+v3 × v370 混值、v97 × v370 混值，均需 v3/v97/v370 全部 runtime（archive/目录下 `runtime_min` 全栈）+ 权重 + 机读 OOF（`dl_artifacts/`）。两步：`python build_hybrid_E3.py --out /path/to/result.zip` → 打包；端到端约 60 s 完成。代码、权值、数据 SHA 随 `submissions/v*` manifest + `RUNTIME_PINNING.json` 冻存。
+
+### v6（表决类：锐利 U-Net 融合）
+
+`python vote_e2e_predict.py --data_dir ./data --output ./result.zip`：内部依次调用 v97 → v3 → v370 三个运行时，然后做二票否决默认态翻新（只翻两模型一致否的任一行）；总耗时 90 s。v6 = 3 个运行时合计 640 MB · sha `15e834e2…`。
+
+### v6b / v6c（v370 独立变体）
+
+`runtime/v370/predict_single.py` 带上 `--seed-identity original` → 生成 v6b（单 original 种子版本）、或切换 `--weight-policy diagnostic` → 生成 v6c（折间调参诊断版）。两侧输出与 pinned 参考逐字节一致（OOF 81.9896 / 82.1947 均有记录的榜单存档）。
+
+### v7（漂移增强门控移植 · 当前提交）
+
+`v7_pack/predict.py --data_dir ./data --output ./result.json --device cuda`：完整端到端 —— v97 运行时基座推理 (~30 s) → 树-序列混合特征栈 FeatureBuilder (237 维) → 新训 漂移增强 SW 门控（CatBoost 双种子） → B′ 组合（只替换 SW 默认/非默认判定），总耗时 ~35 s 字节级自复现 (sha `d935fcfb…`)；90 MB 包（骨干 91 MB + 特征栈 + 4 个 .cbm 门控/回归 + meta）。
+
+### DL 基础线（队友提交的基座）
+
+`runtime/v97/predict.py`（18 阶段链 · 5 折集成）与 `runtime/v370/predict.py`（8 阶段链 × 双种子）的完整权重/配置/证据在 `dl_method/*/submission_code.zip` 归档；环境要求 cuda ≥ cu126 + psutil。H20 单轮推理约 30 s。
+
+## 全部的经验与证言（v1–v7 + 论文 v2，详见各文档）
+
+**经受住时间考验的三条**（v1–v3 时代起一直被验证、且至今仍然成立）：
+
+1. **连续标签的可辨识度有天花板（identifiability）**：同井上半段训练、下半段测试，POR/SW 官方核只到 0.18/0.11；跨井到 0.32/0.13。它展示的是：井内分带与井间标定信息不在 13 条输入曲线里 —— 因此纯曲线输入模型的最终可达极限受限；这是可测量到的物理事实，不是"任何模型都不行"的悲观句式。
+2. **分工 = 树回归 · 网络判层**：旧序列网络单体 77.6、门控融合贡献显著（ v3 A 榜门控消融 +0.72）；任何"用网络直接替换树"的尝试总是输。
+3. **决策层要跟指标走**：官方容差核要取 Bayes 动作（PERM 消融证明它值 +0.35 分）；RMSE 用均值（Volve 迁移实验上再次复现）。永远别拿与官方核不一致的损失函数做端到端调优。
+
+**从 v4 到 v7 的共性发现**（悖论诊断 · 九连受控 · 漂移修复，详见 [docs/paradox_dl_fusion_20261008.md](docs/paradox_dl_fusion_20261008.md) + [docs/drift_augmented_gate_transplant_20261009.md](docs/drift_augmented_gate_transplant_20261009.md)）：
+
+4. **盲井就是普通折外井**（2026-10-09 发现）：全部 10 口测试井对训练池的平均 KS 到 0.169（范围 0.114–0.240），完全落在同场 80 井留一后的井间自然变异带（0.107–0.440，中位 0.181）内。**测试井都不是离群井；盲榜之所以偏爱 v97，不是因为它整体更优，而是它在恰好那 5 口隐藏井上的预测形态最贴。**
+5. **基座形态在那 5 口隐藏井上已接近运气上限，一切改动期望为负**：v4 83.7159 · v5 83.6394 · v6 83.9326 · v6b 83.5547 · v6c 83.6044 · v7 83.8506，全部低于 v97 的 83.9329；改动越小越稳（v6 只翻 2.23% 行 = 打平），改动越大掉得越狠（v5 近 30% 行变化 = −0.29）；OOF 侧增益从 +0.05 到 +0.58，在 9 次受控对比里全部在 5 口隐藏井上蒸发。
+6. **漂移伤害全集中在 SW 门控，不在连续值质量**（B′ 分解，2026-10-09 发现）：v97 的 SW 门控诚实 OOF 漂移敏感度 −1.61（干净 75.54 → 伪漂移 73.93）；B′（换门不换值） 干净 75.31 / 伪漂移 75.29，对应 SW 稳健增益 +1.36。**换门不换值是唯一打准重点的组合方式**。
+7. **标签保持曲线扰动增强把漂移敏感度打掉约 95%**（曲线池化 IQR 位移 + 尺度抖动 + RT/RXO 对数域小抖动）。在相同的测试井漂移段落、相同的双臂协议下的消融：**−0.69 → −0.03**（回归配方臂）与 **−0.57 → −0.03**（分位配方臂），干净分只损 −0.10。这是目前为止唯一根治漂移的机制性方法。
+8. **PERM 单变量对照就是盲榜噪声地板的终结尺**（±0.04–0.08）：三条 PERM 单变量替换对照（OOF +0.043–0.050）在盲榜上测出 ±0.078 的噪声带；任何改动若差值 4–8 倍于此幅度，都不能归为随机波动、必当做真实性能变化。
 
 ## 论文
 
-目标期刊 Geodata and AI（Elsevier）。`paper/main.pdf` 为当前编译稿（23 页，preprint 单栏）；作者信息、数据可用性链接、参考文献 DOI 需在投稿前补齐（`paper/main.tex` 中已标注）。
+目标期刊 Geodata and AI（Elsevier）。**当前编译稿为 [docs/paper/main_v2.pdf](docs/paper/main_v2.pdf)（29 页，preprint 单栏）**，LaTeX 版源与 13 图 PDF 全部在 [docs/paper/](docs/paper/)。
+
+主线概括：**两条主线·两个教训**——
+1. v1–v3 树-序列混合线的可辨识性上限（36–42%）+ 结构层步走贡献
+2. DL 双骨干线的悖论链（最终 OOF 更优 ≠ 盲榜更优）→ 漂移诊断修复 → 九连受控的诚实负面结果
+全部数据公开在 [results/dl_fusion/](results/dl_fusion/) + [results/drift_sw/](results/drift_sw/)，全部 13 图按统一期刊感样式（开放轴 · 轻网格 · 深蓝/灰双色调 · 值全标注）重新绘制。
+
+**投前要办**：作者/通讯信息（带单位）、主题分类、Cover letter、References 中 `[verify DOI]` 条目的 CrossRef 核对。
 
 ## 许可
 
