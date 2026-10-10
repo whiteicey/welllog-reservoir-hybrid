@@ -1,7 +1,9 @@
-step,cv_total,leaderboard
-v1 (two-stage CatBoost),79.40690521940827,81.0052
-v2 (target-specific),80.884,82.2718
-+ distribution models + state gate,81.163,
-+ sequence net,81.412,
-+ POR lag/zone features,81.52,
-+ 2nd network (v3 final),81.632,83.2579
+step,oof_score,leaderboard
+v1 (CatBoost),79.41,81.01
+v2 (target-specific),80.88,82.27
+v3 (tree-seq hybrid),81.63,83.26
+DL dual-backbone,81.71,83.69
+DL v97 18-stage,81.89,83.93
+DL v370 orig seed,81.99,83.55
+DL v370 two-seed,82.17,83.61
+DL v370 fold-tuned,82.19,83.6

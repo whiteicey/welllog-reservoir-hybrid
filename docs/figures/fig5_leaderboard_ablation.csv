@@ -1,7 +1,9 @@
 submission,score
-v1 (first entry),81.0052
+v1 first entry,81.0052
 v2 baseline,82.2718
 v3 gates + v2 values,82.9916
 v2 gates + v3 values,82.5381
 v3 without networks,82.8034
 v3 full,83.2579
+DL v97 18-stage,83.9329
+DL v370 two-seed,83.6076
