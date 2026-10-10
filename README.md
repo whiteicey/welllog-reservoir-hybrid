@@ -1,17 +1,21 @@
-# 基于测井曲线的储层参数预测 · Tree–Sequence Hybrid (v1 → v6c)
+# 基于测井曲线的储层参数预测 · 树-序列混合 × 双骨干深度学习 (v1 → v7 · 论文 v2)
 
 > 昆仑大模型比赛「基于测井曲线的储层参数预测」的实验与提交仓库。
-> 当前 A 榜最强：**DL v97 83.9329**；融合/替换候选 v4 83.7159 / v5 83.6394 / **v6 83.9326**；v370 家族 83.55~83.61。
+> 当前 A 榜最强：**DL v97 83.9329**；七次改动 (v4–v7) 全部落在 83.55–83.93、无一次超过它 ——元规律：**对 5 口隐藏井，基座已接近运气上限，一切改动期望为负**。后续只有两条路：新锚模型（从源头就是新的）、或 83.9329 收束转 B 榜。
 >
-> 仓库为 private；**赛事数据不在仓库内**。模型权重不在 git：v3 的 404 MB 带权重包见 Release **v3.0**，DL 线（v97/v370）权重随提交 ZIP 与服务器 runtime 留存。
+> 仓库为 private；**赛事数据不在仓库内**。模型权重不在 git：v3 的 404 MB 带权重包见 Release **v3.0**，DL 线（v97/v370）与新训 v7 SW 头（4×cbm）权重随提交 ZIP 与服务器 runtime 留存。
 
-## 本次更新（2026-09-29）
+## 本次更新（2026-10-10）
 
-- [v3.5 源码与复现边界](experiments/v3.5/README.md) · [原提交包与 SHA256](submissions/v3.5/README.md) · [本地审计结果](results/v3.5/README.md)
-- [v3.5 与 deep_learning 综合评估](docs/report_v35_and_deep_learning.md) · [队友分支证据快照](results/comparison/README.md)
-- **[后续优化执行计划](docs/optimization_plan_v36.md)**：先对齐已有 OOF、拆分连续/门控融合实验，并行准备 v3.6 正确性修复；含阶段依赖、验收、晋级与算力边界，尚未实施新实验。
-- **优先处理**：v3.5 源码会接受 128 行异常负标签，NN 训练/推理存在分箱支持错配；归档保留原源码不改，修复版需独立实验。
-- **借鉴方向**：队友的逐点条件输入校准、完整后验融合；不要把其第五折 router 分数混为完整五折或 83.6915 的提交方案。
+- **论文 v2 全编制**：[docs/paper/main_v2.pdf](docs/paper/main_v2.pdf)（29 页、0 警告）+ [main_v2.tex](docs/paper/main_v2.tex) + Markdown 镜像 [paper_draft](docs/paper_draft.md)：摘要/亮点/关键词 → 两条主线两个教训；新增 §2.4（盲井/基础漂移刻画）、§3.8（双 U-Net 骨干家族）、§5.7（v370 悖论 · 噪声地板）、§5.8（漂移增强 · 95% 塌缩）、§5.9（九连终审）+ §8 讨论/§9 结论 → 重组；全部 13 图按目标参考风重出。
+- **三大科学发现**（漂移增强实验，[docs/drift_augmented_gate_transplant_20261009.md](docs/drift_augmented_gate_transplant_20261009.md)）：
+  1. 测试井漂移 = 井间自然变异（LOO KS 中位 0.181 vs 测试井 0.114–0.240）
+  2. 骨干漂移伤害全在 SW 门控不在连续值（B′ 分解：换门不换值伪漂移下 75.29 vs 73.93）
+  3. 标签保持曲线扰动增强把漂移敏感度打掉 95%（−0.69 → −0.03，虚净仅 −0.10）
+- **七连提交终审**（scoreboard + [CHANGELOG](CHANGELOG.md)）：v4 83.7159 · v5 83.6394 · v6 83.9326 · v6b 83.5547 · v6c 83.6044 · v7 83.8506 · v370-等权 83.6076 / 原种子 83.5547。**只有一个 v6（改动 2.23% 行）打平 v97；其余全部掉分 —— 改动越小越稳**。
+- **v7 全包就绪**：[submissions/v7/](submissions/v7/)（manifest + result.zip sha d935fcfb · 端到端 34.6 s 字节级自复现 · 90 MB 代码包）· [experiments/v7/](experiments/v7/)（9 个训练/评估/打包脚本 + README）。
+
+## 方法与结果
 
 ## 方法与结果
 
@@ -44,26 +48,30 @@ v3.5 比 v3 的 A 榜高 0.0381，队友方案比 v3.5 高 0.3955。**线下记�
 ```text
 .
 ├── README.md            本文件
-├── ROADMAP.md           队友必读：已验证有效 / 已验证无效 / 值得尝试 / 不必再试
+├── ROADMAP.md           队友必读：已验证有效 / 已验证无效 / 值得尝试 / 不必再试（2026-10-10 版）
 ├── CHANGELOG.md         版本时间线、归档记录与分数来源
-├── experiments/v3.5/    新提交源码（原样保存）及复现边界
+├── experiments/         v3.5 源码与复现边界 · v7 漂移增强实验脚本（9 个 + README）
 ├── tools/               无训练依赖的本地归档审计脚本与测试
 ├── requirements.txt     原 v3 服务器 venv 的精确版本
 ├── src/                 v3 实验代码（诊断、CV、变体、序列网络、融合、最终训练/推理/打包）+ src/README.md
 ├── package/             提交代码包源码（官方目录模板；模型权重见 Release）
 ├── history/             v1、v2 的训练/推理源码（只含代码）
-├── submissions/         v1–v3.5 提交文件、校验和、v3 消融；v3.5 原代码 ZIP
-├── results/             v3 历史实验、v3.5 本地审计、队友分支证据快照与数据字典
+├── submissions/         v1–v7 提交 manifest + 归档（manifest.json / result.zip / inference 报告；原始代码包随 release/runtime 留存）
+├── results/             v3 历史实验 · v3.5 本地审计 · dl_fusion（权重网格、嵌套 CV、逐行 OOF、漂移刻画）· drift_sw（漂移增强消融、定标、敏感度、B′ 移植统计）
 ├── docs/
-│   ├── optimization_plan_v36.md   后续优化执行计划、产物契约、实验矩阵与验收规则
+│   ├── paradox_dl_fusion_20261008.md   悖论诊断与融合链证据（§1–§11 全套推理链）
+│   ├── drift_augmented_gate_transplant_20261009.md  漂移增强门控移植实验（三大科学发现 + v7）
 │   ├── report_v35_and_deep_learning.md  新版本归档、代码风险与队友方案评估
 │   ├── report_v3_optimization.md   原 v3 历史实验报告（冻结，不回写新版本结果）
+│   ├── optimization_plan_v36.md   （历史）v3.6 级的优化执行计划
 │   ├── supplement/                 自动生成的补充材料：实验登记表、逐井/逐折得分、特征清单、算力预算
-│   ├── figures/                    论文图 1–8（PNG 300 dpi + PDF + 底层 CSV）
-│   ├── paper_draft.md              论文 Markdown 草稿
+│   ├── figures/                    论文图 1–13（PNG 300 dpi；补 CSV 数据点）
+│   ├── paper/                      论文成品：[main_v2.tex](docs/paper/main_v2.tex)、[main_v2.pdf](docs/paper/main_v2.pdf)、figures/（13 个 PDF）
+│   ├── paper_draft.md              论文 Markdown 镜像（v2）
+│   ├── paper_draft_v1_backup.md    v1 旧稿存底
 │   ├── competition/                赛题信息整理稿、第二轮审计任务书
 │   └── history/                    前两轮的审计报告
-├── paper/               Elsevier elsarticle LaTeX 稿（main.tex、refs.bib、figures/）与已编译的 main.pdf
+├── paper/               Elsevier elsarticle LaTeX 稿（main.tex、refs.bib、figures/）——旧 v1 版，已被 docs/paper/main_v2 取代
 └── external/pdda2021/   SPWLA PDDA 2021（Volve）迁移验证的适配与实验脚本（数据从上游仓库获取）
 ```
 
