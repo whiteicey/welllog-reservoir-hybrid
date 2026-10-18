@@ -1,13 +1,24 @@
-# 基于测井曲线的储层参数预测 · 树-序列混合 × 双骨干深度学习 (v1 → v7 · 论文 v2)
+# 基于测井曲线的储层参数预测 · 树-序列混合 × 双骨干深度 · 部署级改进的盲井终审 (v1 → v8 · 论文 v3)
 
-> 🆕 **2026-10-15 · 队友请看 → [docs/teammate_anchor_retrain_20261015.md](docs/teammate_anchor_retrain_20261015.md)**：换种子全家族重训开工包（新形态锚是我们进前十唯一够得着的牌；我方自有新模型线已在训练作二梯队）。
+> 🆕 **2026-10-18 · 最终战役（14 次盲井终审）**：两连单族改进（**门控外部化** OOF +0.081、**集成知识蒸馏回单族** OOF +0.192→82.268）出现，但盲榜读数再次吸收：gate 83.9203 / distill2 83.7918 / distill3 83.7676，均未超过 **83.9361（pl_pw，最终 A 榜最佳）**。完整证据确立"**盲井偏移随 OOF 增益单调下降（+1.86→+1.76→+1.58→+1.50）**"定律——吸收适用于任何超出基座形态的分布内改进。论文已扩为 **31 页 / 14 图**（§5.9 十四次提交 + 新 Fig. 14）。
 >
 > 昆仑大模型比赛「基于测井曲线的储层参数预测」的实验与提交仓库。
-> 当前 A 榜最强：**DL v97 83.9329**；七次改动 (v4–v7) 全部落在 83.55–83.93、无一次超过它 ——元规律：**对 5 口隐藏井，基座已接近运气上限，一切改动期望为负**。后续只有两条路：新锚模型（从源头就是新的）、或 83.9329 收束转 B 榜。
+> 当前 A 榜最强：**pl_pw 83.9361**（v97 形态 + PERM 紧裁；v97 自身 83.9329 / pl 83.9353）。14 次改动（v4–v7 + 最终战役 7 次）全部落在 83.77–83.94、无一次超过基座形态 —— 元规律：**对 5 口隐藏井，基座已接近运气上限，一切分布内改进期望为负**。最终战果：A 榜第 16 名附近、B 榜（10 井，10-30 统一发布）为最终名次依据。
 >
-> 仓库为 private；**赛事数据不在仓库内**。模型权重不在 git：v3 的 404 MB 带权重包见 Release **v3.0**，DL 线（v97/v370）与新训 v7 SW 头（4×cbm）权重随提交 ZIP 与服务器 runtime 留存。
+> 仓库为 private；**赛事数据不在仓库内**。模型权重不在 git：v3 的 404 MB 带权重包见 Release **v3.0**，DL 线（v97/v370）与新训蒸馏/门控权重随提交 ZIP 与服务器 runtime 留存（本地 `submission_distill3/` 等）。
 
-## 本次更新（2026-10-10）
+## 本次更新（2026-10-18 · 最终战役）
+
+- **两个新的单族改进**（形态均为历史唯二被 A 榜认账的类别：不动基座形态、只做少量行改动）：
+  1. **门控外部化**（[docs/label_existence_gate_20261018.md](docs/label_existence_gate_20261018.md)）：三目标仅 28–33% 行有真标签（其余为默认标记参与评分），门控漏判是最大油水。用 206 维特征训练 GBDT 标签存在分类器（AUC 0.973–0.982），与 DL 门控 logit 融合（0.7/0.3），五折全正 **OOF +0.081**；盲榜 83.9203（偏移 +1.76，贴线 absorbed）。
+  2. **集成知识蒸馏回单族**（[docs/value_distillation_20261018.md](docs/value_distillation_20261018.md)）：把 4 族集成（OOF 82.205）OOF 预测蒸馏进单族 v97——关键修正为"手术式"标签替换（只替换真值有值且教师判有值的行、保留真值默认标记），否则污染门控。LR×25/E20 达峰值 **OOF 82.268（+0.192，POR +0.29 / SW +0.29）**；盲榜 83.7676（偏移 +1.50）。
+- **第三连**：三重链融合（4 族 + v370 效用场叠加）OOF 82.280，盲榜 83.7703；门控+蒸馏不可叠加（负交互，两者分开提交）。
+- **吸收定律升级**：14 次受控提交给出"盲井偏移随 OOF 增益单调下降"（+1.86 → +1.76 → +1.58 → +1.50），**任何超出基座形态的分布内改进都被吸收**；最终 A 榜最佳仍是 **83.9361（pl_pw）**。
+- **论文同步**：§5.9 扩为十四次提交、新增偏移-增益定律与 Fig. 14；31 页 0 警告（[docs/paper/main_v2.pdf](docs/paper/main_v2.pdf)）。
+- **收尾准备**：[docs/release_checklist.md](docs/release_checklist.md)（开源前走查清单）+ [tools/sanitize_before_public.py](tools/sanitize_before_public.py)（服务器路径/端口去敏感化，dry-run 优先）。
+
+<details>
+<summary>上一轮更新（2026-10-10，v4–v7 时代，保持归档）</summary>
 
 - **论文 v2 全编制**：[docs/paper/main_v2.pdf](docs/paper/main_v2.pdf)（29 页、0 警告）+ [main_v2.tex](docs/paper/main_v2.tex) + Markdown 镜像 [paper_draft](docs/paper_draft.md)：摘要/亮点/关键词 → 两条主线两个教训；新增 §2.4（盲井/基础漂移刻画）、§3.8（双 U-Net 骨干家族）、§5.7（v370 悖论 · 噪声地板）、§5.8（漂移增强 · 95% 塌缩）、§5.9（九连终审）+ §8 讨论/§9 结论 → 重组；全部 13 图按目标参考风重出。
 - **三大科学发现**（漂移增强实验，[docs/drift_augmented_gate_transplant_20261009.md](docs/drift_augmented_gate_transplant_20261009.md)）：
@@ -17,7 +28,7 @@
 - **七连提交终审**（scoreboard + [CHANGELOG](CHANGELOG.md)）：v4 83.7159 · v5 83.6394 · v6 83.9326 · v6b 83.5547 · v6c 83.6044 · v7 83.8506 · v370-等权 83.6076 / 原种子 83.5547。**只有一个 v6（改动 2.23% 行）打平 v97；其余全部掉分 —— 改动越小越稳**。
 - **v7 全包就绪**：[submissions/v7/](submissions/v7/)（manifest + result.zip sha d935fcfb · 端到端 34.6 s 字节级自复现 · 90 MB 代码包）· [experiments/v7/](experiments/v7/)（9 个训练/评估/打包脚本 + README）。
 
-## 方法与结果
+</details>
 
 ## 方法与结果
 
@@ -38,8 +49,17 @@
 | v6b（原种子双骨架 U-Net） | v370 · 单 original 种子 | 81.9896 | 83.5547 |
 | v6c（折间调参双骨架 U-Net） | v370 · per-fold 比率诊断版 | 82.1947 | 83.6044 |
 | **v7**（漂移增强门控移植） | 骨干基座 + 新训漂移增强 SW 门控（B′) | SW 头 干净/伪漂移 75.31/75.29 | **83.8506** |
+| **pl**（转导伪标签微调） | v97 + 测试井伪标签微调（5 折诚实） | 82.076（官方口径与 v97 同） | **83.9353** |
+| **pl_pw**（PERM 紧裁） | pl + PERM 预测截断 log 空间 [0.01, 45.85] | 82.08 | **83.9361**（最终 A 榜最佳） |
+| mega（4 族效用场集成） | 4 家族×5 折，期望效用场等权融合 | 82.205（+0.129） | 83.8924 |
+| fused3f（三重链） | mega + 1.5·v370 效用场叠加 | 82.280（+0.204） | 83.7703 |
+| **gate（门控外部化）** | pl + GBDT 标签存在分类器与 DL 门控 logit 融合（0.7/0.3） | 82.157（+0.081，五折全正） | **83.9203** |
+| distill2（值侧蒸馏） | v97 微调，教师=fused 集成 OOF（手术式标签） | 82.214（+0.138） | 83.7918 |
+| **distill3（值侧蒸馏）** | v97 微调，教师=mega 集成 OOF，LR×25/E20 | **82.268（+0.192，队史最高 OOF）** | 83.7676 |
 
 **七连终审（2026-10-09 定稿）**：七次提交流程上到——一次 v6 打平、其他六次全部低于 v97。OOF 侧取得的增益等级从 +0.05 到 +0.58，每次都在 A 榜 5 口盲井上蒸发。**基座预测在那 5 口井上已接近运气上限，一切改动期望为负**；改动小才持有平（v6 2.23%），改动大掉得最狠。后续方向只剩两条：**新锚模型**（从源头就是新的）、或 83.9329 收束转攻 B 榜。详见 [漂移增强门控移植实验](docs/drift_augmented_gate_transplant_20261009.md)。
+
+**最终战役（2026-10-18 定稿 · 十四连终审）**：在七连终审之后又做了 7 次受控提交（pl、pl_pw、mega、fused3f、gate、distill2、distill3），覆盖三类新机制（转导伪标签、效用场集成、外部门控、集成蒸馏）。结论升级为定量定律：**盲井偏移（A − OOF）随 OOF 增益单调下降：+1.86（v97/pl 原形态）→ +1.76（gate）→ +1.58（distill2）→ +1.50（distill3）**；最大的 OOF 改进（+0.192）记录最差盲分（83.7676），而最佳盲分（83.9361）来自改动最小的 pl_pw。**吸收不限于集成——它作用于任何超出基座形态的分布内改进。** 详见 [docs/label_existence_gate_20261018.md](docs/label_existence_gate_20261018.md) 与 [docs/value_distillation_20261018.md](docs/value_distillation_20261018.md)。
 
 v3.5 比 v3 的 A 榜高 0.0381，队友方案比 v3.5 高 0.3955。**线下记录不是统一新消融**：v3 的“嵌套”限于固定 OOF 的决策选择；队友使用各验证折选最佳 epoch，并曾复用第五折筛选架构。不能从这些差值直接推导因果增益、显著性或融合收益。详见[证据边界](docs/report_v35_and_deep_learning.md)。
 
@@ -58,17 +78,21 @@ v3.5 比 v3 的 A 榜高 0.0381，队友方案比 v3.5 高 0.3955。**线下记�
 ├── src/                 v3 实验代码（诊断、CV、变体、序列网络、融合、最终训练/推理/打包）+ src/README.md
 ├── package/             提交代码包源码（官方目录模板；模型权重见 Release）
 ├── history/             v1、v2 的训练/推理源码（只含代码）
-├── submissions/         v1–v7 提交 manifest + 归档（manifest.json / result.zip / inference 报告；原始代码包随 release/runtime 留存）
+├── submissions/         v1–v7 提交 manifest + 归档（v8 最终战役工件在本地工作区 submission_* 目录，不入库）
 ├── results/             v3 历史实验 · v3.5 本地审计 · dl_fusion（权重网格、嵌套 CV、逐行 OOF、漂移刻画）· drift_sw（漂移增强消融、定标、敏感度、B′ 移植统计）
 ├── docs/
 │   ├── paradox_dl_fusion_20261008.md   悖论诊断与融合链证据（§1–§11 全套推理链）
 │   ├── drift_augmented_gate_transplant_20261009.md  漂移增强门控移植实验（三大科学发现 + v7）
+│   ├── utility_fusion_v370_20261017.md   效用场级跨血统融合（预测级混合=负 vs 效用场叠加=正；OOF +0.204）
+│   ├── label_existence_gate_20261018.md   标签存在性门控外部化（GBDT×DL logit 融合，OOF +0.081）
+│   ├── value_distillation_20261018.md   集成知识蒸馏回单族（手术式标签；OOF +0.192 → 82.268）
+│   ├── release_checklist.md        开源前走查清单（合规/去敏感/复现/发布）
 │   ├── report_v35_and_deep_learning.md  新版本归档、代码风险与队友方案评估
 │   ├── report_v3_optimization.md   原 v3 历史实验报告（冻结，不回写新版本结果）
 │   ├── optimization_plan_v36.md   （历史）v3.6 级的优化执行计划
 │   ├── supplement/                 自动生成的补充材料：实验登记表、逐井/逐折得分、特征清单、算力预算
-│   ├── figures/                    论文图 1–13（PNG 300 dpi；补 CSV 数据点）
-│   ├── paper/                      论文成品：[main_v2.tex](docs/paper/main_v2.tex)、[main_v2.pdf](docs/paper/main_v2.pdf)、figures/（13 个 PDF）
+│   ├── figures/                    论文图 1–14（PNG 300 dpi；补 CSV 数据点）
+│   ├── paper/                      论文成品：[main_v2.tex](docs/paper/main_v2.tex)、[main_v2.pdf](docs/paper/main_v2.pdf)（31 页）、figures/（14 个 PDF）、make_fig14.py
 │   ├── paper_draft.md              论文 Markdown 镜像（v2）
 │   ├── paper_draft_v1_backup.md    v1 旧稿存底
 │   ├── competition/                赛题信息整理稿、第二轮审计任务书
@@ -141,12 +165,12 @@ v3 × v370 混值、v97 × v370 混值，均需 v3/v97/v370 全部 runtime（arc
 
 ## 论文
 
-目标期刊 Geodata and AI（Elsevier）。**当前编译稿为 [docs/paper/main_v2.pdf](docs/paper/main_v2.pdf)（29 页，preprint 单栏）**，LaTeX 版源与 13 图 PDF 全部在 [docs/paper/](docs/paper/)。
+目标期刊 Geodata and AI（Elsevier）。**当前编译稿为 [docs/paper/main_v2.pdf](docs/paper/main_v2.pdf)（31 页 / 14 图，preprint 单栏，0 警告）**，LaTeX 版源全部在 [docs/paper/](docs/paper/)。
 
 主线概括：**两条主线·两个教训**——
 1. v1–v3 树-序列混合线的可辨识性上限（36–42%）+ 结构层步走贡献
 2. DL 双骨干线的悖论链（最终 OOF 更优 ≠ 盲榜更优）→ 漂移诊断修复 → 九连受控的诚实负面结果
-全部数据公开在 [results/dl_fusion/](results/dl_fusion/) + [results/drift_sw/](results/drift_sw/)，全部 13 图按统一期刊感样式（开放轴 · 轻网格 · 深蓝/灰双色调 · 值全标注）重新绘制。
+全部数据公开在 [results/dl_fusion/](results/dl_fusion/) + [results/drift_sw/](results/drift_sw/)，全部 14 图按统一期刊感样式（开放轴 · 轻网格 · 深蓝/灰双色调 · 值全标注）绘制。
 
 **投前要办**：作者/通讯信息（带单位）、主题分类、Cover letter、References 中 `[verify DOI]` 条目的 CrossRef 核对。
 
