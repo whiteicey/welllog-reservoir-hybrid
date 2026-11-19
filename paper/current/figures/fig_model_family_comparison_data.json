@@ -1,0 +1,9 @@
+{
+  "source": "experiments/reviewer_response/results/model_family_comparison.json",
+  "note": "Only the v1–v4 comparison is shown. OOF and historical blind records are paired observations, not a conversion or a common-protocol ranking.",
+  "layout": "Horizontal paired observations; value labels sit above points with extra bottom-axis clearance.",
+  "outputs": {
+    "fig_model_family_comparison.pdf": "250d3ca40bfe6b98252549b6404605d3249773cc15235cd6d066f68062711e3e",
+    "fig_model_family_comparison.png": "85b4cdd423179c6c2e3cf49c1ca3eac138a103269d3d612159487d311c566fdd"
+  }
+}

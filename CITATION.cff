@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "If you use this software, manuscript or experiments, please cite them as follows."
+title: "Tolerance-Aware Reservoir Property Prediction from Wireline Logs: Representation Complementarity, Decision Sensitivity, and Offline Transfer"
+authors:
+  - family-names: Chen
+    given-names: Minjie
+  - family-names: Xin
+    given-names: Jiawei
+  - family-names: Wu
+    given-names: Chengfeng
+date-released: 2026-11-19
+repository-code: https://github.com/whiteicey/welllog-reservoir-hybrid
+keywords:
+  - well logs
+  - reservoir characterization
+  - predictive distributions
+  - gradient boosting
+  - sensitivity analysis
+  - well-grouped validation
+notes: "Minjie Chen and Jiawei Xin contributed equally. DOI and formal publication metadata are not yet assigned."

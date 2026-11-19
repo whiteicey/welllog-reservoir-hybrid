@@ -1,5 +1,5 @@
 """Paper figures from the experiment JSONs + cached OOF predictions. Run on the server with a matplotlib venv:
-  /home/ubuntu/kunlun_welllog_20260918/.venv/bin/python make_figures.py
+  <PROJECT_ROOT> make_figures.py
 Writes PNG (300 dpi) + PDF + the underlying numbers (CSV) into outputs/figures/.
 """
 from __future__ import annotations

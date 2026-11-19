@@ -21,7 +21,7 @@ sys.path.insert(0, str(RT / "package"))
 import predict as v97pred  # noqa: E402
 from src.data import read_curve  # noqa: E402  (v97's own loader)
 
-MAIN = Path("/home/ubuntu/kunlun_welllog_v3_20260919")
+MAIN = Path("<PROJECT_ROOT>")
 MISSING = -99999.0
 CURVES = ["GR", "PE", "SP", "CAL", "AC", "DEN", "CNL", "RXO", "RT"]
 CURVE_W = {"GR": 1.0, "PE": 1.3, "SP": 1.0, "CAL": 1.6, "AC": 0.9, "DEN": 1.0,

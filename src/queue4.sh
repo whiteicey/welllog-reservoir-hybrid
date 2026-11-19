@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Queue 4 (trimmed): only the two variants with a plausible payoff.
 set -u
-cd /home/ubuntu/kunlun_welllog_v3_20260919
+cd <PROJECT_ROOT>
 PY=.venv/bin/python
 while pgrep -f "bash queue3.sh" > /dev/null; do sleep 60; done
 run() { name=$1; shift; echo "[queue] start $name $(date)"; $PY exp_variant.py --name "$name" "$@" > "logs/$name.log" 2>&1; echo "[queue] end $name $(date) $(grep -E 'joint full|Error|error' logs/$name.log | tail -2 | tr '\n' ' ')"; }

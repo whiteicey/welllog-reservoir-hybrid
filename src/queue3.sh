@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Queue 3: reprioritised CatBoost variants (GPU shared with the sequence-net run).
 set -u
-cd /home/ubuntu/kunlun_welllog_v3_20260919
+cd <PROJECT_ROOT>
 PY=.venv/bin/python
 while [ ! -f outputs/perm_bins60_base/report.json ]; do sleep 30; done
 run() { name=$1; shift; echo "[queue] start $name $(date)"; $PY exp_variant.py --name "$name" "$@" > "logs/$name.log" 2>&1; echo "[queue] end $name $(date) $(grep -E 'joint full|Error|error' logs/$name.log | tail -2 | tr '\n' ' ')"; }

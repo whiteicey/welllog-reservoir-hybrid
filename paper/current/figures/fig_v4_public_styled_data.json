@@ -1,0 +1,9 @@
+{
+  "source": "experiments/public_v4/results/v4_root_20261113/stages/metrics.json and ../metrics.json",
+  "source_sha256": "adc2b25927662933b0ca0dff401fc470990fa32babccd86c755fdced5dcc09df",
+  "note": "Presentation-only figure; original experiment metrics and predictions are unchanged.",
+  "outputs": {
+    "fig_v4_public_styled.pdf": "a10a58f6a9ff57cfc235ec3319672b2e4833f0e1f9c88579ca0030ede97f3e4c",
+    "fig_v4_public_styled.png": "7d07f8d45c9099eafe061eec7518ddf2548024af294267d44dc4ed277617feca"
+  }
+}

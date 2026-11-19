@@ -7,7 +7,7 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
-sys.path.insert(0, "/home/ubuntu/kunlun_welllog_v3_20260919")
+sys.path.insert(0, "<PROJECT_ROOT>")
 from run_transfer_pdda2021 import (load, build_features, rmse3, rmse_per, tol_acc, quantile_bins, decode_mean, cb_reg, cb_gate, TARGETS, OUT)
 
 t0 = time.time()

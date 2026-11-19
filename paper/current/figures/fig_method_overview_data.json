@@ -1,0 +1,7 @@
+{
+  "source": "main_v3.tex Sections 4.1--4.7; clean academic 4-stage methodology pipeline",
+  "outputs": {
+    "fig_method_overview.pdf": "b9406efc7f1f3f283265dbf76d339be974740be1727c7849fb25cf25ab4809b4",
+    "fig_method_overview.png": "45681135239348a54d21456b61ae83389824f5e75f4b36dd5b712c6a0f297612"
+  }
+}

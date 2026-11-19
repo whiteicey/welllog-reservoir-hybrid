@@ -1,0 +1,32 @@
+{
+  "collected_utc": "2026-11-13T02:00:06.055229+00:00",
+  "collected_after_run": true,
+  "python": "3.10.12",
+  "platform": "Linux-5.15.0-181-generic-x86_64-with-glibc2.35",
+  "packages": {
+    "catboost": "1.2.10",
+    "scikit-learn": "1.7.2",
+    "numpy": "2.2.6",
+    "pandas": "2.3.3",
+    "matplotlib": "3.10.9",
+    "torch": "2.14.0+cu126"
+  },
+  "cuda": {
+    "available": true,
+    "device_name": "NVIDIA H20"
+  },
+  "source_dependencies": {
+    "run_transfer_pdda2021.py": {
+      "sha256": "3731bde1c1f5047fb9b95fa871aaa5217a8ad8d6824e7fef8f7689d54b2114b7",
+      "bytes": 21008
+    },
+    "package/src/feature.py": {
+      "sha256": "afb8c59a6072a8378c488246c43233412ae7f7c484d562de47b275d98866327b",
+      "bytes": 13212
+    },
+    "package/src/utils.py": {
+      "sha256": "1c2d85fdde26287a2ba7ce5d7f2ac8bd50545588a7c91482ef261fe3165f6f3e",
+      "bytes": 3369
+    }
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "sources": [
+    "cv_v2_report.json",
+    "nn_base_c_report.json",
+    "nn_gate_b_report.json"
+  ],
+  "value_nondefault_only": {
+    "Tree (v2)": [
+      0.4384236822209079,
+      0.7917547353418495,
+      0.17720596862978652
+    ],
+    "Network + features": [
+      0.2986618808799639,
+      0.777423535151894,
+      0.1793875957597528
+    ],
+    "Network, curves only": [
+      0.2075458357170965,
+      0.736002521418759,
+      0.17312030427066852
+    ]
+  },
+  "default_gate_accuracy": {
+    "Tree (v2)": [
+      0.9168619982420159,
+      0.9285653080065676,
+      0.866922532602867
+    ],
+    "Network + features": [
+      0.9310544035292362,
+      0.9336665026618534,
+      0.9219258771954071
+    ],
+    "Network, curves only": [
+      0.9339125098817507,
+      0.934549640940024,
+      0.9234889904858781
+    ]
+  },
+  "layout": "Two-panel comparison; shared model colours; labels use two decimals.",
+  "outputs": {
+    "fig_division_clear.pdf": "51b9769cb85c55b3472aca5e9b1f51799de52b59936aa449536b8e8e8689ed97",
+    "fig_division_clear.png": "ab42e025bc70590065626b25f4e02c0f82ba67f0f7215e2cfc37adb2db6af817"
+  }
+}

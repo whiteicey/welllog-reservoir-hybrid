@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # After stack_states and the transductive nets: assemble G (D + stacked gate) and H (G with transductive nets).
 set -u
-cd /home/ubuntu/kunlun_welllog_v3_20260919
+cd <PROJECT_ROOT>
 PY=.venv/bin/python
 while [ ! -f outputs/stack_states/report.json ]; do sleep 60; done
 $PY assemble.py --config assemble_cfg_G.json --out outputs/assembly_G > logs/assembly_G.log 2>&1

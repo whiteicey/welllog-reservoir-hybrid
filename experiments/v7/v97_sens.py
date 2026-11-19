@@ -25,7 +25,7 @@ from src.data import TARGET_COLUMNS, load_split
 from drift_sw_train import CURVES, perturb_frame
 
 MISSING = -99999.0
-ROOT = Path("/home/ubuntu/kunlun_welllog_v3_20260919")
+ROOT = Path("<PROJECT_ROOT>")
 V97_RT = ROOT / "v97_verify" / "runtime" / "v97"
 PY = str(ROOT / ".venv/bin/python")
 

@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # NN chain: after nn_gate_b finishes, train the variant with v2 base features as input channels.
 set -u
-cd /home/ubuntu/kunlun_welllog_v3_20260919
+cd <PROJECT_ROOT>
 PY=.venv/bin/python
 while [ ! -f outputs/nn_gate_b/report.json ]; do sleep 60; done
 echo "[nnq] nn_gate_b done $(date)"

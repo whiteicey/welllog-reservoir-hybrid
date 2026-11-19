@@ -1,0 +1,52 @@
+{
+  "train_rows": 318967,
+  "complete_label_rows": 42309,
+  "train_wells": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "test_wells": [
+    100,
+    101,
+    103,
+    104
+  ],
+  "test_rows": 11275,
+  "target_order": [
+    "PHIF",
+    "SW",
+    "VSH"
+  ],
+  "state_rules": "PHIF and VSH have no default atom; SW==1 is the public SW state",
+  "label_range_note": "Labels are not altered. Some VSH labels fall outside the nominal [0,1] range; predictions are clipped only during RMSE evaluation.",
+  "targets": {
+    "PHIF": {
+      "min": 0.0,
+      "max": 0.403294,
+      "outside_0_1_rows": 0,
+      "zero_rows": 76,
+      "one_rows": 0
+    },
+    "SW": {
+      "min": 0.013,
+      "max": 1.0,
+      "outside_0_1_rows": 0,
+      "zero_rows": 0,
+      "one_rows": 17348
+    },
+    "VSH": {
+      "min": -0.248,
+      "max": 2.460104,
+      "outside_0_1_rows": 90,
+      "zero_rows": 1,
+      "one_rows": 41
+    }
+  }
+}

@@ -78,5 +78,5 @@ v7 之后三个已知事实给本节全部划硬门槛：一切 OOF 增益在 A 
 
 当前状态（2026-10-10）：v7 与论文 v2 已全部完成；H20 空闲独占，无任何训练任务进行中。新实验（新锚模型或 A 榜抽签）须由团队口头确认后再启动。
 
-历史环境：`ubuntu-server`（H20 96 GB）：v3 目录 `/home/ubuntu/kunlun_welllog_v3_20260919`（venv `.venv`，含 catboost 1.2.10 / torch 2.14+cu126 / lightgbm 4.7 / dtaidistance），
-v2 `/home/ubuntu/kunlun_welllog_v2_20260919`，v1 `/home/ubuntu/kunlun_welllog_20260918`。`outputs/`（13 GB）请勿删除。
+历史环境：`<SERVER_ALIAS>`（H20 96 GB）：v3 目录 `<PROJECT_ROOT>`（venv `.venv`，含 catboost 1.2.10 / torch 2.14+cu126 / lightgbm 4.7 / dtaidistance），
+v2 `<PROJECT_ROOT>`，v1 `<PROJECT_ROOT>`。`outputs/`（13 GB）请勿删除。

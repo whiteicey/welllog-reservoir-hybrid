@@ -15,6 +15,7 @@ inch->cm, neutron fraction->%). SP, DEVI, AZIM, CASE do not exist there and are 
 from __future__ import annotations
 
 import json
+import os
 import sys
 import time
 from pathlib import Path
@@ -22,7 +23,7 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
-ROOT = Path("/home/ubuntu/kunlun_welllog_v3_20260919")
+ROOT = Path(os.environ.get("WELLLOG_ROOT", Path(__file__).resolve().parents[2]))
 sys.path.insert(0, str(ROOT / "package"))
 from src.feature import FeatureBuilder, well_extra_features  # noqa: E402
 from src.utils import kernel_matrix  # noqa: E402

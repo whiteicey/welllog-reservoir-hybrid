@@ -1,0 +1,14 @@
+{
+  "sources": {
+    "fusion_controlled.json": "2748fff72212c8d43980fb3e22054b862bd4f0adf1d2d10d3ffff601b0ff0726",
+    "external_sensitivity.json": "21ade240c929d9cc71e1e91d1d572f173ede13a83e445def35751304192f1499",
+    "public_gate_sensitivity.json": "589a52d4841991fde46f90201effc48a42190204b5d620063dfd968ff3ab8a18",
+    "perm_bins30_report.json": "8c5c0e66d3803556d1f83d8e91ab04df452bdfe52789b96550c31c20a35b58fe",
+    "perm_bins60_report.json": "1c3461438032cc53a6eb3eb904f052f3ac821c1a2570a6822739d69ce25ac95f",
+    "perm_bins120_report.json": "c90fb172297461b371f1017c25f486fe4f74621d29e3b123d740bbc921f3760a"
+  },
+  "outputs": {
+    "reviewer_sensitivity.pdf": "e65df38096ca1d830b2280916240b06a12b9f726232483bdce318a55f9ed6c4d",
+    "reviewer_sensitivity.png": "badbfdeb8e315f175cc1e427dfd84e38d67e9d46fdc0af4ecf478d08672430c2"
+  }
+}

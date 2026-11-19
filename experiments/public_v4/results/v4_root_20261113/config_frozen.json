@@ -1,0 +1,34 @@
+{
+  "seed": 20261113,
+  "epochs": 24,
+  "steps": 32,
+  "windows_per_step": 32,
+  "learning_rate": 0.0006,
+  "min_epochs": 8,
+  "patience": 4,
+  "window_length": 256,
+  "architecture": "paired_local_context_router_sequence.Network; two independent local-global backbones, calibrated68 view, detached local router, conditional-density heads",
+  "target_mapping": {
+    "POR": "PHIF",
+    "PERM": "VSH",
+    "SW": "SW"
+  },
+  "default_mapping": "PHIF/VSH no default atom; SW=1 state only",
+  "target_transforms": [
+    "log1p PHIF",
+    "identity SW",
+    "log1p VSH"
+  ],
+  "missing_values": "public -9999 -> NaN; neutral zero after training-well robust scaling with missingness indicators",
+  "training_selection": "3-fold well-grouped CV, select best public RMSE checkpoint; final epoch is median of CV best epochs",
+  "test_rule": "Fit all nine public train wells after CV selection, then evaluate released test wells once; no test labels used for model, feature, epoch or decoder selection",
+  "internal_weights_or_data": false,
+  "smoke": false,
+  "source_sha256": "91e4d414490257a3e81c51f61c04cffd4bd7390eb6464d31295c307076b14495",
+  "final_epochs": 17,
+  "cv_best_epochs": [
+    17,
+    20,
+    11
+  ]
+}

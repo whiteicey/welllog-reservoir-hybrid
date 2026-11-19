@@ -1,0 +1,16 @@
+{
+  "source": "experiments/reviewer_response/results/diag_divergence/inputs.json",
+  "source_sha256": "62e1bce8b844db9e19ef0311f3c3b89afd9b7af502ee1e8ba9b035033bff595b",
+  "training_reference": {
+    "median": 0.181,
+    "range": [
+      0.107,
+      0.44
+    ]
+  },
+  "note": "Values unchanged; only visual encoding updated.",
+  "outputs": {
+    "fig9_drift_profile.pdf": "5ac86111915575bcf86623dca65ed3d0d39f72864e085def324ea96c870354be",
+    "fig9_drift_profile_review.png": "1af0751ad3dc587a29dd856297af7c640cc3a5713bd5f6e53c944fa9dd4b1c96"
+  }
+}

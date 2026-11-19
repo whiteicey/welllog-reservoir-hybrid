@@ -1,0 +1,14 @@
+{
+  "scope": "Unified model-family comparison for the manuscript. Scores are from saved experiment reports and historical leaderboard records, not a new experiment or independent hidden-label evaluation.",
+  "rows": [
+    {"generation": "v1", "name": "Original two-stage CatBoost model", "short_label": "v1", "oof": 79.4069, "blind": 81.0052, "oof_protocol": "well-grouped baseline CV", "source": "cv_v1_report.json; fig4_progression.csv"},
+    {"generation": "v2", "name": "Target-specific tree model", "short_label": "v2", "oof": 80.8837, "blind": 82.2718, "oof_protocol": "well-grouped target-specific CV", "source": "cv_v2_report.json; fig4_progression.csv"},
+    {"generation": "v3", "name": "Tree-sequence model", "short_label": "v3", "oof": 81.6324, "blind": 83.2579, "oof_protocol": "grouped, cross-fitted fusion", "source": "assembly_D_report.json:TOTAL_nested; fig4_progression.csv"},
+    {"generation": "v4", "name": "Local-global dual-backbone model", "short_label": "v4 LG", "oof": 81.8910, "blind": 83.9329, "oof_protocol": "packaged original OOF", "source": "dl_method/paradox_diagnosis_20261008.md"},
+    {"generation": "v4", "name": "Calibrated dual-backbone model", "short_label": "v4 CAL", "oof": 82.1744, "blind": 83.6076, "oof_protocol": "reported equal-seed OOF", "source": "dl_method/paradox_diagnosis_20261008.md"},
+    {"generation": "v4", "name": "Cross-family fusion model", "short_label": "v4 XFuse", "oof": 82.2106, "blind": 83.7159, "oof_protocol": "reported nested fusion estimate", "source": "dl_method/paradox_diagnosis_20261008.md; MASTER_INDEX.md"},
+    {"generation": "v4", "name": "Posterior-fusion model", "short_label": "v4 PFuse", "oof": 82.1906, "blind": 83.6394, "oof_protocol": "reported nested posterior fusion", "source": "dl_method/paradox_diagnosis_20261008.md; MASTER_INDEX.md"},
+    {"generation": "v4", "name": "External-gate model", "short_label": "v4 EGate", "oof": 82.1681, "blind": 83.9377, "oof_protocol": "later development estimator; not directly identical to nested v3", "source": "gate_coord_report.json; MASTER_INDEX.md; trend_local_report.json"}
+  ],
+  "blind_note": "Historical leaderboard records; not independently recomputed hidden-label scores."
+}

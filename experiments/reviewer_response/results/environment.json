@@ -1,0 +1,14 @@
+{
+  "python": "3.10.12",
+  "platform": "Linux-5.15.0-181-generic-x86_64-with-glibc2.35",
+  "packages": {
+    "numpy": "2.2.6",
+    "pandas": "2.3.3",
+    "scipy": "1.15.3",
+    "sklearn": "1.7.2",
+    "catboost": "1.2.10",
+    "lightgbm": "4.7.0",
+    "torch": "2.14.0+cu126"
+  },
+  "gpu": "NVIDIA H20, 580.126.20, 97871 MiB"
+}

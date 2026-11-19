@@ -1,6 +1,6 @@
 # 开源前发布清单（repo → public，比赛结束 + 论文接收后执行）
 
-> 当前仓库为 **private**，比赛数据不在库内。以下清单只在准备公开时逐项执行。
+> 本清单用于本次公开发布。实际可见性以 GitHub 仓库设置为准；内部原始比赛数据不在库内。
 
 ## 1. 合规（必须先过）
 
@@ -17,11 +17,11 @@ python tools/sanitize_before_public.py           # 先 dry-run 看清单
 python tools/sanitize_before_public.py --apply   # 再改写（检查 diff 后提交）
 ```
 
-替换规则：`/home/ubuntu/...` → `<PROJECT_ROOT>`；服务器别名 → `<SERVER_ALIAS>`；IP → `<HOST_IP>`；端口 → `<PORT>`；localhost 端口 → `<LOCALHOST_PORT>`。
+替换规则：`<PROJECT_ROOT>` → `<PROJECT_ROOT>`；服务器别名 → `<SERVER_ALIAS>`；IP → `<HOST_IP>`；端口 → `<PORT>`；localhost 端口 → `<LOCALHOST_PORT>`。
 预计命中：约 30 个文件、70+ 处（docs/ 历史报告、src/queue*.sh、submissions metadata、ROADMAP 等）。
 
 - [ ] `tools/sanitize_before_public.py --apply` 执行并人工复核 diff
-- [ ] `git grep -nE '120\.53\.|22023|ubuntu-server|/home/ubuntu'` 应无命中（除补丁脚本自身）
+- [ ] `git grep -nE '120\.53\.|<PORT>|<SERVER_ALIAS>|<HOME>'` 应无命中（除补丁脚本自身）
 - [ ] 检查 git 历史中的服务器路径：可选 `git filter-repo --path-glob` 历史注入清理（如需彻底）
 
 ## 3. 内容整理

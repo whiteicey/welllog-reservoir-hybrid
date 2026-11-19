@@ -2,7 +2,7 @@
 # Transductive final pipeline: wait for assembly H; if it beats D by >= 0.05 nested points, train the
 # pseudo-labelled nets (80 labelled + 10 pseudo-labelled test wells), (stack if needed), predict, validate, package.
 set -u
-cd /home/ubuntu/kunlun_welllog_v3_20260919
+cd <PROJECT_ROOT>
 PY=.venv/bin/python
 while [ ! -f outputs/assembly_H/report.json ]; do sleep 120; done
 echo "[plfinal] assembly H available $(date)"

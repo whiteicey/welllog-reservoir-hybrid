@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 # After the final v3 prediction exists: build the submission matrix (slots 2-4) and package each.
 set -u
-cd /home/ubuntu/kunlun_welllog_v3_20260919
+cd <PROJECT_ROOT>
 PY=.venv/bin/python
-V2=/home/ubuntu/kunlun_welllog_v2_20260919/outputs/result.json
+V2=<PROJECT_ROOT>
 while [ ! -f outputs/final_v3/result.json ]; do sleep 60; done
 while pgrep -f "package_submission.py --final-dir outputs/final_v3" > /dev/null; do sleep 30; done
 mkdir -p outputs/ablations

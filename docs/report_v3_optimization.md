@@ -1,7 +1,7 @@
 # 基于测井曲线的储层参数预测：v3 深度审计、算法优化与实验报告
 
 - 日期：2026-09-19 ～ 2026-09-20（通宵实验）
-- 计算：NVIDIA H20（96 GB）单卡，`/home/ubuntu/kunlun_welllog_v3_20260919`；本地仅做代码编写与结果汇总
+- 计算：NVIDIA H20（96 GB）单卡，`<PROJECT_ROOT>`；本地仅做代码编写与结果汇总
 - 代码：`solution_v3_fable/`（本地镜像，`sync.sh` 推送服务器）；结果 JSON：`solution_v3_fable/reports/server_json/`
 - 验证协议：与 v2 完全相同的按井 `GroupKFold` 5 折（80 口井，723,556 个三标签有效行），官方评分函数
 

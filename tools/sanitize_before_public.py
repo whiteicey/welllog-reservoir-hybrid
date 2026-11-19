@@ -17,6 +17,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 TEXT_EXT = {".md", ".txt", ".py", ".sh", ".json", ".yml", ".yaml", ".tex", ".cfg", ".toml", ".bib"}
 SKIP_DIRS = {".git", "__pycache__"}
+SKIP_FILES = {"tools/sanitize_before_public.py"}
 
 # ordered replacements: (compiled regex, replacement)
 RULES = [
@@ -42,6 +43,8 @@ def tracked_files() -> list[Path]:
         if not p.is_file() or p.suffix.lower() not in TEXT_EXT:
             continue
         if any(part in SKIP_DIRS for part in p.parts):
+            continue
+        if p.relative_to(ROOT).as_posix() in SKIP_FILES:
             continue
         if p.stat().st_size > 2_000_000:
             continue

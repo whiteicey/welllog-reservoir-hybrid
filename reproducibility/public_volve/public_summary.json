@@ -1,0 +1,12 @@
+{
+  "source": "metrics.json and experiment_manifest.json from the SSH public reproduction",
+  "rf_to_tree_relative_rmse_change": -0.0264731208650667,
+  "rf_to_gated_relative_rmse_change": -0.041794138439764095,
+  "tree_to_gated_relative_rmse_change": -0.015737642075492997,
+  "mean_to_tolerance_phif_gain": 0.10666590648400753,
+  "tree_to_gated_sw_tolerance_gain": 0.19719041357901168,
+  "distribution_mean_rmse_higher_than_regression": true,
+  "distribution_tolerance_rmse_higher_than_regression": true,
+  "latex_table_sha256": "83cdfcbaf13d182a93f9da791b254928cb327bd1680ff52a9bdedc21029cd4af",
+  "scope": "Public reproducibility check, not fresh blind test, no PERM, no universal transfer claim"
+}

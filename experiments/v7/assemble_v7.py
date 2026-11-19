@@ -13,7 +13,7 @@ import sys
 import zipfile
 from pathlib import Path
 
-ROOT = Path("/home/ubuntu/kunlun_welllog_v3_20260919")
+ROOT = Path("<PROJECT_ROOT>")
 PY = str(ROOT / ".venv/bin/python")
 PACK = ROOT / "v7_pack"
 

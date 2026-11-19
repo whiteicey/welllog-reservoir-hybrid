@@ -1,0 +1,63 @@
+{
+  "script": "paper_workspace/public_volve/reproduce_public_validation.py",
+  "script_sha256": "6f3dfa98ee9b9724290e46c67dcdaf76d63d52cba9fe16487cc925e006a92ded",
+  "started_utc": "2026-11-13T01:32:19.756598+00:00",
+  "finished_utc": "2026-11-13T01:35:58.904663+00:00",
+  "seconds": 218.18142175674438,
+  "seeds": [
+    42,
+    2026
+  ],
+  "python": "3.10.12",
+  "data_files": {
+    "real_test_result.csv": {
+      "bytes": 254666,
+      "sha256": "3d48f38812562b28ab12411fe3a6e298ec85ed1b66f860bee74caaf51d10b820"
+    },
+    "test.csv": {
+      "bytes": 1242566,
+      "sha256": "1de58ab42e0024809f178bbbc631ce28e44f2acf9eeaa583324b86497283cf75"
+    },
+    "train.csv": {
+      "bytes": 38923235,
+      "sha256": "45fbe4e77d4429104eeb06aa5b2fcc5afbb8b9ee10c430d3a5b94e94b4abced7"
+    }
+  },
+  "outputs": {
+    "fig_public_volve.pdf": {
+      "bytes": 20495,
+      "sha256": "275939b0b0b4980ee78ff89864f9ef4e7a8b0e41f0c21783160a4f4686c7b804"
+    },
+    "fig_public_volve.png": {
+      "bytes": 187604,
+      "sha256": "5750d57a3fef919d3719ffc0a906ecb94df86aaa9ffc93abb336c54ddd914c4a"
+    },
+    "metrics.csv": {
+      "bytes": 1335,
+      "sha256": "8a08824b653e5210ea6dc9feed1df448ca996d40ad2c5311c77b27d89004442e"
+    },
+    "metrics.json": {
+      "bytes": 14861,
+      "sha256": "020dbef894cffadccf417c8a8eb2c5786e201c32e1cec57f90daae0c9151e564"
+    },
+    "predictions.npz": {
+      "bytes": 1123438,
+      "sha256": "46cb12141d25ebe1736038d55c789d629e5b5819eaacba7f1ea6b758591b9b5f"
+    },
+    "reproduce_public_validation.py": {
+      "bytes": 9081,
+      "sha256": "6f3dfa98ee9b9724290e46c67dcdaf76d63d52cba9fe16487cc925e006a92ded"
+    },
+    "run.log": {
+      "bytes": 654,
+      "sha256": "42a1b4b7e92e2d46ed3e80c3da75eacfffd1a25f9a94018df6b946f8afd91e42"
+    }
+  },
+  "limitations": [
+    "Public test wells have been used in earlier development; not a fresh blind test.",
+    "Volve has VSH/PHIF/SW, not the confidential task's POR/PERM/SW targets.",
+    "RMSE and the confidential tolerance score are different metrics.",
+    "The .5 joint SW gate was selected in earlier development, not re-tuned here.",
+    "This experiment does not establish universal cross-domain transfer."
+  ]
+}

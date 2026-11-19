@@ -165,7 +165,7 @@ v370 分支复现性：H20 GPU 上确定性运行，与队友 Windows GPU 原始
 ## 复现
 
 - 本地（纯标准库）：`python -I compare_four_submissions.py` → compare_four/summary.json
-- 服务器：`diag_divergence_inputs.py data` → diag_divergence/{inputs,clusters}.json（服务器 /home/ubuntu/kunlun_welllog_v3_20260919/）
+- 服务器：`diag_divergence_inputs.py data` → diag_divergence/{inputs,clusters}.json（服务器 <PROJECT_ROOT>）
 
 
 ## 11. A 榜结果连环（2026-10-08 晚 — 2026-10-09）

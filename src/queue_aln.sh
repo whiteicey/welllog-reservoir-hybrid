@@ -2,7 +2,7 @@
 # DTW alignment experiment chain: similarity + alignment features (CPU) -> type-well diagnostic (CPU, background)
 # -> CatBoost variants with +aln (GPU) -> assembly I (D sources + aln sources).
 set -u
-cd /home/ubuntu/kunlun_welllog_v3_20260919
+cd <PROJECT_ROOT>
 PY=.venv/bin/python
 $PY dtw_align.py > logs/dtw_align.log 2>&1 || { echo "[aln] dtw_align failed"; exit 1; }
 echo "[aln] alignment features done $(date)"

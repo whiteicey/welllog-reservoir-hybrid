@@ -1,0 +1,32 @@
+{
+  "protocol": "Full 18-stage v4 chain; final heads por_anchored, perm_split, sw_density; three-fold posterior-mean aggregation",
+  "seconds": 0.5340341804549098,
+  "source_scripts": {
+    "fullcv_context_v97.py": "5b3a135883dbb701eb0e1edd49468aaa75dede80f10720531dbaf301b63488b0",
+    "train_stage_public.py": "b86b46fde1cc1a1c68d18cab16024ade79a4d5757d2bc5fcb89054f746af6615",
+    "assemble_public_sources.py": "9c8f57c86a77271e3958beb20ecc9ae18ef3b9dd9b236f3a4085c1f372a3348a",
+    "run_public_stages.py": "f3297a24bd676e82c12aa7450cf5f9b0b68d3f2b214c8dd572cb9c39312b8570",
+    "train_invariant.py": "16e0122b09cee9fdf8ea06964d88cfbc5afda85fc4534defcb5ab10760bad865",
+    "prepare_public_fold.py": "b0b995bc2562386ffd40ea317e5abc8f83f226fc7ae423d3e420e07f79d2bf3d",
+    "fullcv_models_v97.py": "8e94372ba5f86554e2b0d7d5d51586235d46cfc3b91627663ef8d93f6f0702ff"
+  },
+  "outputs": {
+    "metrics.json": {
+      "bytes": 1704,
+      "sha256": "adc2b25927662933b0ca0dff401fc470990fa32babccd86c755fdced5dcc09df"
+    },
+    "public_test_predictions.npz": {
+      "bytes": 302590,
+      "sha256": "0eb74486380a899ffa64629be94a494845ea9d026fece08da33368f945addff5"
+    },
+    "oof_predictions.npz": {
+      "bytes": 839421,
+      "sha256": "f217cf8ae2223a88365729f320989b9645a3c941f943c663b17e88bc325f1c5a"
+    },
+    "fig_full_v4_public.pdf": {
+      "bytes": 17439,
+      "sha256": "439bb0ce828f94ee78a41a3fe8ef879e918e8c854816ef6a897b5db02d872d4a"
+    }
+  },
+  "test_limit": "Released public test wells were previously used in other development experiments; this is a frozen public evaluation, not a new blind benchmark."
+}

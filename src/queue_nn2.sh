@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # NN chain 2: after nn_base_c, train a second gate-oriented net with a wider kernel/longer crop for diversity.
 set -u
-cd /home/ubuntu/kunlun_welllog_v3_20260919
+cd <PROJECT_ROOT>
 PY=.venv/bin/python
 while pgrep -f "bash queue_nn.sh" > /dev/null; do sleep 60; done
 echo "[nnq2] start nn_gate_d $(date)"

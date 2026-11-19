@@ -4,7 +4,7 @@
 
 动机：悖论诊断（[docs/paradox_dl_fusion_20261008.md](../../docs/paradox_dl_fusion_20261008.md)）定位十八级联骨干网（v97）的 SW 门控是漂移失败主犯。本实验不拼装现有预测，而是**从头训练一个漂移增强的 SW 门控**（CatBoost + 标签保持曲线扰动增强），以 B′（换门不换值）方式移植到骨干基座上。
 
-## 运行顺序（服务器 /home/ubuntu/kunlun_welllog_v3_20260919/）
+## 运行顺序（服务器 <PROJECT_ROOT>）
 
 1. `drift_sw_train.py --arm both --copies 2` —— 两臂消融（增强/无增强），干净 + 伪漂移 OOF，产出 `outputs/drift_sw/report.json`
 2. `v97_sens.py` —— v97 SW 头折内污染版漂移敏感度（80.21→76.40）

@@ -88,7 +88,7 @@ fs = pd.DataFrame(fs); fs.to_csv(OUT / "per_fold_scores_by_generation.csv", inde
 md += ["### Per-fold totals", "", fs.round(3).to_markdown(index=False), ""]
 
 # ---------------- 3. test-well prediction statistics by generation ----------------
-res = {"v1": "/home/ubuntu/kunlun_welllog_20260918/outputs/result.json", "v2": "/home/ubuntu/kunlun_welllog_v2_20260919/outputs/result.json", "v3": "outputs/final_v3/result.json"}
+res = {"v1": "<PROJECT_ROOT>", "v2": "<PROJECT_ROOT>", "v3": "outputs/final_v3/result.json"}
 tw = []
 preds = {g: {e["logId"]: pd.DataFrame(e["predictions"]) for e in json.load(open(p))["resultData"]} for g, p in res.items()}
 for wid in test_ids:

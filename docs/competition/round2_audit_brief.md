@@ -27,10 +27,10 @@
 - A 榜：测试集中的 5 口井；B 榜：全部 10 口井。
 - 每支队伍每天最多提交 5 次。
 - 本地机器：RTX 4070 Laptop，仅适合代码检查、数据统计、OOF 后处理及轻量实验。
-- 训练服务器：单张 NVIDIA H20，通过 SSH 别名 `ubuntu-server` 访问。
-- 原服务器项目：`/home/ubuntu/kunlun_welllog_20260918`
-- v2 服务器项目：`/home/ubuntu/kunlun_welllog_v2_20260919`
-- v2 Python：`/home/ubuntu/kunlun_welllog_20260918/.venv/bin/python`
+- 训练服务器：单张 NVIDIA H20，通过 SSH 别名 `<SERVER_ALIAS>` 访问。
+- 原服务器项目：`<PROJECT_ROOT>`
+- v2 服务器项目：`<PROJECT_ROOT>`
+- v2 Python：`<PROJECT_ROOT>`
 - 如能够访问服务器，可以在**新的独立目录**中做必要验证；禁止覆盖现有项目和产物。
 - 如果当前环境不能访问服务器，则完成静态审计、数据分析设计、伪代码、实验矩阵和准确的 H20 执行方案，不要伪称已完成训练。
 

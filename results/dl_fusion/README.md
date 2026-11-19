@@ -19,4 +19,4 @@
 v97 83.9329 > E3 融合(v3×v370) 83.7159 > v97×v370 83.6394 > v370 双种子等权 83.6076 > v370 调参 83.6044 > v370 原种子 83.5547 > calibrated dual-backbone 83.6915 > v3.5 83.2960 > v3 83.2579。
 投票表决链 vote-V1 +0.113 / vote-V4 +0.145（OOF 增益，A 榜未提交；vote-V3 +0.320 OOF 也仅提交结构更实的辨析上报为 83.9326 的融合条目之外）。
 
-数据生成方与脚本：服务器 `/home/ubuntu/kunlun_welllog_v3_20260919/`（harness.py、fusion_*.py、vote_fusion.py、diag_divergence_inputs.py、compare_four_submissions.py）。
+数据生成方与脚本：服务器 `<PROJECT_ROOT>`（harness.py、fusion_*.py、vote_fusion.py、diag_divergence_inputs.py、compare_four_submissions.py）。

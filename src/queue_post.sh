@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Post-run: when every remaining experiment is finished, assemble F (all sources) and refresh the summary tables.
 set -u
-cd /home/ubuntu/kunlun_welllog_v3_20260919
+cd <PROJECT_ROOT>
 PY=.venv/bin/python
 while pgrep -f "bash queue3.sh|bash queue4.sh|bash queue_nn2.sh" > /dev/null; do sleep 120; done
 echo "[post] all experiment queues finished $(date)"

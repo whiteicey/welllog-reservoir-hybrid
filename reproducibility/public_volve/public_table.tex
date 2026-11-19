@@ -1,0 +1,35 @@
+\begin{table}[t]
+\centering
+\caption{Public Volve reproducibility check. RMSE is pooled over VSH, PHIF and SW. Auxiliary tolerance is $\max(0,1-|a-y|/[c(|y|+10^{-7})])$, with $c=0.08$ for PHIF and $c=0.05$ for SW; it is not the contest's primary RMSE metric. Tolerance actions use 600 grid points between each target's bin representatives.}
+\label{tab:public-metrics}
+\small
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{l ccccc}
+\toprule
+Variant & RMSE & PHIF RMSE & SW RMSE & PHIF tol. & SW tol. \\
+\midrule
+RF, five logs & 0.11082 & 0.02635 & 0.15773 & 0.33926 & 0.38002 \\
+Tree regression & 0.10789 & 0.02443 & 0.16040 & 0.40916 & 0.26649 \\
+Distribution, mean & 0.11847 & 0.02474 & 0.17629 & 0.48631 & 0.02209 \\
+Distribution, tolerance action & 0.11480 & 0.02546 & 0.17195 & 0.51583 & 0.19359 \\
+Tree regression + joint SW gate & 0.10619 & 0.02443 & 0.15696 & 0.40916 & 0.46368 \\
+\bottomrule
+\end{tabular}}
+\end{table}
+
+\begin{table}[t]
+\centering
+\caption{Per-well RMSE for the public baseline, target-specific regression and the joint SW gate. A pooled improvement need not occur in every well.}
+\label{tab:public-wells}
+\small
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{l cccc}
+\toprule
+Variant & Well 100 & Well 101 & Well 103 & Well 104 \\
+\midrule
+RF, five logs & 0.15282 & 0.10997 & 0.10013 & 0.06132 \\
+Tree regression & 0.14917 & 0.12295 & 0.08280 & 0.04823 \\
+Tree + joint SW gate & 0.14452 & 0.12334 & 0.08271 & 0.04783 \\
+\bottomrule
+\end{tabular}}
+\end{table}

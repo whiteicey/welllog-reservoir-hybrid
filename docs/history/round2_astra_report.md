@@ -22,7 +22,7 @@
 5. v2 特征维数 113/237。井内窗口只依赖曲线输入；整井输入已给定，不使用标签。全局中位数应按训练折拟合。
 6. 旧 CV 汇总是保存的历史结果，不是可执行验证脚本；无法独立核实原始切分映射、阈值搜索和 early stopping 记录。
 7. 新代码保存中位数；新 v3 推理无需重新读取训练数据。v2 兼容路径仍重建中位数。
-8. SSH 检查 `ssh -o BatchMode=yes -o ConnectTimeout=5 ubuntu-server true` 返回主机名不能解析。没有连接 H20，也没有修改服务器。
+8. SSH 检查 `ssh -o BatchMode=yes -o ConnectTimeout=5 <SERVER_ALIAS> true` 返回主机名不能解析。没有连接 H20，也没有修改服务器。
 
 ## 3. 瓶颈诊断
 
@@ -139,17 +139,17 @@ MVP：5 折单种子 42，argmax/utility 共用概率；通过后 42/2026 双种
 
 ## 9. H20 实验矩阵与执行
 
-服务器路径来自用户材料，当前无法验证。代码应放新的 `/home/ubuntu/kunlun_welllog_v3_20260919`，不要覆盖 v2。在该新目录内提供 `data/` 和 `solution_v3/`，Python 使用已给定 venv。
+服务器路径来自用户材料，当前无法验证。代码应放新的 `<PROJECT_ROOT>`，不要覆盖 v2。在该新目录内提供 `data/` 和 `solution_v3/`，Python 使用已给定 venv。
 
 ```bash
-cd /home/ubuntu/kunlun_welllog_v3_20260919/solution_v3
-/home/ubuntu/kunlun_welllog_20260918/.venv/bin/python -m unittest discover -s tests -v
-/home/ubuntu/kunlun_welllog_20260918/.venv/bin/python validate_por.py --data-dir ../data --output-dir outputs/por_cv_seed42 --seeds 42
-/home/ubuntu/kunlun_welllog_20260918/.venv/bin/python validate_por.py --data-dir ../data --output-dir outputs/por_cv_two_seeds --seeds 42,2026
+cd <PROJECT_ROOT>
+<PROJECT_ROOT> -m unittest discover -s tests -v
+<PROJECT_ROOT> validate_por.py --data-dir ../data --output-dir outputs/por_cv_seed42 --seeds 42
+<PROJECT_ROOT> validate_por.py --data-dir ../data --output-dir outputs/por_cv_two_seeds --seeds 42,2026
 # 仅在验收通过后执行全量训练和推理
-/home/ubuntu/kunlun_welllog_20260918/.venv/bin/python train.py --data-dir ../data --output-dir outputs/full --seeds 42,2026 --por-decision utility
-/home/ubuntu/kunlun_welllog_20260918/.venv/bin/python predict.py --data-dir ../data --model-dir outputs/full/models --metadata outputs/full/model_meta.json --output outputs/full/result.json
-/home/ubuntu/kunlun_welllog_20260918/.venv/bin/python validate_result.py --data-dir ../data --result outputs/full/result.json
+<PROJECT_ROOT> train.py --data-dir ../data --output-dir outputs/full --seeds 42,2026 --por-decision utility
+<PROJECT_ROOT> predict.py --data-dir ../data --model-dir outputs/full/models --metadata outputs/full/model_meta.json --output outputs/full/result.json
+<PROJECT_ROOT> validate_result.py --data-dir ../data --result outputs/full/result.json
 ```
 
 实验 E0=同折固定 gate argmax，E1=同模型 utility，E2=同模型 joint。三者同一次命令生成；无需重复训练来换决策。E3=重复 grouped holdout 复核入选项，E4=SW 分布模型，E5=嵌套融合。E3–E5 需后续实现，当前 CLI 不伪造不存在的选项。

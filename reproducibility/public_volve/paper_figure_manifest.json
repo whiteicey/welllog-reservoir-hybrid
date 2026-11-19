@@ -1,0 +1,9 @@
+{
+  "source": "metrics.json; SHA checked against experiment_manifest.json",
+  "note": "Released public test wells were used in earlier development; this is a public reproducibility check.",
+  "style": "Restrained blue/teal encoding; absolute-zero RMSE bars and per-well point-line comparison.",
+  "outputs": {
+    "fig_public_volve_paper.pdf": "4cf3e20b2a1c37883a911d4e2ca91add0a02fbcf62b8b4c886174aef06e1b205",
+    "fig_public_volve_paper.png": "ca03939c27761580eac2648c305f87d8e8f5e4572644647760f7d79943b70a1e"
+  }
+}
