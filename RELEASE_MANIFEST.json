@@ -16,7 +16,7 @@
         30.77829,
         9.41693
       ],
-      "sha256": "d6f99c58c6ffaa82ceb9fbe76504399496fd36de428f83fab96183f9ed75e50a"
+      "sha256": "7e19d99af1653541ab07ecacf372ed687d73797cefb66e3807fc215be5403513"
     },
     "supplement": {
       "pages": 7,
@@ -28,7 +28,7 @@
         7.01532,
         6.34833
       ],
-      "sha256": "61bcc3527761729543162be18886cf99c3b756179823dc70d9848dae20065f84"
+      "sha256": "9c3e7f6eb6f93c6904f257982083e2a37740620978cdf59805c231fe3e807ad4"
     }
   },
   "unit_tests": {
@@ -175,16 +175,16 @@
       "sha256": "95e970f396132004b4ac87d53026dfc50f08350c74756e2910f7e50cf3046721"
     },
     "paper\\current\\main.pdf": {
-      "bytes": 514922,
-      "sha256": "d6f99c58c6ffaa82ceb9fbe76504399496fd36de428f83fab96183f9ed75e50a"
+      "bytes": 514923,
+      "sha256": "7e19d99af1653541ab07ecacf372ed687d73797cefb66e3807fc215be5403513"
     },
     "paper\\current\\main.tex": {
-      "bytes": 45457,
-      "sha256": "386b1ffe1819c40b4de1f4a411b5dfbb8ebd78d770d6be895d8381848f5353ab"
+      "bytes": 45792,
+      "sha256": "e226f4561951267ff4ec784a35d1b235775d2b0c95da6b1ab69ba06ce4c883e6"
     },
     "paper\\current\\manifest.json": {
-      "bytes": 5376,
-      "sha256": "a7629d113c55f8fa3685c017bfc02da32012fab5c411595e677ad77417592343"
+      "bytes": 5377,
+      "sha256": "be2f4b8901af5dcdbf69b5e5887edb9f66795e50a07679af3feaadff36e6678d"
     },
     "paper\\current\\public_table.tex": {
       "bytes": 1514,
@@ -200,11 +200,11 @@
     },
     "paper\\current\\supplement.pdf": {
       "bytes": 272894,
-      "sha256": "61bcc3527761729543162be18886cf99c3b756179823dc70d9848dae20065f84"
+      "sha256": "9c3e7f6eb6f93c6904f257982083e2a37740620978cdf59805c231fe3e807ad4"
     },
     "paper\\current\\supplement.tex": {
-      "bytes": 9931,
-      "sha256": "7cf80c45d1d0ffcd22126878f22e617302c65e3197ddafc3912765bf005dbe27"
+      "bytes": 10054,
+      "sha256": "496328bbed467cb58977ea8d4ac13ccd9ae5a630825bf7fd94399892dc9fd858"
     },
     "experiments\\reviewer_response\\external_weight_sensitivity.py": {
       "bytes": 4912,
