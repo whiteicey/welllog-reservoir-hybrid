@@ -1,0 +1,126 @@
+\documentclass[preprint,12pt,nopreprintline]{elsarticle}
+\usepackage{amssymb,amsmath,booktabs,url,hyperref,float,array,graphicx}
+\usepackage{xeCJK}
+\setCJKmainfont{Noto Serif CJK SC}
+\setCJKsansfont{Noto Sans CJK SC}
+\renewcommand{\figurename}{图}
+\renewcommand{\tablename}{表}
+\journal{Geodata and AI}
+\begin{document}
+\begin{frontmatter}
+\title{补充材料：基于测井曲线的储层参数容差感知预测：\\表征互补性、决策敏感性与离线迁移边界}
+\author[aff1]{陈旻杰\fnref{fn1}\corref{cor1}}
+\ead{1269732732@qq.com}
+\author[aff2]{辛嘉威\fnref{fn1}}
+\author[aff1]{吴乘风}
+
+\fntext[fn1]{共同第一作者。}
+\cortext[cor1]{通讯作者。}
+
+\affiliation[aff1]{organization={中国石油西南油气田分公司},city={成都},postcode={610051},country={中国}}
+\affiliation[aff2]{organization={中国电信股份有限公司北京分公司},city={北京},country={中国}}
+\end{frontmatter}
+\clearpage
+\renewcommand{\thefigure}{S\arabic{figure}}
+\renewcommand{\thetable}{S\arabic{table}}
+
+\section{S1. 公开 Volve 基准详细扩展文档}
+\label{sec:supp-public}
+本节提供公开北海 Volve/PDDA 基准复现的详细补充说明。完整数据集包含 9 口指定的训练钻井与 4 口已发布的测试盲井。所有参与评估的模型均严格从零开始独立训练，未引入任何内部工业数据或预训练权重。表~\ref{tab:public-metrics} 记录了五种不同模型变体在测试集上的合并 RMSE 以及辅助容差效用诊断指标。表~\ref{tab:public-wells} 则给出了 4 口已发布测试井上的单井 RMSE 详细分解。
+
+\input{public_table_zh.tex}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{figures/fig_public_volve_paper.pdf}
+\caption{公开 Volve 基准综合性能对比。(a) 各模型合并测试 RMSE，其中配备 $\mathrm{SW}$ 联合门控的树模型误差最低（0.10619）。(b) 4 口已发布测试井上的 RMSE 分项拆解，展示了井间地质空间方差。}
+\label{fig:supp-public}
+\end{figure}
+
+作为历史背景参考，2021 年 SPWLA PDDA 挑战赛中排名前列的公开方案 \cite{fu2024contest} 取得的合并测试 RMSE 分别为 0.0525（UTFE 团队，基于深度特征工程的线性回归）、0.0602（MoLPhy 团队，融合岩石物理约束的集成模型）以及 0.0634（Tomsk 团队，深度神经网络），而官方 PDDA 随机森林参考基线为 0.11718 \cite{pddasig2021}。需要特别说明的是，这些历史竞赛方案广泛利用了测试井的半监督直推式学习（Transductive Learning）以及针对特定测试井的人工精细校准。与之不同，本研究的复现实验严格遵循因果隔离原则，旨在客观评测算法在完全自动化、无人工干预条件下的真实跨井域外迁移能力。
+
+\section{S2. 公开数据集 v4 架构边界案例的分目标详尽分析}
+\label{sec:supp-v4}
+为了探究模型架构复杂度的适用上限，我们在 9 口公开训练井上对完整的 v4 时序流水线进行了从头独立训练。在公开网络中，最终输出的三个预测头（\texttt{por\_anchored}、\texttt{perm\_split} 与 \texttt{sw\_density}）分别映射到 $\mathrm{PHIF}$、$\mathrm{SW}$ 与 $\mathrm{VSH}$ 目标。模型权重检查点依据三折验证集上的验证损失独立选取。
+
+\begin{table}[H]
+\centering
+\caption{公开 Volve 测试集上分目标 RMSE 测试误差分解。}
+\label{tab:supp-v4-targets}
+\small
+\begin{tabular}{lcccc}
+\toprule
+模型配置 & 合并测试 RMSE & $\mathrm{PHIF}$ RMSE & $\mathrm{SW}$ RMSE & $\mathrm{VSH}$ RMSE \\
+\midrule
+目标专用树 + SW 联合门控 & \textbf{0.10619} & \textbf{0.02443} & \textbf{0.15696} & \textbf{0.09270} \\
+v4 根双主干模型 & 0.13794 & 0.03532 & 0.16660 & 0.16756 \\
+完整 18 阶段 v4 链 & 0.14695 & 0.03528 & 0.18806 & 0.16785 \\
+v4 完整链（训练集 OOF） & 0.09228 & 0.02415 & 0.12788 & 0.09278 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[H]
+\centering
+\caption{完整 18 阶段 v4 时序链与目标专用树--门控基线的分井测试 RMSE 对比。}
+\label{tab:supp-v4-wells}
+\small
+\begin{tabular}{lcc}
+\toprule
+测试井号 & 完整 18 阶段 v4 时序链 & 目标专用树 + SW 联合门控 \\
+\midrule
+100 井 & 0.15879 & \textbf{0.14452} \\
+101 井 & 0.16418 & \textbf{0.12334} \\
+103 井 & 0.11580 & \textbf{0.08271} \\
+104 井 & 0.13965 & \textbf{0.04783} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+如表~\ref{tab:supp-v4-targets} 与表~\ref{tab:supp-v4-wells} 所详尽记录，完整的 18 阶段时序链表现出明显的域外泛化差距：尽管在 9 口训练井的交叉验证中取得了 0.09228 的较低 OOF RMSE，但在未见测试井上的误差急剧膨胀至 0.14695。相比之下，树--门控模型在全部 4 口独立测试井上均保持了显著更优的精度。这充分证实：在地质训练样本多样性有限的小数据区间内，高度重参数化的复杂时序流水线极易发生严重的过拟合与泛化失败。
+
+\section{S3. 模型体系完整历史演进轨迹}
+\label{sec:supp-trajectory}
+图~\ref{fig:supp-model-family} 直观展示了内部工业数据集上从 v1 到 v4 各代际模型体系的研发推进轨迹。连线反映了历史技术演化路径；但需要指出的是，由于在不同研发里程碑阶段采用了不同的开发评估机制，这些曲线代表了工程平台的历史迭代记录，而非统一受控协议下的严格消融实验。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{figures/fig_model_family_comparison.pdf}
+\caption{内部模型代际在五折交叉验证（OOF）与历史平台盲测提交中的可视化演进轨迹。值得注意的是，OOF 分数与盲测分数之间存在显著的相对排序反转。}
+\label{fig:supp-model-family}
+\end{figure}
+
+\section{S4. 探索性迁移与鲁棒性诊断分析}
+\label{sec:supp-exploratory}
+
+\subsection{标准井匹配与动态时间规整（DTW）}
+我们深入评估了空间邻近性或测井曲线形态相似性是否能够指导局部迁移学习。通过基于标准化自然伽马及多参数测井序列的动态时间规整（DTW）在融合层引入标准井匹配。候选邻居钻井严格限定在当前训练折内。实测表明，引入 DTW 辅助融合仅使内部复合评分从 81.6324 微弱变为 81.6421——仅增加 +0.01 分，完全处于经验 Bootstrap 统计噪声区间内。同样地，在 Volve 基准上，基于两口最近邻井的局部训练虽使 $\mathrm{PHIF}$ 的 RMSE 从 0.02137 略降至 0.01967，但导致 $\mathrm{SW}$ 的 RMSE 从 0.08828 明显恶化至 0.16501。由此可见，DTW 曲线对齐并不能提供普适可靠的跨井迁移机制。
+
+\subsection{分布漂移与 Kolmogorov--Smirnov（KS）分析}
+为查明测试盲井上性能波动的根源是否源于输入测井曲线的异常漂移，我们针对 10 口盲测井相对于训练样本总体的各测井通道，系统计算了双样本 Kolmogorov--Smirnov（KS）统计量。图~\ref{fig:supp-drift} 展示了盲测井的平均 KS 距离与训练集留一井经验基准分布范围的对比。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{figures/fig9_drift_profile.pdf}
+\caption{10 口盲测井相对于训练总体的平均 Kolmogorov--Smirnov (KS) 漂移特征剖面，并以留一井基线参考区间作为标尺。}
+\label{fig:supp-drift}
+\end{figure}
+
+分析显示，所有盲测井的平均 KS 值均平稳落在训练集留一井经验分布的合理波动范围之内。该诊断结论证实：盲测井上的表现波动并不能简单归咎于系统性传感器故障或异常的输入曲线畸变，而是主要反映了地下储层精细岩相沉积相带的内生演变与物性流体界面的微妙变化。
+
+\subsection{合成传感器扰动探测}
+为了测试时序网络在测井仪器标定漂移下的鲁棒性，我们实施了合成增益与偏移扰动探测实验。对输入测井曲线随机施加增益（$\pm 10\%$）与偏移（$\pm 5\%$）扰动。当模型未采用数据增强训练时，$\mathrm{SW}$ 预测头在受扰测试下的效用大幅下降了 $-0.694$ 分；而如果在训练阶段引入随机增益/偏移数据增强，该效用衰退被大幅抑制到仅 $-0.033$ 分，同时在未受扰动的清洁测试上的基准得分基本不受影响（74.844 对比 74.739）。该实验有力证实了网络表征对测井仪器现场标定漂移具备极高的数值抵抗韧性。
+
+\section{S5. 实验证据协议与不确定性层级量化}
+\label{sec:supp-protocols}
+在科学研究中，必须严格区分实证不确定性的不同物理来源与统计层级：
+\begin{enumerate}
+\item \textbf{空间按井 Bootstrap 置信区间}：正文汇报的成对 Bootstrap 置信区间（$B=1,000$ 次重采样）是以完整钻井为最小单位进行有放回抽样。该置信区间严密量化了在给定模型拟合权重下，地质空间非均质性所引发的采样方差。
+\item \textbf{随机种子方差}：训练过程中的算法随机性通过多套独立随机初始化种子进行评估。在针对渗透率分箱数（$K \in \{30, 60, 120\}$）从头重训的实验中，每种配置均在相同的五折划分与 1,200 轮提升迭代下使用两个固定随机种子独立重训，实测种子间运行方差极小（小于 $1 \times 10^{-4}$）。在工程实践中，为了消除算法初始化随机噪声，存档的历史融合 OOF 预测阵列在归档前已按行业惯例执行了多种子平均；因此，受控消融实验能够在基学习器表征完全冻结的前提下精确隔离各模块的独立贡献。
+\item \textbf{事后敏感性遍历}：对连续混合权重、门控决策阈值与分箱数的系统性参数遍历，旨在评估目标函数周围的局部几何形态与工程抗扰鲁棒性，并非用于构造新的独立盲测试验。
+\end{enumerate}
+综上，空间按井 Bootstrap 置信区间与多种子重训评估共同为复杂地质条件下的算法选型与预测一致性提供了扎实可靠的统计学保障。
+
+\bibliographystyle{elsarticle-num}
+\bibliography{refs}
+\end{document}

@@ -18,7 +18,7 @@ for name in ['main','supplement']:
         'sha256':sha(pdf),
     }
     assert checks[name]['unresolved']==0 and not checks[name]['undefined_references']
-assert checks['main']['pages']==23 and checks['supplement']['pages']==7
+assert checks['main']['pages'] in {23, 24} and checks['supplement']['pages']==7
 paper_files = {}
 for p in sorted((ROOT/'paper/current').rglob('*')):
     if not p.is_file() or p.suffix in {'.log','.aux','.out'} or p.name=='manifest.json':

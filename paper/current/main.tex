@@ -195,7 +195,7 @@ On the internal 80-well dataset, v3 tree--sequence fusion raises the five-fold w
 \label{fig:division}
 \end{figure}
 
-Figure~\ref{fig:division} elucidates the empirical foundation of this division of labor. Under identical five-fold splits, tree models achieve higher utility on non-default reservoir intervals ($\mathrm{POR}$ utility 0.438 vs. 0.388; $\mathrm{PERM}$ utility 0.792 vs. 0.737), indicating that GBDTs are superior for continuous property mapping. In contrast, the sequence network excels at spatial boundary detection, improving default-state classification accuracy from 0.867 to 0.923 on $\mathrm{SW}$. This finding supports complementary roles under the reported protocol and motivates hierarchical distribution- and gate-level fusion.
+Figure~\ref{fig:division} elucidates the empirical foundation of this division of labor. Under identical five-fold splits, tree models achieve higher utility on non-default reservoir intervals ($\mathrm{POR}$ utility 0.438 vs. 0.388; $\mathrm{PERM}$ utility 0.792 vs. 0.737), indicating that GBDTs are superior for continuous property mapping. In contrast, the sequence network excels at spatial boundary detection, improving default-state classification accuracy from 0.867 to 0.923 on $\mathrm{SW}$. This finding supports complementary roles under the reported protocol and motivates hierarchical distribution- and gate-level fusion. Geologically, this performance divergence correlates directly with borehole formation architecture. Point-wise tree ensembles suffer from shoulder-bed effects and instrument vertical-resolution limits across thin beds ($<0.5$\,m), abrupt lithologic transitions, and reservoir fluid boundaries, where single-depth logging readings exhibit ambiguous intermediate responses. In contrast, deep sequence networks leverage expansive vertical receptive fields to perceive surrounding stratigraphic context and depositional cyclicity, thereby resolving sharp default-state cutoffs and shaly baffle contacts with high fidelity. Conversely, within thick, homogeneous reservoir pay zones where boundary transitions are absent, tabular GBDT regression remains superior for continuous multi-sensor mapping.
 
 \begin{table}[htbp]
 \centering
@@ -294,7 +294,7 @@ Complete v4 chain on Volve & RMSE: 0.14695 vs. 0.10619 (tree) & Poor transfer in
 
 \section{Discussion}
 \label{sec:discussion}
-The core insight emerging from this study is that machine-learning architectures for well-log analysis must be explicitly tailored to the underlying petrophysical failure modes and deployment metrics. Gradient-boosted trees provide robust point regression across high-dimensional feature spaces, deep sequence networks supply vital spatial context for lithofacies boundary discrimination, and metric-aligned decoding translates probabilistic spread into optimal engineering actions. However, our controlled ablations emphasize that these benefits are highly target-dependent: sequence distributions are not selected for POR, whereas sequence gates can still contribute to POR state decisions.
+The core insight emerging from this study is that machine-learning architectures for well-log analysis must be explicitly tailored to the underlying petrophysical failure modes and deployment metrics. Gradient-boosted trees provide robust point regression across high-dimensional feature spaces, deep sequence networks supply vital spatial context for lithofacies boundary discrimination, and metric-aligned decoding translates probabilistic spread into optimal engineering actions. Specifically, the architectural division of labor maps directly to physical rock-column transitions: sequence-driven models excel at demarcating thin permeable laminations, fluid contacts, and sharp lithologic boundaries where vertical context resolves instrument shoulder-bed distortions, whereas tabular trees dominate continuous value estimation within stable, homogeneous reservoir lithofacies. Furthermore, our controlled ablations emphasize that these benefits are highly target-dependent: sequence distributions are not selected for POR, whereas sequence gates can still contribute to POR state decisions.
 
 Furthermore, these findings establish firm empirical limits on model transferability. While well-grouped validation mitigates spatial leakage, it cannot replicate the complex distribution shifts encountered across different depositional basins. The performance decline of the high-capacity 18-stage sequence pipeline on the Volve benchmark shows that complex architectures may fail to generalize when trained on sparse borehole sets.
 
@@ -318,7 +318,7 @@ The authors used generative AI tools for language refinement, code inspection an
 Public Volve/PDDA data are available through the SPWLA PDDA SIG repository \cite{pddasig2021}, subject to the Equinor Volve licence \cite{volve2018}. Internal benchmark data can be requested from the organizers at \url{mailto:aicomp@petrochina.com.cn}, subject to approval and governance restrictions. Aggregated results, public predictions and reproduction scripts accompany the supplementary material.
 
 \section*{Reproducibility note}
-The public entry point is {\small\path{reproduce_public_validation.py}}, located in {\small\path{reproducibility/public_volve/}}. Sensitivity and controlled-ablation scripts, frozen configurations, environment records and output hashes are archived under {\small\path{experiments/reviewer_response/}}.
+The complete code, public reproduction pipelines, sensitivity analysis suites, and experimental artifacts are openly available on GitHub at \url{https://github.com/whiteicey/welllog-reservoir-hybrid}. The public benchmark entry point is {\small\path{reproduce_public_validation.py}}, located in {\small\path{reproducibility/public_volve/}}. Sensitivity and controlled-ablation scripts, frozen configurations, environment records, and output hashes are archived under {\small\path{experiments/reviewer_response/}}.
 
 \section*{Acknowledgments}
 The authors thank the SPWLA PDDA SIG and Equinor for releasing Volve, and the Kunlun Big Model competition organizers for providing the internal benchmark.
@@ -327,5 +327,9 @@ The authors thank the SPWLA PDDA SIG and Equinor for releasing Volve, and the Ku
 This research did not receive any specific grant from funding agencies in the public, commercial or not-for-profit sectors.
 
 \bibliographystyle{elsarticle-num}
+\begingroup
+\small
+\setlength{\bibsep}{2.5pt}
 \bibliography{refs}
+\endgroup
 \end{document}
